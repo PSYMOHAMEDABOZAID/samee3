@@ -1,5 +1,4 @@
-
-#!/usr/bin/env node
+// SAMEE3 audio-library stability patch - run with Node.js
 /*
  * SAMEE3 Audio Library Stability Patch V3 (independent navigation persistence)
  * Targets the source files already present in the user's SAMEE3 repository.
@@ -199,7 +198,7 @@ function mainPage(source) {
   } catch {
     return false
   }
-}`,
+}`, 
 `  try {
     // IndexedDB getKey avoids deserializing a multi-megabyte MP3 just to
     // display a saved/checkmark state.
@@ -229,9 +228,9 @@ function mainPage(source) {
 `              legacyOpaque: response.type === 'opaque',`,
 `              legacyOpaque: false,`, p, 'cache list entry');
 
-  // The initialization effect has changed between SAMEE3 releases. The old
+  // The initialization effect has changed between SAMEE3 releases.  The old
   // V1 patch required three adjacent lines and failed on harmless source drift.
-  // Match the scoped effect instead, and never remove existing logic.
+  // Match the *scoped effect* instead, and never remove existing logic.
   s = deferInitialOfflineScan(s, p);
 
   s = replaceExact(s,
@@ -297,6 +296,7 @@ function mainPage(source) {
 
   s = addIndependentNavigationEffects(s, p);
 
+
   s = replaceExact(s,
 `  const selectRiwaya = (riwaya: Riwaya) => {
     pendingPlayRef.current = false`,
@@ -316,14 +316,14 @@ function mainPage(source) {
   return s;
 }
 function riwayat(source) {
-  const p = 'app/audio/alafasy-riwayat/AlafasyRiwayatContent.tsx';
-  let s = source;
-  s = replaceExact(s,
+  const p='app/audio/alafasy-riwayat/AlafasyRiwayatContent.tsx';
+  let s=source;
+  s=replaceExact(s,
 `  const lastSavedSecond = useRef(-1)`,
 `  const lastSavedSecond = useRef(-1)
   // ${MARK}: repaint the player at most once per second.
   const lastUiSecond = useRef(-1)`, p, 'riwayat time-update ref');
-  s = replaceExact(s,
+  s=replaceExact(s,
 `    setPosition(audio.currentTime)
     if (Math.floor(audio.currentTime / 5) !== lastSavedSecond.current) {`,
 `    const second = Math.floor(audio.currentTime)
@@ -332,13 +332,13 @@ function riwayat(source) {
       setPosition(audio.currentTime)
     }
     if (Math.floor(audio.currentTime / 5) !== lastSavedSecond.current) {`, p, 'riwayat player repaint');
-  s = replaceExact(s,
+  s=replaceExact(s,
 `    setPlaying(item)
     setPosition(0)`,
 `    setPlaying(item)
     lastUiSecond.current = -1
     setPosition(0)`, p, 'ui reset for new surah');
-  s = replaceExact(s,
+  s=replaceExact(s,
 `    if (!navigator.onLine) {
       // Offline requires loading the cached object URL; audio controls remain available if iOS denies autoplay.
       void (async () => {
@@ -388,13 +388,13 @@ function riwayat(source) {
   return s;
 }
 function sw(source) {
-  const p = 'public/sw.js';
-  let s = source;
-  s = replaceExact(s,
+  const p='public/sw.js';
+  let s=source;
+  s=replaceExact(s,
 `const SW_VERSION = 'samee3-sw-v10'`,
 `// ${MARK}: update service-worker code; never delete audio caches.
 const SW_VERSION = 'samee3-sw-v11'`, p, 'SW activation version');
-  s = replaceExact(s,
+  s=replaceExact(s,
 `async function serveQuranAudio(request) {`,
 `// Saved Alafasy readings are deliberately kept in their existing cache name.
 // Streaming them via the SW keeps large offline MP3s out of the page's JS heap.
@@ -414,11 +414,11 @@ async function serveSavedRiwayatAudio(request) {
   }
 }
 async function serveQuranAudio(request) {`, p, 'SW streaming route function');
-  s = replaceExact(s,
+  s=replaceExact(s,
 `    if (isQuranAudio(request, url)) {
       event.respondWith(`,
 `    if (isSameOrigin(url) &&
-        /^\/audio\/alafasy-riwayat\/offline\/[^/]+\/\d{3}\.mp3$/.test(url.pathname)) {
+        /^\\/audio\\/alafasy-riwayat\\/offline\\/[^/]+\\/\\d{3}\\.mp3$/.test(url.pathname)) {
       event.respondWith(serveSavedRiwayatAudio(request))
       return
     }
@@ -428,11 +428,11 @@ async function serveQuranAudio(request) {`, p, 'SW streaming route function');
   return s;
 }
 function continuity(source) {
-  const p = 'lib/use-audio-continuity.ts';
-  let s = source;
+  const p='lib/use-audio-continuity.ts';
+  let s=source;
   // Do not remove old retry/recovery logic, only prevent an unbounded reload
   // loop while the user is intentionally changing tracks or Safari is hidden.
-  s = replaceExact(s,
+  s=replaceExact(s,
 `    if (
       !disposed &&
       wanted &&
