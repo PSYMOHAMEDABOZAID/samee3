@@ -1,20 +1,15 @@
-
 'use client'
 
-// SAMEE3_COLLECTED_MANUAL_TRIM_V3
-// Precision editor for collected Alafasy only.
+/**
+ * SAMEE3 — Collected Alafasy Precision Trim Editor, V5.
+ * Drop-in replacement for app/visual-ayahs/Samee3CollectedTrimEditor.tsx.
+ * This changes ONLY the collected-recitation editor; other readers are untouched.
+ * Preserves v3 localStorage keys and public exports used by page.tsx.
+ */
 
-import {
-  useCallback,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from 'react'
-
-import {
-  MAX_DURATION_SECONDS,
-} from '@/lib/samee3-visual-config'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { Check, ChevronDown, ChevronUp, Pause, Play, RotateCcw, Save, SlidersHorizontal } from 'lucide-react'
+import { MAX_DURATION_SECONDS } from '@/lib/samee3-visual-config'
 
 export type CollectedTiming = {
   startSeconds: number
@@ -27,6 +22,9 @@ export type CollectedTrimOffsets = {
   endOffset: number
 }
 
+type Edge = keyof CollectedTrimOffsets
+type PreviewMode = 'start' | 'end' | 'full' | null
+
 type EditorProps = {
   surah: number
   from: number
@@ -38,688 +36,508 @@ type EditorProps = {
   onApply: (timing: CollectedTiming) => void
 }
 
-const DEFAULT_TRIM: CollectedTrimOffsets = {
-  startOffset: 0,
-  endOffset: 0,
+const EMPTY: CollectedTrimOffsets = { startOffset: 0, endOffset: 0 }
+const STORAGE_PREFIX = 'samee3_collected_visual_trim_v3:'
+const STEP = 0.05
+const MAX_OFFSET = 30
+const EPSILON = 0.00001
+
+const baseButton =
+  'inline-flex min-h-11 items-center justify-center gap-2 rounded-xl px-3 py-2 ' +
+  'text-sm font-bold transition-colors focus-visible:outline focus-visible:outline-2 ' +
+  'focus-visible:outline-offset-2 focus-visible:outline-[#245343] disabled:cursor-not-allowed ' +
+  'disabled:opacity-40 active:scale-[0.99]'
+const secondaryButton =
+  baseButton + ' border border-[#d9e4da] bg-white text-[#245343] hover:bg-[#edf5ef]'
+const primaryButton = baseButton + ' bg-[#245343] text-white hover:bg-[#1c4538]'
+
+function keyFor(surah: number, from: number, to: number): string {
+  return `${STORAGE_PREFIX}${surah}:${from}:${to}`
 }
 
-const buttonClass =
-  'inline-flex min-h-11 items-center justify-center ' +
-  'rounded-xl border border-[#d9cdb6] bg-white ' +
-  'px-3 py-2 text-sm font-bold text-[#245343] ' +
-  'transition-colors hover:bg-[#f3f7f3] ' +
-  'disabled:cursor-not-allowed disabled:opacity-40'
-
-function trimStorageKey(
-  surah: number,
-  from: number,
-  to: number
-): string {
-  return (
-    'samee3_collected_visual_trim_v3:' +
-    surah + ':' + from + ':' + to
-  )
-}
-
-function normalizeOffset(value: number): number {
+function roundOffset(value: number): number {
   if (!Number.isFinite(value)) return 0
+  return Math.round(Math.max(-MAX_OFFSET, Math.min(MAX_OFFSET, value)) / STEP) * STEP
+}
 
+function normalizedOffsets(value: CollectedTrimOffsets): CollectedTrimOffsets {
+  return {
+    startOffset: roundOffset(value.startOffset),
+    endOffset: roundOffset(value.endOffset),
+  }
+}
+
+function sameOffsets(a: CollectedTrimOffsets, b: CollectedTrimOffsets): boolean {
   return (
-    Math.round(
-      Math.max(-30, Math.min(30, value)) * 20
-    ) / 20
+    Math.abs(a.startOffset - b.startOffset) < EPSILON &&
+    Math.abs(a.endOffset - b.endOffset) < EPSILON
   )
 }
 
-function readStoredOffsets(
-  surah: number,
-  from: number,
-  to: number
-): CollectedTrimOffsets {
-  if (typeof window === 'undefined') {
-    return { ...DEFAULT_TRIM }
-  }
-
+function readStoredOffsets(surah: number, from: number, to: number): CollectedTrimOffsets {
+  if (typeof window === 'undefined') return { ...EMPTY }
   try {
-    const raw = window.localStorage.getItem(
-      trimStorageKey(surah, from, to)
-    )
-
-    if (!raw) return { ...DEFAULT_TRIM }
-
+    const raw = window.localStorage.getItem(keyFor(surah, from, to))
+    if (!raw) return { ...EMPTY }
     const parsed: unknown = JSON.parse(raw)
-
+    if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) return { ...EMPTY }
+    const item = parsed as Record<string, unknown>
     if (
-      !parsed ||
-      typeof parsed !== 'object' ||
-      Array.isArray(parsed)
-    ) {
-      return { ...DEFAULT_TRIM }
-    }
-
-    const value = parsed as Record<string, unknown>
-
-    if (
-      typeof value.startOffset !== 'number' ||
-      typeof value.endOffset !== 'number' ||
-      !Number.isFinite(value.startOffset) ||
-      !Number.isFinite(value.endOffset)
-    ) {
-      return { ...DEFAULT_TRIM }
-    }
-
-    return {
-      startOffset: normalizeOffset(value.startOffset),
-      endOffset: normalizeOffset(value.endOffset),
-    }
+      typeof item.startOffset !== 'number' || !Number.isFinite(item.startOffset) ||
+      typeof item.endOffset !== 'number' || !Number.isFinite(item.endOffset)
+    ) return { ...EMPTY }
+    return normalizedOffsets({ startOffset: item.startOffset, endOffset: item.endOffset })
   } catch {
-    return { ...DEFAULT_TRIM }
+    return { ...EMPTY }
   }
 }
 
+/** Pure calculation shared by the editor, preparation and export. */
 export function calculateCollectedTrim(
   original: CollectedTiming,
   offsets: CollectedTrimOffsets
 ): CollectedTiming {
-  const startSeconds = Math.max(
-    0,
-    original.startSeconds + offsets.startOffset
-  )
-
-  const endSeconds =
-    original.startSeconds +
-    original.duration +
-    offsets.endOffset
-
+  const startSeconds = Math.max(0, original.startSeconds + offsets.startOffset)
+  const endSeconds = original.startSeconds + original.duration + offsets.endOffset
   const duration = endSeconds - startSeconds
 
   if (
-    !Number.isFinite(startSeconds) ||
-    !Number.isFinite(endSeconds) ||
-    !Number.isFinite(duration) ||
-    duration < 0.25 ||
-    duration > MAX_DURATION_SECONDS
+    !Number.isFinite(startSeconds) || !Number.isFinite(endSeconds) ||
+    !Number.isFinite(duration) || duration < 0.25 ||
+    duration > MAX_DURATION_SECONDS ||
+    !original.starts.every(Number.isFinite)
   ) {
-    throw new Error(
-      'حدود المقطع غير صالحة. تأكد أن النهاية بعد البداية ' +
-      'وأن مدة الفيديو لا تتجاوز الحد المسموح.'
-    )
+    throw new Error('حدود المقطع غير صالحة. تأكد من البداية والنهاية والمدة المسموحة.')
   }
-
-  const starts = original.starts.map(relative => {
-    const absoluteVerseStart =
-      original.startSeconds + relative
-
-    return Math.max(
-      0,
-      Math.min(
-        duration,
-        absoluteVerseStart - startSeconds
-      )
-    )
-  })
 
   return {
     startSeconds,
     duration,
-    starts,
+    starts: original.starts.map((relative) =>
+      Math.max(0, Math.min(duration, original.startSeconds + relative - startSeconds))
+    ),
   }
 }
 
-export function applyStoredCollectedTrim<
-  T extends CollectedTiming
->(
+/** Keeps the existing page.tsx import/API unchanged. */
+export function applyStoredCollectedTrim<T extends CollectedTiming>(
   clip: T,
   surah: number,
   from: number,
   to: number
 ): T {
   const offsets = readStoredOffsets(surah, from, to)
-
   try {
-    return {
-      ...clip,
-      ...calculateCollectedTrim(clip, offsets),
-    }
+    return { ...clip, ...calculateCollectedTrim(clip, offsets) }
   } catch {
-    return {
-      ...clip,
-      ...calculateCollectedTrim(clip, DEFAULT_TRIM),
-    }
+    return { ...clip, ...calculateCollectedTrim(clip, EMPTY) }
   }
 }
 
-async function waitForMetadata(
-  audio: HTMLAudioElement
-): Promise<void> {
-  if (audio.readyState >= HTMLMediaElement.HAVE_METADATA) {
-    return
-  }
+function formatOffset(n: number): string {
+  const value = Math.abs(n) < EPSILON ? 0 : n
+  return `${value > 0 ? '+' : ''}${value.toFixed(2)} ث`
+}
 
+function formatTime(seconds: number): string {
+  if (!Number.isFinite(seconds) || seconds < 0) return '--:--.--'
+  const whole = Math.floor(seconds)
+  const hundredths = Math.round((seconds - whole) * 100)
+  if (hundredths === 100) return formatTime(whole + 1)
+  return `${Math.floor(whole / 60)}:${String(whole % 60).padStart(2, '0')}.${String(hundredths).padStart(2, '0')}`
+}
+
+function errorMessage(error: unknown): string {
+  return error instanceof Error ? error.message : 'تعذر تشغيل المعاينة. تحقق من الاتصال بالتسجيل.'
+}
+
+async function waitForMetadata(audio: HTMLAudioElement): Promise<void> {
+  if (audio.readyState >= 1) return
   await new Promise<void>((resolve, reject) => {
+    let done = false
     const cleanup = () => {
       window.clearTimeout(timeout)
-
-      audio.removeEventListener(
-        'loadedmetadata',
-        success
-      )
-
-      audio.removeEventListener(
-        'error',
-        failure
-      )
+      audio.removeEventListener('loadedmetadata', success)
+      audio.removeEventListener('error', fail)
     }
-
     const success = () => {
+      if (done) return
+      done = true
       cleanup()
       resolve()
     }
-
-    const failure = () => {
+    const fail = () => {
+      if (done) return
+      done = true
       cleanup()
-
-      reject(
-        new Error(
-          'تعذر تحميل التسجيل الصوتي للعفاسي المجمع.'
-        )
-      )
+      reject(new Error('تعذر تحميل تسجيل العفاسي المجمع.'))
     }
-
-    const timeout = window.setTimeout(
-      failure,
-      15000
-    )
-
-    audio.addEventListener(
-      'loadedmetadata',
-      success
-    )
-
-    audio.addEventListener(
-      'error',
-      failure
-    )
-
-    audio.load()
+    const timeout = window.setTimeout(fail, 18000)
+    audio.addEventListener('loadedmetadata', success)
+    audio.addEventListener('error', fail)
+    if (audio.readyState >= 1) success()
+    else audio.load()
   })
 }
 
-async function seekAudio(
-  audio: HTMLAudioElement,
-  seconds: number
-): Promise<void> {
+async function seekTo(audio: HTMLAudioElement, target: number): Promise<void> {
   await waitForMetadata(audio)
-
-  const target = Math.max(0, seconds)
-
-  audio.currentTime = target
-
-  if (!audio.seeking) return
-
+  if (Math.abs(audio.currentTime - target) < 0.025) return
   await new Promise<void>((resolve, reject) => {
+    let done = false
     const cleanup = () => {
       window.clearTimeout(timeout)
-
-      audio.removeEventListener(
-        'seeked',
-        success
-      )
-
-      audio.removeEventListener(
-        'error',
-        failure
-      )
+      audio.removeEventListener('seeked', success)
+      audio.removeEventListener('error', fail)
     }
-
     const success = () => {
+      if (done) return
+      done = true
       cleanup()
       resolve()
     }
-
-    const failure = () => {
+    const fail = () => {
+      if (done) return
+      done = true
       cleanup()
-
-      reject(
-        new Error('تعذر الانتقال إلى موضع التلاوة.')
-      )
+      reject(new Error('تعذر الانتقال إلى موضع التلاوة.'))
     }
-
-    const timeout = window.setTimeout(
-      failure,
-      10000
-    )
-
-    audio.addEventListener(
-      'seeked',
-      success
-    )
-
-    audio.addEventListener(
-      'error',
-      failure
-    )
+    const timeout = window.setTimeout(fail, 11000)
+    audio.addEventListener('seeked', success)
+    audio.addEventListener('error', fail)
+    try {
+      audio.currentTime = Math.max(0, target)
+      if (!audio.seeking) success()
+    } catch {
+      fail()
+    }
   })
 }
 
 export function Samee3CollectedTrimEditor({
-  surah,
-  from,
-  to,
-  streamUrl,
-  original,
-  disabled,
-  onStop,
-  onApply,
+  surah, from, to, streamUrl, original, disabled, onStop, onApply,
 }: EditorProps) {
-  const [offsets, setOffsets] =
-    useState<CollectedTrimOffsets>({
-      ...DEFAULT_TRIM,
-    })
-
+  const [draft, setDraft] = useState<CollectedTrimOffsets>({ ...EMPTY })
+  const [startText, setStartText] = useState('0.00')
+  const [endText, setEndText] = useState('0.00')
+  const [zoom, setZoom] = useState<'fine' | 'wide'>('fine')
+  const [fineCenter, setFineCenter] = useState({ startOffset: 0, endOffset: 0 })
+  const [preview, setPreview] = useState<PreviewMode>(null)
+  const [loadingPreview, setLoadingPreview] = useState<PreviewMode>(null)
+  const [previewProgress, setPreviewProgress] = useState(0)
   const [message, setMessage] = useState('')
   const [error, setError] = useState('')
-
-  const [previewSide, setPreviewSide] =
-    useState<'start' | 'end' | null>(null)
-
-  const audioRef = useRef<HTMLAudioElement>(null)
-
+  const [audioDuration, setAudioDuration] = useState<number | null>(null)
+  const draftRef = useRef<CollectedTrimOffsets>({ ...EMPTY })
+  const appliedRef = useRef<CollectedTrimOffsets>({ ...EMPTY })
+  const audioRef = useRef<HTMLAudioElement | null>(null)
   const intervalRef = useRef<number | null>(null)
-  const timeoutRef = useRef<number | null>(null)
+  const previewSequence = useRef(0)
 
-  const sequenceRef = useRef(0)
-
-  const stopPreview = useCallback(() => {
-    sequenceRef.current += 1
-
+  const stopPreview = useCallback((updateState = true) => {
+    previewSequence.current += 1
     if (intervalRef.current !== null) {
       window.clearInterval(intervalRef.current)
       intervalRef.current = null
     }
-
-    if (timeoutRef.current !== null) {
-      window.clearTimeout(timeoutRef.current)
-      timeoutRef.current = null
-    }
-
     audioRef.current?.pause()
-    setPreviewSide(null)
+    if (updateState) {
+      setLoadingPreview(null)
+      setPreview(null)
+      setPreviewProgress(0)
+    }
   }, [])
 
+  // The parent already applies stored offsets during prepareAudio().
+  // Just synchronize the isolated editor; do not call onApply on mount.
   useEffect(() => {
-    const saved = readStoredOffsets(
-      surah,
-      from,
-      to
-    )
-
+    const stored = readStoredOffsets(surah, from, to)
+    let next = stored
     try {
-      calculateCollectedTrim(original, saved)
-      setOffsets(saved)
+      calculateCollectedTrim(original, stored)
     } catch {
-      setOffsets({ ...DEFAULT_TRIM })
+      next = { ...EMPTY }
     }
-
+    draftRef.current = next
+    appliedRef.current = next
+    setDraft(next)
+    setStartText(next.startOffset.toFixed(2))
+    setEndText(next.endOffset.toFixed(2))
+    setFineCenter({
+      startOffset: Math.round(next.startOffset),
+      endOffset: Math.round(next.endOffset),
+    })
+    setAudioDuration(null)
     setMessage('')
     setError('')
-  }, [surah, from, to, original])
+    stopPreview()
+  }, [surah, from, to, original, stopPreview])
 
-  useEffect(() => {
-    return () => {
-      sequenceRef.current += 1
-
-      if (intervalRef.current !== null) {
-        window.clearInterval(intervalRef.current)
-      }
-
-      if (timeoutRef.current !== null) {
-        window.clearTimeout(timeoutRef.current)
-      }
-
-      audioRef.current?.pause()
-    }
-  }, [])
+  useEffect(() => () => stopPreview(false), [stopPreview])
 
   const current = useMemo(() => {
     try {
-      return calculateCollectedTrim(
-        original,
-        offsets
-      )
+      return calculateCollectedTrim(original, draft)
     } catch {
       return null
     }
-  }, [original, offsets])
+  }, [original, draft])
 
-  function updateOffset(
-    key: keyof CollectedTrimOffsets,
-    value: number
-  ) {
-    if (disabled) return
+  const exceedsAudio = Boolean(
+    current && audioDuration !== null &&
+    current.startSeconds + current.duration > audioDuration + 0.15
+  )
+  const valid = Boolean(current && !exceedsAudio)
+  const dirty = !sameOffsets(draft, appliedRef.current)
 
-    const next: CollectedTrimOffsets = {
-      ...offsets,
-      [key]: normalizeOffset(value),
+  function setDraftValue(edge: Edge, value: number) {
+    if (disabled || !Number.isFinite(value)) return
+    const next = { ...draftRef.current, [edge]: roundOffset(value) }
+    draftRef.current = next
+    setDraft(next)
+    const str = next[edge].toFixed(2)
+    if (edge === 'startOffset') setStartText(str)
+    else setEndText(str)
+    setMessage('')
+    setError('')
+    if (zoom === 'fine') {
+      const center = fineCenter[edge]
+      if (next[edge] < center - 3 || next[edge] > center + 3) {
+        setFineCenter(previous => ({ ...previous, [edge]: Math.round(next[edge]) }))
+      }
     }
+  }
 
+  // Commits only at gesture end, not on every slider movement.
+  function commit(value: CollectedTrimOffsets = draftRef.current, announce = true) {
+    if (disabled) return
+    const next = normalizedOffsets(value)
+    let adjusted: CollectedTiming
     try {
-      const adjusted = calculateCollectedTrim(
-        original,
-        next
-      )
-
-      stopPreview()
+      adjusted = calculateCollectedTrim(original, next)
+      if (audioDuration !== null && adjusted.startSeconds + adjusted.duration > audioDuration + 0.15) {
+        throw new Error('النهاية المحددة تتجاوز مدة التسجيل الصوتي.')
+      }
+    } catch (cause) {
+      setError(errorMessage(cause))
+      return
+    }
+    if (sameOffsets(next, appliedRef.current)) return
+    stopPreview()
+    try {
+      // Parent stops the main player and updates the prepared clip once.
       onStop()
       onApply(adjusted)
-
-      setOffsets(next)
+      appliedRef.current = next
+      draftRef.current = next
+      setDraft(next)
+      setStartText(next.startOffset.toFixed(2))
+      setEndText(next.endOffset.toFixed(2))
       setError('')
-
-      setMessage(
-        'تم تطبيق التوقيت الجديد على التشغيل والتصدير.'
-      )
+      try {
+        window.localStorage.setItem(keyFor(surah, from, to), JSON.stringify(next))
+        if (announce) setMessage('تم تطبيق الضبط وحفظه تلقائيًا لهذا المقطع.')
+      } catch {
+        setMessage('تم تطبيق الضبط، لكن تعذر حفظه على هذا الجهاز.')
+      }
     } catch (cause) {
-      setError(
-        cause instanceof Error
-          ? cause.message
-          : 'تعذر تعديل التوقيت.'
-      )
+      setError(errorMessage(cause))
     }
   }
 
-  function saveOffsets() {
-    if (disabled || !current) return
-
-    try {
-      window.localStorage.setItem(
-        trimStorageKey(surah, from, to),
-        JSON.stringify(offsets)
-      )
-
-      setError('')
-
-      setMessage(
-        'تم حفظ بداية ونهاية هذا المقطع على جهازك.'
-      )
-    } catch {
-      setError(
-        'تعذر حفظ الضبط على هذا الجهاز.'
-      )
+  function commitTyped(edge: Edge) {
+    const raw = (edge === 'startOffset' ? startText : endText).trim().replace(',', '.')
+    if (!raw || !Number.isFinite(Number(raw))) {
+      const previous = draftRef.current[edge].toFixed(2)
+      if (edge === 'startOffset') setStartText(previous)
+      else setEndText(previous)
+      return
     }
+    const next = { ...draftRef.current, [edge]: roundOffset(Number(raw)) }
+    draftRef.current = next
+    setDraft(next)
+    if (edge === 'startOffset') setStartText(next[edge].toFixed(2))
+    else setEndText(next[edge].toFixed(2))
+    if (zoom === 'fine') {
+      setFineCenter(previous => ({ ...previous, [edge]: Math.round(next[edge]) }))
+    }
+    commit(next)
   }
 
-  function resetOffsets() {
+  function stepBy(edge: Edge, delta: number) {
     if (disabled) return
+    const next = { ...draftRef.current, [edge]: roundOffset(draftRef.current[edge] + delta) }
+    setDraftValue(edge, next[edge])
+    commit(next)
+  }
 
+  function reset() {
+    if (disabled) return
+    stopPreview()
+    const next = { ...EMPTY }
     try {
-      const originalTiming = calculateCollectedTrim(
-        original,
-        DEFAULT_TRIM
-      )
-
-      stopPreview()
-      onStop()
-      onApply(originalTiming)
-
-      window.localStorage.removeItem(
-        trimStorageKey(surah, from, to)
-      )
-
-      setOffsets({ ...DEFAULT_TRIM })
+      const adjusted = calculateCollectedTrim(original, next)
+      if (!sameOffsets(next, appliedRef.current)) {
+        onStop()
+        onApply(adjusted)
+      }
+      appliedRef.current = next
+      draftRef.current = next
+      setDraft(next)
+      setStartText('0.00')
+      setEndText('0.00')
+      setFineCenter({ startOffset: 0, endOffset: 0 })
       setError('')
-
-      setMessage(
-        'تمت استعادة توقيت المقطع الأصلي.'
-      )
+      try {
+        window.localStorage.removeItem(keyFor(surah, from, to))
+        setMessage('تمت استعادة التوقيت الأصلي وحذف الضبط المحفوظ.')
+      } catch {
+        setMessage('تمت استعادة التوقيت الآن، لكن تعذر حذف الحفظ المحلي.')
+      }
     } catch (cause) {
-      setError(
-        cause instanceof Error
-          ? cause.message
-          : 'تعذرت استعادة التوقيت.'
-      )
+      setError(errorMessage(cause))
     }
   }
 
-  async function listenToEdge(
-    side: 'start' | 'end'
-  ) {
-    if (disabled || !current) return
-
+  async function startPreview(which: Exclude<PreviewMode, null>) {
+    if (disabled || !current || exceedsAudio) return
+    if (preview === which) {
+      stopPreview()
+      return
+    }
     stopPreview()
     onStop()
-
     const audio = audioRef.current
-
     if (!audio) return
-
-    const sequence = ++sequenceRef.current
-
+    const request = ++previewSequence.current
+    setLoadingPreview(which)
     const clipStart = current.startSeconds
-    const clipEnd = clipStart + current.duration
-
-    const begin =
-      side === 'start'
-        ? clipStart
-        : Math.max(clipStart, clipEnd - 3)
-
-    const finish =
-      side === 'start'
-        ? Math.min(clipEnd, clipStart + 3)
-        : clipEnd
-
+    const clipEnd = current.startSeconds + current.duration
+    const begin = which === 'end' ? Math.max(clipStart, clipEnd - 3) : clipStart
+    const finish = which === 'start' ? Math.min(clipEnd, clipStart + 3) : clipEnd
     try {
-      await seekAudio(audio, begin)
-
-      if (sequence !== sequenceRef.current) {
-        return
-      }
-
+      await seekTo(audio, begin)
+      if (previewSequence.current !== request) return
       await audio.play()
-
-      if (sequence !== sequenceRef.current) {
+      if (previewSequence.current !== request) {
         audio.pause()
         return
       }
-
-      setPreviewSide(side)
+      setPreview(which)
+      setLoadingPreview(null)
+      setPreviewProgress(0)
       setError('')
-
-      intervalRef.current = window.setInterval(
-        () => {
-          if (
-            sequence !== sequenceRef.current ||
-            audio.paused ||
-            audio.ended ||
-            audio.currentTime >= finish - 0.025
-          ) {
-            stopPreview()
-          }
-        },
-        35
-      )
-
-      timeoutRef.current = window.setTimeout(
-        stopPreview,
-        8000
-      )
+      intervalRef.current = window.setInterval(() => {
+        if (previewSequence.current !== request || audio.paused || audio.ended) {
+          stopPreview()
+          return
+        }
+        const position = audio.currentTime
+        setPreviewProgress(Math.min(100, Math.max(0, ((position - begin) / Math.max(0.01, finish - begin)) * 100)))
+        if (position >= finish - 0.025) stopPreview()
+      }, 100)
     } catch (cause) {
+      if (previewSequence.current !== request) return
       stopPreview()
-
-      setError(
-        cause instanceof Error
-          ? cause.message
-          : 'تعذر الاستماع لبداية أو نهاية التلاوة.'
-      )
+      setError(errorMessage(cause))
     }
   }
 
+  const edgeConfigs: Array<{ edge: Edge; label: string; subtitle: string }> = [
+    { edge: 'startOffset', label: 'بداية التلاوة', subtitle: 'تقديم أو تأخير أول الصوت' },
+    { edge: 'endOffset', label: 'نهاية التلاوة', subtitle: 'تقديم أو تأخير آخر الصوت' },
+  ]
+
   return (
-    <section
-      dir="rtl"
-      className="mt-4 rounded-2xl border border-[#d9c8a5] bg-[#fffcf3] p-4"
-    >
-      <h3 className="text-base font-extrabold text-[#245343]">
-        ضبط بداية ونهاية تلاوة العفاسي المجمع
-      </h3>
-
-      <p className="mt-2 text-xs leading-6 text-[#746d5b]">
-        التحكم خاص بالمصحف المجمع فقط.
-        الرقم الموجب يؤخر الموضع، والرقم السالب يقدمه.
-        يمكنك ضبط البداية والنهاية بدقة 0.05 ثانية.
-      </p>
-
-      {([
-        {
-          key: 'startOffset' as const,
-          title: 'ضبط بداية التلاوة',
-        },
-        {
-          key: 'endOffset' as const,
-          title: 'ضبط نهاية التلاوة',
-        },
-      ]).map(item => (
-        <div
-          key={item.key}
-          className="mt-4 rounded-xl border border-[#e7dfd0] bg-white p-3"
-        >
-          <label
-            className="block text-sm font-bold text-[#245343]"
-          >
-            {item.title}
-          </label>
-
-          <div className="mt-3 flex items-center gap-3">
-            <input
-              type="range"
-              aria-label={item.title}
-              min={-30}
-              max={30}
-              step={0.05}
-              disabled={disabled}
-              value={offsets[item.key]}
-              onChange={event => {
-                updateOffset(
-                  item.key,
-                  Number(event.target.value)
-                )
-              }}
-              className="min-w-0 flex-1 accent-[#245343]"
-            />
-
-            <input
-              type="number"
-              aria-label={`${item.title} بالثواني`}
-              min={-30}
-              max={30}
-              step={0.05}
-              disabled={disabled}
-              value={offsets[item.key]}
-              onChange={event => {
-                updateOffset(
-                  item.key,
-                  Number(event.target.value)
-                )
-              }}
-              className="w-24 rounded-lg border border-[#d9cdb6] px-2 py-2 text-center text-sm"
-            />
+    <section dir="rtl" aria-label="محرر توقيتات العفاسي المجمع" className="mx-auto mt-5 w-full max-w-[680px] overflow-hidden rounded-[26px] border border-[#d9e5db] bg-[#fcfdf9] text-[#173e33] shadow-[0_12px_35px_rgba(26,70,54,0.07)]">
+      <div className="bg-gradient-to-l from-[#245343] to-[#367260] px-4 py-5 text-white sm:px-6">
+        <div className="flex items-center gap-3">
+          <span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-white/15"><SlidersHorizontal size={21} /></span>
+          <div>
+            <h3 className="text-base font-extrabold sm:text-lg">استوديو ضبط تلاوة العفاسي</h3>
+            <p className="mt-1 text-xs leading-6 text-[#e3f2e9]">المصحف المجمع · من الآية {from} إلى {to} · دقة 0.05 ثانية</p>
           </div>
         </div>
-      ))}
+        <p className="mt-3 text-xs leading-6 text-[#edf5ef]">حرّك المؤشر براحتك، وسيُطبق الضبط بعد تركه فقط. يمكنك معاينة النتيجة قبل إنشاء الفيديو.</p>
+      </div>
 
-      {current && (
-        <div
-          className="mt-4 rounded-xl bg-white p-3 text-center text-xs leading-7 text-[#245343]"
-        >
-          البداية: {current.startSeconds.toFixed(2)} ثانية
-          {' · '}
-          النهاية: {(
-            current.startSeconds +
-            current.duration
-          ).toFixed(2)} ثانية
-          {' · '}
-          المدة: {current.duration.toFixed(2)} ثانية
+      <div className="space-y-4 p-4 sm:p-6">
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <span className="text-sm font-bold">دقة التحكم</span>
+          <div className="flex gap-1 rounded-xl bg-[#eaf2eb] p-1">
+            <button type="button" aria-pressed={zoom === 'fine'} onClick={() => {
+              setZoom('fine')
+              setFineCenter({ startOffset: Math.round(draftRef.current.startOffset), endOffset: Math.round(draftRef.current.endOffset) })
+            }} className={`${baseButton} min-h-9 px-3 text-xs ${zoom === 'fine' ? 'bg-white text-[#245343] shadow-sm' : 'text-[#537567]'}`}>دقيق ±3 ث</button>
+            <button type="button" aria-pressed={zoom === 'wide'} onClick={() => setZoom('wide')} className={`${baseButton} min-h-9 px-3 text-xs ${zoom === 'wide' ? 'bg-white text-[#245343] shadow-sm' : 'text-[#537567]'}`}>واسع ±30 ث</button>
+          </div>
         </div>
-      )}
 
-      <audio
-        ref={audioRef}
-        src={streamUrl}
-        preload="metadata"
-        className="hidden"
-      />
+        {edgeConfigs.map(({ edge, label, subtitle }) => {
+          const value = draft[edge]
+          const center = fineCenter[edge]
+          const min = zoom === 'wide' ? -MAX_OFFSET : Math.max(-MAX_OFFSET, center - 3)
+          const max = zoom === 'wide' ? MAX_OFFSET : Math.min(MAX_OFFSET, center + 3)
+          const typed = edge === 'startOffset' ? startText : endText
+          const setTyped = edge === 'startOffset' ? setStartText : setEndText
+          return (
+            <div key={edge} className="rounded-[20px] border border-[#e1e8dd] bg-white p-4">
+              <div className="flex flex-wrap items-start justify-between gap-2">
+                <div>
+                  <h4 className="font-extrabold">{label}</h4>
+                  <p className="mt-1 text-xs text-[#698174]">{subtitle}</p>
+                </div>
+                <span className="rounded-lg bg-[#eef5ee] px-3 py-2 text-sm font-extrabold tabular-nums text-[#245343]" dir="ltr">{formatOffset(value)}</span>
+              </div>
+              <input type="range" aria-label={`تحريك ${label}`} className="mt-5 w-full cursor-pointer accent-[#245343]" min={min} max={max} step={STEP} disabled={disabled} value={value} onChange={event => setDraftValue(edge, Number(event.target.value))} onPointerUp={() => commit()} onPointerCancel={() => commit()} onTouchEnd={() => commit()} onKeyUp={() => commit()} onBlur={() => commit()} />
+              <div className="mt-1 flex justify-between text-[11px] text-[#7b8f81]" dir="ltr"><span>{formatOffset(min)}</span><span>{formatOffset(max)}</span></div>
+              <div className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-4">
+                <button type="button" disabled={disabled} onClick={() => stepBy(edge, -0.25)} className={secondaryButton} aria-label={`تقديم ${label} ربع ثانية`}><ChevronDown size={15} /> 0.25−</button>
+                <button type="button" disabled={disabled} onClick={() => stepBy(edge, -STEP)} className={secondaryButton} aria-label={`تقديم ${label} 0.05 ثانية`}>0.05−</button>
+                <button type="button" disabled={disabled} onClick={() => stepBy(edge, STEP)} className={secondaryButton} aria-label={`تأخير ${label} 0.05 ثانية`}>0.05+</button>
+                <button type="button" disabled={disabled} onClick={() => stepBy(edge, 0.25)} className={secondaryButton} aria-label={`تأخير ${label} ربع ثانية`}>0.25+ <ChevronUp size={15} /></button>
+              </div>
+              <label className="mt-2 flex min-h-11 items-center justify-between rounded-xl border border-[#d9e4da] px-3">
+                <span className="text-xs text-[#718879]">ضبط يدوي بالثواني</span>
+                <input type="text" inputMode="decimal" pattern="-?[0-9]*[.,]?[0-9]*" aria-label={`كتابة ${label} بالثواني`} disabled={disabled} value={typed} onChange={event => setTyped(event.target.value)} onBlur={() => commitTyped(edge)} onKeyDown={event => { if (event.key === 'Enter') { event.preventDefault(); event.currentTarget.blur() } }} className="min-w-0 w-24 bg-transparent text-left text-sm font-bold tabular-nums outline-none" dir="ltr" />
+              </label>
+            </div>
+          )
+        })}
 
-      <div className="mt-3 grid grid-cols-2 gap-2">
-        <button
-          type="button"
-          className={buttonClass}
-          disabled={disabled || !current}
-          onClick={() => {
-            void listenToEdge('start')
-          }}
-        >
-          سماع أول 3 ثوانٍ
-        </button>
+        <div className="rounded-[18px] bg-[#eef5ee] p-4">
+          <div className="grid grid-cols-3 gap-2 text-center">
+            <div><p className="text-[11px] text-[#698174]">بداية المقطع</p><p className="mt-1 text-sm font-extrabold tabular-nums" dir="ltr">{current ? formatTime(current.startSeconds) : '--:--'}</p></div>
+            <div className="border-x border-[#cddfcf]"><p className="text-[11px] text-[#698174]">نهاية المقطع</p><p className="mt-1 text-sm font-extrabold tabular-nums" dir="ltr">{current ? formatTime(current.startSeconds + current.duration) : '--:--'}</p></div>
+            <div><p className="text-[11px] text-[#698174]">مدة الفيديو</p><p className="mt-1 text-sm font-extrabold tabular-nums" dir="ltr">{current ? formatTime(current.duration) : '--:--'}</p></div>
+          </div>
+        </div>
 
-        <button
-          type="button"
-          className={buttonClass}
-          disabled={disabled || !current}
-          onClick={() => {
-            void listenToEdge('end')
-          }}
-        >
-          سماع آخر 3 ثوانٍ
-        </button>
+        <audio ref={audioRef} src={streamUrl} preload="none" className="hidden" onDurationChange={event => {
+          const duration = event.currentTarget.duration
+          setAudioDuration(Number.isFinite(duration) && duration > 0 ? duration : null)
+        }} />
+
+        <div>
+          <div className="mb-2 flex items-center justify-between gap-2"><h4 className="text-sm font-extrabold">المعاينة الصوتية</h4>{(preview || loadingPreview) && <span className="text-xs font-bold text-[#398366]">{loadingPreview ? 'جارٍ تجهيز الصوت…' : 'جارٍ الاستماع…'}</span>}</div>
+          <div className="grid grid-cols-3 gap-2">
+            <button type="button" disabled={disabled || !valid || Boolean(loadingPreview)} onClick={() => void startPreview('start')} className={secondaryButton}>{preview === 'start' ? <Pause size={15} /> : <Play size={15} />} أول 3 ثوانٍ</button>
+            <button type="button" disabled={disabled || !valid || Boolean(loadingPreview)} onClick={() => void startPreview('end')} className={secondaryButton}>{preview === 'end' ? <Pause size={15} /> : <Play size={15} />} آخر 3 ثوانٍ</button>
+            <button type="button" disabled={disabled || !valid || Boolean(loadingPreview)} onClick={() => void startPreview('full')} className={secondaryButton}>{preview === 'full' ? <Pause size={15} /> : <Play size={15} />} المقطع كاملًا</button>
+          </div>
+          {preview && <div className="mt-3"><div className="h-1.5 overflow-hidden rounded-full bg-[#dbe9dd]"><div className="h-full rounded-full bg-[#245343] transition-[width] duration-100" style={{ width: `${previewProgress}%` }} /></div><button type="button" onClick={() => stopPreview()} className="mt-2 text-xs font-bold text-[#245343]">إيقاف المعاينة</button></div>}
+        </div>
+
+        {(!valid || error) && <p role="alert" className="rounded-xl bg-red-50 px-3 py-3 text-sm leading-6 text-red-800">{error || (exceedsAudio ? 'النهاية تتجاوز مدة التسجيل؛ قدم نهاية المقطع قليلًا.' : 'مدة المقطع غير صالحة؛ عدل التوقيت.')}</p>}
+        {message && <p role="status" className="rounded-xl bg-[#e8f5e9] px-3 py-3 text-xs font-semibold leading-6 text-[#245343]">{message}</p>}
+        {dirty && <p className="text-xs font-semibold text-[#997333]">يوجد تعديل لم يُعتمد بعد. ارفع إصبعك عن المؤشر أو اضغط «تطبيق وحفظ».</p>}
+
+        <div className="grid grid-cols-1 gap-2 sm:grid-cols-[1fr_auto]">
+          <button type="button" disabled={disabled || !valid || !dirty} onClick={() => commit()} className={primaryButton}><Check size={17} /><Save size={16} /> تطبيق وحفظ الضبط</button>
+          <button type="button" disabled={disabled} onClick={reset} className={secondaryButton}><RotateCcw size={16} /> التوقيت الأصلي</button>
+        </div>
+        <p className="text-center text-[11px] leading-5 text-[#768b7b]">الضبط المحفوظ خاص بالسورة والآيات المختارة، ويستخدم تلقائيًا في تشغيل الفيديو وتصديره على هذا الجهاز.</p>
       </div>
-
-      {previewSide && (
-        <button
-          type="button"
-          className={buttonClass + ' mt-2 w-full'}
-          onClick={stopPreview}
-        >
-          إيقاف الاستماع
-        </button>
-      )}
-
-      <div className="mt-3 grid grid-cols-2 gap-2">
-        <button
-          type="button"
-          className={buttonClass}
-          disabled={disabled || !current}
-          onClick={saveOffsets}
-        >
-          حفظ الضبط
-        </button>
-
-        <button
-          type="button"
-          className={buttonClass}
-          disabled={disabled}
-          onClick={resetOffsets}
-        >
-          استعادة التوقيت الأصلي
-        </button>
-      </div>
-
-      {message && (
-        <p
-          role="status"
-          className="mt-3 text-xs leading-6 text-[#245343]"
-        >
-          {message}
-        </p>
-      )}
-
-      {error && (
-        <p
-          role="alert"
-          className="mt-3 text-xs leading-6 text-red-700"
-        >
-          {error}
-        </p>
-      )}
     </section>
   )
 }
