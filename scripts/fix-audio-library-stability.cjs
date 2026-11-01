@@ -1,6 +1,6 @@
 // SAMEE3 audio-library stability patch - run with Node.js
 /*
- * SAMEE3 Audio Library Stability Patch V3 (independent navigation persistence)
+ * SAMEE3 Audio Library Stability Patch V4 (TypeScript nullable tab fix)
  * Targets the source files already present in the user's SAMEE3 repository.
  * Uses exact anchors and fails closed when the source has changed.
  * No deletion of Cache Storage, IndexedDB, or saved recordings.
@@ -293,6 +293,13 @@ function mainPage(source) {
       }
 
       if (saved.tab === 'alafasy') {`, p, 'read saved navigation');
+
+  // V4: saved.tab is optional after typing the restored localStorage object.
+  // Guard it before calling Array<string>.includes to satisfy strict TypeScript.
+  s = replaceExact(s,
+    "['ruqyah', 'khutbah', 'sunnah'].includes(saved.tab)",
+    "['ruqyah', 'khutbah', 'sunnah'].includes(saved.tab ?? '')",
+    p, 'nullable saved tab guard');
 
   s = addIndependentNavigationEffects(s, p);
 
