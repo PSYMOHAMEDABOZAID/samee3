@@ -1,7 +1,7 @@
 'use client'
 
 /**
- * SAMEE3 — Collected Alafasy Precision Trim Editor, V5.
+ * SAMEE3 — Collected Alafasy Precision Trim Editor, V6.
  * Drop-in replacement for app/visual-ayahs/Samee3CollectedTrimEditor.tsx.
  * This changes ONLY the collected-recitation editor; other readers are untouched.
  * Preserves v3 localStorage keys and public exports used by page.tsx.
@@ -10,6 +10,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Check, ChevronDown, ChevronUp, Pause, Play, RotateCcw, Save, SlidersHorizontal } from 'lucide-react'
 import { MAX_DURATION_SECONDS } from '@/lib/samee3-visual-config'
+import { muteEdgeGain, updateEdgeGain } from './collected-audio-edges'
 
 export type CollectedTiming = {
   startSeconds: number
@@ -231,6 +232,8 @@ export function Samee3CollectedTrimEditor({
   const draftRef = useRef<CollectedTrimOffsets>({ ...EMPTY })
   const appliedRef = useRef<CollectedTrimOffsets>({ ...EMPTY })
   const audioRef = useRef<HTMLAudioElement | null>(null)
+  const previewContextRef = useRef<AudioContext | null>(null)
+  const previewGainRef = useRef<GainNode | null>(null)
   const intervalRef = useRef<number | null>(null)
   const previewSequence = useRef(0)
 
@@ -240,6 +243,7 @@ export function Samee3CollectedTrimEditor({
       window.clearInterval(intervalRef.current)
       intervalRef.current = null
     }
+    muteEdgeGain(previewGainRef.current, previewContextRef.current)
     audioRef.current?.pause()
     if (updateState) {
       setLoadingPreview(null)
@@ -273,7 +277,33 @@ export function Samee3CollectedTrimEditor({
     stopPreview()
   }, [surah, from, to, original, stopPreview])
 
-  useEffect(() => () => stopPreview(false), [stopPreview])
+  useEffect(() => () => {
+    stopPreview(false)
+    const context = previewContextRef.current
+    previewContextRef.current = null
+    previewGainRef.current = null
+    if (context) void context.close().catch(() => {})
+  }, [stopPreview])
+
+  async function preparePreviewAudio(audio: HTMLAudioElement): Promise<{
+    context: AudioContext
+    gain: GainNode
+  }> {
+    if (previewContextRef.current && previewGainRef.current) {
+      await previewContextRef.current.resume()
+      return { context: previewContextRef.current, gain: previewGainRef.current }
+    }
+    const context = new AudioContext()
+    const source = context.createMediaElementSource(audio)
+    const gain = context.createGain()
+    gain.gain.value = 0
+    source.connect(gain)
+    gain.connect(context.destination)
+    previewContextRef.current = context
+    previewGainRef.current = gain
+    await context.resume()
+    return { context, gain }
+  }
 
   const current = useMemo(() => {
     try {
@@ -416,6 +446,10 @@ export function Samee3CollectedTrimEditor({
     const begin = which === 'end' ? Math.max(clipStart, clipEnd - 3) : clipStart
     const finish = which === 'start' ? Math.min(clipEnd, clipStart + 3) : clipEnd
     try {
+      // Initialize Web Audio while still in the user's tap gesture.
+      const { context, gain } = await preparePreviewAudio(audio)
+      if (previewSequence.current !== request) return
+      muteEdgeGain(gain, context)
       await seekTo(audio, begin)
       if (previewSequence.current !== request) return
       await audio.play()
@@ -433,9 +467,10 @@ export function Samee3CollectedTrimEditor({
           return
         }
         const position = audio.currentTime
+        updateEdgeGain(gain, context, position - begin, finish - begin)
         setPreviewProgress(Math.min(100, Math.max(0, ((position - begin) / Math.max(0.01, finish - begin)) * 100)))
         if (position >= finish - 0.025) stopPreview()
-      }, 100)
+      }, 25)
     } catch (cause) {
       if (previewSequence.current !== request) return
       stopPreview()
@@ -458,7 +493,7 @@ export function Samee3CollectedTrimEditor({
             <p className="mt-1 text-xs leading-6 text-[#e3f2e9]">المصحف المجمع · من الآية {from} إلى {to} · دقة 0.05 ثانية</p>
           </div>
         </div>
-        <p className="mt-3 text-xs leading-6 text-[#edf5ef]">حرّك المؤشر براحتك، وسيُطبق الضبط بعد تركه فقط. يمكنك معاينة النتيجة قبل إنشاء الفيديو.</p>
+        <p className="mt-3 text-xs leading-6 text-[#edf5ef]">حرّك المؤشر وسيُعتمد التوقيت بعد تركه. تم تحسين حواف الصوت لمنع الطقطقة عند بدء المقطع ونهايته.</p>
       </div>
 
       <div className="space-y-4 p-4 sm:p-6">
@@ -530,6 +565,22 @@ export function Samee3CollectedTrimEditor({
 
         {(!valid || error) && <p role="alert" className="rounded-xl bg-red-50 px-3 py-3 text-sm leading-6 text-red-800">{error || (exceedsAudio ? 'النهاية تتجاوز مدة التسجيل؛ قدم نهاية المقطع قليلًا.' : 'مدة المقطع غير صالحة؛ عدل التوقيت.')}</p>}
         {message && <p role="status" className="rounded-xl bg-[#e8f5e9] px-3 py-3 text-xs font-semibold leading-6 text-[#245343]">{message}</p>}
+        {(draft.startOffset > 0 || draft.endOffset < 0) && (
+          <div className="rounded-xl border border-[#e8d8ad] bg-[#fffaf0] px-3 py-3 text-xs leading-6 text-[#73541e]">
+            <p>تنبيه: تقديم بداية المقطع أو تقديم نهايته قد يحذف أول أو آخر حرف من التلاوة. استمع لأول وآخر 3 ثوانٍ قبل التصدير. التنعيم الصوتي يمنع الطقطقة، لكنه لا يعيد حرفًا تم قصّه.</p>
+            <button type="button" disabled={disabled} className="mt-2 min-h-10 rounded-lg border border-[#dac895] bg-white px-3 py-2 font-extrabold text-[#624920] disabled:opacity-50" onClick={() => {
+              const safe = {
+                startOffset: Math.min(0, draftRef.current.startOffset),
+                endOffset: Math.max(0, draftRef.current.endOffset),
+              }
+              draftRef.current = safe
+              setDraft(safe)
+              setStartText(safe.startOffset.toFixed(2))
+              setEndText(safe.endOffset.toFixed(2))
+              commit(safe)
+            }}>حماية أول وآخر حرف — إلغاء القص الزائد</button>
+          </div>
+        )}
         {dirty && <p className="text-xs font-semibold text-[#997333]">يوجد تعديل لم يُعتمد بعد. ارفع إصبعك عن المؤشر أو اضغط «تطبيق وحفظ».</p>}
 
         <div className="grid grid-cols-1 gap-2 sm:grid-cols-[1fr_auto]">
