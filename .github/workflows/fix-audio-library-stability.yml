@@ -1,0 +1,51 @@
+name: SAMEE3 - Fix Audio Library Freeze and Reset
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: samee3-audio-library-stability
+  cancel-in-progress: false
+
+jobs:
+  fix-audio:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+      - name: Install Node.js 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - name: Preflight - fail if repo structure differs
+        run: node scripts/fix-audio-library-stability.cjs --check
+      - name: Apply the complete patch
+        run: node scripts/fix-audio-library-stability.cjs
+      - name: Verify JavaScript syntax and changed source
+        run: |
+          node --check public/sw.js
+          node --check scripts/fix-audio-library-stability.cjs
+          git diff --check
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Verify TypeScript
+        run: npx tsc --noEmit
+      - name: Commit changes only if checks passed
+        run: |
+          git config user.name 'samee3-audio-fix[bot]'
+          git config user.email 'samee3-audio-fix[bot]@users.noreply.github.com'
+          git add app/audio/page.tsx app/audio/alafasy-riwayat/AlafasyRiwayatContent.tsx lib/use-audio-continuity.ts public/sw.js
+          if git diff --cached --quiet; then
+            echo 'Nothing to commit; fix already applied.'
+            exit 0
+          fi
+          git commit -m 'fix(audio): stream cached recordings and preserve library navigation'
+          git push origin HEAD:main
