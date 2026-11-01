@@ -1,447 +1,188 @@
-
-import { NextResponse } from 'next/server'
+import { NextRequest, NextResponse } from 'next/server'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
 
+/** Published edition metadata only. Never substitute one reading for another. */
 type Edition = {
   id: string
   name: string
   source: string
   sourceUrl: string
+  server: string
   surahIds: number[]
-  server?: string
 }
-
-type RawMoshaf = {
-  id?: number
-  name?: string
-  server?: string
-  surah_list?: string
-}
-
-type RawReciter = {
-  id?: number
-  name?: string
-  moshaf?: RawMoshaf[]
-}
-
-const ALL = Array.from({ length: 114 }, (_, i) => i + 1)
-
-const TILAWAT_ROOT = 'https://tilawat.net/mushaf/'
-const SOURCE = 'https://tilawat.net/reciter/مشاري-العفاسي/1020'
-
-// Full and partial editions are represented separately.
-const TILAWAT = [
-  ['21190', 'ابن ذكوان عن ابن عامر', 'مشاري-العفاسي-ابن-ذكوان-عن-ابن-عامر', ALL],
-  ['21189', 'شعبة عن عاصم', 'مشاري-العفاسي-شعبة-عن-عاصم', ALL],
-  ['20045', 'حفص عن عاصم — مرتل', 'مشاري-العفاسي-حفص-عن-عاصم', ALL],
-  ['21187', 'حفص عن عاصم — المعلم', 'مشاري-العفاسي-حفص-عن-عاصم-معلم', ALL],
-  ['21188', 'الدوري عن الكسائي — التسجيل الثاني', 'مشاري-العفاسي-الدوري-عن-الكسائي-التسجيل-2', ALL],
-  ['21889', 'إسحاق وإدريس عن خلف', 'مشاري-العفاسي-إسحاق-وإدريس-عن-خلف', ALL],
-  ['21183', 'ورش عن نافع', 'مشاري-العفاسي-ورش-عن-نافع', [18, 75]],
-  ['21184', 'قنبل عن ابن كثير', 'مشاري-العفاسي-قنبل-عن-ابن-كثير', [1, 2]],
-  ['21191', 'السوسي عن أبي عمرو', 'مشاري-العفاسي-السوسي-عن-أبي-عمرو', [50, 51, 52, 53, 54, 55, 56, 57]],
-  ['21192', 'خلف عن حمزة', 'مشاري-العفاسي-خلف-عن-حمزة', [19, 20, 37, 52]],
-  ['21185', 'أبو الحارث عن الكسائي', 'مشاري-العفاسي-أبو-الحارث-عن-الكسائي', [1, 2]],
-  ['20046', 'الدوري عن الكسائي — تلاوات متفرقة', 'مشاري-العفاسي-الدوري-عن-الكسائي', [12, 14, 25, 87, 97, 99]],
-  ['21186', 'رويس عن يعقوب', 'مشاري-العفاسي-رويس-عن-يعقوب', [51, 83]],
-] as const
-
-const ASSABILE = [
-  ['shuba-murattal', 'شعبة عن عاصم — تلاوات السبيل', [1, 18, 19, 20, 87, 109]],
-  ['warsh-murattal', 'ورش عن نافع — تلاوات السبيل', [1, 12]],
-  ['khalaf-hamza-murattal', 'خلف عن حمزة — تلاوات السبيل', [19, 20, 36, 37, 51, 52, 53, 77, 79, 85, 86, 89, 91, 92, 93, 95, 100, 103]],
-  ['duri-kisai-murattal', 'الدوري عن الكسائي — تلاوات السبيل', [1, 14, 25, 87, 97, 99]],
-  ['bazzi-qunbul-murattal', 'البزي وقنبل عن ابن كثير — تلاوات السبيل', [1, 18, 55, 67, 69]],
-] as const
-
-const assabile: Edition[] = ASSABILE.map(
-  ([slug, name, surahIds]) => ({
-    id: `assabile-${slug}`,
-    name,
-    source: 'السبيل',
-    sourceUrl:
-      `https://ar.assabile.com/mishary-rashid-alafasy/moshaf/${slug}`,
-    surahIds: [...surahIds],
-  })
-)
-
-const way2quran: Edition[] = [
-  {
-    id: 'way2quran-duri-abu-amr',
-    name: 'الدوري عن أبي عمرو — الطريق إلى القرآن',
-    source: 'الطريق إلى القرآن',
-    sourceUrl:
-      'https://stg-way.way2quran.com/ar/reciters/mishary-alafasy?recitationSlug=ad-duri-an-abu-amr',
-    surahIds: ALL,
-  },
+type Catalog = { reciter: string; editions: Edition[] }
+type Mp3Moshaf = { id?: number; name?: string; server?: string; surah_list?: string }
+type Mp3Reciter = { id?: number; name?: string; moshaf?: Mp3Moshaf[] }
+const MP3_ENDPOINT = 'https://mp3quran.net/api/v3/reciters?language=ar&reciter=123'
+const WAY_HOME = 'https://way2quran.com/ar/reciters/mishary-alafasy'
+const WAY_MEDIA = 'https://media.way2quran.com/mishary-alafasy/'
+const WAY_READINGS: ReadonlyArray<{ slug: string; name: string }> = [
+  { slug: 'hafs-an-asim', name: 'حفص عن عاصم — مرتل' },
+  { slug: 'ad-duri-an-al-kisai', name: 'الدوري عن الكسائي' },
+  { slug: 'warsh-an-nafi', name: 'ورش عن نافع' },
+  { slug: 'khalaf-an-hamzah', name: 'خلف عن حمزة' },
+  { slug: 'as-susi-an-abu-amr', name: 'السوسي عن أبي عمرو' },
+  { slug: 'qunbul-an-ibn-kathir', name: 'قنبل عن ابن كثير' },
+  { slug: 'ruways-an-yaqub-al-hadrami', name: 'رويس عن يعقوب الحضرمي' },
+  { slug: 'ibn-dhakwan-an-ibn-amir', name: 'ابن ذكوان عن ابن عامر' },
+  { slug: 'abi-al-harith-an-al-kisai', name: 'أبو الحارث عن الكسائي' },
+  { slug: 'ishaq-al-warraq-wa-idris-al-haddad-an-khalaf-al-bazzar', name: 'إسحاق الوراق وإدريس الحداد عن خلف البزار' },
+  { slug: 'shubah-an-asim', name: 'شعبة عن عاصم' },
+  { slug: 'ad-duri-an-abi-amr', name: 'الدوري عن أبي عمرو' },
 ]
 
-const curated: Edition[] = TILAWAT.map(
-  ([id, name, slug, ids]) => ({
-    id: `tilawat-${id}`,
-    name,
-    source: 'تلاوات',
-    sourceUrl:
-      `${TILAWAT_ROOT}${encodeURIComponent(slug)}/${id}`,
-    surahIds: [...ids],
-  })
-)
-
-function validServer(value: unknown): string | null {
+function allowServer(value: unknown): string | null {
   if (typeof value !== 'string') return null
-
   try {
     const url = new URL(value)
-
-    if (
-      url.protocol !== 'https:' ||
-      !/^(?:[a-z\d-]+\.)*mp3quran\.net$/i.test(url.hostname) ||
-      url.port ||
-      url.username ||
-      url.password
-    ) {
-      return null
-    }
-
-    return url.href.replace(/\/?$/, '/')
-  } catch {
-    return null
-  }
+    if (url.protocol !== 'https:' || url.port || url.username || url.password) return null
+    if (!/^([a-z0-9-]+\.)*mp3quran\.net$/i.test(url.hostname)) return null
+    if (url.search || url.hash) return null
+    return url.href.endsWith('/') ? url.href : `${url.href}/`
+  } catch { return null }
 }
-
-function parseSurahs(value: unknown): number[] {
+function ids(value: unknown): number[] {
   if (typeof value !== 'string') return []
+  return [...new Set(value.split(',').map(v => Number(v.trim())).filter(n => Number.isInteger(n) && n >= 1 && n <= 114))].sort((a,b) => a-b)
+}
+function pad(value: number) { return String(value).padStart(3, '0') }
 
-  return [
-    ...new Set(
-      value
-        .split(',')
-        .map(Number)
-        .filter(
-          n =>
-            Number.isInteger(n) &&
-            n >= 1 &&
-            n <= 114
-        )
-    ),
-  ].sort((a, b) => a - b)
+async function mp3quranEditions(): Promise<Edition[]> {
+  const response = await fetch(MP3_ENDPOINT, { next: { revalidate: 3600 }, signal: AbortSignal.timeout(9000) })
+  if (!response.ok) throw new Error(`MP3Quran: ${response.status}`)
+  const data = (await response.json()) as { reciters?: Mp3Reciter[] }
+  const rows = data.reciters || []
+  const reader = rows.find(row => Number(row.id) === 123 && /العفاسي/.test(row.name || ''))
+  if (!reader) return []
+  return (reader.moshaf || []).flatMap(row => {
+    const server = allowServer(row.server)
+    const surahIds = ids(row.surah_list)
+    if (!server || typeof row.id !== 'number' || !Number.isInteger(row.id) || !surahIds.length) return []
+    return [{
+      id: `mp3-${row.id}`,
+      name: row.name || 'مصحف العفاسي',
+      source: 'MP3Quran',
+      sourceUrl: 'https://www.mp3quran.net/ar/afs',
+      server,
+      surahIds,
+    }]
+  })
 }
 
-async function mp3quran(): Promise<Edition[]> {
+/** Extract only links the publisher actually includes in the selected recitation page.
+ * This prevents presenting a partial reading as a full 114-surah mushaf.
+ */
+async function wayEdition(reading: {slug: string; name: string}): Promise<Edition | null> {
   try {
-    const response = await fetch(
-      'https://mp3quran.net/api/v3/reciters?language=ar&reciter=123',
-      {
-        signal: AbortSignal.timeout(9000),
-        next: { revalidate: 1800 },
-      }
-    )
-
-    if (!response.ok) return []
-
-    const payload = (await response.json()) as {
-      reciters?: RawReciter[]
-    }
-
-    const reciter = payload.reciters?.find(
-      r => r.id === 123 && /العفاسي/.test(r.name ?? '')
-    )
-
-    if (!reciter) return []
-
-    return (reciter.moshaf ?? []).flatMap(m => {
-      const server = validServer(m.server)
-      const surahIds = parseSurahs(m.surah_list)
-
-      if (
-        !server ||
-        !surahIds.length ||
-        !Number.isSafeInteger(m.id)
-      ) {
-        return []
-      }
-
-      return [
-        {
-          id: `mp3quran-${m.id}`,
-          name: m.name || 'تسجيل العفاسي',
-          source: 'MP3Quran',
-          sourceUrl: 'https://mp3quran.net/ar',
-          server,
-          surahIds,
-        },
-      ]
-    })
-  } catch {
-    return []
-  }
-}
-
-function isAllowedAudio(url: string): boolean {
-  try {
-    const u = new URL(url)
-
-    return (
-      u.protocol === 'https:' &&
-      !u.username &&
-      !u.password &&
-      !u.port &&
-      /^(?:[a-z\d-]+\.)*(?:mp3quran\.net|quranicaudio\.com|way2quran\.com|assabile\.com)$/i.test(
-        u.hostname
-      ) &&
-      /\.mp3(?:$|\?)/i.test(u.pathname + u.search)
-    )
-  } catch {
-    return false
-  }
-}
-
-async function resolveTilawat(
-  edition: Edition,
-  surah: number
-): Promise<{
-  audioUrl: string | null
-  sourceUrl: string
-}> {
-  const index = edition.surahIds.indexOf(surah)
-
-  if (index < 0) {
-    return {
-      audioUrl: null,
-      sourceUrl: edition.sourceUrl,
-    }
-  }
-
-  try {
-    const page = await fetch(edition.sourceUrl, {
-      signal: AbortSignal.timeout(11000),
-      next: { revalidate: 3600 },
-    })
-
-    if (!page.ok) throw new Error('Source unavailable')
-
-    const html = await page.text()
-
-    const links = [
-      ...new Set(
-        [...html.matchAll(/href=["']([^"']*\/recitation\/[^"']+)["']/g)]
-          .map(m => m[1].replace(/&amp;/g, '&'))
-      ),
-    ]
-
-    if (links.length !== edition.surahIds.length) {
-      return {
-        audioUrl: null,
-        sourceUrl: edition.sourceUrl,
-      }
-    }
-
-    const recitationUrl = new URL(
-      links[index],
-      'https://tilawat.net'
-    )
-
-    if (
-      recitationUrl.hostname !== 'tilawat.net' ||
-      !recitationUrl.pathname.startsWith('/recitation/')
-    ) {
-      return {
-        audioUrl: null,
-        sourceUrl: edition.sourceUrl,
-      }
-    }
-
-    const detail = await fetch(recitationUrl, {
-      signal: AbortSignal.timeout(10000),
-      next: { revalidate: 3600 },
-    })
-
-    if (!detail.ok) {
-      return {
-        audioUrl: null,
-        sourceUrl: recitationUrl.href,
-      }
-    }
-
-    const content = (await detail.text())
-      .replace(/\\\//g, '/')
-      .replace(/&amp;/g, '&')
-
-    const possible = [
-      ...new Set(
-        content.match(
-          /https:\/\/[^\s"'<>\\]+?\.mp3(?:\?[^\s"'<>\\]*)?/g
-        ) ?? []
-      ),
-    ].filter(isAllowedAudio)
-
-    return {
-      audioUrl:
-        possible.length === 1 ? possible[0] : null,
-      sourceUrl: recitationUrl.href,
-    }
-  } catch {
-    return {
-      audioUrl: null,
-      sourceUrl: edition.sourceUrl,
-    }
-  }
-}
-
-async function resolveAssabile(
-  edition: Edition,
-  surah: number
-): Promise<{
-  audioUrl: string | null
-  sourceUrl: string
-}> {
-  try {
-    const response = await fetch(edition.sourceUrl, {
-      signal: AbortSignal.timeout(10000),
-      next: { revalidate: 3600 },
-    })
-
-    if (!response.ok) {
-      return {
-        audioUrl: null,
-        sourceUrl: edition.sourceUrl,
-      }
-    }
-
+    const pageUrl = `${WAY_HOME}?recitationSlug=${encodeURIComponent(reading.slug)}`
+    const response = await fetch(pageUrl, { next: { revalidate: 21600 }, signal: AbortSignal.timeout(9000) })
+    if (!response.ok) return null
     const html = await response.text()
-
-    const links = [
-      ...new Set(
-        [...html.matchAll(/href=["']([^"']*\/mishary-rashid-alafasy\/quran\/[^"']+)["']/g)]
-          .map(m => m[1].replace(/&amp;/g, '&'))
-      ),
-    ]
-
-    if (links.length !== edition.surahIds.length) {
-      return {
-        audioUrl: null,
-        sourceUrl: edition.sourceUrl,
-      }
-    }
-
-    const detailUrl = new URL(
-      links[edition.surahIds.indexOf(surah)],
-      'https://ar.assabile.com'
-    )
-
-    if (
-      detailUrl.hostname !== 'ar.assabile.com' ||
-      !detailUrl.pathname.startsWith(
-        '/mishary-rashid-alafasy/quran/'
-      )
-    ) {
-      return {
-        audioUrl: null,
-        sourceUrl: edition.sourceUrl,
-      }
-    }
-
-    const detail = await fetch(detailUrl, {
-      signal: AbortSignal.timeout(10000),
-      next: { revalidate: 3600 },
-    })
-
-    if (!detail.ok) {
-      return {
-        audioUrl: null,
-        sourceUrl: detailUrl.href,
-      }
-    }
-
-    const content = (await detail.text())
-      .replace(/\\\//g, '/')
-      .replace(/&amp;/g, '&')
-
-    const possible = [
-      ...new Set(
-        content.match(
-          /https:\/\/[^\s"'<>\\]+?\.mp3(?:\?[^\s"'<>\\]*)?/g
-        ) ?? []
-      ),
-    ].filter(isAllowedAudio)
-
+    if (html.length > 4_000_000) return null
+    const normalized = html.replace(/\\u002F/gi, '/').replace(/\\\//g, '/').replace(/&amp;/g, '&')
+    const pattern = /https:\/\/media\.way2quran\.com\/mishary-alafasy\/([a-z0-9-]+)\/(\d{3})\.mp3/gi
+    const matches = [...normalized.matchAll(pattern)]
+    const surahIds = [...new Set(matches.filter(m => m[1] === reading.slug).map(m => Number(m[2])).filter(n => n >= 1 && n <= 114))].sort((a,b) => a-b)
+    if (!surahIds.length) return null
     return {
-      audioUrl:
-        possible.length === 1 ? possible[0] : null,
-      sourceUrl: detailUrl.href,
+      id: `way-${reading.slug}`,
+      name: reading.name,
+      source: 'الطريق إلى القرآن',
+      sourceUrl: pageUrl,
+      server: `${WAY_MEDIA}${reading.slug}/`,
+      surahIds,
     }
-  } catch {
-    return {
-      audioUrl: null,
-      sourceUrl: edition.sourceUrl,
-    }
-  }
+  } catch { return null }
 }
 
-export async function GET(
-  request: Request
-): Promise<Response> {
-  const { searchParams } = new URL(request.url)
+let cached: { value: Catalog; expires: number } | null = null
+async function getCatalog(): Promise<Catalog> {
+  if (cached && Date.now() < cached.expires) return cached.value
+  const [official, way] = await Promise.all([
+    mp3quranEditions().catch((): Edition[] => []),
+    Promise.all(WAY_READINGS.map(wayEdition)),
+  ])
+  const editions: Edition[] = [...official, ...way.filter((value): value is Edition => value !== null)]
+  // A momentary provider outage should not erase the previously loaded catalog.
+  if (!editions.length && cached) return cached.value
+  const value = { reciter: 'مشاري راشد العفاسي', editions }
+  if (editions.length) cached = { value, expires: Date.now() + 15 * 60_000 }
+  return value
+}
 
-  const editions = [
-    ...curated,
-    ...assabile,
-    ...way2quran,
-    ...(await mp3quran()),
-  ]
+function getEdition(catalog: Catalog, key: string, surah: number): Edition | null {
+  return catalog.editions.find(e => e.id === key && e.surahIds.includes(surah)) || null
+}
+function buildUrl(edition: Edition, surah: number): string {
+  // Provider URLs never come from query parameters and use fixed trusted host prefixes.
+  return new URL(`${pad(surah)}.mp3`, edition.server).href
+}
+const error = (message: string, status: number) => NextResponse.json({ error: message }, { status, headers: { 'Cache-Control': 'no-store' } })
 
-  const resolve = searchParams.get('resolve')
-
-  if (resolve) {
-    const surah = Number(searchParams.get('surah'))
-    const edition = editions.find(e => e.id === resolve)
-
-    if (
-      !edition ||
-      !Number.isInteger(surah) ||
-      !edition.surahIds.includes(surah)
-    ) {
-      return NextResponse.json(
-        { error: 'هذا التسجيل غير موجود.' },
-        { status: 404 }
-      )
-    }
-
-    const audioUrl = edition.server
-      ? `${edition.server}${String(surah).padStart(3, '0')}.mp3`
-      : null
-
-    const result = audioUrl
-      ? { audioUrl, sourceUrl: edition.sourceUrl }
-      : edition.source === 'السبيل'
-        ? await resolveAssabile(edition, surah)
-        : edition.source === 'تلاوات'
-          ? await resolveTilawat(edition, surah)
-          : {
-              audioUrl: null,
-              sourceUrl: edition.sourceUrl,
-            }
-
-    return NextResponse.json(result, {
-      headers: {
-        'Cache-Control': 'public, s-maxage=300',
-      },
-    })
+export async function GET(request: NextRequest): Promise<Response> {
+  const params = request.nextUrl.searchParams
+  const resolve = params.get('resolve')
+  const stream = params.get('stream')
+  const surahString = params.get('surah')
+  if (!resolve && !stream) {
+    const result = await getCatalog()
+    return result.editions.length
+      ? NextResponse.json(result, { headers: { 'Cache-Control': 'public, max-age=0, s-maxage=300' } })
+      : error('مصادر التلاوات غير متاحة مؤقتًا؛ حاول مرة أخرى.', 503)
   }
+  const surah = Number(surahString)
+  if (!Number.isInteger(surah) || surah < 1 || surah > 114) return error('رقم سورة غير صحيح.', 400)
+  const editionId = resolve || stream || ''
+  const catalog = await getCatalog()
+  const edition = getEdition(catalog, editionId, surah)
+  if (!edition) return error('هذه السورة غير مدرجة في هذا المصحف.', 404)
+  const source = buildUrl(edition, surah)
+  const proxyPath = `/api/alafasy-riwayat?stream=${encodeURIComponent(edition.id)}&surah=${surah}`
+  if (resolve) return NextResponse.json({ audioUrl: proxyPath, sourceUrl: edition.sourceUrl, directUrl: source }, { headers: { 'Cache-Control': 'no-store' } })
 
-  return NextResponse.json(
-    {
-      reciter: 'مشاري راشد العفاسي',
-      editions,
-      source: SOURCE,
-    },
-    {
-      headers: {
-        'Cache-Control':
-          'public, s-maxage=600, stale-while-revalidate=1800',
-      },
+  const range = request.headers.get('range')
+  if (range && !/^bytes=\d*-\d*$/.test(range)) return error('مدى الملف غير صحيح.', 416)
+  try {
+    // Time out only the connection, not the audio stream (long surahs can run for hours).
+    const controller = new AbortController()
+    const connectTimer = setTimeout(() => controller.abort(), 18000)
+    let upstream: Response
+    try {
+      upstream = await fetch(source, {
+        cache: 'no-store',
+        headers: range ? { Range: range, Accept: 'audio/mpeg,audio/*' } : { Accept: 'audio/mpeg,audio/*' },
+        signal: controller.signal,
+        redirect: 'follow',
+      })
+    } finally { clearTimeout(connectTimer) }
+    const finalUrl = new URL(upstream.url)
+    const approved = /^([a-z0-9-]+\.)*mp3quran\.net$/i.test(finalUrl.hostname) || finalUrl.hostname === 'media.way2quran.com'
+    if (!approved || finalUrl.protocol !== 'https:' || !upstream.ok || !upstream.body) {
+      await upstream.body?.cancel().catch(() => {})
+      return error('الرابط الصوتي غير متاح حاليًا لدى المصدر الأصلي.', 502)
     }
-  )
+    const mime = upstream.headers.get('content-type') || ''
+    if (mime.includes('text/html') || mime.includes('application/json')) {
+      await upstream.body.cancel().catch(() => {})
+      return error('المصدر أرجع صفحة بدل الملف الصوتي.', 502)
+    }
+    const headers = new Headers({
+      'Content-Type': mime.startsWith('audio/') ? mime : 'audio/mpeg',
+      'Cache-Control': 'public, max-age=3600',
+      'X-Content-Type-Options': 'nosniff',
+      'Accept-Ranges': upstream.headers.get('accept-ranges') || 'bytes',
+    })
+    for (const header of ['content-length', 'content-range']) {
+      const value = upstream.headers.get(header)
+      if (value) headers.set(header, value)
+    }
+    if (params.get('download') === '1') {
+      headers.set('Content-Disposition', `attachment; filename="Alafasy-${edition.id.replace(/[^a-zA-Z0-9_-]/g, '')}-${pad(surah)}.mp3"`)
+    }
+    return new Response(upstream.body, { status: upstream.status === 206 ? 206 : 200, headers })
+  } catch {
+    return error('تعذر الاتصال بمصدر الصوت. تحقّق من الإنترنت ثم أعد المحاولة.', 502)
+  }
 }
