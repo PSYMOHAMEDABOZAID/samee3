@@ -1,10 +1,8 @@
 
-#!/usr/bin/env node
-
 /**
- * SAMEE3 audio stability migration.
- * Applies guarded updates to the existing audio library.
- * Preserves the current player, reciters, sections and saved audio.
+ * SAMEE3 Audio Stability Fix
+ * Safe audio library migration.
+ * Preserves existing UI, reciters and saved recordings.
  */
 
 const fs = require('node:fs')
@@ -14,6 +12,8 @@ const root = path.resolve(__dirname, '..')
 const pagePath = path.join(root, 'app/audio/page.tsx')
 const workerPath = path.join(root, 'public/sw.js')
 
+const MARKER = 'SAMEE3_AUDIO_STABILITY_2026_11'
+
 function replaceBetween(input, first, last, updated, label) {
   const from = input.indexOf(first)
 
@@ -22,7 +22,7 @@ function replaceBetween(input, first, last, updated, label) {
     input.indexOf(first, from + first.length) !== -1
   ) {
     throw new Error(
-      `${label}: start anchor missing or ambiguous; no files written.`
+      `${label}: start anchor missing or ambiguous. No files written.`
     )
   }
 
@@ -30,7 +30,7 @@ function replaceBetween(input, first, last, updated, label) {
 
   if (to < 0) {
     throw new Error(
-      `${label}: end anchor missing; no files written.`
+      `${label}: end anchor missing. No files written.`
     )
   }
 
@@ -45,7 +45,7 @@ function replaceOnce(input, from, to, label) {
     input.indexOf(from, i + from.length) !== -1
   ) {
     throw new Error(
-      `${label}: matching code not found exactly once; no files written.`
+      `${label}: matching code not found exactly once. No files written.`
     )
   }
 
@@ -54,36 +54,55 @@ function replaceOnce(input, from, to, label) {
 
 if (!fs.existsSync(pagePath) || !fs.existsSync(workerPath)) {
   throw new Error(
-    'Required files app/audio/page.tsx and public/sw.js were not found.'
+    'Required SAMEE3 audio files were not found.'
   )
 }
 
 let page = fs.readFileSync(pagePath, 'utf8')
 let sw = fs.readFileSync(workerPath, 'utf8')
 
-const MARKER = 'SAMEE3_AUDIO_STABILITY_2026_11'
+const pagePatched = page.includes(MARKER)
+const swPatched = sw.includes(MARKER)
 
-if (page.includes(MARKER) && sw.includes(MARKER)) {
-  console.log('Audio stability fix already installed.')
+if (pagePatched !== swPatched) {
+  throw new Error(
+    'Audio fix is only partly installed. No files changed.'
+  )
+}
+
+if (pagePatched && swPatched) {
+  console.log('SAMEE3 audio stability fix already installed.')
   process.exit(0)
 }
 
-// 1. Enumerate offline keys without deserializing every MP3.
+// 1. Enumerate offline keys without reading every MP3 blob.
 
-const listOfflineReplacement = `// SAMEE3_AUDIO_STABILITY_2026_11: key-only enumeration avoids loading every saved MP3.
+const listOfflineReplacement = `// SAMEE3_AUDIO_STABILITY_2026_11
 async function listOffline(): Promise<OfflineRecord[]> {
   const db = await getOfflineDb()
-  const index = new Map(readAudioCatalog().map(item => [offlineKeyFor(item), item]))
+
+  const index = new Map(
+    readAudioCatalog().map(item => [
+      offlineKeyFor(item),
+      item,
+    ])
+  )
+
   return new Promise((resolve, reject) => {
     const rows: OfflineRecord[] = []
+
     try {
       const tx = db.transaction('audio', 'readonly')
       const request = tx.objectStore('audio').openKeyCursor()
+
       request.onsuccess = () => {
         const cursor = request.result
+
         if (!cursor) return
+
         const key = String(cursor.primaryKey)
         const item = index.get(key)
+
         rows.push({
           key,
           title: item?.title || 'تسجيل محفوظ',
@@ -92,12 +111,20 @@ async function listOffline(): Promise<OfflineRecord[]> {
           item,
           blob: new Blob(),
         })
+
         cursor.continue()
       }
-      tx.oncomplete = () => { db.close(); resolve(rows) }
+
+      tx.oncomplete = () => {
+        db.close()
+        resolve(rows)
+      }
+
       tx.onabort = tx.onerror = () => {
         db.close()
-        reject(tx.error || new Error('تعذر فهرسة الصوت المحفوظ.'))
+        reject(
+          tx.error || new Error('تعذر فهرسة الصوت المحفوظ.')
+        )
       }
     } catch (error) {
       db.close()
@@ -112,94 +139,175 @@ page = replaceBetween(
   'async function listOffline(): Promise<OfflineRecord[]> {',
   'function offlineKeyFor(item: PlayerItem)',
   listOfflineReplacement,
-  'Lightweight IndexedDB index'
+  'IndexedDB offline listing'
 )
 
-// 2. Avoid loading large cached recordings into Blob memory.
+// 2. Avoid loading cached MP3 files into memory.
 
 page = replaceOnce(
   page,
   '        const savedBlob = await getSavedBlob(currentPlayer)',
-  `        // SAMEE3_AUDIO_STABILITY_2026_11: stream CacheStorage recordings
-        // via SW; use Blob URLs only for recordings held in IndexedDB.
+  `        // SAMEE3_AUDIO_STABILITY_2026_11
+        // Prefer streaming complete cached recordings.
+
         const cacheStreamSupported = Boolean(
           currentPlayer.kind === 'quran' &&
           navigator.serviceWorker?.controller &&
-          /^https:\\/\\/(?:[a-z0-9-]+\\.)*mp3quran\\.net\\//i.test(currentPlayer.audioUrl)
+          /^https:\\/\\/(?:[a-z0-9-]+\\.)*mp3quran\\.net\\//i.test(
+            currentPlayer.audioUrl
+          )
         )
+
         const cacheResponse = cacheStreamSupported
           ? await findCachedAudio(currentPlayer.audioUrl)
           : null
+
         const cachedStream = Boolean(cacheResponse)
+
         if (cacheResponse) {
-          void cacheResponse.body?.cancel().catch(() => undefined)
+          void cacheResponse.body?.cancel().catch(
+            () => undefined
+          )
         }
-        const savedBlob = cachedStream ? null : await getSavedBlob(currentPlayer)`,
-  'CacheStorage playback'
+
+        const savedBlob = cachedStream
+          ? null
+          : await getSavedBlob(currentPlayer)`,
+  'Cached audio streaming'
 )
 
 page = replaceOnce(
   page,
   '        } else if (!source || navigator.onLine === false) {',
   '        } else if (!source || (navigator.onLine === false && !cachedStream)) {',
-  'Offline cached stream guard'
+  'Offline playback'
 )
 
-// 3. Load ZIP library only when exporting recordings.
+// Use the original cached URL instead of the online proxy.
+
+page = replaceOnce(
+  page,
+  '        const playbackSource = libraryAudioSource(source)',
+  '        const playbackSource = cachedStream ? source : libraryAudioSource(source)',
+  'Cached playback URL'
+)
+
+// 3. Load JSZip only when the user exports recordings.
 
 page = replaceOnce(
   page,
   "import JSZip from 'jszip'\n",
   '',
-  'Lazy ZIP loading import'
+  'JSZip static import'
 )
 
 page = replaceOnce(
   page,
   '      const zip = new JSZip()',
-  "      const { default: JSZip } = await import('jszip')\n      const zip = new JSZip()",
-  'Lazy ZIP loading usage'
+  `      const { default: JSZip } = await import('jszip')
+      const zip = new JSZip()`,
+  'JSZip lazy loading'
 )
 
-// 4. Stream HTTP byte ranges from cached audio.
+// 4. Stream HTTP byte ranges from previously cached audio.
 
-const swReplacement = `// SAMEE3_AUDIO_STABILITY_2026_11: stream ranges without full-file Blob allocation.
+const swReplacement = `// SAMEE3_AUDIO_STABILITY_2026_11
 function cachedAudioRange(response, rangeHeader) {
   const lengthHeader = response.headers.get('Content-Length')
-  const total = lengthHeader && /^\\d+$/.test(lengthHeader) ? Number(lengthHeader) : 0
-  const match = /^bytes=(\\d*)-(\\d*)$/i.exec(rangeHeader.trim())
-  if (!total || !Number.isSafeInteger(total) || !match || (!match[1] && !match[2]) || !response.body) {
+
+  const total =
+    lengthHeader && /^\\d+$/.test(lengthHeader)
+      ? Number(lengthHeader)
+      : 0
+
+  const match = /^bytes=(\\d*)-(\\d*)$/i.exec(
+    rangeHeader.trim()
+  )
+
+  if (
+    !total ||
+    !Number.isSafeInteger(total) ||
+    !match ||
+    (!match[1] && !match[2]) ||
+    !response.body
+  ) {
     return response
   }
-  let start = match[1] ? Number(match[1]) : Math.max(0, total - Number(match[2]))
-  let end = match[2] && match[1] ? Number(match[2]) : total - 1
-  if (!Number.isSafeInteger(start) || !Number.isSafeInteger(end) || start < 0 || start >= total || end < start) {
-    return new Response(null, { status: 416, headers: { 'Content-Range': 'bytes */' + total } })
+
+  let start = match[1]
+    ? Number(match[1])
+    : Math.max(0, total - Number(match[2]))
+
+  let end = match[2] && match[1]
+    ? Number(match[2])
+    : total - 1
+
+  if (
+    !Number.isSafeInteger(start) ||
+    !Number.isSafeInteger(end) ||
+    start < 0 ||
+    start >= total ||
+    end < start
+  ) {
+    return new Response(null, {
+      status: 416,
+      headers: {
+        'Content-Range': 'bytes */' + total,
+      },
+    })
   }
+
   end = Math.min(end, total - 1)
+
   const reader = response.body.getReader()
+
   let position = 0
   let finished = false
+
   const stream = new ReadableStream({
     async pull(controller) {
       if (finished) return
+
       try {
         while (true) {
           const next = await reader.read()
-          if (next.done) { finished = true; controller.close(); return }
+
+          if (next.done) {
+            finished = true
+            controller.close()
+            return
+          }
+
           const bytes = next.value
           const from = position
           const to = from + bytes.byteLength
+
           position = to
+
           if (to <= start) continue
+
           const low = Math.max(0, start - from)
-          const high = Math.min(bytes.byteLength, end - from + 1)
-          if (high > low) controller.enqueue(bytes.subarray(low, high))
+
+          const high = Math.min(
+            bytes.byteLength,
+            end - from + 1
+          )
+
+          if (high > low) {
+            controller.enqueue(
+              bytes.subarray(low, high)
+            )
+          }
+
           if (to > end) {
             finished = true
             controller.close()
-            void reader.cancel().catch(() => undefined)
+
+            void reader.cancel().catch(
+              () => undefined
+            )
           }
+
           return
         }
       } catch (error) {
@@ -207,27 +315,49 @@ function cachedAudioRange(response, rangeHeader) {
         controller.error(error)
       }
     },
-    cancel(reason) { finished = true; return reader.cancel(reason) },
+
+    cancel(reason) {
+      finished = true
+      return reader.cancel(reason)
+    },
   })
+
   return new Response(stream, {
     status: 206,
     headers: {
-      'Content-Type': response.headers.get('Content-Type') || 'audio/mpeg',
+      'Content-Type':
+        response.headers.get('Content-Type') ||
+        'audio/mpeg',
+
       'Accept-Ranges': 'bytes',
-      'Content-Range': 'bytes ' + start + '-' + end + '/' + total,
-      'Content-Length': String(end - start + 1),
+
+      'Content-Range':
+        'bytes ' + start + '-' + end + '/' + total,
+
+      'Content-Length': String(
+        end - start + 1
+      ),
     },
   })
 }
 
 async function serveQuranAudio(request) {
-  const cached = await getFromCaches([AUDIO_CACHE, ...OLD_AUDIO_CACHES], request.url)
+  const cached = await getFromCaches(
+    [AUDIO_CACHE, ...OLD_AUDIO_CACHES],
+    request.url
+  )
+
   if (cached) {
     const range = request.headers.get('Range')
-    if (range && cached.type !== 'opaque') return cachedAudioRange(cached, range)
+
+    if (range && cached.type !== 'opaque') {
+      return cachedAudioRange(cached, range)
+    }
+
     return cached
   }
-  // Never automatically cache an audio file unless the user explicitly saves it.
+
+  // Only explicitly downloaded audio is stored.
   return fetch(request)
 }
 `
@@ -237,17 +367,24 @@ sw = replaceBetween(
   'async function serveQuranAudio(request) {',
   'async function saveAudioOnRequest(urlString) {',
   swReplacement,
-  'Service worker streaming ranges'
+  'Service Worker audio ranges'
 )
+
+// 5. Update the Service Worker version.
 
 sw = replaceOnce(
   sw,
   "const SW_VERSION = 'samee3-sw-v9'",
   "const SW_VERSION = 'samee3-sw-v10'",
-  'Service worker version'
+  'Service Worker version'
 )
 
-// Commit changes only after all guards have passed.
+// 6. Validate all replacements before writing files.
+
+if (process.argv.includes('--check')) {
+  console.log('SAMEE3 audio patch validation passed.')
+  process.exit(0)
+}
 
 fs.writeFileSync(pagePath, page, 'utf8')
 fs.writeFileSync(workerPath, sw, 'utf8')
@@ -255,4 +392,4 @@ fs.writeFileSync(workerPath, sw, 'utf8')
 console.log('SAMEE3 audio stability patch applied.')
 console.log('Updated:', pagePath)
 console.log('Updated:', workerPath)
-console.log('Existing catalog, saved audio and UI preserved.')
+console.log('Existing recordings and interface preserved.')
