@@ -7,15 +7,6 @@ export const ALAFASY_COLLECTED_MOSHAF_ID = 900012301
 export const ALAFASY_COLLECTED_NAME = 'مشاري العفاسي – مصحف مجمع'
 export const ALAFASY_COLLECTED_RELEASE =
   'https://github.com/PSYMOHAMEDABOZAID/alafasy-collected-quran/releases/download/v1.0.0'
-// Serve only this recording through a SAMEE3-origin streaming endpoint.
-// This avoids cross-origin media restrictions and preserves byte-range requests.
-export const ALAFASY_COLLECTED_AUDIO_SERVER = '/api/alafasy-audio/'
-function collectedAudioServer(): string {
-  // Use an absolute same-origin URL in the browser (some players require http(s)).
-  return typeof window === 'undefined'
-    ? ALAFASY_COLLECTED_AUDIO_SERVER
-    : `${window.location.origin}${ALAFASY_COLLECTED_AUDIO_SERVER}`
-}
 export const ALAFASY_COLLECTED_SURAH_IDS = Array.from({ length: 114 }, (_, index) => index + 1)
 export const ALAFASY_COLLECTED_SURAH_LIST = ALAFASY_COLLECTED_SURAH_IDS.join(',')
 
@@ -27,7 +18,7 @@ export function collectedAlafasyLibraryReciter(riwayaId: number) {
     moshaf: [{
       id: ALAFASY_COLLECTED_MOSHAF_ID,
       name: 'حفص عن عاصم – مصحف مجمع',
-      server: collectedAudioServer(),
+      server: '/api/alafasy-audio/',
       surah_total: 114,
       rewaya_id: riwayaId,
       moshaf_type: 0,
@@ -43,8 +34,9 @@ export function collectedAlafasyMushafReciter() {
     apiId: ALAFASY_COLLECTED_RECITER_ID,
     label: ALAFASY_COLLECTED_NAME,
     moshafId: ALAFASY_COLLECTED_MOSHAF_ID,
-    // The SAMEE3 player appends '002.mp3' to this same-origin server URL.
-    server: collectedAudioServer(),
+    // The SAMEE3 mushaf player appends '002.mp3' to this server URL.
+    // Keep the ending slash, matching the audio-library reciter.
+    server: `${ALAFASY_COLLECTED_RELEASE}/`,
     surahIds: ALAFASY_COLLECTED_SURAH_IDS,
   }
 }
