@@ -1,4 +1,5 @@
-const SW_VERSION = 'samee3-sw-v10'
+// SAMEE3_AUDIO_LIBRARY_STABLE_V1: update service-worker code; never delete audio caches.
+const SW_VERSION = 'samee3-sw-v11'
 
 const SHELL_CACHE = `${SW_VERSION}-shell`
 const NAV_CACHE = `${SW_VERSION}-navigation`
@@ -421,6 +422,23 @@ function cachedAudioRange(response, rangeHeader) {
   })
 }
 
+// Saved Alafasy readings are deliberately kept in their existing cache name.
+// Streaming them via the SW keeps large offline MP3s out of the page's JS heap.
+const RIWAYAT_AUDIO_CACHE = 'samee3-riwayat-audio-v1'
+async function serveSavedRiwayatAudio(request) {
+  try {
+    const cache = await caches.open(RIWAYAT_AUDIO_CACHE)
+    const key = new URL(request.url).pathname
+    const saved = await cache.match(key)
+    if (!saved) return new Response('Audio not saved', { status: 404 })
+    const range = request.headers.get('Range')
+    return range && saved.type !== 'opaque'
+      ? cachedAudioRange(saved, range)
+      : saved
+  } catch {
+    return new Response('Saved audio unavailable', { status: 503 })
+  }
+}
 async function serveQuranAudio(request) {
   const cached = await getFromCaches(
     [AUDIO_CACHE, ...OLD_AUDIO_CACHES],
@@ -931,6 +949,12 @@ self.addEventListener(
     }
 
     if (isSameOrigin(url) && (url.pathname.startsWith('/android/') || url.pathname === '/api/app-version' || url.pathname === '/api/app-downloads' || url.pathname === '/app-downloads.json')) return
+
+    if (isSameOrigin(url) &&
+        /^\/audio\/alafasy-riwayat\/offline\/[^/]+\/\d{3}\.mp3$/.test(url.pathname)) {
+      event.respondWith(serveSavedRiwayatAudio(request))
+      return
+    }
 
     if (isQuranAudio(request, url)) {
       event.respondWith(

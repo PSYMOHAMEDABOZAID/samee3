@@ -458,10 +458,16 @@ async function getSavedBlob(item: PlayerItem, maxBytes?: number): Promise<Blob |
   if (item.kind === 'quran') {
     const cached = await findCachedAudio(item.audioUrl)
     if (cached) {
-      checkSize(Number(cached.headers.get('content-length') || 0))
+      // Do not materialize a huge cached MP3 into WebKit's JS heap.
+      // Online playback uses a streaming <audio src> instead.
+      const size = Number(cached.headers.get('content-length') || 0)
+      if (!size || !Number.isSafeInteger(size) ||
+          (maxBytes !== undefined && size > maxBytes)) {
+        void cached.body?.cancel().catch(() => undefined)
+        return null
+      }
       let blob: Blob | null = null
       try { blob = await cached.blob() } catch {}
-
       if (blob?.size) {
         checkSize(blob.size)
         return blob
@@ -491,8 +497,13 @@ async function hasSavedAudio(item: PlayerItem): Promise<boolean> {
   }
 
   try {
-    const record = await getOffline(offlineKeyFor(item))
-    return record?.blob instanceof Blob && record.blob.size > 0
+    // IndexedDB getKey avoids deserializing a multi-megabyte MP3 just to
+    // display a saved/checkmark state.
+    const key = offlineKeyFor(item)
+    const existing = await offlineRequest<IDBValidKey | undefined>(
+      'readonly', store => store.getKey(key)
+    )
+    return existing !== undefined
   } catch {
     return false
   }
@@ -1125,6 +1136,12 @@ export default function AudioPage() {
   const objectUrlRef = useRef<string | null>(null)
   const pendingPlayRef = useRef(false)
   const contextReady = useRef(false)
+  // SAMEE3_AUDIO_LIBRARY_STABLE_V1: persisted browser navigation, not audio/file storage.
+  const rememberedSelection = useRef<{
+    riwaya?: number; reciter?: number; moshaf?: number; surah?: number
+  } | null>(null)
+  const restoredReader = useRef(false)
+  const restoredSurah = useRef(false)
 
   const notify = useCallback((message: string) => {
     window.clearTimeout(toastTimerRef.current)
@@ -1159,12 +1176,10 @@ export default function AudioPage() {
             if (requestId !== indexRequestRef.current) return
             if (!/\.mp3(?:$|\?)/i.test(request.url)) continue
 
-            const response = await cache.match(request)
-            if (!response || (!isCompleteAudio(response) && response.type !== 'opaque')) continue
-
-            if (isCompleteAudio(response)) urls.add(request.url)
-
-            if (items.has(request.url) && !items.get(request.url)?.legacyOpaque) continue
+            // Cache.keys() is metadata-only. Avoid hundreds of Cache.match()
+            // calls and never touch cached audio bodies during initial render.
+            urls.add(request.url)
+            if (items.has(request.url)) continue
 
             const known = catalog.get(request.url)
             const match = new URL(request.url).pathname.match(/\/(\d{3})\.mp3$/i)
@@ -1179,7 +1194,7 @@ export default function AudioPage() {
                 reciterName: 'تلاوة محفوظة على الجهاز',
                 surahId,
               }),
-              legacyOpaque: response.type === 'opaque',
+              legacyOpaque: false,
             })
           }
         }
@@ -1336,14 +1351,32 @@ export default function AudioPage() {
 
   useEffect(() => {
     void loadBaseLibrary()
-    void loadOfflineIndex()
+    // Defer Cache API scanning until after the first paint.
+    const offlineIndexTimer = window.setTimeout(() => {
+      void loadOfflineIndex()
+    }, 950)
 
     try {
-      const saved = JSON.parse(localStorage.getItem('samee3_audio_view_v2') || '{}')
+      const saved = JSON.parse(localStorage.getItem('samee3_audio_view_v2') || '{}') as {
+        tab?: string; scholar?: string; book?: string;
+        riwaya?: number; reciter?: number; moshaf?: number; surah?: number
+      }
+      // Quran selection is stored separately: the existing tab persistence
+      // is deliberately left unchanged to avoid source-drift failures.
+      let quranSaved: { riwaya?: number; reciter?: number; moshaf?: number; surah?: number } = {}
+      try {
+        quranSaved = JSON.parse(localStorage.getItem('samee3_audio_quran_view_v3') || '{}')
+      } catch {}
+      rememberedSelection.current = {
+        riwaya: Number(quranSaved.riwaya || saved.riwaya) || undefined,
+        reciter: Number(quranSaved.reciter || saved.reciter) || undefined,
+        moshaf: Number(quranSaved.moshaf || saved.moshaf) || undefined,
+        surah: Number(quranSaved.surah || saved.surah) || undefined,
+      }
 
       if (saved.tab === 'alafasy') {
         setActiveTab('alafasy')
-      } else if (['ruqyah', 'khutbah', 'sunnah'].includes(saved.tab)) {
+      } else if (['ruqyah', 'khutbah', 'sunnah'].includes(saved.tab ?? '')) {
         const tab = saved.tab as Exclude<TabKey, 'quran'>
         const scholar = KHUTBAH_SCHOLARS.some(item => item.id === saved.scholar)
           ? saved.scholar as string
@@ -1362,6 +1395,7 @@ export default function AudioPage() {
     } catch {}
 
     contextReady.current = true
+    return () => window.clearTimeout(offlineIndexTimer)
   }, [loadBaseLibrary, loadOfflineIndex, loadLibraryContent])
 
   useEffect(() => {
@@ -1375,6 +1409,62 @@ export default function AudioPage() {
       }))
     } catch {}
   }, [activeTab, khutbahScholarId, selectedSunnahBookId])
+
+  // SAMEE3_AUDIO_LIBRARY_STABLE_V1: persist Quran selections independently of the existing tab state.
+  // This does not read or delete any downloaded audio caches or IndexedDB data.
+  useEffect(() => {
+    if (!contextReady.current || activeTab !== 'quran' || !riwayat.length) return
+    const previous = rememberedSelection.current
+    // Never overwrite remembered data with empty initial state before recovery.
+    if (previous?.riwaya && selectedRiwaya?.id !== previous.riwaya &&
+        !restoredReader.current) return
+    if (previous?.reciter && !restoredReader.current) return
+    if (previous?.surah && !restoredSurah.current) return
+    try {
+      localStorage.setItem('samee3_audio_quran_view_v3', JSON.stringify({
+        riwaya: selectedRiwaya?.id,
+        reciter: selectedReciter?.id,
+        moshaf: selectedMoshaf?.id,
+        surah: selectedSurah?.id,
+      }))
+    } catch {}
+  }, [activeTab, riwayat.length, selectedRiwaya?.id, selectedReciter?.id,
+      selectedMoshaf?.id, selectedSurah?.id])
+
+  useEffect(() => {
+    if (!contextReady.current || !riwayat.length || activeTab !== 'quran') return
+    const desired = rememberedSelection.current?.riwaya
+    if (!desired || selectedRiwaya?.id === desired) return
+    const match = riwayat.find(row => row.id === desired)
+    if (match) setSelectedRiwaya(match)
+  }, [riwayat, selectedRiwaya?.id, activeTab])
+
+  useEffect(() => {
+    if (restoredReader.current || activeTab !== 'quran') return
+    const wanted = rememberedSelection.current
+    if (!wanted?.reciter || !wanted?.riwaya ||
+        !selectedRiwaya || selectedRiwaya.id !== wanted.riwaya) return
+    const reciter = reciters.find(row => row.id === wanted.reciter)
+    if (!reciter) return
+    const moshaf = reciter.moshaf.find(row => row.id === wanted.moshaf)
+      || getMoshafForRiwaya(reciter, selectedRiwaya)
+    if (!moshaf) return
+    restoredReader.current = true
+    setSelectedReciter(reciter)
+    setSelectedMoshaf(moshaf)
+    setShowReciters(false)
+    setShowSurahs(true)
+  }, [reciters, selectedRiwaya, activeTab])
+
+  useEffect(() => {
+    if (restoredSurah.current || activeTab !== 'quran') return
+    const wanted = rememberedSelection.current
+    if (!selectedMoshaf || !wanted?.surah || selectedRiwaya?.id !== wanted.riwaya) return
+    const surah = surahs.find(row => row.id === wanted.surah)
+    if (!surah) return
+    restoredSurah.current = true
+    setSelectedSurah(surah)
+  }, [selectedMoshaf, selectedRiwaya?.id, surahs, activeTab])
 
   useEffect(() => {
     const update = () => {
@@ -1600,9 +1690,12 @@ export default function AudioPage() {
           )
         }
 
-        const savedBlob = cachedStream
+        // Stream all online recordings: converting cached MP3s to Blob URLs
+        // used to evict the page under iOS memory pressure.
+        const needsLocalBlob = navigator.onLine === false || !currentPlayer.audioUrl
+        const savedBlob = cachedStream || !needsLocalBlob
           ? null
-          : await getSavedBlob(currentPlayer)
+          : await getSavedBlob(currentPlayer, 32 * 1024 * 1024)
         if (disposed || audioRef.current !== currentAudio) return
 
         let source = currentPlayer.audioUrl
@@ -1691,9 +1784,11 @@ export default function AudioPage() {
     const audio = audioRef.current
     if (!audio) return
 
+    // Updating this very large library component every ~250ms on iOS
+    // made scrolling and track changes unresponsive. 2-second cadence.
     const handleTimeUpdate = () =>
       setProgress(old =>
-        Math.floor(old) === Math.floor(audio.currentTime || 0)
+        Math.floor(old / 2) === Math.floor((audio.currentTime || 0) / 2)
           ? old
           : audio.currentTime || 0
       )
@@ -1765,6 +1860,9 @@ export default function AudioPage() {
   useEffect(() => () => revokeObjectUrl(), [revokeObjectUrl])
 
   const selectRiwaya = (riwaya: Riwaya) => {
+    rememberedSelection.current = null
+    restoredReader.current = true
+    restoredSurah.current = true
     pendingPlayRef.current = false
     audioRef.current?.pause()
     setPlayer(null)
@@ -1782,6 +1880,9 @@ export default function AudioPage() {
   }
 
   const selectReciter = (reciter: Reciter) => {
+    rememberedSelection.current = null
+    restoredReader.current = true
+    restoredSurah.current = true
     if (!selectedRiwaya) return
     audioRef.current?.pause()
 

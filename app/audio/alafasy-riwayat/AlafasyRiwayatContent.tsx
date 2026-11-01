@@ -50,6 +50,8 @@ export default function AlafasyRiwayatContent({ embedded = false }: { embedded?:
   const playingRef = useRef<NowPlaying | null>(null)
   const editionsRef = useRef<Edition[]>([])
   const lastSavedSecond = useRef(-1)
+  // SAMEE3_AUDIO_LIBRARY_STABLE_V1: repaint the player at most once per second.
+  const lastUiSecond = useRef(-1)
 
   const edition = useMemo(() => catalog?.editions.find(row => row.id === editionId) || catalog?.editions[0] || null, [catalog, editionId])
   const rows = useMemo(() => (edition?.surahIds || []).filter(n => !search.trim() || `${n}`.includes(search.trim()) || name(n).includes(search.trim())), [edition, search])
@@ -96,7 +98,11 @@ export default function AlafasyRiwayatContent({ embedded = false }: { embedded?:
   function onTimeUpdate() {
     const audio = audioRef.current
     if (!audio) return
-    setPosition(audio.currentTime)
+    const second = Math.floor(audio.currentTime)
+    if (second !== lastUiSecond.current) {
+      lastUiSecond.current = second
+      setPosition(audio.currentTime)
+    }
     if (Math.floor(audio.currentTime / 5) !== lastSavedSecond.current) {
       lastSavedSecond.current = Math.floor(audio.currentTime / 5)
       remember(playingRef.current, audio.currentTime)
@@ -115,6 +121,7 @@ export default function AlafasyRiwayatContent({ embedded = false }: { embedded?:
     }
     playingRef.current = item
     setPlaying(item)
+    lastUiSecond.current = -1
     setPosition(0)
     setDuration(0)
     setPaused(false)
@@ -149,15 +156,29 @@ export default function AlafasyRiwayatContent({ embedded = false }: { embedded?:
       return
     }
     if (!navigator.onLine) {
-      // Offline requires loading the cached object URL; audio controls remain available if iOS denies autoplay.
+      const key = fileKey(id, surah)
+      if (!saved.includes(key)) {
+        setNotice('السورة غير محفوظة. حمّلها وأنت متصل بالإنترنت أولاً.')
+        return
+      }
+      // The service worker serves cached MP3 as a streaming Response with
+      // byte-range support, without allocating a giant Blob on the main thread.
+      if (navigator.serviceWorker?.controller) {
+        attachAudio({editionId: id, surah, url: key, offline: true}, true)
+        return
+      }
+      // Fallback for a browser that has not yet activated the SW.
+      // Limit Blob conversion to small files to avoid reloading iOS WebKit.
       void (async () => {
         try {
-          if (!('caches' in window)) throw new Error('الحفظ دون إنترنت غير مدعوم على جهازك.')
           const cache = await caches.open(AUDIO_CACHE)
-          const entry = await cache.match(fileKey(id, surah))
-          if (!entry) throw new Error('السورة غير محفوظة على هذا الجهاز. حمّلها وأنت متصل بالإنترنت.')
-          const blob = await entry.blob()
-          const url = URL.createObjectURL(blob)
+          const entry = await cache.match(key)
+          if (!entry) throw new Error('السورة غير محفوظة على الجهاز.')
+          const length = Number(entry.headers.get('content-length') || 0)
+          if (!length || length > 12 * 1024 * 1024) {
+            throw new Error('للسور الطويلة افتح التطبيق بعد تحديثه مرة وأنت متصل حتى يعمل تشغيل الملفات المحفوظة دون تحميلها في الذاكرة.')
+          }
+          const url = URL.createObjectURL(await entry.blob())
           objectRef.current = url
           attachAudio({editionId: id, surah, url, offline: true}, true)
         } catch (e) { setNotice(errorMessage(e)) }

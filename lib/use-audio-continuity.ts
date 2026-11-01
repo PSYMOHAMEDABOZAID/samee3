@@ -91,11 +91,13 @@ export function attachAudioContinuity(
   }
 
   const schedule = (delay: number) => {
+    // SAMEE3_AUDIO_LIBRARY_STABLE_V1: do not schedule retries while the page is hidden and paused.
     if (
       !disposed &&
       wanted &&
       !timer &&
-      navigator.onLine !== false
+      navigator.onLine !== false &&
+      !(document.visibilityState === 'hidden' && audio.paused)
     ) {
       timer = setTimeout(recover, delay)
     }
