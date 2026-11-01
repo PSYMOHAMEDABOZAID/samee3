@@ -1,16 +1,16 @@
 'use client'
 
 /**
- * SAMEE3 — Collected Alafasy Precision Trim Editor, V6.
+ * SAMEE3 — Collected Alafasy Precision Trim Editor, V8 / standalone.
  * Drop-in replacement for app/visual-ayahs/Samee3CollectedTrimEditor.tsx.
  * This changes ONLY the collected-recitation editor; other readers are untouched.
  * Preserves v3 localStorage keys and public exports used by page.tsx.
+ * No page.tsx edits and no additional helper files required.
  */
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Check, ChevronDown, ChevronUp, Pause, Play, RotateCcw, Save, SlidersHorizontal } from 'lucide-react'
 import { MAX_DURATION_SECONDS } from '@/lib/samee3-visual-config'
-import { muteEdgeGain, updateEdgeGain } from './collected-audio-edges'
 
 export type CollectedTiming = {
   startSeconds: number
@@ -42,6 +42,36 @@ const STORAGE_PREFIX = 'samee3_collected_visual_trim_v3:'
 const STEP = 0.05
 const MAX_OFFSET = 30
 const EPSILON = 0.00001
+
+// Self-contained audio envelope for the editor PREVIEW only.
+// No import is needed in page.tsx; the page's existing audio/export paths remain untouched.
+const EDGE_FADE_SECONDS = 0.09
+
+function edgeGainAt(positionSeconds: number, durationSeconds: number): number {
+  if (!Number.isFinite(positionSeconds) || !Number.isFinite(durationSeconds) || durationSeconds <= 0) return 0
+  const fade = Math.min(EDGE_FADE_SECONDS, durationSeconds / 3)
+  return Math.max(0, Math.min(1, positionSeconds / fade, (durationSeconds - positionSeconds) / fade))
+}
+
+function muteEdgeGain(node: GainNode | null, context: AudioContext | null): void {
+  if (!node || !context || context.state === 'closed') return
+  const now = context.currentTime
+  node.gain.cancelScheduledValues(now)
+  node.gain.setValueAtTime(0, now)
+}
+
+function updateEdgeGain(
+  node: GainNode | null,
+  context: AudioContext | null,
+  positionSeconds: number,
+  durationSeconds: number
+): void {
+  if (!node || !context || context.state === 'closed') return
+  const now = context.currentTime
+  const target = edgeGainAt(positionSeconds, durationSeconds)
+  node.gain.cancelScheduledValues(now)
+  node.gain.setTargetAtTime(target, now, 0.008)
+}
 
 const baseButton =
   'inline-flex min-h-11 items-center justify-center gap-2 rounded-xl px-3 py-2 ' +
@@ -493,7 +523,7 @@ export function Samee3CollectedTrimEditor({
             <p className="mt-1 text-xs leading-6 text-[#e3f2e9]">المصحف المجمع · من الآية {from} إلى {to} · دقة 0.05 ثانية</p>
           </div>
         </div>
-        <p className="mt-3 text-xs leading-6 text-[#edf5ef]">حرّك المؤشر وسيُعتمد التوقيت بعد تركه. تم تحسين حواف الصوت لمنع الطقطقة عند بدء المقطع ونهايته.</p>
+        <p className="mt-3 text-xs leading-6 text-[#edf5ef]">حرّك المؤشر وسيُعتمد التوقيت بعد تركه. المعاينة فيها تنعيم صوتي؛ ويستخدم الفيديو النهائي التوقيت المحفوظ دون أي تعديل لباقي القسم.</p>
       </div>
 
       <div className="space-y-4 p-4 sm:p-6">
@@ -567,7 +597,7 @@ export function Samee3CollectedTrimEditor({
         {message && <p role="status" className="rounded-xl bg-[#e8f5e9] px-3 py-3 text-xs font-semibold leading-6 text-[#245343]">{message}</p>}
         {(draft.startOffset > 0 || draft.endOffset < 0) && (
           <div className="rounded-xl border border-[#e8d8ad] bg-[#fffaf0] px-3 py-3 text-xs leading-6 text-[#73541e]">
-            <p>تنبيه: تقديم بداية المقطع أو تقديم نهايته قد يحذف أول أو آخر حرف من التلاوة. استمع لأول وآخر 3 ثوانٍ قبل التصدير. التنعيم الصوتي يمنع الطقطقة، لكنه لا يعيد حرفًا تم قصّه.</p>
+            <p>تنبيه: تقديم بداية المقطع أو تقديم نهايته قد يحذف أول أو آخر حرف من التلاوة. استمع لأول وآخر 3 ثوانٍ قبل التصدير. تنعيم المعاينة يقلّل الطقطقة، لكنه لا يعيد حرفًا تم قصّه ولا يغيّر محرّك تصدير الفيديو.</p>
             <button type="button" disabled={disabled} className="mt-2 min-h-10 rounded-lg border border-[#dac895] bg-white px-3 py-2 font-extrabold text-[#624920] disabled:opacity-50" onClick={() => {
               const safe = {
                 startOffset: Math.min(0, draftRef.current.startOffset),
@@ -581,13 +611,35 @@ export function Samee3CollectedTrimEditor({
             }}>حماية أول وآخر حرف — إلغاء القص الزائد</button>
           </div>
         )}
+        <div className="rounded-xl border border-[#d9e4da] bg-white px-3 py-3 text-xs leading-6 text-[#416356]">
+          <p className="font-bold">اختياري: هامش أمان حول أول وآخر حرف</p>
+          <p className="mt-1">لو بداية الكلمة أو نهايتها مقطوعة، أضف 0.20 ثانية قبل المقطع وبعده، ثم استمع للنتيجة. الهامش لا يعالج توقيتات مصدر غير صحيحة تلقائيًا.</p>
+          <button
+            type="button"
+            disabled={disabled}
+            className={secondaryButton + ' mt-2'}
+            onClick={() => {
+              const next = {
+                startOffset: roundOffset(draftRef.current.startOffset - 0.2),
+                endOffset: roundOffset(draftRef.current.endOffset + 0.2),
+              }
+              draftRef.current = next
+              setDraft(next)
+              setStartText(next.startOffset.toFixed(2))
+              setEndText(next.endOffset.toFixed(2))
+              commit(next)
+            }}
+          >
+            إضافة هامش أمان 0.20 ثانية
+          </button>
+        </div>
         {dirty && <p className="text-xs font-semibold text-[#997333]">يوجد تعديل لم يُعتمد بعد. ارفع إصبعك عن المؤشر أو اضغط «تطبيق وحفظ».</p>}
 
         <div className="grid grid-cols-1 gap-2 sm:grid-cols-[1fr_auto]">
           <button type="button" disabled={disabled || !valid || !dirty} onClick={() => commit()} className={primaryButton}><Check size={17} /><Save size={16} /> تطبيق وحفظ الضبط</button>
           <button type="button" disabled={disabled} onClick={reset} className={secondaryButton}><RotateCcw size={16} /> التوقيت الأصلي</button>
         </div>
-        <p className="text-center text-[11px] leading-5 text-[#768b7b]">الضبط المحفوظ خاص بالسورة والآيات المختارة، ويستخدم تلقائيًا في تشغيل الفيديو وتصديره على هذا الجهاز.</p>
+        <p className="text-center text-[11px] leading-5 text-[#768b7b]">الضبط محفوظ لكل سورة ومدى آيات، وتستخدمه الصفحة الأصلية تلقائيًا في المعاينة الرئيسية والتصدير. لم يتم تغيير صفحة الآيات المرئية.</p>
       </div>
     </section>
   )
