@@ -94,3 +94,76 @@ export default function ServiceWorkerRegistration() {
         registrationRef.current = reg
         if (!startedRef.current) {
           startedRef.current = true
+          void check()
+        }
+      })
+      .catch(() => { if (!closed) void check() })
+
+    // No once-a-minute worker popup. A changed service worker can be applied
+    // silently, but only a changed deployed BUILD can show an update dialog.
+    const onVisible = () => {
+      if (document.visibilityState === 'visible') void check()
+    }
+    const onManual = () => { void check(true) }
+    const timer = window.setInterval(onVisible, CHECK_EVERY_MS)
+    document.addEventListener('visibilitychange', onVisible)
+    window.addEventListener('online', onVisible)
+    window.addEventListener('samee3:check-update', onManual)
+    return () => {
+      closed = true
+      window.clearInterval(timer)
+      workers.removeEventListener('controllerchange', onControllerChange)
+      document.removeEventListener('visibilitychange', onVisible)
+      window.removeEventListener('online', onVisible)
+      window.removeEventListener('samee3:check-update', onManual)
+    }
+  }, [check])
+
+  const dismiss = () => {
+    if (target) rememberBuild(target)
+    setTarget(null)
+  }
+  const apply = () => {
+    if (!target || applying) return
+    rememberBuild(target)
+    setTarget(null)
+    setApplying(true)
+    // Only reload as a direct result of the user's action. Never interrupt
+    // playback merely because a newer deployment exists.
+    const waiting = registrationRef.current?.waiting
+    if (waiting) {
+      pendingReloadRef.current = true
+      waiting.postMessage({ type: 'SKIP_WAITING' })
+      // Some iOS workers activate without a controllerchange notification.
+      window.setTimeout(() => window.location.reload(), 2000)
+    } else {
+      window.location.reload()
+    }
+  }
+
+  if (!target) return null
+  return (
+    <aside dir="rtl" role="status" aria-live="polite"
+      className="fixed bottom-24 left-3 right-3 z-[120] mx-auto max-w-md rounded-2xl border border-[#dfc89d] bg-white p-4 text-[#12384a] shadow-[0_14px_45px_rgba(15,49,67,0.20)] sm:bottom-6">
+      <div className="flex items-start gap-3">
+        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#f8f0df] text-[#b18a4a]">
+          <RefreshCw size={20} aria-hidden="true" />
+        </span>
+        <div className="min-w-0 flex-1">
+          <p className="text-sm font-extrabold">تحديث جديد لمصحف سميع</p>
+          <p className="mt-1 text-xs leading-6 text-slate-600">
+            إصدار جديد متاح. يمكنك تطبيقه عندما تنتهي من القراءة أو الاستماع.
+            لن تُحذف التلاوات المحفوظة على الجهاز.
+          </p>
+        </div>
+        <button type="button" onClick={dismiss} aria-label="تأجيل التحديث"
+          className="rounded-lg p-1.5 text-slate-500 hover:bg-slate-100"><X size={18} /></button>
+      </div>
+      <button type="button" onClick={apply} disabled={applying}
+        className="mt-3 flex w-full items-center justify-center gap-2 rounded-xl bg-[#145a72] px-4 py-3 text-sm font-bold text-white disabled:opacity-60">
+        <RefreshCw size={17} className={applying ? 'animate-spin' : ''} aria-hidden="true" />
+        {applying ? 'جارٍ تطبيق التحديث…' : 'تحديث التطبيق الآن'}
+      </button>
+    </aside>
+  )
+}
