@@ -5,6 +5,9 @@ import {
   applyStoredCollectedTrim,
 } from './Samee3CollectedTrimEditor'
 
+// SAMEE3_V11: smooth collected MP3 during final MP4 export.
+import { muteEdgeGain, updateEdgeGain } from './collected-audio-edges'
+
 import { claimAudioFocus } from '@/lib/audio-focus'
 
 import {
@@ -2357,6 +2360,10 @@ export default function VisualAyahsPage() {
       MediaStreamAudioDestinationNode | null =
         null
 
+    // Keep the original recording untouched; fade only its output track.
+    let collectedExportGain: GainNode | null = null
+    let collectedStopTimer = 0
+
     let canvasStream:
       MediaStream | null = null
 
@@ -2457,13 +2464,57 @@ export default function VisualAyahsPage() {
           context
         )
 
+        audio.pause()
         await seekCollectedAudio(
           audio,
           prep.stream.startSeconds
         )
 
-        collectedAudioNodeRef.current?.disconnect()
-        collectedAudioNodeRef.current?.connect(destination)
+        // Do not start the MP4 recorder before the MP3 has decoded
+        // its first playable frames. This reduces silence at the start.
+        if (audio.readyState < 3) {
+          await new Promise<void>((resolve, reject) => {
+            let finished = false
+            let timer = 0
+            const cleanup = () => {
+              audio.removeEventListener('canplay', onReady)
+              audio.removeEventListener('error', onError)
+              controller.signal.removeEventListener('abort', onAbort)
+              window.clearTimeout(timer)
+            }
+            const done = (failure?: Error) => {
+              if (finished) return
+              finished = true
+              cleanup()
+              if (failure) reject(failure)
+              else resolve()
+            }
+            const onReady = () => done()
+            const onError = () => done(new Error('تعذر تجهيز الصوت للتصدير.'))
+            const onAbort = () => done(new Error('تم إلغاء إنشاء الفيديو.'))
+            audio.addEventListener('canplay', onReady)
+            audio.addEventListener('error', onError)
+            controller.signal.addEventListener('abort', onAbort, { once: true })
+            timer = window.setTimeout(
+              () => done(new Error('تأخر تحميل صوت العفاسي. حاول مرة أخرى.')),
+              15000
+            )
+            if (controller.signal.aborted) onAbort()
+            else if (audio.readyState >= 3) onReady()
+          })
+        }
+
+        // The MediaElementSource can only have one active output graph.
+        // Route it through a gain envelope into MediaRecorder, not speakers.
+        const sourceNode = collectedAudioNodeRef.current
+        if (!sourceNode) {
+          throw new Error('تعذر تجهيز قناة العفاسي الصوتية.')
+        }
+        collectedExportGain = context.createGain()
+        muteEdgeGain(collectedExportGain, context)
+        sourceNode.disconnect()
+        sourceNode.connect(collectedExportGain)
+        collectedExportGain.connect(destination)
       }
 
       recordedStream =
@@ -2589,7 +2640,14 @@ export default function VisualAyahsPage() {
               resolve(output)
             }
 
-            mediaRecorder.start(250)
+            // Start capture immediately before audio playback. The audio
+            // has already passed canplay above, avoiding a long silent lead.
+            try {
+              mediaRecorder.start(250)
+            } catch {
+              fail('تعذر بدء تسجيل MP4 في هذا المتصفح.')
+              return
+            }
 
             if (prep.stream) {
               const audio = collectedAudioRef.current
@@ -2599,6 +2657,8 @@ export default function VisualAyahsPage() {
                 return
               }
 
+              // Gain starts muted; the 20-ms ticker gently brings it up.
+              muteEdgeGain(collectedExportGain, context)
               void audio.play().catch(() => {
                 fail('تعذر تشغيل العفاسي أثناء التصدير.')
               })
@@ -2664,6 +2724,17 @@ export default function VisualAyahsPage() {
                             startedAt
                         )
 
+                  // Follow the actual streamed MP3 media clock so
+                  // buffering does not shift the fade or Quran verse text.
+                  if (prep.stream) {
+                    updateEdgeGain(
+                      collectedExportGain,
+                      context,
+                      seconds,
+                      prep.duration
+                    )
+                  }
+
                   exportTime.current =
                     Math.min(
                       prep.duration,
@@ -2682,16 +2753,19 @@ export default function VisualAyahsPage() {
                     )
                   )
 
-                  if (
-                    prep.stream
-                      ? seconds >= prep.duration
-                      : context.currentTime >=
-                        finishAt + 0.18
-                  ) {
+                  if (prep.stream) {
+                    if (seconds >= prep.duration && !collectedStopTimer) {
+                      // Never let the next verse leak into the output.
+                      muteEdgeGain(collectedExportGain, context)
+                      collectedAudioRef.current?.pause()
+                      // Give the encoder a moment to flush the last samples.
+                      collectedStopTimer = window.setTimeout(stopRecording, 120)
+                    }
+                  } else if (context.currentTime >= finishAt + 0.18) {
                     stopRecording()
                   }
                 },
-                60
+                prep.stream ? 20 : 60
               )
 
             deadline =
@@ -2711,7 +2785,7 @@ export default function VisualAyahsPage() {
                 },
                 Math.ceil(
                   (
-                    prep.duration + 5
+                    prep.duration + (prep.stream ? 25 : 5)
                   ) * 1000
                 )
               )
@@ -2760,6 +2834,7 @@ export default function VisualAyahsPage() {
       )
 
       clearTimeout(deadline)
+      clearTimeout(collectedStopTimer)
 
       if (
         recorder &&
@@ -2797,6 +2872,10 @@ export default function VisualAyahsPage() {
 
       if (prep.stream) {
         collectedAudioRef.current?.pause()
+
+        // Restore ordinary preview playback after the export ends/fails.
+        muteEdgeGain(collectedExportGain, context)
+        collectedExportGain?.disconnect()
 
         if (collectedAudioNodeRef.current) {
           try {
