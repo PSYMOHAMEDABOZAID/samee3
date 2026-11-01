@@ -1,0 +1,167 @@
+name: SAMEE3 - Integrate Alafasy in Audio Library
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  integrate-alafasy-tab:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+
+      - name: Configure Node 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Integrate existing Alafasy library inside audio tabs
+        shell: bash
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          
+          const audioPath = 'app/audio/page.tsx';
+          const riwayatPath = 'app/audio/alafasy-riwayat/page.tsx';
+          const contentPath = 'app/audio/alafasy-riwayat/AlafasyRiwayatContent.tsx';
+          
+          function read(path) {
+            if (!fs.existsSync(path)) throw new Error(`الملف المطلوب غير موجود: ${path}`);
+            return fs.readFileSync(path, 'utf8');
+          }
+          
+          function replaceOne(source, before, after, label) {
+            const first = source.indexOf(before);
+            if (first === -1 || source.indexOf(before, first + before.length) !== -1) {
+              throw new Error(`تعذر تحديد موضع التعديل بدقة: ${label}. لم تُحفظ أي تغييرات.`);
+            }
+            return source.slice(0, first) + after + source.slice(first + before.length);
+          }
+          
+          let audio = read(audioPath);
+          let riwayat = read(riwayatPath);
+          
+          if (audio.includes('SAMEE3_ALAFASY_TAB_IN_AUDIO_V1')) {
+            console.log('القسم مدمج بالفعل في المكتبة الصوتية. لا تغييرات.');
+            process.exit(0);
+          }
+          
+          audio = replaceOne(
+            audio,
+            "import Link from 'next/link'",
+            "import Link from 'next/link'\n// SAMEE3_ALAFASY_TAB_IN_AUDIO_V1\nimport AlafasyRiwayatContent from './alafasy-riwayat/AlafasyRiwayatContent'",
+            'استيراد مكون مصحف الروايات'
+          );
+          audio = replaceOne(
+            audio,
+            "type TabKey = 'quran' | 'ruqyah' | 'khutbah' | 'sunnah'",
+            "type TabKey = 'quran' | 'alafasy' | 'ruqyah' | 'khutbah' | 'sunnah'",
+            'تعريف تبويبات المكتبة'
+          );
+          audio = replaceOne(
+            audio,
+            "  if (type === 'quran') return <BookOpen size={20} />",
+            "  if (type === 'quran') return <BookOpen size={20} />\n  if (type === 'alafasy') return <Headphones size={20} />",
+            'أيقونة قسم العفاسي'
+          );
+          audio = replaceOne(
+            audio,
+            "      if (['ruqyah', 'khutbah', 'sunnah'].includes(saved.tab)) {",
+            "      if (saved.tab === 'alafasy') {\n        setActiveTab('alafasy')\n      } else if (['ruqyah', 'khutbah', 'sunnah'].includes(saved.tab)) {",
+            'استعادة التبويب بعد إعادة فتح التطبيق'
+          );
+          audio = replaceOne(
+            audio,
+            "  const tabTitle: Record<TabKey, string> = {\n    quran: 'القرآن الكريم',",
+            "  const tabTitle: Record<TabKey, string> = {\n    quran: 'القرآن الكريم',\n    alafasy: 'مصحف روايات مشاري راشد العفاسي',",
+            'عنوان تبويب العفاسي'
+          );
+          audio = replaceOne(
+            audio,
+            "  const tabDescription: Record<TabKey, string> = {\n    quran: 'تلاوات كاملة مع تشغيل وتنزيل وحفظ للاستماع دون إنترنت.',",
+            "  const tabDescription: Record<TabKey, string> = {\n    quran: 'تلاوات كاملة مع تشغيل وتنزيل وحفظ للاستماع دون إنترنت.',\n    alafasy: 'المصاحف الكاملة والجزئية للعفاسي مع الاستماع والحفظ والتنزيل.',",
+            'وصف تبويب العفاسي'
+          );
+          audio = replaceOne(
+            audio,
+            'rounded-3xl border border-mushaf-border/35 bg-white p-2 shadow-sm sm:grid-cols-2 lg:grid-cols-4',
+            'rounded-3xl border border-mushaf-border/35 bg-white p-2 shadow-sm sm:grid-cols-2 lg:grid-cols-5',
+            'عدد أعمدة التبويبات'
+          );
+          audio = replaceOne(
+            audio,
+            "              ['quran', 'القرآن الكريم'],",
+            "              ['quran', 'القرآن الكريم'],\n              ['alafasy', 'روايات العفاسي'],",
+            'إضافة زر الروايات بجوار القرآن'
+          );
+          audio = replaceOne(
+            audio,
+            "                    setActiveTab(tab)\n                    setSearch('')",
+            "                    if (tab === 'alafasy') audioRef.current?.pause()\n                    setActiveTab(tab)\n                    setSearch('')",
+            'إيقاف المشغل القديم عند دخول مصحف الروايات'
+          );
+          audio = replaceOne(
+            audio,
+            "                    if (tab !== 'quran') {",
+            "                    if (tab !== 'quran' && tab !== 'alafasy') {",
+            'منع استدعاء API الرقية والخطب في تبويب العفاسي'
+          );
+          audio = replaceOne(
+            audio,
+            "        ) : (\n          <>\n            {activeTab === 'ruqyah' && (",
+            "        ) : activeTab === 'alafasy' ? (\n          <AlafasyRiwayatContent embedded />\n        ) : (\n          <>\n            {activeTab === 'ruqyah' && (",
+            'عرض مصحف العفاسي بداخل مكتبة الصوت نفسها'
+          );
+          
+          riwayat = replaceOne(
+            riwayat,
+            'export default function AlafasyRiwayatPage() {',
+            'export default function AlafasyRiwayatContent({ embedded = false }: { embedded?: boolean }) {',
+            'تحويل الصفحة إلى مكوّن قابل لإعادة الاستخدام'
+          );
+          riwayat = replaceOne(
+            riwayat,
+            '    <main\n      dir="rtl"\n      className="mx-auto min-h-screen max-w-5xl space-y-5 px-4 py-7 text-slate-900 dark:text-slate-100"\n    >',
+            '    <section\n      dir="rtl"\n      className={embedded\n        ? "mx-auto max-w-5xl space-y-5 py-6 text-slate-900 dark:text-slate-100"\n        : "mx-auto min-h-screen max-w-5xl space-y-5 px-4 py-7 text-slate-900 dark:text-slate-100"}\n    >',
+            'عدم تداخل عنصر main داخل مكتبة الصوت'
+          );
+          riwayat = replaceOne(
+            riwayat,
+            '        className="inline-block rounded-xl border px-4 py-2"',
+            '        className={embedded ? "hidden" : "inline-block rounded-xl border px-4 py-2"}',
+            'إخفاء رابط العودة عند العرض داخل المكتبة'
+          );
+          riwayat = replaceOne(riwayat, '    </main>', '    </section>', 'إغلاق قسم الروايات');
+          
+          
+          // All replacements have succeeded before writing either file.
+          fs.writeFileSync(audioPath, audio);
+          fs.writeFileSync(contentPath, riwayat);
+          fs.writeFileSync(riwayatPath, "import AlafasyRiwayatContent from './AlafasyRiwayatContent'\n\nexport default function AlafasyRiwayatPage() {\n  return <AlafasyRiwayatContent />\n}\n");
+          console.log('تم دمج مصحف روايات العفاسي في تبويبات المكتبة الصوتية بنجاح.');
+          NODE
+
+      - name: Install dependencies and check TypeScript
+        run: |
+          npm ci
+          npm run typecheck
+
+      - name: Commit the integration to main
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add app/audio/page.tsx app/audio/alafasy-riwayat/page.tsx app/audio/alafasy-riwayat/AlafasyRiwayatContent.tsx
+          if git diff --cached --quiet; then
+            echo "Already integrated - no changes to commit."
+          else
+            git commit -m "Add Alafasy riwayat tab to audio library"
+            git push origin HEAD:main
+          fi
