@@ -45,7 +45,6 @@ import {
   WifiOff,
   X,
 } from 'lucide-react'
-import JSZip from 'jszip'
 
 type Riwaya = {
   id: number
@@ -298,31 +297,40 @@ async function deleteOffline(key: string) {
   await offlineRequest('readwrite', store => store.delete(key))
 }
 
+// SAMEE3_AUDIO_STABILITY_2026_11
 async function listOffline(): Promise<OfflineRecord[]> {
   const db = await getOfflineDb()
+
+  const index = new Map(
+    readAudioCatalog().map(item => [
+      offlineKeyFor(item),
+      item,
+    ])
+  )
 
   return new Promise((resolve, reject) => {
     const rows: OfflineRecord[] = []
 
     try {
       const tx = db.transaction('audio', 'readonly')
-      const request = tx.objectStore('audio').openCursor()
+      const request = tx.objectStore('audio').openKeyCursor()
 
       request.onsuccess = () => {
         const cursor = request.result
-        if (!cursor) return
-        const row = cursor.value as OfflineRecord | null
 
-        if (row && typeof row.key === 'string' && row.blob instanceof Blob && row.blob.size > 0) {
-          rows.push({
-            key: row.key,
-            title: typeof row.title === 'string' ? row.title : 'تسجيل محفوظ',
-            subtitle: typeof row.subtitle === 'string' ? row.subtitle : '',
-            savedAt: Number(row.savedAt) || 0,
-            item: isPlayerItem(row.item) ? row.item : undefined,
-            blob: new Blob(),
-          })
-        }
+        if (!cursor) return
+
+        const key = String(cursor.primaryKey)
+        const item = index.get(key)
+
+        rows.push({
+          key,
+          title: item?.title || 'تسجيل محفوظ',
+          subtitle: item?.subtitle || '',
+          savedAt: 0,
+          item,
+          blob: new Blob(),
+        })
 
         cursor.continue()
       }
@@ -334,7 +342,9 @@ async function listOffline(): Promise<OfflineRecord[]> {
 
       tx.onabort = tx.onerror = () => {
         db.close()
-        reject(tx.error)
+        reject(
+          tx.error || new Error('تعذر فهرسة الصوت المحفوظ.')
+        )
       }
     } catch (error) {
       db.close()
@@ -1562,7 +1572,32 @@ export default function AudioPage() {
 
     async function prepare() {
       try {
-        const savedBlob = await getSavedBlob(currentPlayer)
+        // SAMEE3_AUDIO_STABILITY_2026_11
+        // Prefer streaming complete cached recordings.
+
+        const cacheStreamSupported = Boolean(
+          currentPlayer.kind === 'quran' &&
+          navigator.serviceWorker?.controller &&
+          /^https:\/\/(?:[a-z0-9-]+\.)*mp3quran\.net\//i.test(
+            currentPlayer.audioUrl
+          )
+        )
+
+        const cacheResponse = cacheStreamSupported
+          ? await findCachedAudio(currentPlayer.audioUrl)
+          : null
+
+        const cachedStream = Boolean(cacheResponse)
+
+        if (cacheResponse) {
+          void cacheResponse.body?.cancel().catch(
+            () => undefined
+          )
+        }
+
+        const savedBlob = cachedStream
+          ? null
+          : await getSavedBlob(currentPlayer)
         if (disposed || audioRef.current !== currentAudio) return
 
         let source = currentPlayer.audioUrl
@@ -1571,7 +1606,7 @@ export default function AudioPage() {
           ownedObjectUrl = URL.createObjectURL(savedBlob)
           objectUrlRef.current = ownedObjectUrl
           source = ownedObjectUrl
-        } else if (!source || navigator.onLine === false) {
+        } else if (!source || (navigator.onLine === false && !cachedStream)) {
           const legacyAvailable = await hasLegacyOpaque(source)
           if (disposed || audioRef.current !== currentAudio) return
 
@@ -1582,7 +1617,7 @@ export default function AudioPage() {
 
         currentAudio.pause()
 
-        const playbackSource = libraryAudioSource(source)
+        const playbackSource = cachedStream ? source : libraryAudioSource(source)
         currentAudio.src = savedBlob
           ? source
           : playbackSource.startsWith('/api/audio-proxy?')
@@ -2043,6 +2078,7 @@ export default function AudioPage() {
     setBatchStatus('تجهيز ملف ZIP…')
 
     try {
+      const { default: JSZip } = await import('jszip')
       const zip = new JSZip()
       const total = quranQueue.length
       const failed: string[] = []

@@ -1,4 +1,4 @@
-const SW_VERSION = 'samee3-sw-v9'
+const SW_VERSION = 'samee3-sw-v10'
 
 const SHELL_CACHE = `${SW_VERSION}-shell`
 const NAV_CACHE = `${SW_VERSION}-navigation`
@@ -291,115 +291,153 @@ function isQuranAudio(request, url) {
   )
 }
 
+// SAMEE3_AUDIO_STABILITY_2026_11
+function cachedAudioRange(response, rangeHeader) {
+  const lengthHeader = response.headers.get('Content-Length')
+
+  const total =
+    lengthHeader && /^\d+$/.test(lengthHeader)
+      ? Number(lengthHeader)
+      : 0
+
+  const match = /^bytes=(\d*)-(\d*)$/i.exec(
+    rangeHeader.trim()
+  )
+
+  if (
+    !total ||
+    !Number.isSafeInteger(total) ||
+    !match ||
+    (!match[1] && !match[2]) ||
+    !response.body
+  ) {
+    return response
+  }
+
+  let start = match[1]
+    ? Number(match[1])
+    : Math.max(0, total - Number(match[2]))
+
+  let end = match[2] && match[1]
+    ? Number(match[2])
+    : total - 1
+
+  if (
+    !Number.isSafeInteger(start) ||
+    !Number.isSafeInteger(end) ||
+    start < 0 ||
+    start >= total ||
+    end < start
+  ) {
+    return new Response(null, {
+      status: 416,
+      headers: {
+        'Content-Range': 'bytes */' + total,
+      },
+    })
+  }
+
+  end = Math.min(end, total - 1)
+
+  const reader = response.body.getReader()
+
+  let position = 0
+  let finished = false
+
+  const stream = new ReadableStream({
+    async pull(controller) {
+      if (finished) return
+
+      try {
+        while (true) {
+          const next = await reader.read()
+
+          if (next.done) {
+            finished = true
+            controller.close()
+            return
+          }
+
+          const bytes = next.value
+          const from = position
+          const to = from + bytes.byteLength
+
+          position = to
+
+          if (to <= start) continue
+
+          const low = Math.max(0, start - from)
+
+          const high = Math.min(
+            bytes.byteLength,
+            end - from + 1
+          )
+
+          if (high > low) {
+            controller.enqueue(
+              bytes.subarray(low, high)
+            )
+          }
+
+          if (to > end) {
+            finished = true
+            controller.close()
+
+            void reader.cancel().catch(
+              () => undefined
+            )
+          }
+
+          return
+        }
+      } catch (error) {
+        finished = true
+        controller.error(error)
+      }
+    },
+
+    cancel(reason) {
+      finished = true
+      return reader.cancel(reason)
+    },
+  })
+
+  return new Response(stream, {
+    status: 206,
+    headers: {
+      'Content-Type':
+        response.headers.get('Content-Type') ||
+        'audio/mpeg',
+
+      'Accept-Ranges': 'bytes',
+
+      'Content-Range':
+        'bytes ' + start + '-' + end + '/' + total,
+
+      'Content-Length': String(
+        end - start + 1
+      ),
+    },
+  })
+}
+
 async function serveQuranAudio(request) {
   const cached = await getFromCaches(
-    [
-      AUDIO_CACHE,
-      ...OLD_AUDIO_CACHES,
-    ],
-    request.url,
+    [AUDIO_CACHE, ...OLD_AUDIO_CACHES],
+    request.url
   )
 
   if (cached) {
     const range = request.headers.get('Range')
 
-    // Handle supported byte-range requests
-    // for readable cached audio.
-    if (
-      range &&
-      cached.type !== 'opaque'
-    ) {
-      const match =
-        /^bytes=(\d*)-(\d*)$/i.exec(
-          range.trim(),
-        )
-
-      if (
-        match &&
-        (match[1] || match[2])
-      ) {
-        try {
-          const blob = await cached
-            .clone()
-            .blob()
-
-          if (
-            blob.size > 0 &&
-            blob.size <= 180 * 1024 * 1024
-          ) {
-            let start = match[1]
-              ? Number(match[1])
-              : 0
-
-            let end = match[2]
-              ? Number(match[2])
-              : blob.size - 1
-
-            if (
-              !match[1] &&
-              match[2]
-            ) {
-              const suffix =
-                Number(match[2])
-
-              start = Math.max(
-                0,
-                blob.size - suffix,
-              )
-
-              end = blob.size - 1
-            }
-
-            if (
-              Number.isSafeInteger(start) &&
-              Number.isSafeInteger(end) &&
-              start >= 0 &&
-              start < blob.size &&
-              end >= start
-            ) {
-              end = Math.min(
-                end,
-                blob.size - 1,
-              )
-
-              return new Response(
-                blob.slice(
-                  start,
-                  end + 1,
-                ),
-                {
-                  status: 206,
-                  headers: {
-                    'Content-Type':
-                      cached.headers.get(
-                        'Content-Type',
-                      ) || 'audio/mpeg',
-
-                    'Content-Range':
-                      `bytes ${start}-${end}/${blob.size}`,
-
-                    'Content-Length':
-                      String(end - start + 1),
-
-                    'Accept-Ranges':
-                      'bytes',
-                  },
-                },
-              )
-            }
-            return new Response(null, { status: 416, headers: { 'Content-Range': `bytes */${blob.size}` } })
-          }
-        } catch {
-          // The original audio is still cached.
-        }
-      }
+    if (range && cached.type !== 'opaque') {
+      return cachedAudioRange(cached, range)
     }
 
     return cached
   }
 
-  // Only explicitly downloaded audio
-  // should be stored permanently.
+  // Only explicitly downloaded audio is stored.
   return fetch(request)
 }
 
