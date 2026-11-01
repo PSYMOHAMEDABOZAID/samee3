@@ -1,5 +1,5 @@
 
-name: SAMEE3 - Alafasy Precision Trim V4
+name: SAMEE3 - Collected Alafasy Precision Trim
 
 on:
   workflow_dispatch:
@@ -7,675 +7,792 @@ on:
 permissions:
   contents: write
 
-concurrency:
-  group: samee3-alafasy-precision-trim
-  cancel-in-progress: false
-
 jobs:
-  install:
-    name: Install, Repair, Build and Commit
+  precision-trim:
     runs-on: ubuntu-latest
     timeout-minutes: 35
 
     steps:
-      - name: Checkout SAMEE3 main
+      - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          ref: main
-          fetch-depth: 1
-          persist-credentials: true
 
-      - name: Setup Node.js 24
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "24"
+          node-version: '24'
           cache: npm
 
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Verify precision editor
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          FILE="app/visual-ayahs/Samee3CollectedTrimEditor.tsx"
-
-          if [ ! -f "$FILE" ]; then
-            echo "::error::Precision editor file is missing."
-            echo "Expected: $FILE"
-            exit 1
-          fi
-
-          grep -Fq \
-            'export function Samee3CollectedTrimEditor' \
-            "$FILE"
-
-          grep -Fq \
-            'export function applyStoredCollectedTrim' \
-            "$FILE"
-
-          grep -Fq \
-            'SAMEE3_COLLECTED_MANUAL_TRIM_V3' \
-            "$FILE"
-
-          echo "Precision editor verified."
-
-      - name: Integrate Alafasy trim safely
+      - name: Add precision trimming to collected Alafasy only
         shell: bash
         run: |
           node <<'NODE'
           'use strict'
 
           const fs = require('node:fs')
-          const ts = require('typescript')
 
           const filename = 'app/visual-ayahs/page.tsx'
-          const marker = 'SAMEE3_COLLECTED_MANUAL_TRIM_V4'
+          const marker = 'SAMEE3_COLLECTED_MANUAL_TRIM_V1'
 
           if (!fs.existsSync(filename)) {
-            throw new Error(
-              'Visual Ayahs page.tsx was not found.'
-            )
+            throw new Error('Visual Ayahs page not found')
           }
 
-          let source = fs
-            .readFileSync(filename, 'utf8')
+          let source = fs.readFileSync(filename, 'utf8')
             .replace(/\r\n/g, '\n')
 
-          if (
-            source.includes(marker) ||
-            source.includes(
-              'SAMEE3_COLLECTED_MANUAL_TRIM_V3'
-            )
-          ) {
-            console.log(
-              'Precision trim integration already exists.'
-            )
+          if (source.includes(marker)) {
+            console.log('Precision trim already installed.')
             process.exit(0)
           }
 
-          // Repair syntax left by earlier failed patches,
-          // without changing audio or timing calculations.
-          source = source.replace(
-            /(useRef<HTMLAudioElement\s*\|\s*null>\(null\))[ \t]+(const collectedAudioNodeRef\s*=)/g,
-            '$1\n\n  $2'
-          )
+          function replaceOnce(before, after, label) {
+            const parts = source.split(before)
 
-          source = source.replace(
-            /(\},\s*\[\s*\]\s*\))[ \t]+(const stopCollectedEdge\s*=)/g,
-            '$1\n\n  $2'
-          )
+            if (parts.length !== 2) {
+              throw new Error(
+                label + ': expected exactly one matching location, found ' +
+                (parts.length - 1) + '. No files have been written.'
+              )
+            }
 
-          const file = ts.createSourceFile(
-            filename,
-            source,
-            ts.ScriptTarget.Latest,
-            true,
-            ts.ScriptKind.TSX
-          )
+            source = parts[0] + after + parts[1]
+          }
 
-          function checkSyntax(parsed, label) {
-            if (!parsed.parseDiagnostics.length) return
+          function insertBefore(anchor, addition, label) {
+            replaceOnce(anchor, addition + anchor, label)
+          }
 
-            const messages = parsed.parseDiagnostics
-              .slice(0, 5)
-              .map(item =>
-                ts.flattenDiagnosticMessageText(
-                  item.messageText,
-                  '\n'
+          function insertAfter(anchor, addition, label) {
+            replaceOnce(anchor, anchor + addition, label)
+          }
+
+          insertAfter(
+            "const CUSTOM_KEY = 'samee3-visual-custom-templates-v2'",
+            String.raw`
+
+          // SAMEE3_COLLECTED_MANUAL_TRIM_V1
+          // Offsets are seconds relative to the original collected timings.
+          // They affect the selected passage only, never other readers.
+          type CollectedTrimOffsets = {
+            startOffset: number
+            endOffset: number
+          }
+
+          const EMPTY_COLLECTED_TRIM: CollectedTrimOffsets = {
+            startOffset: 0,
+            endOffset: 0,
+          }
+
+          function collectedTrimKey(
+            surah: number,
+            from: number,
+            to: number
+          ) {
+            return (
+              'samee3_collected_visual_trim_v1:' +
+              surah + ':' + from + ':' + to
+            )
+          }
+
+          function roundTrimOffset(value: number) {
+            if (!Number.isFinite(value)) return 0
+            return Math.round(
+              Math.max(-30, Math.min(30, value)) * 20
+            ) / 20
+          }
+
+          function readCollectedTrim(
+            surah: number,
+            from: number,
+            to: number
+          ): CollectedTrimOffsets {
+            try {
+              const raw = localStorage.getItem(
+                collectedTrimKey(surah, from, to)
+              )
+
+              if (!raw) return { ...EMPTY_COLLECTED_TRIM }
+
+              const value: unknown = JSON.parse(raw)
+
+              if (!value || typeof value !== 'object') {
+                return { ...EMPTY_COLLECTED_TRIM }
+              }
+
+              const item = value as Record<string, unknown>
+
+              if (
+                typeof item.startOffset !== 'number' ||
+                typeof item.endOffset !== 'number' ||
+                !Number.isFinite(item.startOffset) ||
+                !Number.isFinite(item.endOffset)
+              ) {
+                return { ...EMPTY_COLLECTED_TRIM }
+              }
+
+              return {
+                startOffset: roundTrimOffset(item.startOffset),
+                endOffset: roundTrimOffset(item.endOffset),
+              }
+            } catch {
+              return { ...EMPTY_COLLECTED_TRIM }
+            }
+          }
+
+          function applyCollectedTrim(
+            original: CollectedClip,
+            offsets: CollectedTrimOffsets
+          ) {
+            const originalStart = original.startSeconds
+            const originalEnd =
+              original.startSeconds + original.duration
+
+            const start = Math.max(
+              0,
+              originalStart + offsets.startOffset
+            )
+
+            const end = originalEnd + offsets.endOffset
+            const duration = end - start
+
+            if (
+              !Number.isFinite(start) ||
+              !Number.isFinite(end) ||
+              duration < 0.25 ||
+              duration > MAX_DURATION_SECONDS
+            ) {
+              throw new Error(
+                'حدود المقطع غير صالحة. اجعل النهاية بعد البداية، ' +
+                'ولا تتجاوز مدة الفيديو 90 ثانية.'
+              )
+            }
+
+            const starts = original.starts.map(
+              (relative) => Math.max(
+                0,
+                Math.min(
+                  duration,
+                  originalStart + relative - start
                 )
               )
-
-            throw new Error(
-              label + ':\n' + messages.join('\n')
             )
-          }
 
-          checkSyntax(file, 'Existing TSX syntax error')
-
-          const edits = []
-
-          function insert(position, text) {
-            edits.push({
-              start: position,
-              end: position,
-              text,
-            })
-          }
-
-          function replace(start, end, text) {
-            edits.push({ start, end, text })
-          }
-
-          // Locate the Prepared type through TypeScript AST.
-          let preparedType = null
-
-          for (const statement of file.statements) {
-            if (
-              ts.isTypeAliasDeclaration(statement) &&
-              statement.name.text === 'Prepared' &&
-              ts.isTypeLiteralNode(statement.type)
-            ) {
-              preparedType = statement.type
-              break
+            return {
+              startSeconds: start,
+              duration,
+              starts,
             }
           }
+          `,
+            'Trim helper functions'
+          )
 
-          if (!preparedType) {
-            throw new Error(
-              'Unable to find the Prepared type.'
+          insertAfter(
+            `  const collectedAudioNodeRef =
+            useRef<MediaElementAudioSourceNode | null>(null)`,
+            String.raw`
+
+          // Collected Alafasy editing state, isolated from other reciters.
+          const collectedOriginalRef =
+            useRef<CollectedClip | null>(null)
+
+          const collectedPreviewIntervalRef =
+            useRef<number | null>(null)
+
+          const collectedPreviewTimeoutRef =
+            useRef<number | null>(null)
+
+          const collectedPreviewSequenceRef =
+            useRef(0)
+
+          const [collectedTrim, setCollectedTrim] =
+            useState<CollectedTrimOffsets>(
+              EMPTY_COLLECTED_TRIM
             )
-          }
 
-          const alreadyHasOriginal =
-            preparedType.members.some(
-              member =>
-                member.name?.getText(file) ===
-                'collectedOriginal'
-            )
+          const [collectedPreviewSide, setCollectedPreviewSide] =
+            useState<'start' | 'end' | null>(null)
 
-          if (!alreadyHasOriginal) {
-            insert(
-              preparedType.getEnd() - 1,
-              `
-                collectedOriginal?: {
-                  startSeconds: number
-                  duration: number
-                  starts: number[]
-                }
-              `
-            )
-          }
+          const [collectedTrimMessage, setCollectedTrimMessage] =
+            useState('')
+          `,
+            'Trim state and references'
+          )
 
-          function isNamedVariable(statement, name) {
-            return (
-              ts.isVariableStatement(statement) &&
-              statement.declarationList.declarations.some(
-                declaration =>
-                  declaration.name.getText(file) === name
+          insertBefore(
+            `  const stopPlayback = useCallback(`,
+            String.raw`  const stopCollectedEdgePreview = useCallback(() => {
+            collectedPreviewSequenceRef.current += 1
+
+            if (collectedPreviewIntervalRef.current !== null) {
+              window.clearInterval(
+                collectedPreviewIntervalRef.current
               )
-            )
-          }
-
-          // Find the collected Alafasy preparation block.
-          let preparedStatement = null
-
-          function findCollectedPreparation(node) {
-            if (ts.isBlock(node)) {
-              const statements = [...node.statements]
-
-              const clipIndex = statements.findIndex(
-                statement =>
-                  isNamedVariable(statement, 'clip') &&
-                  statement.getText(file).includes(
-                    'loadCollectedVisualClip'
-                  )
-              )
-
-              if (clipIndex >= 0) {
-                const created = statements
-                  .slice(clipIndex + 1)
-                  .find(statement =>
-                    isNamedVariable(statement, 'created')
-                  )
-
-                if (created) {
-                  if (preparedStatement) {
-                    throw new Error(
-                      'Multiple collected preparation blocks found.'
-                    )
-                  }
-
-                  preparedStatement = created
-                }
-              }
+              collectedPreviewIntervalRef.current = null
             }
 
-            ts.forEachChild(
-              node,
-              findCollectedPreparation
-            )
-          }
-
-          findCollectedPreparation(file)
-
-          if (!preparedStatement) {
-            throw new Error(
-              'Collected Alafasy preparation block not found. ' +
-              'No changes have been saved.'
-            )
-          }
-
-          const declaration =
-            preparedStatement.declarationList.declarations
-              .find(item =>
-                item.name.getText(file) === 'created'
+            if (collectedPreviewTimeoutRef.current !== null) {
+              window.clearTimeout(
+                collectedPreviewTimeoutRef.current
               )
+              collectedPreviewTimeoutRef.current = null
+            }
 
-          const object = declaration?.initializer
+            collectedAudioRef.current?.pause()
+            setCollectedPreviewSide(null)
+          }, [])
 
-          if (
-            !object ||
-            !ts.isObjectLiteralExpression(object)
+          `,
+            'Preview cancellation'
+          )
+
+          replaceOnce(
+            `      playbackSources.current = []
+                collectedAudioRef.current?.pause()
+
+                if (reset)`,
+            `      playbackSources.current = []
+                collectedAudioRef.current?.pause()
+                stopCollectedEdgePreview()
+
+                if (reset)`,
+            'Playback cleanup'
+          )
+
+          replaceOnce(
+            `      setPlaying(false)
+                setPosition(player.position)
+              },
+              []
+            )`,
+            `      setPlaying(false)
+                setPosition(player.position)
+              },
+              [stopCollectedEdgePreview]
+            )`,
+            'Playback dependencies'
+          )
+
+          replaceOnce(
+            `      preparedRef.current = null
+                setPrepared(null)
+
+                setError('')`,
+            `      preparedRef.current = null
+                collectedOriginalRef.current = null
+                setPrepared(null)
+
+                setError('')`,
+            'Invalidate collected source'
+          )
+
+          insertBefore(
+            `  const changeDesign = useCallback(`,
+            String.raw`  function updateCollectedTrim(
+            requested: CollectedTrimOffsets
           ) {
-            throw new Error(
-              'Unable to inspect the collected Prepared object.'
-            )
-          }
+            const original = collectedOriginalRef.current
+            const current = preparedRef.current
 
-          function findProperty(objectNode, name) {
-            return objectNode.properties.find(
-              property =>
-                ts.isPropertyAssignment(property) &&
-                property.name.getText(file) === name
-            )
-          }
+            if (!original || !current?.stream || working) return
 
-          const starts = findProperty(
-            object,
-            'starts'
-          )
-
-          const duration = findProperty(
-            object,
-            'duration'
-          )
-
-          const stream = findProperty(
-            object,
-            'stream'
-          )
-
-          if (
-            !starts ||
-            !duration ||
-            !stream ||
-            !ts.isObjectLiteralExpression(
-              stream.initializer
-            )
-          ) {
-            throw new Error(
-              'Collected audio timing fields are incomplete.'
-            )
-          }
-
-          const startSeconds = findProperty(
-            stream.initializer,
-            'startSeconds'
-          )
-
-          if (!startSeconds) {
-            throw new Error(
-              'Collected startSeconds field is missing.'
-            )
-          }
-
-          const expectedValues = [
-            [starts, 'clip.starts'],
-            [duration, 'clip.duration'],
-            [startSeconds, 'clip.startSeconds'],
-          ]
-
-          for (const [property, expected] of expectedValues) {
-            const actual = property.initializer.getText(
-              file
-            )
-
-            if (actual !== expected) {
-              throw new Error(
-                'Unexpected original timing expression: ' +
-                actual
-              )
-            }
-          }
-
-          const statementStart =
-            preparedStatement.getStart(file)
-
-          const startOfLine =
-            source.lastIndexOf(
-              '\n',
-              statementStart - 1
-            ) + 1
-
-          const indent = source.slice(
-            startOfLine,
-            statementStart
-          )
-
-          // Adjust collected Alafasy timings only.
-          insert(
-            statementStart,
-            'const samee3AdjustedClip = ' +
-            'applyStoredCollectedTrim(' +
-            'clip, surah, from, to)\n' +
-            indent
-          )
-
-          replace(
-            starts.initializer.getStart(file),
-            starts.initializer.getEnd(),
-            'samee3AdjustedClip.starts'
-          )
-
-          replace(
-            duration.initializer.getStart(file),
-            duration.initializer.getEnd(),
-            'samee3AdjustedClip.duration'
-          )
-
-          replace(
-            startSeconds.initializer.getStart(file),
-            startSeconds.initializer.getEnd(),
-            'samee3AdjustedClip.startSeconds'
-          )
-
-          if (
-            !findProperty(object, 'collectedOriginal')
-          ) {
-            const last = object.properties[
-              object.properties.length - 1
-            ]
-
-            if (!last) {
-              throw new Error(
-                'Prepared object has no fields.'
-              )
+            const offsets: CollectedTrimOffsets = {
+              startOffset: roundTrimOffset(requested.startOffset),
+              endOffset: roundTrimOffset(requested.endOffset),
             }
 
-            const tail = source.slice(
-              last.getEnd(),
-              object.getEnd() - 1
-            )
+            try {
+              const trim = applyCollectedTrim(original, offsets)
 
-            const comma = tail.includes(',') ? '' : ','
+              stopPlayback(true)
+              clearResult()
 
-            insert(
-              object.getEnd() - 1,
-              comma +
-              `
-                collectedOriginal: {
-                  startSeconds: clip.startSeconds,
-                  duration: clip.duration,
-                  starts: clip.starts,
+              const changed: Prepared = {
+                ...current,
+                starts: trim.starts,
+                duration: trim.duration,
+                stream: {
+                  ...current.stream,
+                  startSeconds: trim.startSeconds,
                 },
-              `
-            )
-          }
+              }
 
-          // Locate an existing prepared-audio JSX region.
-          const uiLocations = []
-
-          function findPreparedUI(node) {
-            if (
-              ts.isJsxExpression(node) &&
-              node.expression &&
-              ts.isBinaryExpression(node.expression) &&
-              node.expression.operatorToken.kind ===
-                ts.SyntaxKind.AmpersandAmpersandToken &&
-              node.expression.left.getText(file) ===
-                'prepared'
-            ) {
-              uiLocations.push(
-                node.getStart(file)
+              preparedRef.current = changed
+              setPrepared(changed)
+              setCollectedTrim(offsets)
+              setCollectedTrimMessage(
+                'تم تطبيق الضبط على المعاينة والتصدير. ' +
+                'اضغط حفظ الضبط للاحتفاظ به.'
+              )
+              setError('')
+            } catch (cause) {
+              setError(
+                cause instanceof Error
+                  ? cause.message
+                  : 'تعذر ضبط حدود التلاوة.'
               )
             }
-
-            ts.forEachChild(node, findPreparedUI)
           }
 
-          findPreparedUI(file)
+          function saveCollectedTrim() {
+            if (
+              !preparedRef.current?.stream ||
+              !collectedOriginalRef.current
+            ) return
 
-          if (!uiLocations.length) {
-            throw new Error(
-              'Prepared audio interface was not found.'
+            try {
+              localStorage.setItem(
+                collectedTrimKey(surah, from, to),
+                JSON.stringify(collectedTrim)
+              )
+
+              setCollectedTrimMessage(
+                'تم حفظ ضبط البداية والنهاية لهذا المقطع ' +
+                'على جهازك.'
+              )
+              setError('')
+            } catch {
+              setError(
+                'تعذر حفظ الضبط على هذا الجهاز. ' +
+                'يمكنك متابعة استخدامه في الجلسة الحالية.'
+              )
+            }
+          }
+
+          function resetCollectedTrim() {
+            if (working || !preparedRef.current?.stream) {
+              return
+            }
+
+            updateCollectedTrim({
+              startOffset: 0,
+              endOffset: 0,
+            })
+
+            try {
+              localStorage.removeItem(
+                collectedTrimKey(surah, from, to)
+              )
+            } catch {}
+
+            setCollectedTrimMessage(
+              'تمت استعادة التوقيت الأصلي لهذا المقطع.'
             )
           }
 
-          const editorUI = `
-            {reader === 'alafasy-collected' &&
-              prepared?.stream &&
-              prepared.collectedOriginal && (
-                <Samee3CollectedTrimEditor
-                  key={reader + ':' + surah + ':' + from + ':' + to}
-                  surah={surah}
-                  from={from}
-                  to={to}
-                  streamUrl={prepared.stream.url}
-                  original={prepared.collectedOriginal}
-                  disabled={working}
-                  onStop={() => stopPlayback(true)}
-                  onApply={timing => {
-                    const current = preparedRef.current
+          `,
+            'Collected trim controls'
+          )
 
-                    if (!current?.stream || working) return
+          replaceOnce(
+            `        if (id !== requestId.current) return
 
-                    stopPlayback(true)
-                    clearResult()
-
-                    const updated: Prepared = {
-                      ...current,
-                      starts: timing.starts,
-                      duration: timing.duration,
+                    const created: Prepared = {
+                      verses: chosenVerses,
+                      buffers: [],
+                      starts: clip.starts,
+                      duration: clip.duration,
                       stream: {
-                        ...current.stream,
-                        startSeconds: timing.startSeconds,
+                        url: clip.url,
+                        startSeconds: clip.startSeconds,
                       },
+                    }`,
+            String.raw`        if (id !== requestId.current) return
+
+                    let savedOffsets = readCollectedTrim(
+                      surah,
+                      from,
+                      to
+                    )
+
+                    let adjusted: ReturnType<typeof applyCollectedTrim>
+
+                    try {
+                      adjusted = applyCollectedTrim(clip, savedOffsets)
+                    } catch {
+                      savedOffsets = { ...EMPTY_COLLECTED_TRIM }
+                      adjusted = applyCollectedTrim(clip, savedOffsets)
                     }
 
-                    preparedRef.current = updated
-                    setPrepared(updated)
-                  }}
-                />
-              )}
+                    collectedOriginalRef.current = clip
+                    setCollectedTrim(savedOffsets)
+                    setCollectedTrimMessage('')
 
-          `
-
-          insert(
-            uiLocations[0],
-            editorUI
+                    const created: Prepared = {
+                      verses: chosenVerses,
+                      buffers: [],
+                      starts: adjusted.starts,
+                      duration: adjusted.duration,
+                      stream: {
+                        url: clip.url,
+                        startSeconds: adjusted.startSeconds,
+                      },
+                    }`,
+            'Apply saved trim when preparing collected recitation'
           )
 
-          // Add imports after the client directive.
-          const firstNewline = source.indexOf('\n')
-
-          if (
-            firstNewline < 0 ||
-            !source
-              .slice(0, firstNewline)
-              .includes("'use client'")
+          insertBefore(
+            `  async function prepareAudio() {`,
+            String.raw`  async function previewCollectedEdge(
+            side: 'start' | 'end'
           ) {
-            throw new Error(
-              'Visual Ayahs client directive is missing.'
-            )
-          }
+            const prep = preparedRef.current
 
-          insert(
-            firstNewline + 1,
-            `// ${marker}\n` +
-            `import {\n` +
-            `  Samee3CollectedTrimEditor,\n` +
-            `  applyStoredCollectedTrim,\n` +
-            `} from './Samee3CollectedTrimEditor'\n`
-          )
+            if (
+              !prep?.stream ||
+              !collectedOriginalRef.current ||
+              working
+            ) return
 
-          // Apply edits from the end to avoid shifting offsets.
-          edits.sort(
-            (a, b) =>
-              b.start - a.start ||
-              b.end - a.end
-          )
+            stopPlayback(true)
+            stopGlobalAudio()
 
-          for (const edit of edits) {
-            source =
-              source.slice(0, edit.start) +
-              edit.text +
-              source.slice(edit.end)
-          }
+            try {
+              if (!audioContext.current) {
+                audioContext.current = new AudioContext()
+              }
 
-          const result = ts.createSourceFile(
-            filename,
-            source,
-            ts.ScriptTarget.Latest,
-            true,
-            ts.ScriptKind.TSX
-          )
+              const context = audioContext.current
+              await context.resume()
 
-          checkSyntax(
-            result,
-            'Generated TSX syntax error'
-          )
+              const audio = collectedAudioElement(
+                prep,
+                context
+              )
 
-          const required = [
-            marker,
-            'samee3AdjustedClip.starts',
-            'samee3AdjustedClip.duration',
-            'samee3AdjustedClip.startSeconds',
-            'collectedOriginal:',
-            '<Samee3CollectedTrimEditor',
-          ]
+              const clipStart = prep.stream.startSeconds
+              const clipEnd = clipStart + prep.duration
 
-          for (const token of required) {
-            if (!source.includes(token)) {
-              throw new Error(
-                'Incomplete integration: ' + token
+              const begin = side === 'start'
+                ? clipStart
+                : Math.max(clipStart, clipEnd - 3)
+
+              const finish = side === 'start'
+                ? Math.min(clipEnd, clipStart + 3)
+                : clipEnd
+
+              const sequence =
+                ++collectedPreviewSequenceRef.current
+
+              await seekCollectedAudio(audio, begin)
+
+              if (
+                sequence !== collectedPreviewSequenceRef.current
+              ) return
+
+              await audio.play()
+
+              if (
+                sequence !== collectedPreviewSequenceRef.current
+              ) {
+                audio.pause()
+                return
+              }
+
+              setCollectedPreviewSide(side)
+              setError('')
+
+              collectedPreviewIntervalRef.current =
+                window.setInterval(() => {
+                  if (
+                    sequence !==
+                      collectedPreviewSequenceRef.current ||
+                    audio.paused ||
+                    audio.ended ||
+                    audio.currentTime >= finish - 0.025
+                  ) {
+                    stopCollectedEdgePreview()
+                  }
+                }, 35)
+
+              // Safety stop if streaming stalls.
+              collectedPreviewTimeoutRef.current =
+                window.setTimeout(
+                  stopCollectedEdgePreview,
+                  8000
+                )
+            } catch (cause) {
+              stopCollectedEdgePreview()
+              setError(
+                cause instanceof Error
+                  ? cause.message
+                  : 'تعذر سماع طرف المقطع.'
               )
             }
           }
 
-          // Only write after all checks have passed.
-          fs.writeFileSync(
-            filename,
-            source,
-            'utf8'
+          `,
+            'Listen to start/end boundary'
           )
 
-          console.log(
-            'Alafasy Precision Trim V4 integrated.'
+          replaceOnce(
+            `    stopGlobalAudio()
+
+                try {
+                  if (!audioContext.current) {`,
+            `    stopCollectedEdgePreview()
+                stopGlobalAudio()
+
+                try {
+                  if (!audioContext.current) {`,
+            'Stop boundary preview before main playback'
           )
 
-          console.log(
-            'Other reciters and templates were not modified.'
+          insertAfter(
+            `      collectedAudioRef.current?.pause()
+                collectedAudioRef.current?.removeAttribute('src')
+                collectedAudioNodeRef.current?.disconnect()`,
+            String.raw`
+
+                collectedPreviewSequenceRef.current += 1
+
+                if (collectedPreviewIntervalRef.current !== null) {
+                  window.clearInterval(
+                    collectedPreviewIntervalRef.current
+                  )
+                }
+
+                if (collectedPreviewTimeoutRef.current !== null) {
+                  window.clearTimeout(
+                    collectedPreviewTimeoutRef.current
+                  )
+                }`,
+            'Clean up boundary timers'
           )
+
+          insertAfter(
+            `                <p className="text-sm text-[#6e8274]">
+                                  {chapter?.name}
+                                  {' · '}
+                                  {digits(from)}–{digits(to)}
+                                  {' · '}
+                                  {durationText(
+                                    prepared.duration
+                                  )}
+                                </p>`,
+            String.raw`
+
+                        {reader === 'alafasy-collected' &&
+                          prepared.stream && (
+                          <div className="rounded-2xl border border-[#d9c8a5] bg-[#fffcf3] p-4">
+                            <h3 className="text-base font-extrabold text-[#245343]">
+                              ضبط دقيق لبداية ونهاية التلاوة
+                            </h3>
+
+                            <p className="mt-2 text-xs leading-6 text-[#746d5b]">
+                              للمصحف المجمع فقط. الرقم الموجب يؤخر
+                              الموضع، والسالب يقدمه. استمع للطرفين
+                              قبل إنشاء الفيديو، ثم احفظ الضبط.
+                            </p>
+
+                            <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                              <div>
+                                <RangeSetting
+                                  label="ضبط البداية بالثواني"
+                                  min={-30}
+                                  max={30}
+                                  step={0.05}
+                                  disabled={working}
+                                  value={collectedTrim.startOffset}
+                                  onChange={(value) =>
+                                    updateCollectedTrim({
+                                      ...collectedTrim,
+                                      startOffset: value,
+                                    })
+                                  }
+                                />
+
+                                <label className="mt-2 block text-xs">
+                                  قيمة البداية الدقيقة
+                                  <input
+                                    type="number"
+                                    min={-30}
+                                    max={30}
+                                    step={0.05}
+                                    disabled={working}
+                                    value={collectedTrim.startOffset}
+                                    onChange={(event) =>
+                                      updateCollectedTrim({
+                                        ...collectedTrim,
+                                        startOffset: Number(
+                                          event.target.value
+                                        ),
+                                      })
+                                    }
+                                    className={field}
+                                  />
+                                </label>
+                              </div>
+
+                              <div>
+                                <RangeSetting
+                                  label="ضبط النهاية بالثواني"
+                                  min={-30}
+                                  max={30}
+                                  step={0.05}
+                                  disabled={working}
+                                  value={collectedTrim.endOffset}
+                                  onChange={(value) =>
+                                    updateCollectedTrim({
+                                      ...collectedTrim,
+                                      endOffset: value,
+                                    })
+                                  }
+                                />
+
+                                <label className="mt-2 block text-xs">
+                                  قيمة النهاية الدقيقة
+                                  <input
+                                    type="number"
+                                    min={-30}
+                                    max={30}
+                                    step={0.05}
+                                    disabled={working}
+                                    value={collectedTrim.endOffset}
+                                    onChange={(event) =>
+                                      updateCollectedTrim({
+                                        ...collectedTrim,
+                                        endOffset: Number(
+                                          event.target.value
+                                        ),
+                                      })
+                                    }
+                                    className={field}
+                                  />
+                                </label>
+                              </div>
+                            </div>
+
+                            <div className="mt-4 rounded-xl bg-white px-3 py-3 text-center text-xs leading-7 text-[#546a5b]">
+                              البداية من التسجيل:
+                              {' '}
+                              {prepared.stream.startSeconds.toFixed(2)}
+                              {' '}ثانية
+                              {' · '}
+                              النهاية:
+                              {' '}
+                              {(
+                                prepared.stream.startSeconds +
+                                prepared.duration
+                              ).toFixed(2)}
+                              {' '}ثانية
+                              {' · '}
+                              طول الفيديو:
+                              {' '}
+                              {prepared.duration.toFixed(2)}
+                              {' '}ثانية
+                            </div>
+
+                            <div className="mt-4 grid grid-cols-2 gap-2">
+                              <button
+                                type="button"
+                                className={secondary}
+                                disabled={working}
+                                onClick={() =>
+                                  void previewCollectedEdge('start')
+                                }
+                              >
+                                <Play size={16} />
+                                اسمع أول 3 ثوانٍ
+                              </button>
+
+                              <button
+                                type="button"
+                                className={secondary}
+                                disabled={working}
+                                onClick={() =>
+                                  void previewCollectedEdge('end')
+                                }
+                              >
+                                <Play size={16} />
+                                اسمع آخر 3 ثوانٍ
+                              </button>
+                            </div>
+
+                            {collectedPreviewSide && (
+                              <button
+                                type="button"
+                                className={secondary + ' mt-2 w-full'}
+                                onClick={stopCollectedEdgePreview}
+                              >
+                                <Pause size={16} />
+                                إيقاف اختبار الطرف
+                              </button>
+                            )}
+
+                            <div className="mt-3 grid grid-cols-2 gap-2">
+                              <button
+                                type="button"
+                                disabled={working}
+                                className={primary}
+                                onClick={saveCollectedTrim}
+                              >
+                                <Save size={16} />
+                                حفظ الضبط
+                              </button>
+
+                              <button
+                                type="button"
+                                disabled={working}
+                                className={secondary}
+                                onClick={resetCollectedTrim}
+                              >
+                                <RefreshCcw size={16} />
+                                التوقيت الأصلي
+                              </button>
+                            </div>
+
+                            {collectedTrimMessage && (
+                              <p
+                                role="status"
+                                className="mt-3 text-xs leading-6 text-[#245343]"
+                              >
+                                {collectedTrimMessage}
+                              </p>
+                            )}
+                          </div>
+                        )}`,
+            'Precision editor UI'
+          )
+
+          if (!source.includes(marker)) {
+            throw new Error('Trim marker missing after patch')
+          }
+
+          // Write only after ALL exact-code checks succeed.
+          fs.writeFileSync(filename, source, 'utf8')
+
+          console.log('Collected Alafasy trim controls added.')
+          console.log('Other reciters and template data unchanged.')
           NODE
 
-      - name: Remove generated trailing whitespace
-        shell: bash
+      - name: Verify precision tools exist
         run: |
-          set -euo pipefail
-
-          python3 - <<'PY'
-          from pathlib import Path
-          import re
-
-          paths = [
-              Path("app/visual-ayahs/page.tsx"),
-              Path(
-                  "app/visual-ayahs/"
-                  "Samee3CollectedTrimEditor.tsx"
-              ),
-          ]
-
-          for path in paths:
-              if not path.is_file():
-                  raise SystemExit(
-                      f"ERROR: Missing file: {path}"
-                  )
-
-              original = path.read_text(
-                  encoding="utf-8"
-              )
-
-              # Remove whitespace at line endings,
-              # including whitespace-only blank lines.
-              repaired = re.sub(
-                  r"(?m)[ \t]+$",
-                  "",
-                  original
-              )
-
-              if repaired != original:
-                  path.write_text(
-                      repaired,
-                      encoding="utf-8"
-                  )
-
-                  print(
-                      f"Whitespace cleaned: {path}"
-                  )
-              else:
-                  print(
-                      f"No whitespace problems: {path}"
-                  )
-          PY
-
-      - name: Validate all changed files
-        shell: bash
-        run: |
-          set -euo pipefail
-
+          grep -Fq 'SAMEE3_COLLECTED_MANUAL_TRIM_V1' app/visual-ayahs/page.tsx
+          grep -Fq 'previewCollectedEdge' app/visual-ayahs/page.tsx
+          grep -Fq 'saveCollectedTrim' app/visual-ayahs/page.tsx
           git diff --check
 
-          grep -Eq \
-            'SAMEE3_COLLECTED_MANUAL_TRIM_V(3|4)' \
-            app/visual-ayahs/page.tsx
+      - name: Install dependencies
+        run: npm ci
 
-          grep -Fq \
-            'SAMEE3_COLLECTED_MANUAL_TRIM_V3' \
-            app/visual-ayahs/Samee3CollectedTrimEditor.tsx
-
-          grep -Fq \
-            'applyStoredCollectedTrim' \
-            app/visual-ayahs/page.tsx
-
-          grep -Fq \
-            'Samee3CollectedTrimEditor' \
-            app/visual-ayahs/page.tsx
-
-          echo "Validation successful."
-          echo "Changed files:"
-          git status --short
-
-      - name: Build SAMEE3
+      - name: Build and type-check SAMEE3
         run: npm run build
 
-      - name: Commit verified files
+      - name: Commit only successfully built page
         shell: bash
         run: |
-          set -euo pipefail
+          set -e
 
-          git config \
-            user.name \
-            "github-actions[bot]"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git config \
-            user.email \
-            "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git add \
-            app/visual-ayahs/page.tsx \
-            app/visual-ayahs/Samee3CollectedTrimEditor.tsx
+          git add app/visual-ayahs/page.tsx
 
           if git diff --cached --quiet; then
-            echo "No changes to commit."
+            echo "Precision trim is already installed."
             exit 0
           fi
 
-          git commit -m \
-            "feat: install verified Alafasy precision trim V4"
-
+          git commit -m "feat: precision start and end trim for collected Alafasy only"
           git push origin HEAD:main
-
-      - name: Final summary
-        shell: bash
-        run: |
-          {
-            echo "## SAMEE3 - Precision Trim V4"
-            echo ""
-            echo "- Existing precision editor verified"
-            echo "- Visual Ayahs integration checked"
-            echo "- Trailing whitespace cleaned"
-            echo "- Production build passed"
-            echo "- Verified changes committed"
-          } >> "$GITHUB_STEP_SUMMARY"
