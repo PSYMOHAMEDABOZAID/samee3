@@ -1,109 +1,66 @@
-
 import { ALAFASY_COLLECTED_RELEASE } from '@/lib/quran/alafasy-collected'
 
-export const runtime = 'nodejs'
+export const runtime = 'edge'
 export const dynamic = 'force-dynamic'
+type Context = { params: Promise<{ surah: string }> }
 
-type RouteContext = {
-  params: Promise<{ surah: string }>
+function failure(code: number, message: string): Response {
+  return Response.json({error:message}, {status:code,headers:{'Cache-Control':'no-store'}})
 }
-
-/** The player requests /api/alafasy-audio/001.mp3 ... 114.mp3. */
-function getAudioFilename(value: string): string | null {
-  const match = /^(\d{3})\.mp3$/.exec(value)
-  if (!match) return null
-
-  const surah = Number(match[1])
-  if (!Number.isInteger(surah) || surah < 1 || surah > 114) return null
-
-  return match[0]
-}
-
-/** Stream the exact collected recording, including byte-range requests. */
-export async function GET(
-  request: Request,
-  { params }: RouteContext
-): Promise<Response> {
-  const { surah } = await params
-  const filename = getAudioFilename(surah)
-
-  if (!filename) {
-    return new Response('Audio not found', { status: 404 })
-  }
-
-  const upstreamHeaders = new Headers()
-  const range = request.headers.get('range')
-
+async function relay(request: Request, context: Context): Promise<Response> {
+  const {surah} = await context.params
+  const match = /^(\d{1,3})(?:\.mp3)?$/.exec(surah)
+  const no = match ? Number(match[1]) : NaN
+  if (!Number.isInteger(no) || no<1 || no>114) return failure(400,'Invalid surah')
+  const file = `${String(no).padStart(3,'0')}.mp3`
+  const url = `${ALAFASY_COLLECTED_RELEASE}/${file}`
+  const diagnostic = new URL(request.url).searchParams.get('check')==='1'
+  const outgoing = new Headers()
+  const range = diagnostic ? 'bytes=0-1' : request.headers.get('range')
   if (range) {
-    // Browsers and the offline downloader use single HTTP byte ranges.
-    if (!/^bytes=(?:\d+-\d*|-\d+)$/.test(range)) {
-      return new Response('Invalid audio range', {
-        status: 416,
-        headers: { 'Accept-Ranges': 'bytes' },
-      })
-    }
-
-    upstreamHeaders.set('Range', range)
-    const ifRange = request.headers.get('if-range')
-    if (ifRange) upstreamHeaders.set('If-Range', ifRange)
+    if (!/^bytes=(?:\d+-\d*|-\d+)$/.test(range)) return failure(416,'Invalid Range')
+    outgoing.set('Range',range)
   }
-
+  let upstream: Response
   try {
-    const source = `${ALAFASY_COLLECTED_RELEASE}/${filename}`
-    const upstream = await fetch(source, {
-      method: 'GET',
-      headers: upstreamHeaders,
-      redirect: 'follow',
-      cache: 'no-store',
-      signal: request.signal,
-    })
-
-    if (upstream.status === 416) {
-      const headers = new Headers({
-        'Accept-Ranges': 'bytes',
-        'Cache-Control': 'no-store',
-      })
-      const contentRange = upstream.headers.get('content-range')
-      if (contentRange) headers.set('Content-Range', contentRange)
-      await upstream.body?.cancel().catch(() => {})
-      return new Response(null, { status: 416, headers })
-    }
-
-    if (upstream.status !== 200 && upstream.status !== 206) {
-      await upstream.body?.cancel().catch(() => {})
-      return new Response('Collected audio is temporarily unavailable', {
-        status: upstream.status === 404 ? 404 : 502,
-      })
-    }
-
-    const contentType = (upstream.headers.get('content-type') || '').toLowerCase()
-    if (/text\/html|application\/(?:json|xml)/.test(contentType) || !upstream.body) {
-      await upstream.body?.cancel().catch(() => {})
-      return new Response('Invalid audio response', { status: 502 })
-    }
-
-    const headers = new Headers({
-      'Content-Type': 'audio/mpeg',
-      'Accept-Ranges': 'bytes',
-      'Cache-Control': 'no-store',
-      'X-Content-Type-Options': 'nosniff',
-    })
-
-    // Preserve lengths and validators so the player can seek and downloads can resume.
-    for (const name of ['Content-Length', 'Content-Range', 'ETag', 'Last-Modified']) {
-      const value = upstream.headers.get(name)
-      if (value) headers.set(name, value)
-    }
-
-    // Stream instead of buffering an entire surah in Vercel memory.
-    return new Response(upstream.body, {
-      status: upstream.status,
-      headers,
-    })
-  } catch (error) {
-    console.error('Alafasy collected audio proxy failed:', error)
-    return new Response('Audio service temporarily unavailable', {
-      status: 503,
-    })
+    upstream=await fetch(url,{headers:outgoing,redirect:'follow',cache:'no-store',signal:request.signal})
+  } catch {
+    return failure(502,'Collected audio host unavailable')
   }
+  const mime=(upstream.headers.get('Content-Type')||'').toLowerCase()
+  const valid=(upstream.status===200 || upstream.status===206) &&
+    !/(text\/html|application\/json|text\/plain)/.test(mime) && !!upstream.body
+  if (diagnostic) {
+    await upstream.body?.cancel().catch(()=>undefined)
+    return Response.json({
+      ok:valid && upstream.status===206,
+      filename:file,
+      upstreamStatus:upstream.status,
+      contentType:mime,
+      contentRange:upstream.headers.get('Content-Range'),
+    },{headers:{'Cache-Control':'no-store'}})
+  }
+  if (!valid) {
+    await upstream.body?.cancel().catch(()=>undefined)
+    return failure(502,'Collected audio unavailable: '+upstream.status)
+  }
+  if (range && upstream.status!==206) {
+    await upstream.body?.cancel().catch(()=>undefined)
+    return failure(502,'Collected audio host does not support Range')
+  }
+  const headers=new Headers({
+    'Content-Type':'audio/mpeg',
+    'Cache-Control':'no-store',
+    'Content-Disposition':`inline; filename="${file}"`,
+    'X-Content-Type-Options':'nosniff',
+  })
+  for (const key of ['content-length','content-range','accept-ranges','etag','last-modified']) {
+    const value=upstream.headers.get(key)
+    if (value) headers.set(key,value)
+  }
+  if (upstream.status===206) headers.set('Accept-Ranges','bytes')
+  return new Response(upstream.body,{status:upstream.status,headers})
+}
+export async function GET(request:Request,context:Context):Promise<Response> {
+  return relay(request,context)
 }
