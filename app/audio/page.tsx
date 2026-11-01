@@ -16,6 +16,8 @@ import {
   type ReactNode,
 } from 'react'
 import Link from 'next/link'
+// SAMEE3_ALAFASY_TAB_IN_AUDIO_V1
+import AlafasyRiwayatContent from './alafasy-riwayat/AlafasyRiwayatContent'
 import {
   ArrowDownToLine,
   ArrowRight,
@@ -134,7 +136,7 @@ type OfflineRecord = {
   item?: PlayerItem
 }
 
-type TabKey = 'quran' | 'ruqyah' | 'khutbah' | 'sunnah'
+type TabKey = 'quran' | 'alafasy' | 'ruqyah' | 'khutbah' | 'sunnah'
 
 type AudioTransferOptions = {
   signal?: AbortSignal
@@ -1013,6 +1015,7 @@ function AudioAvatar({
 
 function SectionIcon({ type }: { type: TabKey }) {
   if (type === 'quran') return <BookOpen size={20} />
+  if (type === 'alafasy') return <Headphones size={20} />
   if (type === 'ruqyah') return <Sparkles size={20} />
   if (type === 'khutbah') return <Radio size={20} />
   return <Library size={20} />
@@ -1338,7 +1341,9 @@ export default function AudioPage() {
     try {
       const saved = JSON.parse(localStorage.getItem('samee3_audio_view_v2') || '{}')
 
-      if (['ruqyah', 'khutbah', 'sunnah'].includes(saved.tab)) {
+      if (saved.tab === 'alafasy') {
+        setActiveTab('alafasy')
+      } else if (['ruqyah', 'khutbah', 'sunnah'].includes(saved.tab)) {
         const tab = saved.tab as Exclude<TabKey, 'quran'>
         const scholar = KHUTBAH_SCHOLARS.some(item => item.id === saved.scholar)
           ? saved.scholar as string
@@ -2281,6 +2286,7 @@ export default function AudioPage() {
 
   const tabTitle: Record<TabKey, string> = {
     quran: 'القرآن الكريم',
+    alafasy: 'مصحف روايات مشاري راشد العفاسي',
     ruqyah: 'الرُّقية الشرعية',
     khutbah: 'الخطب والدروس',
     sunnah: 'كتب السنة الصوتية',
@@ -2288,6 +2294,7 @@ export default function AudioPage() {
 
   const tabDescription: Record<TabKey, string> = {
     quran: 'تلاوات كاملة مع تشغيل وتنزيل وحفظ للاستماع دون إنترنت.',
+    alafasy: 'روايات العفاسي الكاملة والجزئية مع الاستماع والحفظ والتنزيل.',
     ruqyah: 'مصادر الرقية المتاحة صوتيًا مع مشغل موحّد للمكتبة.',
     khutbah: 'الخطب والدروس الصوتية التي يعيدها مصدر المكتبة المتاح.',
     sunnah: 'كتب الحديث والشروح والسلاسل الصوتية المتاحة في المصدر.',
@@ -2596,9 +2603,10 @@ export default function AudioPage() {
         )}
 
         <section className="mt-6">
-          <div className="grid gap-2 rounded-3xl border border-mushaf-border/35 bg-white p-2 shadow-sm sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-2 rounded-3xl border border-mushaf-border/35 bg-white p-2 shadow-sm sm:grid-cols-2 lg:grid-cols-5">
             {([
               ['quran', 'القرآن الكريم'],
+              ['alafasy', 'روايات العفاسي'],
               ['ruqyah', 'الرُّقية الشرعية'],
               ['khutbah', 'الخطب والدروس'],
               ['sunnah', 'كتب السنة'],
@@ -2612,13 +2620,14 @@ export default function AudioPage() {
                   onClick={() => {
                     libraryRequestRef.current += 1
                     setLibraryLoading(false)
+                    if (tab === 'alafasy') audioRef.current?.pause()
                     setActiveTab(tab)
                     setSearch('')
                     setShowRiwayat(false)
                     setShowReciters(false)
                     setShowSurahs(false)
 
-                    if (tab !== 'quran') {
+                    if (tab !== 'quran' && tab !== 'alafasy') {
                       setKhutbahScholarId('')
                       setKhutbahHasMore(false)
                       setSelectedSunnahBookId(null)
@@ -2938,6 +2947,8 @@ export default function AudioPage() {
               )}
             </section>
           </>
+        ) : activeTab === 'alafasy' ? (
+          <AlafasyRiwayatContent embedded />
         ) : (
           <>
             {activeTab === 'ruqyah' && (
