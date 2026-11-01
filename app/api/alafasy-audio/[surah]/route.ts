@@ -1,104 +1,109 @@
 
-import { NextResponse } from 'next/server'
-import catalog from '@/lib/alafasy-riwayat-manifest.json'
+import { ALAFASY_COLLECTED_RELEASE } from '@/lib/quran/alafasy-collected'
 
+export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
 
-type Entry = {
-  key: string
-  tracks?: Record<string, string>
+type RouteContext = {
+  params: Promise<{ surah: string }>
 }
 
-type RouteParams = {
-  mushaf: string
-  file: string
-}
-
-export async function GET(
-  _request: Request,
-  {
-    params,
-  }: {
-    params: Promise<RouteParams>
-  }
-): Promise<NextResponse> {
-  // Next.js 16 requires awaiting route params
-  const { mushaf, file } = await params
-
-  // Validate the requested audio filename
-  const match = /^(\d{3})\.mp3$/.exec(file)
-
-  if (!match) {
-    return new NextResponse('Not found', {
-      status: 404,
-    })
-  }
+/** The player requests /api/alafasy-audio/001.mp3 ... 114.mp3. */
+function getAudioFilename(value: string): string | null {
+  const match = /^(\d{3})\.mp3$/.exec(value)
+  if (!match) return null
 
   const surah = Number(match[1])
+  if (!Number.isInteger(surah) || surah < 1 || surah > 114) return null
 
-  // Only allow Quran surahs 1 through 114
-  if (
-    !Number.isInteger(surah) ||
-    surah < 1 ||
-    surah > 114
-  ) {
-    return new NextResponse('Not found', {
-      status: 404,
-    })
+  return match[0]
+}
+
+/** Stream the exact collected recording, including byte-range requests. */
+export async function GET(
+  request: Request,
+  { params }: RouteContext
+): Promise<Response> {
+  const { surah } = await params
+  const filename = getAudioFilename(surah)
+
+  if (!filename) {
+    return new Response('Audio not found', { status: 404 })
   }
 
-  // Find the requested verified mushaf
-  const entries = catalog.entries as Entry[]
+  const upstreamHeaders = new Headers()
+  const range = request.headers.get('range')
 
-  const entry = entries.find(
-    (item) => item.key === mushaf
-  )
+  if (range) {
+    // Browsers and the offline downloader use single HTTP byte ranges.
+    if (!/^bytes=(?:\d+-\d*|-\d+)$/.test(range)) {
+      return new Response('Invalid audio range', {
+        status: 416,
+        headers: { 'Accept-Ranges': 'bytes' },
+      })
+    }
 
-  if (!entry) {
-    return new NextResponse('Mushaf not found', {
-      status: 404,
-    })
-  }
-
-  // Find the exact surah audio URL
-  const target = entry.tracks?.[match[1]]
-
-  if (!target) {
-    return new NextResponse('Audio not found', {
-      status: 404,
-    })
+    upstreamHeaders.set('Range', range)
+    const ifRange = request.headers.get('if-range')
+    if (ifRange) upstreamHeaders.set('If-Range', ifRange)
   }
 
   try {
-    const url = new URL(target)
+    const source = `${ALAFASY_COLLECTED_RELEASE}/${filename}`
+    const upstream = await fetch(source, {
+      method: 'GET',
+      headers: upstreamHeaders,
+      redirect: 'follow',
+      cache: 'no-store',
+      signal: request.signal,
+    })
 
-    // Allow only secure public HTTPS URLs
-    if (
-      url.protocol !== 'https:' ||
-      !url.hostname ||
-      url.username ||
-      url.password
-    ) {
-      throw new Error('Invalid audio URL')
+    if (upstream.status === 416) {
+      const headers = new Headers({
+        'Accept-Ranges': 'bytes',
+        'Cache-Control': 'no-store',
+      })
+      const contentRange = upstream.headers.get('content-range')
+      if (contentRange) headers.set('Content-Range', contentRange)
+      await upstream.body?.cancel().catch(() => {})
+      return new Response(null, { status: 416, headers })
     }
 
-    // Redirect player to the verified audio source
-    return NextResponse.redirect(
-      url.toString(),
-      {
-        status: 307,
-        headers: {
-          'Cache-Control':
-            'public, max-age=3600',
-        },
-      }
-    )
-  } catch {
-    return new NextResponse(
-      'Invalid audio source',
-      {
-        status: 502,
-      }
-    )
+    if (upstream.status !== 200 && upstream.status !== 206) {
+      await upstream.body?.cancel().catch(() => {})
+      return new Response('Collected audio is temporarily unavailable', {
+        status: upstream.status === 404 ? 404 : 502,
+      })
+    }
+
+    const contentType = (upstream.headers.get('content-type') || '').toLowerCase()
+    if (/text\/html|application\/(?:json|xml)/.test(contentType) || !upstream.body) {
+      await upstream.body?.cancel().catch(() => {})
+      return new Response('Invalid audio response', { status: 502 })
+    }
+
+    const headers = new Headers({
+      'Content-Type': 'audio/mpeg',
+      'Accept-Ranges': 'bytes',
+      'Cache-Control': 'no-store',
+      'X-Content-Type-Options': 'nosniff',
+    })
+
+    // Preserve lengths and validators so the player can seek and downloads can resume.
+    for (const name of ['Content-Length', 'Content-Range', 'ETag', 'Last-Modified']) {
+      const value = upstream.headers.get(name)
+      if (value) headers.set(name, value)
+    }
+
+    // Stream instead of buffering an entire surah in Vercel memory.
+    return new Response(upstream.body, {
+      status: upstream.status,
+      headers,
+    })
+  } catch (error) {
+    console.error('Alafasy collected audio proxy failed:', error)
+    return new Response('Audio service temporarily unavailable', {
+      status: 503,
+    })
   }
 }
