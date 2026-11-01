@@ -1,12 +1,9 @@
 /**
- * SAMEE3 — soft audio boundaries for collected Alafasy MP3.
- * Only removes hard digital clicks at clipped edges; it does not change
- * Quran timing or automatically discard/insert syllables.
- * Works through Web Audio GainNode (including iOS Safari, where
- * HTMLMediaElement.volume changes may be ignored).
+ * SAMEE3 — audio edge protection for the collected Alafasy recitation.
+ * This does not change original Quran recording times or edit any syllables.
+ * The same live media clock controls the envelope even when buffering stalls.
  */
 
-/** The short 90ms ramp prevents clicking at a cut without hiding words. */
 export const SAMEE3_EDGE_FADE_SECONDS = 0.09
 
 export function edgeGainAt(
@@ -14,22 +11,27 @@ export function edgeGainAt(
   durationSeconds: number,
   fadeSeconds = SAMEE3_EDGE_FADE_SECONDS
 ): number {
-  if (!Number.isFinite(positionSeconds) || !Number.isFinite(durationSeconds) || durationSeconds <= 0) return 0
+  if (!Number.isFinite(positionSeconds) || !Number.isFinite(durationSeconds) || durationSeconds <= 0) {
+    return 0
+  }
+
   const fade = Math.min(Math.max(0.005, fadeSeconds), durationSeconds / 3)
-  return Math.max(0, Math.min(1, positionSeconds / fade, (durationSeconds - positionSeconds) / fade))
+  const beginning = positionSeconds / fade
+  const ending = (durationSeconds - positionSeconds) / fade
+  return Math.max(0, Math.min(1, beginning, ending))
 }
 
+/** Bring the gain to zero at the hard boundaries. */
 export function muteEdgeGain(node: GainNode | null, context: AudioContext | null): void {
   if (!node || !context || context.state === 'closed') return
-  const time = context.currentTime
-  node.gain.cancelScheduledValues(time)
-  node.gain.setValueAtTime(0, time)
+  const now = context.currentTime
+  node.gain.cancelScheduledValues(now)
+  node.gain.setValueAtTime(0, now)
 }
 
 /**
- * Call in the existing animation frame / recording progress ticker, using
- * the MP3 element's ACTUAL media position. This stays synchronized if a
- * streamed recording buffers (unlike a timer starting at button press).
+ * Called by the export progress ticker with the actual <audio>.currentTime.
+ * A short smoothing constant prevents clicks from coarse timer updates.
  */
 export function updateEdgeGain(
   node: GainNode | null,
