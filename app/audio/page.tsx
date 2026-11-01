@@ -2,6 +2,8 @@
 import { collectedAlafasyLibraryReciter } from '@/lib/quran/alafasy-collected'
 
 import { KHUTBAH_SCHOLARS, libraryAudioSource } from '@/lib/audio-catalog'
+// SAMEE3_ALAFASY_RIWAYAT_V3
+import { alafasyFullMushafsForRiwaya, extendRiwayatWithAlafasy } from '@/lib/alafasy-five-mushafs'
 import { bindQuranMediaSession } from '@/lib/quran/media-session'
 import { useAudioContinuity } from '@/lib/use-audio-continuity'
 import {
@@ -1205,7 +1207,9 @@ export default function AudioPage() {
 
       if (requestId !== baseRequestRef.current || controller.signal.aborted) return
 
-      const nextRiwayat = Array.isArray(riwayatData.riwayat) ? riwayatData.riwayat : []
+      const nextRiwayat = extendRiwayatWithAlafasy(
+        Array.isArray(riwayatData.riwayat) ? riwayatData.riwayat : []
+      )
       const nextSurahs = Array.isArray(surahsData.suwar) ? surahsData.suwar : []
       const radioList = Array.isArray(radiosData.radios) ? radiosData.radios : []
 
@@ -1418,6 +1422,10 @@ export default function AudioPage() {
         if (normalizeArabic(activeRiwaya.name).includes(normalizeArabic('حفص'))) {
           nextReciters.unshift(collectedAlafasyLibraryReciter(activeRiwaya.id))
         }
+        // SAMEE3_ALAFASY_RIWAYAT_V3: verified recordings only.
+        for (const edition of alafasyFullMushafsForRiwaya(activeRiwaya)) {
+          if (!nextReciters.some(existing => existing.id === edition.id)) nextReciters.push(edition)
+        }
         nextReciters.sort((a, b) => {
           if (a.id === 9000123) return -1
           if (b.id === 9000123) return 1
@@ -1439,8 +1447,10 @@ export default function AudioPage() {
       } catch (err) {
         if (cancelled) return
         console.error('Reciters request error:', err)
-        setReciters([])
-        setError('تعذر تحميل قراء الرواية المحددة.')
+        // SAMEE3_ALAFASY_RIWAYAT_FALLBACK_V3
+        const fallback = alafasyFullMushafsForRiwaya(activeRiwaya)
+        setReciters(fallback)
+        if (fallback.length === 0) setError('تعذر تحميل قراء الرواية المحددة.')
       } finally {
         if (!cancelled) setRecitersLoading(false)
       }
