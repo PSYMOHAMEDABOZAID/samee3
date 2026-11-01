@@ -1,0 +1,12 @@
+name: SAMEE3 - Audit Alafasy Files
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check paths and configuration
+        run: python scripts/check-alafasy-files.py
