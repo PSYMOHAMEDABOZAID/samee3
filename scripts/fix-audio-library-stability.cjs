@@ -1,6 +1,7 @@
+
 #!/usr/bin/env node
 /*
- * SAMEE3 Audio Library Stability Patch V2 (repository drift-safe)
+ * SAMEE3 Audio Library Stability Patch V3 (independent navigation persistence)
  * Targets the source files already present in the user's SAMEE3 repository.
  * Uses exact anchors and fails closed when the source has changed.
  * No deletion of Cache Storage, IndexedDB, or saved recordings.
@@ -75,6 +76,85 @@ function deferInitialOfflineScan(source, pathName) {
   return source.slice(0, begin) + effect + source.slice(endPos);
 }
 
+function addIndependentNavigationEffects(source, pathName) {
+  // The previous version replaced the entire existing localStorage effect
+  // verbatim. Any unrelated update then caused the preflight to fail.
+  // Add new behavior alongside that effect instead, leaving it intact.
+  const older = "localStorage.setItem('samee3_audio_view_v2'";
+  const count = source.split(older).length - 1;
+  if (count !== 1) {
+    throw new Error(`[${pathName}] Expected one existing tab persistence effect, found ${count}; no files written.`);
+  }
+  const insertBefore = '  useEffect(() => {\n    const update = () => {';
+  const at = source.indexOf(insertBefore);
+  if (at < 0 || source.indexOf(insertBefore, at + 1) !== -1) {
+    throw new Error(`[${pathName}] Cannot uniquely locate the online/offline status effect; no files written.`);
+  }
+  if (!source.includes('rememberedSelection.current = {') ||
+      !source.includes('const restoredReader = useRef(false)') ||
+      !source.includes('const restoredSurah = useRef(false)')) {
+    throw new Error(`[${pathName}] Selection restoration references were not found; no files written.`);
+  }
+  const added = `  // ${MARK}: persist Quran selections independently of the existing tab state.
+  // This does not read or delete any downloaded audio caches or IndexedDB data.
+  useEffect(() => {
+    if (!contextReady.current || activeTab !== 'quran' || !riwayat.length) return
+    const previous = rememberedSelection.current
+    // Never overwrite remembered data with empty initial state before recovery.
+    if (previous?.riwaya && selectedRiwaya?.id !== previous.riwaya &&
+        !restoredReader.current) return
+    if (previous?.reciter && !restoredReader.current) return
+    if (previous?.surah && !restoredSurah.current) return
+    try {
+      localStorage.setItem('samee3_audio_quran_view_v3', JSON.stringify({
+        riwaya: selectedRiwaya?.id,
+        reciter: selectedReciter?.id,
+        moshaf: selectedMoshaf?.id,
+        surah: selectedSurah?.id,
+      }))
+    } catch {}
+  }, [activeTab, riwayat.length, selectedRiwaya?.id, selectedReciter?.id,
+      selectedMoshaf?.id, selectedSurah?.id])
+
+  useEffect(() => {
+    if (!contextReady.current || !riwayat.length || activeTab !== 'quran') return
+    const desired = rememberedSelection.current?.riwaya
+    if (!desired || selectedRiwaya?.id === desired) return
+    const match = riwayat.find(row => row.id === desired)
+    if (match) setSelectedRiwaya(match)
+  }, [riwayat, selectedRiwaya?.id, activeTab])
+
+  useEffect(() => {
+    if (restoredReader.current || activeTab !== 'quran') return
+    const wanted = rememberedSelection.current
+    if (!wanted?.reciter || !wanted?.riwaya ||
+        !selectedRiwaya || selectedRiwaya.id !== wanted.riwaya) return
+    const reciter = reciters.find(row => row.id === wanted.reciter)
+    if (!reciter) return
+    const moshaf = reciter.moshaf.find(row => row.id === wanted.moshaf)
+      || getMoshafForRiwaya(reciter, selectedRiwaya)
+    if (!moshaf) return
+    restoredReader.current = true
+    setSelectedReciter(reciter)
+    setSelectedMoshaf(moshaf)
+    setShowReciters(false)
+    setShowSurahs(true)
+  }, [reciters, selectedRiwaya, activeTab])
+
+  useEffect(() => {
+    if (restoredSurah.current || activeTab !== 'quran') return
+    const wanted = rememberedSelection.current
+    if (!selectedMoshaf || !wanted?.surah || selectedRiwaya?.id !== wanted.riwaya) return
+    const surah = surahs.find(row => row.id === wanted.surah)
+    if (!surah) return
+    restoredSurah.current = true
+    setSelectedSurah(surah)
+  }, [selectedMoshaf, selectedRiwaya?.id, surahs, activeTab])
+
+`;
+  return source.slice(0, at) + added + source.slice(at);
+}
+
 function mainPage(source) {
   const p = 'app/audio/page.tsx';
   let s = source;
@@ -119,7 +199,7 @@ function mainPage(source) {
   } catch {
     return false
   }
-}`, 
+}`,
 `  try {
     // IndexedDB getKey avoids deserializing a multi-megabyte MP3 just to
     // display a saved/checkmark state.
@@ -149,9 +229,9 @@ function mainPage(source) {
 `              legacyOpaque: response.type === 'opaque',`,
 `              legacyOpaque: false,`, p, 'cache list entry');
 
-  // The initialization effect has changed between SAMEE3 releases.  The old
+  // The initialization effect has changed between SAMEE3 releases. The old
   // V1 patch required three adjacent lines and failed on harmless source drift.
-  // Match the *scoped effect* instead, and never remove existing logic.
+  // Match the scoped effect instead, and never remove existing logic.
   s = deferInitialOfflineScan(s, p);
 
   s = replaceExact(s,
@@ -200,82 +280,22 @@ function mainPage(source) {
         tab?: string; scholar?: string; book?: string;
         riwaya?: number; reciter?: number; moshaf?: number; surah?: number
       }
+      // Quran selection is stored separately: the existing tab persistence
+      // is deliberately left unchanged to avoid source-drift failures.
+      let quranSaved: { riwaya?: number; reciter?: number; moshaf?: number; surah?: number } = {}
+      try {
+        quranSaved = JSON.parse(localStorage.getItem('samee3_audio_quran_view_v3') || '{}')
+      } catch {}
       rememberedSelection.current = {
-        riwaya: Number(saved.riwaya) || undefined,
-        reciter: Number(saved.reciter) || undefined,
-        moshaf: Number(saved.moshaf) || undefined,
-        surah: Number(saved.surah) || undefined,
+        riwaya: Number(quranSaved.riwaya || saved.riwaya) || undefined,
+        reciter: Number(quranSaved.reciter || saved.reciter) || undefined,
+        moshaf: Number(quranSaved.moshaf || saved.moshaf) || undefined,
+        surah: Number(quranSaved.surah || saved.surah) || undefined,
       }
 
       if (saved.tab === 'alafasy') {`, p, 'read saved navigation');
 
-  s = replaceExact(s,
-`    if (!contextReady.current) return
-    try {
-      localStorage.setItem('samee3_audio_view_v2', JSON.stringify({
-        tab: activeTab,
-        scholar: khutbahScholarId,
-        book: selectedSunnahBookId,
-      }))
-    } catch {}
-  }, [activeTab, khutbahScholarId, selectedSunnahBookId])`,
-`    if (!contextReady.current || !riwayat.length) return
-    const previous = rememberedSelection.current
-    if (activeTab === 'quran' && previous && (
-      (previous.riwaya && selectedRiwaya?.id !== previous.riwaya) ||
-      (previous.reciter && !restoredReader.current) ||
-      (previous.surah && !restoredSurah.current)
-    )) return
-    try {
-      localStorage.setItem('samee3_audio_view_v2', JSON.stringify({
-        tab: activeTab,
-        scholar: khutbahScholarId,
-        book: selectedSunnahBookId,
-        riwaya: selectedRiwaya?.id,
-        reciter: selectedReciter?.id,
-        moshaf: selectedMoshaf?.id,
-        surah: selectedSurah?.id,
-      }))
-    } catch {}
-  }, [activeTab, khutbahScholarId, selectedSunnahBookId,
-      riwayat.length, selectedRiwaya?.id, selectedReciter?.id,
-      selectedMoshaf?.id, selectedSurah?.id])
-
-  useEffect(() => {
-    if (!contextReady.current || !riwayat.length || activeTab !== 'quran') return
-    const desired = rememberedSelection.current?.riwaya
-    if (!desired || selectedRiwaya?.id === desired) return
-    const match = riwayat.find(row => row.id === desired)
-    if (match) setSelectedRiwaya(match)
-  }, [riwayat, selectedRiwaya?.id, activeTab])
-
-  useEffect(() => {
-    if (restoredReader.current || activeTab !== 'quran') return
-    const wanted = rememberedSelection.current
-    if (!wanted?.reciter || !wanted?.riwaya ||
-        !selectedRiwaya || selectedRiwaya.id !== wanted.riwaya) return
-    const reciter = reciters.find(row => row.id === wanted.reciter)
-    if (!reciter) return
-    const moshaf = reciter.moshaf.find(row => row.id === wanted.moshaf)
-      || getMoshafForRiwaya(reciter, selectedRiwaya)
-    if (!moshaf) return
-    restoredReader.current = true
-    setSelectedReciter(reciter)
-    setSelectedMoshaf(moshaf)
-    setShowReciters(false)
-    setShowSurahs(true)
-  }, [reciters, selectedRiwaya, activeTab])
-
-  useEffect(() => {
-    if (restoredSurah.current || activeTab !== 'quran') return
-    const wanted = rememberedSelection.current
-    if (!selectedMoshaf || !wanted?.surah || selectedRiwaya?.id !== wanted.riwaya) return
-    const surah = surahs.find(row => row.id === wanted.surah)
-    if (!surah) return
-    restoredSurah.current = true
-    setSelectedSurah(surah)
-  }, [selectedMoshaf, selectedRiwaya?.id, surahs, activeTab])`, p, 'persist and restore selected view');
-
+  s = addIndependentNavigationEffects(s, p);
 
   s = replaceExact(s,
 `  const selectRiwaya = (riwaya: Riwaya) => {
@@ -296,14 +316,14 @@ function mainPage(source) {
   return s;
 }
 function riwayat(source) {
-  const p='app/audio/alafasy-riwayat/AlafasyRiwayatContent.tsx';
-  let s=source;
-  s=replaceExact(s,
+  const p = 'app/audio/alafasy-riwayat/AlafasyRiwayatContent.tsx';
+  let s = source;
+  s = replaceExact(s,
 `  const lastSavedSecond = useRef(-1)`,
 `  const lastSavedSecond = useRef(-1)
   // ${MARK}: repaint the player at most once per second.
   const lastUiSecond = useRef(-1)`, p, 'riwayat time-update ref');
-  s=replaceExact(s,
+  s = replaceExact(s,
 `    setPosition(audio.currentTime)
     if (Math.floor(audio.currentTime / 5) !== lastSavedSecond.current) {`,
 `    const second = Math.floor(audio.currentTime)
@@ -312,13 +332,13 @@ function riwayat(source) {
       setPosition(audio.currentTime)
     }
     if (Math.floor(audio.currentTime / 5) !== lastSavedSecond.current) {`, p, 'riwayat player repaint');
-  s=replaceExact(s,
+  s = replaceExact(s,
 `    setPlaying(item)
     setPosition(0)`,
 `    setPlaying(item)
     lastUiSecond.current = -1
     setPosition(0)`, p, 'ui reset for new surah');
-  s=replaceExact(s,
+  s = replaceExact(s,
 `    if (!navigator.onLine) {
       // Offline requires loading the cached object URL; audio controls remain available if iOS denies autoplay.
       void (async () => {
@@ -368,13 +388,13 @@ function riwayat(source) {
   return s;
 }
 function sw(source) {
-  const p='public/sw.js';
-  let s=source;
-  s=replaceExact(s,
+  const p = 'public/sw.js';
+  let s = source;
+  s = replaceExact(s,
 `const SW_VERSION = 'samee3-sw-v10'`,
 `// ${MARK}: update service-worker code; never delete audio caches.
 const SW_VERSION = 'samee3-sw-v11'`, p, 'SW activation version');
-  s=replaceExact(s,
+  s = replaceExact(s,
 `async function serveQuranAudio(request) {`,
 `// Saved Alafasy readings are deliberately kept in their existing cache name.
 // Streaming them via the SW keeps large offline MP3s out of the page's JS heap.
@@ -394,11 +414,11 @@ async function serveSavedRiwayatAudio(request) {
   }
 }
 async function serveQuranAudio(request) {`, p, 'SW streaming route function');
-  s=replaceExact(s,
+  s = replaceExact(s,
 `    if (isQuranAudio(request, url)) {
       event.respondWith(`,
 `    if (isSameOrigin(url) &&
-        /^\\/audio\\/alafasy-riwayat\\/offline\\/[^/]+\\/\\d{3}\\.mp3$/.test(url.pathname)) {
+        /^\/audio\/alafasy-riwayat\/offline\/[^/]+\/\d{3}\.mp3$/.test(url.pathname)) {
       event.respondWith(serveSavedRiwayatAudio(request))
       return
     }
@@ -408,11 +428,11 @@ async function serveQuranAudio(request) {`, p, 'SW streaming route function');
   return s;
 }
 function continuity(source) {
-  const p='lib/use-audio-continuity.ts';
-  let s=source;
+  const p = 'lib/use-audio-continuity.ts';
+  let s = source;
   // Do not remove old retry/recovery logic, only prevent an unbounded reload
   // loop while the user is intentionally changing tracks or Safari is hidden.
-  s=replaceExact(s,
+  s = replaceExact(s,
 `    if (
       !disposed &&
       wanted &&
