@@ -70,6 +70,8 @@ export async function GET(request: NextRequest): Promise<Response> {
   if (!catalog) return jsonError('تعذر قراءة فهرس روايات العفاسي.', 503)
   const edition = catalog.editions.find(entry => entry.id === editionId)
   if (!edition) return jsonError('المصحف غير موجود حاليًا لدى المصادر.', 404)
+  // Preserve the TypeScript null-check inside the nested async ZIP generator.
+  const selectedEdition: Edition = edition
   const surahIds = [...new Set(edition.surahIds)].filter(n => n >= 1 && n <= 114).sort((a, b) => a - b)
   if (!surahIds.length) return jsonError('هذا المصحف ليس له تسجيلات منشورة.', 404)
 
@@ -91,7 +93,7 @@ export async function GET(request: NextRequest): Promise<Response> {
   if (!first) return jsonError('لا توجد تسجيلات صوتية قابلة للتنزيل حاليًا لهذا المصحف.', 502)
 
   const found = first
-  const filename = `${cleanName(`مشاري العفاسي - ${edition.name}`)}.zip`
+  const filename = `${cleanName(`مشاري العفاسي - ${selectedEdition.name}`)}.zip`
   const asciiFilename = `Alafasy-${editionId.replace(/[^a-zA-Z0-9-]/g, '')}.zip`
   const cancelled = { value: false }
 
@@ -127,10 +129,10 @@ export async function GET(request: NextRequest): Promise<Response> {
     }
 
     const summary = [
-      `اسم المصحف: ${edition.name}`,
+      `اسم المصحف: ${selectedEdition.name}`,
       'القارئ: مشاري راشد العفاسي',
-      `المصدر: ${edition.source}`,
-      `صفحة المصدر: ${edition.sourceUrl}`,
+      `المصدر: ${selectedEdition.source}`,
+      `صفحة المصدر: ${selectedEdition.sourceUrl}`,
       `السور المدرجة لدى المصدر: ${surahIds.length}`,
       `ملفات MP3 التي تم تضمينها: ${included.length}`,
       `السور التي تعذّر تنزيلها: ${skipped.length ? skipped.map(pad).join('، ') : 'لا يوجد'}`,
