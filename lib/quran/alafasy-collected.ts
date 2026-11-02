@@ -1,16 +1,22 @@
+
 /**
- * مشاري العفاسي – المصحف المجمع، تسجيل مستقل عن مصاحف MP3Quran.
- * The release must first contain 001.mp3 … 114.mp3 and timings-001.json … timings-114.json.
+ * مشاري العفاسي – المصحف المجمع (تسجيل مستقل عن مصاحف MP3Quran).
+ * الملفات الأصلية موجودة في GitHub Release؛ تشغيل المصحف يمر عبر
+ * /api/alafasy-audio لكي يحصل iOS/Safari على بث MP3 وطلبات Range من نفس الموقع.
+ * لا نستبدل رواية أو تسجيلًا بتسجيل آخر عند فشل المصدر.
  */
 export const ALAFASY_COLLECTED_RECITER_ID = 9000123
 export const ALAFASY_COLLECTED_MOSHAF_ID = 900012301
 export const ALAFASY_COLLECTED_NAME = 'مشاري العفاسي – مصحف مجمع'
+
+// Used only by the server-side /api/alafasy-audio and timing routes.
 export const ALAFASY_COLLECTED_RELEASE =
   'https://github.com/PSYMOHAMEDABOZAID/alafasy-collected-quran/releases/download/v1.0.0'
+
 export const ALAFASY_COLLECTED_SURAH_IDS = Array.from({ length: 114 }, (_, index) => index + 1)
 export const ALAFASY_COLLECTED_SURAH_LIST = ALAFASY_COLLECTED_SURAH_IDS.join(',')
 
-/** Matches the established app/audio/page.tsx Reciter/Moshaf shape. */
+/** Matches the existing app/audio/page.tsx Reciter/Moshaf shape. */
 export function collectedAlafasyLibraryReciter(riwayaId: number) {
   return {
     id: ALAFASY_COLLECTED_RECITER_ID,
@@ -27,16 +33,17 @@ export function collectedAlafasyLibraryReciter(riwayaId: number) {
   }
 }
 
-/** Matches the established app/mushaf/page.tsx LocalReciter shape. */
+/** Matches the existing app/mushaf/page.tsx LocalReciter shape. */
 export function collectedAlafasyMushafReciter() {
   return {
     id: `${ALAFASY_COLLECTED_RECITER_ID}-${ALAFASY_COLLECTED_MOSHAF_ID}`,
     apiId: ALAFASY_COLLECTED_RECITER_ID,
     label: ALAFASY_COLLECTED_NAME,
     moshafId: ALAFASY_COLLECTED_MOSHAF_ID,
-    // The SAMEE3 mushaf player appends '002.mp3' to this server URL.
-    // Keep the ending slash, matching the audio-library reciter.
-    server: `${ALAFASY_COLLECTED_RELEASE}/`,
+    // IMPORTANT: do not feed the GitHub Release download URL to HTMLAudioElement.
+    // The mushaf appends e.g. 033.mp3 to this path. Same-origin Edge API
+    // streams that exact recording with audio/mpeg and HTTP byte-range support.
+    server: '/api/alafasy-audio/',
     surahIds: ALAFASY_COLLECTED_SURAH_IDS,
   }
 }
@@ -47,7 +54,7 @@ export type CollectedAlafasyTiming = {
   end_time: number
 }
 
-/** Same-origin API: prevents direct browser CORS requests to GitHub's JSON assets. */
+/** Same-origin API avoids direct browser CORS requests to GitHub JSON assets. */
 export async function loadCollectedAlafasyTimings(surah: number): Promise<CollectedAlafasyTiming[]> {
   if (!Number.isInteger(surah) || surah < 1 || surah > 114) return []
   const response = await fetch(`/api/alafasy-timings/${surah}`, { cache: 'force-cache' })
