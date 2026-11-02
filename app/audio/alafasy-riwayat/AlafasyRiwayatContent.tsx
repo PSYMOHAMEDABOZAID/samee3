@@ -50,8 +50,6 @@ export default function AlafasyRiwayatContent({ embedded = false }: { embedded?:
   const playingRef = useRef<NowPlaying | null>(null)
   const editionsRef = useRef<Edition[]>([])
   const lastSavedSecond = useRef(-1)
-  // SAMEE3_AUDIO_LIBRARY_STABLE_V1: repaint the player at most once per second.
-  const lastUiSecond = useRef(-1)
 
   const edition = useMemo(() => catalog?.editions.find(row => row.id === editionId) || catalog?.editions[0] || null, [catalog, editionId])
   const rows = useMemo(() => (edition?.surahIds || []).filter(n => !search.trim() || `${n}`.includes(search.trim()) || name(n).includes(search.trim())), [edition, search])
@@ -98,11 +96,7 @@ export default function AlafasyRiwayatContent({ embedded = false }: { embedded?:
   function onTimeUpdate() {
     const audio = audioRef.current
     if (!audio) return
-    const second = Math.floor(audio.currentTime)
-    if (second !== lastUiSecond.current) {
-      lastUiSecond.current = second
-      setPosition(audio.currentTime)
-    }
+    setPosition(audio.currentTime)
     if (Math.floor(audio.currentTime / 5) !== lastSavedSecond.current) {
       lastSavedSecond.current = Math.floor(audio.currentTime / 5)
       remember(playingRef.current, audio.currentTime)
@@ -121,7 +115,6 @@ export default function AlafasyRiwayatContent({ embedded = false }: { embedded?:
     }
     playingRef.current = item
     setPlaying(item)
-    lastUiSecond.current = -1
     setPosition(0)
     setDuration(0)
     setPaused(false)
@@ -156,29 +149,15 @@ export default function AlafasyRiwayatContent({ embedded = false }: { embedded?:
       return
     }
     if (!navigator.onLine) {
-      const key = fileKey(id, surah)
-      if (!saved.includes(key)) {
-        setNotice('السورة غير محفوظة. حمّلها وأنت متصل بالإنترنت أولاً.')
-        return
-      }
-      // The service worker serves cached MP3 as a streaming Response with
-      // byte-range support, without allocating a giant Blob on the main thread.
-      if (navigator.serviceWorker?.controller) {
-        attachAudio({editionId: id, surah, url: key, offline: true}, true)
-        return
-      }
-      // Fallback for a browser that has not yet activated the SW.
-      // Limit Blob conversion to small files to avoid reloading iOS WebKit.
+      // Offline requires loading the cached object URL; audio controls remain available if iOS denies autoplay.
       void (async () => {
         try {
+          if (!('caches' in window)) throw new Error('الحفظ دون إنترنت غير مدعوم على جهازك.')
           const cache = await caches.open(AUDIO_CACHE)
-          const entry = await cache.match(key)
-          if (!entry) throw new Error('السورة غير محفوظة على الجهاز.')
-          const length = Number(entry.headers.get('content-length') || 0)
-          if (!length || length > 12 * 1024 * 1024) {
-            throw new Error('للسور الطويلة افتح التطبيق بعد تحديثه مرة وأنت متصل حتى يعمل تشغيل الملفات المحفوظة دون تحميلها في الذاكرة.')
-          }
-          const url = URL.createObjectURL(await entry.blob())
+          const entry = await cache.match(fileKey(id, surah))
+          if (!entry) throw new Error('السورة غير محفوظة على هذا الجهاز. حمّلها وأنت متصل بالإنترنت.')
+          const blob = await entry.blob()
+          const url = URL.createObjectURL(blob)
           objectRef.current = url
           attachAudio({editionId: id, surah, url, offline: true}, true)
         } catch (e) { setNotice(errorMessage(e)) }
@@ -266,10 +245,20 @@ export default function AlafasyRiwayatContent({ embedded = false }: { embedded?:
       {catalog && <>
         <div className="text-sm text-slate-500 dark:text-slate-400">{catalog.editions.length} مصدر/إصدار متاح حاليًا • السور الظاهرة هي المتاحة لدى المصدر، وليست بالضرورة 114 سورة.</div>
         <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-          {catalog.editions.map(item => <button key={item.id} type="button" aria-pressed={edition?.id === item.id} onClick={() => { setEditionId(item.id); setSearch('') }} className={`rounded-2xl border p-4 text-right transition ${edition?.id === item.id ? 'border-emerald-600 bg-emerald-700 text-white shadow-md' : 'border-slate-200 bg-white hover:border-emerald-300 dark:border-slate-700 dark:bg-slate-900'}`}>
-            <span className="block text-base font-bold">{item.name}</span>
-            <span className="mt-1 block text-xs opacity-75">{item.source} • {item.surahIds.length} سورة {item.surahIds.length === 114 ? '• كامل' : '• متاح جزئيًا'}</span>
-          </button>)}
+          {catalog.editions.map(item => <div key={item.id} className={`rounded-2xl border p-3 transition ${edition?.id === item.id ? 'border-emerald-600 bg-emerald-50 shadow-md dark:bg-emerald-950' : 'border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-900'}`}>
+            <button type="button" aria-pressed={edition?.id === item.id} onClick={() => { setEditionId(item.id); setSearch('') }} className="block w-full rounded-xl p-1 text-right hover:opacity-80">
+              <span className="block text-base font-bold">{item.name}</span>
+              <span className="mt-1 block text-xs text-slate-500 dark:text-slate-400">{item.source} • {item.surahIds.length} سورة {item.surahIds.length === 114 ? '• كامل' : '• المتاح من المصحف'}</span>
+            </button>
+            <a
+              href={`/api/alafasy-riwayat/zip?edition=${encodeURIComponent(item.id)}`}
+              download
+              className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-emerald-700 px-3 py-3 text-sm font-bold text-white hover:bg-emerald-800"
+              title={`تحميل ${item.name} في ملف ZIP واحد باسم المصحف`}
+            >
+              <Download size={18} /> تحميل المصحف ZIP ({item.surahIds.length} سورة)
+            </a>
+          </div>)}
         </div>
         {edition && <div className="rounded-3xl border border-slate-200 bg-white p-3 shadow-sm dark:border-slate-700 dark:bg-slate-900 sm:p-5">
           <div className="flex flex-wrap items-center justify-between gap-2"><div><h3 className="text-xl font-bold">{edition.name}</h3><p className="mt-1 text-sm text-slate-500">{edition.source} — {edition.surahIds.length} تسجيلًا</p></div><a href={edition.sourceUrl} target="_blank" rel="noreferrer" className="text-sm font-semibold text-emerald-700 underline dark:text-emerald-300">صفحة المصدر</a></div>
