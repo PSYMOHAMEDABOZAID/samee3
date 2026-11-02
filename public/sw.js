@@ -1,5 +1,5 @@
 // SAMEE3_AUDIO_LIBRARY_STABLE_V1: update service-worker code; never delete audio caches.
-const SW_VERSION = 'samee3-sw-v11'
+const SW_VERSION = 'samee3-sw-v12'
 
 const SHELL_CACHE = `${SW_VERSION}-shell`
 const NAV_CACHE = `${SW_VERSION}-navigation`
@@ -945,6 +945,30 @@ self.addEventListener(
     try {
       url = new URL(request.url)
     } catch {
+      return
+    }
+
+    // SAMEE3 Adhkar: serve cached complete recordings without a page Blob.
+    // This route never contacts a remote host and never clears existing caches.
+    if (isSameOrigin(url) && url.pathname === '/__samee3_adhkar_offline') {
+      event.respondWith((async () => {
+        const source = url.searchParams.get('url') || ''
+        let original
+        try { original = new URL(source) } catch {
+          return new Response('Invalid audio key', { status: 400 })
+        }
+        if (original.origin !== self.location.origin ||
+            original.pathname !== '/api/adhkar-audio' ||
+            !original.searchParams.get('url')) {
+          return new Response('Invalid saved audio URL', { status: 400 })
+        }
+        const saved = await (await caches.open('samee3-adhkar-audio-v1')).match(original.href)
+        if (!saved || saved.status !== 200 || saved.headers.has('Content-Range')) {
+          return new Response('Audio not downloaded', { status: 404 })
+        }
+        const range = request.headers.get('Range')
+        return range ? cachedAudioRange(saved, range) : saved
+      })())
       return
     }
 

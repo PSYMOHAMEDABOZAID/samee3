@@ -1,4 +1,10 @@
-
+/**
+ * SAMEE3 — سجل قارئي الأذكار والتسجيلات البشرية.
+ *
+ * لا تُعرض أسماء ليست لها تسجيلات مرتبطة بالقسم المختار.
+ * لا تُستبدل تسجيلات وردٍ كامل بصوت ذكرٍ منفرد من قارئ مختلف.
+ * هذه القائمة تثبت وجود رابط مصدر محدد، وليست ضمانًا لتوافر الخادم دائمًا.
+ */
 export type AdhkarDailyType = 'morning' | 'evening' | 'sleep' | 'waking'
 export type AdhkarRecordingType = AdhkarDailyType | 'day-and-night'
 export type AdhkarRecordingSource = 'tvquran' | 'islamhouse' | 'adhkar-json'
@@ -29,19 +35,10 @@ export type AdhkarAudioCheck =
 
 const TVQURAN_AUDIO =
   'https://download.tvquran.com/download/TvQuran.com__Athkar'
-
-const TVQURAN_SELECTION =
-  'https://www.tvquran.com/ar/selection'
-
-const ISLAMHOUSE_HAMAD =
-  'https://islamhouse.com/ar/audios/263352/'
-
-const ISLAMHOUSE_SULAIMAN =
-  'https://islamhouse.com/ar/audios/2799103/'
-
-const ITEM_AUDIO_SOURCE =
-  'https://cdn.jsdelivr.net/gh/rn0x/Adhkar-json@main'
-
+const TVQURAN_SELECTION = 'https://www.tvquran.com/ar/selection'
+const ISLAMHOUSE_HAMAD = 'https://islamhouse.com/ar/audios/263352/'
+const ISLAMHOUSE_SULAIMAN = 'https://islamhouse.com/ar/audios/2799103/'
+const ITEM_AUDIO_SOURCE = 'https://cdn.jsdelivr.net/gh/rn0x/Adhkar-json@main'
 const ALLOWED_EXTENSIONS = /\.(?:mp3|m4a|aac|ogg|wav)$/i
 
 function tvquran(
@@ -51,7 +48,6 @@ function tvquran(
   selection: number,
 ): AdhkarRecording {
   const filename = `TvQuran.com_athkar_${String(selection).padStart(2, '0')}.mp3`
-
   return {
     id,
     title,
@@ -59,12 +55,14 @@ function tvquran(
     url: `${TVQURAN_AUDIO}/${filename}`,
     source: 'tvquran',
     sourcePage: `${TVQURAN_SELECTION}/${selection}/embeddable`,
-    kind: type === 'day-and-night'
-      ? 'combined-section'
-      : 'complete-section',
+    kind: type === 'day-and-night' ? 'combined-section' : 'complete-section',
   }
 }
 
+/**
+ * الأسماء ذات التسجيلات الجزئية غير المرتبطة بروابط MP3 مؤكدة لا تظهر
+ * في قوائم التشغيل، ويمكن إضافتها لاحقًا بعد توثيق روابطها الفعلية.
+ */
 export const ADHKAR_RECITERS: readonly AdhkarReciter[] = [
   {
     id: 'mishary-alafasy',
@@ -104,12 +102,7 @@ export const ADHKAR_RECITERS: readonly AdhkarReciter[] = [
     sourcePage: 'https://www.tvquran.com/ar/selection/2/embeddable',
     individualAudio: false,
     recordings: [
-      tvquran(
-        'nasser-day-night',
-        'أذكار اليوم والليلة',
-        'day-and-night',
-        2,
-      ),
+      tvquran('nasser-day-night', 'أذكار اليوم والليلة', 'day-and-night', 2),
     ],
   },
   {
@@ -137,9 +130,7 @@ export const ADHKAR_RECITERS: readonly AdhkarReciter[] = [
 ]
 
 export function findAdhkarReciter(id: string): AdhkarReciter | null {
-  return ADHKAR_RECITERS.find(
-    (reciter) => reciter.id === id,
-  ) || null
+  return ADHKAR_RECITERS.find((reciter) => reciter.id === id) || null
 }
 
 export function listAdhkarReciters(
@@ -150,160 +141,78 @@ export function listAdhkarReciters(
   } = {},
 ): AdhkarReciter[] {
   return ADHKAR_RECITERS.filter((reciter) => {
-    if (reciter.legacyOnly) {
-      return options.includeLegacy === true
-    }
-
-    return (
-      reciter.recordings.length > 0 ||
-      (
-        reciter.individualAudio &&
-        options.hasIndividualAudio !== false
-      ) ||
-      (
-        options.includeSourceOnly === true &&
-        !!reciter.sourcePage
-      )
-    )
+    // Source page or historical name alone is not an audio recording.
+    if (reciter.legacyOnly) return false
+    if (reciter.recordings.some((entry) => Boolean(makeAdhkarAudioUrl(entry.url)))) return true
+    // Only opt into individual-audio readers when the caller has actually
+    // verified that this category contains playable per-item recordings.
+    return reciter.individualAudio && options.hasIndividualAudio === true
   })
 }
 
 export function findAdhkarRecording(
   reciterId: string,
   type: AdhkarDailyType,
-  options: {
-    allowCombined?: boolean
-  } = {},
+  options: { allowCombined?: boolean } = {},
 ): AdhkarRecording | null {
   const reciter = findAdhkarReciter(reciterId)
-
   if (!reciter) return null
-
-  const exact = reciter.recordings.find(
-    (recording) => recording.type === type,
-  )
-
+  const exact = reciter.recordings.find((recording) => recording.type === type)
   if (exact) return exact
-
-  if (
-    options.allowCombined &&
-    (
-      type === 'morning' ||
-      type === 'evening'
-    )
-  ) {
+  if (options.allowCombined && (type === 'morning' || type === 'evening')) {
     return reciter.recordings.find(
-      (recording) =>
-        recording.type === 'day-and-night',
+      (recording) => recording.type === 'day-and-night',
     ) || null
   }
-
   return null
 }
 
 export function getAdhkarRecordingKinds(
   reciterId: string,
   type: AdhkarDailyType,
-): {
-  individual: boolean
-  section: boolean
-  combined: boolean
-} {
+): { individual: boolean; section: boolean; combined: boolean } {
   const reciter = findAdhkarReciter(reciterId)
-
-  if (!reciter) {
-    return {
-      individual: false,
-      section: false,
-      combined: false,
-    }
-  }
-
+  if (!reciter) return { individual: false, section: false, combined: false }
   return {
     individual: reciter.individualAudio,
-
-    section: reciter.recordings.some(
-      (recording) =>
-        recording.type === type,
-    ),
-
-    combined:
-      (
-        type === 'morning' ||
-        type === 'evening'
-      ) &&
-      reciter.recordings.some(
-        (recording) =>
-          recording.type === 'day-and-night',
-      ),
+    section: reciter.recordings.some((recording) => recording.type === type),
+    combined: (type === 'morning' || type === 'evening') &&
+      reciter.recordings.some((recording) => recording.type === 'day-and-night'),
   }
 }
 
 function approvedAudioURL(value: string): URL | null {
   try {
     const url = new URL(value)
-
     if (
       url.protocol !== 'https:' ||
-      url.username ||
-      url.password ||
-      url.port ||
-      url.hash ||
+      url.username || url.password || url.port || url.hash ||
       !ALLOWED_EXTENSIONS.test(url.pathname) ||
       url.pathname.includes('..')
-    ) {
-      return null
-    }
-
+    ) return null
     const host = url.hostname.toLowerCase()
-
     if (
       host === 'download.tvquran.com' &&
-      /^\/download\/TvQuran\.com__Athkar\/TvQuran\.com_athkar_\d{2}\.mp3$/i.test(
-        url.pathname,
-      )
-    ) {
-      return url
-    }
-
+      /^\/download\/TvQuran\.com__Athkar\/TvQuran\.com_athkar_\d{2}\.mp3$/i.test(url.pathname)
+    ) return url
     if (
       host === 'cdn.jsdelivr.net' &&
-      /^\/gh\/rn0x\/Adhkar-json@main\/audio\/[a-z0-9_-]+\.mp3$/i.test(
-        url.pathname,
-      )
-    ) {
-      return url
-    }
-
+      /^\/gh\/rn0x\/Adhkar-json@main\/audio\/[a-z0-9_-]+\.mp3$/i.test(url.pathname)
+    ) return url
     if (
       host === 'raw.githubusercontent.com' &&
-      /^\/rn0x\/Adhkar-json\/main\/audio\/[a-z0-9_-]+\.mp3$/i.test(
-        url.pathname,
-      )
-    ) {
-      return url
-    }
-
+      /^\/rn0x\/Adhkar-json\/main\/audio\/[a-z0-9_-]+\.mp3$/i.test(url.pathname)
+    ) return url
     if (
       /^d\d+\.islamhouse\.com$/.test(host) &&
-      /^\/data\/ar\/ih_sounds\/[a-z0-9_./-]+\.mp3$/i.test(
-        url.pathname,
-      )
-    ) {
-      return url
-    }
-  } catch {
-    return null
-  }
-
+      /^\/data\/ar\/ih_sounds\/[a-z0-9_./-]+\.mp3$/i.test(url.pathname)
+    ) return url
+  } catch { /* unsupported URL */ }
   return null
 }
 
-export function makeAdhkarAudioUrl(
-  value: string,
-): string | null {
+export function makeAdhkarAudioUrl(value: string): string | null {
   const approved = approvedAudioURL(value)
-
   return approved
     ? `/api/adhkar-audio?url=${encodeURIComponent(approved.href)}`
     : null
@@ -311,34 +220,14 @@ export function makeAdhkarAudioUrl(
 
 export function getIndividualAdhkarAudio(
   reciterId: string,
-  item: {
-    audio?: string | null
-  },
+  item: { audio?: string | null },
 ): string | null {
   const reciter = findAdhkarReciter(reciterId)
-
-  if (
-    !reciter?.individualAudio ||
-    !item.audio
-  ) {
-    return null
-  }
-
-  if (/^https:\/\//i.test(item.audio)) {
-    return makeAdhkarAudioUrl(item.audio)
-  }
-
+  if (!reciter?.individualAudio || !item.audio) return null
+  if (/^https:\/\//i.test(item.audio)) return makeAdhkarAudioUrl(item.audio)
   const path = item.audio.replace(/^\/+/, '')
-
-  if (
-    !/^audio\/[a-zA-Z0-9_-]+\.mp3$/.test(path)
-  ) {
-    return null
-  }
-
-  return makeAdhkarAudioUrl(
-    `${ITEM_AUDIO_SOURCE}/${path}`,
-  )
+  if (!/^audio\/[a-zA-Z0-9_-]+\.mp3$/.test(path)) return null
+  return makeAdhkarAudioUrl(`${ITEM_AUDIO_SOURCE}/${path}`)
 }
 
 export async function checkAdhkarRecording(
@@ -346,104 +235,33 @@ export async function checkAdhkarRecording(
   signal?: AbortSignal,
 ): Promise<AdhkarAudioCheck> {
   const url = makeAdhkarAudioUrl(recording.url)
-
-  if (!url) {
-    return {
-      status: 'unknown',
-      reason: 'unsupported-audio-url',
-    }
-  }
-
-  if (typeof fetch === 'undefined') {
-    return {
-      status: 'unknown',
-      reason: 'fetch-unavailable',
-    }
-  }
-
-  if (signal?.aborted) {
-    return {
-      status: 'unknown',
-      reason: 'cancelled',
-    }
-  }
-
+  if (!url) return { status: 'unknown', reason: 'unsupported-audio-url' }
+  if (typeof fetch === 'undefined') return { status: 'unknown', reason: 'fetch-unavailable' }
+  if (signal?.aborted) return { status: 'unknown', reason: 'cancelled' }
   const controller = new AbortController()
   const cancel = () => controller.abort()
-
   const timer = setTimeout(cancel, 10000)
-
-  signal?.addEventListener(
-    'abort',
-    cancel,
-    { once: true },
-  )
-
+  signal?.addEventListener('abort', cancel, { once: true })
   try {
     const response = await fetch(url, {
       method: 'GET',
-      headers: {
-        Range: 'bytes=0-1023',
-      },
+      headers: { Range: 'bytes=0-1023' },
       cache: 'no-store',
       signal: controller.signal,
     })
-
-    const mime = (
-      response.headers.get('content-type') || ''
-    ).toLowerCase()
-
-    const mediaTypeOK =
-      mime.startsWith('audio/') ||
-      mime.startsWith('application/octet-stream')
-
-    const good =
-      (
-        response.status === 200 ||
-        response.status === 206
-      ) &&
-      mediaTypeOK
-
-    if (response.body) {
-      await response.body.cancel().catch(
-        () => undefined,
-      )
+    const mime = (response.headers.get('content-type') || '').toLowerCase()
+    const good = (response.status === 200 || response.status === 206) &&
+      (mime.startsWith('audio/') || mime.startsWith('application/octet-stream'))
+    if (response.body) await response.body.cancel().catch(() => undefined)
+    if (good) return { status: 'available', statusCode: response.status }
+    if (response.status === 404 || response.status === 410) {
+      return { status: 'unavailable', statusCode: response.status }
     }
-
-    if (good) {
-      return {
-        status: 'available',
-        statusCode: response.status,
-      }
-    }
-
-    if (
-      response.status === 404 ||
-      response.status === 410
-    ) {
-      return {
-        status: 'unavailable',
-        statusCode: response.status,
-      }
-    }
-
-    return {
-      status: 'unknown',
-      reason: `http-${response.status}`,
-    }
+    return { status: 'unknown', reason: `http-${response.status}` }
   } catch {
-    return {
-      status: 'unknown',
-      reason: signal?.aborted
-        ? 'cancelled'
-        : 'network-error',
-    }
+    return { status: 'unknown', reason: signal?.aborted ? 'cancelled' : 'network-error' }
   } finally {
     clearTimeout(timer)
-
-    signal?.removeEventListener(
-      'abort',
-      cancel,
-    )
+    signal?.removeEventListener('abort', cancel)
   }
 }

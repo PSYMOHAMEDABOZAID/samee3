@@ -16,6 +16,10 @@ import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import { adhkarCitation, findAdhkarCategory, loadAdhkarCatalog, readCachedAdhkar } from '@/lib/adhkar-catalog'
 import {
+  cachedAdhkarPlaybackUrl,
+  downloadAdhkarForOffline,
+} from '@/lib/adhkar-offline'
+import {
   checkAdhkarRecording,
   findAdhkarReciter,
   findAdhkarRecording,
@@ -79,10 +83,9 @@ type AudioMode = 'item' | 'section' | null
 type ProgressRecord = { counts: Record<string, number>; savedAt: number }
 
 const SETTINGS_KEY = 'samee3_adhkar_read_settings_v1'
-const AUDIO_CACHE = 'samee3-adhkar-audio-v1'
 const RECITER_KEY = 'samee3_adhkar_reciter'
-const MAX_AUDIO_BYTES = 180 * 1024 * 1024
-const RECITERS = listAdhkarReciters({ includeLegacy: true, includeSourceOnly: true })
+// Show only readers with an identified audio URL, not source-only or legacy entries.
+const RECITERS = listAdhkarReciters()
 
 const LABELS: Record<AdhkarType, string> = {
   morning: 'أذكار الصباح',
@@ -127,53 +130,13 @@ function timeLabel(value: number) {
   return `${numberAr(Math.floor(seconds / 60))}:${String(seconds % 60).padStart(2, '0').replace(/\d/g, (digit) => '٠١٢٣٤٥٦٧٨٩'[Number(digit)])}`
 }
 
+// Cache Storage is consumed as a stream. Avoid allocating a whole MP3 Blob in iOS memory.
 async function readSavedAudio(url: string): Promise<string | null> {
-  if (typeof caches === 'undefined') return null
-  try {
-    const names = await caches.keys()
-    if (!names.includes(AUDIO_CACHE)) return null
-    const response = await (await caches.open(AUDIO_CACHE)).match(url)
-    if (!response || response.status !== 200 || response.headers.has('Content-Range')) return null
-    const blob = await response.blob()
-    if (!blob.size || blob.size > MAX_AUDIO_BYTES) return null
-    return URL.createObjectURL(blob)
-  } catch { return null }
+  return cachedAdhkarPlaybackUrl(url)
 }
 
 async function downloadAudio(url: string, signal: AbortSignal): Promise<void> {
-  if (typeof caches === 'undefined') throw new Error('التخزين المحلي غير متاح.')
-  if (signal.aborted) throw new Error('تم إيقاف التحميل.')
-
-  const cache = await caches.open(AUDIO_CACHE)
-  const existing = await cache.match(url)
-  if (existing && existing.ok && existing.status === 200 &&
-    !existing.headers.has('Content-Range') &&
-    !/(?:json|html|xml)/i.test(existing.headers.get('Content-Type') || '')) {
-    // Keep a previously saved recording; never re-download it unnecessarily.
-    return
-  }
-
-  const response = await fetch(url, { method: 'GET', cache: 'no-store', signal })
-  const mime = (response.headers.get('Content-Type') || '').toLowerCase()
-  const declaredText = response.headers.get('Content-Length')
-  const declared = declaredText && /^\d+$/.test(declaredText) ? Number(declaredText) : null
-
-  if (!response.ok || response.status !== 200 || response.headers.has('Content-Range') ||
-    /(?:json|html|xml)/.test(mime) || (declared !== null && declared > MAX_AUDIO_BYTES)) {
-    throw new Error('المصدر لم يرجع ملفًا صوتيًا كاملًا.')
-  }
-
-  // A complete body is required before any Cache Storage write.
-  // This protects the previous recording if the download is interrupted.
-  const blob = await response.blob()
-  if (signal.aborted) throw new Error('تم إيقاف التحميل.')
-  if (!blob.size || blob.size > MAX_AUDIO_BYTES || (declared !== null && blob.size !== declared)) {
-    throw new Error('تعذّر التحقق من اكتمال التسجيل.')
-  }
-  await cache.put(url, new Response(blob, {
-    status: 200,
-    headers: { 'Content-Type': mime || 'audio/mpeg', 'Content-Length': String(blob.size) },
-  }))
+  return downloadAdhkarForOffline(url, signal)
 }
 
 async function retryDownloadAudio(url: string, signal: AbortSignal): Promise<void> {
@@ -389,7 +352,18 @@ function ReadAdhkarContent() {
   const speedRef = useRef(speed)
   const mutedRef = useRef(muted)
 
-  const selectedReader = findAdhkarReciter(reciterId) || RECITERS[0]
+  // List only reciters with a recording for the *current* section.
+  // A recorded book or profile link is not an alternative for a daily section.
+  const visibleReciters = RECITERS.filter((reader) => {
+    if (audioSectionType && findAdhkarRecording(reader.id, audioSectionType, { allowCombined: true })) return true
+    return reader.individualAudio && items.some((item) =>
+      Boolean(getIndividualAdhkarAudio(reader.id, item)))
+  })
+  const selectedReader = findAdhkarReciter(
+    visibleReciters.some((reader) => reader.id === reciterId)
+      ? reciterId
+      : visibleReciters[0]?.id || '',
+  ) || RECITERS[0]
   const sectionTrack: AdhkarRecording | null = audioSectionType
     ? findAdhkarRecording(selectedReader.id, audioSectionType, { allowCombined: true })
     : null
@@ -438,10 +412,10 @@ function ReadAdhkarContent() {
       audio.load()
       audioRef.current = null
     }
-    if (objectUrlRef.current) {
+    if (objectUrlRef.current?.startsWith('blob:')) {
       URL.revokeObjectURL(objectUrlRef.current)
-      objectUrlRef.current = null
     }
+    objectUrlRef.current = null
     setPlaying(false)
     setAudioLoading(false)
     setAudioMode(null)
@@ -455,7 +429,7 @@ function ReadAdhkarContent() {
     sequenceRef.current = false
     const audio = audioRef.current
     if (audio) { audio.onended = null; audio.pause(); audio.removeAttribute('src'); audioRef.current = null }
-    if (objectUrlRef.current) URL.revokeObjectURL(objectUrlRef.current)
+    if (objectUrlRef.current?.startsWith('blob:')) URL.revokeObjectURL(objectUrlRef.current)
     downloadControllerRef.current?.abort()
   }, [])
 
@@ -593,11 +567,12 @@ function ReadAdhkarContent() {
       old.onended = null; old.onerror = null; old.onplay = null; old.onpause = null
       old.pause(); old.removeAttribute('src')
     }
-    if (objectUrlRef.current) { URL.revokeObjectURL(objectUrlRef.current); objectUrlRef.current = null }
+    if (objectUrlRef.current?.startsWith('blob:')) URL.revokeObjectURL(objectUrlRef.current)
+    objectUrlRef.current = null
 
     const cached = await readSavedAudio(url)
     if (audioTokenRef.current !== token) {
-      if (cached) URL.revokeObjectURL(cached)
+      if (cached?.startsWith('blob:')) URL.revokeObjectURL(cached)
       return
     }
     if (!cached && navigator.onLine === false) {
@@ -784,7 +759,7 @@ function ReadAdhkarContent() {
     let succeeded = 0
     let failed = 0
     let cursor = 0
-    const workers = Math.min(2, urls.length)
+    const workers = 1 // Keep only one download open on iPhone.
     try {
       await Promise.all(Array.from({ length: workers }, async () => {
         for (;;) {
@@ -851,8 +826,9 @@ function ReadAdhkarContent() {
           <div aria-hidden="true" className="pointer-events-none absolute -left-12 -top-12 h-44 w-44 rounded-full border border-white/10" />
           <div className="relative flex items-start gap-3"><span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/10 text-[#e9ca92]"><Headphones size={23} /></span><div className="min-w-0 flex-1"><p className="text-xs font-bold text-[#e9ca92]">القراءة والتلاوة</p><h2 className="mt-1 text-xl font-black">{selectedReader.name}</h2><p className="mt-2 text-xs leading-6 text-white/70">الورد النصي مستقل عن التسجيلات. لا تُحسب الأذكار تلقائيًا عند تشغيل تسجيل القسم كاملًا، لعدم توفر توقيت مطابق لكل ذكر.</p></div></div>
           <div className="relative mt-5">
-            <select aria-label="اختيار قارئ الأذكار" value={reciterId} onChange={(event: ChangeEvent<HTMLSelectElement>) => changeReciter(event.target.value)} className="w-full appearance-none rounded-2xl border border-white/20 bg-white px-4 py-3.5 pl-11 text-sm font-black text-[#183e46] outline-none">
-              {RECITERS.map((reader) => <option value={reader.id} key={reader.id}>{reader.name}{!reader.individualAudio && !reader.recordings.length ? ' — قراءة فقط' : ''}</option>)}
+            <select aria-label="اختيار قارئ الأذكار" value={visibleReciters.length ? selectedReader.id : ''} disabled={!visibleReciters.length} onChange={(event: ChangeEvent<HTMLSelectElement>) => changeReciter(event.target.value)} className="w-full appearance-none rounded-2xl border border-white/20 bg-white px-4 py-3.5 pl-11 text-sm font-black text-[#183e46] outline-none disabled:opacity-70">
+              {!visibleReciters.length && <option value="">لا توجد تسجيلات صوتية لهذا القسم</option>}
+              {visibleReciters.map((reader) => <option value={reader.id} key={reader.id}>{reader.name}</option>)}
             </select>
             <ChevronDown size={18} className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#ac894f]" />
           </div>

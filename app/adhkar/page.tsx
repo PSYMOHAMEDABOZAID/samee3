@@ -37,6 +37,8 @@ import {
   type AdhkarDailyType,
 } from '@/lib/adhkar-catalog'
 
+import { listAdhkarReciters, findAdhkarRecording } from '@/lib/adhkar-reciters'
+
 type DailyId = AdhkarDailyType
 
 type LoadStatus =
@@ -62,49 +64,16 @@ type DailyCard = {
 const READER_KEY = 'samee3_adhkar_reciter'
 const LAST_SECTION_KEY = 'samee3_adhkar_last_opened_v1'
 
-const RECITERS: Reciter[] = [
-  {
-    id: 'mishary-alafasy',
-    name: 'مشاري بن راشد العفاسي',
-    sections: [
-      'waking',
-      'morning',
-      'evening',
-      'sleep',
-    ],
-  },
-  {
-    id: 'faris-abbad',
-    name: 'فارس عباد',
-    sections: ['morning', 'evening'],
-  },
-  {
-    id: 'mohamed-jibril',
-    name: 'محمد جبريل',
-    sections: ['morning', 'evening'],
-  },
-  {
-    id: 'nasser-alqatami',
-    name: 'ناصر القطامي',
-    sections: ['morning', 'evening'],
-  },
-  {
-    id: 'hamad-al-drehem',
-    name: 'حمد الدريهم',
-    sections: ['waking'],
-    individual: true,
-  },
-  {
-    id: 'sulaiman-al-shuhayhi',
-    name: 'سليمان بن محمد الشويهي',
-    sections: ['waking'],
-  },
-  {
-    id: 'walid-abu-ziyad',
-    name: 'وليد أبو زياد',
-    sections: [],
-  },
-]
+// SAMEE3 ADHKAR OFFLINE: لا نعرض قارئًا ليس له تسجيل صوتي محدد.
+// القارئ صاحب التسجيلات الفردية يظهر لاحقًا إذا توفر صوت حقيقي للباب.
+const RECITERS: Reciter[] = listAdhkarReciters().map((reciter) => ({
+  id: reciter.id,
+  name: reciter.name,
+  individual: reciter.individualAudio,
+  sections: (['morning', 'evening', 'sleep', 'waking'] as DailyId[]).filter(
+    (type) => Boolean(findAdhkarRecording(reciter.id, type, { allowCombined: true })),
+  ),
+}))
 
 const DAILY: DailyCard[] = [
   {
@@ -672,7 +641,7 @@ export default function AdhkarPage() {
             <div>
               <span className="inline-flex items-center gap-2 rounded-full border border-[#ead4a9]/20 bg-white/10 px-3 py-1.5 text-xs font-bold text-[#e9d0a4]">
                 <Sparkles size={14} />
-                وَاذْكُرْ رَبَّكَ كَثِيرًا
+                وَاذْكُرْ رَبَّكَ كَثِيرًا
               </span>
 
               <h2 className="mt-4 text-2xl font-black leading-[1.6] sm:text-3xl">
