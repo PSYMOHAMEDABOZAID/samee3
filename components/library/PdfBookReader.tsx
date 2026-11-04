@@ -49,9 +49,9 @@ type PdfBookReaderProps = {
   fill?: boolean
 }
 
-const PDFJS_URL = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/5.4.296/pdf.min.mjs'
+const PDFJS_URL = '/pdfjs/5.4.296/pdf.min.mjs'
 
-const PDF_ASSETS = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@5.4.296/'
+const PDF_ASSETS = '/pdfjs/5.4.296/'
 
 let enginePromise: Promise<PdfEngine> | null = null
 
@@ -65,7 +65,7 @@ function loadPdf(): Promise<PdfEngine> {
     )
       .then((engine) => {
         engine.GlobalWorkerOptions.workerSrc =
-          'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/5.4.296/pdf.worker.min.mjs'
+          PDF_ASSETS + 'pdf.worker.min.mjs'
 
         return engine
       })
@@ -115,11 +115,13 @@ export default function PdfBookReader({ bookId, title, url, readingUrl, fill = f
 
     resize()
 
-    const observer = new ResizeObserver(resize)
-    observer.observe(target)
+    const observer = typeof ResizeObserver !== 'undefined' ? new ResizeObserver(resize) : null
+    observer?.observe(target)
+    window.addEventListener('resize', resize)
 
     return () => {
-      observer.disconnect()
+      observer?.disconnect()
+      window.removeEventListener('resize', resize)
     }
   }, [])
 

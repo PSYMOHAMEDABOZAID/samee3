@@ -32,6 +32,7 @@ import Modal from '@/components/Modal'
 import ManagedBookStudyView from './ManagedBookStudyView'
 import ManagedCategoryView from './ManagedCategoryView'
 import { useManagedCatalog } from '@/lib/islamic/use-managed-library'
+import { publicLibraryBooks } from '@/lib/islamic/managed-library'
 import { cardBlob, downloadBlob, wrapCardText } from '@/lib/share-card'
 
 const ar = (n: number) => n.toLocaleString('ar-EG')
@@ -167,7 +168,7 @@ export function LibraryHome() {
               <div className="relative">
                 <p className="mb-2 text-xs text-[#9d8052]">
                   ثمانية مجالات ·{' '}
-                  {ar(catalog.books.filter((book) => !book.deleted && book.levelId === level.id).length)} كتاب
+                  {ar(publicLibraryBooks(catalog.books).filter((book) => book.levelId === level.id).length)} كتاب
                 </p>
                 <h2 className="mb-3 text-2xl font-black">{level.name}</h2>
                 <p className="mb-6 min-h-12 text-sm leading-7 text-[#76827b]">{level.description}</p>
@@ -227,7 +228,7 @@ export function LevelView({ levelId }: { levelId: LevelId }) {
       </section>
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {SUNNI_LIBRARY_CATEGORIES.map((category, i) => {
-          const visible = catalog.books.filter(
+          const visible = publicLibraryBooks(catalog.books).filter(
             (book) => !book.deleted && book.levelId === levelId && book.category === category.id,
           )
           const related = books.filter((book) => book.category === category.id),

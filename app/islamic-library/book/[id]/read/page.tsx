@@ -4,6 +4,7 @@ import { courseById } from '@/lib/islamic/curriculum'
 import { useManagedBook } from '@/lib/islamic/use-managed-library'
 import { studySources, validBookId } from '@/lib/islamic/managed-library'
 import CourseStudyStudio from '@/components/library/CourseStudyStudio'
+import PdfBookReader from '@/components/library/PdfBookReader'
 import { useEffect, useMemo, useState } from 'react'
 import { cacheLibraryBook, readCachedLibraryBook } from '@/lib/islamic/libraryOffline'
 import { safeIslamicLibraryLink } from '@/lib/islamic/safeLinks'
@@ -1195,7 +1196,6 @@ export default function IslamicBookReaderPage() {
             </div>
 
             {managed.ready &&
-              managed.lessonsReady &&
               managed.book &&
               !managed.book.deleted &&
               studySources(managed.book).length > 0 && (
@@ -1204,6 +1204,8 @@ export default function IslamicBookReaderPage() {
                   <CourseStudyStudio book={managed.book} showPdf={false} />
                 </section>
               )}
+
+            {managed.book?.downloadUrl && !contents.length && <div className="p-3 sm:p-5"><PdfBookReader bookId={bookId} title={managed.book.title} url={managed.book.downloadUrl} readingUrl={managed.book.readingUrl}/></div>}
 
             {loading ? (
               <div className={`flex min-h-[360px] items-center justify-center p-12 text-center ${muted}`}>

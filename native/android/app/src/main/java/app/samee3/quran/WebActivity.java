@@ -18,7 +18,8 @@ public class WebActivity extends Activity {
     private AndroidBridge androidBridge;
     private LinearLayout controls;
     protected boolean originalDesign(){return false;}
-    private WebView web;private ProgressBar progress;private TextView message;
+    protected boolean television(){return false;}
+    protected WebView web;private ProgressBar progress;private TextView message;
     private ValueCallback<Uri[]> files;private GeolocationPermissions.Callback location;private String locationOrigin;
     private final ExecutorService io=Executors.newSingleThreadExecutor();
     private WebMessagePort downloadPort;
@@ -36,7 +37,7 @@ public class WebActivity extends Activity {
             @Override public void onReceivedError(WebView view,WebResourceRequest request,WebResourceError error){if(request.isForMainFrame())failure("تعذر تحميل هذا القسم. تحقق من الاتصال؛ يمكنك قراءة المصحف المحفوظ من تبويب المصحف.");}
             @Override public void onReceivedHttpError(WebView view,WebResourceRequest request,WebResourceResponse response){if(request.isForMainFrame()&&response.getStatusCode()>=400)failure("المصدر غير متاح حاليًا. أعد المحاولة.");}
             @Override public void onPageStarted(WebView view,String url,android.graphics.Bitmap icon){closeDownloadPort();if(androidBridge!=null)androidBridge.close();}
-            @Override public void onPageFinished(WebView view,String url){if(!trusted(Uri.parse(url)))return;CookieManager.getInstance().flush();prepareDownloadPort();if(androidBridge!=null)androidBridge.attach(view);}
+            @Override public void onPageFinished(WebView view,String url){if(!trusted(Uri.parse(url)))return;CookieManager.getInstance().flush();if(television())view.evaluateJavascript("document.documentElement.classList.add('samee3-tv');localStorage.setItem('samee3_tv_mode','1');var m=document.querySelector('meta[name=viewport]');if(m)m.content='width=1280, initial-scale=1';",null);prepareDownloadPort();if(androidBridge!=null)androidBridge.attach(view);}
         });
         web.setWebChromeClient(new WebChromeClient(){
             @Override public void onProgressChanged(WebView view,int value){progress.setProgress(value);progress.setVisibility(value==100?View.GONE:View.VISIBLE);}
@@ -48,6 +49,7 @@ public class WebActivity extends Activity {
             if(url.startsWith("blob:")){failure("استخدم زر التنزيل داخل الصفحة، أو افتح المحرر في المتصفح.");return;}
             Uri uri=Uri.parse(url);if(!"https".equals(uri.getScheme()))return;openOutside(uri);
         });
+        if(television()){settings.setUseWideViewPort(true);settings.setLoadWithOverviewMode(true);settings.setTextZoom(100);settings.setUserAgentString(settings.getUserAgentString().replace(" Mobile "," ")+" SAMEE3TV/2.0");web.setInitialScale(0);}
         openPath(getIntent().getStringExtra("path"));
     }
     private void failure(String text){message.setText(text);message.setVisibility(View.VISIBLE);if(controls!=null)controls.setVisibility(View.VISIBLE);}
@@ -61,23 +63,23 @@ public class WebActivity extends Activity {
         String script="(function(token){if(window.__samee3ExportCleanup)window.__samee3ExportCleanup();var port=null,waiting=null,timer=null,busy=false;"
             +"function send(data){return new Promise(function(ok,no){waiting={ok:ok,no:no};timer=setTimeout(function(){waiting=null;no(Error('timeout'))},20000);port.postMessage(JSON.stringify(data))})}"
             +"function read(blob){return new Promise(function(ok,no){var r=new FileReader();r.onload=function(){ok(String(r.result).split(',')[1])};r.onerror=no;r.readAsDataURL(blob)})}"
-            +"function connect(e){if(e.data!==token||!e.ports||!e.ports[0])return;port=e.ports[0];port.onmessage=function(e){var w=waiting;waiting=null;clearTimeout(timer);if(!w)return;var r=JSON.parse(e.data);r.ok?w.ok():w.no(Error('save'))};port.start()}"
+            +"function connect(e){if(e.data!==token||!e.ports||!e.ports[0])return;port=e.ports[0];port.onmessage=function(e){var w=waiting;waiting=null;clearTimeout(timer);if(!w)return;var r=JSON.parse(e.data);r.ok?w.ok():w.no(Error('save'))};port.start();window.Samee3FileWriter={create:async function(name){if(busy)throw Error('busy');busy=true;var seq=0,total=0;try{await send({type:'start',name:name,mime:'application/zip',size:0})}catch(err){busy=false;throw err}return {write:async function(bytes){for(var at=0;at<bytes.length;at+=196608){var part=bytes.subarray(at,at+196608),binary='';for(var j=0;j<part.length;j++)binary+=String.fromCharCode(part[j]);await send({type:'chunk',seq:seq++,data:btoa(binary)});total+=part.length}},close:async function(){try{await send({type:'end',size:total})}finally{busy=false}},abort:async function(){try{await send({type:'abort'})}finally{busy=false}}}}}}"
             +"async function click(e){var a=e.target.closest&&e.target.closest('a[download]');if(!a||!a.href||a.href.indexOf('blob:https://samee3.vercel.app/')!==0||!port)return;e.preventDefault();if(busy)return;busy=true;try{var b=await(await fetch(a.href)).blob();if(!b.size||b.size>128*1024*1024)throw Error('size');await send({type:'start',name:a.download||'samee3-file',mime:b.type,size:b.size});var seq=0;for(var at=0;at<b.size;at+=262144)await send({type:'chunk',seq:seq++,data:await read(b.slice(at,at+262144))});await send({type:'end'})}catch(err){alert('تعذر حفظ الملف. افتح المحرر في المتصفح وأعد التنزيل.')}finally{busy=false}}"
-            +"window.addEventListener('message',connect);document.addEventListener('click',click,true);window.__samee3ExportCleanup=function(){window.removeEventListener('message',connect);document.removeEventListener('click',click,true);if(port)port.close();clearTimeout(timer)}})("+JSONObject.quote(token)+");";
+            +"window.addEventListener('message',connect);document.addEventListener('click',click,true);window.__samee3ExportCleanup=function(){window.removeEventListener('message',connect);document.removeEventListener('click',click,true);if(port)port.close();delete window.Samee3FileWriter;clearTimeout(timer)}})("+JSONObject.quote(token)+");";
         web.evaluateJavascript(script,value->{if(web!=null&&!isDestroyed()&&web.getUrl()!=null&&trusted(Uri.parse(web.getUrl())))web.postWebMessage(new WebMessage(token,new WebMessagePort[]{ports[1]}),Uri.parse("https://samee3.vercel.app"));});
     }
     private void receiveExport(WebMessagePort port,String value){
         try{JSONObject item=new JSONObject(value);String type=item.getString("type");
             if(type.equals("start")){
                 abortExport();exportMime=item.getString("mime");expectedBytes=item.getLong("size");receivedBytes=0;expectedSequence=0;
-                if(expectedBytes<1||expectedBytes>128L*1024*1024||!java.util.Arrays.asList("video/mp4","video/webm","image/png","image/jpeg","application/pdf","audio/mpeg","application/zip").contains(exportMime))throw new IOException();
+                if(expectedBytes<0||expectedBytes>128L*1024*1024||(expectedBytes==0&&!"application/zip".equals(exportMime))||!java.util.Arrays.asList("video/mp4","video/webm","image/png","image/jpeg","application/pdf","audio/mpeg","application/zip").contains(exportMime))throw new IOException();
                 String safe=item.optString("name","samee3-file").replaceAll("[^\\p{L}\\p{N}._-]","_");safe=safe.substring(0,Math.min(100,safe.length()));if(safe.isEmpty())safe="samee3-file";
                 File folder=new File(getFilesDir(),"exports");folder.mkdirs();exportFile=new File(folder,System.currentTimeMillis()+"-"+safe);exportPart=new File(exportFile.getPath()+".part");exportOutput=new FileOutputStream(exportPart);
             }else if(type.equals("chunk")){
-                if(exportOutput==null||item.getInt("seq")!=expectedSequence++)throw new IOException();byte[] bytes=android.util.Base64.decode(item.getString("data"),android.util.Base64.DEFAULT);if(bytes.length>262144||receivedBytes+bytes.length>expectedBytes)throw new IOException();exportOutput.write(bytes);receivedBytes+=bytes.length;
+                if(exportOutput==null||item.getInt("seq")!=expectedSequence++)throw new IOException();byte[] bytes=android.util.Base64.decode(item.getString("data"),android.util.Base64.DEFAULT);if(bytes.length>262144||receivedBytes+bytes.length>(expectedBytes>0?expectedBytes:8L*1024*1024*1024))throw new IOException();exportOutput.write(bytes);receivedBytes+=bytes.length;
             }else if(type.equals("end")){
-                if(exportOutput==null||receivedBytes!=expectedBytes)throw new IOException();exportOutput.close();exportOutput=null;if(!exportPart.renameTo(exportFile))throw new IOException();File completed=exportFile;String mime=exportMime;exportPart=null;exportFile=null;runOnUiThread(()->{if(!isDestroyed())AppFileProvider.share(this,completed,mime);});
-            }else throw new IOException();
+                if(exportOutput==null||(expectedBytes>0?receivedBytes!=expectedBytes:item.optLong("size",-1)!=receivedBytes))throw new IOException();exportOutput.close();exportOutput=null;if(!exportPart.renameTo(exportFile))throw new IOException();File completed=exportFile;String mime=exportMime;exportPart=null;exportFile=null;runOnUiThread(()->{if(!isDestroyed())AppFileProvider.share(this,completed,mime);});
+            }else if(type.equals("abort")){abortExport();}else throw new IOException();
             runOnUiThread(()->{try{port.postMessage(new WebMessage("{\"ok\":true}"));}catch(Exception ignored){}});
         }catch(Exception e){abortExport();runOnUiThread(()->{try{port.postMessage(new WebMessage("{\"ok\":false}"));}catch(Exception ignored){}if(!isDestroyed())failure("لم يكتمل حفظ الملف.");});}
     }
@@ -85,7 +87,7 @@ public class WebActivity extends Activity {
     private void closeDownloadPort(){if(downloadPort!=null){downloadPort.close();downloadPort=null;}if(!io.isShutdown())io.execute(this::abortExport);}
     @Override protected void onActivityResult(int code,int result,Intent data){super.onActivityResult(code,result,data);if(code==71&&files!=null){files.onReceiveValue(result==RESULT_OK&&data!=null?new Uri[]{data.getData()}:null);files=null;}}
     @Override public void onRequestPermissionsResult(int code,String[] permissions,int[] results){super.onRequestPermissionsResult(code,permissions,results);if(androidBridge!=null)androidBridge.permissionResult(code);if(code==72&&location!=null){boolean granted=false;for(int value:results)granted|=value==PackageManager.PERMISSION_GRANTED;location.invoke(locationOrigin,granted,false);location=null;}}
-    private void openPath(String path){if(web==null)return;if(path==null||!path.startsWith("/")||path.startsWith("//")||path.contains("\\")||path.indexOf('\n')>=0||path.indexOf('\r')>=0)path="/";web.loadUrl("https://samee3.vercel.app"+path);}
+    protected void openPath(String path){if(web==null)return;if(path==null||!path.startsWith("/")||path.startsWith("//")||path.contains("\\")||path.indexOf('\n')>=0||path.indexOf('\r')>=0)path=television()?"/?tv=1":"/";web.loadUrl("https://samee3.vercel.app"+path);}
     @Override protected void onNewIntent(Intent intent){super.onNewIntent(intent);setIntent(intent);openPath(intent.getStringExtra("path"));}
     @Override protected void onResume(){super.onResume();ReminderScheduler.reschedule(this);}
     @Override public void onBackPressed(){if(web!=null&&web.canGoBack())web.goBack();else finish();}

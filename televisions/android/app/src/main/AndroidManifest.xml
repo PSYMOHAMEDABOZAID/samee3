@@ -1,0 +1,36 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <uses-feature android:name="android.software.leanback" android:required="false"/>
+    <application android:label="مصحف سميع" android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher" android:theme="@style/AppTheme" android:supportsRtl="true" android:usesCleartextTraffic="false" android:allowBackup="false" android:banner="@drawable/tv_banner" android:localeConfig="@xml/locales_config">
+        <activity android:name=".TVActivity" android:screenOrientation="landscape" android:launchMode="singleTop" android:exported="true" android:configChanges="keyboardHidden|orientation|screenSize|uiMode"><intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/><category android:name="android.intent.category.LEANBACK_LAUNCHER"/></intent-filter></activity>
+        <activity android:name=".AndroidActivity" android:launchMode="singleTop" android:exported="true" android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:windowSoftInputMode="adjustResize">
+            
+        </activity>
+        <activity android:name=".MainActivity" android:exported="false" android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".WebActivity" android:exported="false" android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:windowSoftInputMode="adjustResize" />
+        <receiver android:name=".ReminderReceiver" android:exported="false" />
+        <receiver android:name=".ReminderSystemReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+                <action android:name="android.app.action.SCHEDULE_EXACT_ALARM_PERMISSION_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <service android:name=".PrayerRefreshJob" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="true" />
+        <service android:name=".AdhanService" android:exported="false" android:foregroundServiceType="mediaPlayback" />
+        <service android:name=".AudioService" android:exported="false" android:foregroundServiceType="mediaPlayback" />
+        <provider android:name=".AppFileProvider" android:authorities="app.samee3.quran.tv.files" android:exported="false" android:grantUriPermissions="true" />
+    </application>
+</manifest>

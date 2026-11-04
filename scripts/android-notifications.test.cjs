@@ -83,7 +83,7 @@ test('website build identity remains the same in compiler workers and at product
   function config(env, stored) {
     const module = { exports: {} }
     const context = { module, __dirname: '/project', process: { env }, require(name) {
-      if (name === 'node:fs') return { readFileSync() { if (!stored) throw Error('No stored build'); return stored } }
+      if (name === 'node:fs') return { writeFileSync() {}, readFileSync() { if (!stored) throw Error('No stored build'); return stored } }
       return require(name)
     } }
     vm.createContext(context); vm.runInContext(source, context)

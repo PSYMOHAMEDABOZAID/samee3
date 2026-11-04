@@ -288,6 +288,7 @@ export async function GET(
     params: Promise<{ id: string }>
   },
 ) {
+  let fallbackBook: unknown = null
   const controller = new AbortController()
 
   const timer = setTimeout(() => controller.abort(), 15000)
@@ -329,6 +330,7 @@ export async function GET(
     const managedBook = mergeLibraryBook(bookId, firestoreResult.book || {}, staticBook)
     if (!managedBook) return NextResponse.json({ success: false, error: 'BOOK_NOT_FOUND' }, { status: 404 })
     const mergedBook = { ...managedBook, publication: firestoreResult.book?.publication || null }
+    fallbackBook = mergedBook
     const videos = firestoreResult.videos
 
     const quranpediaId = getQuranpediaId(mergedBook as SunniLibraryBook & DynamicBookFields)
@@ -419,6 +421,7 @@ export async function GET(
           : null,
     })
   } catch (error) {
+    if (fallbackBook) return NextResponse.json({ success: true, source: 'external', book: fallbackBook, contents: [], message: 'تعذر الاتصال بمصدر النص حاليًا. يمكنك قراءة نسخة PDF أو فتح مصدر الكتاب والشرح.' })
     const isTimeout = error instanceof DOMException && error.name === 'AbortError'
 
     return NextResponse.json(

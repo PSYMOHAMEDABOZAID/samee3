@@ -58,6 +58,8 @@ export function youtubeSource(value: unknown): { list?: string; video?: string }
         host === 'youtu.be'
           ? url.pathname.slice(1)
           : url.searchParams.get('v') || url.pathname.match(/^\/(?:embed|shorts)\/([\w-]{11})/)?.[1]
+    // A watch URL identifies a lesson even when copied from a playlist.
+    if (video && /^[\w-]{11}$/.test(video)) return { video }
     if (list && /^[\w-]{10,80}$/.test(list)) return { list }
     return video && /^[\w-]{11}$/.test(video) ? { video } : null
   } catch {

@@ -3,6 +3,8 @@
 import Link from 'next/link'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { ArrowDownToLine, BookOpen, Check, ChevronLeft, ChevronRight, Download, Headphones, Loader2, Pause, Play, RotateCcw, Search, SkipBack, SkipForward, Trash2, WifiOff } from 'lucide-react'
+import { downloadSnapshot, serverDownloadSnapshot, startRiwayatDownload, subscribeDownload } from '@/lib/riwayat-download'
+import { useSyncExternalStore } from 'react'
 
 type Edition = {
   id: string
@@ -34,6 +36,8 @@ function isCatalog(value: unknown): value is Catalog {
 }
 
 export default function AlafasyRiwayatContent({ embedded = false }: { embedded?: boolean }) {
+  const download = useSyncExternalStore(subscribeDownload, downloadSnapshot, serverDownloadSnapshot)
+  const downloading = download?.phase === 'preparing' || download?.phase === 'downloading'
   const [catalog, setCatalog] = useState<Catalog | null>(null)
   const [editionId, setEditionId] = useState('')
   const [search, setSearch] = useState('')
@@ -250,14 +254,14 @@ export default function AlafasyRiwayatContent({ embedded = false }: { embedded?:
               <span className="block text-base font-bold">{item.name}</span>
               <span className="mt-1 block text-xs text-slate-500 dark:text-slate-400">{item.source} • {item.surahIds.length} سورة {item.surahIds.length === 114 ? '• كامل' : '• المتاح من المصحف'}</span>
             </button>
-            <a
-              href={`/api/alafasy-riwayat/zip?edition=${encodeURIComponent(item.id)}`}
-              download
-              className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-emerald-700 px-3 py-3 text-sm font-bold text-white hover:bg-emerald-800"
+            <button type="button"
+              disabled={downloading}
+              onClick={() => void startRiwayatDownload(item)}
+              className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-emerald-700 px-3 py-3 text-sm font-bold text-white hover:bg-emerald-800 disabled:opacity-50"
               title={`تحميل ${item.name} في ملف ZIP واحد باسم المصحف`}
             >
-              <Download size={18} /> تحميل المصحف ZIP ({item.surahIds.length} سورة)
-            </a>
+              <Download size={18} /> {item.surahIds.length === 114 ? 'تحميل المصحف كاملًا ZIP' : `تحميل المتاح ZIP (${item.surahIds.length} سورة)`}
+            </button>
           </div>)}
         </div>
         {edition && <div className="rounded-3xl border border-slate-200 bg-white p-3 shadow-sm dark:border-slate-700 dark:bg-slate-900 sm:p-5">

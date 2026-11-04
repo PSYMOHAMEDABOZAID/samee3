@@ -74,7 +74,7 @@ export default function ManagedBookStudyView({ bookId }: { bookId: string }) {
     level = LEARNING_LEVELS.find((item) => item.id === book.levelId)!
   const course = courseById(book.id),
     completed = progress.completed.includes(book.id),
-    hasVideo = lessonsReady && studySources(book).length > 0
+    hasVideo = studySources(book).length > 0
   const share = async () => {
     const url = `${location.origin}/islamic-library/book/${book.id}`
     try {

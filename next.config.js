@@ -1,5 +1,5 @@
 const { PHASE_PRODUCTION_SERVER } = require('next/constants')
-const { readFileSync } = require('node:fs')
+const { readFileSync, writeFileSync } = require('node:fs')
 const { join } = require('node:path')
 const { randomUUID } = require('node:crypto')
 
@@ -17,6 +17,9 @@ function buildIdentity(phase) {
 
 module.exports = (phase) => {
   const appBuildId = buildIdentity(phase)
+  if (phase !== PHASE_PRODUCTION_SERVER) {
+    writeFileSync(join(__dirname, 'public/sw-build.js'), `self.SAMEE3_BUILD_ID = ${JSON.stringify(appBuildId)}\n`)
+  }
   /** @type {import('next').NextConfig} */
   const nextConfig = {
   reactStrictMode: true,
@@ -44,6 +47,7 @@ module.exports = (phase) => {
   async headers() {
     return [
       { source: '/sw.js', headers: [{ key: 'Cache-Control', value: 'no-cache, max-age=0, must-revalidate' }, { key: 'Service-Worker-Allowed', value: '/' }] },
+      { source: '/sw-build.js', headers: [{ key: 'Cache-Control', value: 'no-cache, max-age=0, must-revalidate' }] },
       { source: '/manifest.json', headers: [{ key: 'Cache-Control', value: 'no-cache, max-age=0, must-revalidate' }] },
       { source: '/android/release.json', headers: [{ key: 'Cache-Control', value: 'no-store, max-age=0' }] },
       { source: '/app-downloads.json', headers: [{ key: 'Cache-Control', value: 'no-store, max-age=0' }] },

@@ -14,25 +14,33 @@
     "test:library": "node scripts/test-library.cjs",
     "typecheck": "tsc --noEmit",
     "test:core": "node --test scripts/core.test.cjs",
-    "test": "npm run test:core && npm run test:library && npm run test:proxy && npm run test:android-web && npm run test:downloads",
+    "test": "npm run test:core && npm run test:library && npm run test:proxy && npm run test:android-web && npm run test:downloads && npm run test:release",
     "test:rules": "npx --yes firebase-tools@14.22.0 emulators:exec --only firestore --project demo-samee3 'node --test --test-concurrency=1 scripts/firestore.test.cjs scripts/support-messages.test.cjs'",
     "test:android-web": "node --test scripts/android-notifications.test.cjs",
-    "test:downloads": "node --test scripts/app-downloads.test.cjs"
+    "test:downloads": "node --test scripts/app-downloads.test.cjs",
+    "prebuild": "node scripts/prepare-web-assets.cjs",
+    "predev": "node scripts/prepare-web-assets.cjs",
+    "push:keys": "node scripts/generate-push-keys.cjs",
+    "test:release": "node --test scripts/release-fixes.test.cjs scripts/managed-library.test.cjs scripts/library-youtube-details.test.cjs"
   },
   "dependencies": {
     "@quran.ws/text": "^0.1.0",
     "firebase": "13.1.0",
+    "firebase-admin": "14.5.0",
     "jszip": "^3.10.1",
     "lucide-react": "^0.468.0",
     "next": "16.4.3",
+    "pdfjs-dist": "5.4.296",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "web-push": "3.6.7"
   },
   "devDependencies": {
     "@firebase/rules-unit-testing": "^6.0.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/web-push": "3.6.4",
     "autoprefixer": "^10.0.1",
     "postcss": "8.5.31",
     "tailwindcss": "^3.3.0",

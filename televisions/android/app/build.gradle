@@ -1,0 +1,28 @@
+plugins { id 'com.android.application' }
+android {
+    namespace 'app.samee3.quran'
+    compileSdk 35
+    defaultConfig {
+        applicationId 'app.samee3.quran.tv'
+        minSdk 26
+        targetSdk 35
+        versionCode 20000
+        versionName '2.0.0'
+        manifestPlaceholders = [samee3FileAuthority: 'app.samee3.quran.tv.files']
+    }
+    sourceSets { main {
+        java.srcDirs = ['../../../native/android/app/src/main/java', 'src/main/java']
+        res.srcDirs = ['../../../native/android/app/src/main/res', 'src/main/res']
+        assets.srcDirs = ['../../../native/shared', '../../../native/android/app/src/main/assets']
+    } }
+    signingConfigs { release {
+        if (System.getenv('SAMEE3_TV_KEYSTORE')) {
+            storeFile file(System.getenv('SAMEE3_TV_KEYSTORE'))
+            storePassword System.getenv('SAMEE3_TV_STORE_PASSWORD')
+            keyAlias System.getenv('SAMEE3_TV_KEY_ALIAS')
+            keyPassword System.getenv('SAMEE3_TV_KEY_PASSWORD')
+        }
+    } }
+    buildTypes { release { minifyEnabled false; if (System.getenv('SAMEE3_TV_KEYSTORE')) signingConfig signingConfigs.release } }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+}

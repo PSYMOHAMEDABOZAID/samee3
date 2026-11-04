@@ -412,8 +412,6 @@ export default function HomePage() {
           </Link>
         </header>
 
-        <AppDownloadsCard />
-
         {isOffline && (
           <div
             role="status"
@@ -588,6 +586,7 @@ export default function HomePage() {
             />
           </div>
         </section>
+        <AppDownloadsCard />
       </div>
     </div>
   )

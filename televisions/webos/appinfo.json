@@ -1,0 +1,13 @@
+{
+  "id": "app.samee3.quran.tv",
+  "version": "2.0.0",
+  "vendor": "SAMEE3",
+  "type": "web",
+  "main": "index.html",
+  "title": "مصحف سميع",
+  "icon": "icon.png",
+  "largeIcon": "largeIcon.png",
+  "resolution": "1920x1080",
+  "disableBackHistoryAPI": false,
+  "requiredACG": []
+}

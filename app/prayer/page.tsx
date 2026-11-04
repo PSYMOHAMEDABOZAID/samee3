@@ -3,6 +3,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
 import { useAndroidApp } from '@/lib/android-native'
+import PrayerPreferences from '@/components/PrayerPreferences'
+import { readWebSettings } from '@/lib/web-push-client'
 import { apiPrayerDate, fetchPrayerDay, locationDate, nextPrayerFromDays, parsePrayerDay, qiblaBearing, shiftPrayerDate, type PrayerDay } from '@/lib/prayer-times'
 import {
   ChevronRight,
@@ -151,10 +153,10 @@ export default function PrayerPage() {
     const controller = new AbortController()
     controllerRef.current = controller
     setRefreshing(true); setError('')
-    const query = new URLSearchParams({ latitude: String(lat), longitude: String(lng), method: String(calculation.current.method), school: String(calculation.current.school), iso8601: 'true' })
-    if (calculation.current.timezone) query.set('timezonestring', calculation.current.timezone)
+    const query = new URLSearchParams({ latitude: String(lat), longitude: String(lng), method: String(calculation.current.method), school: String(calculation.current.school) })
+    if (calculation.current.timezone) query.set('timezone', calculation.current.timezone)
     const fetchDay = (date?: string) => fetchPrayerDay(
-      `https://api.aladhan.com/v1/timings${date ? '/' + apiPrayerDate(date) : ''}?${query}`,
+      `/api/prayer-times?${query}${date ? '&date=' + date : ''}`,
       controller.signal,
     )
     try {
@@ -162,13 +164,15 @@ export default function PrayerPage() {
       let today = await fetchDay()
       const actualDate = locationDate(new Date(), today.timezone)
       if (today.date !== actualDate) today = await fetchDay(actualDate)
-      const tomorrow = await fetchDay(shiftPrayerDate(today.date, 1)).catch(() => null)
+      // Display today's successful result immediately; later days cannot hide it.
+      if (id === request.current && !controller.signal.aborted) { setDays([today]); setCoordinates({ latitude: lat, longitude: lng }); setLocationName(city); setLoading(false) }
+      const future = await Promise.allSettled(Array.from({ length: 6 }, (_, i) => fetchDay(shiftPrayerDate(today.date, i + 1))))
       if (id !== request.current || controller.signal.aborted) return
-      const next = [today, ...(tomorrow ? [tomorrow] : [])]
+      const next = [today, ...future.flatMap(result => result.status === 'fulfilled' ? [result.value] : [])]
       setDays(next); setCoordinates({ latitude: lat, longitude: lng }); setLocationName(city)
       lastRefresh.current = actualDate
       try { localStorage.setItem('samee3_prayer_days_v1', JSON.stringify({ days: next, latitude: lat, longitude: lng, city, method: calculation.current.method, school: calculation.current.school, timezone: calculation.current.timezone })) } catch {}
-      if (!tomorrow) setError('مواقيت اليوم جاهزة؛ تعذر تحديث فجر الغد. أعد التحديث عند توفر الاتصال.')
+      if (!next.some(day => day.date === shiftPrayerDate(today.date, 1))) setError('مواقيت اليوم جاهزة؛ تعذر تحديث فجر الغد. أعد التحديث عند توفر الاتصال.')
     } catch (cause) {
       if (id === request.current) setError(cause instanceof Error && cause.name !== 'AbortError' ? cause.message : 'انتهت مهلة تحديث المواقيت. أعد المحاولة.')
     } finally {
@@ -186,14 +190,24 @@ export default function PrayerPage() {
       if (id !== locationRequest.current) return
       void fetchTimings(position.coords.latitude, position.coords.longitude)
     }, () => {
-      if (id === locationRequest.current) void fetchTimings(FALLBACK_LOCATION.latitude, FALLBACK_LOCATION.longitude, FALLBACK_LOCATION.city)
+      if (id !== locationRequest.current) return
+      const previous = current.current
+      if (previous.days.length || previous.locationName !== FALLBACK_LOCATION.city) void fetchTimings(previous.coordinates.latitude, previous.coordinates.longitude, previous.locationName)
+      else { setError('لم يُسمح بتحديد الموقع. تُعرض مسقط كموقع افتراضي؛ اختر موقعك من إعدادات المواقيت.'); void fetchTimings(FALLBACK_LOCATION.latitude, FALLBACK_LOCATION.longitude, FALLBACK_LOCATION.city) }
     }, { enableHighAccuracy: true, timeout: 10000, maximumAge: 300000 })
   }, [fetchTimings])
 
   useEffect(() => {
+    const preferences = readWebSettings()
+    calculation.current = { method: preferences.method, school: preferences.school, timezone: preferences.timezone }
+    let hasSelectedLocation = false
+    if (preferences.latitude !== null && preferences.longitude !== null) {
+      hasSelectedLocation = true
+      current.current = { ...current.current, coordinates: { latitude: preferences.latitude, longitude: preferences.longitude }, locationName: preferences.city }
+    }
     try {
       const saved = JSON.parse(localStorage.getItem('samee3_prayer_days_v1') || 'null')
-      if (saved && Array.isArray(saved.days) && Number.isFinite(saved.latitude) && Number.isFinite(saved.longitude)) {
+      if (saved && Array.isArray(saved.days) && Number.isFinite(saved.latitude) && Number.isFinite(saved.longitude) && saved.method === calculation.current.method && saved.school === calculation.current.school && (!hasSelectedLocation || (saved.latitude === preferences.latitude && saved.longitude === preferences.longitude))) {
         const validated = saved.days.map((day: PrayerDay) => parsePrayerDay({ code: 200, data: { timings: day.isoTimings || day.timings, meta: { timezone: day.timezone }, date: { gregorian: { date: apiPrayerDate(day.date) }, hijri: { date: day.hijri } } } }))
         if (validated.some((day: PrayerDay) => day.date === locationDate(new Date(), day.timezone))) {
           lastRefresh.current = locationDate(new Date(), validated[0].timezone)
@@ -203,7 +217,17 @@ export default function PrayerPage() {
         }
       }
     } catch {}
-    loadCurrentLocation()
+    if (hasSelectedLocation) { const c = current.current; void fetchTimings(c.coordinates.latitude, c.coordinates.longitude, c.locationName) }
+    else loadCurrentLocation()
+    const changed = () => {
+      const selected = readWebSettings()
+      if (selected.latitude === null || selected.longitude === null) return
+      calculation.current = { method: selected.method, school: selected.school, timezone: selected.timezone }
+      locationRequest.current += 1
+      setDays([])
+      void fetchTimings(selected.latitude, selected.longitude, selected.city)
+    }
+    window.addEventListener('samee3:prayer-settings', changed)
     const tick = () => setNow(new Date())
     const network = () => {
       setOffline(navigator.onLine === false)
@@ -212,7 +236,7 @@ export default function PrayerPage() {
     setOffline(navigator.onLine === false)
     const interval = window.setInterval(tick, 1000)
     window.addEventListener('online', network); window.addEventListener('offline', network); window.addEventListener('focus', tick)
-    return () => { request.current += 1; locationRequest.current += 1; controllerRef.current?.abort(); clearInterval(interval); window.removeEventListener('online', network); window.removeEventListener('offline', network); window.removeEventListener('focus', tick) }
+    return () => { request.current += 1; locationRequest.current += 1; controllerRef.current?.abort(); clearInterval(interval); window.removeEventListener('samee3:prayer-settings', changed); window.removeEventListener('online', network); window.removeEventListener('offline', network); window.removeEventListener('focus', tick) }
   }, [fetchTimings, loadCurrentLocation])
 
   // Use the same explicitly saved native prayer location/method as the notification scheduler.
@@ -316,6 +340,7 @@ export default function PrayerPage() {
         </button>
       </div>
 
+      {!android && <PrayerPreferences latitude={coordinates.latitude} longitude={coordinates.longitude} city={locationName}/>}
       {loading ? (
         <div className="flex-1 flex flex-col items-center justify-center text-mushaf-teal gap-4 px-6">
           <div className="w-20 h-20 rounded-full bg-white shadow-sm border border-mushaf-border/40 flex items-center justify-center">

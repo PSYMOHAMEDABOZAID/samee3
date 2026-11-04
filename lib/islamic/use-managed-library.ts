@@ -13,14 +13,19 @@ import {
 
 export function useManagedCatalog() {
   const [books, setBooks] = useState<ManagedBook[]>(() => mergeLibraryCatalog([]))
-  const [ready, setReady] = useState(false)
+  const [ready, setReady] = useState(true)
   const [error, setError] = useState('')
-  useEffect(
-    () =>
-      onSnapshot(
+  useEffect(() => {
+    let received = false
+    try { const saved = JSON.parse(localStorage.getItem('samee3_library_catalog_v1') || 'null'); if (Array.isArray(saved)) setBooks(mergeLibraryCatalog(saved)) } catch {}
+    const timer = setTimeout(() => { if (!received) setError('تُعرض المكتبة المحفوظة. تعذرت مزامنة التغييرات؛ أعد المحاولة عند عودة الاتصال.') }, 8000)
+    const stop = onSnapshot(
         collection(db, 'islamicLibraryBooks'),
         (snapshot) => {
-          setBooks(mergeLibraryCatalog(snapshot.docs.map((item) => ({ id: item.id, data: item.data() }))))
+          received = true
+          const records = snapshot.docs.map((item) => ({ id: item.id, data: item.data() }))
+          setBooks(mergeLibraryCatalog(records))
+          try { localStorage.setItem('samee3_library_catalog_v1', JSON.stringify(records)) } catch {}
           setReady(true)
           setError('')
         },
@@ -28,9 +33,9 @@ export function useManagedCatalog() {
           setReady(true)
           setError('تعذّر تحديث المكتبة. تحقق من الاتصال ثم أعد تحميل الصفحة.')
         },
-      ),
-    [],
-  )
+      )
+    return () => { clearTimeout(timer); stop() }
+  }, [])
   return { books, ready, error }
 }
 
@@ -53,6 +58,10 @@ export function useManagedBook(id: string | null) {
       lessonsReady = false,
       error = '',
       alive = true
+    try {
+      const saved = JSON.parse(localStorage.getItem(`samee3_library_book_v1:${id}`) || 'null')
+      if (saved && typeof saved.raw === 'object' && Array.isArray(saved.lessons)) { raw = saved.raw; lessons = saved.lessons }
+    } catch {}
     const publish = () => {
       if (!alive) return
       const book = mergeLibraryBook(id, raw)
@@ -60,11 +69,21 @@ export function useManagedBook(id: string | null) {
       setState({ id, book, ready, lessonsReady, error })
     }
     publish()
+    const deadline = setTimeout(() => {
+      if (!ready || !lessonsReady) {
+        ready = true
+        error = 'تُعرض النسخة المحفوظة من الكتاب والشرح. لم تكتمل المزامنة؛ تحقق من الاتصال قبل التعديل.'
+        publish()
+      }
+    }, 8000)
+    const persist = () => { try { localStorage.setItem(`samee3_library_book_v1:${id}`, JSON.stringify({ raw, lessons })) } catch {} }
     const stopBook = onSnapshot(
       doc(db, 'islamicLibraryBooks', id),
       (snapshot) => {
         raw = snapshot.data() || {}
         ready = true
+        if (lessonsReady) error = ''
+        persist()
         publish()
       },
       () => {
@@ -78,6 +97,8 @@ export function useManagedBook(id: string | null) {
       (snapshot) => {
         lessons = snapshot.docs.map((item) => ({ id: item.id, data: item.data() }))
         lessonsReady = true
+        if (ready) error = ''
+        persist()
         publish()
       },
       () => {
@@ -88,6 +109,7 @@ export function useManagedBook(id: string | null) {
     )
     return () => {
       alive = false
+      clearTimeout(deadline)
       stopBook()
       stopLessons()
     }

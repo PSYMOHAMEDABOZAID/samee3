@@ -72,7 +72,7 @@ const pdfEditions: Record<string, string> = {
   "fiqh-bulugh": "https://d1.islamhouse.com/data/ar/ih_books/single-03/ar-bulugh-almaram.pdf",
   "aq-tahawiyyah": "https://archive.org/download/FP0177/0177.pdf",
   "usul-tafsir-itqan": "https://shamela.org/gen/1e2b70b75719ee5e8b78a6c0e7c11d07_gen.pdf?download=1",
-  "tafsir-taysir-qattan": "https://shamela.org/gen/87bdf124a18abe12f093c6c6b1ab6b27_gen.pdf?download=1"
+  "tafsir-taysir-qattan": "https://shamela.org/gen/87bdf124a18abe12f093c6c6b1ab6b27_gen.pdf"
 }
 const videoAuthors: Record<string, string> = {
   "fiqh-mulakhkhas": "صالح بن فوزان الفوزان",

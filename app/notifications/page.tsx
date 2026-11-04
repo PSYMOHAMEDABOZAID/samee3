@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, type ReactNode } from 'react'
 import Link from 'next/link'
 import { BellRing, BookOpen, ChevronRight, Check, Clock, Headphones, Heart, LibraryBig, Loader2, MapPin, MessageCircle, Settings, Volume2 } from 'lucide-react'
 import AndroidAppCard from '@/components/AndroidAppCard'
+import WebNotificationsPanel from '@/components/WebNotificationsPanel'
 import adhanCatalog from '@/native/shared/adhan-catalog.json'
 import { DEFAULT_REMINDERS, nativeRequest, useAndroidApp, type ReminderSettings } from '@/lib/android-native'
 
@@ -66,6 +67,7 @@ export default function NotificationsPage() {
   const switchButton = (key: ToggleKey, label: string) => <button type="button" role="switch" aria-checked={form[key]} aria-label={label} onClick={() => toggle(key)} className={`flex h-8 w-14 shrink-0 items-center rounded-full p-1 transition-colors ${form[key] ? 'bg-[#194f43]' : 'bg-slate-200'}`}><span className={`h-6 w-6 rounded-full bg-white shadow transition-transform ${form[key] ? '-translate-x-6' : ''}`} /></button>
   const title = (key: ToggleKey, text: string, description: string, icon: ReactNode) => <div className="mb-4 flex items-start gap-3"><span className="rounded-xl bg-[#f7efdf] p-2.5 text-[#8a642d]">{icon}</span><div className="min-w-0 flex-1"><h2 className="text-sm font-extrabold text-[#194f43]">{text}</h2><p className="mt-1 text-xs leading-6 text-slate-500">{description}</p></div>{switchButton(key, text)}</div>
   const panel = 'rounded-3xl border border-[#e1d5c0] bg-white p-5 shadow-sm'
+  if (!connecting && !status && !nativeBrowser) return <WebNotificationsPanel />
   return <main className="min-h-screen bg-[var(--bg-main)] px-4 pb-32 pt-5" dir="rtl"><div className="mx-auto max-w-3xl">
     <header className="mb-6 flex items-center gap-3"><Link href="/" aria-label="العودة للرئيسية" className="rounded-full bg-white p-3 text-[#194f43] shadow-sm"><ChevronRight size={22} /></Link><div><h1 className="text-xl font-extrabold text-[#194f43]">الإشعارات والتذكيرات</h1><p className="mt-1 text-xs text-slate-500">مواعيدك محفوظة على هذا الهاتف، ولا تحتاج تسجيل دخول</p></div></header>
     {connecting && <p role="status" className="mb-4 flex items-center gap-2 rounded-2xl bg-white p-4 text-sm"><Loader2 size={18} className="animate-spin" />جارٍ الاتصال بتطبيق أندرويد…</p>}

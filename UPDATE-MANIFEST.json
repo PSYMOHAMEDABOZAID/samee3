@@ -1,0 +1,518 @@
+{
+  "sourceArchive": "samee3-main 6.zip",
+  "releaseDate": "2026-11-05",
+  "fileCount": 86,
+  "manifestSelfHashExcluded": true,
+  "files": [
+    {
+      "path": ".env.example",
+      "status": "new",
+      "bytes": 433,
+      "sha256": "57fbce322485b3c2d851e176f56ce714cfb7ebcd4bb5dff5b5d68e030f4c29f7"
+    },
+    {
+      "path": ".github/workflows/build-televisions.yml",
+      "status": "new",
+      "bytes": 3668,
+      "sha256": "50cbcd660a5b775fb62b08276a80d19d9b954de8c089cba6936fcf2a420340c4"
+    },
+    {
+      "path": ".gitignore",
+      "status": "modified",
+      "bytes": 194,
+      "sha256": "6d2c5157e256e4e296c66c2560d165c8e0e650ddb93d78828918f8e897b5aea9"
+    },
+    {
+      "path": "CHANGED-FILES-AR.md",
+      "status": "new",
+      "bytes": 4736,
+      "sha256": "2baa60c2555f33f83d72815422b4cd8b7bf39cff35f2d0854a1a5b254ccbbecc"
+    },
+    {
+      "path": "START-HERE-AR.md",
+      "status": "new",
+      "bytes": 7069,
+      "sha256": "816e30fb5f5df8f06afd138f2d8c757f6fea33434348d09be3c8659231b8b746"
+    },
+    {
+      "path": "app/admin/page.tsx",
+      "status": "modified",
+      "bytes": 43823,
+      "sha256": "dfb7985aef9b2fb3f812661f666a22ebf03bdd27e770330928dc3e6a0650b730"
+    },
+    {
+      "path": "app/api/admin/app-stats/route.ts",
+      "status": "new",
+      "bytes": 1217,
+      "sha256": "0fd31be617a1ecc406a5c311c75023ac010e54f37447b2ee94cc9e10feb428f6"
+    },
+    {
+      "path": "app/api/alafasy-riwayat/zip/route.ts",
+      "status": "modified",
+      "bytes": 8900,
+      "sha256": "6ec945c9f0384c6d8f3792865eece32a9e04c77e1ca7532e5dad3ede066afc73"
+    },
+    {
+      "path": "app/api/cron/reminders/route.ts",
+      "status": "new",
+      "bytes": 857,
+      "sha256": "5b7e938963c58f03d3e5017a91bfcacede3f12c7601a571788c10c2318200d36"
+    },
+    {
+      "path": "app/api/installations/route.ts",
+      "status": "new",
+      "bytes": 1893,
+      "sha256": "b5b89904f399e5c89ff5790fd0fc217e3c9fdf6a520deb5e9b8f175dba1279bf"
+    },
+    {
+      "path": "app/api/islamic-library/book/[id]/route.ts",
+      "status": "modified",
+      "bytes": 11806,
+      "sha256": "3e33a13552ae6e7680c7a29345327124ce94f3169bd0e429bd6da3f8cf8d6a02"
+    },
+    {
+      "path": "app/api/library-pdf/route.ts",
+      "status": "modified",
+      "bytes": 5456,
+      "sha256": "ed10b4f1dd597594329dad038e5b478fb2db812173fd68fedd5b1bef9d1420a0"
+    },
+    {
+      "path": "app/api/prayer-times/route.ts",
+      "status": "new",
+      "bytes": 1733,
+      "sha256": "05c27a78023d77d77a18734cfff1eb5b3d1d2e3c6bf9dd10b0e66a34d6b4d8d2"
+    },
+    {
+      "path": "app/api/tv-release/route.ts",
+      "status": "new",
+      "bytes": 1257,
+      "sha256": "54adbab7a62e59ba56d7d609b662a416b7264fc436baa98f9529441251273ab4"
+    },
+    {
+      "path": "app/api/web-push/route.ts",
+      "status": "new",
+      "bytes": 3099,
+      "sha256": "e08fcb77a8ef321c01eb8fc8df2490c9cc7076d6ab47a5e66206df3637093f34"
+    },
+    {
+      "path": "app/audio/alafasy-riwayat/AlafasyRiwayatContent.tsx",
+      "status": "modified",
+      "bytes": 23636,
+      "sha256": "fbf4b9d5c8194e99c3595663bace2fc0425d289c6cd6067bd6cb26b8a89e8b9b"
+    },
+    {
+      "path": "app/globals.css",
+      "status": "modified",
+      "bytes": 13887,
+      "sha256": "7bc5707c8346a961dded2583578978973dc97c2c66b06a3e99b3f9edbdff1a63"
+    },
+    {
+      "path": "app/islamic-library/book/[id]/read/page.tsx",
+      "status": "modified",
+      "bytes": 49209,
+      "sha256": "cc0b7d01ee43240558a00838e1bd8c9623f988d663e1de61562a766f46cae50d"
+    },
+    {
+      "path": "app/layout.tsx",
+      "status": "modified",
+      "bytes": 2978,
+      "sha256": "a0bdee736130194d55c9ae104429eeed9555e94fef0b2a51b385b7e0ad3a3c35"
+    },
+    {
+      "path": "app/notifications/page.tsx",
+      "status": "modified",
+      "bytes": 24186,
+      "sha256": "44d5a56ca4797521749b57a9c9039d8eca340753692b3b90a23bdd0cc864aa5e"
+    },
+    {
+      "path": "app/page.tsx",
+      "status": "modified",
+      "bytes": 18477,
+      "sha256": "c14307fb6ce3ccd660d8ce4b00244c7c09923bd086a7ede795af1fdc5d0e0726"
+    },
+    {
+      "path": "app/prayer/page.tsx",
+      "status": "modified",
+      "bytes": 28685,
+      "sha256": "843cbcb7b0eac2b428bf43182e7ba1fa4c95e2c95fa12faa2f8f7cd9ebf60f70"
+    },
+    {
+      "path": "app/tv/page.tsx",
+      "status": "new",
+      "bytes": 2251,
+      "sha256": "4c209440957647583086299372405dac8651e052797c19f069db11e36edbcc37"
+    },
+    {
+      "path": "components/AppDownloadsCard.tsx",
+      "status": "modified",
+      "bytes": 10103,
+      "sha256": "d89969dd1357d89c66ec653091b495b42c765d14727ca7cb6ab7bf2f19c551a1"
+    },
+    {
+      "path": "components/AppExperience.tsx",
+      "status": "new",
+      "bytes": 9157,
+      "sha256": "96653e7258a5ab3e9eaac91262cf0991fb89f5ab78341e3752738da0929730b1"
+    },
+    {
+      "path": "components/PrayerPreferences.tsx",
+      "status": "new",
+      "bytes": 3901,
+      "sha256": "43f8f1329b3daf55acdb61c5cecdfc7271757c8399d43ae41d6610ad77b9b1b8"
+    },
+    {
+      "path": "components/RiwayatDownloadStatus.tsx",
+      "status": "new",
+      "bytes": 2267,
+      "sha256": "8476c8b5d5c2088973d493c14154448a97e850a88c5375f88881a4add02211cc"
+    },
+    {
+      "path": "components/ServiceWorkerRegistration.tsx",
+      "status": "modified",
+      "bytes": 7446,
+      "sha256": "441fc82e21bf445e64dc9c22a788fbf9d5e2811d579f22dfd26440a3a26448b8"
+    },
+    {
+      "path": "components/TelevisionDownloads.tsx",
+      "status": "new",
+      "bytes": 1946,
+      "sha256": "3228d43953d69727e15e691f4a852cb87d1cdab656f233540c856cd0d989a2da"
+    },
+    {
+      "path": "components/WebInstallButton.tsx",
+      "status": "new",
+      "bytes": 1896,
+      "sha256": "b344d3da706d87e14ad12c2b187f9727e34d969644e5144d9e1a34aaf8b43453"
+    },
+    {
+      "path": "components/WebNotificationsPanel.tsx",
+      "status": "new",
+      "bytes": 13814,
+      "sha256": "c42f40146f110a48826e74bd22477cc936ba81551645ec077b34187aa3be44d4"
+    },
+    {
+      "path": "components/admin/AppStatistics.tsx",
+      "status": "new",
+      "bytes": 3715,
+      "sha256": "9f6872d57069d19340b514495496b283b856e4a0c7d53dfc50a8f4630d669da8"
+    },
+    {
+      "path": "components/admin/IslamicLibraryAdmin.tsx",
+      "status": "modified",
+      "bytes": 54308,
+      "sha256": "af0fc84a5dc5826003a8177163cded2a19896c83eb3558373bb3f263b4e2a242"
+    },
+    {
+      "path": "components/library/CourseStudyStudio.tsx",
+      "status": "modified",
+      "bytes": 26652,
+      "sha256": "f614937fa4b2d0a20bd97fc981c838215adaece61e976abbc290341c6e92b750"
+    },
+    {
+      "path": "components/library/LearningLibrary.tsx",
+      "status": "modified",
+      "bytes": 20110,
+      "sha256": "98ddfab24a1c182c635f842837146ad32138ae94efc40cae5327938f111c8963"
+    },
+    {
+      "path": "components/library/ManagedBookStudyView.tsx",
+      "status": "modified",
+      "bytes": 11438,
+      "sha256": "7b39c3bfff87ccee9be2092616b5ba224a4a0a1f05c68f6b078b41bf7db7e6d1"
+    },
+    {
+      "path": "components/library/ManagedCategoryView.tsx",
+      "status": "modified",
+      "bytes": 4761,
+      "sha256": "82c7dbc93d8407af97a9bd82332c1e92f241403c182a944be18245cd1465fc4c"
+    },
+    {
+      "path": "components/library/PdfBookReader.tsx",
+      "status": "modified",
+      "bytes": 13618,
+      "sha256": "e04b227ebdd2180924a4897f5f3f45fce4964e05714cc69345eefbc1fe8232cc"
+    },
+    {
+      "path": "docs/VALIDATION-AR.md",
+      "status": "new",
+      "bytes": 4909,
+      "sha256": "01e97d89e38786cee0573a407519b9b384f9ad5bc574a76ed675ec91289652e0"
+    },
+    {
+      "path": "docs/WEB-PUSH-SETUP-AR.md",
+      "status": "new",
+      "bytes": 6455,
+      "sha256": "6a83ba3fa3682c5eb1daf9723b538c37da0587770e4b78b4adb1fcde327c3236"
+    },
+    {
+      "path": "lib/abort-signals.ts",
+      "status": "new",
+      "bytes": 1245,
+      "sha256": "9c39dfa983c6e00208a62feec8b49fc976cf35be54df2c42483389d583e0dcc9"
+    },
+    {
+      "path": "lib/archive-downloads.ts",
+      "status": "new",
+      "bytes": 3022,
+      "sha256": "0bdd6a87376acd776d201a7d4d277059ab5954ac32617316a6af170abcb6ea23"
+    },
+    {
+      "path": "lib/islamic/curriculum.ts",
+      "status": "modified",
+      "bytes": 11656,
+      "sha256": "f6bb3e51510ebfb02518dc72b4a4d77f02244d5b547d703b9563587951ae80b8"
+    },
+    {
+      "path": "lib/islamic/managed-library.ts",
+      "status": "modified",
+      "bytes": 10576,
+      "sha256": "b70dac74e2decca3b0e33ac201001bce193e583451d8d702cba325f5c8370468"
+    },
+    {
+      "path": "lib/islamic/use-managed-library.ts",
+      "status": "modified",
+      "bytes": 4303,
+      "sha256": "ce4b4ca7774b243d7879fef802bf3e96307839f562c268a2c6ceb85c4dc64fe6"
+    },
+    {
+      "path": "lib/islamic/youtube-player.ts",
+      "status": "modified",
+      "bytes": 4630,
+      "sha256": "ad388def81febf2b3787bfdd51f353e1b726cdc394acf00451884cb0a0b108a3"
+    },
+    {
+      "path": "lib/riwayat-download.ts",
+      "status": "new",
+      "bytes": 11015,
+      "sha256": "f76dc5b18b78ad574714d19dfe83c3f2ffdb26980235be33ae74597ed376c767"
+    },
+    {
+      "path": "lib/samee3-gt-engine.ts",
+      "status": "modified",
+      "bytes": 25399,
+      "sha256": "25bf4c274af31ed9bca9f1b51da0d7f94b91c39a10407f19975874b7d9ef3694"
+    },
+    {
+      "path": "lib/server/firebase-admin.ts",
+      "status": "new",
+      "bytes": 1513,
+      "sha256": "4e8c39931b756f28bc8da4301d086d73825a2a07785820ad2aeb44cea9812726"
+    },
+    {
+      "path": "lib/server/http.ts",
+      "status": "new",
+      "bytes": 1448,
+      "sha256": "25d66afab61369422f64f69143c2d41f13550fd4fd31c28992541aec3b993280"
+    },
+    {
+      "path": "lib/server/prayer-source.ts",
+      "status": "new",
+      "bytes": 1552,
+      "sha256": "8a6028ad57fbea4c3b9c4457741ed3560c92a5c424f153ad02e813ebc9800eb1"
+    },
+    {
+      "path": "lib/server/web-push.ts",
+      "status": "new",
+      "bytes": 7913,
+      "sha256": "4e3419bc8d2a9ef69fe1d04bb9e2a893c9a79098b48dc7f319b8b053ebabfd8d"
+    },
+    {
+      "path": "lib/web-push-client.ts",
+      "status": "new",
+      "bytes": 4699,
+      "sha256": "c0bd6e051a524151e55c2c1de8d75c9a736adc9dc9b658e1eb7b1c5c6da3c1f6"
+    },
+    {
+      "path": "lib/web-reminders.ts",
+      "status": "new",
+      "bytes": 7144,
+      "sha256": "a7ec9c9725c1d6e0c2097b06cdd2ea2e53c86a5fd0e597bb18ffdb1446ad1957"
+    },
+    {
+      "path": "native/android/app/src/main/java/app/samee3/quran/AppFileProvider.java",
+      "status": "modified",
+      "bytes": 3154,
+      "sha256": "8b8ce7501c8205f3877ca9c034443151083c243362e48e7a86c54d29c3a80c91"
+    },
+    {
+      "path": "native/android/app/src/main/java/app/samee3/quran/ReminderReceiver.java",
+      "status": "modified",
+      "bytes": 7898,
+      "sha256": "ff3e67335b13d35c16fa20aadda42d7d27ccfd05d2c3cf463d3150ab7429f6c7"
+    },
+    {
+      "path": "native/android/app/src/main/java/app/samee3/quran/WebActivity.java",
+      "status": "modified",
+      "bytes": 16138,
+      "sha256": "828f3e75870a7a4fe1ecb03c42f778b368cca4e6b9f41ee7a1089edd6692ca9a"
+    },
+    {
+      "path": "next.config.js",
+      "status": "modified",
+      "bytes": 2830,
+      "sha256": "907ab1d6c9a09a18b02fc213a1a7047a8b3b8383d2a5c960996fd4901337160c"
+    },
+    {
+      "path": "package-lock.json",
+      "status": "modified",
+      "bytes": 184371,
+      "sha256": "a876eafcb7f963295e4a7dc58289deadffeababf3e3cf7b6dc740b315757c905"
+    },
+    {
+      "path": "package.json",
+      "status": "modified",
+      "bytes": 2001,
+      "sha256": "d1366f66400f1597d9f1a54248fa82b6a837ea8fc6bb300094fec93a614b3080"
+    },
+    {
+      "path": "public/sw-build.js",
+      "status": "new",
+      "bytes": 62,
+      "sha256": "0f464891fe56287892fea115b99be023be39d3077d845a494bf46bef9ffd4be4"
+    },
+    {
+      "path": "public/sw.js",
+      "status": "modified",
+      "bytes": 30005,
+      "sha256": "2a0a68600962db274c5b4b0e3e2d7dedb84fe63095a961b95d1191571d6678d5"
+    },
+    {
+      "path": "scripts/android-notifications.test.cjs",
+      "status": "modified",
+      "bytes": 6707,
+      "sha256": "972fe25a58b3b8dc85e99ee24348f04a25ef3c47c37963dd7325a036ae4ca4ab"
+    },
+    {
+      "path": "scripts/core.test.cjs",
+      "status": "modified",
+      "bytes": 20778,
+      "sha256": "5da92ad005cf28a78e720fe7ca7931b0e4bd6947796ac9422750c02e54903791"
+    },
+    {
+      "path": "scripts/generate-push-keys.cjs",
+      "status": "new",
+      "bytes": 466,
+      "sha256": "3b740698db227ac056e69a322bcf332b2450cc4d0656387fe6151590bad5b847"
+    },
+    {
+      "path": "scripts/prepare-web-assets.cjs",
+      "status": "new",
+      "bytes": 647,
+      "sha256": "ae919e1c416bd64ad2f091a637dd136738689a5800e92ce5dd69a3502a681c47"
+    },
+    {
+      "path": "scripts/release-fixes.test.cjs",
+      "status": "new",
+      "bytes": 9182,
+      "sha256": "dda2eb12b75859fd58be3cddc19d37c13c49222a761bff8854a5b798ef7f3e80"
+    },
+    {
+      "path": "televisions/README-AR.md",
+      "status": "new",
+      "bytes": 5640,
+      "sha256": "a8de7eb45a016f82d7b89dd0fe96f270fb1c5a8054e41c131f0673c80704182c"
+    },
+    {
+      "path": "televisions/android/app/build.gradle",
+      "status": "new",
+      "bytes": 1243,
+      "sha256": "45b725b8103b1b924494787fd56682084f4290482e97472a65c91b56647cd8f5"
+    },
+    {
+      "path": "televisions/android/app/src/main/AndroidManifest.xml",
+      "status": "new",
+      "bytes": 3637,
+      "sha256": "9e0a38e17caf5517751db821f07166270ad966c810b10a9b7af39f9726de209d"
+    },
+    {
+      "path": "televisions/android/app/src/main/java/app/samee3/quran/TVActivity.java",
+      "status": "new",
+      "bytes": 1557,
+      "sha256": "fbfde7244c43ec7dde17cc9289de0c71d491a8244f0a1eba49af39b2b7e30005"
+    },
+    {
+      "path": "televisions/android/app/src/main/res/drawable/tv_banner.png",
+      "status": "new",
+      "bytes": 50678,
+      "sha256": "612914515738c2e232269d83d06c40f485fec9d1a9fb8ceeb5a7b0bf23528ee3"
+    },
+    {
+      "path": "televisions/android/build.gradle",
+      "status": "new",
+      "bytes": 69,
+      "sha256": "8ebf0602839be8fd4c06f07a93e45da6b4a04444fa1b38df8b9def9c1b5c8032"
+    },
+    {
+      "path": "televisions/android/gradle.properties",
+      "status": "new",
+      "bytes": 107,
+      "sha256": "10f39abfd08872d02895784fe98bd86653e465cbda1827168224c98535a97899"
+    },
+    {
+      "path": "televisions/android/settings.gradle",
+      "status": "new",
+      "bytes": 269,
+      "sha256": "8b60d7e7353737daed76c20c71b0dcf1d802265c10e419dadd5fa40ae8b76c84"
+    },
+    {
+      "path": "televisions/installers/SAMEE3-webOS.ipk",
+      "status": "new",
+      "bytes": 60632,
+      "sha256": "921d28b09afb06b4628627f693e53f6184a51726ecac96a739e1b38e77cc2b63"
+    },
+    {
+      "path": "televisions/tizen/config.xml",
+      "status": "new",
+      "bytes": 721,
+      "sha256": "38f0a51fcc7bd9c009fc644fec890eb5041214b395fddd1970d90ca6a6e45cde"
+    },
+    {
+      "path": "televisions/tizen/icon.png",
+      "status": "new",
+      "bytes": 17117,
+      "sha256": "5c3e59da9feca8a2426a8d96013efc435857ecbfe64ca955775cb24c0d87ace0"
+    },
+    {
+      "path": "televisions/tizen/index.html",
+      "status": "new",
+      "bytes": 558,
+      "sha256": "41afeb8cfd979952e2c4fc7e6cc6462449bbea7538cd4c86acbe3913b5c2cfe8"
+    },
+    {
+      "path": "televisions/webos/appinfo.json",
+      "status": "new",
+      "bytes": 289,
+      "sha256": "dcdb25c7e8ab3ff5638dcd6d14b22e895bd39fbb9e26dda27ea4f90cdedf6976"
+    },
+    {
+      "path": "televisions/webos/icon.png",
+      "status": "new",
+      "bytes": 17117,
+      "sha256": "5c3e59da9feca8a2426a8d96013efc435857ecbfe64ca955775cb24c0d87ace0"
+    },
+    {
+      "path": "televisions/webos/index.html",
+      "status": "new",
+      "bytes": 486,
+      "sha256": "dcdf477ae6cce8b5c7fc6429ce068363f867884bed903263b29259b16e02dc75"
+    },
+    {
+      "path": "televisions/webos/largeIcon.png",
+      "status": "new",
+      "bytes": 41705,
+      "sha256": "d534169e2788e6ddf4ec547321902eb505ec0155cb59524e9f4fffb6a02764e1"
+    },
+    {
+      "path": "workers/reminder-clock/src/index.js",
+      "status": "new",
+      "bytes": 726,
+      "sha256": "ca3c68a2d76b6d735fc843a8f52936b1a4bcf58fe2b9862243c01938c4d70f88"
+    },
+    {
+      "path": "workers/reminder-clock/wrangler.toml",
+      "status": "new",
+      "bytes": 171,
+      "sha256": "7763dcaad2de17bb4453e8e7a3d6cd1f1f00e70ccb02d84bfc8c1bf66267edec"
+    }
+  ]
+}

@@ -30,6 +30,7 @@ export type ManagedBook = Omit<LearningCourse, 'videos'> & {
   lessonSpeedDefault: boolean
   lessonPolicyRevision: string
   playlistPolicies: Record<string, PlaylistOverride>
+  featuredAt: number
 }
 export type StoredRecord = { id: string; data: Record<string, unknown> }
 export const LIBRARY_CATALOG = Array.from(
@@ -129,6 +130,7 @@ export function mergeLibraryBook(
     lessonSpeedDefault: raw.lessonSpeedDefault !== false,
     lessonPolicyRevision: string(raw.lessonPolicyRevision),
     playlistPolicies: {},
+    featuredAt: typeof raw.featuredAt === 'number' && Number.isFinite(raw.featuredAt) ? raw.featuredAt : 0,
   } as ManagedBook
   book.levelId = libraryLevelId(book.level)
   for (const key of BOOK_TEXT_FIELDS) book[key] = string(raw[key], string(base[key]))
@@ -171,6 +173,16 @@ export function mergeLibraryCatalog(stored: StoredRecord[]): ManagedBook[] {
     if (book) map.set(id, book)
   })
   return [...map.values()]
+}
+/** One public book per level/category. Keep the full catalogue available to administrators and old links. */
+export function publicLibraryBooks(books: ManagedBook[]): ManagedBook[] {
+  const groups = new Map<string, ManagedBook>()
+  const priority = (book: ManagedBook) => (LEARNING_COURSES.some(course => course.id === book.id) ? 10 : 0) + (studySources(book).some(source => !source.external) ? 2 : 0) + (book.downloadUrl ? 1 : 0)
+  for (const book of books.filter(book => !book.deleted)) {
+    const key = `${book.levelId}:${book.category}`, previous = groups.get(key)
+    if (!previous || book.featuredAt > previous.featuredAt || (book.featuredAt === previous.featuredAt && priority(book) > priority(previous))) groups.set(key, book)
+  }
+  return [...groups.values()]
 }
 export function effectivePolicy(
   book: Pick<ManagedBook, 'lessonSeekDefault' | 'lessonSpeedDefault' | 'lessonPolicyRevision'>,

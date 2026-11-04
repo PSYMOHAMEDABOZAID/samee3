@@ -1,3 +1,4 @@
+import { timeoutSignal } from '@/lib/abort-signals'
 
 // Samee3 adapter for GT-SQR (SalehGNUTUX), AGPL-3.0.
 // The original renderer and WebCodecs engine remain available via /api/gt-sqr/.
@@ -209,7 +210,7 @@ async function prepare(data,id){
   send('preparing',{current:i+1,total:S.verses.length},id);
 
   var response=await fetch(ayaAudioUrl(reader.folder,data.surah,S.verses[i]),{
-   signal:AbortSignal.timeout(25000),
+   signal:timeoutSignal(25000),
    cache:'force-cache'
   });
 
@@ -333,7 +334,7 @@ async function background(data,id){
 
  if(!blob){
   var response=await fetch('/api/gt-sqr/backgrounds/'+encodeURIComponent(data.asset),{
-   signal:AbortSignal.timeout(30000)
+   signal:timeoutSignal(30000)
   });
   if(!response.ok)throw Error('تعذر تحميل الخلفية. اختر أخرى أو ارفع ملفًا من جهازك.');
   blob=await response.blob();

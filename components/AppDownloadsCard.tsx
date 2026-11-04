@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { Download, Monitor, Share2 } from 'lucide-react'
 import AndroidAppCard from '@/components/AndroidAppCard'
+import WebInstallButton from '@/components/WebInstallButton'
+import TelevisionDownloads from '@/components/TelevisionDownloads'
 import { parseAppDownloads, type AppDownloads } from '@/lib/app-downloads'
 
 export default function AppDownloadsCard({ detailed = false }: { detailed?: boolean }) {
@@ -33,9 +35,11 @@ export default function AppDownloadsCard({ detailed = false }: { detailed?: bool
     } catch (error) { if (!(error instanceof Error && error.name === 'AbortError')) setNotice(url) }
   }
   const windows = data?.windows.find(item => item.id === 'x64')
+  if (!detailed) return <section dir="rtl" aria-label="تثبيت وتحميل مصحف سميع" className="mb-6 rounded-[28px] border border-[#d9c39d] bg-gradient-to-br from-white to-[#f8f1e3] p-5 shadow-sm"><div className="flex items-start gap-3"><span className="rounded-2xl bg-[#194f43] p-3 text-[#f7d992]"><Download size={24}/></span><div><h2 className="font-extrabold text-[#194f43]">سميع معك على كل أجهزتك</h2><p className="mt-1 text-xs leading-6 text-slate-600">ثبّت تطبيق الويب أو اختر نسخة جهازك من صفحة التحميلات.</p></div></div><div className="mt-4 flex flex-wrap gap-2"><WebInstallButton/>{[['android', 'أندرويد'], ['web', 'آيفون وآيباد'], ['windows', 'ويندوز'], ['macos', 'الماك'], ['televisions', 'شاشات العرض']].map(([id, name]) => <Link key={id} href={`/downloads#${id}`} className="flex min-h-11 items-center rounded-xl border border-[#d9c39d] bg-white px-4 text-xs font-bold text-[#194f43]">{name}</Link>)}</div></section>
   return <div aria-label="تحميل تطبيقات مصحف سميع">
-    <AndroidAppCard />
-    <section aria-label="تطبيق سميع لويندوز" className="mb-6 rounded-3xl border border-[#d9c39d] bg-gradient-to-br from-white to-[#f8f1e3] p-5 shadow-sm">
+    <section id="web" className="mb-6 rounded-3xl border border-[#d9c39d] bg-white p-5"><h2 className="mb-3 font-bold text-[#194f43]">تطبيق الويب للآيفون والآيباد والكمبيوتر</h2><WebInstallButton/><Link href="/notifications" className="mt-3 block min-h-10 text-xs font-bold text-[#194f43]">ضبط الإشعارات والتذكيرات ←</Link></section>
+    <div id="android"><AndroidAppCard /></div>
+    <section id="windows" aria-label="تطبيق سميع لويندوز" className="mb-6 rounded-3xl border border-[#d9c39d] bg-gradient-to-br from-white to-[#f8f1e3] p-5 shadow-sm">
       <div className="flex items-start gap-3"><span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#194f43] text-[#f7d992]"><Monitor size={25} /></span>
         <div className="min-w-0 flex-1"><h2 className="text-base font-extrabold text-[#194f43]">مصحف سميع لويندوز</h2><p className="mt-1 text-xs leading-6 text-slate-600">ملف تثبيت للكمبيوتر، مع المصحف المحفوظ بالروايات السبع والأذان والتذكيرات.</p></div></div>
       <div className="mt-4 min-w-0 rounded-2xl border border-[#e4d8c1] bg-white p-4">
@@ -47,7 +51,7 @@ export default function AppDownloadsCard({ detailed = false }: { detailed?: bool
       <p className="mt-3 text-xs leading-7 text-slate-600">بعد التنزيل، افتح ملف Setup.exe وأكمل التثبيت. كل نسخة مخصصة لنظام تشغيلها.</p>
       {detailed && <div className="mt-3 space-y-2 rounded-2xl bg-white/80 p-4 text-xs leading-7 text-slate-600"><p>تذكيرات ويندوز تستمر عند إغلاق النافذة إلى أيقونة سميع بجانب الساعة. اختيار «إنهاء سميع» يوقفها، ولا يوقظ التطبيق جهازًا نائمًا.</p><p>فعّل التذكيرات من داخل التطبيق واسمح بإشعارات سميع من إعدادات Windows. يمكنك تشغيله تلقائيًا عند تسجيل الدخول.</p><p>هذا الإصدار غير موقّع بشهادة ناشر موثّق حاليًا؛ قد يعرض Windows تنبيهًا عند تشغيل الملف. تحقّق من مصدر التنزيل.</p></div>}
     </section>
-    <section aria-label="تطبيق سميع للماك" className="mb-6 rounded-3xl border border-[#d9c39d] bg-gradient-to-br from-white to-[#f8f1e3] p-5 shadow-sm">
+    <section id="macos" aria-label="تطبيق سميع للماك" className="mb-6 rounded-3xl border border-[#d9c39d] bg-gradient-to-br from-white to-[#f8f1e3] p-5 shadow-sm">
       <div className="flex items-start gap-3"><span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#194f43] text-[#f7d992]"><Monitor size={25} /></span>
         <div className="min-w-0 flex-1"><h2 className="text-base font-extrabold text-[#194f43]">مصحف سميع على الماك</h2><p className="mt-1 text-xs leading-6 text-slate-600">لأجهزة Apple Mac بنظام macOS. اختَر نوع معالج الماك.</p></div></div>
       <div className="mt-4 grid gap-3 sm:grid-cols-2">
@@ -66,5 +70,6 @@ export default function AppDownloadsCard({ detailed = false }: { detailed?: bool
       <div className="mt-3 flex flex-wrap items-center justify-between gap-3"><button type="button" onClick={() => void share()} className="flex min-h-10 items-center gap-2 rounded-xl border border-[#d9c39d] bg-white px-3 text-xs font-bold text-[#194f43]"><Share2 size={15} />مشاركة صفحة التحميل</button>{!detailed && <Link href="/downloads" className="text-xs font-bold text-[#194f43]">كل النسخ وخطوات التثبيت ←</Link>}</div>
       {notice && <p role="status" className="mt-2 break-words text-xs leading-6 text-[#194f43]">{notice}</p>}
     </section>
+    <TelevisionDownloads />
   </div>
 }

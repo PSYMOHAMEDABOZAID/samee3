@@ -40,6 +40,7 @@ import {
   playlistOverride,
   playlistPolicyKey,
   studySources,
+  publicLibraryBooks,
   type ManagedBook,
   type ManagedLesson,
   type PlaylistOverride,
@@ -447,13 +448,14 @@ export default function IslamicLibraryAdmin() {
           </div>
           <div className="mt-4 flex flex-wrap gap-2 text-xs">
             <span className="rounded-full bg-teal-50 px-3 py-2">
-              {catalog.books.filter((book) => !book.deleted).length} كتاب ظاهر
+              {publicLibraryBooks(catalog.books).length} كتاب أساسي ظاهر
             </span>
             <span className="rounded-full bg-slate-100 px-3 py-2">
               {catalog.books.filter((book) => book.deleted).length} كتاب مخفي
             </span>
           </div>
         </header>
+        {selectedId && selected && !selected.deleted && <div className="rounded-2xl border border-teal-200 bg-teal-50 p-4 text-sm leading-7"><p>يظهر للجمهور كتاب واحد في كل مجال ومستوى. تبقى الكتب الأخرى وروابطها محفوظة هنا للإدارة.</p><button type="button" disabled={busy || !detail.ready || !!detail.error} className={`${button} mt-3`} onClick={() => void run(async () => { await setDoc(doc(db, 'islamicLibraryBooks', selectedId), { featuredAt: Date.now(), updatedAt: serverTimestamp() }, { merge: true }); setNotice('تم اختيار هذا الكتاب ليكون الكتاب الأساسي الوحيد في مجاله ومستواه.'); })}>جعل هذا الكتاب الأساسي في مجاله</button><p className="mt-2 text-xs text-slate-500">منهج الشهادات محفوظ؛ اختيار كتاب بديل للعرض لا يغير متطلبات شهادة أُصدرت سابقًا.</p></div>}
         {(error || notice || catalog.error || detail.error) && (
           <p
             role={error || catalog.error || detail.error ? 'alert' : 'status'}

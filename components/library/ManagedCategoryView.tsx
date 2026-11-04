@@ -7,6 +7,7 @@ import { LEARNING_LEVELS, type LevelId } from '@/lib/islamic/curriculum'
 import { SUNNI_LIBRARY_CATEGORIES } from '@/lib/islamic/sunniLibrary'
 import { useLearningProgress } from '@/lib/islamic/learning-progress'
 import { useManagedCatalog } from '@/lib/islamic/use-managed-library'
+import { publicLibraryBooks } from '@/lib/islamic/managed-library'
 
 export default function ManagedCategoryView({
   levelId,
@@ -22,7 +23,7 @@ export default function ManagedCategoryView({
   const category = SUNNI_LIBRARY_CATEGORIES.find((item) => item.id === categoryId)!
   const books = useMemo(
     () =>
-      catalog.books.filter(
+      publicLibraryBooks(catalog.books).filter(
         (book) =>
           !book.deleted &&
           book.levelId === levelId &&

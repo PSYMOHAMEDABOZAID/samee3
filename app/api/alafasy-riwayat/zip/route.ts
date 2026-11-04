@@ -78,18 +78,11 @@ export async function GET(request: NextRequest): Promise<Response> {
   // Confirm that at least one actual MP3 is accessible before sending ZIP headers.
   const skipped: number[] = []
   let first: { index: number; surah: number; response: Response } | null = null
-  for (let index = 0; index < surahIds.length; index += 1) {
-    const surah = surahIds[index]
-    try {
-      const response = await getAudio(origin, editionId, surah)
-      if (responseIsAudio(response)) {
-        first = { index, surah, response }
-        break
-      }
-      await response.body?.cancel().catch(() => undefined)
-    } catch { /* unavailable source: try the next published surah */ }
-    skipped.push(surah)
-  }
+  try {
+    const response = await getAudio(origin, editionId, surahIds[0])
+    if (responseIsAudio(response)) first = { index: 0, surah: surahIds[0], response }
+    else await response.body?.cancel().catch(() => undefined)
+  } catch { /* fail the archive rather than silently omitting a published surah */ }
   if (!first) return jsonError('لا توجد تسجيلات صوتية قابلة للتنزيل حاليًا لهذا المصحف.', 502)
 
   const found = first
@@ -109,13 +102,11 @@ export async function GET(request: NextRequest): Promise<Response> {
           ? found.response
           : await getAudio(origin, editionId, surah)
       } catch {
-        skipped.push(surah)
-        continue
+        throw new Error(`تعذر تنزيل السورة ${surah}. لم يكتمل المصحف.`)
       }
       if (!responseIsAudio(response) || !response.body) {
         await response.body?.cancel().catch(() => undefined)
-        skipped.push(surah)
-        continue
+        throw new Error(`تعذر تنزيل السورة ${surah}. لم يكتمل المصحف.`)
       }
       // The stream must complete before the data descriptor and central index
       // are emitted. If a connection breaks in the middle, the download fails

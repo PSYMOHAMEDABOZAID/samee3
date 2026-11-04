@@ -1,5 +1,6 @@
 // SAMEE3_AUDIO_LIBRARY_STABLE_V1: update service-worker code; never delete audio caches.
-const SW_VERSION = 'samee3-sw-v12'
+try { importScripts('/sw-build.js') } catch (_) { /* offline first installation */ }
+const SW_VERSION = 'samee3-sw-v13-' + (self.SAMEE3_BUILD_ID || 'fallback')
 
 const SHELL_CACHE = `${SW_VERSION}-shell`
 const NAV_CACHE = `${SW_VERSION}-navigation`
@@ -293,7 +294,23 @@ function isQuranAudio(request, url) {
 }
 
 // SAMEE3_AUDIO_STABILITY_2026_11
-function cachedAudioRange(response, rangeHeader) {
+const savedAudioLengths = new Map()
+async function cachedAudioRange(response, rangeHeader, reload, key) {
+  // Older downloads did not retain Content-Length. Count a disk-backed stream
+  // once, then reopen it; never create a complete long-surah ArrayBuffer/Blob.
+  if (!response.headers.get('Content-Length') && reload && response.body) {
+    let size = savedAudioLengths.get(key)
+    if (!size) {
+      const counter = response.body.getReader()
+      size = 0
+      try { while (true) { const next = await counter.read(); if (next.done) break; size += next.value.byteLength } }
+      finally { counter.releaseLock() }
+      if (size > 0) { if (savedAudioLengths.size > 500) savedAudioLengths.clear(); savedAudioLengths.set(key, size) }
+    } else { await response.body.cancel().catch(() => {}) }
+    response = await reload()
+    if (!response) return new Response('Audio not saved', { status: 404 })
+    if (size > 0) { const headers = new Headers(response.headers); headers.set('Content-Length', String(size)); response = new Response(response.body, { headers }) }
+  }
   const lengthHeader = response.headers.get('Content-Length')
 
   const total =
@@ -433,7 +450,7 @@ async function serveSavedRiwayatAudio(request) {
     if (!saved) return new Response('Audio not saved', { status: 404 })
     const range = request.headers.get('Range')
     return range && saved.type !== 'opaque'
-      ? cachedAudioRange(saved, range)
+      ? cachedAudioRange(saved, range, () => cache.match(key), key)
       : saved
   } catch {
     return new Response('Saved audio unavailable', { status: 503 })
@@ -449,7 +466,7 @@ async function serveQuranAudio(request) {
     const range = request.headers.get('Range')
 
     if (range && cached.type !== 'opaque') {
-      return cachedAudioRange(cached, range)
+      return cachedAudioRange(cached, range, () => getFromCaches([AUDIO_CACHE, ...OLD_AUDIO_CACHES], request.url), request.url)
     }
 
     return cached
@@ -726,7 +743,7 @@ function isStaticAsset(url) {
   return (
     INSTALL_FILES.includes(url.pathname) ||
     url.pathname.startsWith('/_next/static/') ||
-    /\.(?:js|css|woff2?|ttf|otf|png|jpe?g|webp|svg|ico|avif)$/i.test(
+    /\.(?:m?js|wasm|bcmap|pfb|css|woff2?|ttf|otf|png|jpe?g|webp|svg|ico|avif)$/i.test(
       url.pathname,
     )
   )
@@ -950,6 +967,10 @@ self.addEventListener(
 
     // SAMEE3 Adhkar: serve cached complete recordings without a page Blob.
     // This route never contacts a remote host and never clears existing caches.
+    if (isSameOrigin(url) && url.pathname.startsWith('/__samee3_downloads/')) {
+      event.respondWith(serveArchiveDownload(request, url))
+      return
+    }
     if (isSameOrigin(url) && url.pathname === '/__samee3_adhkar_offline') {
       event.respondWith((async () => {
         const source = url.searchParams.get('url') || ''
@@ -1151,3 +1172,86 @@ self.addEventListener(
     }
   },
 )
+
+// Persistent ZIP staging is distinct from saved Quran audio. Downloads use disk chunks.
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SAMEE3_DOWNLOAD_SUPPORT') {
+    if (event.ports[0]) event.ports[0].postMessage({ archiveDownload: 1 })
+  }
+})
+async function serveArchiveDownload(request, url) {
+  const id = url.pathname.split('/')[2]
+  if (!/^[a-z0-9-]{8,80}$/.test(id || '')) return new Response('Invalid archive', { status: 400 })
+  const db = await new Promise((resolve, reject) => {
+    const open = indexedDB.open('samee3-downloads-v1', 1)
+    open.onsuccess = () => resolve(open.result)
+    open.onerror = () => reject(open.error)
+    open.onupgradeneeded = () => { open.result.createObjectStore('archives', { keyPath: 'id' }); open.result.createObjectStore('chunks', { keyPath: ['id', 'index'] }) }
+  })
+  const read = (store, key) => new Promise((resolve, reject) => {
+    const result = db.transaction(store).objectStore(store).get(key)
+    result.onsuccess = () => resolve(result.result)
+    result.onerror = () => reject(result.error)
+  })
+  const record = await read('archives', id)
+  if (!record || !record.ready) { db.close(); return new Response('لم يكتمل تجهيز الملف بعد. ارجع لسميع وأعد التحميل.', { status: 404 }) }
+  let start = 0, end = record.size - 1, partial = false
+  const requested = request.headers.get('range')
+  if (requested) {
+    const match = /^bytes=(\d*)-(\d*)$/.exec(requested)
+    if (!match || (!match[1] && !match[2])) { db.close(); return new Response(null, { status: 416 }) }
+    start = match[1] ? Number(match[1]) : Math.max(0, record.size - Number(match[2]))
+    end = match[1] && match[2] ? Math.min(end, Number(match[2])) : end
+    if (!Number.isSafeInteger(start) || !Number.isSafeInteger(end) || start > end || start >= record.size) { db.close(); return new Response(null, { status: 416, headers: { 'Content-Range': 'bytes */' + record.size } }) }
+    partial = true
+  }
+  let index = Math.floor(start / 1048576), cursor = start
+  const body = new ReadableStream({
+    async pull(controller) {
+      try {
+        if (cursor > end) { db.close(); controller.close(); return }
+        const chunk = await read('chunks', [id, index])
+        if (!chunk) throw new Error('Archive chunk missing')
+        const from = cursor - index * 1048576
+        const to = Math.min(chunk.bytes.byteLength, end - index * 1048576 + 1)
+        const bytes = chunk.bytes.slice(from, to)
+        index++; cursor += bytes.byteLength
+        controller.enqueue(bytes)
+      } catch (error) { db.close(); controller.error(error) }
+    },
+    cancel() { db.close() },
+  })
+  const headers = { 'Content-Type': 'application/zip', 'Content-Length': String(end - start + 1), 'Accept-Ranges': 'bytes', 'Cache-Control': 'no-store', 'Content-Disposition': 'attachment; filename="Alafasy-Mushaf.zip"; filename*=UTF-8\'\'' + encodeURIComponent(record.filename), 'X-Content-Type-Options': 'nosniff' }
+  if (partial) headers['Content-Range'] = `bytes ${start}-${end}/${record.size}`
+  return new Response(body, { status: partial ? 206 : 200, headers })
+}
+
+// Standards-based Web Push works with installed iPhone web apps as well as supported browsers.
+self.addEventListener('push', (event) => {
+  let data = {}
+  try { data = event.data ? event.data.json() : {} } catch (_) {}
+  const title = typeof data.title === 'string' ? data.title.slice(0, 150) : 'مصحف سميع'
+  let target = '/notifications'
+  try { const link = new URL(data.url || '/notifications', self.location.origin); if (link.origin === self.location.origin) target = link.pathname + link.search } catch (_) {}
+  event.waitUntil(self.registration.showNotification(title, {
+    body: typeof data.body === 'string' ? data.body.slice(0, 700) : 'حان موعد تذكيرك من سميع',
+    icon: '/icon-192.png', badge: '/icon-192.png', dir: 'rtl', lang: 'ar',
+    tag: typeof data.tag === 'string' ? data.tag.slice(0, 100) : 'samee3-reminder',
+    data: { url: target },
+  }))
+})
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close()
+  const path = event.notification.data && event.notification.data.url || '/notifications'
+  const target = new URL(path, self.location.origin)
+  if (target.origin !== self.location.origin) return
+  event.waitUntil((async () => {
+    const windows = await self.clients.matchAll({ type: 'window', includeUncontrolled: true })
+    for (const client of windows) {
+      if (new URL(client.url).origin === self.location.origin && 'focus' in client) {
+        try { await client.navigate(target.href); return await client.focus() } catch (_) {}
+      }
+    }
+    return self.clients.openWindow(target.href)
+  })())
+})

@@ -44,7 +44,7 @@ async function proxy(request: NextRequest) {
     if ([304,416].includes(response.status)) { clean(); await response.body?.cancel(); headers.delete('content-length'); return new NextResponse(null, { status: response.status, headers }) }
     const mime = (response.headers.get('content-type') || '').split(';')[0].trim().toLowerCase()
     const total = Number(response.headers.get('content-range')?.split('/')[1] || response.headers.get('content-length') || 0)
-    if (![200,206].includes(response.status) || !['application/pdf','application/octet-stream','binary/octet-stream'].includes(mime) || total > 120 * 1024 * 1024 || !['identity',''].includes(response.headers.get('content-encoding') || '')) throw new Error('Invalid PDF response')
+    if (![200,206].includes(response.status) || !['application/pdf','application/octet-stream','binary/octet-stream'].includes(mime) || total > 1024 * 1024 * 1024 || !['identity',''].includes(response.headers.get('content-encoding') || '')) throw new Error('Invalid PDF response')
     if (response.status === 206 && !/^bytes \d+-\d+\/\d+$/.test(headers.get('content-range') || '')) throw new Error('Invalid range response')
     if (request.method === 'HEAD') { clean(); await response.body?.cancel(); return new NextResponse(null, { status: response.status, headers }) }
     if (!response.body) throw new Error('Empty PDF')
@@ -55,7 +55,7 @@ async function proxy(request: NextRequest) {
           reset(); const item = await reader.read()
           if (item.done) { clean(); output.close(); return }
           bytes += item.value.byteLength
-          if (bytes > 120 * 1024 * 1024) throw new Error('File too large')
+          if (bytes > 1024 * 1024 * 1024) throw new Error('File too large')
           output.enqueue(item.value)
         } catch (error) { clean(); cancel(); output.error(error) }
       },

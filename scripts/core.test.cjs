@@ -170,7 +170,7 @@ test('juz 11 starts at Hafs 9:93 and is translated to each reading without losin
 
 function workerContext(overrides={}){
  const vm=require('node:vm'),events={}
- const context={URL,Request,Response,Headers,Blob,console,setTimeout,clearTimeout,
+ const context={URL,Request,Response,Headers,Blob,ReadableStream,console,setTimeout,clearTimeout,
   self:{location:{origin:'https://samee3.test'},addEventListener:(name,fn)=>{events[name]=fn},clients:{claim:async()=>{}},skipWaiting:async()=>{throw Error('Unexpected activation')}},
   caches:{open:async()=>({match:async()=>null,put:async()=>{}}),keys:async()=>[],delete:async()=>true},
   fetch:async()=>{throw Error('Offline')},...overrides}
@@ -195,8 +195,8 @@ test('storage failures never discard successful online Quran, assets or navigati
 
 test('cached audio range handling supports long surahs and rejects unsatisfiable ranges',async()=>{
  const size=70*1024*1024
- const saved={type:'basic',headers:new Headers({'Content-Type':'audio/mpeg'}),clone:()=>({blob:async()=>({size,slice:(start,end)=>new Blob([new Uint8Array(end-start)])})})}
- const {context}=workerContext({caches:{open:async()=>({match:async()=>saved})}})
+ const saved=()=>{let left=size;return new Response(new ReadableStream({pull(controller){if(!left){controller.close();return}const length=Math.min(left,1024*1024);controller.enqueue(new Uint8Array(length));left-=length}}),{headers:{'Content-Type':'audio/mpeg','Content-Length':String(size)}})}
+ const {context}=workerContext({caches:{open:async()=>({match:async()=>saved()})}})
  const response=await context.serveQuranAudio(new Request('https://server8.mp3quran.net/afs/002.mp3',{headers:{Range:`bytes=${size-8}-`}}))
  assert.equal(response.status,206);assert.equal((await response.arrayBuffer()).byteLength,8)
  assert.equal(response.headers.get('Content-Range'),`bytes ${size-8}-${size-1}/${size}`)

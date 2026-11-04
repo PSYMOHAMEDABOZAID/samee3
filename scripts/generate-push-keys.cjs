@@ -1,0 +1,8 @@
+const push = require('web-push')
+const { randomBytes } = require('node:crypto')
+const keys = push.generateVAPIDKeys()
+console.log('NEXT_PUBLIC_WEB_PUSH_VAPID_KEY=' + keys.publicKey)
+console.log('WEB_PUSH_VAPID_PRIVATE_KEY=' + keys.privateKey)
+console.log('CRON_SECRET=' + randomBytes(32).toString('base64url'))
+console.log('WEB_PUSH_SUBJECT=mailto:YOUR_ADMIN_EMAIL')
+console.log('\nKeep the private key and secret in hosting settings. Never commit them to GitHub.')

@@ -1,0 +1,8 @@
+const { mkdirSync, copyFileSync, cpSync } = require('node:fs')
+const { join } = require('node:path')
+const root = join(__dirname, '..'), source = join(root, 'node_modules/pdfjs-dist'), target = join(root, 'public/pdfjs/5.4.296')
+mkdirSync(target, { recursive: true })
+for (const file of ['pdf.min.mjs', 'pdf.worker.min.mjs']) copyFileSync(join(source, 'legacy/build', file), join(target, file))
+for (const folder of ['cmaps', 'standard_fonts', 'wasm']) cpSync(join(source, folder), join(target, folder), { recursive: true })
+copyFileSync(join(source, 'LICENSE'), join(target, 'LICENSE'))
+console.log('Prepared local PDF reader and worker assets')

@@ -568,3 +568,10 @@ select:focus-visible {
     transition-duration: .01ms !important;
   }
 }
+/* TV mode preserves desktop layouts and supplies a visible remote-control focus. */
+html.samee3-tv { scroll-padding: 60px; }
+html.samee3-tv :is(button,a,input,select,textarea,[tabindex]):focus-visible { outline: 4px solid #c89943; outline-offset: 4px; }
+html.samee3-tv body { cursor: auto; }
+@media (prefers-reduced-motion: reduce) {
+  html.samee3-tv * { scroll-behavior: auto !important; }
+}

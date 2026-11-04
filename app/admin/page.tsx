@@ -37,6 +37,7 @@ import {
 import { signOut } from 'firebase/auth'
 import AdminGate from '@/components/AdminGate'
 import IslamicLibraryAdmin from '@/components/admin/IslamicLibraryAdmin'
+import AppStatistics from '@/components/admin/AppStatistics'
 import { useAuth } from '@/context/AuthContext'
 import { auth, db } from '@/lib/firebase'
 import { recoverSupportConversations, sendSupportMessage, subscribeSupportMessages, supportMessageError, type SupportMessage } from '@/lib/support-messages'
@@ -607,6 +608,7 @@ function AdminDashboard() {
         <main className="mx-auto max-w-7xl p-4 sm:p-7">
           {tab === 'dashboard' && (
             <div className="space-y-6">
+              <AppStatistics />
               <div className="grid grid-cols-2 gap-3 xl:grid-cols-4">
                 {[
                   {

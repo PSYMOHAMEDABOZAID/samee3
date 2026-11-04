@@ -129,7 +129,8 @@ export default function CourseStudyStudio({
   useEffect(() => {
     let alive = true,
       current: StudyPlayer | null = null,
-      timer: ReturnType<typeof setInterval> | undefined
+      timer: ReturnType<typeof setInterval> | undefined,
+      readyDeadline: ReturnType<typeof setTimeout> | undefined
     let saved: Memory = { order: 0, time: 0 },
       discovered = false,
       currentLesson: ManagedLesson | undefined,
@@ -166,6 +167,7 @@ export default function CourseStudyStudio({
         if (element) remember(element.currentTime, source.lessons[0])
       }
     }
+    readyDeadline = setTimeout(() => { if (alive) setError('لم يكتمل تحميل الشرح. أعد المحاولة أو افتح الدرس من YouTube. قد يمنع اتصال الشبكة تشغيل المشغل المدمج.') }, 25000)
     const play = (lesson: ManagedLesson, autoplay: boolean, seconds = 0) => {
       const id = youtubeSource(lesson.url)?.video
       if (!alive || !current || !id) return
@@ -223,7 +225,7 @@ export default function CourseStudyStudio({
           origin: location.origin,
           playsinline: '1',
           rel: '0',
-          controls: '0',
+          controls: sourcePolicy.allowSeeking ? '1' : '0',
           disablekb: '1',
         }))
           embed.searchParams.set(key, value)
@@ -238,6 +240,7 @@ export default function CourseStudyStudio({
           events: {
             onReady: (event) => {
               if (!alive) return
+              clearTimeout(readyDeadline)
               current = event.target
               player.current = current
               current.setVolume(volume)
@@ -286,6 +289,7 @@ export default function CourseStudyStudio({
         }
       }
       alive = false
+      clearTimeout(readyDeadline)
       clearInterval(timer)
       playLesson.current = () => {}
       if (player.current === current) player.current = null

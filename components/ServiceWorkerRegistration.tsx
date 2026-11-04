@@ -6,17 +6,17 @@ import { APP_BUILD_ID } from '@/lib/app-version'
 
 const SW_URL = '/sw.js'
 const CURRENT_BUILD = APP_BUILD_ID
-const CONSUMED_KEY = 'samee3_update_consumed_build_v2'
-const CHECK_EVERY_MS = 10 * 60 * 1000
-const MIN_CHECK_GAP_MS = 2 * 60 * 1000
+const CONSUMED_KEY = 'samee3_update_snooze_v3'
+const CHECK_EVERY_MS = 60 * 1000
+const MIN_CHECK_GAP_MS = 30 * 1000
 
 type BuildResponse = { buildId?: unknown }
 
 function consumedBuild(): string | null {
-  try { return localStorage.getItem(CONSUMED_KEY) } catch { return null }
+  try { const saved = JSON.parse(localStorage.getItem(CONSUMED_KEY) || 'null'); return saved?.until > Date.now() ? saved.build : null } catch { return null }
 }
 function rememberBuild(build: string) {
-  try { localStorage.setItem(CONSUMED_KEY, build) } catch { /* Private browsing */ }
+  try { localStorage.setItem(CONSUMED_KEY, JSON.stringify({ build, until: Date.now() + 6 * 3600000 })) } catch { /* Private browsing */ }
 }
 function reportUpdate(message: string) {
   window.dispatchEvent(new CustomEvent('samee3:update-status', { detail: message }))
@@ -34,6 +34,11 @@ export default function ServiceWorkerRegistration() {
   const pendingReloadRef = useRef(false)
   const checkingRef = useRef(false)
   const startedRef = useRef(false)
+  const reload = () => {
+    const url = new URL(window.location.href)
+    url.searchParams.set('_samee3_update', String(Date.now()))
+    window.location.replace(url.href)
+  }
 
   const check = useCallback(async (manual = false) => {
     if (checkingRef.current || navigator.onLine === false ||
@@ -62,12 +67,13 @@ export default function ServiceWorkerRegistration() {
       }
       // The user already accepted/dismissed this exact build. Do not display
       // the same update repeatedly if Safari serves an older page from cache.
-      if (consumedBuild() === newest) {
+      if (!manual && consumedBuild() === newest) {
         setTarget(null)
         if (manual) reportUpdate('تم التعامل مع هذا التحديث مسبقًا. أعد فتح التطبيق إذا لزم.')
         return
       }
       setTarget(newest)
+      void registrationRef.current?.update().catch(() => {})
       if (manual) reportUpdate('إصدار جديد متاح لمصحف سميع.')
     } catch {
       if (manual) reportUpdate('تعذّر فحص التحديث الآن؛ حاول لاحقًا.')
@@ -84,7 +90,7 @@ export default function ServiceWorkerRegistration() {
     const onControllerChange = () => {
       if (!closed && pendingReloadRef.current) {
         pendingReloadRef.current = false
-        window.location.reload()
+        reload()
       }
     }
     workers.addEventListener('controllerchange', onControllerChange)
@@ -125,8 +131,6 @@ export default function ServiceWorkerRegistration() {
   }
   const apply = () => {
     if (!target || applying) return
-    rememberBuild(target)
-    setTarget(null)
     setApplying(true)
     // Only reload as a direct result of the user's action. Never interrupt
     // playback merely because a newer deployment exists.
@@ -135,9 +139,9 @@ export default function ServiceWorkerRegistration() {
       pendingReloadRef.current = true
       waiting.postMessage({ type: 'SKIP_WAITING' })
       // Some iOS workers activate without a controllerchange notification.
-      window.setTimeout(() => window.location.reload(), 2000)
+      window.setTimeout(reload, 2000)
     } else {
-      window.location.reload()
+      reload()
     }
   }
 

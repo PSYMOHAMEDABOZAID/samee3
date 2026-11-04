@@ -77,7 +77,8 @@ public final class ReminderReceiver extends BroadcastReceiver {
             path = "/prayer";
         }
         int id = test ? 499 : 400 + Arrays.asList(ReminderScheduler.KEYS).indexOf(key);
-        Intent open = new Intent(context, AndroidActivity.class).setAction(Intent.ACTION_VIEW)
+        Intent launch = context.getPackageManager().getLaunchIntentForPackage(context.getPackageName());
+        Intent open = (launch == null ? new Intent(context, AndroidActivity.class) : launch).setAction(Intent.ACTION_VIEW)
                 .setData(android.net.Uri.parse("samee3://open/" + id)).putExtra("path", path)
                 .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         PendingIntent tap = PendingIntent.getActivity(context, id, open, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="https://samee3.vercel.app/tv" version="2.0.0" viewmodes="maximized">
+  <tizen:application id="Samee3TV01.Samee3" package="Samee3TV01" required_version="4.0"/>
+  <content src="index.html"/>
+  <icon src="icon.png"/>
+  <name>مصحف سميع</name>
+  <tizen:profile name="tv-samsung"/>
+  <tizen:privilege name="http://tizen.org/privilege/internet"/>
+  <access origin="https://samee3.vercel.app" subdomains="true"/>
+  <tizen:setting screen-orientation="landscape" context-menu="disable" background-support="disable" encryption="disable" install-location="auto" hwkey-event="enable"/>
+</widget>
