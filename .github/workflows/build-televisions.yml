@@ -24,7 +24,6 @@ jobs:
   release:
     name: Prepare TV release
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -43,7 +42,6 @@ jobs:
     needs: release
     runs-on: ubuntu-latest
     timeout-minutes: 25
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -72,7 +70,6 @@ jobs:
           PUBLISH: ${{ inputs.publish }}
         run: |
           set -euo pipefail
-
           if [ -n "$KEYSTORE" ]; then
             if [ -z "$STORE_PASSWORD" ] || \
                [ -z "$KEY_ALIAS" ] || \
@@ -80,10 +77,8 @@ jobs:
               echo 'Some SAMEE3_TV signing secrets are missing.'
               exit 1
             fi
-
             umask 077
             printf '%s' "$KEYSTORE" | base64 --decode > "$RUNNER_TEMP/samee3-tv.jks"
-
             echo "SAMEE3_TV_KEYSTORE=$RUNNER_TEMP/samee3-tv.jks" >> "$GITHUB_ENV"
           elif [ "$PUBLISH" = 'true' ]; then
             echo 'Configure SAMEE3_TV signing secrets before publishing.'
@@ -102,6 +97,26 @@ jobs:
             :app:lintRelease \
             :app:assembleDebug \
             :app:assembleRelease
+
+      - name: Show full Android lint report
+        if: failure()
+        run: |
+          report='televisions/android/app/build/intermediates/lint_intermediate_text_report/release/lintReportRelease/lint-results-release.txt'
+          if [ -f "$report" ]; then
+            cat "$report"
+          else
+            echo 'No Android lint report was generated; check the failed step above.'
+          fi
+
+      - name: Upload Android lint reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: SAMEE3-TV-lint-reports
+          path: |
+            televisions/android/app/build/reports/lint-results-release.*
+            televisions/android/app/build/intermediates/lint_intermediate_text_report/release/lintReportRelease/lint-results-release.txt
+          if-no-files-found: ignore
 
       - name: Upload Android TV build artifacts
         uses: actions/upload-artifact@v4
@@ -128,7 +143,6 @@ jobs:
     needs: release
     runs-on: ubuntu-latest
     timeout-minutes: 15
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
