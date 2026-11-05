@@ -2,12 +2,14 @@ name: Build SAMEE3 TV
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
     paths:
       - 'televisions/**'
       - 'native/android/**'
       - 'native/shared/**'
       - '.github/workflows/build-televisions.yml'
+
   workflow_dispatch:
     inputs:
       publish:
@@ -20,9 +22,12 @@ permissions:
 
 jobs:
   release:
+    name: Prepare TV release
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Create TV release once
         if: inputs.publish
@@ -34,20 +39,29 @@ jobs:
             --notes 'See televisions/README-AR.md for compatibility.'
 
   android-tv:
+    name: Build Android TV
     needs: release
     runs-on: ubuntu-latest
     timeout-minutes: 25
-    steps:
-      - uses: actions/checkout@v4
 
-      - uses: actions/setup-java@v4
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Java 17
+        uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: '17'
 
-      - uses: android-actions/setup-android@v3
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+        with:
+          packages: 'platform-tools'
 
-      - run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
+      - name: Install Android build packages
+        run: |
+          sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
 
       - name: Prepare release signing
         env:
@@ -57,32 +71,46 @@ jobs:
           KEY_PASSWORD: ${{ secrets.SAMEE3_TV_KEY_PASSWORD }}
           PUBLISH: ${{ inputs.publish }}
         run: |
+          set -euo pipefail
+
           if [ -n "$KEYSTORE" ]; then
+            if [ -z "$STORE_PASSWORD" ] || \
+               [ -z "$KEY_ALIAS" ] || \
+               [ -z "$KEY_PASSWORD" ]; then
+              echo 'Some SAMEE3_TV signing secrets are missing.'
+              exit 1
+            fi
+
+            umask 077
             printf '%s' "$KEYSTORE" | base64 --decode > "$RUNNER_TEMP/samee3-tv.jks"
+
             echo "SAMEE3_TV_KEYSTORE=$RUNNER_TEMP/samee3-tv.jks" >> "$GITHUB_ENV"
           elif [ "$PUBLISH" = 'true' ]; then
-            echo 'Configure SAMEE3_TV signing secrets before publishing an installable release.'
+            echo 'Configure SAMEE3_TV signing secrets before publishing.'
             exit 1
           fi
 
-      - name: Build TV app
+      - name: Build and check Android TV app
         env:
           SAMEE3_TV_STORE_PASSWORD: ${{ secrets.SAMEE3_TV_STORE_PASSWORD }}
           SAMEE3_TV_KEY_ALIAS: ${{ secrets.SAMEE3_TV_KEY_ALIAS }}
           SAMEE3_TV_KEY_PASSWORD: ${{ secrets.SAMEE3_TV_KEY_PASSWORD }}
         run: |
-          bash native/android/gradlew -p televisions/android \
+          bash native/android/gradlew \
+            -p televisions/android \
             --no-daemon \
             :app:lintRelease \
             :app:assembleDebug \
             :app:assembleRelease
 
-      - uses: actions/upload-artifact@v4
+      - name: Upload Android TV build artifacts
+        uses: actions/upload-artifact@v4
         with:
           name: SAMEE3-TV-builds
           path: televisions/android/app/build/outputs/apk/**/*.apk
+          if-no-files-found: error
 
-      - name: Publish signed TV installer
+      - name: Publish signed Android TV installer
         if: inputs.publish
         env:
           GH_TOKEN: ${{ github.token }}
@@ -90,28 +118,40 @@ jobs:
           cp televisions/android/app/build/outputs/apk/release/app-release.apk SAMEE3-TV.apk
           gh release upload samee3-tv SAMEE3-TV.apk --clobber
 
+      - name: Remove temporary signing file
+        if: always()
+        run: |
+          rm -f "$RUNNER_TEMP/samee3-tv.jks"
+
   webos:
+    name: Build LG webOS
     needs: release
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    steps:
-      - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: '24'
 
-      - run: npm install --global @webos-tools/cli
+      - name: Install webOS CLI
+        run: npm install --global @webos-tools/cli
 
       - name: Package webOS app
         run: |
           mkdir -p tv-output
           ares-package televisions/webos --outdir tv-output
 
-      - uses: actions/upload-artifact@v4
+      - name: Upload webOS build artifact
+        uses: actions/upload-artifact@v4
         with:
           name: SAMEE3-webOS
           path: tv-output/*.ipk
+          if-no-files-found: error
 
       - name: Publish webOS installer
         if: inputs.publish
