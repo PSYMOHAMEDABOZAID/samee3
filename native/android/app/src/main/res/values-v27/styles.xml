@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AppTheme" parent="@style/AppTheme.Base">
+    <style name="AppTheme" parent="@style/Samee3BaseTheme">
         <item name="android:navigationBarColor">#FAF8F3</item>
         <item name="android:windowLightNavigationBar">true</item>
     </style>
