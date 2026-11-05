@@ -6,12 +6,32 @@ export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
 export const maxDuration = 60
 const json = (value: unknown, status = 200) => NextResponse.json(value, { status, headers: { 'Cache-Control': 'no-store' } })
+function failureDetails(error: unknown) {
+  const record = error && typeof error === 'object' ? error as Record<string, unknown> : {}
+  const message = error instanceof Error ? error.message : ''
+  let category = error instanceof SyntaxError ? 'INVALID_JSON' : 'UNCLASSIFIED'
+  if (/vapid.*private.?key/i.test(message)) category = 'INVALID_VAPID_PRIVATE_KEY'
+  else if (/vapid.*public.?key/i.test(message)) category = 'INVALID_VAPID_PUBLIC_KEY'
+  else if (/subject/i.test(message)) category = 'INVALID_VAPID_SUBJECT'
+  else if (/invalid signature/i.test(message)) category = 'INVALID_SIGNATURE'
+  const code = typeof record.code === 'number' && Number.isFinite(record.code) ? record.code
+    : typeof record.code === 'string' && /^(?:ERR_[A-Z0-9_]+|(?:auth|app|firestore)\/[a-z0-9-]+|[A-Z_]{1,40})$/.test(record.code) ? record.code : null
+  const statusCode = typeof record.statusCode === 'number' && Number.isInteger(record.statusCode)
+    && record.statusCode >= 100 && record.statusCode <= 599 ? record.statusCode : null
+  const knownReasons = ['VapidPkHashMismatch', 'BadJwtToken', 'BadAuthorizationHeader', 'ExpiredProviderToken', 'InvalidProviderToken', 'BadDeviceToken', 'DeviceTokenNotForTopic', 'TopicDisallowed', 'Unregistered', 'UnauthorizedRegistration', 'InvalidRegistration', 'MismatchSenderId', 'NotRegistered']
+  const body = typeof record.body === 'string' ? record.body.slice(0, 4096) : ''
+  const providerReason = knownReasons.find(reason => body.includes(reason)) || null
+  // Never log the raw error, body, headers, endpoint, keys, or credentials.
+  return { category, code, statusCode, providerReason }
+}
 export function GET() { return json({ configured: pushConfigured(), publicKey: process.env.NEXT_PUBLIC_WEB_PUSH_VAPID_KEY || null }) }
 export async function POST(request: NextRequest) {
   if (!sameOrigin(request)) return json({ error: 'هذا الطلب يجب أن يأتي من تطبيق سميع.' }, 403)
   if (!pushConfigured()) return json({ error: 'إشعارات الويب تحتاج إكمال إعداد الخادم من الإدارة.' }, 503)
+  let action = 'parse'
   try {
     const body = await limitedJson(request)
+    if (['subscribe', 'test', 'status', 'unsubscribe'].includes(String(body.action))) action = String(body.action)
     if (body.action === 'subscribe') {
       const settings = parseWebSettings(body.settings), subscription = validSubscription(body.subscription)
       return json(await registerWebPush(subscription, settings, typeof body.token === 'string' ? body.token : undefined))
@@ -31,6 +51,7 @@ export async function POST(request: NextRequest) {
     if (body.action === 'status') return json({ next: (data.events || []).slice(0, 8), lastError: data.lastError || '' })
     return json({ error: 'طلب غير صالح.' }, 400)
   } catch (error) {
+    console.error('SAMEE3_WEB_PUSH_FAILURE', { action, ...failureDetails(error) })
     const message = error instanceof Error ? error.message : ''
     if (message === 'UNAUTHORIZED') return json({ error: 'الاشتراك غير متاح. فعّل الإشعارات من جديد.' }, 401)
     if (/إعدادات|اختر|اكتب|حدد|إحداثيات|المنطقة|المفاتيح|مفاتيح|اشتراك|عنوان|خدمة|راجع|بداية|أعد إيقاف/.test(message)) return json({ error: message }, 400)
