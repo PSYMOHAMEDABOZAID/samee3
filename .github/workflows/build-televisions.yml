@@ -1,0 +1,122 @@
+name: Build SAMEE3 TV
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'televisions/**'
+      - 'native/android/**'
+      - 'native/shared/**'
+      - '.github/workflows/build-televisions.yml'
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: 'Publish signed Android TV and webOS installers to downloads'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create TV release once
+        if: inputs.publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view samee3-tv || gh release create samee3-tv \
+            --title 'SAMEE3 TV 2.0.0' \
+            --notes 'See televisions/README-AR.md for compatibility.'
+
+  android-tv:
+    needs: release
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: android-actions/setup-android@v3
+
+      - run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
+
+      - name: Prepare release signing
+        env:
+          KEYSTORE: ${{ secrets.SAMEE3_TV_KEYSTORE_BASE64 }}
+          STORE_PASSWORD: ${{ secrets.SAMEE3_TV_STORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.SAMEE3_TV_KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.SAMEE3_TV_KEY_PASSWORD }}
+          PUBLISH: ${{ inputs.publish }}
+        run: |
+          if [ -n "$KEYSTORE" ]; then
+            printf '%s' "$KEYSTORE" | base64 --decode > "$RUNNER_TEMP/samee3-tv.jks"
+            echo "SAMEE3_TV_KEYSTORE=$RUNNER_TEMP/samee3-tv.jks" >> "$GITHUB_ENV"
+          elif [ "$PUBLISH" = 'true' ]; then
+            echo 'Configure SAMEE3_TV signing secrets before publishing an installable release.'
+            exit 1
+          fi
+
+      - name: Build TV app
+        env:
+          SAMEE3_TV_STORE_PASSWORD: ${{ secrets.SAMEE3_TV_STORE_PASSWORD }}
+          SAMEE3_TV_KEY_ALIAS: ${{ secrets.SAMEE3_TV_KEY_ALIAS }}
+          SAMEE3_TV_KEY_PASSWORD: ${{ secrets.SAMEE3_TV_KEY_PASSWORD }}
+        run: |
+          bash native/android/gradlew -p televisions/android \
+            --no-daemon \
+            :app:lintRelease \
+            :app:assembleDebug \
+            :app:assembleRelease
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: SAMEE3-TV-builds
+          path: televisions/android/app/build/outputs/apk/**/*.apk
+
+      - name: Publish signed TV installer
+        if: inputs.publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cp televisions/android/app/build/outputs/apk/release/app-release.apk SAMEE3-TV.apk
+          gh release upload samee3-tv SAMEE3-TV.apk --clobber
+
+  webos:
+    needs: release
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - run: npm install --global @webos-tools/cli
+
+      - name: Package webOS app
+        run: |
+          mkdir -p tv-output
+          ares-package televisions/webos --outdir tv-output
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: SAMEE3-webOS
+          path: tv-output/*.ipk
+
+      - name: Publish webOS installer
+        if: inputs.publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cp tv-output/*.ipk SAMEE3-webOS.ipk
+          gh release upload samee3-tv SAMEE3-webOS.ipk --clobber
