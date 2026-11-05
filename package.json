@@ -50,6 +50,9 @@
     "postcss": "8.5.31",
     "postcss-selector-parser": "^7.1.6",
     "@grpc/grpc-js": "^1.13.6",
-    "undici": "^6.28.1"
+    "undici": "^6.28.1",
+    "jwks-rsa": {
+      "jose": "5.10.0"
+    }
   }
 }
