@@ -1,0 +1,211 @@
+
+name: Setup SAMEE3 TV Signing
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: samee3-tv-signing-setup
+  cancel-in-progress: false
+jobs:
+  setup-signing:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Prepare encryption library
+        shell: bash
+        run: |
+          python3 -m venv "$RUNNER_TEMP/samee3-signing-env"
+          "$RUNNER_TEMP/samee3-signing-env/bin/pip" install --disable-pip-version-check 'PyNaCl==1.6.2'
+      - name: Create or resume signing secrets
+        shell: bash
+        env:
+          SETUP_TOKEN: ${{ secrets.SAMEE3_SIGNING_SETUP_TOKEN }}
+          SAMEE3_TV_SIGNING_BUNDLE: ${{ secrets.SAMEE3_TV_SIGNING_BUNDLE }}
+          SAMEE3_TV_STORE_PASSWORD: ${{ secrets.SAMEE3_TV_STORE_PASSWORD }}
+          SAMEE3_TV_KEY_PASSWORD: ${{ secrets.SAMEE3_TV_KEY_PASSWORD }}
+          SAMEE3_TV_KEY_ALIAS: ${{ secrets.SAMEE3_TV_KEY_ALIAS }}
+          SAMEE3_TV_KEYSTORE_BASE64: ${{ secrets.SAMEE3_TV_KEYSTORE_BASE64 }}
+        run: |
+          "$RUNNER_TEMP/samee3-signing-env/bin/python" - <<'PYTHON'
+          import base64
+          import hmac
+          import json
+          import os
+          import re
+          import secrets
+          import subprocess
+          import tempfile
+          import urllib.error
+          import urllib.request
+          from pathlib import Path
+
+          from nacl import encoding, public
+
+
+          class SetupError(Exception):
+              pass
+
+
+          NAMES = (
+              'SAMEE3_TV_STORE_PASSWORD',
+              'SAMEE3_TV_KEY_PASSWORD',
+              'SAMEE3_TV_KEY_ALIAS',
+              'SAMEE3_TV_KEYSTORE_BASE64',
+          )
+          BUNDLE = 'SAMEE3_TV_SIGNING_BUNDLE'
+
+
+          def mask(value):
+              print('::add-mask::' + value.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A'), flush=True)
+
+
+          def api(token, repository, method, suffix, payload=None):
+              request = urllib.request.Request(
+                  f'https://api.github.com/repos/{repository}/actions/secrets{suffix}',
+                  data=None if payload is None else json.dumps(payload).encode(),
+                  method=method,
+                  headers={
+                      'Authorization': 'Bearer ' + token,
+                      'Accept': 'application/vnd.github+json',
+                      'Content-Type': 'application/json',
+                      'X-GitHub-Api-Version': '2022-11-28',
+                      'User-Agent': 'SAMEE3-signing-setup',
+                  },
+              )
+              try:
+                  with urllib.request.urlopen(request, timeout=20) as response:
+                      raw = response.read()
+                      return json.loads(raw) if raw else None
+              except urllib.error.HTTPError as error:
+                  raise SetupError(f'GitHub API HTTP {error.code}. Check the setup token permission: Secrets read/write.') from None
+              except (urllib.error.URLError, TimeoutError):
+                  raise SetupError('GitHub API could not be reached. Run this workflow again; existing keys will be preserved.') from None
+
+
+          def existing_names(token, repository):
+              names = set()
+              for page in range(1, 21):
+                  items = api(token, repository, 'GET', f'?per_page=100&page={page}')['secrets']
+                  names.update(item['name'] for item in items)
+                  if len(items) < 100:
+                      return names
+              raise SetupError('Secret inventory is too large; no signing secrets were changed.')
+
+
+          def keytool(arguments, password):
+              environment = os.environ.copy()
+              environment['SAMEE3_TEMP_SIGNING_PASSWORD'] = password
+              try:
+                  subprocess.run(
+                      ['keytool', *arguments, '-storepass:env', 'SAMEE3_TEMP_SIGNING_PASSWORD'],
+                      env=environment, stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL,
+                      stderr=subprocess.DEVNULL, check=True, timeout=60,
+                  )
+              except (OSError, subprocess.SubprocessError):
+                  raise SetupError('Key generation or validation failed; no APK was signed by this setup.') from None
+              finally:
+                  environment.pop('SAMEE3_TEMP_SIGNING_PASSWORD', None)
+
+
+          def create_values():
+              password = secrets.token_urlsafe(36)
+              mask(password)
+              with tempfile.TemporaryDirectory(prefix='samee3-tv-signing-') as directory:
+                  path = Path(directory) / 'samee3-tv.jks'
+                  keytool([
+                      '-genkeypair', '-storetype', 'JKS', '-keystore', str(path),
+                      '-alias', 'samee3-tv', '-keyalg', 'RSA', '-keysize', '3072',
+                      '-validity', '10000', '-dname', 'CN=SAMEE3-TV',
+                      '-keypass:env', 'SAMEE3_TEMP_SIGNING_PASSWORD', '-noprompt',
+                  ], password)
+                  encoded = base64.b64encode(path.read_bytes()).decode()
+              mask(encoded)
+              return dict(zip(NAMES, [password, password, 'samee3-tv', encoded]))
+
+
+          def restore_values(bundle):
+              try:
+                  if len(bundle) > 40000:
+                      raise ValueError()
+                  parsed = json.loads(bundle)
+                  values = parsed['values']
+                  if parsed['version'] != 1 or set(values) != set(NAMES):
+                      raise ValueError()
+                  if any(not isinstance(value, str) or not value for value in values.values()):
+                      raise ValueError()
+                  if values[NAMES[2]] != 'samee3-tv' or not hmac.compare_digest(values[NAMES[0]], values[NAMES[1]]):
+                      raise ValueError()
+                  decoded = base64.b64decode(values[NAMES[3]], validate=True)
+                  if not decoded.startswith(b'\xfe\xed\xfe\xed'):
+                      raise ValueError()
+              except (ValueError, KeyError, TypeError):
+                  raise SetupError('The saved signing bundle is invalid. Existing signing keys were preserved.') from None
+              for value in values.values():
+                  mask(value)
+              with tempfile.TemporaryDirectory(prefix='samee3-tv-check-') as directory:
+                  path = Path(directory) / 'samee3-tv.jks'
+                  path.write_bytes(decoded)
+                  keytool(['-list', '-storetype', 'JKS', '-keystore', str(path), '-alias', 'samee3-tv'], values[NAMES[0]])
+              return values
+
+
+          def configure():
+              if os.environ.get('GITHUB_REF') != 'refs/heads/main':
+                  raise SetupError('Run this setup from the main branch only.')
+              token = os.environ.get('SETUP_TOKEN', '')
+              repository = os.environ.get('GITHUB_REPOSITORY', '')
+              if not token:
+                  raise SetupError('Add SAMEE3_SIGNING_SETUP_TOKEN in repository Actions secrets first.')
+              if not re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+', repository):
+                  raise SetupError('Invalid repository identifier.')
+              names = existing_names(token, repository)
+              present = set(NAMES) & names
+              if present == set(NAMES):
+                  return 'Signing secrets already exist. The current signing identity was preserved.'
+              bundle = os.environ.get(BUNDLE, '')
+              if (present or BUNDLE in names) and not bundle:
+                  raise SetupError('Signing setup is incomplete and no recovery bundle is available. Restore the existing key; this workflow will not replace it.')
+              values = restore_values(bundle) if bundle else create_values()
+              for name in present:
+                  if not hmac.compare_digest(os.environ.get(name, ''), values[name]):
+                      raise SetupError('Existing signing secrets do not match the recovery bundle. No keys were replaced.')
+              repository_key = api(token, repository, 'GET', '/public-key')
+              box = public.SealedBox(public.PublicKey(repository_key['key'].encode(), encoding.Base64Encoder()))
+
+              def save(name, value):
+                  mask(value)
+                  encrypted = base64.b64encode(box.encrypt(value.encode())).decode()
+                  api(token, repository, 'PUT', '/' + name, {'encrypted_value': encrypted, 'key_id': repository_key['key_id']})
+
+              # Save recovery first; a rerun resumes with this SAME key after an interrupted API request.
+              if not bundle:
+                  save(BUNDLE, json.dumps({'version': 1, 'values': values}, separators=(',', ':')))
+              # The keystore is saved last so the existing build cannot sign with a half-configured setup.
+              for name in NAMES:
+                  if name not in present:
+                      save(name, values[name])
+              return 'Signing is ready. Run Build SAMEE3 TV with publish enabled. Revoke the temporary setup token afterward.'
+
+
+          if __name__ == '__main__':
+              try:
+                  message = configure()
+              except SetupError as error:
+                  print('::error::' + str(error))
+                  raise SystemExit(1)
+              except Exception:
+                  print('::error::Setup failed. Existing secrets were kept. Run setup again to resume safely.')
+                  raise SystemExit(1)
+              print(message)
+              if os.environ.get('GITHUB_STEP_SUMMARY'):
+                  with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as summary:
+                      summary.write('## SAMEE3 TV signing\n\n' + message + '\n')
+          PYTHON
+
+
