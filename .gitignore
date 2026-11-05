@@ -1,9 +1,71 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
 node_modules/
-.next/
-.env*
-!.env.example
-*.tsbuildinfo
-*.log
-.vercel/
+/.pnp
+.pnp.js
+
+# testing
+/coverage
 playwright-report/
 test-results/
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# Generated PDF reader assets — copied automatically during build
+/public/pdfjs/
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files and private credentials
+.env*
+!.env.example
+
+# vercel
+.vercel/
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# Android local build state
+android/.gradle/
+android/**/build/
+android/local.properties
+
+# Native Android app local build state
+native/android/.gradle/
+native/android/**/build/
+native/android/local.properties
+
+# Android TV local build state
+televisions/android/.gradle/
+televisions/android/**/build/
+televisions/android/local.properties
+
+# Private signing material
+*.jks
+*.keystore
+private-signing/
+02-PRIVATE-SIGNING/
+
+# Cloudflare local secrets
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+
+# Cloudflare local build state
+.wrangler/
