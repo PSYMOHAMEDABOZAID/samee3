@@ -1,0 +1,46 @@
+
+name: SAMEE3 audio and recitations stability fix
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: samee3-stability-fix-main
+  cancel-in-progress: false
+
+jobs:
+  verify-and-apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - name: Confirm source matches reviewed commit layout
+        run: node scripts/samee3-stability-20261107.cjs --dry-run
+      - name: Apply minimal safe patches
+        run: node scripts/samee3-stability-20261107.cjs --apply
+      - name: Verify patch markers
+        run: node scripts/samee3-stability-20261107.cjs --check
+      - name: Install project dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Verify production build
+        run: npm run build
+      - name: Commit tested files (only when the build succeeds)
+        run: |
+          git config user.name "samee3-stability-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add lib/quran/alafasy-collected.ts lib/app-audio.ts lib/persistent-player.ts lib/use-audio-continuity.ts app/mushaf/page.tsx
+          if git diff --cached --quiet; then
+            echo "Already applied; nothing to commit"
+          else
+            git commit -m "fix: stabilize SAMEE3 audio and collected Alafasy transitions"
+            git push origin HEAD:main
+          fi
