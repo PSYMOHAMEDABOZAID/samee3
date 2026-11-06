@@ -255,6 +255,23 @@ export function attachAudioContinuity(
   const pause = () => {
     if (restoring || audio.error) return
 
+    // SAMEE3_STABILITY_20261107: distinguish interruptions from user pauses.
+    const explicit = (
+      audio as HTMLAudioElement & {
+        __samee3ExplicitPause?: boolean
+      }
+    ).__samee3ExplicitPause === true
+
+    if (
+      document.visibilityState === 'hidden' &&
+      wanted &&
+      !explicit &&
+      !audio.ended
+    ) {
+      save()
+      return
+    }
+
     wanted = false
     serial += 1
     stopTimer()
@@ -319,6 +336,26 @@ export function attachAudioContinuity(
     recover()
   }
 
+  const visibility = () => {
+    if (document.visibilityState !== 'visible') {
+      save()
+      return
+    }
+
+    if (
+      !wanted ||
+      disposed ||
+      audio.ended ||
+      !audio.paused ||
+      !source()
+    ) return
+
+    // Recovery can still require user interaction on iOS.
+    void audio.play().catch(() =>
+      notify('اضغط تشغيل لاستكمال الصوت بعد العودة للتطبيق.')
+    )
+  }
+
   const online = () => schedule(500)
 
   const offline = () => {
@@ -366,6 +403,8 @@ export function attachAudioContinuity(
   window.addEventListener('online', online)
   window.addEventListener('offline', offline)
   window.addEventListener('pagehide', save)
+  document.addEventListener('visibilitychange', visibility)
+  window.addEventListener('pageshow', visibility)
 
   return () => {
     save()
@@ -380,6 +419,8 @@ export function attachAudioContinuity(
     window.removeEventListener('online', online)
     window.removeEventListener('offline', offline)
     window.removeEventListener('pagehide', save)
+    document.removeEventListener('visibilitychange', visibility)
+    window.removeEventListener('pageshow', visibility)
   }
 }
 

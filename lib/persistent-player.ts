@@ -60,6 +60,10 @@ export function createPersistentPlayer(deps: Dependencies) {
   const play = (request: number) => {
     if (!audio || request !== serial || !wanted) return
     try {
+      // SAMEE3_STABILITY_20261107: preserve playback intent.
+      ;(audio as HTMLAudioElement & {
+        __samee3ExplicitPause?: boolean
+      }).__samee3ExplicitPause = false
       const result = audio.play()
       void result?.catch((error: unknown) => {
         if (request !== serial || !wanted) return
@@ -75,8 +79,27 @@ export function createPersistentPlayer(deps: Dependencies) {
     audio.addEventListener('playing', () => { wanted = true; update({ playing: true, loading: false, error: '' }) })
     audio.addEventListener('play', () => { wanted = true; update({ playing: true }) })
     audio.addEventListener('pause', () => {
-      if (!switching) wanted = false
-      update({ playing: false, ...(!switching ? { loading: false } : {}) })
+      const explicitlyPaused = (
+        audio as HTMLAudioElement & {
+          __samee3ExplicitPause?: boolean
+        }
+      ).__samee3ExplicitPause === true
+
+      // SAMEE3_STABILITY_20261107: retain intent on background interruptions.
+      if (
+        !switching &&
+        !(
+          document.visibilityState === 'hidden' &&
+          wanted &&
+          !explicitlyPaused &&
+          !audio?.ended
+        )
+      ) wanted = false
+
+      update({
+        playing: false,
+        ...(!switching ? { loading: false } : {}),
+      })
     })
     audio.addEventListener('waiting', () => { if (wanted) update({ loading: true }) })
     audio.addEventListener('loadedmetadata', () => {
@@ -91,7 +114,18 @@ export function createPersistentPlayer(deps: Dependencies) {
       if (Math.floor(position / 2) !== Math.floor(state.position / 2)) update({ position })
     })
     audio.addEventListener('error', () => {
-      if (!switching && audio?.getAttribute('src')) fail('تعذر تشغيل التسجيل. تحقق من الاتصال أو من حفظه كاملًا على الجهاز.')
+      if (switching || !audio?.getAttribute('src')) return
+
+      // SAMEE3_STABILITY_20261107: allow recovery on temporary network failures.
+      if (
+        audio.error?.code === 2 &&
+        navigator.onLine !== false
+      ) {
+        update({ loading: true, error: '' })
+        return
+      }
+
+      fail('تعذر تشغيل التسجيل. تحقق من الاتصال أو من حفظه كاملًا على الجهاز.')
     })
     audio.addEventListener('ended', () => {
       if (switching || !current() || !audio?.getAttribute('src')) return
@@ -191,15 +225,38 @@ export function createPersistentPlayer(deps: Dependencies) {
     },
     stop(scope?: PlaybackState['scope']) {
       if (scope && state.scope !== scope) return
-      ++serial; wanted = false; switching = true
-      audio?.pause(); audio?.removeAttribute('src'); audio?.load()
+      ++serial
+      wanted = false
+      switching = true
+
+      if (audio) {
+        (audio as HTMLAudioElement & {
+          __samee3ExplicitPause?: boolean
+        }).__samee3ExplicitPause = true
+      }
+
+      audio?.pause()
+      audio?.removeAttribute('src')
+      audio?.load()
       release?.(); release = undefined; switching = false
       update({ ...INITIAL, rate: state.rate, volume: state.volume, muted: state.muted })
     },
     toggle() {
       if (!audio || !current()) return
       if (daily && startedDay !== deps.day?.()) { audio.pause(); fail('بدأ يوم جديد. افتح الأذكار لبدء ورد اليوم.'); return }
-      if (state.loading || state.playing) { wanted = false; ++serial; switching = false; audio.pause(); update({ playing: false, loading: false }); return }
+      if (state.loading || state.playing) {
+        (audio as HTMLAudioElement & {
+          __samee3ExplicitPause?: boolean
+        }).__samee3ExplicitPause = true
+
+        wanted = false
+        ++serial
+        switching = false
+        audio.pause()
+
+        update({ playing: false, loading: false })
+        return
+      }
       wanted = true
       update({ loading: true, error: '' })
       if (audio.error || !audio.getAttribute('src') || (audio.ended && current()?.listenRepeats !== undefined)) playAt(state.index)

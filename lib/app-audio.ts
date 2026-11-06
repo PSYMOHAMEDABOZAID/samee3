@@ -69,9 +69,37 @@ export const appAudio = createPersistentPlayer({
       })
       return
     }
-    bindQuranMediaSession(audio, track.library || {
-      kind: 'library', title: track.title, subtitle: track.subtitle,
-      audioUrl: track.url, reciterName: track.subtitle,
+    // SAMEE3_STABILITY_20261107: expose queue controls on lock screen for all audio.
+    const state = appAudio.getSnapshot()
+    const controls = {
+      next: state.queue.length > 1
+        ? () => appAudio.next(1)
+        : undefined,
+      previous: state.queue.length > 1
+        ? () => appAudio.next(-1)
+        : undefined,
+      play: () => {
+        if (
+          appAudio.element()?.paused &&
+          !appAudio.getSnapshot().loading
+        ) appAudio.toggle()
+      },
+      pause: () => {
+        if (
+          !appAudio.element()?.paused ||
+          appAudio.getSnapshot().loading
+        ) appAudio.toggle()
+      },
+    }
+    bindQuranMediaSession(audio, {
+      ...(track.library || {
+        kind: 'library' as const,
+        title: track.title,
+        subtitle: track.subtitle,
+        audioUrl: track.url,
+        reciterName: track.subtitle,
+      }),
+      ...controls,
     })
   },
   saveCounts(key, counts) {

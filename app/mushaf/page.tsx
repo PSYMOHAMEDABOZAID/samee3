@@ -4117,6 +4117,15 @@ export default function MushafPage() {
         }
       }
       if (!isCurrent()) return
+
+      // SAMEE3_STABILITY_20261107: refresh the collected reciter.
+      if (
+        targetRiwaya === 'hafs' &&
+        expectedReciter === ALAFASY_COLLECTED_RECITER_ID
+      ) {
+        activeReciter = collectedAlafasyMushafReciter()
+      }
+
       if (activeReciter?.surahIds.length && !activeReciter.surahIds.includes(surahNumber)) {
         throw new Error('السورة غير متاحة لهذا القارئ. اختر إحدى سوره المتاحة.')
       }
@@ -4338,11 +4347,25 @@ export default function MushafPage() {
           Number.isFinite(duration) && duration > 0 &&
           audio.currentTime >= duration - 0.3
         )
-        if (!naturallyFinished && !audio.__samee3Switching) {
+        const interruptedInBackground =
+          document.visibilityState === 'hidden' &&
+          audio.__samee3Continue === true &&
+          !audio.__samee3Switching
+
+        if (
+          !naturallyFinished &&
+          !audio.__samee3Switching &&
+          !interruptedInBackground
+        ) {
           audio.__samee3Continue = false
-          audio.__samee3Serial = Number(audio.__samee3Serial || 0) + 1
+          audio.__samee3Serial =
+            Number(audio.__samee3Serial || 0) + 1
         }
-        persistAudioSnapshotFromElement(audio, false)
+
+        persistAudioSnapshotFromElement(
+          audio,
+          interruptedInBackground
+        )
       }
 
       const finishJuzIfNeeded = (ended = false) => {
@@ -4413,10 +4436,33 @@ export default function MushafPage() {
 
         if (runtime) {
           if (!audio.__samee3Continue) return
-          void runtime.updateRouteAudioSelection(runtime.riwaya, activeReciter, nextSurah).then((updated) => {
-            if (!updated || !audio.__samee3Continue || endSerial !== Number(audio.__samee3Serial || 0)) return
-            return getRuntime()?.loadAudioForSurah(nextSurah, true, undefined, activeReciter)
-          })
+          // SAMEE3_STABILITY_20261107: load the next surah before routing.
+          void runtime
+            .loadAudioForSurah(
+              nextSurah,
+              true,
+              undefined,
+              activeReciter
+            )
+            .then(() => {
+              if (
+                !audio.__samee3Continue ||
+                audio.__samee3Surah !== nextSurah
+              ) return
+
+              return runtime.updateRouteAudioSelection(
+                runtime.riwaya,
+                activeReciter,
+                nextSurah
+              )
+            })
+            .catch(() => {
+              if (audio.__samee3Surah !== nextSurah) {
+                runtime.triggerToast(
+                  'تعذر تشغيل السورة التالية. أعد المحاولة.'
+                )
+              }
+            })
           return
         }
 
@@ -4614,7 +4660,22 @@ export default function MushafPage() {
 
     const onVisibilityChange = () => {
       if (document.visibilityState === 'hidden') {
-        persistAudioSnapshotFromElement(audio, !audio.paused)
+        persistAudioSnapshotFromElement(
+          audio,
+          audio.__samee3Continue === true
+        )
+      } else if (
+        audio.__samee3Continue &&
+        audio.paused &&
+        !audio.ended &&
+        audio.src &&
+        !audio.__samee3Switching
+      ) {
+        void audio.play().catch(() =>
+          setAudioError(
+            'اضغط تشغيل لاستكمال التلاوة بعد العودة للتطبيق.'
+          )
+        )
       }
     }
 
