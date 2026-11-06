@@ -8,6 +8,7 @@ import ServiceWorkerRegistration from '@/components/ServiceWorkerRegistration'
 import ConnectionBanner from '@/components/ConnectionBanner'
 import OfflineBootstrap from '@/components/OfflineBootstrap'
 import AudioFocus from '@/components/AudioFocus'
+import PersistentAudioPlayer from '@/components/PersistentAudioPlayer'
 import RiwayatDownloadStatus from '@/components/RiwayatDownloadStatus'
 import AppExperience from '@/components/AppExperience'
 import { APP_BUILD_ID } from '@/lib/app-version'
@@ -65,6 +66,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
           <ConnectionBanner />
           <OfflineBootstrap />
           <AudioFocus />
+          <Suspense fallback={null}><PersistentAudioPlayer /></Suspense>
           <RiwayatDownloadStatus />
           <AppExperience />
         </AuthProvider>

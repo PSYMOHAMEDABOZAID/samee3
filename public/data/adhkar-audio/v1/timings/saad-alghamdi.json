@@ -1,0 +1,5234 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "2026-11-06.3",
+  "reciter": "saad-alghamdi",
+  "timeUnit": "milliseconds",
+  "items": [
+    {
+      "itemId": "1:1",
+      "categoryId": 1,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/001/001-386.mp3",
+      "startMs": 0,
+      "endMs": 59193,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr86.mp3",
+        "sha256": "e2bfdbb75c1e2f219bc6aa8c4daf3891dfa49f0ba8935487693bbb499e1b1ec6",
+        "startMs": 4215,
+        "endMs": 63365
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9273,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "أَعُوذُ بِاللَّهِ مِنَ الشَّيطَانِ الرَّجِيمِ ﴿اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَّهُ مَا فِي السَّمَوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاء وَسِعَ كُرْسِيُّهُ السَّمَوَاتِ وَالْأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ﴾."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:2",
+      "categoryId": 1,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/saad-alghamdi/001/002-386.mp3",
+      "startMs": 0,
+      "endMs": 69721,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr86.mp3",
+        "sha256": "e2bfdbb75c1e2f219bc6aa8c4daf3891dfa49f0ba8935487693bbb499e1b1ec6",
+        "startMs": 63395,
+        "endMs": 133085
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "بسم الله الرحمن الرحيم ﴿قُلْ هُوَ اللَّهُ أَحَدٌ* اللَّهُ الصَّمَدُ* لَمْ يَلِدْ وَلَمْ يُولَدْ* وَلَمْ يَكُن لَّهُ كُفُواً أَحَدٌ﴾.  بسم الله الرحمن الرحيم ﴿قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ* مِن شَرِّ مَا خَلَقَ* وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ* وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ* وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ﴾.  بسم الله الرحمن الرحيم ﴿قُلْ أَعُوذُ بِرَبِّ النَّاسِ* مَلِكِ النَّاسِ* إِلَهِ النَّاسِ* مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ* الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ* مِنَ الْجِنَّةِ وَ النَّاسِ﴾ (ثلاثَ مرَّاتٍ)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:3",
+      "categoryId": 1,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/saad-alghamdi/001/003-386-morning.mp3",
+      "startMs": 0,
+      "endMs": 50181,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr86.mp3",
+        "sha256": "e2bfdbb75c1e2f219bc6aa8c4daf3891dfa49f0ba8935487693bbb499e1b1ec6",
+        "startMs": 370475,
+        "endMs": 420605
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9344,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ ، وَالْحَمْدُ لِلَّهِ، لاَ إِلَهَ إلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذَا الْيَوْمِ وَخَيرَ مَا بَعْدَهُ ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي  هَذَا الْيَوْمِ وَشَرِّ مَا بَعْدَهُ، رَبِّ أَعُوذُ بِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ، رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:4",
+      "categoryId": 1,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/saad-alghamdi/001/004-386-morning.mp3",
+      "startMs": 0,
+      "endMs": 12251,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr86.mp3",
+        "sha256": "e2bfdbb75c1e2f219bc6aa8c4daf3891dfa49f0ba8935487693bbb499e1b1ec6",
+        "startMs": 163835,
+        "endMs": 176045
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا ، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ وَإِلَيْكَ النُّشُورُ"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:6",
+      "categoryId": 1,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/saad-alghamdi/001/006-386-morning.mp3",
+      "startMs": 0,
+      "endMs": 29414,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr86.mp3",
+        "sha256": "e2bfdbb75c1e2f219bc6aa8c4daf3891dfa49f0ba8935487693bbb499e1b1ec6",
+        "startMs": 421655,
+        "endMs": 451025
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "اللَّهُمَّ إِنِّي أَصْبَحْتُ أُشْهِدُكَ، وَأُشْهِدُ حَمَلَةَ عَرْشِكَ، وَمَلاَئِكَتِكَ، وَجَمِيعَ خَلْقِكَ، أَنَّكَ أَنْتَ اللَّهُ لَا إِلَهَ إِلاَّ أَنْتَ وَحْدَكَ لاَ شَرِيكَ لَكَ، وَأَنَّ مُحَمَّداً عَبْدُكَ وَرَسُولُكَ"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:7",
+      "categoryId": 1,
+      "dhikrId": 7,
+      "url": "/audio/adhkar/saad-alghamdi/001/007-386-morning.mp3",
+      "startMs": 0,
+      "endMs": 15282,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr86.mp3",
+        "sha256": "e2bfdbb75c1e2f219bc6aa8c4daf3891dfa49f0ba8935487693bbb499e1b1ec6",
+        "startMs": 452375,
+        "endMs": 467605
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9474,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "اللَّهُمَّ مَا أَصْبَحَ بِي مِنْ نِعْمَةٍ أَوْ بِأَحَدٍ مِنْ خَلْقِكَ فَمِنْكَ وَحْدَكَ لاَ شَرِيكَ لَكَ، فَلَكَ الْحَمْدُ وَلَكَ الشُّكْرُ"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:8",
+      "categoryId": 1,
+      "dhikrId": 8,
+      "url": "/audio/adhkar/saad-alghamdi/001/008-386.mp3",
+      "startMs": 0,
+      "endMs": 28238,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr86.mp3",
+        "sha256": "e2bfdbb75c1e2f219bc6aa8c4daf3891dfa49f0ba8935487693bbb499e1b1ec6",
+        "startMs": 468455,
+        "endMs": 496665
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9375,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ عَافِنِي فِي بَدَنِي، اللَّهُمَّ عَافِنِي فِي سَمْعِي، اللَّهُمَّ عَافِنِي فِي بَصَرِي، لاَ إِلَهَ إِلاَّ أَنْتَ. اللَّهُمَّ  إِنِّي أَعُوذُ بِكَ مِنَ الْكُفْرِ، وَالفَقْرِ، وَأَعُوذُ بِكَ مِنْ عَذَابِ القَبْرِ، لاَ إِلَهَ إِلاَّ أَنْتَ)) (ثلاثَ مرَّاتٍ)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:9",
+      "categoryId": 1,
+      "dhikrId": 9,
+      "url": "/audio/adhkar/saad-alghamdi/001/009-386.mp3",
+      "startMs": 0,
+      "endMs": 11833,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr86.mp3",
+        "sha256": "e2bfdbb75c1e2f219bc6aa8c4daf3891dfa49f0ba8935487693bbb499e1b1ec6",
+        "startMs": 497875,
+        "endMs": 509665
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((حَسْبِيَ اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ عَلَيهِ تَوَكَّلتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ)) (سَبْعَ مَرّاتٍ)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:10",
+      "categoryId": 1,
+      "dhikrId": 10,
+      "url": "/audio/adhkar/saad-alghamdi/001/010-386.mp3",
+      "startMs": 0,
+      "endMs": 47778,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr86.mp3",
+        "sha256": "e2bfdbb75c1e2f219bc6aa8c4daf3891dfa49f0ba8935487693bbb499e1b1ec6",
+        "startMs": 509695,
+        "endMs": 557445
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي الدُّنْيَا وَالآخِرَةِ، اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ: فِي دِينِي وَدُنْيَايَ وَأَهْلِي، وَمَالِي، اللَّهُمَّ اسْتُرْ عَوْرَاتِي، وَآمِنْ رَوْعَاتِي، اللَّهُمَّ احْفَظْنِي مِنْ بَينِ يَدَيَّ، وَمِنْ خَلْفِي، وَعَنْ يَمِينِي، وَعَنْ شِمَالِي، وَمِنْ فَوْقِي، وَأَعُوذُ بِعَظَمَتِكَ أَنْ أُغْتَالَ مِنْ تَحْتِي))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:11",
+      "categoryId": 1,
+      "dhikrId": 11,
+      "url": "/audio/adhkar/saad-alghamdi/001/011-386.mp3",
+      "startMs": 0,
+      "endMs": 33776,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr86.mp3",
+        "sha256": "e2bfdbb75c1e2f219bc6aa8c4daf3891dfa49f0ba8935487693bbb499e1b1ec6",
+        "startMs": 557475,
+        "endMs": 591205
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9697,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ عَالِمَ الغَيْبِ وَالشَّهَادَةِ فَاطِرَ السَّمَوَاتِ وَالْأَرْضِ، رَبَّ كُلِّ شَيْءٍ وَمَلِيكَهُ، أَشْهَدُ أَنْ لاَ إِلَهَ إِلاَّ أَنْتَ، أَعُوذُ بِكَ مِنْ شَرِّ نَفْسِي، وَمِنْ شَرِّ الشَّيْطانِ وَشَرَكِهِ، وَأَنْ أَقْتَرِفَ عَلَى  نَفْسِي سُوءاً، أَوْ أَجُرَّهُ إِلَى مُسْلِمٍ))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:12",
+      "categoryId": 1,
+      "dhikrId": 12,
+      "url": "/audio/adhkar/saad-alghamdi/001/012-386.mp3",
+      "startMs": 0,
+      "endMs": 13479,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr86.mp3",
+        "sha256": "e2bfdbb75c1e2f219bc6aa8c4daf3891dfa49f0ba8935487693bbb499e1b1ec6",
+        "startMs": 592215,
+        "endMs": 605645
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((بِسْمِ اللَّهِ الَّذِي لاَ يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلاَ فِي السّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ)) (ثلاثَ مرَّاتٍ)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:13",
+      "categoryId": 1,
+      "dhikrId": 13,
+      "url": "/audio/adhkar/saad-alghamdi/001/013-386.mp3",
+      "startMs": 0,
+      "endMs": 13819,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr86.mp3",
+        "sha256": "e2bfdbb75c1e2f219bc6aa8c4daf3891dfa49f0ba8935487693bbb499e1b1ec6",
+        "startMs": 606855,
+        "endMs": 620625
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((رَضِيتُ بِاللَّهِ رَبَّاً، وَبِالْإِسْلاَمِ دِيناً، وَبِمُحَمَّدٍ صلى الله عليه وسلم نَبِيّاً)) (ثلاثَ مرَّاتٍ)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:14",
+      "categoryId": 1,
+      "dhikrId": 14,
+      "url": "/audio/adhkar/saad-alghamdi/001/014-386.mp3",
+      "startMs": 0,
+      "endMs": 14890,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr86.mp3",
+        "sha256": "e2bfdbb75c1e2f219bc6aa8c4daf3891dfa49f0ba8935487693bbb499e1b1ec6",
+        "startMs": 621975,
+        "endMs": 636825
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((يَا حَيُّ يَا قَيُّومُ بِرَحْمَتِكَ أَسْتَغيثُ أَصْلِحْ لِي شَأْنِيَ كُلَّهُ وَلاَ تَكِلْنِي إِلَى نَفْسِي طَرْفَةَ عَيْنٍ))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:16",
+      "categoryId": 1,
+      "dhikrId": 16,
+      "url": "/audio/adhkar/saad-alghamdi/001/016-386-morning.mp3",
+      "startMs": 0,
+      "endMs": 25391,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr86.mp3",
+        "sha256": "e2bfdbb75c1e2f219bc6aa8c4daf3891dfa49f0ba8935487693bbb499e1b1ec6",
+        "startMs": 636855,
+        "endMs": 662205
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "أَصْبَحْنا عَلَى فِطْرَةِ الْإِسْلاَمِ، وَعَلَى كَلِمَةِ الْإِخْلاَصِ، وَعَلَى دِينِ نَبِيِّنَا مُحَمَّدٍ صلى الله عليه وسلم، وَعَلَى مِلَّةِ أَبِينَا إِبْرَاهِيمَ، حَنِيفاً مُسْلِماً وَمَا كَانَ مِنَ الْمُشرِكِينَ"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:17",
+      "categoryId": 1,
+      "dhikrId": 17,
+      "url": "/audio/adhkar/saad-alghamdi/001/017-386.mp3",
+      "startMs": 0,
+      "endMs": 3004,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr86.mp3",
+        "sha256": "e2bfdbb75c1e2f219bc6aa8c4daf3891dfa49f0ba8935487693bbb499e1b1ec6",
+        "startMs": 732615,
+        "endMs": 735585
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((سُبْحَانَ اللَّهِ وَبِحَمْدِهِ)) (مائة مرَّةٍ)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:18",
+      "categoryId": 1,
+      "dhikrId": 18,
+      "url": "/audio/adhkar/saad-alghamdi/001/018-386.mp3",
+      "startMs": 0,
+      "endMs": 15151,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr86.mp3",
+        "sha256": "e2bfdbb75c1e2f219bc6aa8c4daf3891dfa49f0ba8935487693bbb499e1b1ec6",
+        "startMs": 684275,
+        "endMs": 699385
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:19",
+      "categoryId": 1,
+      "dhikrId": 19,
+      "url": "/audio/adhkar/saad-alghamdi/001/019-386.mp3",
+      "startMs": 0,
+      "endMs": 15151,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr86.mp3",
+        "sha256": "e2bfdbb75c1e2f219bc6aa8c4daf3891dfa49f0ba8935487693bbb499e1b1ec6",
+        "startMs": 684275,
+        "endMs": 699385
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((لاَ إِلَهَ إِلاَّ اللَّهُ، وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ)) (مائةَ مرَّةٍ إذا أصبحَ)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:21",
+      "categoryId": 1,
+      "dhikrId": 21,
+      "url": "/audio/adhkar/saad-alghamdi/001/021-386.mp3",
+      "startMs": 0,
+      "endMs": 13375,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr86.mp3",
+        "sha256": "e2bfdbb75c1e2f219bc6aa8c4daf3891dfa49f0ba8935487693bbb499e1b1ec6",
+        "startMs": 701915,
+        "endMs": 715245
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْماً نَافِعاً، وَرِزْقاً طَيِّباً، وَعَمَلاً مُتَقَبَّلاً)) (إذا أصبحَ)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:23",
+      "categoryId": 1,
+      "dhikrId": 23,
+      "url": "/audio/adhkar/saad-alghamdi/001/023-386.mp3",
+      "startMs": 0,
+      "endMs": 8464,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr86.mp3",
+        "sha256": "e2bfdbb75c1e2f219bc6aa8c4daf3891dfa49f0ba8935487693bbb499e1b1ec6",
+        "startMs": 867780,
+        "endMs": 876200
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ)) (ثلاثَ مرَّاتٍ إذا أمسى)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:24",
+      "categoryId": 1,
+      "dhikrId": 24,
+      "url": "/audio/adhkar/saad-alghamdi/001/024-386.mp3",
+      "startMs": 0,
+      "endMs": 5564,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr86.mp3",
+        "sha256": "e2bfdbb75c1e2f219bc6aa8c4daf3891dfa49f0ba8935487693bbb499e1b1ec6",
+        "startMs": 724815,
+        "endMs": 730345
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ صَلِّ وَسَلِّمْ عَلَى نَبَيِّنَا مُحَمَّدٍ)) (عشرَ مرَّاتٍ)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "2:2",
+      "categoryId": 2,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/saad-alghamdi/002/002-313.mp3",
+      "startMs": 0,
+      "endMs": 54909,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr13.mp3",
+        "sha256": "56227fe0cc5551e6609f69fd0a76f5ca6d7efabded51ec6e751b2037160879e0",
+        "startMs": 94375,
+        "endMs": 149245
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.94,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "﴿اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَّهُ مَا فِي السَّمَوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْـــــــــــدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاء وَسِعَ كُرْسِيُّهُ السَّمَوَاتِ وَالأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ﴾."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "2:3",
+      "categoryId": 2,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/saad-alghamdi/002/003-313.mp3",
+      "startMs": 0,
+      "endMs": 83252,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr13.mp3",
+        "sha256": "56227fe0cc5551e6609f69fd0a76f5ca6d7efabded51ec6e751b2037160879e0",
+        "startMs": 154075,
+        "endMs": 237280
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9868,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "﴿آمَنَ الرَّسُولُ بِمَا أُنزِلَ إِلَيْهِ مِن رَّبِّهِ وَالْمُؤْمِنُونَ كُلٌّ آمَنَ بِاللَّهِ وَمَلآئِكَتِهِ وَكُتُبِهِ وَرُسُلِهِ لاَ نُفَرِّقُ بَيْنَ أَحَدٍ مِّن رُّسُلِهِ وَقَالُواْ سَمِعْنَا وَأَطَعْنَا غُفْرَانَكَ رَبَّنَا وَإِلَيْكَ الْمَصِيرُ* لاَ يُكَلِّفُ اللَّهُ نَفْساً إِلاَّ وُسْعَهَا لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا اكْتَسَبَتْ رَبَّنَا لاَ تُؤَاخِذْنَا إِن نَّسِينَا أَوْ أَخْطَأْنَا رَبَّنَا وَلاَ تَحْمِلْ عَلَيْنَا إِصْراً كَمَا حَمَلْتَهُ عَلَى الَّذِينَ مِن قَبْلِنَا رَبَّنَا وَلاَ تُحَمِّلْنَا مَا لاَ طَاقَةَ لَنَا بِهِ وَاعْفُ عَنَّا وَاغْفِرْ لَنَا وَارْحَمْنَآ أَنتَ مَوْلاَنَا فَانصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ﴾."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "2:4",
+      "categoryId": 2,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/saad-alghamdi/002/004-384.mp3",
+      "startMs": 0,
+      "endMs": 17607,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr84.mp3",
+        "sha256": "88657348d9f2ebbf7c7f463e82b525584ae9af136fef11a37457ab2326f05bc0",
+        "startMs": 46815,
+        "endMs": 64385
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((بِاسْمِكَ رَبِّي وَضَعْتُ جَنْبِي، وَبِكَ أَرْفَعُهُ، فَإِن أَمْسَكْتَ نَفْسِي فارْحَمْهَا، وَإِنْ أَرْسَلْتَهَا فَاحْفَظْهَا، بِمَا تَحْفَظُ بِهِ عِبَادَكَ الصَّالِحِينَ))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "2:5",
+      "categoryId": 2,
+      "dhikrId": 5,
+      "url": "/audio/adhkar/saad-alghamdi/002/005-384.mp3",
+      "startMs": 0,
+      "endMs": 25104,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr84.mp3",
+        "sha256": "88657348d9f2ebbf7c7f463e82b525584ae9af136fef11a37457ab2326f05bc0",
+        "startMs": 64415,
+        "endMs": 89480
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ إِنَّكَ خَلَقْتَ نَفْسِي وَأَنْتَ تَوَفَّاهَا، لَكَ مَمَاتُهَا وَمَحْياهَا، إِنْ أَحْيَيْتَهَا فَاحْفَظْهَا، وَإِنْ أَمَتَّهَا فَاغْفِرْ لَهَا. اللَّهُمَّ إِنِّي أَسْأَلُكَ العَافِيَةَ))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "2:6",
+      "categoryId": 2,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/saad-alghamdi/002/006-384.mp3",
+      "startMs": 0,
+      "endMs": 6531,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr84.mp3",
+        "sha256": "88657348d9f2ebbf7c7f463e82b525584ae9af136fef11a37457ab2326f05bc0",
+        "startMs": 103015,
+        "endMs": 109505
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": " ((اللَّهُمَّ قِنِي عَذَابَكَ يَوْمَ تَبْعَثُ عِبَادَكَ))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "2:11",
+      "categoryId": 2,
+      "dhikrId": 11,
+      "url": "/audio/adhkar/saad-alghamdi/002/011-386.mp3",
+      "startMs": 0,
+      "endMs": 33776,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr86.mp3",
+        "sha256": "e2bfdbb75c1e2f219bc6aa8c4daf3891dfa49f0ba8935487693bbb499e1b1ec6",
+        "startMs": 557475,
+        "endMs": 591205
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9697,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ عَالِمَ الغَيْبِ وَالشَّهَادَةِ فَاطِرَ السَّمَوَاتِ وَالْأَرْضِ، رَبَّ كُلِّ شَيْءٍ وَمَلِيكَهُ، أَشْهَدُ أَنْ لاَ إِلَهَ إِلاَّ أَنْتَ، أَعُوذُ بِكَ مِنْ شَرِّ نَفْسِي، وَمِنْ شَرِّ الشَّيْطانِ وَشِرْكِهِ، وَأَنْ أَقْتَرِفَ عَلَى نَفْسِي سُوءاً، أَوْ أَجُرَّهُ إِلَى مُسْلِمٍ))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "3:1",
+      "categoryId": 3,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/003/001-312.mp3",
+      "startMs": 0,
+      "endMs": 10031,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr12.mp3",
+        "sha256": "9a972758b92ce537734d68c88e7e964b462a0b099f5f093f44097009d782d8ae",
+        "startMs": 2655,
+        "endMs": 12640
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "( الْحَمْدُ للَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا، وَإِلَيْهِ النُّشُورُ )"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "3:3",
+      "categoryId": 3,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/saad-alghamdi/003/003-312.mp3",
+      "startMs": 0,
+      "endMs": 11102,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr12.mp3",
+        "sha256": "9a972758b92ce537734d68c88e7e964b462a0b099f5f093f44097009d782d8ae",
+        "startMs": 13735,
+        "endMs": 24842
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "( الْحَمْدُ لِلَّهِ الَّذِي عَافَانِي فِي جَسَدِي، وَرَدَّ عَلَيَّ رُوحِي، وَأَذِنَ لي بِذِكْرِهِ )"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "4:1",
+      "categoryId": 4,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/004/001-303.mp3",
+      "startMs": 0,
+      "endMs": 8359,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr3.mp3",
+        "sha256": "f6e99edc050435daa1629869db052eb3ab80b909cce670861cd050647fb068c5",
+        "startMs": 2835,
+        "endMs": 11165
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "([بِسْمِ اللَّهِ] اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْخُبْثِ وَالْخَبائِث)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "6:1",
+      "categoryId": 6,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/006/001-386.mp3",
+      "startMs": 0,
+      "endMs": 1280,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr86.mp3",
+        "sha256": "e2bfdbb75c1e2f219bc6aa8c4daf3891dfa49f0ba8935487693bbb499e1b1ec6",
+        "startMs": 592215,
+        "endMs": 593465
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "(بِسْمِ اللَّهِ)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "7:1",
+      "categoryId": 7,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/007/001-378.mp3",
+      "startMs": 0,
+      "endMs": 14472,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr78.mp3",
+        "sha256": "a0b9eb079fba6e531df67e0723dbc8fd76a56dde3e92b02fc7a6b27500744e92",
+        "startMs": 3980,
+        "endMs": 18405
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "(أَشْهَدُ أَنْ لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ وَأَشْهَدُ أَنَّ مُحَمَّداً عَبْدُهُ وَرَسُولُهُ..)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "7:2",
+      "categoryId": 7,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/saad-alghamdi/007/002-378.mp3",
+      "startMs": 0,
+      "endMs": 8829,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr78.mp3",
+        "sha256": "a0b9eb079fba6e531df67e0723dbc8fd76a56dde3e92b02fc7a6b27500744e92",
+        "startMs": 18435,
+        "endMs": 27225
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "(اللَّهُمَّ اجْعَلْنِي مِنَ التَّوَّابِينَ وَاجْعَلْنِي مِنَ الْمُتَطَهِّرِينَ)"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "7:3",
+      "categoryId": 7,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/saad-alghamdi/007/003-378.mp3",
+      "startMs": 0,
+      "endMs": 16744,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr78.mp3",
+        "sha256": "a0b9eb079fba6e531df67e0723dbc8fd76a56dde3e92b02fc7a6b27500744e92",
+        "startMs": 27255,
+        "endMs": 43990
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "(سُبْحانَكَ اللَّهُمَّ وَبِحَمْدِكَ، أَشْهَدُ أَنْ لاَ إِلَهَ إِلاَّ أَنْتَ، أَسْتَغْفِرُكَ وَأَتوبُ إِلَيْكَ)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "8:2",
+      "categoryId": 8,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/saad-alghamdi/008/002-302.mp3",
+      "startMs": 0,
+      "endMs": 15726,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr2.mp3",
+        "sha256": "9082fbd5c9c634eaefeefb5c327612c5c2e101f86f9d4116dadc364278bc0715",
+        "startMs": 9095,
+        "endMs": 24780
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9524,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "(اللَّهُمَّ إِنِّي أَعُوذُ بِكَ أَنْ أَضِلَّ، أَوْ أُضَلَّ، أَوْ أَزِلَّ، أَوْ أُزَلَّ، أَوْ أَظْلِمَ، أَوْ أُظْلَمَ، أَوْ أَجْهَلَ، أَوْ يُجْهَلَ عَلَيَّ)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "9:1",
+      "categoryId": 9,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/009/001.mp3",
+      "startMs": 0,
+      "endMs": 19122,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr45.mp3",
+        "sha256": "ea1847cc1a78487a8a96388850a56f34ae55b4ac245065f79b4d3c8084b996d9",
+        "startMs": 0,
+        "endMs": 19122
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "11:1",
+      "categoryId": 11,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/011/001.mp3",
+      "startMs": 0,
+      "endMs": 21551,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr75.mp3",
+        "sha256": "a1b4dce42b30c54f239034264d6382d0e623bd63819f6436fcee6a1e22462aa6",
+        "startMs": 0,
+        "endMs": 21551
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "12:1",
+      "categoryId": 12,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/012/001.mp3",
+      "startMs": 0,
+      "endMs": 8882,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr52.mp3",
+        "sha256": "096b943737dfede72072168986c659eb2eeb755d8a5752dde1fdbb88c798c49c",
+        "startMs": 0,
+        "endMs": 8882
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "17:1",
+      "categoryId": 17,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/017/001-386.mp3",
+      "startMs": 0,
+      "endMs": 1280,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr86.mp3",
+        "sha256": "e2bfdbb75c1e2f219bc6aa8c4daf3891dfa49f0ba8935487693bbb499e1b1ec6",
+        "startMs": 592215,
+        "endMs": 593465
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "(بِسْمِ اللَّهِ)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "18:1",
+      "categoryId": 18,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/018/001-376.mp3",
+      "startMs": 0,
+      "endMs": 26671,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr76.mp3",
+        "sha256": "45a6491a70fa2aba6f89591acec536c00680df0637bd18b4c0267f18e2925f24",
+        "startMs": 0,
+        "endMs": 26640
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9762,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": " ((اللَّهُمَّ بَاعِدْ بَيْنِي وَبَيْنَ خَطَايَايَ كَمَا بَاعَدْتَ بَيْنَ الْمَشْرِقِ وَالْمَغْرِبِ، اللَّهُمَّ نَقِّنِي مِنْ خَطَايَايَ كَمَا يُنَقَّى الثَّوْبُ الْأَبْيَضُ مِنَ الدَّنَسِ، اللَّهُمَّ اغْسِلْني مِنْ خَطَايَايَ، بِالثَّلْجِ وَالْماءِ وَالْبَرَدِ))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "18:2",
+      "categoryId": 18,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/saad-alghamdi/018/002-377.mp3",
+      "startMs": 0,
+      "endMs": 12957,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr77.mp3",
+        "sha256": "9d4d4dd5c6a73c0851947f1193b12c61c8d2eedfb378de8b6f654e6903eda297",
+        "startMs": 2960,
+        "endMs": 15880
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((سُبْحانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلاَ إِلَهَ غَيْرُكَ))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "18:3",
+      "categoryId": 18,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/saad-alghamdi/018/003-308.mp3",
+      "startMs": 0,
+      "endMs": 94746,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr8.mp3",
+        "sha256": "0ece617f5bf019378f30afcc46a86ce8f80607f3833da98b7fe54c40d2b47eb6",
+        "startMs": 0,
+        "endMs": 94720
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9302,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((وَجَّهْتُ وَجْهِيَ لِلَّذِي فَطَرَ السَّمَوَاتِ وَالأَرْضَ حَنِيفَاً وَمَا أَنَا مِنَ الْمُشْرِكِينَ، إِنَّ صَلاَتِي، وَنُسُكِي، وَمَحْيَايَ، وَمَمَاتِي لِلَّهِ رَبِّ الْعَالَمِينَ، لاَ شَرِيكَ لَهُ وَبِذَلِكَ أُمِرْتُ وَأَنَا مِنَ الْمُسْلِمِينَ. اللَّهُمَّ أَنْتَ المَلِكُ لاَ إِلَهَ إِلاَّ أَنْتَ، أَنْتَ رَبِّي وَأَنَا عَبْدُكَ، ظَلَمْتُ نَفْسِي وَاعْتَرَفْتُ بِذَنْبِي فَاغْفِرْ لِي ذُنُوبي جَمِيعَاً إِنَّهُ لاَ يَغْفِرُ الذُّنوبَ إِلاَّ أَنْتَ. وَاهْدِنِي لِأَحْسَنِ الأَخْلاقِ لاَ يَهْدِي لِأَحْسَنِها إِلاَّ أَنْتَ، وَاصْرِفْ عَنِّي سَيِّئَهَا، لاَ يَصْرِفُ عَنِّي سَيِّئَهَا إِلاَّ أَنْتَ، لَبَّيْكَ وَسَعْدَيْكَ، وَالخَيْرُ كُلُّهُ بِيَـــــــدَيْكَ، وَالشَّـــــرُّ لَيْسَ إِلَيْــــــكَ، أَنَا بِكَ وَإِلَيْكَ، تَبارَكْتَ وَتَعَالَيْتَ، أَسْتَغْفِرُكَ وَأَتوبُ إِلَيْكَ))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "18:4",
+      "categoryId": 18,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/saad-alghamdi/018/004-309.mp3",
+      "startMs": 0,
+      "endMs": 34926,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr9.mp3",
+        "sha256": "752883906cf17669a7113dc155544c5ad0078fad79ebe7ad7dac6dd20997ab85",
+        "startMs": 0,
+        "endMs": 34880
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9735,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ رَبَّ جِبْرَائِيلَ، وَمِيْكَائِيلَ، وَإِسْرَافِيلَ، فَاطِرَ السَّمَوَاتِ وَالأَرْضِ، عَالِمَ الغَيْبِ وَالشَّهَادَةِ أَنْتَ تَحْكُمُ بَيْنَ عِبَادِكَ فِيمَا كَانُوا فِيهِ يَخْتَلِفُونَ. اهْدِنِي لِمَا اخْتُلِفَ فِيهِ مِنَ الْحَقِّ بِإِذْنِكَ إِنَّكَ تَهْدِي مَنْ تَشَاءُ إِلَى صِرَاطٍ مُسْتَقيمٍ))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "19:1",
+      "categoryId": 19,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/019/001-306.mp3",
+      "startMs": 0,
+      "endMs": 2560,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr6.mp3",
+        "sha256": "bb092e43dd4472002b88a4ece482d781000eb01056faed2872862f6ef49f5493",
+        "startMs": 13455,
+        "endMs": 15985
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "سُبْحانَ رَبِّيَ الْعَظِيمِ"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "19:3",
+      "categoryId": 19,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/saad-alghamdi/019/003-388.mp3",
+      "startMs": 0,
+      "endMs": 7523,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr88.mp3",
+        "sha256": "478da910d7b8773e17d87be0c04ed255ef051627c9b4b9ed0eecffe9d2f1f648",
+        "startMs": 0,
+        "endMs": 7480
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((سُبُّوُحٌ، قُدُّوسٌ، رَبُّ المَلاَئِكَةِ وَالرُّوحِ))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "21:1",
+      "categoryId": 21,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/021/001-387.mp3",
+      "startMs": 0,
+      "endMs": 2691,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr87.mp3",
+        "sha256": "0f569dee1640838302b07a110e81c9e9d7ef30529bdadb11445b1f2183c77d04",
+        "startMs": 12675,
+        "endMs": 15325
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "سُبْحَانَ رَبِّيَ الأَعْلَى"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "21:3",
+      "categoryId": 21,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/saad-alghamdi/021/003-369.mp3",
+      "startMs": 0,
+      "endMs": 7471,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr69.mp3",
+        "sha256": "766beb0c0e60a19b8bea62433f2a757f8a8334234ef1690b30f5a18b12e783d6",
+        "startMs": 2955,
+        "endMs": 10380
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((سُبوحٌ، قُدُّوسٌ، رَبُّ الْمَلَائِكَةِ وَالرُّوحِ))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "21:4",
+      "categoryId": 21,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/saad-alghamdi/021/004-368.mp3",
+      "startMs": 0,
+      "endMs": 18730,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr68.mp3",
+        "sha256": "bbdb6f58349d244b38d16c803ec1074389f0cc879301f4d06ef21c8493d2c632",
+        "startMs": 0,
+        "endMs": 18680
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ لَكَ سَجَدْتُ وَبِكَ آمَنْتُ، وَلَكَ أَسْلَمْتُ، سَجَدَ وَجْهِيَ لِلَّذِي خَلَقَهُ، وَصَوَّرَهُ، وَشَقَّ سَمْعَهُ وَبَصَرَهُ، تَبَارَكَ اللَّهُ أَحْسنُ الْخَالِقينَ))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "23:1",
+      "categoryId": 23,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/023/001-371.mp3",
+      "startMs": 0,
+      "endMs": 5224,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr71.mp3",
+        "sha256": "dbe99680e22e49781cb8c06f1c8e9240238026b7ca9fe299ae95f07af1d282d7",
+        "startMs": 11575,
+        "endMs": 16760
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-quran-passage",
+        "matchedText": "فَتَبارَكَ اللَّهُ أَحْسَنُ الْخَالِقِينَ"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "23:2",
+      "categoryId": 23,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/saad-alghamdi/023/002-370.mp3",
+      "startMs": 0,
+      "endMs": 18808,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr70.mp3",
+        "sha256": "bf56a6a50b3bfe40b6635500e003e189cfc023e1a1e83f3a7eb904b71c14ae3a",
+        "startMs": 0,
+        "endMs": 18765
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9524,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ اكْتُبْ لِي بِهَا عِنْدَكَ أَجْراً، وَضَعْ عَنِّي بِهَا وِزْراً، وَاجْعَلْهَا لِي عِنْدَكَ ذُخْراً، وَتَقَبَّلْهَا مِنِّي كَمَا تَقَبَّلْتَهَا مِنْ عَبْدِكَ دَاوُدَ))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "24:1",
+      "categoryId": 24,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/024/001.mp3",
+      "startMs": 0,
+      "endMs": 66847,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr64.mp3",
+        "sha256": "4c32a37b04427a100164bfe097c5d53d895667701609808ba2241998b9f14e0e",
+        "startMs": 0,
+        "endMs": 66847
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "27:3",
+      "categoryId": 27,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/saad-alghamdi/027/003-381.mp3",
+      "startMs": 0,
+      "endMs": 44251,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr81.mp3",
+        "sha256": "b5954c8b9339dbaf60ffe448e13f04ac977120fcba4bbbf4c83e353835cae2b2",
+        "startMs": 0,
+        "endMs": 44220
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((لَا إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ، وَلَهُ الْحَمدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ. لاَ حَوْلَ وَلاَ قُوَّةَ إِلاَّ بِاللَّهِ، لاَ إِلَهَ إِلاَّ اللَّهُ، وَلاَ نَعْبُدُ إِلاَّ إِيَّاهُ, لَهُ النِّعْمَةُ وَلَهُ الْفَضْلُ وَلَهُ الثَّنَاءُ الْحَسَنُ، لَا إِلَهَ إِلاَّ اللَّهُ مُخْلِصِينَ لَهُ الدِّينَ وَلَوْ كَرِهَ الكَافِرُونَ))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "27:6",
+      "categoryId": 27,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/saad-alghamdi/027/006-380.mp3",
+      "startMs": 0,
+      "endMs": 54126,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr80.mp3",
+        "sha256": "8da022a6746a621fb2ef9dcb4432b485faae6cb23bfaea948ca05b372f2d4561",
+        "startMs": 4100,
+        "endMs": 58185
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.92,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-quran-passage",
+        "matchedText": "اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَّهُ مَا فِي السَّمَوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاءَ وَسِعَ كُرْسِيُّهُ السَّمَوَاتِ وَالأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "27:7",
+      "categoryId": 27,
+      "dhikrId": 7,
+      "url": "/audio/adhkar/saad-alghamdi/027/007-386.mp3",
+      "startMs": 0,
+      "endMs": 14184,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr86.mp3",
+        "sha256": "e2bfdbb75c1e2f219bc6aa8c4daf3891dfa49f0ba8935487693bbb499e1b1ec6",
+        "startMs": 269775,
+        "endMs": 283925
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ يُحْيِي وَيُمِيتُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "27:8",
+      "categoryId": 27,
+      "dhikrId": 8,
+      "url": "/audio/adhkar/saad-alghamdi/027/008-386.mp3",
+      "startMs": 0,
+      "endMs": 12042,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr86.mp3",
+        "sha256": "e2bfdbb75c1e2f219bc6aa8c4daf3891dfa49f0ba8935487693bbb499e1b1ec6",
+        "startMs": 701915,
+        "endMs": 713925
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْماً نافِعاً، وَرِزْقاً طَيِّباً، وَعَمَلاً مُتَقَبَّلاً"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "28:1",
+      "categoryId": 28,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/028/001.mp3",
+      "startMs": 0,
+      "endMs": 75363,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr53.mp3",
+        "sha256": "9f2fe46587dd0171a9d6c9671d67d398371fe563dc1beaa6511225d9d6ccc34b",
+        "startMs": 0,
+        "endMs": 75363
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "30:1",
+      "categoryId": 30,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/030/001.mp3",
+      "startMs": 0,
+      "endMs": 19696,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr49.mp3",
+        "sha256": "c5207f308265beb2fa2e6c77b1fc8b1173d212dfcbcd1187b57852ce22d7e705",
+        "startMs": 0,
+        "endMs": 19696
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "32:2",
+      "categoryId": 32,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/saad-alghamdi/032/002-343.mp3",
+      "startMs": 0,
+      "endMs": 22126,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr43.mp3",
+        "sha256": "c71803acea70b1a64c55d6c090ebc261c8f294bb01b92bb0125e993fd7a8cca7",
+        "startMs": 38975,
+        "endMs": 61065
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ إِنِّي أَعُوذُ بِرِضَاكَ مِنْ سَخَطِكَ، وَبِمُعَافَاتِكَ مِنْ عُقُوبَتِكَ، وَأَعُــــوذُ بِكَ مِنْكَ، لاَ أُحْصِي ثَنَاءً عَلَيْكَ، أَنْتَ كَمَا أَثْنَيْتَ عَلَى نَفْسِكَ))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "33:1",
+      "categoryId": 33,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/033/001.mp3",
+      "startMs": 0,
+      "endMs": 15909,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr83.mp3",
+        "sha256": "056636112a9b2b78bdf33b71139d98e4c2b87454272328b8a3a04a0ab86b4667",
+        "startMs": 0,
+        "endMs": 15909
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "34:1",
+      "categoryId": 34,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/034/001-342.mp3",
+      "startMs": 0,
+      "endMs": 55536,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr42.mp3",
+        "sha256": "fcb20ffbd8688ead9bba67eb75416ea735a47751b7c59189d44c373538315aae",
+        "startMs": 8115,
+        "endMs": 63620
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9423,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ إِنِّي عَبْدُكَ، ابْنُ عَبْدِكَ، ابْنُ أَمَتِكَ، نَاصِيَتِي بِيَدِكَ، مَاضٍ فِيَّ حُكْمُكَ، عَدْلٌ فِيَّ قَضَاؤُكَ، أَسْأَلُكَ بِكُــــلِّ اسْمٍ هُوَ لَكَ، سَمَّيْتَ بِهِ نَفْسَكَ، أَوْ أَنْزَلْتَهُ فِي كِتَابِكَ، أَوْ عَلَّمْتَهُ أَحَداً مِنْ خَلْقِكَ، أَوِ اسْتَأْثَرْتَ بِهِ فِي عِلْمِ الغَيْبِ عِنْدَكَ، أَنْ تَجْعَلَ القُرْآنَ رَبِيعَ قَلْبِي، وَنُورَ صَدْرِي، وَجَلاَءَ حُزْنِي، وَذَهَابَ هَمِّي))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "35:1",
+      "categoryId": 35,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/035/001-348.mp3",
+      "startMs": 0,
+      "endMs": 23693,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr48.mp3",
+        "sha256": "f2b959439eaad4ed962d7e158450345f70abb103e57822fc3bdf2a2e52e1783d",
+        "startMs": 3780,
+        "endMs": 27425
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9891,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((لاَ إِلَهَ إِلاَّ اللَّهُ الْعَظِيمُ الْحَلِيمُ، لاَ إِلَهَ إِلاَّ اللَّهُ رَبُّ الْعَرْشِ الْعَظِيمِ، لاَ إِلَهَ إِلاَّ اللَّهُ رَبُّ السَّمَوَاتِ وَرَبُّ الْأَرْضِ وَرَبُّ الْعَرْشِ الْكَرِيمِ))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "43:1",
+      "categoryId": 43,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/043/001.mp3",
+      "startMs": 0,
+      "endMs": 14629,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr35.mp3",
+        "sha256": "6c83ab85169c4ee194c018a6acb349e38f7e9758a04ab81f94cde702d0b72eba",
+        "startMs": 0,
+        "endMs": 14629
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "49:1",
+      "categoryId": 49,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/049/001-325.mp3",
+      "startMs": 0,
+      "endMs": 5512,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr25.mp3",
+        "sha256": "34f2bd3f52ec90646044486d2442051109849c21771cee82f94e439a447c82b9",
+        "startMs": 15280,
+        "endMs": 20740
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((لاَ بأْسَ طَهُورٌ إِنْ شَاءَ اللَّهُ))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "52:1",
+      "categoryId": 52,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/052/001.mp3",
+      "startMs": 0,
+      "endMs": 15856,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr56.mp3",
+        "sha256": "7f88fb13846c525369a51087e2be5445fae451fbfe3ac403391fd6b0b3d1f225",
+        "startMs": 0,
+        "endMs": 15856
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "53:1",
+      "categoryId": 53,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/053/001-320.mp3",
+      "startMs": 0,
+      "endMs": 14524,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr20.mp3",
+        "sha256": "6d8d2f8a9b75a95134e132c1583de1e7add8b760605efc2f266e0dd7f68c8a2d",
+        "startMs": 2255,
+        "endMs": 16740
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((إِنَّا لِلَّهِ وَإِنَّا إِلَيْهِ رَاجِعُونَ، اللَّهُمَّ أْجُرْنِي فِي مُصِيبَتِي، وَأَخْلِفْ لِي خَيْرَاً مِنْهَا))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "57:1",
+      "categoryId": 57,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/057/001.mp3",
+      "startMs": 0,
+      "endMs": 23562,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr36.mp3",
+        "sha256": "4b5dea836755dbe3097505828588daaada95e718b3b57c5b89e76d15f13036e5",
+        "startMs": 0,
+        "endMs": 23562
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "58:1",
+      "categoryId": 58,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/058/001.mp3",
+      "startMs": 0,
+      "endMs": 23458,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr55.mp3",
+        "sha256": "121b6cbc4931a464677ce7bc962a7fd88cc2bf4adfb1347020d648015b62de25",
+        "startMs": 0,
+        "endMs": 23458
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "60:1",
+      "categoryId": 60,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/060/001.mp3",
+      "startMs": 0,
+      "endMs": 50651,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr72.mp3",
+        "sha256": "dd48ef2d892f99ac1a4a45251e6f6893ec133df58be0005a79fbd51eb562f1e3",
+        "startMs": 0,
+        "endMs": 50651
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "62:1",
+      "categoryId": 62,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/062/001.mp3",
+      "startMs": 0,
+      "endMs": 17842,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr24.mp3",
+        "sha256": "27264b332109b633ce8446e2fddc4131457b9e50994db662f5ded74337d6fb64",
+        "startMs": 0,
+        "endMs": 17842
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "63:3",
+      "categoryId": 63,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/saad-alghamdi/063/003-311.mp3",
+      "startMs": 0,
+      "endMs": 9927,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr11.mp3",
+        "sha256": "735350eacb94abd74245ac24b9f82d85d9adcf1faffea8b9dc36f8d29bfb5af6",
+        "startMs": 1815,
+        "endMs": 11700
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ اسْقِ عِبَادَكَ، وَبَهَائِمَكَ، وَانْشُرْ رَحْمَتَكَ، وَأَحْيِي بَلَدَكَ الْمَيِّتَ))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "64:1",
+      "categoryId": 64,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/064/001.mp3",
+      "startMs": 0,
+      "endMs": 8255,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr65.mp3",
+        "sha256": "eeeb5cbb1ac3f361e544cde54560410acbb889236c442157026ddc3e8b995e37",
+        "startMs": 0,
+        "endMs": 8255
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "67:1",
+      "categoryId": 67,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/067/001.mp3",
+      "startMs": 0,
+      "endMs": 21603,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr73.mp3",
+        "sha256": "24b7eac2f006d6df32c49b698afa4547ccbfd50810b6802d3ad4e5f7e04164ad",
+        "startMs": 0,
+        "endMs": 21603
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "68:2",
+      "categoryId": 68,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/saad-alghamdi/068/002-300.mp3",
+      "startMs": 0,
+      "endMs": 8307,
+      "source": {
+        "url": "https://archive.org/download/aldker/adkr.mp3",
+        "sha256": "a7d91b78c6e75d26fbf6d62f6536e178bb5262f6d0c9be61b9ee5d9b9809f42a",
+        "startMs": 10960,
+        "endMs": 19225
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ إِنِّي أَسْأَلُكَ بِرَحْمَتِكَ الَّتِي وَسِعَتْ كُلَّ شَيْءٍ أَنْ تَغْفِرَ لِي))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "70:1",
+      "categoryId": 70,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/070/001-385.mp3",
+      "startMs": 0,
+      "endMs": 11651,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr85.mp3",
+        "sha256": "df5c1dcdc5b0d13cfb6d4e72464a2cf32a83a9b1d5018d3897ce311c735ab3c6",
+        "startMs": 36635,
+        "endMs": 48280
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": " ((الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنِي هَذَا، وَرَزَقَنِيهِ، مِنْ غَيْرِ حَوْلٍ مِنِّي وَلاَ قُوَّةٍ))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "71:1",
+      "categoryId": 71,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/071/001.mp3",
+      "startMs": 0,
+      "endMs": 24529,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr60.mp3",
+        "sha256": "ee39eddc9b8e15da47ceb74d4fc64f1147c1b4e4af30e4c80c2c3d22637d6d22",
+        "startMs": 0,
+        "endMs": 24529
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "76:1",
+      "categoryId": 76,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/076/001.mp3",
+      "startMs": 0,
+      "endMs": 18860,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr74.mp3",
+        "sha256": "6031644b72813908ffd0bd981ad6fdea7c618bc78809aac44f98da4d3c7a3d89",
+        "startMs": 0,
+        "endMs": 18860
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "77:1",
+      "categoryId": 77,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/077/001.mp3",
+      "startMs": 0,
+      "endMs": 13923,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr27.mp3",
+        "sha256": "bbe82dd0789a382392997178ac6ac7cad62a0fc98c9d56a710e2f3daac5f6c49",
+        "startMs": 0,
+        "endMs": 13923
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "79:1",
+      "categoryId": 79,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/079/001.mp3",
+      "startMs": 0,
+      "endMs": 8464,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr21.mp3",
+        "sha256": "fb99b4c5cfc3817a0bc92a1240edcb5fde083b2532196ab16768441b9aebf0e0",
+        "startMs": 0,
+        "endMs": 8464
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "80:1",
+      "categoryId": 80,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/080/001-319.mp3",
+      "startMs": 0,
+      "endMs": 19540,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr19.mp3",
+        "sha256": "4d9655818ca1bfbf09853b3f4be14fe1763932103298ca2a7d90efac5b846a31",
+        "startMs": 9835,
+        "endMs": 29340
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.96,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَهَا، وَخَيْرَ مَا جَبَلْتَهَا عَلَيْهِ، وَأَعُوذُ بِكَ مِنْ شَرِّهَا، وَشَرِّ مَا جَبَلْتَهَا عَلَيْهِ، وَإِذَا اشْتَرَى بَعِيراً فَلْيَأْخُذْ بِذِرْوَةِ سَنَامِهِ وَلْيَقُلْ مِثْلَ ذَلِكَ"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "82:1",
+      "categoryId": 82,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/082/001.mp3",
+      "startMs": 0,
+      "endMs": 12983,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr28.mp3",
+        "sha256": "fd0db5e22e7cc6ea3912996b82bb8de60d72788073dc87a82667de4d01496fc6",
+        "startMs": 0,
+        "endMs": 12983
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "83:1",
+      "categoryId": 83,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/083/001.mp3",
+      "startMs": 0,
+      "endMs": 17371,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr29.mp3",
+        "sha256": "5d692bad0c12e3a3b0eb251cbd095ca1c19fc508bc0f4768cb4fc92b57b32ef2",
+        "startMs": 0,
+        "endMs": 17371
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "85:1",
+      "categoryId": 85,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/085/001.mp3",
+      "startMs": 0,
+      "endMs": 21394,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr38.mp3",
+        "sha256": "4abf1b62ce942ece376d7c4de9b38281b379df0b94fba57da4bceea53510930f",
+        "startMs": 0,
+        "endMs": 21394
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "89:1",
+      "categoryId": 89,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/089/001.mp3",
+      "startMs": 0,
+      "endMs": 11363,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr14.mp3",
+        "sha256": "2452d5c403daa33ef89e70764f921a85de787153d275729e6c0345b97c932424",
+        "startMs": 0,
+        "endMs": 11363
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "96:1",
+      "categoryId": 96,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/096/001.mp3",
+      "startMs": 0,
+      "endMs": 8725,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr32.mp3",
+        "sha256": "d451c5398b0d80c9b7f00ec6594e1dee38ead224506752b40e43152c89bec70d",
+        "startMs": 0,
+        "endMs": 8725
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "97:1",
+      "categoryId": 97,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/097/001.mp3",
+      "startMs": 0,
+      "endMs": 38766,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr66.mp3",
+        "sha256": "78c9db3252126a06f2824248d43a7489e79dab9c7df0b42dd16a0bdcd8cba657",
+        "startMs": 0,
+        "endMs": 38766
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "98:1",
+      "categoryId": 98,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/098/001.mp3",
+      "startMs": 0,
+      "endMs": 26227,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr46.mp3",
+        "sha256": "66eb5c6bb66c481fd023f6c17c93b5a254e8ed64cdb9619d9d465a376ad1ac27",
+        "startMs": 0,
+        "endMs": 26227
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "99:1",
+      "categoryId": 99,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/099/001-386.mp3",
+      "startMs": 0,
+      "endMs": 1280,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr86.mp3",
+        "sha256": "e2bfdbb75c1e2f219bc6aa8c4daf3891dfa49f0ba8935487693bbb499e1b1ec6",
+        "startMs": 592215,
+        "endMs": 593465
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((بِسْمِ اللَّهِ))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "101:1",
+      "categoryId": 101,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/101/001-322.mp3",
+      "startMs": 0,
+      "endMs": 6635,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr22.mp3",
+        "sha256": "5532faa25cb465c8892b7a6ab2968c36fc7a4e43689de986dbe5325c6918c1e4",
+        "startMs": 2635,
+        "endMs": 9220
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "(( أَسْتَوْدِعُ اللَّهَ دِينَكَ، وَأَمَانَتَكَ، وَخَوَاتِيمَ عَمَلِكَ))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "102:1",
+      "categoryId": 102,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/102/001.mp3",
+      "startMs": 0,
+      "endMs": 41300,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr18.mp3",
+        "sha256": "71cdba5277021aa362278194714578dcde1fec2bdea9e12d58fa0db6ba911388",
+        "startMs": 0,
+        "endMs": 41300
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "104:1",
+      "categoryId": 104,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/104/001-386.mp3",
+      "startMs": 0,
+      "endMs": 8464,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr86.mp3",
+        "sha256": "e2bfdbb75c1e2f219bc6aa8c4daf3891dfa49f0ba8935487693bbb499e1b1ec6",
+        "startMs": 867780,
+        "endMs": 876200
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "105:1",
+      "categoryId": 105,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/105/001.mp3",
+      "startMs": 0,
+      "endMs": 10527,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr51.mp3",
+        "sha256": "aef3f8b672fc7703b8e8e08441154028adc44ffb93aa7962b4e4df9904ad1fb7",
+        "startMs": 0,
+        "endMs": 10527
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "106:1",
+      "categoryId": 106,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/106/001.mp3",
+      "startMs": 0,
+      "endMs": 6713,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr30.mp3",
+        "sha256": "45a18b13835828ca01f061869bce05c98fdf8c56bf5b026f5f471c476db57dc4",
+        "startMs": 0,
+        "endMs": 6713
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "115:1",
+      "categoryId": 115,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/115/001.mp3",
+      "startMs": 0,
+      "endMs": 21264,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr37.mp3",
+        "sha256": "d93971b6a1123dc016051d84a33b46666f27744c108969eeca8be31e4603be46",
+        "startMs": 0,
+        "endMs": 21264
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "117:1",
+      "categoryId": 117,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/117/001.mp3",
+      "startMs": 0,
+      "endMs": 14211,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr62.mp3",
+        "sha256": "a94e64d85a833f56df411d310e09d8dac13c764d57bce397a79ce1d3c60e23f5",
+        "startMs": 0,
+        "endMs": 14211
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "118:1",
+      "categoryId": 118,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/118/001.mp3",
+      "startMs": 0,
+      "endMs": 26567,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr47.mp3",
+        "sha256": "98c6040c42823d96caee732e0e9760bbbdb5876a25f20b0a65b0b468c39ba1a2",
+        "startMs": 0,
+        "endMs": 26567
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "119:1",
+      "categoryId": 119,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/119/001.mp3",
+      "startMs": 0,
+      "endMs": 25443,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr59.mp3",
+        "sha256": "324947e7f1b68dbe7094de966981661c98bef489f23fecf8f4344dec666cbcb0",
+        "startMs": 0,
+        "endMs": 25443
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "120:1",
+      "categoryId": 120,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/120/001.mp3",
+      "startMs": 0,
+      "endMs": 23798,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr57.mp3",
+        "sha256": "ad0bf44f58bf4882b04f5f718816ce92f05e181eba4c4360da403b1a86ce95e4",
+        "startMs": 0,
+        "endMs": 23798
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "122:1",
+      "categoryId": 122,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/122/001-384.mp3",
+      "startMs": 0,
+      "endMs": 2508,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr84.mp3",
+        "sha256": "88657348d9f2ebbf7c7f463e82b525584ae9af136fef11a37457ab2326f05bc0",
+        "startMs": 116515,
+        "endMs": 118985
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((سُبْحَانَ اللَّهِ!))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "124:1",
+      "categoryId": 124,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/124/001.mp3",
+      "startMs": 0,
+      "endMs": 20663,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr17.mp3",
+        "sha256": "99a52969877a8b3b9ec1d12f27d0f812db3bff07146d5b331271b47b9680ce8d",
+        "startMs": 0,
+        "endMs": 20663
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "125:1",
+      "categoryId": 125,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/125/001.mp3",
+      "startMs": 0,
+      "endMs": 27167,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr34.mp3",
+        "sha256": "8a3fec71136406d23bbc382515f402e9aa991a708cc7324df4c68fddad17cd57",
+        "startMs": 0,
+        "endMs": 27167
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "126:1",
+      "categoryId": 126,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/saad-alghamdi/126/001-386.mp3",
+      "startMs": 0,
+      "endMs": 4232,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr86.mp3",
+        "sha256": "e2bfdbb75c1e2f219bc6aa8c4daf3891dfa49f0ba8935487693bbb499e1b1ec6",
+        "startMs": 684275,
+        "endMs": 688465
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((لاَ إِلَهَ إِلاَّ اللَّهُ!))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    }
+  ],
+  "variants": [
+    {
+      "itemId": "1:3",
+      "categoryId": 1,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/saad-alghamdi/001/003-386-morning.mp3",
+      "startMs": 0,
+      "endMs": 50181,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr86.mp3",
+        "sha256": "e2bfdbb75c1e2f219bc6aa8c4daf3891dfa49f0ba8935487693bbb499e1b1ec6",
+        "startMs": 370475,
+        "endMs": 420605
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9344,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ ، وَالْحَمْدُ لِلَّهِ، لاَ إِلَهَ إلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذَا الْيَوْمِ وَخَيرَ مَا بَعْدَهُ ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي  هَذَا الْيَوْمِ وَشَرِّ مَا بَعْدَهُ، رَبِّ أَعُوذُ بِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ، رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:4",
+      "categoryId": 1,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/saad-alghamdi/001/004-386-morning.mp3",
+      "startMs": 0,
+      "endMs": 12251,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr86.mp3",
+        "sha256": "e2bfdbb75c1e2f219bc6aa8c4daf3891dfa49f0ba8935487693bbb499e1b1ec6",
+        "startMs": 163835,
+        "endMs": 176045
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا ، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ وَإِلَيْكَ النُّشُورُ"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:6",
+      "categoryId": 1,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/saad-alghamdi/001/006-386-evening.mp3",
+      "startMs": 0,
+      "endMs": 29414,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr86.mp3",
+        "sha256": "e2bfdbb75c1e2f219bc6aa8c4daf3891dfa49f0ba8935487693bbb499e1b1ec6",
+        "startMs": 421655,
+        "endMs": 451025
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.96,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-evening-instruction",
+        "matchedText": "اللهم اني امسيت اشهدك واشهد حملة عرشك وملايكتك وجميع خلقك انك انت الله لا اله الا انت وحدك لا شريك لك وان محمدا عبدك ورسولك"
+      },
+      "contextSection": "evening",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:6",
+      "categoryId": 1,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/saad-alghamdi/001/006-386-morning.mp3",
+      "startMs": 0,
+      "endMs": 29414,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr86.mp3",
+        "sha256": "e2bfdbb75c1e2f219bc6aa8c4daf3891dfa49f0ba8935487693bbb499e1b1ec6",
+        "startMs": 421655,
+        "endMs": 451025
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "اللَّهُمَّ إِنِّي أَصْبَحْتُ أُشْهِدُكَ، وَأُشْهِدُ حَمَلَةَ عَرْشِكَ، وَمَلاَئِكَتِكَ، وَجَمِيعَ خَلْقِكَ، أَنَّكَ أَنْتَ اللَّهُ لَا إِلَهَ إِلاَّ أَنْتَ وَحْدَكَ لاَ شَرِيكَ لَكَ، وَأَنَّ مُحَمَّداً عَبْدُكَ وَرَسُولُكَ"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:7",
+      "categoryId": 1,
+      "dhikrId": 7,
+      "url": "/audio/adhkar/saad-alghamdi/001/007-386-morning.mp3",
+      "startMs": 0,
+      "endMs": 15282,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr86.mp3",
+        "sha256": "e2bfdbb75c1e2f219bc6aa8c4daf3891dfa49f0ba8935487693bbb499e1b1ec6",
+        "startMs": 452375,
+        "endMs": 467605
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9474,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "اللَّهُمَّ مَا أَصْبَحَ بِي مِنْ نِعْمَةٍ أَوْ بِأَحَدٍ مِنْ خَلْقِكَ فَمِنْكَ وَحْدَكَ لاَ شَرِيكَ لَكَ، فَلَكَ الْحَمْدُ وَلَكَ الشُّكْرُ"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:16",
+      "categoryId": 1,
+      "dhikrId": 16,
+      "url": "/audio/adhkar/saad-alghamdi/001/016-386-morning.mp3",
+      "startMs": 0,
+      "endMs": 25391,
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr86.mp3",
+        "sha256": "e2bfdbb75c1e2f219bc6aa8c4daf3891dfa49f0ba8935487693bbb499e1b1ec6",
+        "startMs": 636855,
+        "endMs": 662205
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "أَصْبَحْنا عَلَى فِطْرَةِ الْإِسْلاَمِ، وَعَلَى كَلِمَةِ الْإِخْلاَصِ، وَعَلَى دِينِ نَبِيِّنَا مُحَمَّدٍ صلى الله عليه وسلم، وَعَلَى مِلَّةِ أَبِينَا إِبْرَاهِيمَ، حَنِيفاً مُسْلِماً وَمَا كَانَ مِنَ الْمُشرِكِينَ"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    }
+  ],
+  "sections": [
+    {
+      "id": "saad-alghamdi:301",
+      "readerId": "saad-alghamdi",
+      "title": "أذكار الجلوس بين السجدتين",
+      "type": "chapter",
+      "categoryIds": [
+        22
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/301.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 177635,
+      "durationMs": 13087,
+      "sha256": "ee99e4af33219cc5eb03f4ab823d9ce3078c253b22ea465eb29baa8e1450a65e",
+      "timing": {
+        "startMs": 0,
+        "endMs": 13087
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr1.mp3",
+        "sha256": "ee99e4af33219cc5eb03f4ab823d9ce3078c253b22ea465eb29baa8e1450a65e",
+        "startMs": 0,
+        "endMs": 13087
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:310",
+      "readerId": "saad-alghamdi",
+      "title": "أذكار استفتاح صلاة الليل 3",
+      "type": "chapter",
+      "categoryIds": [
+        18
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/310.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 1172219,
+      "durationMs": 105770,
+      "sha256": "20f342f206bdc0d4cfe2e3df85aaffa3c7684ff71def27ea32c47d3d4ec6a892",
+      "timing": {
+        "startMs": 0,
+        "endMs": 105770
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr10.mp3",
+        "sha256": "20f342f206bdc0d4cfe2e3df85aaffa3c7684ff71def27ea32c47d3d4ec6a892",
+        "startMs": 0,
+        "endMs": 105770
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:311",
+      "readerId": "saad-alghamdi",
+      "title": "أذكار الإستسقاء",
+      "type": "chapter",
+      "categoryIds": [
+        63
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/311.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 166998,
+      "durationMs": 11964,
+      "sha256": "735350eacb94abd74245ac24b9f82d85d9adcf1faffea8b9dc36f8d29bfb5af6",
+      "timing": {
+        "startMs": 0,
+        "endMs": 11964
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr11.mp3",
+        "sha256": "735350eacb94abd74245ac24b9f82d85d9adcf1faffea8b9dc36f8d29bfb5af6",
+        "startMs": 0,
+        "endMs": 11964
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:312",
+      "readerId": "saad-alghamdi",
+      "title": "أذكار الإستقاظ من النوم",
+      "type": "waking",
+      "categoryIds": [
+        3
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/312.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 284745,
+      "durationMs": 24842,
+      "sha256": "9a972758b92ce537734d68c88e7e964b462a0b099f5f093f44097009d782d8ae",
+      "timing": {
+        "startMs": 0,
+        "endMs": 24842
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr12.mp3",
+        "sha256": "9a972758b92ce537734d68c88e7e964b462a0b099f5f093f44097009d782d8ae",
+        "startMs": 0,
+        "endMs": 24842
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:313",
+      "readerId": "saad-alghamdi",
+      "title": "إذا أويت إالى فراشك فإقرأ",
+      "type": "chapter",
+      "categoryIds": [
+        2
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/313.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 2604580,
+      "durationMs": 238080,
+      "sha256": "56227fe0cc5551e6609f69fd0a76f5ca6d7efabded51ec6e751b2037160879e0",
+      "timing": {
+        "startMs": 0,
+        "endMs": 238080
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr13.mp3",
+        "sha256": "56227fe0cc5551e6609f69fd0a76f5ca6d7efabded51ec6e751b2037160879e0",
+        "startMs": 0,
+        "endMs": 238080
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:314",
+      "readerId": "saad-alghamdi",
+      "title": "إذا أحببت أحداً في الله",
+      "type": "chapter",
+      "categoryIds": [
+        89
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/314.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 172417,
+      "durationMs": 11363,
+      "sha256": "2452d5c403daa33ef89e70764f921a85de787153d275729e6c0345b97c932424",
+      "timing": {
+        "startMs": 0,
+        "endMs": 11363
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr14.mp3",
+        "sha256": "2452d5c403daa33ef89e70764f921a85de787153d275729e6c0345b97c932424",
+        "startMs": 0,
+        "endMs": 11363
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:315",
+      "readerId": "saad-alghamdi",
+      "title": "يـــــــــارب",
+      "type": "chapter",
+      "categoryIds": [
+        130
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/315.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 722597,
+      "durationMs": 63530,
+      "sha256": "b40a80b7672781dca44af92b6cb6116ae91054a77d30874ea1672ea6613a7b8a",
+      "timing": {
+        "startMs": 0,
+        "endMs": 63530
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr15.mp3",
+        "sha256": "b40a80b7672781dca44af92b6cb6116ae91054a77d30874ea1672ea6613a7b8a",
+        "startMs": 0,
+        "endMs": 63530
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:316",
+      "readerId": "saad-alghamdi",
+      "title": "من رأى الرؤيا أو الحلم",
+      "type": "chapter",
+      "categoryIds": [
+        31
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/316.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 358317,
+      "durationMs": 29753,
+      "sha256": "53d79c1461d1c41fed6e24deea80762930834c1d1f8470272818ceef2a4bb02e",
+      "timing": {
+        "startMs": 0,
+        "endMs": 29753
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr16.mp3",
+        "sha256": "53d79c1461d1c41fed6e24deea80762930834c1d1f8470272818ceef2a4bb02e",
+        "startMs": 0,
+        "endMs": 29753
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:317",
+      "readerId": "saad-alghamdi",
+      "title": "من أحس بوجع في جسده",
+      "type": "chapter",
+      "categoryIds": [
+        124
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/317.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 264084,
+      "durationMs": 20663,
+      "sha256": "99a52969877a8b3b9ec1d12f27d0f812db3bff07146d5b331271b47b9680ce8d",
+      "timing": {
+        "startMs": 0,
+        "endMs": 20663
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr17.mp3",
+        "sha256": "99a52969877a8b3b9ec1d12f27d0f812db3bff07146d5b331271b47b9680ce8d",
+        "startMs": 0,
+        "endMs": 20663
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:318",
+      "readerId": "saad-alghamdi",
+      "title": "ما يقول المسافر إذا صعد الثنايا",
+      "type": "chapter",
+      "categoryIds": [
+        102
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/318.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 483579,
+      "durationMs": 41300,
+      "sha256": "71cdba5277021aa362278194714578dcde1fec2bdea9e12d58fa0db6ba911388",
+      "timing": {
+        "startMs": 0,
+        "endMs": 41300
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr18.mp3",
+        "sha256": "71cdba5277021aa362278194714578dcde1fec2bdea9e12d58fa0db6ba911388",
+        "startMs": 0,
+        "endMs": 41300
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:319",
+      "readerId": "saad-alghamdi",
+      "title": "ما يقول الزوج ليلة الزفاف",
+      "type": "chapter",
+      "categoryIds": [
+        80,
+        81
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/319.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 385208,
+      "durationMs": 32235,
+      "sha256": "4d9655818ca1bfbf09853b3f4be14fe1763932103298ca2a7d90efac5b846a31",
+      "timing": {
+        "startMs": 0,
+        "endMs": 32235
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr19.mp3",
+        "sha256": "4d9655818ca1bfbf09853b3f4be14fe1763932103298ca2a7d90efac5b846a31",
+        "startMs": 0,
+        "endMs": 32235
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:302",
+      "readerId": "saad-alghamdi",
+      "title": "أذكار الخروج من المنزل",
+      "type": "chapter",
+      "categoryIds": [
+        8
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/302.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 292676,
+      "durationMs": 25130,
+      "sha256": "9082fbd5c9c634eaefeefb5c327612c5c2e101f86f9d4116dadc364278bc0715",
+      "timing": {
+        "startMs": 0,
+        "endMs": 25130
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr2.mp3",
+        "sha256": "9082fbd5c9c634eaefeefb5c327612c5c2e101f86f9d4116dadc364278bc0715",
+        "startMs": 0,
+        "endMs": 25130
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:320",
+      "readerId": "saad-alghamdi",
+      "title": "ما يقال لمن مات له ميت",
+      "type": "chapter",
+      "categoryIds": [
+        53,
+        57
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/320.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 219879,
+      "durationMs": 17398,
+      "sha256": "6d8d2f8a9b75a95134e132c1583de1e7add8b760605efc2f266e0dd7f68c8a2d",
+      "timing": {
+        "startMs": 0,
+        "endMs": 17398
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr20.mp3",
+        "sha256": "6d8d2f8a9b75a95134e132c1583de1e7add8b760605efc2f266e0dd7f68c8a2d",
+        "startMs": 0,
+        "endMs": 17398
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:321",
+      "readerId": "saad-alghamdi",
+      "title": "ما يقال للزوج بعد عقد النكاح",
+      "type": "chapter",
+      "categoryIds": [
+        79
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/321.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 132003,
+      "durationMs": 8464,
+      "sha256": "fb99b4c5cfc3817a0bc92a1240edcb5fde083b2532196ab16768441b9aebf0e0",
+      "timing": {
+        "startMs": 0,
+        "endMs": 8464
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr21.mp3",
+        "sha256": "fb99b4c5cfc3817a0bc92a1240edcb5fde083b2532196ab16768441b9aebf0e0",
+        "startMs": 0,
+        "endMs": 8464
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:322",
+      "readerId": "saad-alghamdi",
+      "title": "ما يقال لتوديع المسافر",
+      "type": "chapter",
+      "categoryIds": [
+        100,
+        101
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/322.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 139351,
+      "durationMs": 9352,
+      "sha256": "5532faa25cb465c8892b7a6ab2968c36fc7a4e43689de986dbe5325c6918c1e4",
+      "timing": {
+        "startMs": 0,
+        "endMs": 9352
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr22.mp3",
+        "sha256": "5532faa25cb465c8892b7a6ab2968c36fc7a4e43689de986dbe5325c6918c1e4",
+        "startMs": 0,
+        "endMs": 9352
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:323",
+      "readerId": "saad-alghamdi",
+      "title": "ما يقال عند هياج الريح",
+      "type": "chapter",
+      "categoryIds": [
+        61
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/323.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 310110,
+      "durationMs": 23562,
+      "sha256": "15fab9645e57abc4a4a130d23390b4b0faecc759d6d28d0766802aadde1c74d4",
+      "timing": {
+        "startMs": 0,
+        "endMs": 23562
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr23.mp3",
+        "sha256": "15fab9645e57abc4a4a130d23390b4b0faecc759d6d28d0766802aadde1c74d4",
+        "startMs": 0,
+        "endMs": 23562
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:324",
+      "readerId": "saad-alghamdi",
+      "title": "ما يقال عند سماع الرعد",
+      "type": "chapter",
+      "categoryIds": [
+        62
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/324.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 239022,
+      "durationMs": 17842,
+      "sha256": "27264b332109b633ce8446e2fddc4131457b9e50994db662f5ded74337d6fb64",
+      "timing": {
+        "startMs": 0,
+        "endMs": 17842
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr24.mp3",
+        "sha256": "27264b332109b633ce8446e2fddc4131457b9e50994db662f5ded74337d6fb64",
+        "startMs": 0,
+        "endMs": 17842
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:325",
+      "readerId": "saad-alghamdi",
+      "title": "ما يقال عند زيارة المريض",
+      "type": "chapter",
+      "categoryIds": [
+        49
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/325.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 401146,
+      "durationMs": 34011,
+      "sha256": "34f2bd3f52ec90646044486d2442051109849c21771cee82f94e439a447c82b9",
+      "timing": {
+        "startMs": 0,
+        "endMs": 34011
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr25.mp3",
+        "sha256": "34f2bd3f52ec90646044486d2442051109849c21771cee82f94e439a447c82b9",
+        "startMs": 0,
+        "endMs": 34011
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:326",
+      "readerId": "saad-alghamdi",
+      "title": "ما يقال عند النظر الى السماء",
+      "type": "chapter",
+      "categoryIds": [
+        3
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/326.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 165346,
+      "durationMs": 11624,
+      "sha256": "dfbb0e83a8df91cca47f141cfd773f7eec2bfa1ff33d71327e84b0bd80f9231b",
+      "timing": {
+        "startMs": 0,
+        "endMs": 11624
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr26.mp3",
+        "sha256": "dfbb0e83a8df91cca47f141cfd773f7eec2bfa1ff33d71327e84b0bd80f9231b",
+        "startMs": 0,
+        "endMs": 11624
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:327",
+      "readerId": "saad-alghamdi",
+      "title": "ما يقال عند العطس",
+      "type": "chapter",
+      "categoryIds": [
+        77
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/327.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 190137,
+      "durationMs": 13923,
+      "sha256": "bbe82dd0789a382392997178ac6ac7cad62a0fc98c9d56a710e2f3daac5f6c49",
+      "timing": {
+        "startMs": 0,
+        "endMs": 13923
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr27.mp3",
+        "sha256": "bbe82dd0789a382392997178ac6ac7cad62a0fc98c9d56a710e2f3daac5f6c49",
+        "startMs": 0,
+        "endMs": 13923
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:328",
+      "readerId": "saad-alghamdi",
+      "title": "ما يقال عند الشعور بالغضب",
+      "type": "chapter",
+      "categoryIds": [
+        82
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/328.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 179869,
+      "durationMs": 12983,
+      "sha256": "fd0db5e22e7cc6ea3912996b82bb8de60d72788073dc87a82667de4d01496fc6",
+      "timing": {
+        "startMs": 0,
+        "endMs": 12983
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr28.mp3",
+        "sha256": "fd0db5e22e7cc6ea3912996b82bb8de60d72788073dc87a82667de4d01496fc6",
+        "startMs": 0,
+        "endMs": 12983
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:329",
+      "readerId": "saad-alghamdi",
+      "title": "ما يقال إذا رأيت مبتلاً بمرض وغيره",
+      "type": "chapter",
+      "categoryIds": [
+        83
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/329.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 223402,
+      "durationMs": 17371,
+      "sha256": "5d692bad0c12e3a3b0eb251cbd095ca1c19fc508bc0f4768cb4fc92b57b32ef2",
+      "timing": {
+        "startMs": 0,
+        "endMs": 17371
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr29.mp3",
+        "sha256": "5d692bad0c12e3a3b0eb251cbd095ca1c19fc508bc0f4768cb4fc92b57b32ef2",
+        "startMs": 0,
+        "endMs": 17371
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:303",
+      "readerId": "saad-alghamdi",
+      "title": "أذكار الدخول والخروج من الخلاء",
+      "type": "chapter",
+      "categoryIds": [
+        4,
+        5
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/303.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 200009,
+      "durationMs": 16118,
+      "sha256": "f6e99edc050435daa1629869db052eb3ab80b909cce670861cd050647fb068c5",
+      "timing": {
+        "startMs": 0,
+        "endMs": 16118
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr3.mp3",
+        "sha256": "f6e99edc050435daa1629869db052eb3ab80b909cce670861cd050647fb068c5",
+        "startMs": 0,
+        "endMs": 16118
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:330",
+      "readerId": "saad-alghamdi",
+      "title": "ما يقال إذا رأيت ما تكره",
+      "type": "chapter",
+      "categoryIds": [
+        106
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/330.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 111073,
+      "durationMs": 6713,
+      "sha256": "45a18b13835828ca01f061869bce05c98fdf8c56bf5b026f5f471c476db57dc4",
+      "timing": {
+        "startMs": 0,
+        "endMs": 6713
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr30.mp3",
+        "sha256": "45a18b13835828ca01f061869bce05c98fdf8c56bf5b026f5f471c476db57dc4",
+        "startMs": 0,
+        "endMs": 6713
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:331",
+      "readerId": "saad-alghamdi",
+      "title": "ما يقال إذا رأيت ما تحب",
+      "type": "chapter",
+      "categoryIds": [
+        106
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/331.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 137945,
+      "durationMs": 9195,
+      "sha256": "71d06dd255cb008d40f8e3e0cef65a3ad381c465b6f6f7dc4db879c59931303e",
+      "timing": {
+        "startMs": 0,
+        "endMs": 9195
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr31.mp3",
+        "sha256": "71d06dd255cb008d40f8e3e0cef65a3ad381c465b6f6f7dc4db879c59931303e",
+        "startMs": 0,
+        "endMs": 9195
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:332",
+      "readerId": "saad-alghamdi",
+      "title": "ما يقال إذا خرجت للسفر",
+      "type": "chapter",
+      "categoryIds": [
+        96
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/332.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 131521,
+      "durationMs": 8725,
+      "sha256": "d451c5398b0d80c9b7f00ec6594e1dee38ead224506752b40e43152c89bec70d",
+      "timing": {
+        "startMs": 0,
+        "endMs": 8725
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr32.mp3",
+        "sha256": "d451c5398b0d80c9b7f00ec6594e1dee38ead224506752b40e43152c89bec70d",
+        "startMs": 0,
+        "endMs": 8725
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:333",
+      "readerId": "saad-alghamdi",
+      "title": "ما يقال إذا تعار الإنسان من الليل",
+      "type": "chapter",
+      "categoryIds": [
+        3
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/333.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 416125,
+      "durationMs": 35605,
+      "sha256": "7c327000be0d57a0f3f2b9a6d140a9852a683340608f20674853168955d061b7",
+      "timing": {
+        "startMs": 0,
+        "endMs": 35605
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr33.mp3",
+        "sha256": "7c327000be0d57a0f3f2b9a6d140a9852a683340608f20674853168955d061b7",
+        "startMs": 0,
+        "endMs": 35605
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:334",
+      "readerId": "saad-alghamdi",
+      "title": "ما يقال إذا أعجبك شيئاً من نفسك أو مالك أو ولدك ...",
+      "type": "chapter",
+      "categoryIds": [
+        125
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/334.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 327300,
+      "durationMs": 27167,
+      "sha256": "8a3fec71136406d23bbc382515f402e9aa991a708cc7324df4c68fddad17cd57",
+      "timing": {
+        "startMs": 0,
+        "endMs": 27167
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr34.mp3",
+        "sha256": "8a3fec71136406d23bbc382515f402e9aa991a708cc7324df4c68fddad17cd57",
+        "startMs": 0,
+        "endMs": 27167
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:335",
+      "readerId": "saad-alghamdi",
+      "title": "ما يقال إذا إستصعب عليك أمر",
+      "type": "chapter",
+      "categoryIds": [
+        43
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/335.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 198613,
+      "durationMs": 14629,
+      "sha256": "6c83ab85169c4ee194c018a6acb349e38f7e9758a04ab81f94cde702d0b72eba",
+      "timing": {
+        "startMs": 0,
+        "endMs": 14629
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr35.mp3",
+        "sha256": "6c83ab85169c4ee194c018a6acb349e38f7e9758a04ab81f94cde702d0b72eba",
+        "startMs": 0,
+        "endMs": 14629
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:336",
+      "readerId": "saad-alghamdi",
+      "title": "ما يعزى به أهل الميت",
+      "type": "chapter",
+      "categoryIds": [
+        57
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/336.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 310269,
+      "durationMs": 23562,
+      "sha256": "4b5dea836755dbe3097505828588daaada95e718b3b57c5b89e76d15f13036e5",
+      "timing": {
+        "startMs": 0,
+        "endMs": 23562
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr36.mp3",
+        "sha256": "4b5dea836755dbe3097505828588daaada95e718b3b57c5b89e76d15f13036e5",
+        "startMs": 0,
+        "endMs": 23562
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:337",
+      "readerId": "saad-alghamdi",
+      "title": "كيف يلبي المحرم في الحج أو العمرة",
+      "type": "chapter",
+      "categoryIds": [
+        115
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/337.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 264390,
+      "durationMs": 21264,
+      "sha256": "d93971b6a1123dc016051d84a33b46666f27744c108969eeca8be31e4603be46",
+      "timing": {
+        "startMs": 0,
+        "endMs": 21264
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr37.mp3",
+        "sha256": "d93971b6a1123dc016051d84a33b46666f27744c108969eeca8be31e4603be46",
+        "startMs": 0,
+        "endMs": 21264
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:338",
+      "readerId": "saad-alghamdi",
+      "title": "كفارة المجلس",
+      "type": "chapter",
+      "categoryIds": [
+        85
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/338.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 266883,
+      "durationMs": 21394,
+      "sha256": "4abf1b62ce942ece376d7c4de9b38281b379df0b94fba57da4bceea53510930f",
+      "timing": {
+        "startMs": 0,
+        "endMs": 21394
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr38.mp3",
+        "sha256": "4abf1b62ce942ece376d7c4de9b38281b379df0b94fba57da4bceea53510930f",
+        "startMs": 0,
+        "endMs": 21394
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:339",
+      "readerId": "saad-alghamdi",
+      "title": "سيد الإستغفار",
+      "type": "chapter",
+      "categoryIds": [
+        1
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/339.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 878163,
+      "durationMs": 60839,
+      "sha256": "573a41e356fc28a1a0185509a45266780c09c2d3a897a0b092456d44d21e6bc8",
+      "timing": {
+        "startMs": 0,
+        "endMs": 60839
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr39.mp3",
+        "sha256": "573a41e356fc28a1a0185509a45266780c09c2d3a897a0b092456d44d21e6bc8",
+        "startMs": 0,
+        "endMs": 60839
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:304",
+      "readerId": "saad-alghamdi",
+      "title": "أذكار الذهاب ودخول المسجد",
+      "type": "chapter",
+      "categoryIds": [
+        10,
+        11
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/304.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 400671,
+      "durationMs": 34534,
+      "sha256": "00b32ee53d91653bfae192132f4b065220ef9a54964d22a204fdaab5fa9c5266",
+      "timing": {
+        "startMs": 0,
+        "endMs": 34534
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr4.mp3",
+        "sha256": "00b32ee53d91653bfae192132f4b065220ef9a54964d22a204fdaab5fa9c5266",
+        "startMs": 0,
+        "endMs": 34534
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:340",
+      "readerId": "saad-alghamdi",
+      "title": "رقية المريض",
+      "type": "chapter",
+      "categoryIds": [
+        49,
+        124,
+        48
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/340.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 1729147,
+      "durationMs": 156944,
+      "sha256": "873fb14e4cc896da35ab7e2b4e0fd4d0ca87766b0fa57799ecfd71ac5a7719af",
+      "timing": {
+        "startMs": 0,
+        "endMs": 156944
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr40.mp3",
+        "sha256": "873fb14e4cc896da35ab7e2b4e0fd4d0ca87766b0fa57799ecfd71ac5a7719af",
+        "startMs": 0,
+        "endMs": 156944
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:341",
+      "readerId": "saad-alghamdi",
+      "title": "دعاء من عليه دين عجز عنه",
+      "type": "chapter",
+      "categoryIds": [
+        41
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/341.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 209853,
+      "durationMs": 16039,
+      "sha256": "3b17341100f2e1afcf84b10d2db5528b63dd9e29755a266a623cc83ac66d593f",
+      "timing": {
+        "startMs": 0,
+        "endMs": 16039
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr41.mp3",
+        "sha256": "3b17341100f2e1afcf84b10d2db5528b63dd9e29755a266a623cc83ac66d593f",
+        "startMs": 0,
+        "endMs": 16039
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:342",
+      "readerId": "saad-alghamdi",
+      "title": "دعاء من أصابه هم أو حزن",
+      "type": "chapter",
+      "categoryIds": [
+        34
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/342.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 732640,
+      "durationMs": 64000,
+      "sha256": "fcb20ffbd8688ead9bba67eb75416ea735a47751b7c59189d44c373538315aae",
+      "timing": {
+        "startMs": 0,
+        "endMs": 64000
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr42.mp3",
+        "sha256": "fcb20ffbd8688ead9bba67eb75416ea735a47751b7c59189d44c373538315aae",
+        "startMs": 0,
+        "endMs": 64000
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:343",
+      "readerId": "saad-alghamdi",
+      "title": "دعاء قنوت الوتر",
+      "type": "chapter",
+      "categoryIds": [
+        32
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/343.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 1067566,
+      "durationMs": 100911,
+      "sha256": "c71803acea70b1a64c55d6c090ebc261c8f294bb01b92bb0125e993fd7a8cca7",
+      "timing": {
+        "startMs": 0,
+        "endMs": 100911
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr43.mp3",
+        "sha256": "c71803acea70b1a64c55d6c090ebc261c8f294bb01b92bb0125e993fd7a8cca7",
+        "startMs": 0,
+        "endMs": 100911
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:344",
+      "readerId": "saad-alghamdi",
+      "title": "دعاء ركوب الدابة والسفر",
+      "type": "chapter",
+      "categoryIds": [
+        95,
+        96
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/344.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 936861,
+      "durationMs": 78550,
+      "sha256": "0812f4652e4ac80a2059395dd07535885ad8188dfbc8035696d62284f30b526c",
+      "timing": {
+        "startMs": 0,
+        "endMs": 78550
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr44.mp3",
+        "sha256": "0812f4652e4ac80a2059395dd07535885ad8188dfbc8035696d62284f30b526c",
+        "startMs": 0,
+        "endMs": 78550
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:345",
+      "readerId": "saad-alghamdi",
+      "title": "دعاء دخول المنزل",
+      "type": "chapter",
+      "categoryIds": [
+        9
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/345.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 242054,
+      "durationMs": 19122,
+      "sha256": "ea1847cc1a78487a8a96388850a56f34ae55b4ac245065f79b4d3c8084b996d9",
+      "timing": {
+        "startMs": 0,
+        "endMs": 19122
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr45.mp3",
+        "sha256": "ea1847cc1a78487a8a96388850a56f34ae55b4ac245065f79b4d3c8084b996d9",
+        "startMs": 0,
+        "endMs": 19122
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:346",
+      "readerId": "saad-alghamdi",
+      "title": "دعاء دخول السوق",
+      "type": "chapter",
+      "categoryIds": [
+        98
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/346.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 326115,
+      "durationMs": 26227,
+      "sha256": "66eb5c6bb66c481fd023f6c17c93b5a254e8ed64cdb9619d9d465a376ad1ac27",
+      "timing": {
+        "startMs": 0,
+        "endMs": 26227
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr46.mp3",
+        "sha256": "66eb5c6bb66c481fd023f6c17c93b5a254e8ed64cdb9619d9d465a376ad1ac27",
+        "startMs": 0,
+        "endMs": 26227
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:347",
+      "readerId": "saad-alghamdi",
+      "title": "دعاء الوقوف على الصفا والمروة",
+      "type": "chapter",
+      "categoryIds": [
+        118
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/347.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 320801,
+      "durationMs": 26567,
+      "sha256": "98c6040c42823d96caee732e0e9760bbbdb5876a25f20b0a65b0b468c39ba1a2",
+      "timing": {
+        "startMs": 0,
+        "endMs": 26567
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr47.mp3",
+        "sha256": "98c6040c42823d96caee732e0e9760bbbdb5876a25f20b0a65b0b468c39ba1a2",
+        "startMs": 0,
+        "endMs": 26567
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:348",
+      "readerId": "saad-alghamdi",
+      "title": "دعاء الكرب والأمور المهمة",
+      "type": "chapter",
+      "categoryIds": [
+        35
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/348.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 416723,
+      "durationMs": 35657,
+      "sha256": "f2b959439eaad4ed962d7e158450345f70abb103e57822fc3bdf2a2e52e1783d",
+      "timing": {
+        "startMs": 0,
+        "endMs": 35657
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr48.mp3",
+        "sha256": "f2b959439eaad4ed962d7e158450345f70abb103e57822fc3bdf2a2e52e1783d",
+        "startMs": 0,
+        "endMs": 35657
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:349",
+      "readerId": "saad-alghamdi",
+      "title": "دعاء القلق والفزع في النوم",
+      "type": "chapter",
+      "categoryIds": [
+        30
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/349.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 249307,
+      "durationMs": 19696,
+      "sha256": "c5207f308265beb2fa2e6c77b1fc8b1173d212dfcbcd1187b57852ce22d7e705",
+      "timing": {
+        "startMs": 0,
+        "endMs": 19696
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr49.mp3",
+        "sha256": "c5207f308265beb2fa2e6c77b1fc8b1173d212dfcbcd1187b57852ce22d7e705",
+        "startMs": 0,
+        "endMs": 19696
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:305",
+      "readerId": "saad-alghamdi",
+      "title": "أذكار الرفع من الركوع",
+      "type": "chapter",
+      "categoryIds": [
+        20
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/305.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 458238,
+      "durationMs": 39184,
+      "sha256": "7cefe581afcac86d978f045d4e160bc305e8a7fdcab09424203cdabf9a3e60b2",
+      "timing": {
+        "startMs": 0,
+        "endMs": 39184
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr5.mp3",
+        "sha256": "7cefe581afcac86d978f045d4e160bc305e8a7fdcab09424203cdabf9a3e60b2",
+        "startMs": 0,
+        "endMs": 39184
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:350",
+      "readerId": "saad-alghamdi",
+      "title": "دعاء الصلاة على الميت",
+      "type": "chapter",
+      "categoryIds": [
+        55
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/350.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 1245763,
+      "durationMs": 112065,
+      "sha256": "77966c39e4e1f91ad6c2187f40b65b2f6a6df8bf16e619db2840870aee2a3d9a",
+      "timing": {
+        "startMs": 0,
+        "endMs": 112065
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr50.mp3",
+        "sha256": "77966c39e4e1f91ad6c2187f40b65b2f6a6df8bf16e619db2840870aee2a3d9a",
+        "startMs": 0,
+        "endMs": 112065
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:351",
+      "readerId": "saad-alghamdi",
+      "title": "دعاء الرجوع من السفر",
+      "type": "chapter",
+      "categoryIds": [
+        105
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/351.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 151353,
+      "durationMs": 10527,
+      "sha256": "aef3f8b672fc7703b8e8e08441154028adc44ffb93aa7962b4e4df9904ad1fb7",
+      "timing": {
+        "startMs": 0,
+        "endMs": 10527
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr51.mp3",
+        "sha256": "aef3f8b672fc7703b8e8e08441154028adc44ffb93aa7962b4e4df9904ad1fb7",
+        "startMs": 0,
+        "endMs": 10527
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:352",
+      "readerId": "saad-alghamdi",
+      "title": "دعاء الخروج من المسجد",
+      "type": "chapter",
+      "categoryIds": [
+        12
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/352.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 131926,
+      "durationMs": 8882,
+      "sha256": "096b943737dfede72072168986c659eb2eeb755d8a5752dde1fdbb88c798c49c",
+      "timing": {
+        "startMs": 0,
+        "endMs": 8882
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr52.mp3",
+        "sha256": "096b943737dfede72072168986c659eb2eeb755d8a5752dde1fdbb88c798c49c",
+        "startMs": 0,
+        "endMs": 8882
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:353",
+      "readerId": "saad-alghamdi",
+      "title": "دعاء الإستخارة",
+      "type": "chapter",
+      "categoryIds": [
+        28
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/353.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 848460,
+      "durationMs": 75363,
+      "sha256": "9f2fe46587dd0171a9d6c9671d67d398371fe563dc1beaa6511225d9d6ccc34b",
+      "timing": {
+        "startMs": 0,
+        "endMs": 75363
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr53.mp3",
+        "sha256": "9f2fe46587dd0171a9d6c9671d67d398371fe563dc1beaa6511225d9d6ccc34b",
+        "startMs": 0,
+        "endMs": 75363
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:354",
+      "readerId": "saad-alghamdi",
+      "title": "دعاء الإرتقاء على الصفا والمروة",
+      "type": "chapter",
+      "categoryIds": [
+        118
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/354.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 834267,
+      "durationMs": 73143,
+      "sha256": "38668706704369c7e584e2a480f5ac17db1cc5f3759c4ec0bd2dd7a1e2952ef3",
+      "timing": {
+        "startMs": 0,
+        "endMs": 73143
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr54.mp3",
+        "sha256": "38668706704369c7e584e2a480f5ac17db1cc5f3759c4ec0bd2dd7a1e2952ef3",
+        "startMs": 0,
+        "endMs": 73143
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:355",
+      "readerId": "saad-alghamdi",
+      "title": "دعاء إدخال الميت القبر",
+      "type": "chapter",
+      "categoryIds": [
+        58
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/355.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 296954,
+      "durationMs": 23458,
+      "sha256": "121b6cbc4931a464677ce7bc962a7fd88cc2bf4adfb1347020d648015b62de25",
+      "timing": {
+        "startMs": 0,
+        "endMs": 23458
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr55.mp3",
+        "sha256": "121b6cbc4931a464677ce7bc962a7fd88cc2bf4adfb1347020d648015b62de25",
+        "startMs": 0,
+        "endMs": 23458
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:356",
+      "readerId": "saad-alghamdi",
+      "title": "تلقين المحتضر",
+      "type": "chapter",
+      "categoryIds": [
+        52
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/356.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 206586,
+      "durationMs": 15856,
+      "sha256": "7f88fb13846c525369a51087e2be5445fae451fbfe3ac403391fd6b0b3d1f225",
+      "timing": {
+        "startMs": 0,
+        "endMs": 15856
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr56.mp3",
+        "sha256": "7f88fb13846c525369a51087e2be5445fae451fbfe3ac403391fd6b0b3d1f225",
+        "startMs": 0,
+        "endMs": 15856
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:357",
+      "readerId": "saad-alghamdi",
+      "title": "الذكر عند المشعر الحرام",
+      "type": "chapter",
+      "categoryIds": [
+        120
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/357.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 301577,
+      "durationMs": 23798,
+      "sha256": "ad0bf44f58bf4882b04f5f718816ce92f05e181eba4c4360da403b1a86ce95e4",
+      "timing": {
+        "startMs": 0,
+        "endMs": 23798
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr57.mp3",
+        "sha256": "ad0bf44f58bf4882b04f5f718816ce92f05e181eba4c4360da403b1a86ce95e4",
+        "startMs": 0,
+        "endMs": 23798
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:358",
+      "readerId": "saad-alghamdi",
+      "title": "الذاكرون الله كثيراً والذاكرات",
+      "type": "chapter",
+      "categoryIds": [
+        130
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/358.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 1431835,
+      "durationMs": 129332,
+      "sha256": "c12f12926281c7b4392bbc0234552ee99c2ab80c2639293f3f92e6c0c09cd17a",
+      "timing": {
+        "startMs": 0,
+        "endMs": 129332
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr58.mp3",
+        "sha256": "c12f12926281c7b4392bbc0234552ee99c2ab80c2639293f3f92e6c0c09cd17a",
+        "startMs": 0,
+        "endMs": 129332
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:359",
+      "readerId": "saad-alghamdi",
+      "title": "الدعاء يوم عرفة",
+      "type": "chapter",
+      "categoryIds": [
+        119
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/359.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 313319,
+      "durationMs": 25443,
+      "sha256": "324947e7f1b68dbe7094de966981661c98bef489f23fecf8f4344dec666cbcb0",
+      "timing": {
+        "startMs": 0,
+        "endMs": 25443
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr59.mp3",
+        "sha256": "324947e7f1b68dbe7094de966981661c98bef489f23fecf8f4344dec666cbcb0",
+        "startMs": 0,
+        "endMs": 25443
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:306",
+      "readerId": "saad-alghamdi",
+      "title": "أذكار الركوع 1",
+      "type": "chapter",
+      "categoryIds": [
+        19
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/306.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 331399,
+      "durationMs": 28369,
+      "sha256": "bb092e43dd4472002b88a4ece482d781000eb01056faed2872862f6ef49f5493",
+      "timing": {
+        "startMs": 0,
+        "endMs": 28369
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr6.mp3",
+        "sha256": "bb092e43dd4472002b88a4ece482d781000eb01056faed2872862f6ef49f5493",
+        "startMs": 0,
+        "endMs": 28369
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:360",
+      "readerId": "saad-alghamdi",
+      "title": "الدعاء لأهل الطعام بعد الأكل",
+      "type": "chapter",
+      "categoryIds": [
+        71
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/360.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 303695,
+      "durationMs": 24529,
+      "sha256": "ee39eddc9b8e15da47ceb74d4fc64f1147c1b4e4af30e4c80c2c3d22637d6d22",
+      "timing": {
+        "startMs": 0,
+        "endMs": 24529
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr60.mp3",
+        "sha256": "ee39eddc9b8e15da47ceb74d4fc64f1147c1b4e4af30e4c80c2c3d22637d6d22",
+        "startMs": 0,
+        "endMs": 24529
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:361",
+      "readerId": "saad-alghamdi",
+      "title": "الدعاء عند إغماض الميت وعند التعزية",
+      "type": "chapter",
+      "categoryIds": [
+        54,
+        57
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/361.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 333116,
+      "durationMs": 28029,
+      "sha256": "1b32107634cdf5a3efd8264c79ac7fbda7d92baa0bc8e3f0d1aafe821d339e37",
+      "timing": {
+        "startMs": 0,
+        "endMs": 28029
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr61.mp3",
+        "sha256": "1b32107634cdf5a3efd8264c79ac7fbda7d92baa0bc8e3f0d1aafe821d339e37",
+        "startMs": 0,
+        "endMs": 28029
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:362",
+      "readerId": "saad-alghamdi",
+      "title": "الدعاء بين الركن اليماني والحجر الأسود",
+      "type": "chapter",
+      "categoryIds": [
+        117
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/362.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 192451,
+      "durationMs": 14211,
+      "sha256": "a94e64d85a833f56df411d310e09d8dac13c764d57bce397a79ce1d3c60e23f5",
+      "timing": {
+        "startMs": 0,
+        "endMs": 14211
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr62.mp3",
+        "sha256": "a94e64d85a833f56df411d310e09d8dac13c764d57bce397a79ce1d3c60e23f5",
+        "startMs": 0,
+        "endMs": 14211
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:363",
+      "readerId": "saad-alghamdi",
+      "title": "الدعاء بعد التشهد",
+      "type": "chapter",
+      "categoryIds": [
+        26
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/363.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 562053,
+      "durationMs": 49711,
+      "sha256": "8d62f211484d184914c8935517aaca03cc338ef65ffb233ab0270f3f23f2f817",
+      "timing": {
+        "startMs": 0,
+        "endMs": 49711
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr63.mp3",
+        "sha256": "8d62f211484d184914c8935517aaca03cc338ef65ffb233ab0270f3f23f2f817",
+        "startMs": 0,
+        "endMs": 49711
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:364",
+      "readerId": "saad-alghamdi",
+      "title": "التشهد للصلاة",
+      "type": "chapter",
+      "categoryIds": [
+        24
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/364.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 742850,
+      "durationMs": 66847,
+      "sha256": "4c32a37b04427a100164bfe097c5d53d895667701609808ba2241998b9f14e0e",
+      "timing": {
+        "startMs": 0,
+        "endMs": 66847
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr64.mp3",
+        "sha256": "4c32a37b04427a100164bfe097c5d53d895667701609808ba2241998b9f14e0e",
+        "startMs": 0,
+        "endMs": 66847
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:365",
+      "readerId": "saad-alghamdi",
+      "title": "أذكار نزول المطر",
+      "type": "chapter",
+      "categoryIds": [
+        64
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/365.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 139347,
+      "durationMs": 8255,
+      "sha256": "eeeb5cbb1ac3f361e544cde54560410acbb889236c442157026ddc3e8b995e37",
+      "timing": {
+        "startMs": 0,
+        "endMs": 8255
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr65.mp3",
+        "sha256": "eeeb5cbb1ac3f361e544cde54560410acbb889236c442157026ddc3e8b995e37",
+        "startMs": 0,
+        "endMs": 8255
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:366",
+      "readerId": "saad-alghamdi",
+      "title": "أذكار من يريد دخول قرية أو لا يريد",
+      "type": "chapter",
+      "categoryIds": [
+        97
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/366.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 455662,
+      "durationMs": 38766,
+      "sha256": "78c9db3252126a06f2824248d43a7489e79dab9c7df0b42dd16a0bdcd8cba657",
+      "timing": {
+        "startMs": 0,
+        "endMs": 38766
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr66.mp3",
+        "sha256": "78c9db3252126a06f2824248d43a7489e79dab9c7df0b42dd16a0bdcd8cba657",
+        "startMs": 0,
+        "endMs": 38766
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:367",
+      "readerId": "saad-alghamdi",
+      "title": "أذكار سماع الأذان",
+      "type": "chapter",
+      "categoryIds": [
+        13
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/367.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 745904,
+      "durationMs": 71367,
+      "sha256": "bf66e549cd0aeb4fbc54c636666dd61e680d3f718169c556631b37809734b953",
+      "timing": {
+        "startMs": 0,
+        "endMs": 71367
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr67.mp3",
+        "sha256": "bf66e549cd0aeb4fbc54c636666dd61e680d3f718169c556631b37809734b953",
+        "startMs": 0,
+        "endMs": 71367
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:368",
+      "readerId": "saad-alghamdi",
+      "title": "أذكار سجود الصلاة من الليل 2",
+      "type": "chapter",
+      "categoryIds": [
+        21
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/368.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 245408,
+      "durationMs": 19148,
+      "sha256": "bbdb6f58349d244b38d16c803ec1074389f0cc879301f4d06ef21c8493d2c632",
+      "timing": {
+        "startMs": 0,
+        "endMs": 19148
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr68.mp3",
+        "sha256": "bbdb6f58349d244b38d16c803ec1074389f0cc879301f4d06ef21c8493d2c632",
+        "startMs": 0,
+        "endMs": 19148
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:369",
+      "readerId": "saad-alghamdi",
+      "title": "أذكار سجود الصلاة من الليل 1",
+      "type": "chapter",
+      "categoryIds": [
+        21
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/369.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 150721,
+      "durationMs": 10475,
+      "sha256": "766beb0c0e60a19b8bea62433f2a757f8a8334234ef1690b30f5a18b12e783d6",
+      "timing": {
+        "startMs": 0,
+        "endMs": 10475
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr69.mp3",
+        "sha256": "766beb0c0e60a19b8bea62433f2a757f8a8334234ef1690b30f5a18b12e783d6",
+        "startMs": 0,
+        "endMs": 10475
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:307",
+      "readerId": "saad-alghamdi",
+      "title": "أذكار الركوع 2",
+      "type": "chapter",
+      "categoryIds": [
+        19
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/307.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 197917,
+      "durationMs": 14759,
+      "sha256": "366ad7446eb37c28b54bc033b1c30ef2f83a5efe21a3ca9dc32da5ae64a8e2d4",
+      "timing": {
+        "startMs": 0,
+        "endMs": 14759
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr7.mp3",
+        "sha256": "366ad7446eb37c28b54bc033b1c30ef2f83a5efe21a3ca9dc32da5ae64a8e2d4",
+        "startMs": 0,
+        "endMs": 14759
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:370",
+      "readerId": "saad-alghamdi",
+      "title": "أذكار سجود التلاوة 2",
+      "type": "chapter",
+      "categoryIds": [
+        23
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/370.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 265781,
+      "durationMs": 21316,
+      "sha256": "bf56a6a50b3bfe40b6635500e003e189cfc023e1a1e83f3a7eb904b71c14ae3a",
+      "timing": {
+        "startMs": 0,
+        "endMs": 21316
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr70.mp3",
+        "sha256": "bf56a6a50b3bfe40b6635500e003e189cfc023e1a1e83f3a7eb904b71c14ae3a",
+        "startMs": 0,
+        "endMs": 21316
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:371",
+      "readerId": "saad-alghamdi",
+      "title": "أذكار سجود التلاوة 1",
+      "type": "chapter",
+      "categoryIds": [
+        23
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/371.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 223545,
+      "durationMs": 17267,
+      "sha256": "dbe99680e22e49781cb8c06f1c8e9240238026b7ca9fe299ae95f07af1d282d7",
+      "timing": {
+        "startMs": 0,
+        "endMs": 17267
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr71.mp3",
+        "sha256": "dbe99680e22e49781cb8c06f1c8e9240238026b7ca9fe299ae95f07af1d282d7",
+        "startMs": 0,
+        "endMs": 17267
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:372",
+      "readerId": "saad-alghamdi",
+      "title": "أذكار زيارة القبور",
+      "type": "chapter",
+      "categoryIds": [
+        60
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/372.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 573186,
+      "durationMs": 50651,
+      "sha256": "dd48ef2d892f99ac1a4a45251e6f6893ec133df58be0005a79fbd51eb562f1e3",
+      "timing": {
+        "startMs": 0,
+        "endMs": 50651
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr72.mp3",
+        "sha256": "dd48ef2d892f99ac1a4a45251e6f6893ec133df58be0005a79fbd51eb562f1e3",
+        "startMs": 0,
+        "endMs": 50651
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:373",
+      "readerId": "saad-alghamdi",
+      "title": "أذكار رؤية الهلال",
+      "type": "chapter",
+      "categoryIds": [
+        67
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/373.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 276304,
+      "durationMs": 21603,
+      "sha256": "24b7eac2f006d6df32c49b698afa4547ccbfd50810b6802d3ad4e5f7e04164ad",
+      "timing": {
+        "startMs": 0,
+        "endMs": 21603
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr73.mp3",
+        "sha256": "24b7eac2f006d6df32c49b698afa4547ccbfd50810b6802d3ad4e5f7e04164ad",
+        "startMs": 0,
+        "endMs": 21603
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:374",
+      "readerId": "saad-alghamdi",
+      "title": "أذكار رؤية الباكورة من الثمر",
+      "type": "chapter",
+      "categoryIds": [
+        76
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/374.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 242331,
+      "durationMs": 18860,
+      "sha256": "6031644b72813908ffd0bd981ad6fdea7c618bc78809aac44f98da4d3c7a3d89",
+      "timing": {
+        "startMs": 0,
+        "endMs": 18860
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr74.mp3",
+        "sha256": "6031644b72813908ffd0bd981ad6fdea7c618bc78809aac44f98da4d3c7a3d89",
+        "startMs": 0,
+        "endMs": 18860
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:375",
+      "readerId": "saad-alghamdi",
+      "title": "أذكار دخول المسجد",
+      "type": "chapter",
+      "categoryIds": [
+        11
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/375.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 265928,
+      "durationMs": 21551,
+      "sha256": "a1b4dce42b30c54f239034264d6382d0e623bd63819f6436fcee6a1e22462aa6",
+      "timing": {
+        "startMs": 0,
+        "endMs": 21551
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr75.mp3",
+        "sha256": "a1b4dce42b30c54f239034264d6382d0e623bd63819f6436fcee6a1e22462aa6",
+        "startMs": 0,
+        "endMs": 21551
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:376",
+      "readerId": "saad-alghamdi",
+      "title": "أذكار تكبيرة الإحرام 2",
+      "type": "chapter",
+      "categoryIds": [
+        18
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/376.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 321230,
+      "durationMs": 27063,
+      "sha256": "45a6491a70fa2aba6f89591acec536c00680df0637bd18b4c0267f18e2925f24",
+      "timing": {
+        "startMs": 0,
+        "endMs": 27063
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr76.mp3",
+        "sha256": "45a6491a70fa2aba6f89591acec536c00680df0637bd18b4c0267f18e2925f24",
+        "startMs": 0,
+        "endMs": 27063
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:377",
+      "readerId": "saad-alghamdi",
+      "title": "أذكار تكبيرة الإحرام 1",
+      "type": "chapter",
+      "categoryIds": [
+        18
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/377.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 206441,
+      "durationMs": 15961,
+      "sha256": "9d4d4dd5c6a73c0851947f1193b12c61c8d2eedfb378de8b6f654e6903eda297",
+      "timing": {
+        "startMs": 0,
+        "endMs": 15961
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr77.mp3",
+        "sha256": "9d4d4dd5c6a73c0851947f1193b12c61c8d2eedfb378de8b6f654e6903eda297",
+        "startMs": 0,
+        "endMs": 15961
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:378",
+      "readerId": "saad-alghamdi",
+      "title": "أذكار بعد الوضوء",
+      "type": "chapter",
+      "categoryIds": [
+        7
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/378.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 483220,
+      "durationMs": 43990,
+      "sha256": "a0b9eb079fba6e531df67e0723dbc8fd76a56dde3e92b02fc7a6b27500744e92",
+      "timing": {
+        "startMs": 0,
+        "endMs": 43990
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr78.mp3",
+        "sha256": "a0b9eb079fba6e531df67e0723dbc8fd76a56dde3e92b02fc7a6b27500744e92",
+        "startMs": 0,
+        "endMs": 43990
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:379",
+      "readerId": "saad-alghamdi",
+      "title": "أذكار بعد الصلاة - سورة الإخلاص والمعوذتان",
+      "type": "chapter",
+      "categoryIds": [
+        27
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/379.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 1260223,
+      "durationMs": 114207,
+      "sha256": "9f56208e3b6e88fd9d5f689472d73996692a21ca90011575664cc3263e5000f8",
+      "timing": {
+        "startMs": 0,
+        "endMs": 114207
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr79.mp3",
+        "sha256": "9f56208e3b6e88fd9d5f689472d73996692a21ca90011575664cc3263e5000f8",
+        "startMs": 0,
+        "endMs": 114207
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:308",
+      "readerId": "saad-alghamdi",
+      "title": "أذكار استفتاح صلاة الليل 1",
+      "type": "chapter",
+      "categoryIds": [
+        18
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/308.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 1041590,
+      "durationMs": 94929,
+      "sha256": "0ece617f5bf019378f30afcc46a86ce8f80607f3833da98b7fe54c40d2b47eb6",
+      "timing": {
+        "startMs": 0,
+        "endMs": 94929
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr8.mp3",
+        "sha256": "0ece617f5bf019378f30afcc46a86ce8f80607f3833da98b7fe54c40d2b47eb6",
+        "startMs": 0,
+        "endMs": 94929
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:380",
+      "readerId": "saad-alghamdi",
+      "title": "أذكار بعد الصلاة - آية الكرسي",
+      "type": "chapter",
+      "categoryIds": [
+        27
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/380.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 662959,
+      "durationMs": 59716,
+      "sha256": "8da022a6746a621fb2ef9dcb4432b485faae6cb23bfaea948ca05b372f2d4561",
+      "timing": {
+        "startMs": 0,
+        "endMs": 59716
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr80.mp3",
+        "sha256": "8da022a6746a621fb2ef9dcb4432b485faae6cb23bfaea948ca05b372f2d4561",
+        "startMs": 0,
+        "endMs": 59716
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:381",
+      "readerId": "saad-alghamdi",
+      "title": "أذكار بعد الصلاة 2",
+      "type": "chapter",
+      "categoryIds": [
+        27
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/381.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 510341,
+      "durationMs": 45061,
+      "sha256": "b5954c8b9339dbaf60ffe448e13f04ac977120fcba4bbbf4c83e353835cae2b2",
+      "timing": {
+        "startMs": 0,
+        "endMs": 45061
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr81.mp3",
+        "sha256": "b5954c8b9339dbaf60ffe448e13f04ac977120fcba4bbbf4c83e353835cae2b2",
+        "startMs": 0,
+        "endMs": 45061
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:382",
+      "readerId": "saad-alghamdi",
+      "title": "أذكار بعد الصلاة 1",
+      "type": "chapter",
+      "categoryIds": [
+        27
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/382.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 543238,
+      "durationMs": 47752,
+      "sha256": "a837949156072ce2c98b757b035b6f091580d92d6435f73c48db0c07eb3a9fe0",
+      "timing": {
+        "startMs": 0,
+        "endMs": 47752
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr82.mp3",
+        "sha256": "a837949156072ce2c98b757b035b6f091580d92d6435f73c48db0c07eb3a9fe0",
+        "startMs": 0,
+        "endMs": 47752
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:383",
+      "readerId": "saad-alghamdi",
+      "title": "أذكار بعد التسليمتين من الوتر",
+      "type": "chapter",
+      "categoryIds": [
+        33
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/383.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 208330,
+      "durationMs": 15909,
+      "sha256": "056636112a9b2b78bdf33b71139d98e4c2b87454272328b8a3a04a0ab86b4667",
+      "timing": {
+        "startMs": 0,
+        "endMs": 15909
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr83.mp3",
+        "sha256": "056636112a9b2b78bdf33b71139d98e4c2b87454272328b8a3a04a0ab86b4667",
+        "startMs": 0,
+        "endMs": 15909
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:384",
+      "readerId": "saad-alghamdi",
+      "title": "أذكار النوم",
+      "type": "sleep",
+      "categoryIds": [
+        2
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/384.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 1448367,
+      "durationMs": 130351,
+      "sha256": "88657348d9f2ebbf7c7f463e82b525584ae9af136fef11a37457ab2326f05bc0",
+      "timing": {
+        "startMs": 0,
+        "endMs": 130351
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr84.mp3",
+        "sha256": "88657348d9f2ebbf7c7f463e82b525584ae9af136fef11a37457ab2326f05bc0",
+        "startMs": 0,
+        "endMs": 130351
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:385",
+      "readerId": "saad-alghamdi",
+      "title": "أذكار الطعام",
+      "type": "chapter",
+      "categoryIds": [
+        69,
+        70
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/385.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 557789,
+      "durationMs": 48300,
+      "sha256": "df5c1dcdc5b0d13cfb6d4e72464a2cf32a83a9b1d5018d3897ce311c735ab3c6",
+      "timing": {
+        "startMs": 0,
+        "endMs": 48300
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr85.mp3",
+        "sha256": "df5c1dcdc5b0d13cfb6d4e72464a2cf32a83a9b1d5018d3897ce311c735ab3c6",
+        "startMs": 0,
+        "endMs": 48300
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:386",
+      "readerId": "saad-alghamdi",
+      "title": "أذكار الصباح والمساء",
+      "type": "day-and-night",
+      "categoryIds": [
+        1
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/386.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 9376936,
+      "durationMs": 876382,
+      "sha256": "e2bfdbb75c1e2f219bc6aa8c4daf3891dfa49f0ba8935487693bbb499e1b1ec6",
+      "timing": {
+        "startMs": 0,
+        "endMs": 876382
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr86.mp3",
+        "sha256": "e2bfdbb75c1e2f219bc6aa8c4daf3891dfa49f0ba8935487693bbb499e1b1ec6",
+        "startMs": 0,
+        "endMs": 876382
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:387",
+      "readerId": "saad-alghamdi",
+      "title": "أذكار السجود",
+      "type": "chapter",
+      "categoryIds": [
+        21
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/387.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 313072,
+      "durationMs": 25783,
+      "sha256": "0f569dee1640838302b07a110e81c9e9d7ef30529bdadb11445b1f2183c77d04",
+      "timing": {
+        "startMs": 0,
+        "endMs": 25783
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr87.mp3",
+        "sha256": "0f569dee1640838302b07a110e81c9e9d7ef30529bdadb11445b1f2183c77d04",
+        "startMs": 0,
+        "endMs": 25783
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:388",
+      "readerId": "saad-alghamdi",
+      "title": "أذكار الركوع 3",
+      "type": "chapter",
+      "categoryIds": [
+        19
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/388.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 119172,
+      "durationMs": 7523,
+      "sha256": "478da910d7b8773e17d87be0c04ed255ef051627c9b4b9ed0eecffe9d2f1f648",
+      "timing": {
+        "startMs": 0,
+        "endMs": 7523
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr88.mp3",
+        "sha256": "478da910d7b8773e17d87be0c04ed255ef051627c9b4b9ed0eecffe9d2f1f648",
+        "startMs": 0,
+        "endMs": 7523
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:309",
+      "readerId": "saad-alghamdi",
+      "title": "أذكار استفتاح صلاة الليل 2",
+      "type": "chapter",
+      "categoryIds": [
+        18
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/309.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 416324,
+      "durationMs": 35500,
+      "sha256": "752883906cf17669a7113dc155544c5ad0078fad79ebe7ad7dac6dd20997ab85",
+      "timing": {
+        "startMs": 0,
+        "endMs": 35500
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/Adkr9.mp3",
+        "sha256": "752883906cf17669a7113dc155544c5ad0078fad79ebe7ad7dac6dd20997ab85",
+        "startMs": 0,
+        "endMs": 35500
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "saad-alghamdi:300",
+      "readerId": "saad-alghamdi",
+      "title": "أذكار الإفطار بعد الصيام",
+      "type": "chapter",
+      "categoryIds": [
+        68
+      ],
+      "url": "/audio/adhkar/saad-alghamdi/sections/300.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 428387,
+      "durationMs": 36362,
+      "sha256": "a7d91b78c6e75d26fbf6d62f6536e178bb5262f6d0c9be61b9ee5d9b9809f42a",
+      "timing": {
+        "startMs": 0,
+        "endMs": 36362
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://old.way2allah.com/khotab-series-5407.htm",
+      "publisher": "Way2Allah / Internet Archive",
+      "attributionLevel": "publisher-index-and-file-tags",
+      "source": {
+        "url": "https://archive.org/download/aldker/adkr.mp3",
+        "sha256": "a7d91b78c6e75d26fbf6d62f6536e178bb5262f6d0c9be61b9ee5d9b9809f42a",
+        "startMs": 0,
+        "endMs": 36362
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    }
+  ]
+}

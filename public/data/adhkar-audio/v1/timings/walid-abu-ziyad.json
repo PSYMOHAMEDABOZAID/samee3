@@ -1,0 +1,1929 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "2026-11-06.3",
+  "reciter": "walid-abu-ziyad",
+  "timeUnit": "milliseconds",
+  "items": [
+    {
+      "itemId": "1:3",
+      "categoryId": 1,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/walid-abu-ziyad/001/003.mp3",
+      "startMs": 0,
+      "endMs": 53616,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 2020715,
+        "endMs": 2074265
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation"
+      },
+      "contextSection": "morning",
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:4",
+      "categoryId": 1,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/walid-abu-ziyad/001/004.mp3",
+      "startMs": 0,
+      "endMs": 13848,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 2074295,
+        "endMs": 2088080
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation"
+      },
+      "contextSection": "morning",
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:5",
+      "categoryId": 1,
+      "dhikrId": 5,
+      "url": "/audio/adhkar/walid-abu-ziyad/001/005.mp3",
+      "startMs": 0,
+      "endMs": 36960,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 2088600,
+        "endMs": 2125505
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9722,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:6",
+      "categoryId": 1,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/walid-abu-ziyad/001/006.mp3",
+      "startMs": 0,
+      "endMs": 28872,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 2125535,
+        "endMs": 2154345
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation"
+      },
+      "contextSection": "morning",
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:7",
+      "categoryId": 1,
+      "dhikrId": 7,
+      "url": "/audio/adhkar/walid-abu-ziyad/001/007.mp3",
+      "startMs": 0,
+      "endMs": 17160,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 2154375,
+        "endMs": 2171465
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation"
+      },
+      "contextSection": "morning",
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:8",
+      "categoryId": 1,
+      "dhikrId": 8,
+      "url": "/audio/adhkar/walid-abu-ziyad/001/008.mp3",
+      "startMs": 0,
+      "endMs": 30672,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 2171495,
+        "endMs": 2202105
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:9",
+      "categoryId": 1,
+      "dhikrId": 9,
+      "url": "/audio/adhkar/walid-abu-ziyad/001/009.mp3",
+      "startMs": 0,
+      "endMs": 8976,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 2202135,
+        "endMs": 2211045
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:10",
+      "categoryId": 1,
+      "dhikrId": 10,
+      "url": "/audio/adhkar/walid-abu-ziyad/001/010.mp3",
+      "startMs": 0,
+      "endMs": 40512,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 2211075,
+        "endMs": 2251525
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9762,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:11",
+      "categoryId": 1,
+      "dhikrId": 11,
+      "url": "/audio/adhkar/walid-abu-ziyad/001/011.mp3",
+      "startMs": 0,
+      "endMs": 31920,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 2451595,
+        "endMs": 2483445
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.985,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:12",
+      "categoryId": 1,
+      "dhikrId": 12,
+      "url": "/audio/adhkar/walid-abu-ziyad/001/012.mp3",
+      "startMs": 0,
+      "endMs": 12984,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 2284895,
+        "endMs": 2297825
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:13",
+      "categoryId": 1,
+      "dhikrId": 13,
+      "url": "/audio/adhkar/walid-abu-ziyad/001/013.mp3",
+      "startMs": 0,
+      "endMs": 12000,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 2297855,
+        "endMs": 2309805
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:15",
+      "categoryId": 1,
+      "dhikrId": 15,
+      "url": "/audio/adhkar/walid-abu-ziyad/001/015.mp3",
+      "startMs": 0,
+      "endMs": 21648,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 2330380,
+        "endMs": 2351965
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation"
+      },
+      "contextSection": "morning",
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:18",
+      "categoryId": 1,
+      "dhikrId": 18,
+      "url": "/audio/adhkar/walid-abu-ziyad/001/018.mp3",
+      "startMs": 0,
+      "endMs": 14040,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 2028355,
+        "endMs": 2042325
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:19",
+      "categoryId": 1,
+      "dhikrId": 19,
+      "url": "/audio/adhkar/walid-abu-ziyad/001/019.mp3",
+      "startMs": 0,
+      "endMs": 14040,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 2028355,
+        "endMs": 2042325
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:21",
+      "categoryId": 1,
+      "dhikrId": 21,
+      "url": "/audio/adhkar/walid-abu-ziyad/001/021.mp3",
+      "startMs": 0,
+      "endMs": 13728,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 2007020,
+        "endMs": 2020685
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "2:9",
+      "categoryId": 2,
+      "dhikrId": 9,
+      "url": "/audio/adhkar/walid-abu-ziyad/002/009.mp3",
+      "startMs": 0,
+      "endMs": 63240,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 2374760,
+        "endMs": 2437945
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9614,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "2:11",
+      "categoryId": 2,
+      "dhikrId": 11,
+      "url": "/audio/adhkar/walid-abu-ziyad/002/011.mp3",
+      "startMs": 0,
+      "endMs": 31920,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 2451595,
+        "endMs": 2483445
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.985,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "2:13",
+      "categoryId": 2,
+      "dhikrId": 13,
+      "url": "/audio/adhkar/walid-abu-ziyad/002/013.mp3",
+      "startMs": 0,
+      "endMs": 41400,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 2483475,
+        "endMs": 2524825
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9845,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "3:1",
+      "categoryId": 3,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/walid-abu-ziyad/003/001.mp3",
+      "startMs": 0,
+      "endMs": 12480,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 15875,
+        "endMs": 28300
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "3:3",
+      "categoryId": 3,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/walid-abu-ziyad/003/003.mp3",
+      "startMs": 0,
+      "endMs": 13344,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 323820,
+        "endMs": 337105
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "7:1",
+      "categoryId": 7,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/walid-abu-ziyad/007/001.mp3",
+      "startMs": 0,
+      "endMs": 19056,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 411975,
+        "endMs": 430965
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9333,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "7:2",
+      "categoryId": 7,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/walid-abu-ziyad/007/002.mp3",
+      "startMs": 0,
+      "endMs": 9528,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 430995,
+        "endMs": 440460
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "7:3",
+      "categoryId": 7,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/walid-abu-ziyad/007/003.mp3",
+      "startMs": 0,
+      "endMs": 17976,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 440620,
+        "endMs": 458540
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "8:1",
+      "categoryId": 8,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/walid-abu-ziyad/008/001.mp3",
+      "startMs": 0,
+      "endMs": 16248,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 462660,
+        "endMs": 478840
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "9:1",
+      "categoryId": 9,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/walid-abu-ziyad/009/001.mp3",
+      "startMs": 0,
+      "endMs": 14520,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 498315,
+        "endMs": 512765
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9286,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "14:1",
+      "categoryId": 14,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/walid-abu-ziyad/014/001.mp3",
+      "startMs": 0,
+      "endMs": 14040,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 343360,
+        "endMs": 357345
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "15:1",
+      "categoryId": 15,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/walid-abu-ziyad/015/001.mp3",
+      "startMs": 0,
+      "endMs": 20328,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 357375,
+        "endMs": 377645
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "16:2",
+      "categoryId": 16,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/walid-abu-ziyad/016/002.mp3",
+      "startMs": 0,
+      "endMs": 7272,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 382495,
+        "endMs": 389705
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "18:1",
+      "categoryId": 18,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/walid-abu-ziyad/018/001.mp3",
+      "startMs": 0,
+      "endMs": 27984,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 733575,
+        "endMs": 761505
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9762,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "18:2",
+      "categoryId": 18,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/walid-abu-ziyad/018/002.mp3",
+      "startMs": 0,
+      "endMs": 14664,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 761535,
+        "endMs": 776145
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "18:3",
+      "categoryId": 18,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/walid-abu-ziyad/018/003.mp3",
+      "startMs": 0,
+      "endMs": 108576,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 776175,
+        "endMs": 884685
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9647,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "18:4",
+      "categoryId": 18,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/walid-abu-ziyad/018/004.mp3",
+      "startMs": 0,
+      "endMs": 42432,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 890575,
+        "endMs": 932945
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9394,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "19:2",
+      "categoryId": 19,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/walid-abu-ziyad/019/002.mp3",
+      "startMs": 0,
+      "endMs": 9000,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 1233575,
+        "endMs": 1242525
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "19:3",
+      "categoryId": 19,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/walid-abu-ziyad/019/003.mp3",
+      "startMs": 0,
+      "endMs": 11184,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 1242555,
+        "endMs": 1253685
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "19:5",
+      "categoryId": 19,
+      "dhikrId": 5,
+      "url": "/audio/adhkar/walid-abu-ziyad/019/005.mp3",
+      "startMs": 0,
+      "endMs": 13032,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 1275015,
+        "endMs": 1287985
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "20:2",
+      "categoryId": 20,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/walid-abu-ziyad/020/002.mp3",
+      "startMs": 0,
+      "endMs": 12504,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 1176475,
+        "endMs": 1188925
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "21:2",
+      "categoryId": 21,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/walid-abu-ziyad/021/002.mp3",
+      "startMs": 0,
+      "endMs": 9000,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 1233575,
+        "endMs": 1242525
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "21:3",
+      "categoryId": 21,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/walid-abu-ziyad/021/003.mp3",
+      "startMs": 0,
+      "endMs": 11184,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 1242555,
+        "endMs": 1253685
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "21:4",
+      "categoryId": 21,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/walid-abu-ziyad/021/004.mp3",
+      "startMs": 0,
+      "endMs": 21336,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 1253715,
+        "endMs": 1274985
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9474,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "21:5",
+      "categoryId": 21,
+      "dhikrId": 5,
+      "url": "/audio/adhkar/walid-abu-ziyad/021/005.mp3",
+      "startMs": 0,
+      "endMs": 13032,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 1275015,
+        "endMs": 1287985
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "21:6",
+      "categoryId": 21,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/walid-abu-ziyad/021/006.mp3",
+      "startMs": 0,
+      "endMs": 11424,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 1288015,
+        "endMs": 1299385
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "21:7",
+      "categoryId": 21,
+      "dhikrId": 7,
+      "url": "/audio/adhkar/walid-abu-ziyad/021/007.mp3",
+      "startMs": 0,
+      "endMs": 23040,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 2605115,
+        "endMs": 2628085
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9524,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "22:2",
+      "categoryId": 22,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/walid-abu-ziyad/022/002.mp3",
+      "startMs": 0,
+      "endMs": 9600,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 1336520,
+        "endMs": 1346065
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "23:2",
+      "categoryId": 23,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/walid-abu-ziyad/023/002.mp3",
+      "startMs": 0,
+      "endMs": 24912,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 1356475,
+        "endMs": 1381325
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9524,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "24:1",
+      "categoryId": 24,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/walid-abu-ziyad/024/001.mp3",
+      "startMs": 0,
+      "endMs": 37728,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 1381355,
+        "endMs": 1419025
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9643,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "25:2",
+      "categoryId": 25,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/walid-abu-ziyad/025/002.mp3",
+      "startMs": 0,
+      "endMs": 33480,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 1469940,
+        "endMs": 1503365
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "26:1",
+      "categoryId": 26,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/walid-abu-ziyad/026/001.mp3",
+      "startMs": 0,
+      "endMs": 26424,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 1503395,
+        "endMs": 1529760
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "26:2",
+      "categoryId": 26,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/walid-abu-ziyad/026/002.mp3",
+      "startMs": 0,
+      "endMs": 27960,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 1531720,
+        "endMs": 1559625
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "26:3",
+      "categoryId": 26,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/walid-abu-ziyad/026/003.mp3",
+      "startMs": 0,
+      "endMs": 27792,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 1559655,
+        "endMs": 1587380
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "26:4",
+      "categoryId": 26,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/walid-abu-ziyad/026/004.mp3",
+      "startMs": 0,
+      "endMs": 29616,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 1587860,
+        "endMs": 1617405
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "26:5",
+      "categoryId": 26,
+      "dhikrId": 5,
+      "url": "/audio/adhkar/walid-abu-ziyad/026/005.mp3",
+      "startMs": 0,
+      "endMs": 7704,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 1617435,
+        "endMs": 1625085
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "26:6",
+      "categoryId": 26,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/walid-abu-ziyad/026/006.mp3",
+      "startMs": 0,
+      "endMs": 18816,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 1625115,
+        "endMs": 1643865
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.92,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "26:7",
+      "categoryId": 26,
+      "dhikrId": 7,
+      "url": "/audio/adhkar/walid-abu-ziyad/026/007.mp3",
+      "startMs": 0,
+      "endMs": 11496,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 1643895,
+        "endMs": 1655325
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "26:9",
+      "categoryId": 26,
+      "dhikrId": 9,
+      "url": "/audio/adhkar/walid-abu-ziyad/026/009.mp3",
+      "startMs": 0,
+      "endMs": 32088,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 1761620,
+        "endMs": 1793640
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "26:10",
+      "categoryId": 26,
+      "dhikrId": 10,
+      "url": "/audio/adhkar/walid-abu-ziyad/026/010.mp3",
+      "startMs": 0,
+      "endMs": 37056,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 1807980,
+        "endMs": 1844965
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9706,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "26:11",
+      "categoryId": 26,
+      "dhikrId": 11,
+      "url": "/audio/adhkar/walid-abu-ziyad/026/011.mp3",
+      "startMs": 0,
+      "endMs": 22056,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 1844995,
+        "endMs": 1866985
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "27:2",
+      "categoryId": 27,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/walid-abu-ziyad/027/002.mp3",
+      "startMs": 0,
+      "endMs": 28848,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 1890155,
+        "endMs": 1918945
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9697,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "27:3",
+      "categoryId": 27,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/walid-abu-ziyad/027/003.mp3",
+      "startMs": 0,
+      "endMs": 45720,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 1918975,
+        "endMs": 1964625
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9792,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "27:4",
+      "categoryId": 27,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/walid-abu-ziyad/027/004.mp3",
+      "startMs": 0,
+      "endMs": 32856,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 1973835,
+        "endMs": 2006620
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.92,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "27:7",
+      "categoryId": 27,
+      "dhikrId": 7,
+      "url": "/audio/adhkar/walid-abu-ziyad/027/007.mp3",
+      "startMs": 0,
+      "endMs": 21072,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 1985600,
+        "endMs": 2006620
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "27:8",
+      "categoryId": 27,
+      "dhikrId": 8,
+      "url": "/audio/adhkar/walid-abu-ziyad/027/008.mp3",
+      "startMs": 0,
+      "endMs": 13728,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 2007020,
+        "endMs": 2020685
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "29:1",
+      "categoryId": 29,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/walid-abu-ziyad/029/001.mp3",
+      "startMs": 0,
+      "endMs": 17688,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 2524855,
+        "endMs": 2542480
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9836,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "30:1",
+      "categoryId": 30,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/walid-abu-ziyad/030/001.mp3",
+      "startMs": 0,
+      "endMs": 17496,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 2543040,
+        "endMs": 2560485
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "32:2",
+      "categoryId": 32,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/walid-abu-ziyad/032/002.mp3",
+      "startMs": 0,
+      "endMs": 23040,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 2605115,
+        "endMs": 2628085
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9524,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "32:3",
+      "categoryId": 32,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/walid-abu-ziyad/032/003.mp3",
+      "startMs": 0,
+      "endMs": 33600,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 2628115,
+        "endMs": 2661645
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "34:1",
+      "categoryId": 34,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/walid-abu-ziyad/034/001.mp3",
+      "startMs": 0,
+      "endMs": 50328,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 2676220,
+        "endMs": 2726485
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.92,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "34:2",
+      "categoryId": 34,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/walid-abu-ziyad/034/002.mp3",
+      "startMs": 0,
+      "endMs": 13776,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 2957755,
+        "endMs": 2971465
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "35:1",
+      "categoryId": 35,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/walid-abu-ziyad/035/001.mp3",
+      "startMs": 0,
+      "endMs": 26040,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 2739755,
+        "endMs": 2765745
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9583,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "35:2",
+      "categoryId": 35,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/walid-abu-ziyad/035/002.mp3",
+      "startMs": 0,
+      "endMs": 17928,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 2765775,
+        "endMs": 2783645
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9836,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "35:3",
+      "categoryId": 35,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/walid-abu-ziyad/035/003.mp3",
+      "startMs": 0,
+      "endMs": 14400,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 2783675,
+        "endMs": 2798005
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "36:1",
+      "categoryId": 36,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/walid-abu-ziyad/036/001.mp3",
+      "startMs": 0,
+      "endMs": 8544,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 2798035,
+        "endMs": 2806525
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "37:2",
+      "categoryId": 37,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/walid-abu-ziyad/037/002.mp3",
+      "startMs": 0,
+      "endMs": 57768,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 2866015,
+        "endMs": 2923725
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9434,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "38:1",
+      "categoryId": 38,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/walid-abu-ziyad/038/001.mp3",
+      "startMs": 0,
+      "endMs": 12816,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 2930660,
+        "endMs": 2943405
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "41:1",
+      "categoryId": 41,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/walid-abu-ziyad/041/001.mp3",
+      "startMs": 0,
+      "endMs": 10296,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 2947495,
+        "endMs": 2957725
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "41:2",
+      "categoryId": 41,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/walid-abu-ziyad/041/002.mp3",
+      "startMs": 0,
+      "endMs": 13776,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 2957755,
+        "endMs": 2971465
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "43:1",
+      "categoryId": 43,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/walid-abu-ziyad/043/001.mp3",
+      "startMs": 0,
+      "endMs": 10560,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 2988960,
+        "endMs": 2999460
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "55:1",
+      "categoryId": 55,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/walid-abu-ziyad/055/001.mp3",
+      "startMs": 0,
+      "endMs": 60288,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 3068835,
+        "endMs": 3129065
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9556,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "55:2",
+      "categoryId": 55,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/walid-abu-ziyad/055/002.mp3",
+      "startMs": 0,
+      "endMs": 35928,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 3129095,
+        "endMs": 3164965
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9667,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "55:3",
+      "categoryId": 55,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/walid-abu-ziyad/055/003.mp3",
+      "startMs": 0,
+      "endMs": 28224,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 3164995,
+        "endMs": 3193160
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.981,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "55:4",
+      "categoryId": 55,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/walid-abu-ziyad/055/004.mp3",
+      "startMs": 0,
+      "endMs": 31392,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 3193360,
+        "endMs": 3224685
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "56:1",
+      "categoryId": 56,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/walid-abu-ziyad/056/001.mp3",
+      "startMs": 0,
+      "endMs": 55536,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 3224715,
+        "endMs": 3280200
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9821,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "quoted-invocation"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "56:2",
+      "categoryId": 56,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/walid-abu-ziyad/056/002.mp3",
+      "startMs": 0,
+      "endMs": 5544,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 3280400,
+        "endMs": 3285885
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "60:1",
+      "categoryId": 60,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/walid-abu-ziyad/060/001.mp3",
+      "startMs": 0,
+      "endMs": 42864,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 3294775,
+        "endMs": 3337585
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9565,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "61:2",
+      "categoryId": 61,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/walid-abu-ziyad/061/002.mp3",
+      "startMs": 0,
+      "endMs": 17640,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 3337615,
+        "endMs": 3355185
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "67:1",
+      "categoryId": 67,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/walid-abu-ziyad/067/001.mp3",
+      "startMs": 0,
+      "endMs": 18024,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 3423200,
+        "endMs": 3441160
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "82:1",
+      "categoryId": 82,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/walid-abu-ziyad/082/001.mp3",
+      "startMs": 0,
+      "endMs": 6120,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 2976615,
+        "endMs": 2982680
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "85:1",
+      "categoryId": 85,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/walid-abu-ziyad/085/001.mp3",
+      "startMs": 0,
+      "endMs": 17976,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/single_01/ar_Hisn_Almuslim_AboZyad.mp3",
+        "sha256": "ee96d53fba70a3bff54da333f06abb18306adbc1a4890d9322ed6ab89a025594",
+        "startMs": 440620,
+        "endMs": 458540
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    }
+  ],
+  "variants": [],
+  "sections": []
+}

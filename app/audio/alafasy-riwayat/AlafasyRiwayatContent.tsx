@@ -1,7 +1,8 @@
 'use client'
 
 import Link from 'next/link'
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { appAudio, useAppAudio } from '@/lib/app-audio'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { ArrowDownToLine, BookOpen, Check, ChevronLeft, ChevronRight, Download, Headphones, Loader2, Pause, Play, RotateCcw, Search, SkipBack, SkipForward, Trash2, WifiOff } from 'lucide-react'
 import { downloadSnapshot, serverDownloadSnapshot, startRiwayatDownload, subscribeDownload } from '@/lib/riwayat-download'
 import { useSyncExternalStore } from 'react'
@@ -19,7 +20,6 @@ type NowPlaying = { editionId: string; surah: number; url: string; offline: bool
 
 const CATALOG_KEY = 'samee3-riwayat-catalog-v4'
 const AUDIO_CACHE = 'samee3-riwayat-audio-v1' // Reuse files saved by the earlier player.
-const PROGRESS_KEY = 'samee3-alafasy-playback-v2'
 const NAMES = 'الفاتحة,البقرة,آل عمران,النساء,المائدة,الأنعام,الأعراف,الأنفال,التوبة,يونس,هود,يوسف,الرعد,إبراهيم,الحجر,النحل,الإسراء,الكهف,مريم,طه,الأنبياء,الحج,المؤمنون,النور,الفرقان,الشعراء,النمل,القصص,العنكبوت,الروم,لقمان,السجدة,الأحزاب,سبأ,فاطر,يس,الصافات,ص,الزمر,غافر,فصلت,الشورى,الزخرف,الدخان,الجاثية,الأحقاف,محمد,الفتح,الحجرات,ق,الذاريات,الطور,النجم,القمر,الرحمن,الواقعة,الحديد,المجادلة,الحشر,الممتحنة,الصف,الجمعة,المنافقون,التغابن,الطلاق,التحريم,الملك,القلم,الحاقة,المعارج,نوح,الجن,المزمل,المدثر,القيامة,الإنسان,المرسلات,النبأ,النازعات,عبس,التكوير,الانفطار,المطففين,الانشقاق,البروج,الطارق,الأعلى,الغاشية,الفجر,البلد,الشمس,الليل,الضحى,الشرح,التين,العلق,القدر,البينة,الزلزلة,العاديات,القارعة,التكاثر,العصر,الهمزة,الفيل,قريش,الماعون,الكوثر,الكافرون,النصر,المسد,الإخلاص,الفلق,الناس'.split(',')
 const name = (surah: number) => NAMES[surah - 1] || `السورة ${surah}`
 const fileKey = (id: string, surah: number) => `/audio/alafasy-riwayat/offline/${encodeURIComponent(id)}/${String(surah).padStart(3, '0')}.mp3`
@@ -41,19 +41,16 @@ export default function AlafasyRiwayatContent({ embedded = false }: { embedded?:
   const [catalog, setCatalog] = useState<Catalog | null>(null)
   const [editionId, setEditionId] = useState('')
   const [search, setSearch] = useState('')
-  const [playing, setPlaying] = useState<NowPlaying | null>(null)
-  const [paused, setPaused] = useState(true)
-  const [position, setPosition] = useState(0)
-  const [duration, setDuration] = useState(0)
-  const [speed, setSpeed] = useState(1)
+  const playback = useAppAudio()
+  const track = playback.scope === 'riwayat' ? playback.queue[playback.index] : null
+  const playing: NowPlaying | null = track?.editionId && track.surah
+    ? { editionId: track.editionId, surah: track.surah, url: track.url, offline: typeof navigator !== 'undefined' && navigator.onLine === false } : null
+  const paused = !track || !playback.playing
+  const position = track ? playback.position : 0, duration = track ? playback.duration : 0
+  const speed = playback.rate
   const [saved, setSaved] = useState<string[]>([])
   const [busy, setBusy] = useState('')
   const [notice, setNotice] = useState('')
-  const audioRef = useRef<HTMLAudioElement | null>(null)
-  const objectRef = useRef<string | null>(null)
-  const playingRef = useRef<NowPlaying | null>(null)
-  const editionsRef = useRef<Edition[]>([])
-  const lastSavedSecond = useRef(-1)
 
   const edition = useMemo(() => catalog?.editions.find(row => row.id === editionId) || catalog?.editions[0] || null, [catalog, editionId])
   const rows = useMemo(() => (edition?.surahIds || []).filter(n => !search.trim() || `${n}`.includes(search.trim()) || name(n).includes(search.trim())), [edition, search])
@@ -85,100 +82,24 @@ export default function AlafasyRiwayatContent({ embedded = false }: { embedded?:
     void refreshSaved()
     return () => {
       mounted = false
-      audioRef.current?.pause()
-      if (objectRef.current) URL.revokeObjectURL(objectRef.current)
     }
   }, [refreshSaved])
 
-  useEffect(() => { editionsRef.current = catalog?.editions || [] }, [catalog])
-
-  function remember(next: NowPlaying | null, seconds: number) {
-    if (!next) return
-    try { localStorage.setItem(PROGRESS_KEY, JSON.stringify({ editionId: next.editionId, surah: next.surah, seconds })) } catch { /* quota */ }
-  }
-
-  function onTimeUpdate() {
-    const audio = audioRef.current
-    if (!audio) return
-    setPosition(audio.currentTime)
-    if (Math.floor(audio.currentTime / 5) !== lastSavedSecond.current) {
-      lastSavedSecond.current = Math.floor(audio.currentTime / 5)
-      remember(playingRef.current, audio.currentTime)
-    }
-  }
-
-  function attachAudio(item: NowPlaying, resume = false) {
-    const audio = audioRef.current
-    if (!audio) return
-    // Same-origin streaming starts immediately, within the actual user click.
-    // This avoids losing the user gesture on iOS while awaiting an API response.
-    audio.pause()
-    if (objectRef.current && objectRef.current !== item.url) {
-      URL.revokeObjectURL(objectRef.current)
-      objectRef.current = null
-    }
-    playingRef.current = item
-    setPlaying(item)
-    setPosition(0)
-    setDuration(0)
-    setPaused(false)
-    setNotice('')
-    audio.src = item.url
-    audio.playbackRate = speed
-    audio.load()
-    if (resume) {
-      try {
-        const state = JSON.parse(localStorage.getItem(PROGRESS_KEY) || 'null') as {editionId?: string; surah?: number; seconds?: number} | null
-        if (state?.editionId === item.editionId && state?.surah === item.surah && typeof state.seconds === 'number' && Number.isFinite(state.seconds) && state.seconds > 0) {
-          const checkpoint = Number(state.seconds)
-          audio.addEventListener('loadedmetadata', () => { if (Number.isFinite(audio.duration) && checkpoint < audio.duration - 2) audio.currentTime = checkpoint }, { once: true })
-        }
-      } catch { /* progress optional */ }
-    }
-    const promise = audio.play()
-    void promise.catch(() => {
-      setPaused(true)
-      setNotice('اضغط زر التشغيل في المشغل للاستماع. قد يحتاج iPhone إلى ضغطة إضافية بعد اختيار المصدر.')
-    })
-    if ('mediaSession' in navigator) {
-      try { navigator.mediaSession.metadata = new MediaMetadata({ title: `سورة ${name(item.surah)}`, artist: 'مشاري راشد العفاسي', album: editionsRef.current.find(row => row.id === item.editionId)?.name || 'مصحف الروايات' }) } catch { /* optional */ }
-    }
-  }
+  useEffect(() => { if (track && playback.error) setNotice(playback.error) }, [track, playback.error])
 
   function play(id: string, surah: number) {
-    const audio = audioRef.current
-    if (playingRef.current?.editionId === id && playingRef.current?.surah === surah && audio) {
-      if (!audio.paused) { audio.pause(); setPaused(true); return }
-      void audio.play().then(() => setPaused(false)).catch(() => setNotice('تعذر استئناف التشغيل، افتح رابط المصدر إذا استمرت المشكلة.'))
-      return
-    }
-    if (!navigator.onLine) {
-      // Offline requires loading the cached object URL; audio controls remain available if iOS denies autoplay.
-      void (async () => {
-        try {
-          if (!('caches' in window)) throw new Error('الحفظ دون إنترنت غير مدعوم على جهازك.')
-          const cache = await caches.open(AUDIO_CACHE)
-          const entry = await cache.match(fileKey(id, surah))
-          if (!entry) throw new Error('السورة غير محفوظة على هذا الجهاز. حمّلها وأنت متصل بالإنترنت.')
-          const blob = await entry.blob()
-          const url = URL.createObjectURL(blob)
-          objectRef.current = url
-          attachAudio({editionId: id, surah, url, offline: true}, true)
-        } catch (e) { setNotice(errorMessage(e)) }
-      })()
-      return
-    }
-    attachAudio({editionId: id, surah, url: streamUrl(id, surah), offline: false}, true)
+    if (playing?.editionId === id && playing.surah === surah) { appAudio.toggle(); return }
+    const edition = catalog?.editions.find(row => row.id === id)
+    if (!edition) return
+    setNotice('')
+    appAudio.start({ scope: 'riwayat', href: '/audio/alafasy-riwayat',
+      index: edition.surahIds.indexOf(surah), queue: edition.surahIds.map(number => ({
+        url: streamUrl(id, number), savedUrl: fileKey(id, number), editionId: id, surah: number,
+        title: `سورة ${name(number)}`, subtitle: `مشاري العفاسي • ${edition.name}`,
+      })) })
   }
 
-  function adjacent(direction: -1 | 1) {
-    const current = playingRef.current
-    const row = editionsRef.current.find(x => x.id === current?.editionId)
-    if (!row || !current) return
-    const index = row.surahIds.indexOf(current.surah)
-    const next = row.surahIds[index + direction]
-    if (next) play(row.id, next)
-  }
+  function adjacent(direction: -1 | 1) { if (track) appAudio.next(direction) }
 
   async function saveOffline(id: string, surah: number) {
     const key = fileKey(id, surah)
@@ -282,17 +203,15 @@ export default function AlafasyRiwayatContent({ embedded = false }: { embedded?:
         </div>}
       </>}
 
-      {/* Keep the native audio element mounted: iOS needs .play() during the click gesture. */}
-      <audio ref={audioRef} preload="none" onLoadedMetadata={() => setDuration(audioRef.current?.duration || 0)} onTimeUpdate={onTimeUpdate} onPlay={() => setPaused(false)} onPause={() => setPaused(true)} onEnded={() => { setPaused(true); adjacent(1) }} onError={() => { if (playingRef.current) setNotice('المصدر لم يرسل ملفًا صوتيًا قابلًا للتشغيل. جرّب سورة أخرى أو افتح صفحة المصدر.'); setPaused(true) }} />
       {playing && <div className={`sticky ${embedded ? 'bottom-20' : 'bottom-3'} z-30 rounded-3xl border border-emerald-200 bg-white/95 p-4 shadow-xl backdrop-blur dark:border-emerald-800 dark:bg-slate-900/95`}>
-        <div className="flex items-center justify-between gap-2"><div className="min-w-0"><div className="truncate font-bold">سورة {name(playing.surah)}</div><div className="truncate text-xs text-slate-500 dark:text-slate-400">مشاري العفاسي • {currentEdition?.name || 'مصحف الروايات'} {playing.offline ? '• محفوظة' : ''}</div></div><button type="button" onClick={() => { const audio = audioRef.current; if (audio) {audio.pause(); audio.removeAttribute('src'); audio.load()}; playingRef.current = null; setPlaying(null) }} className="rounded-xl border px-3 py-1 text-xs">إغلاق</button></div>
-        <input aria-label="موضع التلاوة" className="mt-3 w-full accent-emerald-700" type="range" min={0} max={Math.max(1, duration || 1)} value={Math.min(position, duration || 1)} onChange={event => { const audio = audioRef.current; if (audio && Number.isFinite(audio.duration)) { audio.currentTime = Number(event.target.value); setPosition(audio.currentTime) } }}/>
+        <div className="flex items-center justify-between gap-2"><div className="min-w-0"><div className="truncate font-bold">سورة {name(playing.surah)}</div><div className="truncate text-xs text-slate-500 dark:text-slate-400">مشاري العفاسي • {currentEdition?.name || 'مصحف الروايات'} {playing.offline ? '• محفوظة' : ''}</div></div><button type="button" onClick={() => appAudio.stop('riwayat')} className="rounded-xl border px-3 py-1 text-xs">إغلاق</button></div>
+        <input aria-label="موضع التلاوة" className="mt-3 w-full accent-emerald-700" type="range" min={0} max={Math.max(1, duration || 1)} value={Math.min(position, duration || 1)} onChange={event => appAudio.seek(Number(event.target.value))}/>
         <div className="flex justify-between text-xs tabular-nums text-slate-500"><span>{fmt(position)}</span><span>{fmt(duration)}</span></div>
         <div className="mt-2 flex items-center justify-center gap-4">
           <button title="السورة السابقة" aria-label="السورة السابقة" onClick={() => adjacent(-1)} type="button" className="rounded-full border p-3"><SkipForward size={20}/></button>
-          <button title={paused ? 'تشغيل' : 'إيقاف مؤقت'} onClick={() => { const audio = audioRef.current; if (!audio) return; if (audio.paused) void audio.play().catch(() => setNotice('يتطلب المتصفح بدء الصوت يدويًا.')); else audio.pause() }} type="button" className="rounded-full bg-emerald-700 p-4 text-white">{paused ? <Play size={25}/> : <Pause size={25}/>}</button>
+          <button title={paused ? 'تشغيل' : 'إيقاف مؤقت'} onClick={() => appAudio.toggle()} type="button" className="rounded-full bg-emerald-700 p-4 text-white">{paused ? <Play size={25}/> : <Pause size={25}/>}</button>
           <button title="السورة التالية" aria-label="السورة التالية" onClick={() => adjacent(1)} type="button" className="rounded-full border p-3"><SkipBack size={20}/></button>
-          <select aria-label="سرعة التشغيل" value={speed} onChange={e => { const value = Number(e.target.value); setSpeed(value); if (audioRef.current) audioRef.current.playbackRate = value }} className="rounded-xl border bg-transparent p-2 text-sm"><option value={0.8}>0.8×</option><option value={1}>1×</option><option value={1.25}>1.25×</option><option value={1.5}>1.5×</option></select>
+          <select aria-label="سرعة التشغيل" value={speed} onChange={e => appAudio.settings({ rate: Number(e.target.value) })} className="rounded-xl border bg-transparent p-2 text-sm"><option value={0.8}>0.8×</option><option value={1}>1×</option><option value={1.25}>1.25×</option><option value={1.5}>1.5×</option></select>
         </div>
       </div>}
       {!embedded && <Link href="/audio" className="inline-flex items-center gap-2 rounded-xl border px-4 py-2 text-sm"><ChevronRight size={17}/> العودة للمكتبة الصوتية</Link>}

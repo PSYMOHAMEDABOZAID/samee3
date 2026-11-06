@@ -5,9 +5,14 @@ import { equalSecret } from './http'
 import { locationDate, shiftPrayerDate, type PrayerDay } from '@/lib/prayer-times'
 import { reminderEvents, type ReminderEvent, type WebReminderSettings } from '@/lib/web-reminders'
 import { prayerSource } from './prayer-source'
+import { validatePushConfiguration } from './push-config'
 
 const subscriptions = 'webPushSubscriptions'
-export const pushConfigured = () => adminConfigured() && Boolean(process.env.NEXT_PUBLIC_WEB_PUSH_VAPID_KEY && process.env.WEB_PUSH_VAPID_PRIVATE_KEY && process.env.WEB_PUSH_SUBJECT && process.env.CRON_SECRET)
+export const pushConfiguration = () => {
+  const keys = validatePushConfiguration(process.env)
+  return !keys.ok ? keys : adminConfigured() ? keys : { ok: false, code: 'MISSING_SERVER_CREDENTIALS' } as const
+}
+export const pushConfigured = () => pushConfiguration().ok
 export const digest = (value: string) => createHash('sha256').update(value).digest('hex')
 export function validSubscription(raw: unknown): PushSubscription {
   if (!raw || typeof raw !== 'object') throw new Error('اشتراك الإشعارات غير صالح.')

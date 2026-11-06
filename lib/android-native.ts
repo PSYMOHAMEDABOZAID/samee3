@@ -46,7 +46,9 @@ export function useAndroidApp() {
   }, [])
   useEffect(() => {
     let disposed = false
-    setNativeBrowser(/SAMEE3(?:Android|Native)\//.test(navigator.userAgent))
+    const native = /SAMEE3(?:Android|Native)\//.test(navigator.userAgent)
+    setNativeBrowser(native)
+    if (!native && !window.Samee3Android) setConnecting(false)
     const load = () => { if (!disposed) void refresh().catch(() => { if (!disposed) setConnecting(false) }) }
     const visible = () => { if (document.visibilityState === 'visible') load() }
     window.addEventListener('samee3:android-ready', load)

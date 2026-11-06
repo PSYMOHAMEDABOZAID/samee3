@@ -8,6 +8,8 @@ import {
   type ChangeEvent,
 } from 'react'
 import Link from 'next/link'
+import ReaderPicker from '@/components/adhkar/ReaderPicker'
+import { localAdhkarReaders } from '@/lib/adhkar-local-audio'
 import {
   ArrowRight,
   BookHeart,
@@ -37,7 +39,7 @@ import {
   type AdhkarDailyType,
 } from '@/lib/adhkar-catalog'
 
-import { listAdhkarReciters, findAdhkarRecording } from '@/lib/adhkar-reciters'
+import { listAdhkarReciters, findAdhkarRecording, findAdhkarCategoryRecording, adhkarCategoryAudioCount } from '@/lib/adhkar-reciters'
 
 type DailyId = AdhkarDailyType
 
@@ -66,7 +68,7 @@ const LAST_SECTION_KEY = 'samee3_adhkar_last_opened_v1'
 
 // SAMEE3 ADHKAR OFFLINE: لا نعرض قارئًا ليس له تسجيل صوتي محدد.
 // القارئ صاحب التسجيلات الفردية يظهر لاحقًا إذا توفر صوت حقيقي للباب.
-const RECITERS: Reciter[] = listAdhkarReciters().map((reciter) => ({
+const RECITERS: Reciter[] = listAdhkarReciters({ hasIndividualAudio: true }).map((reciter) => ({
   id: reciter.id,
   name: reciter.name,
   individual: reciter.individualAudio,
@@ -203,9 +205,7 @@ function hasSectionAudio(
 
   return Boolean(
     reciter.individual &&
-      category?.array.some(
-        (item) => Boolean(item.audio),
-      ),
+      category && adhkarCategoryAudioCount(reciter.id, category, type) > 0,
   )
 }
 
@@ -335,13 +335,6 @@ export default function AdhkarPage() {
         setStatus('offline')
       }
 
-      if (navigator.onLine === false) {
-        if (!saved?.length) {
-          setStatus('error')
-        }
-
-        return
-      }
 
       try {
         const result =
@@ -457,13 +450,7 @@ export default function AdhkarPage() {
             category.category,
           ).includes(term)
 
-        const audioItems =
-          reader.individual
-            ? category.array.filter(
-                (item) =>
-                  Boolean(item.audio),
-              ).length
-            : 0
+        const audioItems = adhkarCategoryAudioCount(reader.id, category)
 
         return {
           category,
@@ -476,10 +463,7 @@ export default function AdhkarPage() {
         const individualAudio =
           Boolean(
             reader.individual &&
-              (
-                entry.category.audio ||
-                entry.audioItems > 0
-              ),
+              entry.audioItems > 0,
           )
 
         const sectionAudio =
@@ -500,7 +484,7 @@ export default function AdhkarPage() {
           })
 
         const recorded =
-          individualAudio ||
+          individualAudio || Boolean(findAdhkarCategoryRecording(reader.id, entry.category.id)) ||
           sectionAudio
 
         const matchesSearch =
@@ -545,9 +529,8 @@ export default function AdhkarPage() {
     : 0
 
   const changeReader = (
-    event: ChangeEvent<HTMLSelectElement>,
+    value: string,
   ) => {
-    const value = event.target.value
 
     if (
       !RECITERS.some(
@@ -632,6 +615,9 @@ export default function AdhkarPage() {
             <ArrowRight size={21} />
           </Link>
         </header>
+
+        <Link href="/adhkar/recordings" className="mb-4 ml-2 inline-flex min-h-10 items-center rounded-xl border border-[#e6d9c7] bg-white px-4 text-xs font-bold text-[#194f43]">التسجيلات الكاملة للقراء</Link>
+        <Link href="/developers/adhkar" className="mb-4 inline-flex min-h-10 items-center rounded-xl border border-[#e6d9c7] bg-white px-4 text-xs font-bold text-[#194f43]">للمطورين: صوتيات الأذكار والتوقيتات</Link>
 
         <section className="relative overflow-hidden rounded-[30px] bg-gradient-to-br from-[#123d42] via-[#154f52] to-[#0b2f36] p-6 text-white shadow-[0_18px_50px_rgba(15,62,63,0.18)] sm:p-9">
           <div className="pointer-events-none absolute -left-20 -top-28 h-72 w-72 rounded-full border border-[#ecd1a0]/15" />
@@ -778,27 +764,11 @@ export default function AdhkarPage() {
               </div>
             </div>
 
-            <div className="relative mt-4">
-              <select
-                value={readerId}
-                onChange={changeReader}
-                aria-label="اختر قارئ الأذكار"
-                className="w-full appearance-none rounded-2xl border border-[#e4d8c6] bg-[#fdfbf7] py-3.5 pl-11 pr-4 text-sm font-extrabold text-[#194b4f] outline-none focus:border-[#b89a64] focus:ring-2 focus:ring-[#b89a64]/15"
-              >
-                {RECITERS.map((entry) => (
-                  <option
-                    key={entry.id}
-                    value={entry.id}
-                  >
-                    {entry.name}
-                  </option>
-                ))}
-              </select>
-
-              <ChevronDown
-                size={18}
-                className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#a8895e]"
-              />
+            <div className="mt-4">
+              <ReaderPicker value={readerId} onChange={changeReader} readers={RECITERS.map(entry => {
+                const data = localAdhkarReaders().find(row => row.id === entry.id)
+                return {id: entry.id, name: entry.name, availableCount: data?.individualAudioCount || 0, totalCount: 267, hasComplete: Boolean(data?.sectionAudioCount)}
+              })}/>
             </div>
 
             <p className="mt-3 text-xs leading-6 text-[#83908e]">

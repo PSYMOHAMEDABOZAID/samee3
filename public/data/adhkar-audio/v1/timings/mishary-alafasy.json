@@ -1,0 +1,1460 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "2026-11-06.3",
+  "reciter": "mishary-alafasy",
+  "timeUnit": "milliseconds",
+  "items": [
+    {
+      "itemId": "1:1",
+      "categoryId": 1,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/mishary-alafasy/001/001-104.mp3",
+      "startMs": 0,
+      "endMs": 66900,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_04.mp3",
+        "sha256": "9e09e93e5e15099f70937aaa124da55f3053a25e68139ab89cdde0e999fb3ec5",
+        "startMs": 11895,
+        "endMs": 78740
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9636,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "أَعُوذُ بِاللَّهِ مِنَ الشَّيطَانِ الرَّجِيمِ ﴿اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَّهُ مَا فِي السَّمَوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاء وَسِعَ كُرْسِيُّهُ السَّمَوَاتِ وَالْأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ﴾."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:2",
+      "categoryId": 1,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/mishary-alafasy/001/002-111.mp3",
+      "startMs": 0,
+      "endMs": 78524,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_11.mp3",
+        "sha256": "e5ca82e5cfdd86fc241ff39c20bbe5fa291644ecff30a92cf3dd8f19c38a8c1a",
+        "startMs": 7155,
+        "endMs": 85605
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "بسم الله الرحمن الرحيم ﴿قُلْ هُوَ اللَّهُ أَحَدٌ* اللَّهُ الصَّمَدُ* لَمْ يَلِدْ وَلَمْ يُولَدْ* وَلَمْ يَكُن لَّهُ كُفُواً أَحَدٌ﴾.  بسم الله الرحمن الرحيم ﴿قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ* مِن شَرِّ مَا خَلَقَ* وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ* وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ* وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ﴾.  بسم الله الرحمن الرحيم ﴿قُلْ أَعُوذُ بِرَبِّ النَّاسِ* مَلِكِ النَّاسِ* إِلَهِ النَّاسِ* مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ* الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ* مِنَ الْجِنَّةِ وَ النَّاسِ﴾ (ثلاثَ مرَّاتٍ)."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:3",
+      "categoryId": 1,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/mishary-alafasy/001/003-103-morning.mp3",
+      "startMs": 0,
+      "endMs": 49554,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_03.mp3",
+        "sha256": "fa62b6739b9f907c378378aeab1ec3c554b530970122dc0a01e5074f7d982795",
+        "startMs": 347220,
+        "endMs": 396705
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ ، وَالْحَمْدُ لِلَّهِ، لاَ إِلَهَ إلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذَا الْيَوْمِ وَخَيرَ مَا بَعْدَهُ ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي  هَذَا الْيَوْمِ وَشَرِّ مَا بَعْدَهُ، رَبِّ أَعُوذُ بِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ، رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ"
+      },
+      "contextSection": "morning",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:4",
+      "categoryId": 1,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/mishary-alafasy/001/004-103-morning.mp3",
+      "startMs": 0,
+      "endMs": 12774,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_03.mp3",
+        "sha256": "fa62b6739b9f907c378378aeab1ec3c554b530970122dc0a01e5074f7d982795",
+        "startMs": 401860,
+        "endMs": 414565
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا ، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ وَإِلَيْكَ النُّشُورُ"
+      },
+      "contextSection": "morning",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:5",
+      "categoryId": 1,
+      "dhikrId": 5,
+      "url": "/audio/adhkar/mishary-alafasy/001/005-103.mp3",
+      "startMs": 0,
+      "endMs": 40176,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_03.mp3",
+        "sha256": "fa62b6739b9f907c378378aeab1ec3c554b530970122dc0a01e5074f7d982795",
+        "startMs": 418035,
+        "endMs": 458145
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلاَّ أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي فَإِنَّهُ لاَ يَغْفِرُ الذُّنوبَ إِلاَّ أَنْتَ))."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:6",
+      "categoryId": 1,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/mishary-alafasy/001/006-103-morning.mp3",
+      "startMs": 0,
+      "endMs": 26462,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_03.mp3",
+        "sha256": "fa62b6739b9f907c378378aeab1ec3c554b530970122dc0a01e5074f7d982795",
+        "startMs": 564875,
+        "endMs": 591265
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "اللَّهُمَّ إِنِّي أَصْبَحْتُ أُشْهِدُكَ، وَأُشْهِدُ حَمَلَةَ عَرْشِكَ، وَمَلاَئِكَتِكَ، وَجَمِيعَ خَلْقِكَ، أَنَّكَ أَنْتَ اللَّهُ لَا إِلَهَ إِلاَّ أَنْتَ وَحْدَكَ لاَ شَرِيكَ لَكَ، وَأَنَّ مُحَمَّداً عَبْدُكَ وَرَسُولُكَ"
+      },
+      "contextSection": "morning",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:7",
+      "categoryId": 1,
+      "dhikrId": 7,
+      "url": "/audio/adhkar/mishary-alafasy/001/007-103-morning.mp3",
+      "startMs": 0,
+      "endMs": 15569,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_03.mp3",
+        "sha256": "fa62b6739b9f907c378378aeab1ec3c554b530970122dc0a01e5074f7d982795",
+        "startMs": 601775,
+        "endMs": 617285
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "اللَّهُمَّ مَا أَصْبَحَ بِي مِنْ نِعْمَةٍ أَوْ بِأَحَدٍ مِنْ خَلْقِكَ فَمِنْكَ وَحْدَكَ لاَ شَرِيكَ لَكَ، فَلَكَ الْحَمْدُ وَلَكَ الشُّكْرُ"
+      },
+      "contextSection": "morning",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:8",
+      "categoryId": 1,
+      "dhikrId": 8,
+      "url": "/audio/adhkar/mishary-alafasy/001/008-103.mp3",
+      "startMs": 0,
+      "endMs": 32758,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_03.mp3",
+        "sha256": "fa62b6739b9f907c378378aeab1ec3c554b530970122dc0a01e5074f7d982795",
+        "startMs": 699535,
+        "endMs": 732240
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ عَافِنِي فِي بَدَنِي، اللَّهُمَّ عَافِنِي فِي سَمْعِي، اللَّهُمَّ عَافِنِي فِي بَصَرِي، لاَ إِلَهَ إِلاَّ أَنْتَ. اللَّهُمَّ  إِنِّي أَعُوذُ بِكَ مِنَ الْكُفْرِ، وَالفَقْرِ، وَأَعُوذُ بِكَ مِنْ عَذَابِ القَبْرِ، لاَ إِلَهَ إِلاَّ أَنْتَ)) (ثلاثَ مرَّاتٍ)."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:9",
+      "categoryId": 1,
+      "dhikrId": 9,
+      "url": "/audio/adhkar/mishary-alafasy/001/009-103.mp3",
+      "startMs": 0,
+      "endMs": 11755,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_03.mp3",
+        "sha256": "fa62b6739b9f907c378378aeab1ec3c554b530970122dc0a01e5074f7d982795",
+        "startMs": 788395,
+        "endMs": 800085
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((حَسْبِيَ اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ عَلَيهِ تَوَكَّلتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ)) (سَبْعَ مَرّاتٍ)."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:10",
+      "categoryId": 1,
+      "dhikrId": 10,
+      "url": "/audio/adhkar/mishary-alafasy/001/010-103.mp3",
+      "startMs": 0,
+      "endMs": 43964,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_03.mp3",
+        "sha256": "fa62b6739b9f907c378378aeab1ec3c554b530970122dc0a01e5074f7d982795",
+        "startMs": 811540,
+        "endMs": 855445
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي الدُّنْيَا وَالآخِرَةِ، اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ: فِي دِينِي وَدُنْيَايَ وَأَهْلِي، وَمَالِي، اللَّهُمَّ اسْتُرْ عَوْرَاتِي، وَآمِنْ رَوْعَاتِي، اللَّهُمَّ احْفَظْنِي مِنْ بَينِ يَدَيَّ، وَمِنْ خَلْفِي، وَعَنْ يَمِينِي، وَعَنْ شِمَالِي، وَمِنْ فَوْقِي، وَأَعُوذُ بِعَظَمَتِكَ أَنْ أُغْتَالَ مِنْ تَحْتِي))."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:11",
+      "categoryId": 1,
+      "dhikrId": 11,
+      "url": "/audio/adhkar/mishary-alafasy/001/011-104.mp3",
+      "startMs": 0,
+      "endMs": 34508,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_04.mp3",
+        "sha256": "9e09e93e5e15099f70937aaa124da55f3053a25e68139ab89cdde0e999fb3ec5",
+        "startMs": 854535,
+        "endMs": 888965
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9848,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ عَالِمَ الغَيْبِ وَالشَّهَادَةِ فَاطِرَ السَّمَوَاتِ وَالْأَرْضِ، رَبَّ كُلِّ شَيْءٍ وَمَلِيكَهُ، أَشْهَدُ أَنْ لاَ إِلَهَ إِلاَّ أَنْتَ، أَعُوذُ بِكَ مِنْ شَرِّ نَفْسِي، وَمِنْ شَرِّ الشَّيْطانِ وَشَرَكِهِ، وَأَنْ أَقْتَرِفَ عَلَى  نَفْسِي سُوءاً، أَوْ أَجُرَّهُ إِلَى مُسْلِمٍ))."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:12",
+      "categoryId": 1,
+      "dhikrId": 12,
+      "url": "/audio/adhkar/mishary-alafasy/001/012-103.mp3",
+      "startMs": 0,
+      "endMs": 13845,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_03.mp3",
+        "sha256": "fa62b6739b9f907c378378aeab1ec3c554b530970122dc0a01e5074f7d982795",
+        "startMs": 920575,
+        "endMs": 934345
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((بِسْمِ اللَّهِ الَّذِي لاَ يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلاَ فِي السّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ)) (ثلاثَ مرَّاتٍ)."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:13",
+      "categoryId": 1,
+      "dhikrId": 13,
+      "url": "/audio/adhkar/mishary-alafasy/001/013-103.mp3",
+      "startMs": 0,
+      "endMs": 12356,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_03.mp3",
+        "sha256": "fa62b6739b9f907c378378aeab1ec3c554b530970122dc0a01e5074f7d982795",
+        "startMs": 969555,
+        "endMs": 981845
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((رَضِيتُ بِاللَّهِ رَبَّاً، وَبِالْإِسْلاَمِ دِيناً، وَبِمُحَمَّدٍ صلى الله عليه وسلم نَبِيّاً)) (ثلاثَ مرَّاتٍ)."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:14",
+      "categoryId": 1,
+      "dhikrId": 14,
+      "url": "/audio/adhkar/mishary-alafasy/001/014-104.mp3",
+      "startMs": 0,
+      "endMs": 14890,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_04.mp3",
+        "sha256": "9e09e93e5e15099f70937aaa124da55f3053a25e68139ab89cdde0e999fb3ec5",
+        "startMs": 973895,
+        "endMs": 988725
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((يَا حَيُّ يَا قَيُّومُ بِرَحْمَتِكَ أَسْتَغيثُ أَصْلِحْ لِي شَأْنِيَ كُلَّهُ وَلاَ تَكِلْنِي إِلَى نَفْسِي طَرْفَةَ عَيْنٍ))."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:15",
+      "categoryId": 1,
+      "dhikrId": 15,
+      "url": "/audio/adhkar/mishary-alafasy/001/015-103-morning.mp3",
+      "startMs": 0,
+      "endMs": 26149,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_03.mp3",
+        "sha256": "fa62b6739b9f907c378378aeab1ec3c554b530970122dc0a01e5074f7d982795",
+        "startMs": 1016615,
+        "endMs": 1042705
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ رَبِّ الْعَالَمِينَ، اللَّهُـمَّ إِنِّي أَسْأَلُكَ خَيْرَ هَذَا الْيَوْمِ:فَتْحَهُ، وَنَصْرَهُ، وَنورَهُ، وَبَرَكَتَهُ، وَهُدَاهُ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِيهِ وَشَرِّ مَا بَعْدَهُ"
+      },
+      "contextSection": "morning",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:16",
+      "categoryId": 1,
+      "dhikrId": 16,
+      "url": "/audio/adhkar/mishary-alafasy/001/016-103-morning.mp3",
+      "startMs": 0,
+      "endMs": 26384,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_03.mp3",
+        "sha256": "fa62b6739b9f907c378378aeab1ec3c554b530970122dc0a01e5074f7d982795",
+        "startMs": 1044415,
+        "endMs": 1070745
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "أَصْبَحْنا عَلَى فِطْرَةِ الْإِسْلاَمِ، وَعَلَى كَلِمَةِ الْإِخْلاَصِ، وَعَلَى دِينِ نَبِيِّنَا مُحَمَّدٍ صلى الله عليه وسلم، وَعَلَى مِلَّةِ أَبِينَا إِبْرَاهِيمَ، حَنِيفاً مُسْلِماً وَمَا كَانَ مِنَ الْمُشرِكِينَ"
+      },
+      "contextSection": "morning",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:17",
+      "categoryId": 1,
+      "dhikrId": 17,
+      "url": "/audio/adhkar/mishary-alafasy/001/017-103.mp3",
+      "startMs": 0,
+      "endMs": 4153,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_03.mp3",
+        "sha256": "fa62b6739b9f907c378378aeab1ec3c554b530970122dc0a01e5074f7d982795",
+        "startMs": 1162935,
+        "endMs": 1167025
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((سُبْحَانَ اللَّهِ وَبِحَمْدِهِ)) (مائة مرَّةٍ)."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:18",
+      "categoryId": 1,
+      "dhikrId": 18,
+      "url": "/audio/adhkar/mishary-alafasy/001/018-101.mp3",
+      "startMs": 0,
+      "endMs": 15961,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_01.mp3",
+        "sha256": "9d7e47d0ecf10847d17837a758d6ec5f2e967b0fefe6a3ff0e365a3280e60b75",
+        "startMs": 83755,
+        "endMs": 99660
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ"
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:19",
+      "categoryId": 1,
+      "dhikrId": 19,
+      "url": "/audio/adhkar/mishary-alafasy/001/019-101.mp3",
+      "startMs": 0,
+      "endMs": 15961,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_01.mp3",
+        "sha256": "9d7e47d0ecf10847d17837a758d6ec5f2e967b0fefe6a3ff0e365a3280e60b75",
+        "startMs": 83755,
+        "endMs": 99660
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((لاَ إِلَهَ إِلاَّ اللَّهُ، وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ)) (مائةَ مرَّةٍ إذا أصبحَ)."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:20",
+      "categoryId": 1,
+      "dhikrId": 20,
+      "url": "/audio/adhkar/mishary-alafasy/001/020-103.mp3",
+      "startMs": 0,
+      "endMs": 12878,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_03.mp3",
+        "sha256": "fa62b6739b9f907c378378aeab1ec3c554b530970122dc0a01e5074f7d982795",
+        "startMs": 1162935,
+        "endMs": 1175745
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((سُبْحَانَ اللَّهِ وَبِحَمْدِهِ: عَدَدَ خَلْقِهِ، وَرِضَا نَفْسِهِ، وَزِنَةَ عَرْشِهِ، وَمِدَادَ كَلِمَاتِهِ)) (ثلاثَ مرَّاتٍ إذا أصبحَ)."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:21",
+      "categoryId": 1,
+      "dhikrId": 21,
+      "url": "/audio/adhkar/mishary-alafasy/001/021-103.mp3",
+      "startMs": 0,
+      "endMs": 10736,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_03.mp3",
+        "sha256": "fa62b6739b9f907c378378aeab1ec3c554b530970122dc0a01e5074f7d982795",
+        "startMs": 1178740,
+        "endMs": 1189405
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْماً نَافِعاً، وَرِزْقاً طَيِّباً، وَعَمَلاً مُتَقَبَّلاً"
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:22",
+      "categoryId": 1,
+      "dhikrId": 22,
+      "url": "/audio/adhkar/mishary-alafasy/001/022-103.mp3",
+      "startMs": 0,
+      "endMs": 5016,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_03.mp3",
+        "sha256": "fa62b6739b9f907c378378aeab1ec3c554b530970122dc0a01e5074f7d982795",
+        "startMs": 1216015,
+        "endMs": 1220960
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ"
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:23",
+      "categoryId": 1,
+      "dhikrId": 23,
+      "url": "/audio/adhkar/mishary-alafasy/001/023-104.mp3",
+      "startMs": 0,
+      "endMs": 21394,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_04.mp3",
+        "sha256": "9e09e93e5e15099f70937aaa124da55f3053a25e68139ab89cdde0e999fb3ec5",
+        "startMs": 1171555,
+        "endMs": 1192885
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ)) (ثلاثَ مرَّاتٍ إذا أمسى)."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:24",
+      "categoryId": 1,
+      "dhikrId": 24,
+      "url": "/audio/adhkar/mishary-alafasy/001/024-103.mp3",
+      "startMs": 0,
+      "endMs": 6322,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_03.mp3",
+        "sha256": "fa62b6739b9f907c378378aeab1ec3c554b530970122dc0a01e5074f7d982795",
+        "startMs": 1230500,
+        "endMs": 1236745
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ صَلِّ وَسَلِّمْ عَلَى نَبَيِّنَا مُحَمَّدٍ)) (عشرَ مرَّاتٍ)."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "2:2",
+      "categoryId": 2,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/mishary-alafasy/002/002-104.mp3",
+      "startMs": 0,
+      "endMs": 62772,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_04.mp3",
+        "sha256": "9e09e93e5e15099f70937aaa124da55f3053a25e68139ab89cdde0e999fb3ec5",
+        "startMs": 16035,
+        "endMs": 78740
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.96,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "﴿اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَّهُ مَا فِي السَّمَوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْـــــــــــدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاء وَسِعَ كُرْسِيُّهُ السَّمَوَاتِ وَالأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ﴾."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "2:3",
+      "categoryId": 2,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/mishary-alafasy/002/003-111.mp3",
+      "startMs": 0,
+      "endMs": 97332,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_11.mp3",
+        "sha256": "e5ca82e5cfdd86fc241ff39c20bbe5fa291644ecff30a92cf3dd8f19c38a8c1a",
+        "startMs": 310715,
+        "endMs": 407980
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9868,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "﴿آمَنَ الرَّسُولُ بِمَا أُنزِلَ إِلَيْهِ مِن رَّبِّهِ وَالْمُؤْمِنُونَ كُلٌّ آمَنَ بِاللَّهِ وَمَلآئِكَتِهِ وَكُتُبِهِ وَرُسُلِهِ لاَ نُفَرِّقُ بَيْنَ أَحَدٍ مِّن رُّسُلِهِ وَقَالُواْ سَمِعْنَا وَأَطَعْنَا غُفْرَانَكَ رَبَّنَا وَإِلَيْكَ الْمَصِيرُ* لاَ يُكَلِّفُ اللَّهُ نَفْساً إِلاَّ وُسْعَهَا لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا اكْتَسَبَتْ رَبَّنَا لاَ تُؤَاخِذْنَا إِن نَّسِينَا أَوْ أَخْطَأْنَا رَبَّنَا وَلاَ تَحْمِلْ عَلَيْنَا إِصْراً كَمَا حَمَلْتَهُ عَلَى الَّذِينَ مِن قَبْلِنَا رَبَّنَا وَلاَ تُحَمِّلْنَا مَا لاَ طَاقَةَ لَنَا بِهِ وَاعْفُ عَنَّا وَاغْفِرْ لَنَا وَارْحَمْنَآ أَنتَ مَوْلاَنَا فَانصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ﴾."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "2:4",
+      "categoryId": 2,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/mishary-alafasy/002/004-111.mp3",
+      "startMs": 0,
+      "endMs": 17633,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_11.mp3",
+        "sha256": "e5ca82e5cfdd86fc241ff39c20bbe5fa291644ecff30a92cf3dd8f19c38a8c1a",
+        "startMs": 411975,
+        "endMs": 429545
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((بِاسْمِكَ رَبِّي وَضَعْتُ جَنْبِي، وَبِكَ أَرْفَعُهُ، فَإِن أَمْسَكْتَ نَفْسِي فارْحَمْهَا، وَإِنْ أَرْسَلْتَهَا فَاحْفَظْهَا، بِمَا تَحْفَظُ بِهِ عِبَادَكَ الصَّالِحِينَ))."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "2:5",
+      "categoryId": 2,
+      "dhikrId": 5,
+      "url": "/audio/adhkar/mishary-alafasy/002/005-111.mp3",
+      "startMs": 0,
+      "endMs": 23745,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_11.mp3",
+        "sha256": "e5ca82e5cfdd86fc241ff39c20bbe5fa291644ecff30a92cf3dd8f19c38a8c1a",
+        "startMs": 429575,
+        "endMs": 453245
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ إِنَّكَ خَلَقْتَ نَفْسِي وَأَنْتَ تَوَفَّاهَا، لَكَ مَمَاتُهَا وَمَحْياهَا، إِنْ أَحْيَيْتَهَا فَاحْفَظْهَا، وَإِنْ أَمَتَّهَا فَاغْفِرْ لَهَا. اللَّهُمَّ إِنِّي أَسْأَلُكَ العَافِيَةَ))."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "2:6",
+      "categoryId": 2,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/mishary-alafasy/002/006-111.mp3",
+      "startMs": 0,
+      "endMs": 6766,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_11.mp3",
+        "sha256": "e5ca82e5cfdd86fc241ff39c20bbe5fa291644ecff30a92cf3dd8f19c38a8c1a",
+        "startMs": 466795,
+        "endMs": 473485
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": " ((اللَّهُمَّ قِنِي عَذَابَكَ يَوْمَ تَبْعَثُ عِبَادَكَ))."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "2:7",
+      "categoryId": 2,
+      "dhikrId": 7,
+      "url": "/audio/adhkar/mishary-alafasy/002/007-111.mp3",
+      "startMs": 0,
+      "endMs": 5512,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_11.mp3",
+        "sha256": "e5ca82e5cfdd86fc241ff39c20bbe5fa291644ecff30a92cf3dd8f19c38a8c1a",
+        "startMs": 473515,
+        "endMs": 478965
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا))."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "2:9",
+      "categoryId": 2,
+      "dhikrId": 9,
+      "url": "/audio/adhkar/mishary-alafasy/002/009-111.mp3",
+      "startMs": 0,
+      "endMs": 56268,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_11.mp3",
+        "sha256": "e5ca82e5cfdd86fc241ff39c20bbe5fa291644ecff30a92cf3dd8f19c38a8c1a",
+        "startMs": 478995,
+        "endMs": 535205
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9614,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ رَبَّ السَّمَوَاتِ السَّبْعِ وَرَبَّ الأَرْضِ، وَرَبَّ الْعَرْشِ الْعَظِيمِ، رَبَّنَا وَرَبَّ كُلِّ شَيْءٍ، فَالِقَ الْحَبِّ وَالنَّوَى، وَمُنْزِلَ التَّوْرَاةِ وَالْإِنْجِيلِ، وَالْفُرْقَانِ، أَعُوذُ بِكَ مِنْ شَرِّ كُلِّ شَيْءٍ أَنْتَ آخِذٌ بِنَاصِيَتِهِ. اللَّهُمَّ أَنْتَ الأَوَّلُ فَلَيْسَ قَبْلَكَ شَيْءٌ، وَأَنْتَ الآخِرُ فَلَيسَ بَعْدَكَ شَيْءٌ، وَأَنْتَ الظَّاهِرُ فَلَيْسَ فَوْقَكَ شَيْءٌ، وَأَنْتَ الْبَاطِنُ فَلَيْسَ دُونَكَ شَيْءٌ، اقْضِ عَنَّا الدَّيْنَ وَأَغْنِنَا مِنَ الْفَقْرِ))."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "2:10",
+      "categoryId": 2,
+      "dhikrId": 10,
+      "url": "/audio/adhkar/mishary-alafasy/002/010-111.mp3",
+      "startMs": 0,
+      "endMs": 14681,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_11.mp3",
+        "sha256": "e5ca82e5cfdd86fc241ff39c20bbe5fa291644ecff30a92cf3dd8f19c38a8c1a",
+        "startMs": 535235,
+        "endMs": 549845
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9286,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنَا وَسَقَانَا، وَكَفَانَا، وَآوَانَا، فَكَمْ مِمَّنْ لاَ كَافِيَ لَهُ وَلاَ مُؤْوِيَ))."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "2:11",
+      "categoryId": 2,
+      "dhikrId": 11,
+      "url": "/audio/adhkar/mishary-alafasy/002/011-104.mp3",
+      "startMs": 0,
+      "endMs": 34508,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_04.mp3",
+        "sha256": "9e09e93e5e15099f70937aaa124da55f3053a25e68139ab89cdde0e999fb3ec5",
+        "startMs": 854535,
+        "endMs": 888965
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9848,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ عَالِمَ الغَيْبِ وَالشَّهَادَةِ فَاطِرَ السَّمَوَاتِ وَالْأَرْضِ، رَبَّ كُلِّ شَيْءٍ وَمَلِيكَهُ، أَشْهَدُ أَنْ لاَ إِلَهَ إِلاَّ أَنْتَ، أَعُوذُ بِكَ مِنْ شَرِّ نَفْسِي، وَمِنْ شَرِّ الشَّيْطانِ وَشِرْكِهِ، وَأَنْ أَقْتَرِفَ عَلَى نَفْسِي سُوءاً، أَوْ أَجُرَّهُ إِلَى مُسْلِمٍ))."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "2:13",
+      "categoryId": 2,
+      "dhikrId": 13,
+      "url": "/audio/adhkar/mishary-alafasy/002/013-111.mp3",
+      "startMs": 0,
+      "endMs": 36728,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_11.mp3",
+        "sha256": "e5ca82e5cfdd86fc241ff39c20bbe5fa291644ecff30a92cf3dd8f19c38a8c1a",
+        "startMs": 581855,
+        "endMs": 618505
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9333,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ أَسْلَمْتُ نَفْسِي إِلَيْكَ، وَفَوَّضْتُ أَمْرِي إِلَيْكَ، وَوَجَّهْتُ وَجْهِي إِلَيْكَ، وَأَلْجَأْتُ ظَهْرِي إِلَيْكَ، رَغْبَةً وَرَهْبَةً إِلَيْكَ، لاَ مَلْجَأَ وَلاَ مَنْجَا مِنْكَ إِلاَّ إِلَيْكَ، آمَنْتُ بِكِتَابِكَ الَّذِي أَنْزَلْتَ، وَبِنَبِيِّكَ الَّذِي أَرْسَلْتَ))."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "3:2",
+      "categoryId": 3,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/mishary-alafasy/003/002-101.mp3",
+      "startMs": 0,
+      "endMs": 41482,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_01.mp3",
+        "sha256": "9d7e47d0ecf10847d17837a758d6ec5f2e967b0fefe6a3ff0e365a3280e60b75",
+        "startMs": 83755,
+        "endMs": 125160
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9737,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "( لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَريكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، سُبْحَانَ اللَّهِ، وَالْحَمْدُ للَّهِ، وَلاَ إِلَهَ إِلاَّ اللَّهُ، وَاللَّهُ أَكبَرُ، وَلاَ حَوْلَ وَلاَ قُوَّةَ إِلاَّ بِاللَّهِ الْعَلِيِّ الْعَظِيمِ، رَبِّ اغْفرْ لِي )."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "6:1",
+      "categoryId": 6,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/mishary-alafasy/006/001-101.mp3",
+      "startMs": 0,
+      "endMs": 1411,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_01.mp3",
+        "sha256": "9d7e47d0ecf10847d17837a758d6ec5f2e967b0fefe6a3ff0e365a3280e60b75",
+        "startMs": 0,
+        "endMs": 1345
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "(بِسْمِ اللَّهِ)."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "17:1",
+      "categoryId": 17,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/mishary-alafasy/017/001-101.mp3",
+      "startMs": 0,
+      "endMs": 1411,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_01.mp3",
+        "sha256": "9d7e47d0ecf10847d17837a758d6ec5f2e967b0fefe6a3ff0e365a3280e60b75",
+        "startMs": 0,
+        "endMs": 1345
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "(بِسْمِ اللَّهِ)."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "27:6",
+      "categoryId": 27,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/mishary-alafasy/027/006-104.mp3",
+      "startMs": 0,
+      "endMs": 62772,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_04.mp3",
+        "sha256": "9e09e93e5e15099f70937aaa124da55f3053a25e68139ab89cdde0e999fb3ec5",
+        "startMs": 16035,
+        "endMs": 78740
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.96,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-quran-passage",
+        "matchedText": "اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَّهُ مَا فِي السَّمَوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاءَ وَسِعَ كُرْسِيُّهُ السَّمَوَاتِ وَالأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ"
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "27:8",
+      "categoryId": 27,
+      "dhikrId": 8,
+      "url": "/audio/adhkar/mishary-alafasy/027/008-103.mp3",
+      "startMs": 0,
+      "endMs": 10736,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_03.mp3",
+        "sha256": "fa62b6739b9f907c378378aeab1ec3c554b530970122dc0a01e5074f7d982795",
+        "startMs": 1178740,
+        "endMs": 1189405
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْماً نافِعاً، وَرِزْقاً طَيِّباً، وَعَمَلاً مُتَقَبَّلاً"
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "82:1",
+      "categoryId": 82,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/mishary-alafasy/082/001-103.mp3",
+      "startMs": 0,
+      "endMs": 5042,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_03.mp3",
+        "sha256": "fa62b6739b9f907c378378aeab1ec3c554b530970122dc0a01e5074f7d982795",
+        "startMs": 6200,
+        "endMs": 11165
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ))."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "99:1",
+      "categoryId": 99,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/mishary-alafasy/099/001-101.mp3",
+      "startMs": 0,
+      "endMs": 1411,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_01.mp3",
+        "sha256": "9d7e47d0ecf10847d17837a758d6ec5f2e967b0fefe6a3ff0e365a3280e60b75",
+        "startMs": 0,
+        "endMs": 1345
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((بِسْمِ اللَّهِ))."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "104:1",
+      "categoryId": 104,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/mishary-alafasy/104/001-104.mp3",
+      "startMs": 0,
+      "endMs": 21394,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_04.mp3",
+        "sha256": "9e09e93e5e15099f70937aaa124da55f3053a25e68139ab89cdde0e999fb3ec5",
+        "startMs": 1171555,
+        "endMs": 1192885
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ))."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "122:1",
+      "categoryId": 122,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/mishary-alafasy/122/001-101.mp3",
+      "startMs": 0,
+      "endMs": 3187,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_01.mp3",
+        "sha256": "9d7e47d0ecf10847d17837a758d6ec5f2e967b0fefe6a3ff0e365a3280e60b75",
+        "startMs": 99940,
+        "endMs": 103065
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((سُبْحَانَ اللَّهِ!))."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "126:1",
+      "categoryId": 126,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/mishary-alafasy/126/001-101.mp3",
+      "startMs": 0,
+      "endMs": 4127,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_01.mp3",
+        "sha256": "9d7e47d0ecf10847d17837a758d6ec5f2e967b0fefe6a3ff0e365a3280e60b75",
+        "startMs": 83755,
+        "endMs": 87805
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((لاَ إِلَهَ إِلاَّ اللَّهُ!))."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    }
+  ],
+  "variants": [
+    {
+      "itemId": "1:3",
+      "categoryId": 1,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/mishary-alafasy/001/003-104-evening.mp3",
+      "startMs": 0,
+      "endMs": 48562,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_04.mp3",
+        "sha256": "9e09e93e5e15099f70937aaa124da55f3053a25e68139ab89cdde0e999fb3ec5",
+        "startMs": 353420,
+        "endMs": 401925
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-evening-instruction",
+        "matchedText": "امسينا وامسي الملك لله والحمد لله لا اله الا الله وحده لا شريك له له الملك وله الحمد وهو علي كل شيء قدير رب اسالك خير ما في هذه الليلة وخير ما بعدها واعوذ بك من شر ما في هذه الليلة وشر ما بعدها رب اعوذ بك من الكسل وسوء الكبر رب اعوذ بك من عذاب في النار وعذاب في القبر"
+      },
+      "contextSection": "evening",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:3",
+      "categoryId": 1,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/mishary-alafasy/001/003-103-morning.mp3",
+      "startMs": 0,
+      "endMs": 49554,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_03.mp3",
+        "sha256": "fa62b6739b9f907c378378aeab1ec3c554b530970122dc0a01e5074f7d982795",
+        "startMs": 347220,
+        "endMs": 396705
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ ، وَالْحَمْدُ لِلَّهِ، لاَ إِلَهَ إلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذَا الْيَوْمِ وَخَيرَ مَا بَعْدَهُ ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي  هَذَا الْيَوْمِ وَشَرِّ مَا بَعْدَهُ، رَبِّ أَعُوذُ بِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ، رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ"
+      },
+      "contextSection": "morning",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:4",
+      "categoryId": 1,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/mishary-alafasy/001/004-103-morning.mp3",
+      "startMs": 0,
+      "endMs": 12774,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_03.mp3",
+        "sha256": "fa62b6739b9f907c378378aeab1ec3c554b530970122dc0a01e5074f7d982795",
+        "startMs": 401860,
+        "endMs": 414565
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا ، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ وَإِلَيْكَ النُّشُورُ"
+      },
+      "contextSection": "morning",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:6",
+      "categoryId": 1,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/mishary-alafasy/001/006-104-evening.mp3",
+      "startMs": 0,
+      "endMs": 27167,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_04.mp3",
+        "sha256": "9e09e93e5e15099f70937aaa124da55f3053a25e68139ab89cdde0e999fb3ec5",
+        "startMs": 536035,
+        "endMs": 563145
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-evening-instruction",
+        "matchedText": "اللهم اني امسيت اشهدك واشهد حملة عرشك وملايكتك وجميع خلقك انك انت الله لا اله الا انت وحدك لا شريك لك وان محمدا عبدك ورسولك"
+      },
+      "contextSection": "evening",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:6",
+      "categoryId": 1,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/mishary-alafasy/001/006-103-morning.mp3",
+      "startMs": 0,
+      "endMs": 26462,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_03.mp3",
+        "sha256": "fa62b6739b9f907c378378aeab1ec3c554b530970122dc0a01e5074f7d982795",
+        "startMs": 564875,
+        "endMs": 591265
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "اللَّهُمَّ إِنِّي أَصْبَحْتُ أُشْهِدُكَ، وَأُشْهِدُ حَمَلَةَ عَرْشِكَ، وَمَلاَئِكَتِكَ، وَجَمِيعَ خَلْقِكَ، أَنَّكَ أَنْتَ اللَّهُ لَا إِلَهَ إِلاَّ أَنْتَ وَحْدَكَ لاَ شَرِيكَ لَكَ، وَأَنَّ مُحَمَّداً عَبْدُكَ وَرَسُولُكَ"
+      },
+      "contextSection": "morning",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:7",
+      "categoryId": 1,
+      "dhikrId": 7,
+      "url": "/audio/adhkar/mishary-alafasy/001/007-104-evening.mp3",
+      "startMs": 0,
+      "endMs": 14237,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_04.mp3",
+        "sha256": "9e09e93e5e15099f70937aaa124da55f3053a25e68139ab89cdde0e999fb3ec5",
+        "startMs": 604575,
+        "endMs": 618745
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-evening-instruction",
+        "matchedText": "اللهم ما امسي بي من نعمة او باحد من خلقك فمنك وحدك لا شريك لك فلك الحمد ولك الشكر"
+      },
+      "contextSection": "evening",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:7",
+      "categoryId": 1,
+      "dhikrId": 7,
+      "url": "/audio/adhkar/mishary-alafasy/001/007-103-morning.mp3",
+      "startMs": 0,
+      "endMs": 15569,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_03.mp3",
+        "sha256": "fa62b6739b9f907c378378aeab1ec3c554b530970122dc0a01e5074f7d982795",
+        "startMs": 601775,
+        "endMs": 617285
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "اللَّهُمَّ مَا أَصْبَحَ بِي مِنْ نِعْمَةٍ أَوْ بِأَحَدٍ مِنْ خَلْقِكَ فَمِنْكَ وَحْدَكَ لاَ شَرِيكَ لَكَ، فَلَكَ الْحَمْدُ وَلَكَ الشُّكْرُ"
+      },
+      "contextSection": "morning",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:15",
+      "categoryId": 1,
+      "dhikrId": 15,
+      "url": "/audio/adhkar/mishary-alafasy/001/015-104-evening.mp3",
+      "startMs": 0,
+      "endMs": 26645,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_04.mp3",
+        "sha256": "9e09e93e5e15099f70937aaa124da55f3053a25e68139ab89cdde0e999fb3ec5",
+        "startMs": 991715,
+        "endMs": 1018285
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-evening-instruction",
+        "matchedText": "امسينا وامسي الملك لله رب العالمين اللهم اني اسالك خير هذه الليلة فتحها ونصرها ونورها وبركتها وهداها واعوذ بك من شر ما فيها وشر ما بعدها"
+      },
+      "contextSection": "evening",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:15",
+      "categoryId": 1,
+      "dhikrId": 15,
+      "url": "/audio/adhkar/mishary-alafasy/001/015-103-morning.mp3",
+      "startMs": 0,
+      "endMs": 26149,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_03.mp3",
+        "sha256": "fa62b6739b9f907c378378aeab1ec3c554b530970122dc0a01e5074f7d982795",
+        "startMs": 1016615,
+        "endMs": 1042705
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ رَبِّ الْعَالَمِينَ، اللَّهُـمَّ إِنِّي أَسْأَلُكَ خَيْرَ هَذَا الْيَوْمِ:فَتْحَهُ، وَنَصْرَهُ، وَنورَهُ، وَبَرَكَتَهُ، وَهُدَاهُ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِيهِ وَشَرِّ مَا بَعْدَهُ"
+      },
+      "contextSection": "morning",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:16",
+      "categoryId": 1,
+      "dhikrId": 16,
+      "url": "/audio/adhkar/mishary-alafasy/001/016-104-evening.mp3",
+      "startMs": 0,
+      "endMs": 32026,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_04.mp3",
+        "sha256": "9e09e93e5e15099f70937aaa124da55f3053a25e68139ab89cdde0e999fb3ec5",
+        "startMs": 1020875,
+        "endMs": 1052825
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-evening-instruction",
+        "matchedText": "امسينا علي فطرة الاسلام وعلي كلمة الاخلاص وعلي دين نبينا محمد صلي الله عليه وسلم وعلي ملة ابينا ابراهيم حنيفا مسلما وما كان من المشركين"
+      },
+      "contextSection": "evening",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:16",
+      "categoryId": 1,
+      "dhikrId": 16,
+      "url": "/audio/adhkar/mishary-alafasy/001/016-103-morning.mp3",
+      "startMs": 0,
+      "endMs": 26384,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_03.mp3",
+        "sha256": "fa62b6739b9f907c378378aeab1ec3c554b530970122dc0a01e5074f7d982795",
+        "startMs": 1044415,
+        "endMs": 1070745
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "أَصْبَحْنا عَلَى فِطْرَةِ الْإِسْلاَمِ، وَعَلَى كَلِمَةِ الْإِخْلاَصِ، وَعَلَى دِينِ نَبِيِّنَا مُحَمَّدٍ صلى الله عليه وسلم، وَعَلَى مِلَّةِ أَبِينَا إِبْرَاهِيمَ، حَنِيفاً مُسْلِماً وَمَا كَانَ مِنَ الْمُشرِكِينَ"
+      },
+      "contextSection": "morning",
+      "rightsId": "tvquran-noncommercial"
+    }
+  ],
+  "sections": [
+    {
+      "id": "mishary-alafasy:101",
+      "readerId": "mishary-alafasy",
+      "title": "أذكار الاستيقاظ",
+      "type": "waking",
+      "categoryIds": [
+        3
+      ],
+      "url": "/audio/adhkar/mishary-alafasy/sections/101.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 1064336,
+      "durationMs": 132274,
+      "sha256": "9d7e47d0ecf10847d17837a758d6ec5f2e967b0fefe6a3ff0e365a3280e60b75",
+      "timing": {
+        "startMs": 0,
+        "endMs": 132274
+      },
+      "rightsId": "tvquran-noncommercial",
+      "sourcePage": "https://www.tvquran.com/ar/selection/1/embeddable",
+      "publisher": "TVQuran.com",
+      "attributionLevel": "publisher-attributed",
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_01.mp3",
+        "sha256": "9d7e47d0ecf10847d17837a758d6ec5f2e967b0fefe6a3ff0e365a3280e60b75",
+        "startMs": 0,
+        "endMs": 132274
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "mishary-alafasy:103",
+      "readerId": "mishary-alafasy",
+      "title": "أذكار الصباح",
+      "type": "morning",
+      "categoryIds": [
+        1
+      ],
+      "url": "/audio/adhkar/mishary-alafasy/sections/103.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 10128199,
+      "durationMs": 1265257,
+      "sha256": "fa62b6739b9f907c378378aeab1ec3c554b530970122dc0a01e5074f7d982795",
+      "timing": {
+        "startMs": 0,
+        "endMs": 1265257
+      },
+      "rightsId": "tvquran-noncommercial",
+      "sourcePage": "https://www.tvquran.com/ar/selection/3/embeddable",
+      "publisher": "TVQuran.com",
+      "attributionLevel": "publisher-attributed",
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_03.mp3",
+        "sha256": "fa62b6739b9f907c378378aeab1ec3c554b530970122dc0a01e5074f7d982795",
+        "startMs": 0,
+        "endMs": 1265257
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "mishary-alafasy:104",
+      "readerId": "mishary-alafasy",
+      "title": "أذكار المساء",
+      "type": "evening",
+      "categoryIds": [
+        1
+      ],
+      "url": "/audio/adhkar/mishary-alafasy/sections/104.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 10063624,
+      "durationMs": 1257185,
+      "sha256": "9e09e93e5e15099f70937aaa124da55f3053a25e68139ab89cdde0e999fb3ec5",
+      "timing": {
+        "startMs": 0,
+        "endMs": 1257185
+      },
+      "rightsId": "tvquran-noncommercial",
+      "sourcePage": "https://www.tvquran.com/ar/selection/4/embeddable",
+      "publisher": "TVQuran.com",
+      "attributionLevel": "publisher-attributed",
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_04.mp3",
+        "sha256": "9e09e93e5e15099f70937aaa124da55f3053a25e68139ab89cdde0e999fb3ec5",
+        "startMs": 0,
+        "endMs": 1257185
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "mishary-alafasy:111",
+      "readerId": "mishary-alafasy",
+      "title": "أذكار النوم",
+      "type": "sleep",
+      "categoryIds": [
+        2
+      ],
+      "url": "/audio/adhkar/mishary-alafasy/sections/111.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 5081759,
+      "durationMs": 634452,
+      "sha256": "e5ca82e5cfdd86fc241ff39c20bbe5fa291644ecff30a92cf3dd8f19c38a8c1a",
+      "timing": {
+        "startMs": 0,
+        "endMs": 634452
+      },
+      "rightsId": "tvquran-noncommercial",
+      "sourcePage": "https://www.tvquran.com/ar/selection/11/embeddable",
+      "publisher": "TVQuran.com",
+      "attributionLevel": "publisher-attributed",
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_11.mp3",
+        "sha256": "e5ca82e5cfdd86fc241ff39c20bbe5fa291644ecff30a92cf3dd8f19c38a8c1a",
+        "startMs": 0,
+        "endMs": 634452
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    }
+  ]
+}

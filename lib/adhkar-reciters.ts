@@ -5,9 +5,16 @@
  * لا تُستبدل تسجيلات وردٍ كامل بصوت ذكرٍ منفرد من قارئ مختلف.
  * هذه القائمة تثبت وجود رابط مصدر محدد، وليست ضمانًا لتوافر الخادم دائمًا.
  */
+import { hasLocalAdhkarReader, localAdhkarAudio, localAdhkarReaders, localAdhkarSections, localAdhkarSectionUrl } from './adhkar-local-audio'
+import type { AdhkarCategory } from './adhkar-catalog'
+
+export function adhkarCategoryAudioCount(reader: string, category: AdhkarCategory, section?: AdhkarDailyType): number {
+  return category.array.filter(item => Boolean(getIndividualAdhkarAudio(reader, item, section))).length
+}
+
 export type AdhkarDailyType = 'morning' | 'evening' | 'sleep' | 'waking'
-export type AdhkarRecordingType = AdhkarDailyType | 'day-and-night'
-export type AdhkarRecordingSource = 'tvquran' | 'islamhouse' | 'adhkar-json'
+export type AdhkarRecordingType = AdhkarDailyType | 'day-and-night' | 'chapter'
+export type AdhkarRecordingSource = 'tvquran' | 'islamhouse' | 'adhkar-json' | 'local'
 
 export interface AdhkarRecording {
   id: string
@@ -16,7 +23,8 @@ export interface AdhkarRecording {
   url: string
   source: AdhkarRecordingSource
   sourcePage: string
-  kind: 'complete-section' | 'combined-section'
+  kind: 'complete-section' | 'combined-section' | 'chapter'
+  categoryIds?: readonly number[]
 }
 
 export interface AdhkarReciter {
@@ -63,7 +71,7 @@ function tvquran(
  * الأسماء ذات التسجيلات الجزئية غير المرتبطة بروابط MP3 مؤكدة لا تظهر
  * في قوائم التشغيل، ويمكن إضافتها لاحقًا بعد توثيق روابطها الفعلية.
  */
-export const ADHKAR_RECITERS: readonly AdhkarReciter[] = [
+const PREVIOUS_ADHKAR_RECITERS: readonly AdhkarReciter[] = [
   {
     id: 'mishary-alafasy',
     name: 'مشاري بن راشد العفاسي',
@@ -80,7 +88,7 @@ export const ADHKAR_RECITERS: readonly AdhkarReciter[] = [
     id: 'faris-abbad',
     name: 'فارس عباد',
     sourcePage: 'https://www.tvquran.com/ar/scholar/64/profile',
-    individualAudio: false,
+    individualAudio: hasLocalAdhkarReader('faris-abbad'),
     recordings: [
       tvquran('faris-morning', 'أذكار الصباح', 'morning', 5),
       tvquran('faris-evening', 'أذكار المساء', 'evening', 6),
@@ -116,19 +124,32 @@ export const ADHKAR_RECITERS: readonly AdhkarReciter[] = [
     id: 'sulaiman-al-shuhayhi',
     name: 'سليمان بن محمد الشويهي',
     sourcePage: ISLAMHOUSE_SULAIMAN,
-    individualAudio: false,
+    individualAudio: hasLocalAdhkarReader('sulaiman-al-shuhayhi'),
     recordings: [],
   },
   {
     id: 'walid-abu-ziyad',
     name: 'وليد أبو زياد',
-    sourcePage: '',
-    individualAudio: false,
+    sourcePage: 'https://islamhouse.com/ar/audios/289179/',
+    individualAudio: hasLocalAdhkarReader('walid-abu-ziyad'),
     recordings: [],
-    legacyOnly: true,
   },
 ]
 
+export const ADHKAR_RECITERS: readonly AdhkarReciter[] = [
+  ...PREVIOUS_ADHKAR_RECITERS,
+  ...localAdhkarReaders().filter(r => !PREVIOUS_ADHKAR_RECITERS.some(old => old.id === r.id))
+    .map(r => ({id:r.id, name:r.name, sourcePage:r.sourcePage, individualAudio:r.individualAudioCount > 0, recordings:[]})),
+].map(reader => ({...reader, individualAudio:hasLocalAdhkarReader(reader.id), recordings:[
+  ...localAdhkarSections(reader.id).map(section => ({id:section.id, title:section.title, type:section.type, url:section.url,
+    source:'local' as const, sourcePage:section.sourcePage, categoryIds:section.categoryIds,
+    kind:section.type === 'day-and-night' ? 'combined-section' as const : section.type === 'chapter' ? 'chapter' as const : 'complete-section' as const})),
+  ...reader.recordings,
+]}))
+export function findAdhkarCategoryRecording(reader: string, category: number): AdhkarRecording | null {
+  return [...(findAdhkarReciter(reader)?.recordings || [])].filter(r => r.categoryIds?.includes(category))
+    .sort((a,b) => (a.categoryIds?.length || 0)-(b.categoryIds?.length || 0))[0] || null
+}
 export function findAdhkarReciter(id: string): AdhkarReciter | null {
   return ADHKAR_RECITERS.find((reciter) => reciter.id === id) || null
 }
@@ -212,6 +233,8 @@ function approvedAudioURL(value: string): URL | null {
 }
 
 export function makeAdhkarAudioUrl(value: string): string | null {
+  const local = localAdhkarSectionUrl(value)
+  if (local) return local
   const approved = approvedAudioURL(value)
   return approved
     ? `/api/adhkar-audio?url=${encodeURIComponent(approved.href)}`
@@ -221,9 +244,15 @@ export function makeAdhkarAudioUrl(value: string): string | null {
 export function getIndividualAdhkarAudio(
   reciterId: string,
   item: { audio?: string | null },
+  section?: AdhkarDailyType,
 ): string | null {
   const reciter = findAdhkarReciter(reciterId)
   if (!reciter?.individualAudio || !item.audio) return null
+  const local = localAdhkarAudio(reciterId, item, section)
+  if (local) return local
+  // Legacy source files belong to Hamad only. A missing clip for another
+  // voice must never silently play the same file under that reader's name.
+  if (reciterId !== 'hamad-al-drehem') return null
   if (/^https:\/\//i.test(item.audio)) return makeAdhkarAudioUrl(item.audio)
   const path = item.audio.replace(/^\/+/, '')
   if (!/^audio\/[a-zA-Z0-9_-]+\.mp3$/.test(path)) return null

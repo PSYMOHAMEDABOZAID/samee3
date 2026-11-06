@@ -1,0 +1,70 @@
+{
+  "datasetVersion": "2026-11-06.3",
+  "readerCount": 25,
+  "recordingCount": 1133,
+  "individualAudioFileCount": 1178,
+  "sectionRecordingCount": 122,
+  "totalAudioFileCount": 1300,
+  "preservedV1Recordings": 626,
+  "preservedV2AudioFiles": 1032,
+  "unitTests": {
+    "passed": 117,
+    "failed": 0
+  },
+  "libraryCatalogCheck": "passed: 27 books and 8 categories",
+  "typecheck": "passed",
+  "productionBuild": "passed",
+  "serviceWorkerSyntax": "passed",
+  "gitDiffWhitespace": "passed",
+  "audioIntegrityAndDecode": {
+    "status": "passed",
+    "audioFiles": 1300,
+    "decoded": true
+  },
+  "reactInteractionTests": {
+    "passed": true,
+    "environment": "React 19 in Happy DOM; simulated audio, not a real browser",
+    "focusedReading": true,
+    "fullList": true,
+    "favorites": true,
+    "pickerSearch": true,
+    "pickerEscape": true,
+    "exactListeningRepetitions": 3,
+    "countFloor": 0,
+    "routeDetachAndReturnKeepsPlayer": true,
+    "persistedPreferences": true
+  },
+  "productionHttp": {
+    "status": "passed",
+    "datasetVersion": "2026-11-06.3",
+    "checks": [
+      "Production API and static catalog agree on 25 readers and exact file counts",
+      "Pagination returns all 267 canonical dhikr cards without duplicates",
+      "MP3 checksum, CORS, HTTP byte range, preflight and matching static/API timing files passed for every reader",
+      "All 122 complete recordings, reader/type filters and time-specific wording passed",
+      "Public pages open without authentication; invalid/unknown API responses remain uncached",
+      "Python developer downloader fetched new-reader clips and complete sources and repaired a corrupted local download"
+    ],
+    "environment": "Local Next.js production HTTP server; not a physical-device or real-browser media test"
+  },
+  "realBrowserTest": {
+    "status": "unavailable",
+    "reason": "Installed Chromium could not launch because the environment denied its process-singleton socket. Browser playback and visual layout are not claimed as tested."
+  },
+  "preparationMethods": {
+    "publisher-individual-file": 267,
+    "audio-word-alignment": 751,
+    "publisher-single-item-chapter": 160
+  },
+  "limits": [
+    "Each reader has only the explicitly listed available recordings; this is not an exhaustive worldwide list.",
+    "Automatic clip boundaries have not received comprehensive human listening review.",
+    "React/media interactions use simulated audio; no real-browser playback or physical iPhone/Android test was completed."
+  ],
+  "excludedSources": [
+    {
+      "sourceIndex": 520,
+      "reason": "Repeated MP3 frame decoding errors"
+    }
+  ]
+}

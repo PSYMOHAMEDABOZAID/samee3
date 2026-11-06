@@ -1,0 +1,305 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "SAMEE3 Adhkar Developer API",
+    "version": "1.1.0",
+    "description": "Public read-only Arabic adhkar audio catalog. Times use milliseconds. Source rights remain with the original publishers. Machine-aligned clips are explicitly labeled."
+  },
+  "servers": [
+    {
+      "url": "https://samee3.vercel.app"
+    }
+  ],
+  "paths": {
+    "/api/adhkar/v1": {
+      "get": {
+        "summary": "Dataset index and coverage",
+        "responses": {
+          "200": {
+            "description": "Public dataset response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid query parameters"
+          }
+        }
+      }
+    },
+    "/api/adhkar/v1/reciters": {
+      "get": {
+        "summary": "Readers and available clip counts",
+        "responses": {
+          "200": {
+            "description": "Public dataset response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid query parameters"
+          }
+        }
+      }
+    },
+    "/api/adhkar/v1/items": {
+      "get": {
+        "summary": "Paginated individual adhkar recordings",
+        "parameters": [
+          {
+            "name": "reciter",
+            "in": "query",
+            "description": "Reader ID",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "category",
+            "in": "query",
+            "description": "Category ID",
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          {
+            "name": "item",
+            "in": "query",
+            "description": "Dhikr number within category",
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "description": "Pagination offset",
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Page size",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "default": 50
+            }
+          },
+          {
+            "name": "includeMissing",
+            "in": "query",
+            "description": "Return missing reader recordings explicitly",
+            "schema": {
+              "type": "integer",
+              "enum": [
+                0,
+                1
+              ],
+              "default": 0
+            }
+          },
+          {
+            "name": "section",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "morning",
+                "evening",
+                "sleep",
+                "waking"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Public dataset response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid query parameters"
+          }
+        }
+      }
+    },
+    "/api/adhkar/v1/timings/{reciter}": {
+      "get": {
+        "summary": "Clip timing intervals and their original source positions",
+        "parameters": [
+          {
+            "name": "reciter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "category",
+            "in": "query",
+            "description": "Optional category filter",
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Public dataset response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid query parameters"
+          },
+          "404": {
+            "description": "Unknown reader"
+          }
+        }
+      }
+    },
+    "/api/adhkar/v1/sections": {
+      "get": {
+        "summary": "Complete source recordings and chapters",
+        "parameters": [
+          {
+            "name": "reciter",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "category",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "morning",
+                "evening",
+                "sleep",
+                "waking",
+                "day-and-night",
+                "chapter"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Complete recording metadata with sources and rights IDs"
+          },
+          "400": {
+            "description": "Invalid query"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Recording": {
+        "type": "object",
+        "required": [
+          "url",
+          "bytes",
+          "durationMs",
+          "sha256",
+          "timing",
+          "alignment",
+          "source"
+        ],
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "Same-origin relative MP3 URL"
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "durationMs": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "timing": {
+            "type": "object",
+            "properties": {
+              "startMs": {
+                "type": "integer",
+                "enum": [
+                  0
+                ]
+              },
+              "endMs": {
+                "type": "integer"
+              }
+            }
+          },
+          "alignment": {
+            "type": "object",
+            "description": "Preparation method and optional text-match score; not a claim of human review."
+          },
+          "source": {
+            "type": "object",
+            "description": "Original source URL, checksum and start/end offsets in milliseconds."
+          },
+          "rightsId": {
+            "type": "string"
+          },
+          "contextSection": {
+            "type": "string",
+            "enum": [
+              "any",
+              "morning",
+              "evening"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "security": []
+}

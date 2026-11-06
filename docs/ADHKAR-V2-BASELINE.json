@@ -1,0 +1,5162 @@
+[
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/001/001.mp3",
+    "bytes": 1347922,
+    "sha256": "f4013b5035e4108afd8d1a47376a11520cb74a7da0b307e8555a0d744392359b"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/001/001.mp3",
+    "bytes": 1044264,
+    "sha256": "c490ba26f68b3bae7add2ebddfc59c28337a2e802941fd5c72bbbd0febd937d3"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/001/001.mp3",
+    "bytes": 453079,
+    "sha256": "d9900afddfe629aecad36217bd118489eb8b415ba43414ae8c7b7c6eca8be59a"
+  },
+  {
+    "url": "/audio/adhkar/hani-alrifai/001/001-201.mp3",
+    "bytes": 1072841,
+    "sha256": "1541b6288daaaf882a4556cceed5726a76399314530c03e8533a5c390fef89ca"
+  },
+  {
+    "url": "/audio/adhkar/idrees-abkar/001/001-202.mp3",
+    "bytes": 483855,
+    "sha256": "0b4910bb4e84337778ab07a976ebc44f5880ce6dd063b133ef2ed478aa062b59"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/001/001-104.mp3",
+    "bytes": 616140,
+    "sha256": "19249c10ca42ce08c8b9cf86b1e5ab3bc6d4b3d6021f71b54057a361d4930e75"
+  },
+  {
+    "url": "/audio/adhkar/mohamed-jibril/001/001-107.mp3",
+    "bytes": 555831,
+    "sha256": "c8ae80bebae728e0707586b141c89bce5d739612f1103b795714d8604a140d8e"
+  },
+  {
+    "url": "/audio/adhkar/nasser-alqatami/001/001-102.mp3",
+    "bytes": 436832,
+    "sha256": "fd03cbbe3c68dfeeccbbb7ef5df02cbce116cd81d7ed9cd712a7e20a2a6c25ae"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/001/001-386.mp3",
+    "bytes": 882421,
+    "sha256": "b0f19be7613a12c8fc624790a6466b179a03aacf036f7c7f57e11bfe7bc5d398"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/001/002.mp3",
+    "bytes": 1603295,
+    "sha256": "8c5493937b4bb7e8976fe07f1b6fcf1c3ac583be77232aca40b9b3a5b432e55e"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/001/002.mp3",
+    "bytes": 1236434,
+    "sha256": "a7febe211a5db0b1e3f4a30ca69c62db9f3cc8514dd74ae4680b25fa0e94e3d7"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/001/002.mp3",
+    "bytes": 580394,
+    "sha256": "28a502e94aac918dbdc65f3ac5841f3251e4e1a378b4ee1721292b438b21e6c6"
+  },
+  {
+    "url": "/audio/adhkar/idrees-abkar/001/002-202.mp3",
+    "bytes": 572697,
+    "sha256": "644aff0eed21e222aabaa7713249a43bcf60bc6f5d303ffe5dcf0539e1fdd16e"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/001/002-111.mp3",
+    "bytes": 867609,
+    "sha256": "da0c6ec356a00af3131d06212e913e3af672652a521875e14e7a1ded378809e2"
+  },
+  {
+    "url": "/audio/adhkar/nasser-alqatami/001/002-102.mp3",
+    "bytes": 597997,
+    "sha256": "5ee2b8f6217d6bc47c114ac16e41082027b50f8ed0c36a0908283c4db2d450f8"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/001/002-386.mp3",
+    "bytes": 1056737,
+    "sha256": "4faa80082f2a8e2c2576ddb9c8031a1184cdded62e5fdd5c26def3a5c262231b"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/001/003.mp3",
+    "bytes": 1012718,
+    "sha256": "3ddb2c1f13058cfe2ede03231d6aa964a1bf973b6fe01aa6f07a8e8ca83d6244"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/001/003.mp3",
+    "bytes": 968986,
+    "sha256": "5bfb2ec530a9fb4a456f65e8680052351e7adc002117ca65a9b26d73c26a84d6"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/001/003.mp3",
+    "bytes": 481670,
+    "sha256": "85cd481afd1cd46aec30766b132f172bb57822ee4d22413cd7b4e1863e2136fc"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/001/003-105-morning.mp3",
+    "bytes": 454995,
+    "sha256": "74daad8be2a3cde9b7909b711bdacc89c5ae501ab4ade4b4f8ce9c1cf28660e8"
+  },
+  {
+    "url": "/audio/adhkar/hani-alrifai/001/003-201-morning.mp3",
+    "bytes": 1058725,
+    "sha256": "1b23714e45ca489eb56e989e4c7ecf6ceea8a0fae2bee3ebb8c03f37a3fb680d"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/001/003-103-morning.mp3",
+    "bytes": 439671,
+    "sha256": "b137f3994181814e808b427e50cb5a80a9dac8581f643a18af24bea509235f3c"
+  },
+  {
+    "url": "/audio/adhkar/mohamed-jibril/001/003-107-morning.mp3",
+    "bytes": 578007,
+    "sha256": "8844e0ab94def971c80acca102fac8cd843a2c7d132ee31428cd70ad74325289"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/001/003-386-morning.mp3",
+    "bytes": 707820,
+    "sha256": "5d09d6885ee9e37c214dc66b1ff5250ffdad5b8639fa84c9237d2e1453fa1c7e"
+  },
+  {
+    "url": "/audio/adhkar/salman-alotaibi/001/003-203-morning.mp3",
+    "bytes": 548919,
+    "sha256": "ef0b5e89ddc224cf8934abb36d178b499d23763b6d666a00a63040b098c62d80"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/001/003-106-evening.mp3",
+    "bytes": 474722,
+    "sha256": "a7db4ce9fd5241d619e439563cca0f04c27bed831df51774004dc8277b0f07b4"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/001/003-104-evening.mp3",
+    "bytes": 449000,
+    "sha256": "48ab0e00c6cebee35d284cc09463a1fe089182b46f27abc690197ac31e9f2073"
+  },
+  {
+    "url": "/audio/adhkar/salman-alotaibi/001/003-204-evening.mp3",
+    "bytes": 565093,
+    "sha256": "d2f671efd31af49c4f4a04b2529ec790eb503483b72635f12f96754f0df119bc"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/001/004.mp3",
+    "bytes": 518273,
+    "sha256": "b654dcbdc2e76ac893b2b098d767634f8342102fe587c2e082b5b4d5b0f16509"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/001/004.mp3",
+    "bytes": 251235,
+    "sha256": "6b134541fb9ca3da22f641334ae1c6fae396807773d4914f3d7d366e1e986192"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/001/004.mp3",
+    "bytes": 191129,
+    "sha256": "16e017fa5da8f320fb9f2962fa929a509444e5a942d73d1ae18a42e62d690e1d"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/001/004.mp3",
+    "bytes": 124289,
+    "sha256": "f1507eeaf5995545b9912ea20d3748c914e0e1511119815ccabce6c0dd0cd9b4"
+  },
+  {
+    "url": "/audio/adhkar/hani-alrifai/001/004-201-morning.mp3",
+    "bytes": 288841,
+    "sha256": "fec86ddf61cf3b59234270ef05b4921ccf9af279deaf1a70c4977dc5d77b66e7"
+  },
+  {
+    "url": "/audio/adhkar/idrees-abkar/001/004-202-morning.mp3",
+    "bytes": 114014,
+    "sha256": "077fe5cafb787f8e55bc4af548882fa8b0eda6e9d7dbd2f0d0df245a0f9235ed"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/001/004-103-morning.mp3",
+    "bytes": 117600,
+    "sha256": "a5ff5f83019f1552f29bd9a768c7365e6740ebb9a381abc8644ebf8f4d1ef3ad"
+  },
+  {
+    "url": "/audio/adhkar/mohamed-jibril/001/004-107-morning.mp3",
+    "bytes": 139089,
+    "sha256": "fecd72a2d14ffdbb29beac45184c01f78ff4c1519a7e95f1587731b3c62fb112"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/001/004-386-morning.mp3",
+    "bytes": 185903,
+    "sha256": "e0fc724c43412b4ff90da9432b95ba922b278904e6ddadab395c3293543d93dd"
+  },
+  {
+    "url": "/audio/adhkar/salman-alotaibi/001/004-203-morning.mp3",
+    "bytes": 178662,
+    "sha256": "b73c791e10a0aecfa25f60d2cbb55c5560a2a8f13fea3cd4ce409e0ebfda0f22"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/001/004-106-evening.mp3",
+    "bytes": 117218,
+    "sha256": "af4802e61035774b3e02ad9f2a8d0b48deef63143fa674d688259f73cfa7dbd6"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/001/004-105-morning.mp3",
+    "bytes": 113129,
+    "sha256": "f1da5da201ff0bbbf2931a5c62349ed7bf6dcaf94df7231fa006d37546c91998"
+  },
+  {
+    "url": "/audio/adhkar/idrees-abkar/001/004-202-evening.mp3",
+    "bytes": 110666,
+    "sha256": "2882ae59eada58579cafc52c5ded37bed57f706d1ecd15b5a31522f2737512f1"
+  },
+  {
+    "url": "/audio/adhkar/salman-alotaibi/001/004-204-evening.mp3",
+    "bytes": 166313,
+    "sha256": "d300d78031f1a5cc921f427c6c9ea666e0fd23342aef4c506dffe21b2ff640d7"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/001/005.mp3",
+    "bytes": 582220,
+    "sha256": "a97f8c9b98712bddd5c50c8d33f1128028d92033ee3485728d1c37b9ac995766"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/001/005.mp3",
+    "bytes": 694014,
+    "sha256": "dfd944c07d05ab6438b90e4cd8d8367ee9be5158df18c6c6f09672dbd64041d0"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/001/005.mp3",
+    "bytes": 333590,
+    "sha256": "5695188cb79c08baecf13ff20ce057466b7eb47e447b0db26acc4dd222d025dd"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/001/005-105.mp3",
+    "bytes": 325615,
+    "sha256": "36e6aff974bcfa339e9ea08ac3ddf4b58dd0f2b7d2ff5c6e9ce9d598713e7c58"
+  },
+  {
+    "url": "/audio/adhkar/idrees-abkar/001/005-202.mp3",
+    "bytes": 283310,
+    "sha256": "931692ad31f91f9f6a0d0ec10215cc4a3986c23e033222204697f8ed98912375"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/001/005-103.mp3",
+    "bytes": 354159,
+    "sha256": "33d4d14e19d317c0f5a687bbabaced45ce6fec8c9d4edcf2752df80500f55a01"
+  },
+  {
+    "url": "/audio/adhkar/mohamed-jibril/001/005-107.mp3",
+    "bytes": 371038,
+    "sha256": "239876333c2de42fb570f9126e3cd8d0ed682611b42cd6c2fe4608e2cd6868e9"
+  },
+  {
+    "url": "/audio/adhkar/salman-alotaibi/001/005-203.mp3",
+    "bytes": 398767,
+    "sha256": "f80cc27d7bee0bb3c37f2d9aa1de078d59d7ec22c0fcf6eb89e9dacf7fd8c5eb"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/001/006.mp3",
+    "bytes": 550456,
+    "sha256": "caecbd39ce40617a6970da63316f57115d8438998ded1426b9a0242df98c1012"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/001/006.mp3",
+    "bytes": 547163,
+    "sha256": "e8d6f2972aaad4ec08b5965f9d9b513b4397928e72cebfa3ce49c53fca252e39"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/001/006.mp3",
+    "bytes": 265569,
+    "sha256": "456322872cce3bbddf1e02c1052311738d4ac1d6a8e02aa0f2164a52909c1352"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/001/006.mp3",
+    "bytes": 263512,
+    "sha256": "053ca25bf471f8640a26580619e9b1d2aea1ee401db7a932b0f7fef50b949580"
+  },
+  {
+    "url": "/audio/adhkar/hani-alrifai/001/006-201-morning.mp3",
+    "bytes": 535152,
+    "sha256": "b1f043d0ac12b03a6ed1c68a830855e298423b9fe7072cbdc24804b364355211"
+  },
+  {
+    "url": "/audio/adhkar/idrees-abkar/001/006-202-morning.mp3",
+    "bytes": 230617,
+    "sha256": "c2f4b2954d87c1c580a24a84eb78a58947c72df6a2995df24d42f71782bb5b2e"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/001/006-103-morning.mp3",
+    "bytes": 242835,
+    "sha256": "b35ec9bc72ed9ad996a56c7bd56c0bc48d5c1665a57eff2a6ef9ef567edfbf38"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/001/006-386-morning.mp3",
+    "bytes": 419060,
+    "sha256": "626907ec997be691115c710596397deefe35b124663e5a836e432f5a3ef68be8"
+  },
+  {
+    "url": "/audio/adhkar/salman-alotaibi/001/006-203-morning.mp3",
+    "bytes": 296727,
+    "sha256": "4fd78d3b75141f9f165e3c0e5c10b65cc8830e4a1d723297633560876ef20e4c"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/001/006-106-evening.mp3",
+    "bytes": 267602,
+    "sha256": "a0ec3e9a57651f7d40d37a880f4ae8c4941ff86db1e7d3f5f429785511ba34c2"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/001/006-105-morning.mp3",
+    "bytes": 256737,
+    "sha256": "f45ea825b0ca830b1f6d5a649eec69301e57a3fcaf8367e448ac6cc91716f1ad"
+  },
+  {
+    "url": "/audio/adhkar/hani-alrifai/001/006-201-evening.mp3",
+    "bytes": 535152,
+    "sha256": "ecd01b1ac192e991edd47372a2369399ec2128dec99c5c7b4a675b29aa5c3d3c"
+  },
+  {
+    "url": "/audio/adhkar/idrees-abkar/001/006-202-evening.mp3",
+    "bytes": 230617,
+    "sha256": "37f41664ca19e82d4080184a26d96c986a292c9ec4ce7d621f4223dca1186d24"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/001/006-104-evening.mp3",
+    "bytes": 256876,
+    "sha256": "9a9e899c577746b6065f08123b391a12539b7c6f0b3d6706d96a81f0bae76409"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/001/006-386-evening.mp3",
+    "bytes": 419060,
+    "sha256": "0342b2c43cf510871f69767fac1ff1cf4a9c47ea4a808ec55fe1742acf2ef1b5"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/001/007.mp3",
+    "bytes": 326847,
+    "sha256": "36833e94a06a40671b5d74a4e17a366a5d90982a72a8ddf5e59593fb4f05684c"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/001/007.mp3",
+    "bytes": 315949,
+    "sha256": "90b8af01d649c75f2a57c1df6ad7c83eaf860b41a0ed19c2d06e08f3020ab1ce"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/001/007.mp3",
+    "bytes": 137245,
+    "sha256": "8e08d491ec4e54d766562bd027696329643b7c4b178b8b8fbc3a3b6f0e1235c9"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/001/007.mp3",
+    "bytes": 155327,
+    "sha256": "21be42f72018341eccf12c58f23f5bcb69a773a0a1e054dbcb5c82aa77f1f76c"
+  },
+  {
+    "url": "/audio/adhkar/hani-alrifai/001/007-201-morning.mp3",
+    "bytes": 319626,
+    "sha256": "236f45ee6fc63198566ffe85d2a6ec5b6d83f984664f128fc5c3357889b0ee79"
+  },
+  {
+    "url": "/audio/adhkar/idrees-abkar/001/007-202-morning.mp3",
+    "bytes": 123843,
+    "sha256": "9b5762145bc35215269875b054f3bef018227ec6ba93c407f716ea5115c8b169"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/001/007-103-morning.mp3",
+    "bytes": 144694,
+    "sha256": "5cb9fbf9f5e9e0ffb8dd235ee56b6816b688f5eed40c2c95a4336f1b0356cfa1"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/001/007-386-morning.mp3",
+    "bytes": 217942,
+    "sha256": "1ae436e84b6b949e2ff3cf08659f26e931e7514358b874f7781052240562c067"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/001/007-106-evening.mp3",
+    "bytes": 127881,
+    "sha256": "166ddb3a2b00fa8c4a010e53f25e2e91aa33ae88f861a18a42524ec388a91e98"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/001/007-105-morning.mp3",
+    "bytes": 137547,
+    "sha256": "a757b02440ee3a9cde0c6e76a23ab9511c6e7645cb502ab13c54ba5eff8d731e"
+  },
+  {
+    "url": "/audio/adhkar/hani-alrifai/001/007-201-evening.mp3",
+    "bytes": 319626,
+    "sha256": "badfc2194e875d5edd941d777bef5c80059c50960e6d81c0065f11efdb10cf75"
+  },
+  {
+    "url": "/audio/adhkar/idrees-abkar/001/007-202-evening.mp3",
+    "bytes": 123843,
+    "sha256": "d67137b0dcd9196bb5c79a54792e9285b99ec65126f7d6f29ad624a7e024973e"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/001/007-104-evening.mp3",
+    "bytes": 127406,
+    "sha256": "557889586bfd65c2c7a18b378fa4bec4e8abbaa48c3170cbe163e0e01c9225fd"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/001/008.mp3",
+    "bytes": 662051,
+    "sha256": "a92359c5def750f6801dd3138e6aa8f786b78b213f07c8af865bbdaaa7a3e65c"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/001/008.mp3",
+    "bytes": 665425,
+    "sha256": "138dabbbdc9ab6a47c43c30c97330973cd736583e5d363b4ce71a15f097448b3"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/001/008.mp3",
+    "bytes": 273015,
+    "sha256": "d2e1d1d492abd9ccfff256f35b30cbcfb1243d72c88fce89cd4f92e1d01f6713"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/001/008-105.mp3",
+    "bytes": 433448,
+    "sha256": "a39a4a1de923daa2f43e36a463084ca80c7af126f1631dca041cc3ad765d1022"
+  },
+  {
+    "url": "/audio/adhkar/hani-alrifai/001/008-201.mp3",
+    "bytes": 654757,
+    "sha256": "58c20e1ffcc0b8376bb846e17c1e6caaed9a04ce1267f2a9a7613da3b854821b"
+  },
+  {
+    "url": "/audio/adhkar/idrees-abkar/001/008-202.mp3",
+    "bytes": 251456,
+    "sha256": "e80b1a9d4b50de23b43d05d788318504b7ab5a484df590f70c1096e7e487ffbc"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/001/008-103.mp3",
+    "bytes": 298370,
+    "sha256": "493b84031849bc3ba3cfa304eec30e3345b4396424769d3fcd021d384315a595"
+  },
+  {
+    "url": "/audio/adhkar/mohamed-jibril/001/008-107.mp3",
+    "bytes": 355076,
+    "sha256": "ad6684ce1fbd0dfb1eed1cfa57b5becf394684309bdd3fd37c0e6eca44cd7105"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/001/008-386.mp3",
+    "bytes": 396456,
+    "sha256": "295c0148465a9dda4ed657c0461eda512504ea096d76deabbe992a6f820dc05b"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/001/009.mp3",
+    "bytes": 310965,
+    "sha256": "043e01a9fce0b1a96d0aa5ce34d5de12d2e77191329a208d7f9c08c0533479a1"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/001/009.mp3",
+    "bytes": 102392,
+    "sha256": "863057d7fd0f256e60eefeec66280ff3b306839a44a4d8fcef4da2309f444e62"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/001/009.mp3",
+    "bytes": 80985,
+    "sha256": "4dec854f7dcd7ba1f42d2f733282bef205b66790b0cc9b45017f82e37455337e"
+  },
+  {
+    "url": "/audio/adhkar/hani-alrifai/001/009-201.mp3",
+    "bytes": 246447,
+    "sha256": "e234d09dfe27d4a25afa70f9757662aa49bbc1d3e11ed3c65730f71a1f95481c"
+  },
+  {
+    "url": "/audio/adhkar/idrees-abkar/001/009-202.mp3",
+    "bytes": 87889,
+    "sha256": "091d0eec654a400b9db14af1929bc6a1b6d1ab24d17f6f868b4d90fa646e31ca"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/001/009-103.mp3",
+    "bytes": 102659,
+    "sha256": "1cee231502e3565038e7abe7f8e7139412ebcaeaff6bd7034e57b93a1ef12d18"
+  },
+  {
+    "url": "/audio/adhkar/mohamed-jibril/001/009-107.mp3",
+    "bytes": 128789,
+    "sha256": "7cdf9e6683e1d59d5eeb74e81364694cc7d9dba4c2d20297f21e7491f9e3d8ff"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/001/009-386.mp3",
+    "bytes": 170524,
+    "sha256": "79d40dcc4898a7ba1eb91f009dcb05c79d9425e41f44927d5c10cc42108bc87a"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/001/010.mp3",
+    "bytes": 725580,
+    "sha256": "7349914e738eabfff35ffc2d7c5ebe1df3de5243e3600f9c8d7be192031054c3"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/001/010.mp3",
+    "bytes": 1018444,
+    "sha256": "62b8c9d13c11b3be2529d5d06611cd3ff49fd69480e33698d83ddf6cba186528"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/001/010.mp3",
+    "bytes": 365012,
+    "sha256": "3be011df0c8eb71817830924f0afee4b9c2aa791eac755ecbd8f4883f01440cb"
+  },
+  {
+    "url": "/audio/adhkar/hani-alrifai/001/010-201.mp3",
+    "bytes": 1005899,
+    "sha256": "091690c4b94d847956e3c99b8a5e6761dc0f1dcf37b8b1ec9e51cfac7eb0281d"
+  },
+  {
+    "url": "/audio/adhkar/idrees-abkar/001/010-202.mp3",
+    "bytes": 351262,
+    "sha256": "a501293eb9793feb7f90842c0a101a341de080a4a282ac4265c83ed360637598"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/001/010-103.mp3",
+    "bytes": 390740,
+    "sha256": "aa54f270b985273251a0cc5b05a55678ce8c03f73fc093f7a6fdd0b913143975"
+  },
+  {
+    "url": "/audio/adhkar/mohamed-jibril/001/010-107.mp3",
+    "bytes": 487462,
+    "sha256": "444860067d9d30edb3b2dbe3e5a7223febe8783373d7fbc82a621e3411725e42"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/001/010-386.mp3",
+    "bytes": 666122,
+    "sha256": "7847bc5d97cf617dd2cd3877b0ea0a706cfb0cc99961e89854e05c6036c9c89c"
+  },
+  {
+    "url": "/audio/adhkar/salman-alotaibi/001/010-204.mp3",
+    "bytes": 500625,
+    "sha256": "c940231c80a5643afa22874b781ccdb0e52342a5a0ef5387b0805ccf33558650"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/001/011.mp3",
+    "bytes": 598103,
+    "sha256": "864f0e5d804ceb874de0e1c9716aa9ce1c81ba26a88297b6bc8d0f0e274501d2"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/001/011.mp3",
+    "bytes": 734674,
+    "sha256": "1dfd99de3fb9e2524c291177858d8ea4a1c03596526568453034d0608fe963a6"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/001/011.mp3",
+    "bytes": 283191,
+    "sha256": "fd5662fb891e869a22b62113f5254bd5763d9d5fc24b4a61a6268f923e2214af"
+  },
+  {
+    "url": "/audio/adhkar/hani-alrifai/001/011-201.mp3",
+    "bytes": 682890,
+    "sha256": "53e340be793216a50ef9380485b15aa70f74a7129c753e4f2f0062a1e5274866"
+  },
+  {
+    "url": "/audio/adhkar/idrees-abkar/001/011-202.mp3",
+    "bytes": 272401,
+    "sha256": "d95178353ace2e620aa190ebf2b22996cf73ca1a079fbec74dd63ea0b1142f50"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/001/011-104.mp3",
+    "bytes": 322673,
+    "sha256": "fc66e915fb3b1f269f1753eac6a8d230e0ab3049b33fe94a8109372a8644a330"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/001/011-386.mp3",
+    "bytes": 487794,
+    "sha256": "367005aef26f6629cbd30cc523561c572ce94b58093cbe3ec92678aecf47d78c"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/001/012.mp3",
+    "bytes": 342730,
+    "sha256": "ba25e2c40ea87b9e9f767a2f0c5da71c38205bd4a8fecfbb652f8a957810c99c"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/001/012.mp3",
+    "bytes": 294075,
+    "sha256": "9fb9c8ae2ebce97a93d22404a0753b447a652d3dbbe270fbdeadcb9099cb64b3"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/001/012.mp3",
+    "bytes": 112869,
+    "sha256": "9b5a2276a18f3059fe551cf76939b7bc98a209e18b72d65061683962aea6bc26"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/001/012-105.mp3",
+    "bytes": 122554,
+    "sha256": "c3448a8d20950b4cbaa38521ab8863ce053a348cd6153e82f450efbe2a6a7bee"
+  },
+  {
+    "url": "/audio/adhkar/hani-alrifai/001/012-201.mp3",
+    "bytes": 294943,
+    "sha256": "6d95648a321d6deccd36ead752dc94bfd7e4ffc4707cb0b60270adef73b5a9db"
+  },
+  {
+    "url": "/audio/adhkar/idrees-abkar/001/012-202.mp3",
+    "bytes": 106358,
+    "sha256": "7bdc0a9bf47ff24052d1da1cc32d26edae9ec74464058cdd17868b9e333c423d"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/001/012-103.mp3",
+    "bytes": 120620,
+    "sha256": "4badc0430a4ee1c549bf5cce8ddcc55d9044f5fd0fa472bbe99746cd3ec517f3"
+  },
+  {
+    "url": "/audio/adhkar/mohamed-jibril/001/012-107.mp3",
+    "bytes": 145387,
+    "sha256": "3f1cabd910c6e0db64f734f8ce471a69b5b3eb45708149016cadef63ab86605e"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/001/012-386.mp3",
+    "bytes": 201980,
+    "sha256": "ae343c78a87d4b20f7b20192e61111924d6cc9a15fa3a6f87de3441b59653b54"
+  },
+  {
+    "url": "/audio/adhkar/salman-alotaibi/001/012-203.mp3",
+    "bytes": 175510,
+    "sha256": "c189bb11ac5868fd122969b39208cf78115d576c99acd00753ef1b0464969fcd"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/001/013.mp3",
+    "bytes": 359030,
+    "sha256": "8991c6c180ecc7f4f969f4909e4464af977668991d5db63546cabb1f4f6b524e"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/001/013.mp3",
+    "bytes": 268379,
+    "sha256": "fab0f3fe6c2bd94841d3598d997ad67eb1c9badc6ce52b862c92ca1ca31de6a9"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/001/013.mp3",
+    "bytes": 104760,
+    "sha256": "293954731d8c0fffe3e57fb0c43f831ac00aa3163ec9ad3b0bb48888c9dbd5b6"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/001/013-105.mp3",
+    "bytes": 103953,
+    "sha256": "4c7a03c84f18c876e940eb687db2e031671ef43171ad5663bce88526b08ba017"
+  },
+  {
+    "url": "/audio/adhkar/hani-alrifai/001/013-201.mp3",
+    "bytes": 272458,
+    "sha256": "2ff8adeeb5066be5f7c714e442c678abdf9b585b9a251a294a377a3b0a032046"
+  },
+  {
+    "url": "/audio/adhkar/idrees-abkar/001/013-202.mp3",
+    "bytes": 140782,
+    "sha256": "a34af5347dcbb40d388f566cdcc0240f0c065386e79f6b02984157f8f7d84f84"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/001/013-103.mp3",
+    "bytes": 107815,
+    "sha256": "26f669b6952ed9f61af96611a417bc145dd7545ec4bbfd480dd3cf21b72391b0"
+  },
+  {
+    "url": "/audio/adhkar/mohamed-jibril/001/013-107.mp3",
+    "bytes": 147165,
+    "sha256": "2b01f27e8a26134983f8eee7997dcedce636d74ac25ea25fb4ce6bf3d5ddc883"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/001/013-386.mp3",
+    "bytes": 200341,
+    "sha256": "33d197549b5d569973cb051f72d9a25557775813f5011c6751bd318eaf25a386"
+  },
+  {
+    "url": "/audio/adhkar/salman-alotaibi/001/013-203.mp3",
+    "bytes": 159579,
+    "sha256": "b02cb56c61cb112d9719634b9ed77f9462e19befa5b66f5ff1c692551e808278"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/001/014.mp3",
+    "bytes": 390795,
+    "sha256": "0ab04832456d070e7e3154cbb3a064a4f60371181b1be332824944387f697e7e"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/001/014.mp3",
+    "bytes": 363369,
+    "sha256": "aa30b6b2ec2efdd32fc38f8eab25b0c41b87cc218ff5313174b4d0c26794f29a"
+  },
+  {
+    "url": "/audio/adhkar/hani-alrifai/001/014-201.mp3",
+    "bytes": 308679,
+    "sha256": "06c710dc5e9ba4cc3bc53f0d1ee824cb974a2c232f7d773550d758279864463a"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/001/014-104.mp3",
+    "bytes": 121594,
+    "sha256": "8e362773b77f213722d453c884f33cdb7bcdc21b0ee8bc9760ff26c552f54af4"
+  },
+  {
+    "url": "/audio/adhkar/mohamed-jibril/001/014-107.mp3",
+    "bytes": 190500,
+    "sha256": "0b7af7778b4980d1aae699b8cc5432881de51587c2a5b137f8b2bde9b4978f62"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/001/014-386.mp3",
+    "bytes": 213696,
+    "sha256": "7da0922a326bd056d696a641ac25149eb1313485018986e088727716dc2de92c"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/001/015.mp3",
+    "bytes": 486508,
+    "sha256": "586b112b608afb04e4fd56e0284d4d24f7b9c49287e1abb3e9a1fcf9e2e8ecc1"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/001/015.mp3",
+    "bytes": 193673,
+    "sha256": "a72268ce2316d74ab7d38b1a2639ab37a656a3eb7cd5fb737bfb156dfdc0e008"
+  },
+  {
+    "url": "/audio/adhkar/hani-alrifai/001/015-201-morning.mp3",
+    "bytes": 593858,
+    "sha256": "30ec9f0ec62c8652a699a39c9ae9a72d5e8eeab3d08a5f223654ad738808ae2b"
+  },
+  {
+    "url": "/audio/adhkar/idrees-abkar/001/015-202-morning.mp3",
+    "bytes": 213022,
+    "sha256": "76b8d08dd88d8552f14ee23d7e91e196d4a0e6838542f39ad3f575f2c7515c69"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/001/015-103-morning.mp3",
+    "bytes": 237695,
+    "sha256": "f3e93b0c0dc80ccde54f4f7ad8b3e7902518f972b92ddad1ba107438f16e056c"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/001/015-104-evening.mp3",
+    "bytes": 246717,
+    "sha256": "b2681032639d9892d1234f9919c88c7ecadf19b22975c06a887c032b2704380b"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/001/016.mp3",
+    "bytes": 518273,
+    "sha256": "037ee1f00288d7fc35611461cc2bcc8a52c065c6b7cb75127258b9e56a130f4a"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/001/016.mp3",
+    "bytes": 659577,
+    "sha256": "11966236d98d0e223fcb24fa37f807a8aa12867278f18b225d98bcec96efa304"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/001/016-105-morning.mp3",
+    "bytes": 244523,
+    "sha256": "e8be2ec671b923dda23f3790be1430c5bcde7ba45dd715148918b44bf796e5be"
+  },
+  {
+    "url": "/audio/adhkar/hani-alrifai/001/016-201-morning.mp3",
+    "bytes": 581344,
+    "sha256": "f8a09ea1ba57ba9db247310d3b047217db087d06f55f491776df510cdd8f1884"
+  },
+  {
+    "url": "/audio/adhkar/idrees-abkar/001/016-202-morning.mp3",
+    "bytes": 219192,
+    "sha256": "d6f67de97db764889fd5c7e1817f3708171ed9231e7cdc5ad4281762268d4167"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/001/016-103-morning.mp3",
+    "bytes": 248729,
+    "sha256": "73257bdda29fc4bb1cde231b612f864a6c93914eaa9e52e5359871ed8b1e4e99"
+  },
+  {
+    "url": "/audio/adhkar/mohamed-jibril/001/016-107-morning.mp3",
+    "bytes": 309162,
+    "sha256": "84d8fc7655191a9f04ff508e1297e80cca3e05ca7f459e67c7eceb855dc3f968"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/001/016-386-morning.mp3",
+    "bytes": 368074,
+    "sha256": "a6e8ab75693122c169d542992f422b26fa8a08d39001056f545acf28f7aa89e4"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/001/016-104-evening.mp3",
+    "bytes": 289425,
+    "sha256": "a60e38b64b0a82db64646f9c48a869449cdbd6477bb19285046928c5d04b91aa"
+  },
+  {
+    "url": "/audio/adhkar/mohamed-jibril/001/016-108-evening.mp3",
+    "bytes": 340287,
+    "sha256": "623c1a3d77f2958ae80b0acf60e5c69316d52f8f1e3ff640d92e58199778dc59"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/001/017.mp3",
+    "bytes": 231135,
+    "sha256": "1b743aafba753a144f72761044876f8036c485bcf6ccd4a9abf942c28318b444"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/001/017.mp3",
+    "bytes": 76030,
+    "sha256": "d6bf3b46f0c609a188f81b26c9d726b4387fe726db1d2b0c26170f5da46d506b"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/001/017-105.mp3",
+    "bytes": 121561,
+    "sha256": "f97934ec4b1d47b360641b443d3d2c093536a85c62b7f977bed1107656e213d0"
+  },
+  {
+    "url": "/audio/adhkar/hani-alrifai/001/017-201.mp3",
+    "bytes": 69636,
+    "sha256": "3992b786628bdf2ca8ba62c9ade531189442f531a00b8533fe1e87c0ba028691"
+  },
+  {
+    "url": "/audio/adhkar/idrees-abkar/001/017-202.mp3",
+    "bytes": 35237,
+    "sha256": "90fc1b0dbce93bbf90676d00d0eedb286b23752c2057079635ec0e62a129b6e2"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/001/017-103.mp3",
+    "bytes": 39349,
+    "sha256": "a443ad61540c56671554fa2dec1fdc238538ec295bf3b75a7f3d188830ee0c12"
+  },
+  {
+    "url": "/audio/adhkar/mohamed-jibril/001/017-107.mp3",
+    "bytes": 37716,
+    "sha256": "bd5d251b74b95bd2565eb2cf6900ea64f3c3d4ed45cb4bd0bf54d49f44130c20"
+  },
+  {
+    "url": "/audio/adhkar/nasser-alqatami/001/017-102.mp3",
+    "bytes": 32373,
+    "sha256": "899718d71561cea2a9572f8f10e98b7b91f31f0fe0fd811314d8bbf5715b261c"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/001/017-386.mp3",
+    "bytes": 45227,
+    "sha256": "1f7daf3939495337b55756285f145a04422188be27ddb6a6bcc513cbd063d7e3"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/001/018.mp3",
+    "bytes": 438442,
+    "sha256": "10e5fad258ee7f39f7c891a38c66df99460620a06289b902a7430c6758c84a59"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/001/018.mp3",
+    "bytes": 288886,
+    "sha256": "0bbcb6dd45d9473ec201e0b7227c2171a07e93bc1e4bc55269cb6f7bc4fe4f08"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/001/018.mp3",
+    "bytes": 130955,
+    "sha256": "a788bb97b1fc030cb035b2d1815e522a9a4d2dbee7b2375db2264eb5771c337e"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/001/018.mp3",
+    "bytes": 126317,
+    "sha256": "48ec8816d29b0925ce691f8010d72d2e3cea5d40480a6360086375ee3bc58ea7"
+  },
+  {
+    "url": "/audio/adhkar/hani-alrifai/001/018-201.mp3",
+    "bytes": 315827,
+    "sha256": "4084572f87ecbf2252c2f708f90e260519edca8592f810e6899e079ea1095500"
+  },
+  {
+    "url": "/audio/adhkar/idrees-abkar/001/018-202.mp3",
+    "bytes": 120946,
+    "sha256": "4b950bd0d7ccba6d12ba131325acc1468de1d02d28df0cb88afac52f00a977fb"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/001/018-101.mp3",
+    "bytes": 193458,
+    "sha256": "e524d2222245f129a2ee654fce24758a064e87d684c900d43080d2b154ae861b"
+  },
+  {
+    "url": "/audio/adhkar/mohamed-jibril/001/018-107.mp3",
+    "bytes": 151458,
+    "sha256": "277d8c00e857a479b0837dbd36747e9402c500e4ef12ecc8582de76be4bd3390"
+  },
+  {
+    "url": "/audio/adhkar/nasser-alqatami/001/018-102.mp3",
+    "bytes": 144833,
+    "sha256": "9fc8c7aa34deccd548efb56b9271456a0a00af998f706a651a16b1a3f66184f5"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/001/018-386.mp3",
+    "bytes": 211336,
+    "sha256": "8fe65efa13026c770a313d8cd3571fc001821003ba6ef90d830f736e2d42c6d9"
+  },
+  {
+    "url": "/audio/adhkar/salman-alotaibi/001/018-203.mp3",
+    "bytes": 161544,
+    "sha256": "6dc30c8a7ac515407b84b80dbf18faf34ec40f426edfc6ad598699d11a4ac820"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/001/019.mp3",
+    "bytes": 390795,
+    "sha256": "a0b274af9c3006334f6a09c8632542f6310cab8bbaf2b662287a714eea0e1b39"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/001/019.mp3",
+    "bytes": 288861,
+    "sha256": "8302fe2d930a751ae93b37ad29c47f1b17eebd602c4b0585708bb614844631ee"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/001/019.mp3",
+    "bytes": 130930,
+    "sha256": "728687ff16e0aa02ef881309e8bfc3d67b2d62beb4709379245b7c02d3a9edc3"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/001/019.mp3",
+    "bytes": 126292,
+    "sha256": "fb810848cfe4a75c480c3993ac7dfcc8f206148c908019e2aa44edcd4ebb8965"
+  },
+  {
+    "url": "/audio/adhkar/hani-alrifai/001/019-201.mp3",
+    "bytes": 315859,
+    "sha256": "89b7091758d1eaa33bd7549ad1408a046a45449aa599694277785a4b6ebb3107"
+  },
+  {
+    "url": "/audio/adhkar/idrees-abkar/001/019-202.mp3",
+    "bytes": 120978,
+    "sha256": "c202a2f9a9d8d5911dbc47eb8fabd8204b967c6b2cb38556f7da67dab04c35e9"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/001/019-101.mp3",
+    "bytes": 193490,
+    "sha256": "aea30e02794c9da8fd602daa1f8833f8f662b2b8e5f5b7781f9d5e40358f553f"
+  },
+  {
+    "url": "/audio/adhkar/mohamed-jibril/001/019-107.mp3",
+    "bytes": 151490,
+    "sha256": "532a678ee9ce7e6206f6441afba0d66b538c4061a2021ec8f752ddd1e33eadff"
+  },
+  {
+    "url": "/audio/adhkar/nasser-alqatami/001/019-102.mp3",
+    "bytes": 144865,
+    "sha256": "12b7dcc03ca432d02447310d1ee6d301572d91b176f9ddbe4355b36abd5833b6"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/001/019-386.mp3",
+    "bytes": 211368,
+    "sha256": "a23c22c35b2372adac037a46ea9b12b63384872db7ce597c2bdf9948e15c611c"
+  },
+  {
+    "url": "/audio/adhkar/salman-alotaibi/001/019-203.mp3",
+    "bytes": 161576,
+    "sha256": "d520229884f49e9be6bfb4b15298c9c1edb63eef7945bdf6f62d13c9aa9f9df5"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/001/020.mp3",
+    "bytes": 406678,
+    "sha256": "767b1db4e25319c31ad0e5fc526549c4c3c235b3445938e178428db8035b40c1"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/001/020-103.mp3",
+    "bytes": 118471,
+    "sha256": "6829210348ddba1253e7fba3d9883db0934c632c7911133690438af4e49d3ab7"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/001/021.mp3",
+    "bytes": 342730,
+    "sha256": "b9683e27a735c77d0fdf402e54af2db50c03dd1f26539507612cf016e20419de"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/001/021.mp3",
+    "bytes": 124660,
+    "sha256": "a264dc49ec61c40170431a16f16d0192909afdc3881e9ba54d035957b833b912"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/001/021-105.mp3",
+    "bytes": 107248,
+    "sha256": "cb903246dda3884967b5e38a767865536fd543d9367e1fa51269d6e94b9c0f8a"
+  },
+  {
+    "url": "/audio/adhkar/hani-alrifai/001/021-201.mp3",
+    "bytes": 273111,
+    "sha256": "334c8634bed14443eca2fd0750721dbcec136e811a85299d5ed1026df373623c"
+  },
+  {
+    "url": "/audio/adhkar/idrees-abkar/001/021-202.mp3",
+    "bytes": 115641,
+    "sha256": "2934d9f6d0f476ea21b573738cd545bb839ecb488fa617f97c19e3ff77bd659e"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/001/021-103.mp3",
+    "bytes": 99493,
+    "sha256": "52bc1ba98301a9e660dbd54d7022232614c23f60a897d78aa5127fbe90830a4b"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/001/021-386.mp3",
+    "bytes": 191823,
+    "sha256": "062eebf662686a376c0967a054b85ed4ef93a710e885b71eae645ae14e675c20"
+  },
+  {
+    "url": "/audio/adhkar/salman-alotaibi/001/021-203.mp3",
+    "bytes": 125019,
+    "sha256": "c9177225bfca670efb15487c70658c166593131bbc132c68fce6763a4db9e84f"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/001/022.mp3",
+    "bytes": 279200,
+    "sha256": "056b361984d4550623043cca7c3599c9caf4d5008fa75ed1fa568abb69c30db5"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/001/022.mp3",
+    "bytes": 103297,
+    "sha256": "7855ca74238e7291360bdd3dfd3b5e22040bc906aac2d4b0514421480b1c7c7a"
+  },
+  {
+    "url": "/audio/adhkar/hani-alrifai/001/022-201.mp3",
+    "bytes": 99097,
+    "sha256": "1747413becb35051614f79bea21c0425d1b76776452c11f9926424ee1c12f107"
+  },
+  {
+    "url": "/audio/adhkar/idrees-abkar/001/022-202.mp3",
+    "bytes": 45710,
+    "sha256": "530346782cdc27e226cdbc94f534618056a8238b2d624febc081bdafac49c67e"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/001/022-103.mp3",
+    "bytes": 42877,
+    "sha256": "2cff80471c1cf185933206082c158ca22cde74dcbce80990519b3b2eb225adfd"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/001/023.mp3",
+    "bytes": 310965,
+    "sha256": "73ad9882959eec1fb8925247d9999b4c5aafa396ae4560d76faae0327cbe7e84"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/001/023-105.mp3",
+    "bytes": 227390,
+    "sha256": "b735a17600deda305f6dc5cbaff037133e2fd2dff91db68078481f70f2cae1ca"
+  },
+  {
+    "url": "/audio/adhkar/hani-alrifai/001/023-201.mp3",
+    "bytes": 154460,
+    "sha256": "e5e1a00e9c1851d182ddc1f7a043074f93cd2f4e3dbaf546c62f3bb4a4bd01b2"
+  },
+  {
+    "url": "/audio/adhkar/idrees-abkar/001/023-202.mp3",
+    "bytes": 72299,
+    "sha256": "bfb1642aa066e9e04cc5f845c7f4bf0dbf070402a15f135bdbda08d3089fca6e"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/001/023-104.mp3",
+    "bytes": 196473,
+    "sha256": "551ac018c584bfe263795059e19533f045d9d4100172f254f3fa1348e8337544"
+  },
+  {
+    "url": "/audio/adhkar/mohamed-jibril/001/023-108.mp3",
+    "bytes": 235814,
+    "sha256": "3be1809ba2a3a586eea413d3b1ca48cb15b29584cb0f7d4e18ce131b42452b47"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/001/023-386.mp3",
+    "bytes": 119455,
+    "sha256": "6e5c44df7763886ec81bd05d9e7cd7a702eff9a87370e35a5e1d073041974f0c"
+  },
+  {
+    "url": "/audio/adhkar/salman-alotaibi/001/023-203.mp3",
+    "bytes": 62546,
+    "sha256": "9da6768dd7395e8f4eeed9ffebfb6e03fadd92d3d4c6f32f2de3d0691f7ec59e"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/001/024.mp3",
+    "bytes": 306785,
+    "sha256": "8fcd6a491203dff8c2ed635462c23b81e7079227464ea4cca719bf63b5bd20d2"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/001/024.mp3",
+    "bytes": 132876,
+    "sha256": "d4c33b6a1ed9eea227903b0107e5f7b572bba73cacb1f4e6048aaf562763a56c"
+  },
+  {
+    "url": "/audio/adhkar/hani-alrifai/001/024-201.mp3",
+    "bytes": 151550,
+    "sha256": "80e6e72fb75ea9f2aa534d990a7b190baa88597593eb22e63ca69db0545b2b9f"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/001/024-103.mp3",
+    "bytes": 56856,
+    "sha256": "1ed5e441616a259813fcf72dc049d4f1e28fb5ad9c02a3502ce5a00a21766dbb"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/001/024-386.mp3",
+    "bytes": 75600,
+    "sha256": "1551f7c86b31641435518285e214ffeb1348f3bffdfbebe490a3dba58adbfd0d"
+  },
+  {
+    "url": "/audio/adhkar/salman-alotaibi/001/024-203.mp3",
+    "bytes": 49186,
+    "sha256": "256dbcb57465c3fe46cd3642eb88e082a9959a85ac338eef7c464586ced9faf6"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/002/001.mp3",
+    "bytes": 1938080,
+    "sha256": "57d9be074d4d46830d1846105da27d6a9cd692e5d439b6ef9c694e5db204fae6"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/002/001.mp3",
+    "bytes": 1935361,
+    "sha256": "3a8e8a1d5696b89b1d43d49c980eb27da36d5d5d7c1e68771b32adda769e4f8b"
+  },
+  {
+    "url": "/audio/adhkar/nasser-alqatami/002/001-102.mp3",
+    "bytes": 597997,
+    "sha256": "5ee2b8f6217d6bc47c114ac16e41082027b50f8ed0c36a0908283c4db2d450f8"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/002/002.mp3",
+    "bytes": 1140196,
+    "sha256": "adec2492cf77fe557d1418ffd2a28a9ae968beded43eacd0dc1a32a043f385fa"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/002/002.mp3",
+    "bytes": 890465,
+    "sha256": "a9e7703e3e6155963924ca972abd8525623fd623f2462b09ffceb945d978cca2"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/002/002.mp3",
+    "bytes": 428126,
+    "sha256": "85150dfab83b2e3ca70619a0ebaa8820ab90b6f356e649182c988a7e459fafa6"
+  },
+  {
+    "url": "/audio/adhkar/hani-alrifai/002/002-201.mp3",
+    "bytes": 1072841,
+    "sha256": "1541b6288daaaf882a4556cceed5726a76399314530c03e8533a5c390fef89ca"
+  },
+  {
+    "url": "/audio/adhkar/idrees-abkar/002/002-202.mp3",
+    "bytes": 434178,
+    "sha256": "77092229b4a0441e0fc57b9852817cdfd672feb25fe7228dd65673984280be2d"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/002/002-104.mp3",
+    "bytes": 567482,
+    "sha256": "bbcc36df4a1f73410f0f6d9a705203a26a001432c1dd53a8f04c51297196aba7"
+  },
+  {
+    "url": "/audio/adhkar/mohamed-jibril/002/002-107.mp3",
+    "bytes": 555831,
+    "sha256": "c8ae80bebae728e0707586b141c89bce5d739612f1103b795714d8604a140d8e"
+  },
+  {
+    "url": "/audio/adhkar/nasser-alqatami/002/002-102.mp3",
+    "bytes": 436832,
+    "sha256": "fd03cbbe3c68dfeeccbbb7ef5df02cbce116cd81d7ed9cd712a7e20a2a6c25ae"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/002/002-313.mp3",
+    "bytes": 795625,
+    "sha256": "c1799d3b29b399bb6ebf4ac42ffa88184837a0ea03ad1a4a4065caeddf0ae4e1"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/002/003.mp3",
+    "bytes": 1539347,
+    "sha256": "02fd47ec54740f1a2545c788ddd29a1007505dcf139b22b71ee806df212b09b0"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/002/003.mp3",
+    "bytes": 1478931,
+    "sha256": "f0a8a27d536c431cb607831bacf8d4212a758fce45a2b2ee5f6de1f202cced1c"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/002/003.mp3",
+    "bytes": 783491,
+    "sha256": "86a5e8ed954f7d4924d72155fde7e16b970046aa1c886ae855f34465014c9dae"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/002/003-111.mp3",
+    "bytes": 1189614,
+    "sha256": "176db09582acdc1e01f4f70f65d9aa005760a7e99502591fe89b8f0e126e4e20"
+  },
+  {
+    "url": "/audio/adhkar/mohamed-jibril/002/003-108.mp3",
+    "bytes": 1337735,
+    "sha256": "fbcc0c0b2a8c8acfa99bde15eb5fd87ea9e241b69964b8cac7b47273eaf6fd24"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/002/003-313.mp3",
+    "bytes": 1216711,
+    "sha256": "e15f770c824ba378698896a6e9aa03ecfc61e4b7c2233f3c32632d6ef30ba559"
+  },
+  {
+    "url": "/audio/adhkar/salman-alotaibi/002/003-203.mp3",
+    "bytes": 970681,
+    "sha256": "610cda2a5dac64524dfc034507e2a770fc8f59298451eea6115b39e1eb5c394e"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/002/004.mp3",
+    "bytes": 422560,
+    "sha256": "5dabbcdca3882bdcbe0156f695a1f733167dd96e27a32892518fce8f4bcde463"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/002/004.mp3",
+    "bytes": 385336,
+    "sha256": "6d6fabc52e3161824fb6f351a3948ad66773cd30c069a283098752e9d68fdd9e"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/002/004.mp3",
+    "bytes": 184594,
+    "sha256": "6d944deba02f307a478b9d3c3d9f3ee6ea83bb5d57eb85905e2fddfc0360dfad"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/002/004-111.mp3",
+    "bytes": 172167,
+    "sha256": "5f33871726c7f953e2d64317a51a685710023eff1b68776f42c5292e452b7727"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/002/004-384.mp3",
+    "bytes": 268026,
+    "sha256": "5681f197219a2a970230a2708fc6396d939b88d5ed15f8934ea34aaa43bbd79e"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/002/005.mp3",
+    "bytes": 486508,
+    "sha256": "f011017b6c42184b8b1396c723c697247fd75cd30cf7f33d20453fed8cf43a18"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/002/005.mp3",
+    "bytes": 518553,
+    "sha256": "a04a6356d785521eb8737327dca82230d1424f556cbfa51544ecc51c3e0f7cd3"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/002/005-111.mp3",
+    "bytes": 280217,
+    "sha256": "1670f197b8a1d101016fe5fb7dac418b6fcc7de2bb4acce9e2083d11df63268f"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/002/005-384.mp3",
+    "bytes": 363934,
+    "sha256": "e222b5844ff16a80030202be919045515b1ef0b2bf3b57dfe6c8dc23c6d11f43"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/002/006.mp3",
+    "bytes": 279200,
+    "sha256": "c0e8aeb82a1d188e4ab3ccc0ceb4432fdbe771e60541c6152c81517066a94715"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/002/006.mp3",
+    "bytes": 130675,
+    "sha256": "d3159ab4b4545efcd6484a4c77e267c744aa835f2ce49181c3ca61af23e839dc"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/002/006-111.mp3",
+    "bytes": 77217,
+    "sha256": "ffc8aad478ee423643d16b96393046a757e5f0c1fddd476d8c31839827589d24"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/002/006-384.mp3",
+    "bytes": 95559,
+    "sha256": "fe80f608cea0bcd042a7b5754734716cd4f8d3e6d0a6d53a608e5d6e6a451180"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/002/007.mp3",
+    "bytes": 215252,
+    "sha256": "061186700304569d18309673471059625b2a10530b3e8748919ca99c92d315a0"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/002/007.mp3",
+    "bytes": 94908,
+    "sha256": "4a410b53dd03f4268d2bb50ccd8f91b37967d7a5cce93e3f4d043733bb43b4e1"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/002/007-111.mp3",
+    "bytes": 64546,
+    "sha256": "dfdff6b96185489e53c57131cefbe2d9381135b578032312012349c0be6dd69c"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/002/008.mp3",
+    "bytes": 406678,
+    "sha256": "83019346e8c65ffcfa2a7464a77f66042f1955420171a0ee817efa0075015ddc"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/002/009.mp3",
+    "bytes": 933306,
+    "sha256": "619b1a74712342a74d4836c0f869d330c5a544db8589ec8323c64f901b02e61f"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/002/009.mp3",
+    "bytes": 1043685,
+    "sha256": "08f9231769c4070d7d0c6062a1d85fc0ea957032be3934257ecd9d73b1b7d797"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/002/009.mp3",
+    "bytes": 565195,
+    "sha256": "f22cae754c60454eabe5718d3107e1b13c752fcf92d521aeca0d502949b1431d"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/002/009-111.mp3",
+    "bytes": 713761,
+    "sha256": "647681a754c2ca2f7583dda77ec4dd9413df250dc20fd6270ede4fbd7f74925b"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/002/010.mp3",
+    "bytes": 374495,
+    "sha256": "d585daec3599f9a5b31983d21a5fadfde44eae27c8103953cc3a766cf8148655"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/002/010.mp3",
+    "bytes": 305744,
+    "sha256": "dd4f2559f20860ac412f989a0c9b678e2aa49e9f75e2b93906bb7c0d8d05775d"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/002/010-111.mp3",
+    "bytes": 191019,
+    "sha256": "d8b237fa5e016abba8dcbc1ceca949e6c5e8e35dad314b709ffdcaa3120c366b"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/002/011.mp3",
+    "bytes": 582220,
+    "sha256": "c1edf76d9f7b8533ba6d8c121ec85c3f9df2e40b6f3b8598960c581ea384e47f"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/002/011.mp3",
+    "bytes": 674394,
+    "sha256": "4048b2a22a77c92d12db3b9acab71e30a5a3e19f544bcdc6f065775cc802315a"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/002/011.mp3",
+    "bytes": 283191,
+    "sha256": "fd5662fb891e869a22b62113f5254bd5763d9d5fc24b4a61a6268f923e2214af"
+  },
+  {
+    "url": "/audio/adhkar/hani-alrifai/002/011-201.mp3",
+    "bytes": 682890,
+    "sha256": "53e340be793216a50ef9380485b15aa70f74a7129c753e4f2f0062a1e5274866"
+  },
+  {
+    "url": "/audio/adhkar/idrees-abkar/002/011-202.mp3",
+    "bytes": 272401,
+    "sha256": "d95178353ace2e620aa190ebf2b22996cf73ca1a079fbec74dd63ea0b1142f50"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/002/011-104.mp3",
+    "bytes": 322673,
+    "sha256": "fc66e915fb3b1f269f1753eac6a8d230e0ab3049b33fe94a8109372a8644a330"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/002/011-386.mp3",
+    "bytes": 487794,
+    "sha256": "367005aef26f6629cbd30cc523561c572ce94b58093cbe3ec92678aecf47d78c"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/002/012.mp3",
+    "bytes": 279200,
+    "sha256": "9706cfbf21da2e9b373d9ca3704072901373155547b65a9fde9c10e9ca02285f"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/002/013.mp3",
+    "bytes": 647840,
+    "sha256": "1457074ee78d10666e2ec2f68e8d69f603209ab323541c888838580abbf44ca7"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/002/013.mp3",
+    "bytes": 690527,
+    "sha256": "9c6b5d9455efa5583a44f93699a800701d5b43040d608f8cdb73f06afaf99d0d"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/002/013.mp3",
+    "bytes": 372209,
+    "sha256": "37d4d29e30811bd4d623280565ca74de6990dc39de2a2983bc915620381b542f"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/002/013-111.mp3",
+    "bytes": 463259,
+    "sha256": "01c3dd09320d43d9320f6ac7bb2b227a287a02fb397e51aa9ba1548b7e7f6f6e"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/003/001.mp3",
+    "bytes": 255770,
+    "sha256": "d63f0c06418eb5df7deb7f98168cc0d133f1cb79a0009d35ebcf3ba520529412"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/003/001.mp3",
+    "bytes": 115496,
+    "sha256": "9d0f9a5acb9dc4b861edcfcafc1ca424a38fa27333d471d27c854bc12d104bb4"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/003/001-312.mp3",
+    "bytes": 141748,
+    "sha256": "7338aba48400c2e1b6e80375b426ee8941212b965c4b43c3073ba8ef71d44eb7"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/003/002.mp3",
+    "bytes": 661633,
+    "sha256": "a033ef142f2e936b311fbad25b309a9155ffeab45c52017f0be663d0b5583e7f"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/003/002.mp3",
+    "bytes": 516604,
+    "sha256": "4c870dfe3b7c7d24f34dc8b56a449d76bc57425ef6989f1954d5047846d6a96e"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/003/002-101.mp3",
+    "bytes": 505997,
+    "sha256": "02a5e496cb635acadad4df0bafd44f22d87b11c5827ae3045ab3f3e66188c174"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/003/003.mp3",
+    "bytes": 326847,
+    "sha256": "dcd101a6a0b119e5e6e4ac614928280c1bda78b8f3b57becc7373e7449ead64d"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/003/003.mp3",
+    "bytes": 123837,
+    "sha256": "0c4925bb6f83445bb125147315e7e5f0103dbeaac8043a2a45a66d375759ab98"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/003/003-312.mp3",
+    "bytes": 158152,
+    "sha256": "b34585934db7b2de7888c1d42c5b293677a4b21c4519abf9ec7b89552fcff8af"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/003/004.mp3",
+    "bytes": 5346955,
+    "sha256": "f276925bd911a457b5fed4e5b12022aa4df0e2e6944bc3adb67b73f9a23fe9c7"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/003/004.mp3",
+    "bytes": 3322374,
+    "sha256": "324710cd1fc168001cd976c849f032cf7d0e7e94380184b54496e61788ab6b8b"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/004/001.mp3",
+    "bytes": 253230,
+    "sha256": "61d2463d6bf5b7848dc1bb445004069f876c0859f0b6ca2ea91c7b4a704d2c6a"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/004/001.mp3",
+    "bytes": 208764,
+    "sha256": "1dd445f24ecd7e3c759afdf132561c414d277a8e7ec979f9618d1c7943bb8d91"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/004/001-303.mp3",
+    "bytes": 124684,
+    "sha256": "c7adbca0c4c32a8add3efa561015c6b6b7e851c1999321e2f28e6486234a0cc2"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/005/001.mp3",
+    "bytes": 206382,
+    "sha256": "b30b274f6459fc3c3bb66f6b881931448f1ea52c5e187428e2171832a80918b7"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/005/001.mp3",
+    "bytes": 119728,
+    "sha256": "3b2c0787b41ec2166a7fe13dc6c5029770e337fc97eda489a95178192e7fc3c0"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/006/001.mp3",
+    "bytes": 220974,
+    "sha256": "6f6b716b533d3ac984002011cc18eb2219d8905da92d128c56fb0fea402d5552"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/006/001.mp3",
+    "bytes": 123930,
+    "sha256": "646bc4edb888f747bfc36eab5b657a47d9ebf4cc07f805b47fac4c4bf8e5b811"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/006/001-105.mp3",
+    "bytes": 16785,
+    "sha256": "dff5245ae6c7eaebe1c586592a11a8c273cb4007c84c41f24b14194091eb3b5a"
+  },
+  {
+    "url": "/audio/adhkar/hani-alrifai/006/001-201.mp3",
+    "bytes": 46273,
+    "sha256": "1a600fa586eea6b0c746d499ffa6736d3af3fa08173169122153f1b2eb4ca8a6"
+  },
+  {
+    "url": "/audio/adhkar/idrees-abkar/006/001-202.mp3",
+    "bytes": 17626,
+    "sha256": "282d30b64b4372cd31755d23f5b3a02cd170ca10b56fcd65e2c20c1951c2fc60"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/006/001-101.mp3",
+    "bytes": 13080,
+    "sha256": "9cf17a1e4aec8849a8bbe098b3a05d175fb9dafca4fc59b5482181d484c6dc86"
+  },
+  {
+    "url": "/audio/adhkar/mohamed-jibril/006/001-107.mp3",
+    "bytes": 26781,
+    "sha256": "ef482b5dc6b681ca9d07361a0b823909f6aba6b20f400adb206d0ac30794ec74"
+  },
+  {
+    "url": "/audio/adhkar/nasser-alqatami/006/001-102.mp3",
+    "bytes": 12344,
+    "sha256": "55dc8d033774e3495db2e8645401984a4303c40175d0588a4620768c2675d0ce"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/006/001-386.mp3",
+    "bytes": 23663,
+    "sha256": "fc2d5604616f959c13e85e731529ea7251f0df01dc738b5ee5f72a33e72cbfa5"
+  },
+  {
+    "url": "/audio/adhkar/salman-alotaibi/006/001-203.mp3",
+    "bytes": 17166,
+    "sha256": "04429a867e01c7231f90d613b788a818e3867b47d53616b30a859c1eaf1973d7"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/007/001.mp3",
+    "bytes": 425486,
+    "sha256": "18db47d0cd2fe1ed481d8948304f45b615b874ff679b718782e994a3f59a305e"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/007/001.mp3",
+    "bytes": 243519,
+    "sha256": "926473fb636e4660115d2c26e684107ac2823f415b5b35e25e980d6517647800"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/007/001.mp3",
+    "bytes": 177590,
+    "sha256": "23d7638a8e54a051d2a138d159189f1098ce1813a91708967196b46b58309498"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/007/001-378.mp3",
+    "bytes": 210541,
+    "sha256": "7956acc7f7cb740799e6ab6f4d83954fea93550adfb3410138dd551032aae18f"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/007/002.mp3",
+    "bytes": 278364,
+    "sha256": "1b015bb081065f5a90b4d6f4c93c78d545f03d6fb11d266dac2ba577198de2d2"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/007/002.mp3",
+    "bytes": 85900,
+    "sha256": "23ebd54a1e4b368e6bad714bbf3092114c9d46df63b3b35d85e2128103315e8f"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/007/002-378.mp3",
+    "bytes": 127241,
+    "sha256": "32260afb67ba8e32f434b514092ebe70773dd077cbda2c876b0d79b27503b9ed"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/007/003.mp3",
+    "bytes": 360284,
+    "sha256": "17ccd8c8ea5e4ca86654bf2ac2131d2d12795645adc8bec0e8766e54597877c7"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/007/003.mp3",
+    "bytes": 244041,
+    "sha256": "14e4c448263ca48f2095f5b30e2a9dfdff133201813f180bd2ea6938f355f542"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/007/003.mp3",
+    "bytes": 164431,
+    "sha256": "a5274e9ca5b3f611ebfc174b53130b29fdca9fc3c59c6dce9c61bc48e1421750"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/007/003-378.mp3",
+    "bytes": 246277,
+    "sha256": "6297b8b2feb5347fdcbf0e9e2b7b78c58a0fd4050c19f4bbb14e447e4492191c"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/008/001.mp3",
+    "bytes": 394557,
+    "sha256": "d082def86385868392c6cd3e07c3e1d02b29308282bfa64b05ef8c09e7c79580"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/008/001.mp3",
+    "bytes": 191514,
+    "sha256": "7f82a433b1fd734bdba38262f9d67abb5ef2decc403b2cd5567980e99d1e4f2a"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/008/001.mp3",
+    "bytes": 79984,
+    "sha256": "96aa76259ce88b847e5e12e6bd1c9179c9d4531d0531cc2df2abb62fbf7e3504"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/008/001.mp3",
+    "bytes": 149600,
+    "sha256": "baddc21aa7502d4103e066468dbfaaa85349a4a466406cdc548a420f1fe202df"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/008/002.mp3",
+    "bytes": 435099,
+    "sha256": "2b95546a19ec056926ff087d8c3e45ce392b784ac7d0193622134f743ae85612"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/008/002.mp3",
+    "bytes": 109518,
+    "sha256": "d54c15a69e7a1ebb217cde60184d5f949e7fa72e1b3e1816de38ddcd653bef85"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/008/002-302.mp3",
+    "bytes": 232904,
+    "sha256": "4806eb14225ff0842c7a94c443a1f44c668dcc870e3fbee9577f7beed619673e"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/009/001.mp3",
+    "bytes": 312750,
+    "sha256": "542fc4c3515277efdd7d60f75f013ab7ca50a6e305f8371270a1895ddbe99123"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/009/001.mp3",
+    "bytes": 295285,
+    "sha256": "f43c86f181cba19409757685f45520ed819d8d89873e666ff94aaf6391b01f94"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/009/001.mp3",
+    "bytes": 241945,
+    "sha256": "5b05399914fb9b7a8c963c19b4cad83d121e53529bc9836fe1d84bce905af8a4"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/009/001.mp3",
+    "bytes": 131447,
+    "sha256": "e9639e522c8e538c0520ec4f3257522110eed33455efdd065b1c793b7091cd3d"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/009/001.mp3",
+    "bytes": 242054,
+    "sha256": "ea1847cc1a78487a8a96388850a56f34ae55b4ac245065f79b4d3c8084b996d9"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/010/001.mp3",
+    "bytes": 912558,
+    "sha256": "956c7f735724de24d332bda35ab625ffe9f5d446d16eda8af08563a67d334d8a"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/010/001.mp3",
+    "bytes": 1142059,
+    "sha256": "6308da78c8c9e12dd53bec3babbb3e0ed9508f4e9450d7a9259973b9cc6a7d48"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/010/001.mp3",
+    "bytes": 738066,
+    "sha256": "67db7f511d61f0748bb2863870f98106d1fa1606f7fc4dd85a47015649021a44"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/011/001.mp3",
+    "bytes": 383406,
+    "sha256": "406c711ff04cbe0775ec72fdf8a894337a53f9ca24983f2ae8b049cb765b2291"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/011/001.mp3",
+    "bytes": 444913,
+    "sha256": "ca36066c4b968788ff81c4c250698f9d0ceb523f3a6c50dbf0288dd08c952c26"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/011/001.mp3",
+    "bytes": 608480,
+    "sha256": "37fc2c47a646082acfa098b6da308842844582c164369a5bf98bfbe2c72e3b23"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/011/001.mp3",
+    "bytes": 265928,
+    "sha256": "a1b4dce42b30c54f239034264d6382d0e623bd63819f6436fcee6a1e22462aa6"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/012/001.mp3",
+    "bytes": 310830,
+    "sha256": "f588144fc327a4fb517a2fac0d14319047904f2c5d25e5ab6a8445708f34cb28"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/012/001.mp3",
+    "bytes": 321179,
+    "sha256": "3f2571e295f5e4ccf1a1fdc43347e29bede96b1c630b21f79220290607a7f21b"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/012/001.mp3",
+    "bytes": 131926,
+    "sha256": "096b943737dfede72072168986c659eb2eeb755d8a5752dde1fdbb88c798c49c"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/013/001.mp3",
+    "bytes": 457251,
+    "sha256": "f06a1544478191cecf5b48d2c388ade08f8f08db0b60470da747c65cc017c032"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/013/001.mp3",
+    "bytes": 341997,
+    "sha256": "085ab7580b0439dcbc8c00336336fab99945acabf1d6bbb4f00d2cd560d8d2a9"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/013/002.mp3",
+    "bytes": 516601,
+    "sha256": "12095d4c8dade869884e2e3b2cb7e9ee466c2d97a889ff2f8aafff84fd88271c"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/013/002.mp3",
+    "bytes": 566251,
+    "sha256": "882723a49b919bea623a1a37013cb31ece0f96d347546e3d47bba6932787e8ff"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/013/003.mp3",
+    "bytes": 270423,
+    "sha256": "a4d2cba7cc5fe3c27d7eca90dc073e0313857ee07ccc3ff0eb276f4ae4f90ccc"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/013/003.mp3",
+    "bytes": 226081,
+    "sha256": "9b1474d8a32d8386b14288e5bbe5fdd43f2fe48217840dd9641f9ffccbce212d"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/013/004.mp3",
+    "bytes": 503644,
+    "sha256": "63bd5315d73ebc8ffb6bb1b7d5045b4f2967f1443532d71264202f849c01f3e9"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/013/004.mp3",
+    "bytes": 497686,
+    "sha256": "4034168d55b652a06e4f0d1cbba0488d4602c215bda3952378f3f4c864e48e37"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/013/005.mp3",
+    "bytes": 283380,
+    "sha256": "875e68cacedd4a7eb348962c949593e54281ff2106dbcf9ab93319d6d7ad9d0c"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/013/005.mp3",
+    "bytes": 231086,
+    "sha256": "3eadd7dee4f228472f5a4272ce0014e907fdddd08248ef67b09204521e8023fd"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/014/001.mp3",
+    "bytes": 267054,
+    "sha256": "f547b76ffe76f13c5a4a2a612e0f5fca676ca666a4d8cd6a4de87d14634eb699"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/014/001.mp3",
+    "bytes": 244294,
+    "sha256": "d76b5683471ca0c9d040370e33c375d33aec7931fd1d1cca47ebf3d0482e452d"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/014/001.mp3",
+    "bytes": 175476,
+    "sha256": "0e061ee696c0c5149850538ca14cb0201379911549306d736eed47499b27b46e"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/014/001.mp3",
+    "bytes": 127710,
+    "sha256": "48f223d9f9f378ee8837b1bf80e0f51d612578f207a04695fe13076dbdcbbd87"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/015/001.mp3",
+    "bytes": 313902,
+    "sha256": "9e99bc67a8694fd8e038d75d84f26b09ed9ce2c3695a7e01c5a09de71e19d3e7"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/015/001.mp3",
+    "bytes": 323711,
+    "sha256": "fe5544f461be5e73d04ea8193ec027139e7529ad649f80f83e4a628efc9d51b6"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/015/001.mp3",
+    "bytes": 174869,
+    "sha256": "5805c9ca43377f27c6f36ab61875109637991f5918afe5105b99de475b4f2ae5"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/015/001.mp3",
+    "bytes": 187199,
+    "sha256": "1bbc137082352a1062bffb7110ced0343675a3f8cdca9f400ca7063847421576"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/016/001.mp3",
+    "bytes": 307203,
+    "sha256": "25f7f97dcd2fec484e18aa9ffbeda4ead699c30f386cbc53ea890bf42000622c"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/016/001.mp3",
+    "bytes": 80926,
+    "sha256": "a838d836a79a93363e1c8bc775f654b46910da0c81d2494b8fa24e0264a893cb"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/016/002.mp3",
+    "bytes": 283798,
+    "sha256": "3c30ebb61caa060332977fe42ea9926584b2bbbb0e2c1240ceec523b7afddb96"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/016/002.mp3",
+    "bytes": 68207,
+    "sha256": "7c0650e5a9441925edca0e1b89ce1e5edcb4807edf1087bf487f0d97a815e05f"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/017/001.mp3",
+    "bytes": 219246,
+    "sha256": "5b7c875d5358f2148cc18b7dbc904fd95f38f4d3d61fcd54a3ffc0e01d8174e4"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/017/001.mp3",
+    "bytes": 135611,
+    "sha256": "246ec7f3aff8218493878db65208bb0e50a470f46880417468a5cba6ec86534e"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/017/001-105.mp3",
+    "bytes": 16785,
+    "sha256": "dff5245ae6c7eaebe1c586592a11a8c273cb4007c84c41f24b14194091eb3b5a"
+  },
+  {
+    "url": "/audio/adhkar/hani-alrifai/017/001-201.mp3",
+    "bytes": 46273,
+    "sha256": "1a600fa586eea6b0c746d499ffa6736d3af3fa08173169122153f1b2eb4ca8a6"
+  },
+  {
+    "url": "/audio/adhkar/idrees-abkar/017/001-202.mp3",
+    "bytes": 17626,
+    "sha256": "282d30b64b4372cd31755d23f5b3a02cd170ca10b56fcd65e2c20c1951c2fc60"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/017/001-101.mp3",
+    "bytes": 13080,
+    "sha256": "9cf17a1e4aec8849a8bbe098b3a05d175fb9dafca4fc59b5482181d484c6dc86"
+  },
+  {
+    "url": "/audio/adhkar/mohamed-jibril/017/001-107.mp3",
+    "bytes": 26781,
+    "sha256": "ef482b5dc6b681ca9d07361a0b823909f6aba6b20f400adb206d0ac30794ec74"
+  },
+  {
+    "url": "/audio/adhkar/nasser-alqatami/017/001-102.mp3",
+    "bytes": 12344,
+    "sha256": "55dc8d033774e3495db2e8645401984a4303c40175d0588a4620768c2675d0ce"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/017/001-386.mp3",
+    "bytes": 23663,
+    "sha256": "fc2d5604616f959c13e85e731529ea7251f0df01dc738b5ee5f72a33e72cbfa5"
+  },
+  {
+    "url": "/audio/adhkar/salman-alotaibi/017/001-203.mp3",
+    "bytes": 17166,
+    "sha256": "04429a867e01c7231f90d613b788a818e3867b47d53616b30a859c1eaf1973d7"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/018/001.mp3",
+    "bytes": 598103,
+    "sha256": "57d19e83a452cbc7970123ea18bd0e92a47710d5d563c63d4150a8631ad734d1"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/018/001.mp3",
+    "bytes": 568336,
+    "sha256": "ff2939845d8027fbcc96b8f44139fd0e4315f540d3f19c9831435cd55c9ee45e"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/018/001.mp3",
+    "bytes": 258475,
+    "sha256": "2ad0545dfa9297b3793be782bf0457790a1f5069c6ecdb35c16e6d3264594547"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/018/001-376.mp3",
+    "bytes": 329640,
+    "sha256": "6c680def2d2a77d39f5247a13e5118439c865118dda90806e1ddf8fe3f7d6e1f"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/018/002.mp3",
+    "bytes": 346491,
+    "sha256": "c26040ec9c8c9b8fd68207f0615b0a090dbb65a934c9fcf737139e01bb5b2573"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/018/002.mp3",
+    "bytes": 216272,
+    "sha256": "1d6d70b110e1eefb7988f402ac77c7fb85b1f20ebc4ed30a2adec73b8197a376"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/018/002.mp3",
+    "bytes": 135597,
+    "sha256": "b8313f13e52075b8112a4b8458734755f1a49b34f384dd11e4e495d10d1a0149"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/018/002-377.mp3",
+    "bytes": 191455,
+    "sha256": "1d980228d40c28af395da84e90dd79ce6da9d7a0a9d371e0a5aedbd8dda30843"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/018/003.mp3",
+    "bytes": 1428170,
+    "sha256": "5d9937bc4777a61847620c1cd569e6ad0ca852ac50c937724d99630b241adccd"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/018/003.mp3",
+    "bytes": 1771937,
+    "sha256": "995625dd4212ca64a3c1134189fffb2f27b199598eadd82d5e4d536a5705beac"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/018/003.mp3",
+    "bytes": 993810,
+    "sha256": "593b5a94ae9b460cb27f180a7abb5c06f89563a397eb9089f5295cdc471ebb7d"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/018/003-308.mp3",
+    "bytes": 1174688,
+    "sha256": "9bbffaadaeb97bbd8f0302162be7e06392ed7b1779adebe450a8631ba3967e0d"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/018/004.mp3",
+    "bytes": 630286,
+    "sha256": "2ebdba133c2b23321ebe2cf754aa3aba5d7cec25be33819bffe881931bb339d4"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/018/004.mp3",
+    "bytes": 769127,
+    "sha256": "aa7082c500c5f832d3f40720c32f1f5d37642c1140ccaa8eeaf82b54860bbc8b"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/018/004.mp3",
+    "bytes": 390693,
+    "sha256": "c73c143b06af4bbe554bc868f42607c5acfb02aabc46d373cfbdcdea8a381e54"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/018/004-309.mp3",
+    "bytes": 439109,
+    "sha256": "535a069627946ff3d0faa293cc8220a5b1044a14047c8cf9680931585732f05a"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/018/005.mp3",
+    "bytes": 678351,
+    "sha256": "2173ea741dd9c1be089148a3666b57216115ecdfb224085c6ef4f67d3e0f9fac"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/018/006.mp3",
+    "bytes": 1693156,
+    "sha256": "27662bc53ed9dc5d2df71d580a8be0087d5fc62438de8fde4da3c62606c51744"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/019/001.mp3",
+    "bytes": 313891,
+    "sha256": "f55484719560dc63d6daeac6dc1a46bd0ef81cf2712d4624c1656f118ba744d6"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/019/001.mp3",
+    "bytes": 130725,
+    "sha256": "193ea04d3fc26832b168b9e202d64296b3ab0a1660ff5ef8862f1b5ae853169d"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/019/001-306.mp3",
+    "bytes": 37593,
+    "sha256": "beaca07a29c7f2df8af61b7924a2650a277d714e3aa8db8285c7218158918af3"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/019/002.mp3",
+    "bytes": 266661,
+    "sha256": "be4b9708c000857435efcaff9562098386e05c201e6d7038bef98ef7a780ac50"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/019/002.mp3",
+    "bytes": 159254,
+    "sha256": "c59d8c6650cda21ca47b7b10088fb13613ca614e191a3a22dd873b336564f4a6"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/019/002.mp3",
+    "bytes": 82886,
+    "sha256": "01ac1d59b3de2120ace2a0b69a34eb06ac421e23a7f5c340161321e86ee3778c"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/019/003.mp3",
+    "bytes": 248689,
+    "sha256": "0be5922c3cda17c48c2849928cb7bc66b3c7f0a7d6144f38d95c8b3ae2d0b5f2"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/019/003.mp3",
+    "bytes": 103268,
+    "sha256": "d432123cfd89954639394955df2c78256145061dbb663c1ea281fea39b575336"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/019/003-388.mp3",
+    "bytes": 93625,
+    "sha256": "74b0807b8bd7f79e7226430dd1a220160a479178be162f79f0b842377dadf6e4"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/019/004.mp3",
+    "bytes": 422560,
+    "sha256": "931a6aaf0f0cf90c1d4c0f65b52916fc8d46ad923e2c8908108747ee2aba2dcf"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/019/004.mp3",
+    "bytes": 352212,
+    "sha256": "e8110f05e33a253b785a6615380547b65145156ba723d1958a76fb1aaba96a5b"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/019/005.mp3",
+    "bytes": 267079,
+    "sha256": "fc9c14c4504d37be7339b5e8079fa1477cf9c6b7cece951f02481cf4c9b6b42e"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/019/005.mp3",
+    "bytes": 172243,
+    "sha256": "1c94e162c9c5c6408843bbbf9c74aa7abf108df7d2f66da942499b1fe46ff50a"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/019/005.mp3",
+    "bytes": 122041,
+    "sha256": "d5bf5b369edcc6c0fb67b4e179f76f7854ff7bc3f8ea70d606d97c99f647f696"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/020/001.mp3",
+    "bytes": 279200,
+    "sha256": "a7c369d995517f1bbeb455ce4df448d27f9717b7d290ae29f32b6ad7edd43858"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/020/001.mp3",
+    "bytes": 76954,
+    "sha256": "3f325b5212f1545854de5db81394b4bdda4cf7085140da9e8b72f8f7856d9c6b"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/020/002.mp3",
+    "bytes": 274184,
+    "sha256": "5b56700258ffe62a2d891b76fbc2919244163f10c41044c9836b472c5aaa6943"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/020/002.mp3",
+    "bytes": 192177,
+    "sha256": "15e97d3eef81247d41fb35f31dd8fb99b5ee7bff6b842ac343aaf41c7d804553"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/020/002.mp3",
+    "bytes": 115027,
+    "sha256": "30ead6bfa2c655144435af70289593d650e7c8d1604d9803797416fb3b2da269"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/020/003.mp3",
+    "bytes": 667066,
+    "sha256": "30c3971e5d87dd237cc8d136234f4e6817a5f4b230e49dee08e51c9acf3f02c1"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/021/001.mp3",
+    "bytes": 305531,
+    "sha256": "e26368fbbeb4d363c0f621644da1ab56ce38de5f6e90c23a1c9a6bbe43fea624"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/021/001.mp3",
+    "bytes": 119399,
+    "sha256": "4b807544c830f124ba6527bffa0c69721442969b9480d880f58036e839df2999"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/021/001-387.mp3",
+    "bytes": 41244,
+    "sha256": "cb8221f65ce41ba478e1b40b796b1e7981d2c02604ea53ee6a3ab767503491a1"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/021/002.mp3",
+    "bytes": 263736,
+    "sha256": "fe4aa3537374faa060ba4b3cf4a4a4595d17869ff40f5bf766b00be818ac9eeb"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/021/002.mp3",
+    "bytes": 163100,
+    "sha256": "aa6ad7c049945f6559776ab7b3059fc7ebac865654af17bfb649113cf46f1f2a"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/021/002.mp3",
+    "bytes": 82886,
+    "sha256": "01ac1d59b3de2120ace2a0b69a34eb06ac421e23a7f5c340161321e86ee3778c"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/021/003.mp3",
+    "bytes": 247853,
+    "sha256": "5a7798a35ec47bef49a55598204f0df58815e0f3ef59e2a66c03e2d2be1d2f43"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/021/003.mp3",
+    "bytes": 103268,
+    "sha256": "d432123cfd89954639394955df2c78256145061dbb663c1ea281fea39b575336"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/021/003-369.mp3",
+    "bytes": 108718,
+    "sha256": "185c9619139b276625d5ca531564fb1e4e8da8831a130b697096e11efd9b65a5"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/021/004.mp3",
+    "bytes": 470625,
+    "sha256": "f3839903ca8e0e117b60ffe5f1bc1b398d8290139402f6349e6d955da07cffa9"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/021/004.mp3",
+    "bytes": 422804,
+    "sha256": "58770c6f1d0e07cb889ddf0f28889a1d7f4423ead5090581007131d509bbc714"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/021/004.mp3",
+    "bytes": 194760,
+    "sha256": "f549b5701bdbe77e940c932c1a6ccd4982f1f88f022258e0d91e3f185893365f"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/021/004-368.mp3",
+    "bytes": 243481,
+    "sha256": "746215a1b6bfc832f6d4d62d50c983f68367c1788b47f8a3c54b6e364907454f"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/021/005.mp3",
+    "bytes": 263736,
+    "sha256": "1e0c3c80b818424061322f2fcba3b7499ba81addb0ed98883acd696db41a33b8"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/021/005.mp3",
+    "bytes": 122041,
+    "sha256": "d5bf5b369edcc6c0fb67b4e179f76f7854ff7bc3f8ea70d606d97c99f647f696"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/021/006.mp3",
+    "bytes": 352343,
+    "sha256": "cc60210a0fd24290285e61d007a127756926cf5f726a2671c0dd8d1732347dae"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/021/006.mp3",
+    "bytes": 284121,
+    "sha256": "5aeb364a7bbbda2da61eb6eea7e2ce5b4aae297b2d6e0c8383a918dea5bcea5b"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/021/006.mp3",
+    "bytes": 101544,
+    "sha256": "8df9ea431dd7fad18076084bac65e208dccbb0b52c35700650123f91cda461d0"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/021/007.mp3",
+    "bytes": 464356,
+    "sha256": "9772bf300d2e8051a01005957a62a27b35a19e8405fd6a3f0eef9db38f5c4402"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/021/007.mp3",
+    "bytes": 445370,
+    "sha256": "879a8ee1bb940d2df0003f70c5cb90ffb4d1e0e81b2909bc05033a1b83cb96fc"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/021/007.mp3",
+    "bytes": 209192,
+    "sha256": "21fd962afb0a8a796169cf6b287b07de35e29bc92230e3fd4d3199e82234e21b"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/022/001.mp3",
+    "bytes": 336042,
+    "sha256": "300e9f78edb4a7fea521be1a95f1a80cb6675e93a99a16ff50a8c11496a23610"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/022/002.mp3",
+    "bytes": 359030,
+    "sha256": "08b896eeb6b0f1e33e8ad1eb2fa762eb858823e74012b570473445a88891af4f"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/022/002.mp3",
+    "bytes": 227124,
+    "sha256": "50babf7041dcfbd12c30d64455e44146ef2f911405d1a80288efdeece84b56e8"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/022/002.mp3",
+    "bytes": 86982,
+    "sha256": "fa9ae52bd481b24cf46d6c50cdb0b0ad18ec12d3ea36872a25797d5986122d99"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/023/001.mp3",
+    "bytes": 461848,
+    "sha256": "0885c908438dc98fd83726f2c55e9cfaa67e0de726c0805cf4cd15f04f9ce766"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/023/001.mp3",
+    "bytes": 310309,
+    "sha256": "93688a89ccd5805fa4180eb2bc23ff4680e0f56a331548e477c5dead7a65e9b3"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/023/001-371.mp3",
+    "bytes": 79281,
+    "sha256": "9e73835733470cacdf6b63068d9038004ff99961f359d0c32a704a1d3cec968e"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/023/002.mp3",
+    "bytes": 419216,
+    "sha256": "d7c066af1bdc227e2756ea7d63968ca740c42fece0548da5fcac49bd0919056e"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/023/002.mp3",
+    "bytes": 473117,
+    "sha256": "32fd7cf06f835fd4970484f5b672c6a82680795b344859770fafa0790ce3e72e"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/023/002.mp3",
+    "bytes": 164557,
+    "sha256": "bd550a9dfd7f5c05296bffdc775f136da88a06b4f2fe1119162a36e4bbded4f6"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/023/002.mp3",
+    "bytes": 230384,
+    "sha256": "e95e281847df8afc0ce23697e9aa57573d91aa79d0d861a5a86196c9c2e3da59"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/023/002-370.mp3",
+    "bytes": 237668,
+    "sha256": "c0741aa981faf58b7e43aa2ac834d9e72c84510f231d6ea810ade2ff677f2c6a"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/024/001.mp3",
+    "bytes": 418350,
+    "sha256": "4a0017363fc6138198ca5b0ed9eecda20840e3f96984daa2cd0dce7d6bb2ee6b"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/024/001.mp3",
+    "bytes": 528099,
+    "sha256": "ba11dbb1534885e1401094ad7682cd89734424f88c23ea963faf63b81e770f44"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/024/001.mp3",
+    "bytes": 349292,
+    "sha256": "80de5b3159c806f04c60c3bf8f7f1c2753c77399fd93f37fff587271a89d6454"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/024/001.mp3",
+    "bytes": 742850,
+    "sha256": "4c32a37b04427a100164bfe097c5d53d895667701609808ba2241998b9f14e0e"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/025/001.mp3",
+    "bytes": 748150,
+    "sha256": "eb86f16ff5ab91b70ad1f0b342f5e80c8160e8edfcc30d525db70845977af125"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/025/001.mp3",
+    "bytes": 823983,
+    "sha256": "0a1e83197f12ab2b144626d1f05411a77405a16659038a57091b3a5e6901ec69"
+  },
+  {
+    "url": "/audio/adhkar/idrees-abkar/025/001-202.mp3",
+    "bytes": 399545,
+    "sha256": "eca0a8904ac39439678b8680adc1a42f7bb68f980a1a86da9b7b9814276a42c5"
+  },
+  {
+    "url": "/audio/adhkar/mohamed-jibril/025/001-107.mp3",
+    "bytes": 368533,
+    "sha256": "bb869ed546dfb3cdfc9daa0b7504d820c0dfa8a92c50956f2c5f2761e0b0ecd6"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/025/002.mp3",
+    "bytes": 534573,
+    "sha256": "0c7712ed713ca48a87eea5b7c9b8eb2e868f541c2f2245d7e2c26c6e5a942192"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/025/002.mp3",
+    "bytes": 650330,
+    "sha256": "ca3374f23bd892128bb0104575d589522aa154653cac626f1990f87c42527003"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/025/002.mp3",
+    "bytes": 304313,
+    "sha256": "4dd62664d2b987a25926a8d947c8fc7ac1ccd67ea3a53a463028f31382ec282c"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/026/001.mp3",
+    "bytes": 534991,
+    "sha256": "d25a120a072d07ab3a28842f1f5eb85924167d1fdb30a1767b85866a0e7775d7"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/026/001.mp3",
+    "bytes": 397753,
+    "sha256": "43fae37174c63eed26a33854970c6f5ead8e6faf22ec3f4d3d4020bdc1a600ee"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/026/001.mp3",
+    "bytes": 242852,
+    "sha256": "e41a56e467671c0837487f05aba06211fb7afd540a490423fe853b64fe51c61c"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/026/002.mp3",
+    "bytes": 471043,
+    "sha256": "bee3d7f295c75321b2054e695f24ea00fb2d09f8cd8f8de29cc6339645a48248"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/026/002.mp3",
+    "bytes": 546523,
+    "sha256": "08f62eff4f6a44f132193159b6f4286e14842acaeb3aec1079745db78d75b703"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/026/002.mp3",
+    "bytes": 258304,
+    "sha256": "2ba6e7f5db1a8796be22692382d6c85ed3bd5d1e766062d2b66e01e5841eb07d"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/026/003.mp3",
+    "bytes": 422978,
+    "sha256": "56d785b6393c1a835ab722caa21099cabed45e3cb58ee7aaa6dbbd6e394ea343"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/026/003.mp3",
+    "bytes": 424998,
+    "sha256": "a2d79d272a4cbc66378c9a0cdedf8c26d83a288f5bbbffc76c860c348a17c4a4"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/026/003.mp3",
+    "bytes": 250986,
+    "sha256": "cd3b2d982adff1e77a4b47faf68501bdb5b1dce9760688ed073d53c0664ae897"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/026/004.mp3",
+    "bytes": 518691,
+    "sha256": "861a8180525a70fe8153c66e3c600e501b941d3bd544824ad89752ae1b707e5a"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/026/004.mp3",
+    "bytes": 266387,
+    "sha256": "9dc831e213dd5a206a2ca88850330ab4bc241f997ce2084f27768b736f5ec9d7"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/026/005.mp3",
+    "bytes": 247435,
+    "sha256": "2d16ca7655ed72525b8d461c1a1e939afab9214575f9325ca8773f461ee0582f"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/026/005.mp3",
+    "bytes": 189877,
+    "sha256": "c20bc2671c6f06d4a8c423c0782be4211ad1bf9f758228ea09e3d4a1bde5f125"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/026/005.mp3",
+    "bytes": 70956,
+    "sha256": "dfe6236832f89656d82709e793cdf6445c1ddab44b7656a0930c5b812b53b632"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/026/006.mp3",
+    "bytes": 455161,
+    "sha256": "da34ab66824803e32d95a4ed5adad503889eb9df800179d1a781eb712b2a16a7"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/026/006.mp3",
+    "bytes": 174844,
+    "sha256": "bea9c6804af90b137cdabda8098f4a5992e5b14041d50ea58275d61bfe06db38"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/026/007.mp3",
+    "bytes": 237822,
+    "sha256": "8425af6a03e29d840e8d0fa5ddddb3f30d6f8240507a8f3863bd958c2d8ac143"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/026/007.mp3",
+    "bytes": 166027,
+    "sha256": "ebd0a1ac25981865395f67e966d5b44ae7d229121361f5aa499379cb6ae8372d"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/026/007.mp3",
+    "bytes": 107055,
+    "sha256": "5b7c536816559d254102ec8ca9463a3122527cdaf6b2abf40ea47dbc3095433f"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/026/008.mp3",
+    "bytes": 1285646,
+    "sha256": "088f0481bc74c5781a178165669abb953972270b0604103e02be64282630d5a6"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/026/008.mp3",
+    "bytes": 1705137,
+    "sha256": "199cf3de0d54b32a3a82adf09de4e729e677c1872d040f98509f3179265bca93"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/026/009.mp3",
+    "bytes": 486926,
+    "sha256": "1434544269b3cc0d31e0734e25fc0baad391d4854d35b5384579153bd9b851c1"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/026/009.mp3",
+    "bytes": 579287,
+    "sha256": "d38b9f98a9b5e152cbd8fef578d9bb7a65e476d97d8a369653eca2f52c70eb36"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/026/009.mp3",
+    "bytes": 294831,
+    "sha256": "1a4c69c31a8e9ef2b8feac13ef504597d1539e084e2e786afe81503625bd45a6"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/026/010.mp3",
+    "bytes": 598939,
+    "sha256": "637daaf75af6a5c27a3a58980ee0ea0f88ab9801150395af26fcee0a793489e0"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/026/010.mp3",
+    "bytes": 727311,
+    "sha256": "5bbf672f1b881837b6fb047fe7b1fe2351849472a112b2e14152a3d23d3485fc"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/026/010.mp3",
+    "bytes": 331695,
+    "sha256": "cbeddbe9ed3fed11ee406ea3d8378a90b623980c5a41b3ad206d81196f6bba50"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/026/011.mp3",
+    "bytes": 416291,
+    "sha256": "94595d67a571bd7bb94953467d66162df8c923021f51f519ca52bcd8fbd8f660"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/026/011.mp3",
+    "bytes": 196381,
+    "sha256": "f47bb4abd30c1bb2926a24e67c1faf05aca777a9333d9c041974a90554435de4"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/027/001.mp3",
+    "bytes": 486090,
+    "sha256": "89f26483c51e9a7f5efcb40793e5fb6c400e01742d43de4466720c317aad6d0b"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/027/002.mp3",
+    "bytes": 518273,
+    "sha256": "ed9edb505aab272c149b4eb826957545d939fa3cbfb472db9e27386c6edb996f"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/027/002.mp3",
+    "bytes": 506335,
+    "sha256": "9df1a1da7c9b28d550dc638e82da869b151b77b0af1bdb244bd4e69b8fb0346b"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/027/002.mp3",
+    "bytes": 260629,
+    "sha256": "b78cf42f85c66092d1f0fb0e1c43e5dcf63769837bb08ea299d69ec60681de39"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/027/003.mp3",
+    "bytes": 725162,
+    "sha256": "9f1ea016fec235366f4003343c03b3e7df372e3928c471cb062ece6b4ce21a03"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/027/003.mp3",
+    "bytes": 823941,
+    "sha256": "312085ef53aec32747c08c10e2049f256f23c325714a1eeb89d8681a813faa05"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/027/003.mp3",
+    "bytes": 413700,
+    "sha256": "10d4632e6bcfce5aaf232f14ffffe02b4b359c7177113f487ca60f8f4c7983d9"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/027/003-381.mp3",
+    "bytes": 541402,
+    "sha256": "db0664ecf9ef828177ca9438d8e676d641cb62e26a6b9360c818cf8c2b4da5eb"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/027/004.mp3",
+    "bytes": 534155,
+    "sha256": "018cf1ad59a9a82a00f0632aa5fc765238d9a561b669426a2890c7bbfa74e0d0"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/027/004.mp3",
+    "bytes": 449873,
+    "sha256": "231d91c3aefef1f5b0573b3463afb209857376fc37bba0da3d82ab5fb8058a15"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/027/004.mp3",
+    "bytes": 292834,
+    "sha256": "d0c316a4a76917a15e6647a9f29e979920aae40665c0754ae50edc68b9a5f56d"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/027/005.mp3",
+    "bytes": 1586158,
+    "sha256": "4eaedc5eddf9b0fee6c23d1c62e3119b844f393ca6494a2e94c51f8b27474cc0"
+  },
+  {
+    "url": "/audio/adhkar/nasser-alqatami/027/005-102.mp3",
+    "bytes": 597997,
+    "sha256": "5ee2b8f6217d6bc47c114ac16e41082027b50f8ed0c36a0908283c4db2d450f8"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/027/006.mp3",
+    "bytes": 1092967,
+    "sha256": "8f53c6331daee9cc16ee92e08d20f8e674a56faf3ac46e33589b035590af8294"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/027/006.mp3",
+    "bytes": 1143934,
+    "sha256": "6d34c4e58896c43c540560c3aa02dd96d061f72393fe74632893d2554e5d3bae"
+  },
+  {
+    "url": "/audio/adhkar/hani-alrifai/027/006-201.mp3",
+    "bytes": 1072841,
+    "sha256": "1541b6288daaaf882a4556cceed5726a76399314530c03e8533a5c390fef89ca"
+  },
+  {
+    "url": "/audio/adhkar/idrees-abkar/027/006-202.mp3",
+    "bytes": 434178,
+    "sha256": "77092229b4a0441e0fc57b9852817cdfd672feb25fe7228dd65673984280be2d"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/027/006-104.mp3",
+    "bytes": 567482,
+    "sha256": "bbcc36df4a1f73410f0f6d9a705203a26a001432c1dd53a8f04c51297196aba7"
+  },
+  {
+    "url": "/audio/adhkar/mohamed-jibril/027/006-107.mp3",
+    "bytes": 555831,
+    "sha256": "c8ae80bebae728e0707586b141c89bce5d739612f1103b795714d8604a140d8e"
+  },
+  {
+    "url": "/audio/adhkar/nasser-alqatami/027/006-102.mp3",
+    "bytes": 436832,
+    "sha256": "fd03cbbe3c68dfeeccbbb7ef5df02cbce116cd81d7ed9cd712a7e20a2a6c25ae"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/027/006-380.mp3",
+    "bytes": 765459,
+    "sha256": "a44c318b87ffd4ba8499e06e85d9b32c9836d5e04490d2a1e4d07265d92c4a15"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/027/007.mp3",
+    "bytes": 454325,
+    "sha256": "e32726be1a874abea97b9bc42adcc1245b930fa798106bcb7062df20f031c6cf"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/027/007.mp3",
+    "bytes": 382698,
+    "sha256": "bc9512167ec2a7c8d2c93714da7b76452e3806abf3aeba45b0d8af40222fd2ea"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/027/007.mp3",
+    "bytes": 188162,
+    "sha256": "d12fb55c8fdac862f0f804a9c095801e9f7c17f01003c9edd76925e5afcad02b"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/027/007-386.mp3",
+    "bytes": 219636,
+    "sha256": "9cb3b82d97b8f3c56c3e3ec671872830b241fee4c0c5423aefc47b8b4aa9f954"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/027/008.mp3",
+    "bytes": 374495,
+    "sha256": "bf283c69f838a250c299e6feac24f4a6ccfbb6464bd5c541fdcded2cd5fca32a"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/027/008.mp3",
+    "bytes": 301438,
+    "sha256": "4980fd4bd862eba2784ca32d780d3466004525b0514a8ace1989dd052608d29c"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/027/008.mp3",
+    "bytes": 144758,
+    "sha256": "ad20f38413208ab59532122d2fc8bc9e001ee1008a86e7e79877df321470eefb"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/027/008.mp3",
+    "bytes": 124689,
+    "sha256": "fff6d5ef52f355e559082c5c39e71b40ef9542fbd065fb2439df2560928e50c8"
+  },
+  {
+    "url": "/audio/adhkar/hani-alrifai/027/008-201.mp3",
+    "bytes": 273111,
+    "sha256": "334c8634bed14443eca2fd0750721dbcec136e811a85299d5ed1026df373623c"
+  },
+  {
+    "url": "/audio/adhkar/idrees-abkar/027/008-202.mp3",
+    "bytes": 115641,
+    "sha256": "2934d9f6d0f476ea21b573738cd545bb839ecb488fa617f97c19e3ff77bd659e"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/027/008-103.mp3",
+    "bytes": 99493,
+    "sha256": "52bc1ba98301a9e660dbd54d7022232614c23f60a897d78aa5127fbe90830a4b"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/027/008-386.mp3",
+    "bytes": 172044,
+    "sha256": "7aed97bcbdb9f798ee77bf8c86e043cc28367745624c7d89e8f5faeb91610648"
+  },
+  {
+    "url": "/audio/adhkar/salman-alotaibi/027/008-203.mp3",
+    "bytes": 125019,
+    "sha256": "c9177225bfca670efb15487c70658c166593131bbc132c68fce6763a4db9e84f"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/028/001.mp3",
+    "bytes": 1065774,
+    "sha256": "2658dec5e698f16b60419cc8c9da04a074ed27651f6707c455b03f5aa7f66935"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/028/001.mp3",
+    "bytes": 1612689,
+    "sha256": "1be9a28155054bdc28df1d74534bd27fb96ede28aa42a110e016f6c8b5ef7a3a"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/028/001.mp3",
+    "bytes": 976293,
+    "sha256": "5750be6a8e6d7decc7de3ae53d1c7ccb8d8958b0fd30ae2b4744c07561266636"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/028/001.mp3",
+    "bytes": 848460,
+    "sha256": "9f2fe46587dd0171a9d6c9671d67d398371fe563dc1beaa6511225d9d6ccc34b"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/029/001.mp3",
+    "bytes": 306606,
+    "sha256": "6ae89fea117c8814cb7e5c4d81339d2a7e082d8ddf4493509aeb20209a1a05aa"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/029/001.mp3",
+    "bytes": 306604,
+    "sha256": "e18546f2a2d6b92fce3ce14e83d75b9ef40d2e86a1d9e0de1bf296b5e6395286"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/029/001.mp3",
+    "bytes": 217283,
+    "sha256": "097a9a4b4635849fdc76157ef92f0c9440e834cf532242e5832b9ffaa894251a"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/029/001.mp3",
+    "bytes": 160108,
+    "sha256": "c587a8ef9d4de00eded547e99e8c5101662756ed6968cb79befbaae08fa7be0c"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/030/001.mp3",
+    "bytes": 332718,
+    "sha256": "62636c0ccbc6b15fa5369c0b47290083e5f4b08cccdd8c96b5c2b397e71179b8"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/030/001.mp3",
+    "bytes": 346292,
+    "sha256": "fc09f109030b183c4176ac87bde1b1bd873ad267ef2b3cf23144ea3a2b92382a"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/030/001.mp3",
+    "bytes": 225908,
+    "sha256": "79d503f6047833e4e2c822c8190566401328cd670f62c7b2e35f5d4cd24aaf18"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/030/001.mp3",
+    "bytes": 155369,
+    "sha256": "5836d2b5ba477b585a495a1e84bfd63ec57c14d2caa42e2018af639dae7aec81"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/030/001.mp3",
+    "bytes": 249307,
+    "sha256": "c5207f308265beb2fa2e6c77b1fc8b1173d212dfcbcd1187b57852ce22d7e705"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/031/001.mp3",
+    "bytes": 502808,
+    "sha256": "4428a13e1790006b411bd357b7db3064369e8dab821a954963a3d044c1ce09f4"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/031/001.mp3",
+    "bytes": 477322,
+    "sha256": "c50dc7af077296e5a923fddf1ef520591e58d19667db289842f0a1b10b569a33"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/031/001.mp3",
+    "bytes": 116325,
+    "sha256": "9a7f8ab88610517398d4f0e9a2a71df300fc0c6f16c369eb16746b3d9291f5e0"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/031/002.mp3",
+    "bytes": 242002,
+    "sha256": "167dccb27e4c6f0823552c896136672a64e9431f6e54791f9394ff2c3791295a"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/032/001.mp3",
+    "bytes": 843027,
+    "sha256": "0436a8eb64f1192972f997494de5c2a9fe6ac4a52e41b81da3838aa9849863d8"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/032/002.mp3",
+    "bytes": 436771,
+    "sha256": "7ef83b8217fe59728d56ca91afaaa09511525d9246016da2592498d35946b39d"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/032/002.mp3",
+    "bytes": 209192,
+    "sha256": "21fd962afb0a8a796169cf6b287b07de35e29bc92230e3fd4d3199e82234e21b"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/032/002-343.mp3",
+    "bytes": 326957,
+    "sha256": "efa48d16f1e6b653fa5ab8c6b42dfc0e8b788a6ba7116d7a21ad0e01a866b1d0"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/032/003.mp3",
+    "bytes": 762779,
+    "sha256": "41e181f033a2bda4d66e850f525498785a887cfc5826df9506decd6ee718335b"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/032/003.mp3",
+    "bytes": 298916,
+    "sha256": "cebdc77d8e940391efa31f7a2c4c63253ccc355b6e92a27f447b8b2d2ecc92db"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/033/001.mp3",
+    "bytes": 335214,
+    "sha256": "11de2d69d3483087239d5edc585b89398f3af459c119cb69388209c73e400cd7"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/033/001.mp3",
+    "bytes": 333326,
+    "sha256": "c8cebafcb6925a9a907ce375793e2c1bf6596408bae197c1d22874c505c2813f"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/033/001.mp3",
+    "bytes": 273931,
+    "sha256": "d61c8bb03c1bbc43e9c0f20e75ed99f3cd1661a5d4acb4a34c0064ade10be75e"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/033/001.mp3",
+    "bytes": 208330,
+    "sha256": "056636112a9b2b78bdf33b71139d98e4c2b87454272328b8a3a04a0ab86b4667"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/034/001.mp3",
+    "bytes": 950860,
+    "sha256": "fe28ffe44fb2d4ea67e307054070d6a0f6841c925e0c20be457a8d791c48f706"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/034/001.mp3",
+    "bytes": 412764,
+    "sha256": "f705d52bc83c01c08fbbdc7dd6d85795ce1e60238372691b9c5badbc21076545"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/034/001.mp3",
+    "bytes": 451166,
+    "sha256": "dd6ea38713a277287283bc345f2f3132e4ee2d0cf2d4791d249c95f71592c89e"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/034/001-342.mp3",
+    "bytes": 823181,
+    "sha256": "727dfbbccc2190b827c53c9410ff76263cf005820f307d99a470963f89e6d571"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/034/002.mp3",
+    "bytes": 389541,
+    "sha256": "383443ce904d800e7c7e3ff7b97f45a5cc36df897c6cdc4809baa9d25db2df9f"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/034/002.mp3",
+    "bytes": 331755,
+    "sha256": "389f13a8c14c2d2a9cdba81e1113b7770698891d90d911839f98336542b5edd1"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/034/002.mp3",
+    "bytes": 143251,
+    "sha256": "75e05de26e678e54627639796186153ec101892090c46e3f7227ad10dcec185e"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/034/002.mp3",
+    "bytes": 123866,
+    "sha256": "d4fa99c2307536aeffbd307a8c682db40b77711d1366c4ff8a872c4bfec3d70d"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/035/001.mp3",
+    "bytes": 582220,
+    "sha256": "0f23111ae531230cfad9683f7217a07660f3dfd81dce848d108a6096d1e00a7f"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/035/001.mp3",
+    "bytes": 437221,
+    "sha256": "c7661a491026d483106d1d2aabaa03be725c65819cbfbddca8eaf6e301d2b147"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/035/001.mp3",
+    "bytes": 233407,
+    "sha256": "e04969632a5482f8a527fca2ada6d0a599cdc08a5be5c9749e8c77c0fbcf81ba"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/035/001-348.mp3",
+    "bytes": 347342,
+    "sha256": "f65bd7f8673ff21f4bb6cc41c9e1e1dcb56eb3b15c637b01fe4cfe569a7ad3fe"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/035/002.mp3",
+    "bytes": 357358,
+    "sha256": "9d04895a0806764c8379cfee7737b4cd1bcceae1a5a2ab114e05c1f1183b8493"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/035/002.mp3",
+    "bytes": 302203,
+    "sha256": "6299be591b939b8992b81b4d5e02420844008871323cd74a75ad8536d0a341d2"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/035/002.mp3",
+    "bytes": 161146,
+    "sha256": "e5af8156a9c848f647505fdc69044bc60af6e8ef31764fc5699148ce93f14e90"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/035/003.mp3",
+    "bytes": 262900,
+    "sha256": "9e4cda39a605d14e6ce3cf60e0a5a1437bdc13bb87ed55bd9a185c895732c1c1"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/035/003.mp3",
+    "bytes": 165669,
+    "sha256": "da0ca2244315c010d10f3664a4a440b9faa45e27038a32ec30b600596bad22df"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/035/003.mp3",
+    "bytes": 128202,
+    "sha256": "8963e4f9e87279df82b0a58a7780bec00767c111d180740a1ee2b4acc33611cd"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/035/004.mp3",
+    "bytes": 259138,
+    "sha256": "83f5c58a45c2404c00a8281f3eb28a503ba3797bd5d11650f901c1b328b0e836"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/036/001.mp3",
+    "bytes": 438442,
+    "sha256": "d99dcecafeefca39cda42bb74a22cc8cc6471e9734794de092e158c84d8085c4"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/036/001.mp3",
+    "bytes": 185344,
+    "sha256": "ee1d3bd773dba9f064423e2aa163db7ad4b543aa4fe6616eb4ae6e454a97d197"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/036/001.mp3",
+    "bytes": 65236,
+    "sha256": "c10152e54e2d9ac2d6cfcf3fee6abc918376f0f89698704049498dfc2defcfba"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/036/001.mp3",
+    "bytes": 78072,
+    "sha256": "f3dc4cfeab10c984082ea630bea6a0f85895278d380a1f1ddb4c7d39d4d3b67f"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/036/002.mp3",
+    "bytes": 310129,
+    "sha256": "475d77d0f4bf652d5d4a391de79977415ff2ae29c6e1d0ebdf8bdaf65fd8fb69"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/036/002.mp3",
+    "bytes": 211459,
+    "sha256": "b7ba2139ca6d69f7cf9dd579ddf36bd175cdb9f91a67e0aaa5abee55f4b5ae3c"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/036/003.mp3",
+    "bytes": 223193,
+    "sha256": "e8aaf015e6b09ca3fdcf153d0d6f9dbcc1cfdca3a9a68a78a281413454e3cfc4"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/036/003.mp3",
+    "bytes": 95544,
+    "sha256": "2d55fb4c6a5517b2cedc82ed424b75fbb25cb5d3630d75a8ab8d9d543f040d4f"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/036/003.mp3",
+    "bytes": 35517,
+    "sha256": "e307c2a6b0d2f2e6052e1c04c580d8bbf69b2f0962d02e5b84bebd897ce6c386"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/037/001.mp3",
+    "bytes": 680441,
+    "sha256": "fdd0791f5a50d44e2473158a4ec55adfd6b624e6753416b484b6ed192a8bb88a"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/037/001.mp3",
+    "bytes": 551216,
+    "sha256": "c2d75b65a710513ed4a9e8cb5a8e1801823e4011e78ec7c734dbb9db3f00cf3e"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/037/002.mp3",
+    "bytes": 980953,
+    "sha256": "b5506fae8f65a6993916f9ddf6493a3d5c763b25b2005fc85ac8fb4520a302c2"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/037/002.mp3",
+    "bytes": 1012258,
+    "sha256": "082d1830db15feb37358102ccfa76b0a0b32135c666302978dc3061e69bd2034"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/037/002.mp3",
+    "bytes": 515847,
+    "sha256": "023f00b40f0fd77a671d15517f0f3b7beec630f120aa8242a8a9947b12e14f3d"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/038/001.mp3",
+    "bytes": 285294,
+    "sha256": "26c0f45594287a5f9427785d14edb8e338881c547d2ce0f11609bde799a9d449"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/038/001.mp3",
+    "bytes": 255985,
+    "sha256": "3f3572bae10cdbf840ce0668fc9dfb53a270a14888ed77ed7821b5010294d093"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/038/001.mp3",
+    "bytes": 303579,
+    "sha256": "f0042b3e9ce5d1c284cbc8d082f43a682f9ebb6dbc27fd718fb71a5dff489511"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/038/001.mp3",
+    "bytes": 112525,
+    "sha256": "035ced9ab3ee6d91c93790334bb92351395d029fe402c15b564bacbbb82e4eb5"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/039/001.mp3",
+    "bytes": 223854,
+    "sha256": "b119a3ebdcf6bcc6175293bfd3594b85b8f7a105a4a2e11fe44e54358bdf5a67"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/039/001.mp3",
+    "bytes": 285248,
+    "sha256": "5877ce84ac4755cdfc72c6d23dc7267d955f9a866692227c9a02bc3fc8eed09f"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/039/001.mp3",
+    "bytes": 106520,
+    "sha256": "d7d6f8f8c45016bd80512d71a2ff41d65cc482e0c120df8fed955f944818ddce"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/040/001.mp3",
+    "bytes": 318070,
+    "sha256": "be3d2f657a415e7afd560a4a8f30c67c954cfb1fff5838299f3b3dd7f3723abb"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/040/002.mp3",
+    "bytes": 214834,
+    "sha256": "dfa971a467e3d61af59d4c439e030997ea8cc399d68844fd52981dbdf253733c"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/040/002.mp3",
+    "bytes": 100339,
+    "sha256": "bcc2ba97ba952c21e2055b42f1af021cee45422b0ba6d8d4dca91fafaaba9e9d"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/040/003.mp3",
+    "bytes": 339386,
+    "sha256": "197d3a80dedd27d58dd9663f30679075b3393d03b1453ee0ee3341c9c3d9ed24"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/040/003.mp3",
+    "bytes": 243305,
+    "sha256": "932575adb27a7f09711fa65ffbf5651a09ea5caa2fdfdf217b64fe5007a3c4f4"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/041/001.mp3",
+    "bytes": 374913,
+    "sha256": "dd1f69616720bc8c5ee00f39d411ff2cc74422749f2337ef729cfcab66f89da3"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/041/001.mp3",
+    "bytes": 215731,
+    "sha256": "ca00bb736a36e809528436a43c1544892362cd310c89bf12f18b97dc5e04153a"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/041/001.mp3",
+    "bytes": 99071,
+    "sha256": "998d67900a9d8e72d061f5f0bd83e6faaadafd60b6ab912c8b29429c78cf4f87"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/041/001.mp3",
+    "bytes": 91882,
+    "sha256": "b16ee65f62ff231bd02e5226832b03e81a3dfd9c7339b049b3f09fc287633934"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/041/002.mp3",
+    "bytes": 425904,
+    "sha256": "56f67d3336440e2f28862b6694886bea92b996deeecd087e02b8572e3b7aec72"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/041/002.mp3",
+    "bytes": 329258,
+    "sha256": "16ad3b1f627d82fa0f72a29639850dc2c940df1f0ac20dfeb0804881dea5bf19"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/041/002.mp3",
+    "bytes": 140818,
+    "sha256": "ca9631e33a5c9ffa64fd81268a3ef2d33e9474e2a3d27566d050a015a1da373a"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/041/002.mp3",
+    "bytes": 123866,
+    "sha256": "d4fa99c2307536aeffbd307a8c682db40b77711d1366c4ff8a872c4bfec3d70d"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/042/001.mp3",
+    "bytes": 270126,
+    "sha256": "3e3fa5426b41f9b945a6fb4ba2f512675228f506b8458b12ec24084b56850ae1"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/042/001.mp3",
+    "bytes": 243478,
+    "sha256": "12c1868411ec0ac579e998cf6d1bea0811811c6c62f2d7a4e6206c459748cd28"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/042/001.mp3",
+    "bytes": 148146,
+    "sha256": "7e991a298028246ca9ae673803a176bb6fbf25d5cacd2a70de9efdae0dcdd61d"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/043/001.mp3",
+    "bytes": 286830,
+    "sha256": "bce74ef48d31f68ff37cfd5634cff0ae18d7930a650ba3a59e308de2a0aba5f9"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/043/001.mp3",
+    "bytes": 271464,
+    "sha256": "f918c2d3a557c81b403ed1735dd87df768861f114404f033fa75d242d0f326f1"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/043/001.mp3",
+    "bytes": 176332,
+    "sha256": "3b716a12e8110e9fe1d9f6f8a9af65eb2693668e4b6947b15a149e9c32b2f092"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/043/001.mp3",
+    "bytes": 93938,
+    "sha256": "35f3789a991e4340c8dc1a541f79794365859c0781ee9a8e638d5d933abaf6eb"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/043/001.mp3",
+    "bytes": 198613,
+    "sha256": "6c83ab85169c4ee194c018a6acb349e38f7e9758a04ab81f94cde702d0b72eba"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/044/001.mp3",
+    "bytes": 321774,
+    "sha256": "985018fcc6d572ee635c1eb06899aa03546de1bb9e9617778b51a2fa6afc17d8"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/044/001.mp3",
+    "bytes": 339597,
+    "sha256": "e662bd0cf9b64477b9f64fa3df1f40290e7062397a2f3c4470ebe7c836df6673"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/045/001.mp3",
+    "bytes": 273767,
+    "sha256": "e4b2a15928910fa3d0a1d70d2cba9c56ea4e0ab42155257f28d8ca9a9626d8b7"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/045/001.mp3",
+    "bytes": 72597,
+    "sha256": "e083859cdd31f51a4eb596ba251222e74ea7a7058f5f74548afc003be1ac5178"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/045/002.mp3",
+    "bytes": 184323,
+    "sha256": "f5ea66d90fbb0d05b98075ea0af6c950ec2a4719e95caf2ff4ae6b9f5f9fa415"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/045/003.mp3",
+    "bytes": 206057,
+    "sha256": "7a976255d29a470f356f4f5c60403e7d8d507809e7d7e5299ac940bc071b2f69"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/045/003.mp3",
+    "bytes": 93453,
+    "sha256": "04ff3c6bfe09462853931648ddc95c2fc78b9e8042db4f866be0ebb7a8f9a50c"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/046/001.mp3",
+    "bytes": 238062,
+    "sha256": "ea5a043d5f467e6cdae227fa6b9cc663943dcca1a68946fb3f1225cf68f8ef8d"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/046/001.mp3",
+    "bytes": 195441,
+    "sha256": "e937e61d10521e7e35207f1ec279363f61ad4e39ca32955d2a0c6634a447152b"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/046/001.mp3",
+    "bytes": 391441,
+    "sha256": "b74c7289670e3b0df3b81bdd455a20e5531c890f02167943519bc057230c40d2"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/047/001.mp3",
+    "bytes": 435054,
+    "sha256": "23cda037a6604e8e8a08a5158d2c0f0e66bb68b3e7aa3dcb4804ad6a23cc8459"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/047/001.mp3",
+    "bytes": 478353,
+    "sha256": "bb2fcc8a41a7c3e8d5a3c590c9a6eecc4348cc7314a1d172f338ecaeaf526f29"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/048/001.mp3",
+    "bytes": 336942,
+    "sha256": "df212f89876da404d98a374333d668aa75641ba7f61cb468e87030ca7a098e4b"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/048/001.mp3",
+    "bytes": 436548,
+    "sha256": "9e7d88675b3e6bb6ce7dfe0d3920d12ed37488fb3f974b4b5c5282b10dee5cf8"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/048/001.mp3",
+    "bytes": 264924,
+    "sha256": "5921095b4e0d6e8654a6256c2e8a64ac1cf9593365b3a9f15e4b0193a00c3882"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/049/001.mp3",
+    "bytes": 321414,
+    "sha256": "8b2179671464ef1e32436751a4dde8eb0d88b1e4e3e84f723a78993c1140a382"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/049/001.mp3",
+    "bytes": 89492,
+    "sha256": "552e79f06b9eb05d47d5f3b7639c5ea0b5dde372584ade34d36829056447c3cd"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/049/001-325.mp3",
+    "bytes": 80994,
+    "sha256": "ea20179bc503949dae47017416564277f7390af8cfd94363d0af41121394f304"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/049/002.mp3",
+    "bytes": 282962,
+    "sha256": "e484e83108b25a5690cf81bb1e9d43da60afa1caf71d403dff4ceef44250ca7e"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/049/002.mp3",
+    "bytes": 189429,
+    "sha256": "b15141f8ba754882630f2d44b5b297ba296f326f3bee450710eca68489f387dc"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/050/001.mp3",
+    "bytes": 407214,
+    "sha256": "67ee9456cc59031969babfbb6d4bab9452d29ea742d6d8f629047b9b025d269d"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/050/001.mp3",
+    "bytes": 527241,
+    "sha256": "ad5760d3d0c8c721539ee3eb1b5ec7bf8bba3ad34a33e99d742ac730e3c2a713"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/051/001.mp3",
+    "bytes": 359866,
+    "sha256": "3421b2255ca236c839f82914f482189349e735ef73103f4d28ca9674e88885dc"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/051/002.mp3",
+    "bytes": 440114,
+    "sha256": "05de813932302d42b9b839deab144426d72ec1fc98a40acfa3e7d6c4b0993ad4"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/051/002.mp3",
+    "bytes": 374078,
+    "sha256": "700bc872af9b9b01dc53797f69992b1bdfd42b93ce44c21bd651f9c437e62b87"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/051/003.mp3",
+    "bytes": 616493,
+    "sha256": "1191d9ee8ee357eebdddd01b82a1978a9d69973bca2998d40387a8ac2ae34bf7"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/052/001.mp3",
+    "bytes": 254778,
+    "sha256": "a98ffeb1c9ec09ad055ed61f263bc91298e9df6e1c087aca2e8c993477666fde"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/052/001.mp3",
+    "bytes": 205824,
+    "sha256": "57862a48af76ec14352b0c2e7dfef17901c3ad80f6db068e1c80165b4a3c27e7"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/052/001.mp3",
+    "bytes": 206586,
+    "sha256": "7f88fb13846c525369a51087e2be5445fae451fbfe3ac403391fd6b0b3d1f225"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/053/001.mp3",
+    "bytes": 306606,
+    "sha256": "9e39c889ff557d578bffb302b4348d8b3c57b0c23db08f7b0cde94676557a14e"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/053/001.mp3",
+    "bytes": 282323,
+    "sha256": "384919bac56010ce1a4f3cb105436e38b66e2976342bbeee161b32b684c0572a"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/053/001.mp3",
+    "bytes": 224385,
+    "sha256": "0a12ae962b14106659eceb355c85d5f20a74e04d0f049b4748d1ef6da78a2629"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/053/001-320.mp3",
+    "bytes": 205802,
+    "sha256": "51b5ebe5255e3d2e0a40af3418c5391d23aa715ec87a3d77f97adfb5cd148f70"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/054/001.mp3",
+    "bytes": 402414,
+    "sha256": "ff52f973207026356a5b6a08a5824abd27c313cf3cb8187aadc00e9a09eb2bc0"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/054/001.mp3",
+    "bytes": 446587,
+    "sha256": "70b2ecfb0a8c7d3ead3c3fd8b85800bd0cd34286e05a856b73d1d8e6410a708a"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/055/001.mp3",
+    "bytes": 907811,
+    "sha256": "0dbc4b815419d03f1b1377f94b055b84bdacdbf75321e1ee6866f51892de46fc"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/055/001.mp3",
+    "bytes": 908399,
+    "sha256": "6561ca63b327afcd84dfea1cefcbcb29323143b44fc1ca352f2e6229599555d3"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/055/001.mp3",
+    "bytes": 538459,
+    "sha256": "69689caafed70aea6e7173792636a86baa69c25fc575077f5250e38c4d9aa024"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/055/002.mp3",
+    "bytes": 673336,
+    "sha256": "433e478ed5dd3945b828958c3f51f9819b7833934f2cf5bb70cf1af651351553"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/055/002.mp3",
+    "bytes": 315573,
+    "sha256": "b2dfbccbdee90397747d47421949b2f66989af47d14581d99c9421e365e3463b"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/055/003.mp3",
+    "bytes": 505316,
+    "sha256": "5d00fa296e007e10fa055acbadcf7cc5d0e40af140c4870a96f7c2566ce05b89"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/055/003.mp3",
+    "bytes": 253288,
+    "sha256": "d7534fc4a6e13bae1725cb058f2f34d8aa965270708598d444491211d954bfbe"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/055/004.mp3",
+    "bytes": 455161,
+    "sha256": "74655437523c2ad6f4ab2ff389fc5fce763d3b3f91e27a9a05502a9c7d343c13"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/055/004.mp3",
+    "bytes": 280215,
+    "sha256": "ec639fabb4b4cc8508a04a2a0d9ca5736d2c83e538cee0cc85182d8708c68bd2"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/056/001.mp3",
+    "bytes": 1040722,
+    "sha256": "7425cadd097e25ef3ccead4449ef9c0013da1e49faabfa5a82f3f239007c4bc1"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/056/001.mp3",
+    "bytes": 1052975,
+    "sha256": "bc3b544aa66030a67a523568498ad78101040060f44cc36c567a2e887fee79b9"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/056/001.mp3",
+    "bytes": 495427,
+    "sha256": "5919aa1cec51949d091dc9f3c7667e05f34299f428cd69a79570c9185fc28100"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/056/002.mp3",
+    "bytes": 232389,
+    "sha256": "33acd2f0e1f95a201f5a414dc3a9266777df361f0cd669e9c4beb329644b938d"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/056/002.mp3",
+    "bytes": 122591,
+    "sha256": "32ed0ad5bc602126df32575a345d93b712488e7a53dabc087296abde518e7dae"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/056/002.mp3",
+    "bytes": 49299,
+    "sha256": "029933f6c97d64a262d50b8d06cd6c2c7b94061a1739d218c4c34577d3816b8c"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/057/001.mp3",
+    "bytes": 389358,
+    "sha256": "4e1d18e2ec441f54d5affb20b9958dd96db936de28cf69b74f907295c0b486e7"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/057/001.mp3",
+    "bytes": 416056,
+    "sha256": "09877e788ef405ce350fd8a4e7b7b7a7b09073bb2897991296375286fd9c885e"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/057/001.mp3",
+    "bytes": 310269,
+    "sha256": "4b5dea836755dbe3097505828588daaada95e718b3b57c5b89e76d15f13036e5"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/058/001.mp3",
+    "bytes": 238830,
+    "sha256": "2fe2656eba0d0275780f3d037e78dde6d27c2764eb443edf412ec881272e432a"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/058/001.mp3",
+    "bytes": 187882,
+    "sha256": "72d72f224253b662fa040de5be0fdf7d46f2ef606cd8cf0084389395b8e95788"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/058/001.mp3",
+    "bytes": 296954,
+    "sha256": "121b6cbc4931a464677ce7bc962a7fd88cc2bf4adfb1347020d648015b62de25"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/059/001.mp3",
+    "bytes": 234990,
+    "sha256": "d413b4664f923e1a73cd2a46216e730946823df0bd7b5bd3d8ff42bcf7a5968a"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/059/001.mp3",
+    "bytes": 162788,
+    "sha256": "5e11c567428ca5ce2ebc4e4951b0f26c23e292bcfcfe4d4e5f21546606d7c611"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/060/001.mp3",
+    "bytes": 355182,
+    "sha256": "310f168167fcd444be486f25e3a8e49b071cddaaad4971c036895c1b6bbb549c"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/060/001.mp3",
+    "bytes": 432784,
+    "sha256": "31334c1b25bb0fcdb00743fec7b87db21049f844bbf535b3a8a18fd7b1b52828"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/060/001.mp3",
+    "bytes": 400340,
+    "sha256": "bed08c355352417cbdefb0a496ff6307d9be5a41e07666f591eeceb95c82cf43"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/060/001.mp3",
+    "bytes": 382341,
+    "sha256": "e8c62a5778431c7c916bb567e1312d228edd3bb3952b0dcf5626b89b53ecc467"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/060/001.mp3",
+    "bytes": 573186,
+    "sha256": "dd48ef2d892f99ac1a4a45251e6f6893ec133df58be0005a79fbd51eb562f1e3"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/061/001.mp3",
+    "bytes": 359030,
+    "sha256": "1c5d4223503ec7a112c7708eeafcce7c4929217c77770c6cb0545560d5efd8df"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/061/001.mp3",
+    "bytes": 58883,
+    "sha256": "df9866aec4ccfd2762a73bdd71d88408c26edf2b5f6ee9ef79fcc564cb2a7bf5"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/061/002.mp3",
+    "bytes": 407096,
+    "sha256": "015227d0ac7446c2e82df4289c4dea700056cf089c55df386d42948679721245"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/061/002.mp3",
+    "bytes": 156595,
+    "sha256": "d8b68c9a0de5cb9101ae2c0d867007f9d26de0cf9bf9de82c22a917856e93ef5"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/062/001.mp3",
+    "bytes": 266670,
+    "sha256": "a0fdca9f6ac2379724de6cd26793e9aa547df1b3c98f93a5238f723ac8af8abb"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/062/001.mp3",
+    "bytes": 209162,
+    "sha256": "624428bd6212ea141ba110105a3bd53e499b4ecf4ea2040102d55fad3b37d53b"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/062/001.mp3",
+    "bytes": 138258,
+    "sha256": "f508d003d6fb0b5fc930a63d4ffffd7cec60bca282fd9c274f2633f673bedde6"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/062/001.mp3",
+    "bytes": 239022,
+    "sha256": "27264b332109b633ce8446e2fddc4131457b9e50994db662f5ded74337d6fb64"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/063/001.mp3",
+    "bytes": 438860,
+    "sha256": "94660d246e283eb37d36c4ab816214e7397e987ed8bd16ed57209b9a13dfcbdf"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/063/002.mp3",
+    "bytes": 295082,
+    "sha256": "1858b07da00111b7079098f7358668924a80d67b821af319a6e58dddc1cb8258"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/063/002.mp3",
+    "bytes": 158605,
+    "sha256": "78fbc01d6a68ff1164d1521a9372bea90ee29536d5ca4011d274609d98b5373f"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/063/002.mp3",
+    "bytes": 81400,
+    "sha256": "cfac6f17268a3579b48206c70d86afd2cb6fd0916103400c6746e30b89d9e3dc"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/063/003.mp3",
+    "bytes": 298426,
+    "sha256": "3e240e5aa20724402576bfa045ba0a52878ee704f6880ee72a924fc459a5542a"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/063/003-311.mp3",
+    "bytes": 146179,
+    "sha256": "ab07ea954d0f585def5e320043ce1a9fee1c174ad108f64685f87ec957860159"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/064/001.mp3",
+    "bytes": 228270,
+    "sha256": "ddbe724592a1d861ca9e59e2fe2ffe1dbe098a2613fa69f8c278fdf201d880c4"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/064/001.mp3",
+    "bytes": 162788,
+    "sha256": "a98f8db45ecbd5314e93ad59f31fc1389dc893473a8e039b25dd20829abc183a"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/064/001.mp3",
+    "bytes": 101299,
+    "sha256": "ad86852cc9cc33889b425d936050f2055fee04347c2b37737d424b5b909644dc"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/064/001.mp3",
+    "bytes": 139347,
+    "sha256": "eeeb5cbb1ac3f361e544cde54560410acbb889236c442157026ddc3e8b995e37"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/065/001.mp3",
+    "bytes": 225582,
+    "sha256": "48d71150d8a5ec494f5ca6e138faa1480108e8763503eb4b16baf3ee5d90126c"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/065/001.mp3",
+    "bytes": 169058,
+    "sha256": "f6d0d60475bac205c149821d0b0e4ff518db4cbfd98fde71c43b84aa54556eea"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/065/001.mp3",
+    "bytes": 94821,
+    "sha256": "bbb489bf4a7db41fcb0d30b908fbdb5f375ece63c7b442a4a93bc3e47ea52a07"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/066/001.mp3",
+    "bytes": 282798,
+    "sha256": "63f7978059d2befe10a15273a39903f9dbcb330c73c6b95bfc90145944d9d38d"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/066/001.mp3",
+    "bytes": 302383,
+    "sha256": "2299c11685321fd6338e1819302a4e57e89d1b199592c91b9edebf0114c90776"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/067/001.mp3",
+    "bytes": 340782,
+    "sha256": "f7eee017954c13523f58e5f6a6b055f244beddcced2e61c1b8812c285fbecbdf"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/067/001.mp3",
+    "bytes": 379701,
+    "sha256": "77fcfe2210dd1cc641c8b03545d0b3398662631ed511b6696c3544ee4da16ccb"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/067/001.mp3",
+    "bytes": 249662,
+    "sha256": "19177cf593319d736bc8f2f47c36246cc16a136f63fe803cd9c2cbe307ca6d31"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/067/001.mp3",
+    "bytes": 158798,
+    "sha256": "66d1267af612e04072abc8d7768160131e4a735e2d4d5d57c59a05fe1dafec5d"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/067/001.mp3",
+    "bytes": 276304,
+    "sha256": "24b7eac2f006d6df32c49b698afa4547ccbfd50810b6802d3ad4e5f7e04164ad"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/068/001.mp3",
+    "bytes": 359448,
+    "sha256": "9e87059df0e6af7e2dd7c179ad01d70911fa967aeb1e32b736bc13104db0cc94"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/068/002.mp3",
+    "bytes": 272931,
+    "sha256": "b7b30ab7d548a2520f3556dcdada178f21ddb4e6462dce780245e9b6601bf294"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/068/002-300.mp3",
+    "bytes": 124469,
+    "sha256": "ae5b27934bec77873d3c9ddbf4d20fcb74d120875ccd60c5000e1b50db8dad73"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/069/001.mp3",
+    "bytes": 390377,
+    "sha256": "943ea5d058939094364691f2bcd3b159057094396192542e5652b1b8b7fd4b33"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/069/001.mp3",
+    "bytes": 317660,
+    "sha256": "f86bf1b5138d0f1ed125b192b2e9c890a553c9b5333cb02305d87f3d827d2752"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/069/002.mp3",
+    "bytes": 475641,
+    "sha256": "d4ea21b6a0253fb272f2ebbc251d6b08fa2e8dbdde3966660cda2ba5d90b2f6e"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/070/001.mp3",
+    "bytes": 412529,
+    "sha256": "fe6b1c49519545d0c397a0cce3f86120aad42d03d41273a26733c13cfb595618"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/070/001.mp3",
+    "bytes": 104517,
+    "sha256": "0efab72c30d50dacb8499e005564e23180306464102bf224f6cfea440532857b"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/070/001-385.mp3",
+    "bytes": 164751,
+    "sha256": "6ad6ae0cb7651af304a167da4feb31b061288219a5d62fcab72fe01b9cc57b77"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/070/002.mp3",
+    "bytes": 347327,
+    "sha256": "84b62e717d1c94757d9152cf47a586050aeddff9927a0958a2c9ab50d8d03292"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/070/002.mp3",
+    "bytes": 333194,
+    "sha256": "cb3f46a1159b18e26e62f47793d860280d478688884ed1f1b5751766797ed47c"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/071/001.mp3",
+    "bytes": 264750,
+    "sha256": "6c8789f2a61cc377974652ea85f7bf6654e45c8c149f9f44e564d15a6a313372"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/071/001.mp3",
+    "bytes": 230086,
+    "sha256": "0f3037d02d3a32229d0148b16a68ad95f13f26a9a68d98b4a144d63d5a8adb25"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/071/001.mp3",
+    "bytes": 303695,
+    "sha256": "ee39eddc9b8e15da47ceb74d4fc64f1147c1b4e4af30e4c80c2c3d22637d6d22"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/072/001.mp3",
+    "bytes": 257070,
+    "sha256": "0dc2c18cf472408a49adf6ef4cc4053d13e65b5167662271b93574a2a90de0d0"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/072/001.mp3",
+    "bytes": 212965,
+    "sha256": "8b08763cfadb0c1833c478aa02211752d62fe377819539f2bb7813afc1bce94d"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/073/001.mp3",
+    "bytes": 282606,
+    "sha256": "c716de879138c780ed500860d343f32e775f681fe04884fc76ecb6f681cb7623"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/073/001.mp3",
+    "bytes": 263948,
+    "sha256": "c1be00b0ea37de64a95bbbe244dfe116cb7a0c742cb3276286f7b25863a8dbe9"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/074/001.mp3",
+    "bytes": 319278,
+    "sha256": "5ce6a04cf68e8c3980f48739f7982bf99f7a046c9d13c74b5b7d10c6653614ff"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/074/001.mp3",
+    "bytes": 354662,
+    "sha256": "86dfa6dfee8de51ac157198767f621aa63b9d39d32656c93c72594741e093df7"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/075/001.mp3",
+    "bytes": 235566,
+    "sha256": "e4e82c7928b52a841d322ce33ce6dc7af131b054dc9e280c418b23ecf86f35f2"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/075/001.mp3",
+    "bytes": 184118,
+    "sha256": "912d6ddf309ae836a6b24a96662e49018fb9c96ce4d233d17db7adc1e7baee44"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/076/001.mp3",
+    "bytes": 327534,
+    "sha256": "fac2dd5246774c3e7720590ee082b340f70626c51a1a45aa9a2ed9d8d560ea81"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/076/001.mp3",
+    "bytes": 314941,
+    "sha256": "e6f40da906bbc64b1024c7899095e06e556fb9d7c948fdc0ecb326b45913ce46"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/076/001.mp3",
+    "bytes": 242331,
+    "sha256": "6031644b72813908ffd0bd981ad6fdea7c618bc78809aac44f98da4d3c7a3d89"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/077/001.mp3",
+    "bytes": 335406,
+    "sha256": "04d552c2ce164602b12b3310ff47b51e0c11f85aec3090727377959db59e68e4"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/077/001.mp3",
+    "bytes": 398081,
+    "sha256": "48b825de33bc93d1cada29a6e736a0ba65991d6684413aca9e8215a274b794f8"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/077/001.mp3",
+    "bytes": 190137,
+    "sha256": "bbe82dd0789a382392997178ac6ac7cad62a0fc98c9d56a710e2f3daac5f6c49"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/078/001.mp3",
+    "bytes": 239406,
+    "sha256": "982f0cd1604372d3ec4ac718e35e5be4edbd8b3eabff7754d6de9c73408be606"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/078/001.mp3",
+    "bytes": 197085,
+    "sha256": "28d557cc37eb2e821895f587f0d8498e7b57b85ec9096d12adab617a3fbb88d5"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/079/001.mp3",
+    "bytes": 264174,
+    "sha256": "94b735170778a162d36dcda621fee34350703674bda5a43b2cb6d92550beb97b"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/079/001.mp3",
+    "bytes": 219619,
+    "sha256": "d38e19a8f9ae767b39bd66d15c7c6af3f4a19f24107e2fbf8245c92ed69aa8d3"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/079/001.mp3",
+    "bytes": 132003,
+    "sha256": "fb99b4c5cfc3817a0bc92a1240edcb5fde083b2532196ab16768441b9aebf0e0"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/080/001.mp3",
+    "bytes": 393006,
+    "sha256": "71a89b9427a5cadfe45879c794cc9eeca93aa5a28dfd2ec58c90e76389ff8bb4"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/080/001.mp3",
+    "bytes": 551920,
+    "sha256": "ca0d3d643b5e8797c4deb7fa26c5cc5f93cfee8bf66bf052f2188dd47f765ad9"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/080/001-319.mp3",
+    "bytes": 288142,
+    "sha256": "94230c8b9c4901555b8b76e4a3b9bd5a6a241e1d1d592ea2903b1291823d678d"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/081/001.mp3",
+    "bytes": 261870,
+    "sha256": "82346f08ddd342a628241c92e2a69d7b37b9e16b1df5a164a5bc351b4f0cac37"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/081/001.mp3",
+    "bytes": 240953,
+    "sha256": "8fb3b1298044bc6414f900e09a2c480d75ef062d758ec5d1bff6e71c2e73fc21"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/081/001.mp3",
+    "bytes": 148955,
+    "sha256": "b9c36fd574a5188c2ad8052c9686af37f00c4931c2af49d5c9f0f2d863750d44"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/082/001.mp3",
+    "bytes": 225390,
+    "sha256": "ecb7d73fdb0b405e68822c6b5a732c2d3c3702035abe3f811ca385d08fc6ccf3"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/082/001.mp3",
+    "bytes": 154409,
+    "sha256": "bb5cf9e6949a014a5c175e804fb39c9f12213292dbb5db342eba75ee6b93cdd9"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/082/001.mp3",
+    "bytes": 55172,
+    "sha256": "12baee86e0ba60bd729b66c7369e3c44b5c85e309964c10cffb6a226cf25e1df"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/082/001.mp3",
+    "bytes": 179869,
+    "sha256": "fd0db5e22e7cc6ea3912996b82bb8de60d72788073dc87a82667de4d01496fc6"
+  },
+  {
+    "url": "/audio/adhkar/idrees-abkar/082/001-202.mp3",
+    "bytes": 48414,
+    "sha256": "be185951cce72034f6cc413943edce10a65ac2799a54fd5c2a80348fc49893a4"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/082/001-103.mp3",
+    "bytes": 46642,
+    "sha256": "3e42e8b989da5f4e190cbed356aae4e43722af12eeaec0502f23cdad5a0a97c8"
+  },
+  {
+    "url": "/audio/adhkar/mohamed-jibril/082/001-107.mp3",
+    "bytes": 60097,
+    "sha256": "54e4bdf38aa5b17a95465e053a3f6dabf53c8965f7f94e3656ad350ff4955e81"
+  },
+  {
+    "url": "/audio/adhkar/salman-alotaibi/082/001-203.mp3",
+    "bytes": 67317,
+    "sha256": "75afe6687eab06377e67096857b57a3bcf61ab1cb7ba1436353202da404b8f52"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/083/001.mp3",
+    "bytes": 275886,
+    "sha256": "9006915a4e90a4ad91a32d6b667fa993f735173e722572b8f424d0c2e30f7f51"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/083/001.mp3",
+    "bytes": 280647,
+    "sha256": "bda2c8ecc0314082fc97fb962bd53e0b0ffea93e96aec2adce5b1c3b4523e650"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/083/001.mp3",
+    "bytes": 176314,
+    "sha256": "098787bbc8a2c90c6a120ec5882ff6a248a715be7dfd771a6178677b61889374"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/083/001.mp3",
+    "bytes": 223402,
+    "sha256": "5d692bad0c12e3a3b0eb251cbd095ca1c19fc508bc0f4768cb4fc92b57b32ef2"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/084/001.mp3",
+    "bytes": 321390,
+    "sha256": "f67cceba162f3347e7ef1e3b4c5159e3a9cc9309f0dd920ab4b8ba7541398ea1"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/084/001.mp3",
+    "bytes": 451174,
+    "sha256": "827689134bc621a83a5440a56dc6e706dd6802a493a0ef5ad3358fbeda34a29d"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/085/001.mp3",
+    "bytes": 271854,
+    "sha256": "217f762d76a2b6425bb1e6d14047e3e8db9e584b5ac5bfc1eb13738c2ebd7c43"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/085/001.mp3",
+    "bytes": 240095,
+    "sha256": "b22325c1ac580ff523193f40d05a016c1c3dcc0fd6e0a610d34c7caf07332338"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/085/001.mp3",
+    "bytes": 201585,
+    "sha256": "bb659fb14b34e98c217cf9b0f0468b75dc71e352a75edd346bc9f2f1137b5501"
+  },
+  {
+    "url": "/audio/adhkar/walid-abu-ziyad/085/001.mp3",
+    "bytes": 164431,
+    "sha256": "a5274e9ca5b3f611ebfc174b53130b29fdca9fc3c59c6dce9c61bc48e1421750"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/085/001.mp3",
+    "bytes": 266883,
+    "sha256": "4abf1b62ce942ece376d7c4de9b38281b379df0b94fba57da4bceea53510930f"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/086/001.mp3",
+    "bytes": 210414,
+    "sha256": "cbcc7560dda4fc4948295b6fb808a5d676efc6e3075f40460b04b71e7b97e898"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/086/001.mp3",
+    "bytes": 145664,
+    "sha256": "074fd64ad0c12a399f91810ad7f37dd3631948748bd8c05c02ebe729ea3e9ac0"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/087/001.mp3",
+    "bytes": 225198,
+    "sha256": "311bedae04ac625b7b5d45ec0c59343477fa319279abc93f3785438524bbf3e9"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/087/001.mp3",
+    "bytes": 174503,
+    "sha256": "88844d90da19160031db708826f6384d69989a37b16f035156eb0feb7698169a"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/088/001.mp3",
+    "bytes": 284910,
+    "sha256": "698ba3247eda4331eb6e9778153e161273362b4cb134654bf17e6b27cd536be1"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/088/001.mp3",
+    "bytes": 377629,
+    "sha256": "d9ee5f6fa7821633fbc1ccef5baf59fa335d4b583dfd9654524b8834de24079d"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/089/001.mp3",
+    "bytes": 232302,
+    "sha256": "5a155838b8c4c3b65705c84525ebd613bae81bb3ea43dab24a36fb232e99cc48"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/089/001.mp3",
+    "bytes": 191649,
+    "sha256": "c5b7abf4b6d5582351b7b8ad92f83d075437c2d78caafed74645d31d6cb0cba3"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/089/001.mp3",
+    "bytes": 172417,
+    "sha256": "2452d5c403daa33ef89e70764f921a85de787153d275729e6c0345b97c932424"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/090/001.mp3",
+    "bytes": 226158,
+    "sha256": "23d10f1af4f395f179a7440375cc050fc2bf1516a4f1a1defaa997179ae5f2f8"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/090/001.mp3",
+    "bytes": 189964,
+    "sha256": "f7a4091e124d68bc71f2e6c80316c7f3e81fcb58c65711ae5154ca6e184bf1ac"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/091/001.mp3",
+    "bytes": 266286,
+    "sha256": "1dd4562a460fe98cfc56016813c19e3208fe5112d0a4d67d3920b295be45b432"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/091/001.mp3",
+    "bytes": 240959,
+    "sha256": "a5a07fdff01dbff1d375fdf62a079c4654547b0d971c0b9681392015de21b296"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/092/001.mp3",
+    "bytes": 269166,
+    "sha256": "318b8e6a6ee8eb91f36d9a74e7fc86130427aaef584d088be23587c585b2228e"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/092/001.mp3",
+    "bytes": 262679,
+    "sha256": "ad1d1ac6760cee2c447722721a4c4544b973e74a552f0f7fbffb44e3e0dba61c"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/093/001.mp3",
+    "bytes": 214830,
+    "sha256": "b359ef2ef34222881e9f26d81f1750c9abf3d08f9bf14106bc48274281d93b2e"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/093/001.mp3",
+    "bytes": 166566,
+    "sha256": "e79478449b133aa150be22b9177e501f356222034e405b90b8b2334a5f7b60e0"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/094/001.mp3",
+    "bytes": 272238,
+    "sha256": "8cf2a499dceef7f1b3c9d96dd4f6b0eeb865dd05f3cf57d6b9bbe3ee340e9d1f"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/094/001.mp3",
+    "bytes": 253899,
+    "sha256": "a32cdc51e777e39908fbdc76b7cd9b54ffbb50b07e3f1a5a781691465d6066af"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/095/001.mp3",
+    "bytes": 515502,
+    "sha256": "7c449b12ac105fb7f70cc9a94dcc8e23a9a4f03234ead075c090563be40739f1"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/095/001.mp3",
+    "bytes": 643423,
+    "sha256": "cc0169e71788b2a6cbe61920a8afc3de454f0e32bc264e88e441d947212c1c9d"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/095/001.mp3",
+    "bytes": 413069,
+    "sha256": "6f8ab9e0af1fb77291083491d6bfbe27c0cf916958517a003d976721465badf2"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/096/001.mp3",
+    "bytes": 720558,
+    "sha256": "5bd6796919ee77f40b333cd47eca0355537279ed2554e0af3e51e5aecb361bc9"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/096/001.mp3",
+    "bytes": 1102341,
+    "sha256": "653be617dcf75f84d246ec3c49b8f487f445537551399b5bffb166267f62b95e"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/096/001.mp3",
+    "bytes": 613269,
+    "sha256": "72c2409dc86f7db89be3500fb27496b29c37f053ae4817b920252853f84c9e74"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/096/001.mp3",
+    "bytes": 131521,
+    "sha256": "d451c5398b0d80c9b7f00ec6594e1dee38ead224506752b40e43152c89bec70d"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/097/001.mp3",
+    "bytes": 460590,
+    "sha256": "c134f2b098081d7145ccf0cf47c1e1c33312179348c5e365ff5d8c435e87fe69"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/097/001.mp3",
+    "bytes": 625063,
+    "sha256": "35e2523cbe614a38e666d5fb97b67549baa3bb88822c7ebe762c574342029346"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/097/001.mp3",
+    "bytes": 346032,
+    "sha256": "fa8c343f75f8ffc29d5780ebb233c964fd867b654ea93bdc99eef1158529c05b"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/097/001.mp3",
+    "bytes": 455662,
+    "sha256": "78c9db3252126a06f2824248d43a7489e79dab9c7df0b42dd16a0bdcd8cba657"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/098/001.mp3",
+    "bytes": 350382,
+    "sha256": "8482fb61e248718f1c05f2f225cb0d39c348fc67eef707d92e0c82e2629c0f67"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/098/001.mp3",
+    "bytes": 377191,
+    "sha256": "d172c4b7201607917215a7f1289b1e79b7ee9c10e24a4a1e7796639b8ae8b0b8"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/098/001.mp3",
+    "bytes": 290410,
+    "sha256": "b9e2d215e6487ac714de0d2c3715284f5a36643a4b752933a8607948d027a516"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/098/001.mp3",
+    "bytes": 326115,
+    "sha256": "66eb5c6bb66c481fd023f6c17c93b5a254e8ed64cdb9619d9d465a376ad1ac27"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/099/001.mp3",
+    "bytes": 213486,
+    "sha256": "53b3e35dc0174bb4da8f9de8cd7a1472da929d47793211af1ca113f4dcd656ff"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/099/001.mp3",
+    "bytes": 148166,
+    "sha256": "e34087418217a82821ae33352c4ecae9f8dcba530e5bd64c57269aba4852027f"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/099/001-105.mp3",
+    "bytes": 16785,
+    "sha256": "dff5245ae6c7eaebe1c586592a11a8c273cb4007c84c41f24b14194091eb3b5a"
+  },
+  {
+    "url": "/audio/adhkar/hani-alrifai/099/001-201.mp3",
+    "bytes": 46273,
+    "sha256": "1a600fa586eea6b0c746d499ffa6736d3af3fa08173169122153f1b2eb4ca8a6"
+  },
+  {
+    "url": "/audio/adhkar/idrees-abkar/099/001-202.mp3",
+    "bytes": 17626,
+    "sha256": "282d30b64b4372cd31755d23f5b3a02cd170ca10b56fcd65e2c20c1951c2fc60"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/099/001-101.mp3",
+    "bytes": 13080,
+    "sha256": "9cf17a1e4aec8849a8bbe098b3a05d175fb9dafca4fc59b5482181d484c6dc86"
+  },
+  {
+    "url": "/audio/adhkar/mohamed-jibril/099/001-107.mp3",
+    "bytes": 26781,
+    "sha256": "ef482b5dc6b681ca9d07361a0b823909f6aba6b20f400adb206d0ac30794ec74"
+  },
+  {
+    "url": "/audio/adhkar/nasser-alqatami/099/001-102.mp3",
+    "bytes": 12344,
+    "sha256": "55dc8d033774e3495db2e8645401984a4303c40175d0588a4620768c2675d0ce"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/099/001-386.mp3",
+    "bytes": 23663,
+    "sha256": "fc2d5604616f959c13e85e731529ea7251f0df01dc738b5ee5f72a33e72cbfa5"
+  },
+  {
+    "url": "/audio/adhkar/salman-alotaibi/099/001-203.mp3",
+    "bytes": 17166,
+    "sha256": "04429a867e01c7231f90d613b788a818e3867b47d53616b30a859c1eaf1973d7"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/100/001.mp3",
+    "bytes": 238830,
+    "sha256": "eb143d96d16c61a8a7ee51c9bf1eaac02cee7fea19829fd411dfa6a3754499cf"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/100/001.mp3",
+    "bytes": 192045,
+    "sha256": "8c98c98b16b1668d4efb7ab91e2e78079a7998117e0fa08d4307b33d0eecdd4f"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/100/001.mp3",
+    "bytes": 122612,
+    "sha256": "6938653a3f3972aeb9bb134d4cf476639ac27d0e00aebfcfb96bbf9f4ae5c96f"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/101/001.mp3",
+    "bytes": 330191,
+    "sha256": "1053704d02e641c0bd3b9e1cb3db4408d6bc1133a7a27194905c55b64d1a6a93"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/101/001.mp3",
+    "bytes": 168641,
+    "sha256": "35f39595a25bd4c559d140580d7498fda7e8327e99081fb58061042f31ef5c95"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/101/001-322.mp3",
+    "bytes": 98047,
+    "sha256": "b94eb0e1ce1823bd596550aa62b85951210536a0c10927fd37b5e9d335733027"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/101/002.mp3",
+    "bytes": 315562,
+    "sha256": "72d813817c14b787e0be0e1bfbbb67ee60e085491684c35490f3cd92a5084a14"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/101/002.mp3",
+    "bytes": 192875,
+    "sha256": "f68195523a1fbe9724cf85c3e753397c886ea0bfc45c8c0b197332deba5d5284"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/101/002.mp3",
+    "bytes": 76026,
+    "sha256": "4f048a96f71593ca980009e8e989f3c17a714682a432f461965d2c9ac3228271"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/102/001.mp3",
+    "bytes": 268398,
+    "sha256": "887482396b4d2590571a08db456b0a293a63394227f65e473f17ca4580f535f9"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/102/001.mp3",
+    "bytes": 264374,
+    "sha256": "91b43321ef0fd920679cff67432abfc49688bdd80718d8b98350e1960b27ac8d"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/102/001.mp3",
+    "bytes": 483579,
+    "sha256": "71cdba5277021aa362278194714578dcde1fec2bdea9e12d58fa0db6ba911388"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/103/001.mp3",
+    "bytes": 314862,
+    "sha256": "0584af2c870c707f27e89473aad19295e5cc1258d29292d6f40d6278a94d31f7"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/103/001.mp3",
+    "bytes": 357143,
+    "sha256": "faa8adc8281228e2d60031229f23c13fcc2bb75935c54d80bc841c32a0c3d7b7"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/104/001.mp3",
+    "bytes": 256302,
+    "sha256": "bb8b24a594e87c42410590042b2d009ac2bff302a875ff55d915833ace8be55b"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/104/001.mp3",
+    "bytes": 213811,
+    "sha256": "c5976397f0826b628d7721d0b6ad1e8b78e498b61c10e24d5c1e8ce5acace14f"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/104/001-105.mp3",
+    "bytes": 227356,
+    "sha256": "0194b245f3318d982d05f34d9bc6aba2e47677088b32e2d739d76757c706deee"
+  },
+  {
+    "url": "/audio/adhkar/hani-alrifai/104/001-201.mp3",
+    "bytes": 154426,
+    "sha256": "5ad2ff6f550649604b9ddb1317221be06f73b5fd147beb3572be2151ac81bcf6"
+  },
+  {
+    "url": "/audio/adhkar/idrees-abkar/104/001-202.mp3",
+    "bytes": 72265,
+    "sha256": "6fe9d37b810fa0175d95bbfcc13e99936c11751b07e3626fbdc739e4e73409d3"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/104/001-104.mp3",
+    "bytes": 196439,
+    "sha256": "a264696cfd7c756e0265bc36eeed3614eb428570b66851047cd577d22fc18f95"
+  },
+  {
+    "url": "/audio/adhkar/mohamed-jibril/104/001-108.mp3",
+    "bytes": 235780,
+    "sha256": "1f206ea5acfc64ceaaff0f3575cdbcf0e4c57894b1cc80a48f8970b3138e43bc"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/104/001-386.mp3",
+    "bytes": 119421,
+    "sha256": "68853bd854dc0afaae95120c9a16807b80f6a1d80273662416b6b045600de40e"
+  },
+  {
+    "url": "/audio/adhkar/salman-alotaibi/104/001-203.mp3",
+    "bytes": 62512,
+    "sha256": "c44489d5a439d395916ed157cb7c12fce1b22e785b6b0cfb5a9d5cec7cfa989e"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/105/001.mp3",
+    "bytes": 450990,
+    "sha256": "3afa75c78e9686b47949f5ab35453106e654a8c9d9731a1df5a1cb9cca54bbd0"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/105/001.mp3",
+    "bytes": 548565,
+    "sha256": "ccad27def3778f20d91790c4dd6d82d35aa1fdbbdca65ee9287d233059867a2f"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/105/001.mp3",
+    "bytes": 151353,
+    "sha256": "aef3f8b672fc7703b8e8e08441154028adc44ffb93aa7962b4e4df9904ad1fb7"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/106/001.mp3",
+    "bytes": 369966,
+    "sha256": "1007eb7ab5bc1c3bd8a13106c887e171609570b0d70f8e7a2fe5876e11bac110"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/106/001.mp3",
+    "bytes": 449118,
+    "sha256": "362556ac5c3e5bff7292f8510657753e9eda5ca8726fe8ab6cf73649eeb479f5"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/106/001.mp3",
+    "bytes": 111073,
+    "sha256": "45a18b13835828ca01f061869bce05c98fdf8c56bf5b026f5f471c476db57dc4"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/107/001.mp3",
+    "bytes": 377002,
+    "sha256": "157a1dffa9755e7c8baba123d16e9f1ae5a58499dd61e1870554215951355e48"
+  },
+  {
+    "url": "/audio/adhkar/nasser-alqatami/107/001-102.mp3",
+    "bytes": 57493,
+    "sha256": "bba3949fc9ac0627712c2bad134fab0ab346a723b989adeeb7e3a99f12a12cd6"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/107/002.mp3",
+    "bytes": 375331,
+    "sha256": "c668a17db6634fd4ee90ad49936ed328f44ab67cec104a2d40a0ee9b5a9e56d1"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/107/003.mp3",
+    "bytes": 302606,
+    "sha256": "27d19f9b86d12c7fc91c098a0f5db17a381ca38d8da8ee0d4a16cb6e31e233ea"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/107/003.mp3",
+    "bytes": 207335,
+    "sha256": "939b029db5ccf621c29dfe4f286c65772f9874f158f6fc418803bffec3f49534"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/107/004.mp3",
+    "bytes": 364046,
+    "sha256": "f252850cfda00d18b826f78e42adbbae888372b19835d498d4a8634148a25e74"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/107/004.mp3",
+    "bytes": 288632,
+    "sha256": "877f5d190afa748aa4bb3a7737c3b46f8bddf7966098b8a2f21fa22ff731f064"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/107/005.mp3",
+    "bytes": 400826,
+    "sha256": "ef5e9a66fe91c85c6ed72942bc9cb60390c29a87d70e27f680f5a331ddd13cab"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/107/005.mp3",
+    "bytes": 312133,
+    "sha256": "f66f6c67c0bfd7c475295746e3fe6c4a3cbf6f64e249c95bdd3c5b9c782a861c"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/108/001.mp3",
+    "bytes": 553381,
+    "sha256": "62e01db1ebf0697680f30c3e38e15f14d66fcd90a5ff6ce2babc6539ffc7ed21"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/108/001.mp3",
+    "bytes": 459049,
+    "sha256": "259d7953bb3d0f9ea6878cecdd3458360423a4625a48781b7c029b32f960390a"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/108/002.mp3",
+    "bytes": 407096,
+    "sha256": "0241cb451fbd388c84f19f2e97f51a0788561343fd50a3ce06c6964ebca5711a"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/108/002.mp3",
+    "bytes": 294069,
+    "sha256": "25e8111d36f5dde47ca26a1e07016223eeab80979dd21fdb2ff2cc78a3b60d72"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/108/003.mp3",
+    "bytes": 647422,
+    "sha256": "4adadbe9f1d3152403dd2215fc5bc225c33144d3338a621321fa0b54eee829fd"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/108/003.mp3",
+    "bytes": 182248,
+    "sha256": "3e9ded44ebfd2f25565ef1e011b7c8e13cd329fb176bcbe9f510a7062a474225"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/109/001.mp3",
+    "bytes": 238638,
+    "sha256": "f0cee5c3caaadd72116ce6a58da063e20883f9a38b9093e9574608ae60f78af6"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/109/001.mp3",
+    "bytes": 220913,
+    "sha256": "6e82496e83822b96b415cb3a78d0b83595edf258fdd2e0dd6bf1a26dbbc7c717"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/110/001.mp3",
+    "bytes": 345966,
+    "sha256": "da3516f47a9869624cfffbaa1f4388aac34acf759a5d9e48c0463a90cd0bc423"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/110/001.mp3",
+    "bytes": 451616,
+    "sha256": "0932505602dd52d1b3e41aa75d628d456fe2721dd5436109eff9e98c4bf563d2"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/111/001.mp3",
+    "bytes": 299502,
+    "sha256": "158131dfd5b60bbc755ff09eaab64d304237a9ea1073cd2ab87d777593ac8152"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/111/001.mp3",
+    "bytes": 328308,
+    "sha256": "d8c6d57fee821baea8da52b05d757db217a5f66d3f8e61f0285bdda6eb17e9ad"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/112/001.mp3",
+    "bytes": 292014,
+    "sha256": "c56ff1dca5223690d2abee38556c85864aef2bacf4e1d465b5f4aadbf80cff2b"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/112/001.mp3",
+    "bytes": 316591,
+    "sha256": "cfb115b2fd7fcb0333bcd96f033b085d90dad5402f0c32c35b94ca92a8956f1e"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/113/001.mp3",
+    "bytes": 400494,
+    "sha256": "a1edd33b6efd084be4a8ba73f851f1fc5cf2f999dd2c9df6de173875c1d93439"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/113/001.mp3",
+    "bytes": 465411,
+    "sha256": "5075264d07bb788b1623854619c3ade1904446880361cd201ecca975f8c01486"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/114/001.mp3",
+    "bytes": 305454,
+    "sha256": "c7b1bbe21cb7bb89ab2042286c6b569c8e31459492a3f6a509c0d8476c898700"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/114/001.mp3",
+    "bytes": 308662,
+    "sha256": "58aea498e66496d2e01155bd6243bc1f81b23825dd0af2f41514013ac067ba6e"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/114/001.mp3",
+    "bytes": 183016,
+    "sha256": "e1715fcee141ed44eccd2aab00ee4f8494260622de0ccd4d18c948a0fa459a2c"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/115/001.mp3",
+    "bytes": 332526,
+    "sha256": "4d838e3d7322825769125df588fe50bfae388b860d95656b5e34ffdea7795e33"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/115/001.mp3",
+    "bytes": 306598,
+    "sha256": "35efb09f68906767d2517bc3acefd6c1e1c52da967bca12ed15ae4598a8b79c8"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/115/001.mp3",
+    "bytes": 264390,
+    "sha256": "d93971b6a1123dc016051d84a33b46666f27744c108969eeca8be31e4603be46"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/116/001.mp3",
+    "bytes": 266670,
+    "sha256": "58bdce12b3a4f738a90d976a773c169c0fce9a08d6cffc78202432c1c51337ed"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/116/001.mp3",
+    "bytes": 314107,
+    "sha256": "11105ad44462d71370fe38cd317909f01a9e1d73b44e37f049bd1868e89ef1ca"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/117/001.mp3",
+    "bytes": 287982,
+    "sha256": "77a81b061f1e2373de6d5d33336de8b72187b041c960a76a2e28d398adc22766"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/117/001.mp3",
+    "bytes": 279437,
+    "sha256": "e3f4f61907cef1617eaa766d14a247822070e934acd4ea81ed734de20832bc1f"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/117/001.mp3",
+    "bytes": 192451,
+    "sha256": "a94e64d85a833f56df411d310e09d8dac13c764d57bce397a79ce1d3c60e23f5"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/118/001.mp3",
+    "bytes": 692142,
+    "sha256": "438abbd57bb62017f1383929c168242d779b4ce75b8315cba7eee066946f60f0"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/118/001.mp3",
+    "bytes": 1102381,
+    "sha256": "144ed15f09a9bc1ab686d04a45d7b449e2881141f2b627f0dffb8249f3b7c3b4"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/118/001.mp3",
+    "bytes": 320801,
+    "sha256": "98c6040c42823d96caee732e0e9760bbbdb5876a25f20b0a65b0b468c39ba1a2"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/119/001.mp3",
+    "bytes": 337710,
+    "sha256": "cde60a47d19127af7d6f7b40cf7308d2418cf11a22a61f89f500c6e85a38c929"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/119/001.mp3",
+    "bytes": 421079,
+    "sha256": "eebd17afc68e164fa77a94c0ba421921d7d2a288707207a732d2b0922b8de0f8"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/119/001.mp3",
+    "bytes": 313319,
+    "sha256": "324947e7f1b68dbe7094de966981661c98bef489f23fecf8f4344dec666cbcb0"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/120/001.mp3",
+    "bytes": 354414,
+    "sha256": "f5a81a7ddf0d55e577e7b23aa1f64c0fc86b2690d25cca9c7b39f702e903f909"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/120/001.mp3",
+    "bytes": 459547,
+    "sha256": "40074b3671c07941a3eff081d786cc62e93d9a8398a7c425838c83bf6eb81e5e"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/120/001.mp3",
+    "bytes": 301577,
+    "sha256": "ad0bf44f58bf4882b04f5f718816ce92f05e181eba4c4360da403b1a86ce95e4"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/121/001.mp3",
+    "bytes": 400494,
+    "sha256": "548208076192dee7b0d7496e96fa1cd8070ca60a469ed1c328dfbf92642bfee4"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/121/001.mp3",
+    "bytes": 574924,
+    "sha256": "d3186f0ba4aabd849d7fc86c0cbe2620adb662161b68c4df22a199cb774602d5"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/122/001.mp3",
+    "bytes": 260810,
+    "sha256": "3dcc789d9867c08d34d639cbb873aaa09a8cc7dbae9c7443a5a4a01b1d3e3d1b"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/122/001.mp3",
+    "bytes": 45004,
+    "sha256": "0645ce0af6dd0d4efe63a64d66bc110002366a8e2d6fdfaa65d3fcec72bef619"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/122/001-105.mp3",
+    "bytes": 30855,
+    "sha256": "1052045976366529662d607a33fd011f2345092311c221c7d9ec256d60376431"
+  },
+  {
+    "url": "/audio/adhkar/hani-alrifai/122/001-201.mp3",
+    "bytes": 39559,
+    "sha256": "db57c954a603015a24a9e30e334d2cb41a65731d57d6cbfb334d46d4af651453"
+  },
+  {
+    "url": "/audio/adhkar/idrees-abkar/122/001-202.mp3",
+    "bytes": 21854,
+    "sha256": "c0fca45c5a4889b65049a067228ec681cb47b9c3005722467a4bbd119f6a74fd"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/122/001-101.mp3",
+    "bytes": 40791,
+    "sha256": "935169ae513169bf413154c5516639d223b188ff968f44f1e3ba49eb59f093d5"
+  },
+  {
+    "url": "/audio/adhkar/mohamed-jibril/122/001-107.mp3",
+    "bytes": 23047,
+    "sha256": "d56080fd2e02f02f3f2dcd18946019d29da1ef1d7420102d4cfd194466ffd9fa"
+  },
+  {
+    "url": "/audio/adhkar/nasser-alqatami/122/001-102.mp3",
+    "bytes": 18515,
+    "sha256": "a6d3dc7375647f115e218aae76c1ad4c6a80fe460d86d540fb5b70af702d7d85"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/122/001-384.mp3",
+    "bytes": 37849,
+    "sha256": "5471970db8b08fd99a191aea7561284e492ef240f92143af4398bf2b41cf1132"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/122/002.mp3",
+    "bytes": 181816,
+    "sha256": "7028ce95bbc76291848d384c8326f749dc3354205a5c0a14d226cebbbd345310"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/122/002.mp3",
+    "bytes": 49063,
+    "sha256": "37e97d479e97c9752a3acfa2bee45288bd48767042e0bf6bbcd84f7f60d9adcb"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/123/001.mp3",
+    "bytes": 285870,
+    "sha256": "146e7c1db422057373d2f1194ffdfe8538ad72f8967b19fe2430d748d05e632d"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/123/001.mp3",
+    "bytes": 352134,
+    "sha256": "833c819b2bc8823d67a8f6e047411ec110d79cc61737c5740e141244145a7b6a"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/124/001.mp3",
+    "bytes": 317934,
+    "sha256": "236311f4855ecc517e4bcc5a1f16785197b77071c5e199719896ab2ac7fc0b56"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/124/001.mp3",
+    "bytes": 403131,
+    "sha256": "aab4ad01fd15235d37d307638a1d388cd3c69b70c12c8d2f5dc6b53ad0647ecd"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/124/001.mp3",
+    "bytes": 264084,
+    "sha256": "99a52969877a8b3b9ec1d12f27d0f812db3bff07146d5b331271b47b9680ce8d"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/125/001.mp3",
+    "bytes": 295662,
+    "sha256": "25643972637dcab9347015b5f91b34a9731bebf1fb32feeb7d37f032e12ba2ba"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/125/001.mp3",
+    "bytes": 332920,
+    "sha256": "89034eb8fa5362bbfb371f557618a3fedadd8301ab2129344489728dd33ac0b6"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/125/001.mp3",
+    "bytes": 327300,
+    "sha256": "8a3fec71136406d23bbc382515f402e9aa991a708cc7324df4c68fddad17cd57"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/126/001.mp3",
+    "bytes": 217518,
+    "sha256": "de7bc0503995c6c1543d2c70cf1a1af9a44f9ebe817483ea1d1bef965073af45"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/126/001.mp3",
+    "bytes": 148574,
+    "sha256": "ac055a678a8d62014efb5d90ca6ad56550661f8d391af584557017821c51a065"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/126/001-105.mp3",
+    "bytes": 31034,
+    "sha256": "a8fc6919afdb98bc055116854bedd0505ca3369d20e7e1b4a72516c8dc4064b4"
+  },
+  {
+    "url": "/audio/adhkar/hani-alrifai/126/001-201.mp3",
+    "bytes": 87247,
+    "sha256": "86ad0f57121e01d25a3dbb4eaa205d386b31c515528d455f5b99e730e1c0999d"
+  },
+  {
+    "url": "/audio/adhkar/idrees-abkar/126/001-202.mp3",
+    "bytes": 35061,
+    "sha256": "d40be589193c45e8ec4bbca38e737092b6bfc89db4a25e4fbaec796a7c3fd5f6"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/126/001-101.mp3",
+    "bytes": 52486,
+    "sha256": "53a34af66ca7a6e81171daf20588c5cd75f1b9f04ca1488047c0b8ff6622b5cd"
+  },
+  {
+    "url": "/audio/adhkar/mohamed-jibril/126/001-107.mp3",
+    "bytes": 45740,
+    "sha256": "7d43765fbc14cc4459af99dd6a74ea6b08a3c485f311876dc31b9dde818a4376"
+  },
+  {
+    "url": "/audio/adhkar/nasser-alqatami/126/001-102.mp3",
+    "bytes": 43914,
+    "sha256": "9ba75c1d4d39c7532cd1537b6bdea9ff4416b5d020411441417d15c984cd53b1"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/126/001-386.mp3",
+    "bytes": 60379,
+    "sha256": "dc235f59802df52fee1d5983a966eb683182e522897a0d9d996a36cadee1c546"
+  },
+  {
+    "url": "/audio/adhkar/salman-alotaibi/126/001-203.mp3",
+    "bytes": 44091,
+    "sha256": "ffc86904346f04b40f7008bd8090f769e9a765a54e45dc11c43db00f05071f06"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/127/001.mp3",
+    "bytes": 261870,
+    "sha256": "e2cf1547d2423b9bcd9fdee3938999561b28a1787bf0a33f4661ad1b72e1c5eb"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/127/001.mp3",
+    "bytes": 258097,
+    "sha256": "ce88123c2cf712e09a9e25e0584f055e62db300910c9042743a5233c2752e7cd"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/127/001.mp3",
+    "bytes": 143531,
+    "sha256": "0c7c61f06f7b0dd7fb5af555c6d0bc54c8b76689066cab0bdfdef4ea6bf8ca9a"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/128/001.mp3",
+    "bytes": 502254,
+    "sha256": "a902a2928fbe079ad833edbf663858b40067f0b1795be74702c84ce053184466"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/128/001.mp3",
+    "bytes": 783896,
+    "sha256": "ef68157aabcba39c39afe81974bf5a31454333011f3d7c7fc7f2f27bc3416c3c"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/128/001.mp3",
+    "bytes": 472474,
+    "sha256": "a972dffcfde595b5771762965108aba4c4e7412d3577d16ca9958cb641fcb3a4"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/129/001.mp3",
+    "bytes": 406678,
+    "sha256": "24160dfbc37aacb752572bc58cdf300cb0cf812a4b59ea5a4fb813aa8ebd5a3c"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/129/001.mp3",
+    "bytes": 313721,
+    "sha256": "7a7999d8de401cbe53964645fb30406011196e015cc504f58288aef06b6add2b"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/129/002.mp3",
+    "bytes": 364464,
+    "sha256": "1be07ae4679d50f8f4aa5f246ae3e9e6d2b9173a149caee973848d81062c90bd"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/129/003.mp3",
+    "bytes": 422978,
+    "sha256": "9bd830ff20130a3548c07aba7a486f5780bd5e7dcd2803257ba1ce5b3b9529f3"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/129/003.mp3",
+    "bytes": 434628,
+    "sha256": "8428a1bbac8c313fdf52274725be65ea3e3e433e624944d517a10fbdefc5e9ec"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/129/004.mp3",
+    "bytes": 406678,
+    "sha256": "28757a0927f684081e046954c3b796c720a73d32daac16af12abcf5f2fb9a489"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/129/004.mp3",
+    "bytes": 310104,
+    "sha256": "cca0b4d9f7cac8a624c3591d34aeceb15c970c1eba02d2de17759aa4b612bf8b"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/129/005.mp3",
+    "bytes": 327265,
+    "sha256": "5441fc074fc43c969030430640652218cf4bf194a87aeb87a2ccabd86d3d6e96"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/129/005.mp3",
+    "bytes": 170113,
+    "sha256": "44f816840935738df73da2391ddf4900acc7f4db50f41267d945bacf8e967d47"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/129/006.mp3",
+    "bytes": 344820,
+    "sha256": "788b3edfd775aa9da68ead1806549eb7d7ce235a6719c50d7cfddfd63332b5c1"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/130/001.mp3",
+    "bytes": 470207,
+    "sha256": "fdb0b3f13349f225408a7470a17cb7e2704d4b560fac6c7f72accfb747212a77"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/130/002.mp3",
+    "bytes": 501972,
+    "sha256": "d81019ebe94ef30dfcf797ef9fda6e3ae8cd7416123eb7c099cfb09d1028b41f"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/130/002.mp3",
+    "bytes": 457279,
+    "sha256": "d8e98cde4dccaf7dc569e29d4b617ec47816c133d2081446e7faa6adbbbb9d6f"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/130/003.mp3",
+    "bytes": 454325,
+    "sha256": "0ea572848cf086bf2f08d2cc7a1512cc8c512e9b7baaff389f9b61a74a19978e"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/130/003.mp3",
+    "bytes": 380255,
+    "sha256": "ef04730700b8bb7fc532232b5529e5b5825b85a4032daee144419fd15563a182"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/130/004.mp3",
+    "bytes": 422560,
+    "sha256": "742b7d89090aa9bdefe55fe65824016eef963325604e83e00280068bd049fcac"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/130/004.mp3",
+    "bytes": 356730,
+    "sha256": "b76a3a7adf2205773761748261d80176ce44bcb0528290cd919488ab8ae135a9"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/130/005.mp3",
+    "bytes": 581802,
+    "sha256": "8918912660e9de7d5bd8ffb15729870fe743b8a6ec79e9ff832580c984792d6b"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/130/006.mp3",
+    "bytes": 326847,
+    "sha256": "5fbc6bee47e8079c4eca2b854a80457cbe36e8cf83f9361b49d11588bee33a4a"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/130/006.mp3",
+    "bytes": 172205,
+    "sha256": "26f53f40c7e917d0c2faa513e1acd2dbc4fd596537f2f52bb6ab7afc94dec18f"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/130/007.mp3",
+    "bytes": 486090,
+    "sha256": "2cf929dd048c7d47eb007663e21d624aa156d6b32348a8053331255d62c848ed"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/130/007.mp3",
+    "bytes": 418660,
+    "sha256": "7b55f28542434af1025189bf6f43a4954fb6f1aa1dae56509251482f5aa49f6b"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/130/008.mp3",
+    "bytes": 470207,
+    "sha256": "5fdf5a3c3653abe2f2d87dd2b8791729bdbb58558ee89f7a7acd79f3ed81d8f5"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/130/009.mp3",
+    "bytes": 916588,
+    "sha256": "d1ab2260c77b76d6b28a90f103feb787a20c8fda16a9fddc667617fc179c16ab"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/130/010.mp3",
+    "bytes": 454325,
+    "sha256": "68cb8b05c1830328623933f7ba6aaebf11ac17bf9f4a6f5e71263846540faf1d"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/130/010.mp3",
+    "bytes": 459688,
+    "sha256": "b8a6e57d94081ce742b6d4a8e0be4d72587fbd4e77a6aaa94c5aae65cea752c8"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/130/011.mp3",
+    "bytes": 310965,
+    "sha256": "6330fd7d1f1c90200a4f5fcbfa149e8d14be3879146283c231e2ff55271c7dd0"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/130/011.mp3",
+    "bytes": 164591,
+    "sha256": "c2fadbc9d1ed688f3652057739de85710455ae19de32d91c773e7e48fa49fc4c"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/130/012.mp3",
+    "bytes": 436771,
+    "sha256": "9322ec53a6db44fbcbac7cf285a8355ee9d73d4b6c864faa03d51845c21a3a32"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/130/012.mp3",
+    "bytes": 334592,
+    "sha256": "9dcc6ab60a7a5f4500a9f921436e8f6e4eae3b2a6aa6b61e094524ae11d219ba"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/131/001.mp3",
+    "bytes": 287598,
+    "sha256": "207a4e485c35161d506ff791f0144a08d5213bd564f9e518f1c7c82b09ad478a"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/131/001.mp3",
+    "bytes": 298207,
+    "sha256": "d4516440059c3e8ab3cdee95b9508020e668d45e498b03bf0083f12c704c219d"
+  },
+  {
+    "url": "/audio/adhkar/hamad-al-drehem/132/001.mp3",
+    "bytes": 995164,
+    "sha256": "0e9b4f82e51e3a4d05910d5e1c3ed2f66170ad7dcf9c6c34a9e2064f2c31b7f5"
+  },
+  {
+    "url": "/audio/adhkar/sulaiman-al-shuhayhi/132/001.mp3",
+    "bytes": 1002908,
+    "sha256": "14ef941f6f1e7722ac13e6431906ef1c1d136bd0bea0014cc5e063ea4e80a3d9"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/sections/101.mp3",
+    "bytes": 1064336,
+    "sha256": "9d7e47d0ecf10847d17837a758d6ec5f2e967b0fefe6a3ff0e365a3280e60b75"
+  },
+  {
+    "url": "/audio/adhkar/nasser-alqatami/sections/102.mp3",
+    "bytes": 2836306,
+    "sha256": "43d38a9a887a2a13c015e3af92e10acb41526251869fdb7f7d8790404cfb56a6"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/sections/103.mp3",
+    "bytes": 10128199,
+    "sha256": "fa62b6739b9f907c378378aeab1ec3c554b530970122dc0a01e5074f7d982795"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/sections/104.mp3",
+    "bytes": 10063624,
+    "sha256": "9e09e93e5e15099f70937aaa124da55f3053a25e68139ab89cdde0e999fb3ec5"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/sections/105.mp3",
+    "bytes": 9873243,
+    "sha256": "2efd563bf5fe3367a1638404253c70c2abef5e5b0d3c9d8fc3a0cfc954531579"
+  },
+  {
+    "url": "/audio/adhkar/faris-abbad/sections/106.mp3",
+    "bytes": 9830403,
+    "sha256": "0d13c4744325e0fc5ab7a2c35ea0d65fe8b794dfb21ae01f6449be8471b819d0"
+  },
+  {
+    "url": "/audio/adhkar/mohamed-jibril/sections/107.mp3",
+    "bytes": 10473433,
+    "sha256": "c5a65e4fc6c29218f86611e000990174d23f4af7e82fe80a52de42b4d04d65b2"
+  },
+  {
+    "url": "/audio/adhkar/mohamed-jibril/sections/108.mp3",
+    "bytes": 10782096,
+    "sha256": "97ad392361f73451449f861ea9a6eb57fa91052651af1d695919ae2dce36dcd6"
+  },
+  {
+    "url": "/audio/adhkar/mishary-alafasy/sections/111.mp3",
+    "bytes": 5081759,
+    "sha256": "e5ca82e5cfdd86fc241ff39c20bbe5fa291644ecff30a92cf3dd8f19c38a8c1a"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/301.mp3",
+    "bytes": 177635,
+    "sha256": "ee99e4af33219cc5eb03f4ab823d9ce3078c253b22ea465eb29baa8e1450a65e"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/310.mp3",
+    "bytes": 1172219,
+    "sha256": "20f342f206bdc0d4cfe2e3df85aaffa3c7684ff71def27ea32c47d3d4ec6a892"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/311.mp3",
+    "bytes": 166998,
+    "sha256": "735350eacb94abd74245ac24b9f82d85d9adcf1faffea8b9dc36f8d29bfb5af6"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/312.mp3",
+    "bytes": 284745,
+    "sha256": "9a972758b92ce537734d68c88e7e964b462a0b099f5f093f44097009d782d8ae"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/313.mp3",
+    "bytes": 2604580,
+    "sha256": "56227fe0cc5551e6609f69fd0a76f5ca6d7efabded51ec6e751b2037160879e0"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/314.mp3",
+    "bytes": 172417,
+    "sha256": "2452d5c403daa33ef89e70764f921a85de787153d275729e6c0345b97c932424"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/315.mp3",
+    "bytes": 722597,
+    "sha256": "b40a80b7672781dca44af92b6cb6116ae91054a77d30874ea1672ea6613a7b8a"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/316.mp3",
+    "bytes": 358317,
+    "sha256": "53d79c1461d1c41fed6e24deea80762930834c1d1f8470272818ceef2a4bb02e"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/317.mp3",
+    "bytes": 264084,
+    "sha256": "99a52969877a8b3b9ec1d12f27d0f812db3bff07146d5b331271b47b9680ce8d"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/318.mp3",
+    "bytes": 483579,
+    "sha256": "71cdba5277021aa362278194714578dcde1fec2bdea9e12d58fa0db6ba911388"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/319.mp3",
+    "bytes": 385208,
+    "sha256": "4d9655818ca1bfbf09853b3f4be14fe1763932103298ca2a7d90efac5b846a31"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/302.mp3",
+    "bytes": 292676,
+    "sha256": "9082fbd5c9c634eaefeefb5c327612c5c2e101f86f9d4116dadc364278bc0715"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/320.mp3",
+    "bytes": 219879,
+    "sha256": "6d8d2f8a9b75a95134e132c1583de1e7add8b760605efc2f266e0dd7f68c8a2d"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/321.mp3",
+    "bytes": 132003,
+    "sha256": "fb99b4c5cfc3817a0bc92a1240edcb5fde083b2532196ab16768441b9aebf0e0"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/322.mp3",
+    "bytes": 139351,
+    "sha256": "5532faa25cb465c8892b7a6ab2968c36fc7a4e43689de986dbe5325c6918c1e4"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/323.mp3",
+    "bytes": 310110,
+    "sha256": "15fab9645e57abc4a4a130d23390b4b0faecc759d6d28d0766802aadde1c74d4"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/324.mp3",
+    "bytes": 239022,
+    "sha256": "27264b332109b633ce8446e2fddc4131457b9e50994db662f5ded74337d6fb64"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/325.mp3",
+    "bytes": 401146,
+    "sha256": "34f2bd3f52ec90646044486d2442051109849c21771cee82f94e439a447c82b9"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/326.mp3",
+    "bytes": 165346,
+    "sha256": "dfbb0e83a8df91cca47f141cfd773f7eec2bfa1ff33d71327e84b0bd80f9231b"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/327.mp3",
+    "bytes": 190137,
+    "sha256": "bbe82dd0789a382392997178ac6ac7cad62a0fc98c9d56a710e2f3daac5f6c49"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/328.mp3",
+    "bytes": 179869,
+    "sha256": "fd0db5e22e7cc6ea3912996b82bb8de60d72788073dc87a82667de4d01496fc6"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/329.mp3",
+    "bytes": 223402,
+    "sha256": "5d692bad0c12e3a3b0eb251cbd095ca1c19fc508bc0f4768cb4fc92b57b32ef2"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/303.mp3",
+    "bytes": 200009,
+    "sha256": "f6e99edc050435daa1629869db052eb3ab80b909cce670861cd050647fb068c5"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/330.mp3",
+    "bytes": 111073,
+    "sha256": "45a18b13835828ca01f061869bce05c98fdf8c56bf5b026f5f471c476db57dc4"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/331.mp3",
+    "bytes": 137945,
+    "sha256": "71d06dd255cb008d40f8e3e0cef65a3ad381c465b6f6f7dc4db879c59931303e"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/332.mp3",
+    "bytes": 131521,
+    "sha256": "d451c5398b0d80c9b7f00ec6594e1dee38ead224506752b40e43152c89bec70d"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/333.mp3",
+    "bytes": 416125,
+    "sha256": "7c327000be0d57a0f3f2b9a6d140a9852a683340608f20674853168955d061b7"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/334.mp3",
+    "bytes": 327300,
+    "sha256": "8a3fec71136406d23bbc382515f402e9aa991a708cc7324df4c68fddad17cd57"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/335.mp3",
+    "bytes": 198613,
+    "sha256": "6c83ab85169c4ee194c018a6acb349e38f7e9758a04ab81f94cde702d0b72eba"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/336.mp3",
+    "bytes": 310269,
+    "sha256": "4b5dea836755dbe3097505828588daaada95e718b3b57c5b89e76d15f13036e5"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/337.mp3",
+    "bytes": 264390,
+    "sha256": "d93971b6a1123dc016051d84a33b46666f27744c108969eeca8be31e4603be46"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/338.mp3",
+    "bytes": 266883,
+    "sha256": "4abf1b62ce942ece376d7c4de9b38281b379df0b94fba57da4bceea53510930f"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/339.mp3",
+    "bytes": 878163,
+    "sha256": "573a41e356fc28a1a0185509a45266780c09c2d3a897a0b092456d44d21e6bc8"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/304.mp3",
+    "bytes": 400671,
+    "sha256": "00b32ee53d91653bfae192132f4b065220ef9a54964d22a204fdaab5fa9c5266"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/340.mp3",
+    "bytes": 1729147,
+    "sha256": "873fb14e4cc896da35ab7e2b4e0fd4d0ca87766b0fa57799ecfd71ac5a7719af"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/341.mp3",
+    "bytes": 209853,
+    "sha256": "3b17341100f2e1afcf84b10d2db5528b63dd9e29755a266a623cc83ac66d593f"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/342.mp3",
+    "bytes": 732640,
+    "sha256": "fcb20ffbd8688ead9bba67eb75416ea735a47751b7c59189d44c373538315aae"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/343.mp3",
+    "bytes": 1067566,
+    "sha256": "c71803acea70b1a64c55d6c090ebc261c8f294bb01b92bb0125e993fd7a8cca7"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/344.mp3",
+    "bytes": 936861,
+    "sha256": "0812f4652e4ac80a2059395dd07535885ad8188dfbc8035696d62284f30b526c"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/345.mp3",
+    "bytes": 242054,
+    "sha256": "ea1847cc1a78487a8a96388850a56f34ae55b4ac245065f79b4d3c8084b996d9"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/346.mp3",
+    "bytes": 326115,
+    "sha256": "66eb5c6bb66c481fd023f6c17c93b5a254e8ed64cdb9619d9d465a376ad1ac27"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/347.mp3",
+    "bytes": 320801,
+    "sha256": "98c6040c42823d96caee732e0e9760bbbdb5876a25f20b0a65b0b468c39ba1a2"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/348.mp3",
+    "bytes": 416723,
+    "sha256": "f2b959439eaad4ed962d7e158450345f70abb103e57822fc3bdf2a2e52e1783d"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/349.mp3",
+    "bytes": 249307,
+    "sha256": "c5207f308265beb2fa2e6c77b1fc8b1173d212dfcbcd1187b57852ce22d7e705"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/305.mp3",
+    "bytes": 458238,
+    "sha256": "7cefe581afcac86d978f045d4e160bc305e8a7fdcab09424203cdabf9a3e60b2"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/350.mp3",
+    "bytes": 1245763,
+    "sha256": "77966c39e4e1f91ad6c2187f40b65b2f6a6df8bf16e619db2840870aee2a3d9a"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/351.mp3",
+    "bytes": 151353,
+    "sha256": "aef3f8b672fc7703b8e8e08441154028adc44ffb93aa7962b4e4df9904ad1fb7"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/352.mp3",
+    "bytes": 131926,
+    "sha256": "096b943737dfede72072168986c659eb2eeb755d8a5752dde1fdbb88c798c49c"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/353.mp3",
+    "bytes": 848460,
+    "sha256": "9f2fe46587dd0171a9d6c9671d67d398371fe563dc1beaa6511225d9d6ccc34b"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/354.mp3",
+    "bytes": 834267,
+    "sha256": "38668706704369c7e584e2a480f5ac17db1cc5f3759c4ec0bd2dd7a1e2952ef3"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/355.mp3",
+    "bytes": 296954,
+    "sha256": "121b6cbc4931a464677ce7bc962a7fd88cc2bf4adfb1347020d648015b62de25"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/356.mp3",
+    "bytes": 206586,
+    "sha256": "7f88fb13846c525369a51087e2be5445fae451fbfe3ac403391fd6b0b3d1f225"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/357.mp3",
+    "bytes": 301577,
+    "sha256": "ad0bf44f58bf4882b04f5f718816ce92f05e181eba4c4360da403b1a86ce95e4"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/358.mp3",
+    "bytes": 1431835,
+    "sha256": "c12f12926281c7b4392bbc0234552ee99c2ab80c2639293f3f92e6c0c09cd17a"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/359.mp3",
+    "bytes": 313319,
+    "sha256": "324947e7f1b68dbe7094de966981661c98bef489f23fecf8f4344dec666cbcb0"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/306.mp3",
+    "bytes": 331399,
+    "sha256": "bb092e43dd4472002b88a4ece482d781000eb01056faed2872862f6ef49f5493"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/360.mp3",
+    "bytes": 303695,
+    "sha256": "ee39eddc9b8e15da47ceb74d4fc64f1147c1b4e4af30e4c80c2c3d22637d6d22"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/361.mp3",
+    "bytes": 333116,
+    "sha256": "1b32107634cdf5a3efd8264c79ac7fbda7d92baa0bc8e3f0d1aafe821d339e37"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/362.mp3",
+    "bytes": 192451,
+    "sha256": "a94e64d85a833f56df411d310e09d8dac13c764d57bce397a79ce1d3c60e23f5"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/363.mp3",
+    "bytes": 562053,
+    "sha256": "8d62f211484d184914c8935517aaca03cc338ef65ffb233ab0270f3f23f2f817"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/364.mp3",
+    "bytes": 742850,
+    "sha256": "4c32a37b04427a100164bfe097c5d53d895667701609808ba2241998b9f14e0e"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/365.mp3",
+    "bytes": 139347,
+    "sha256": "eeeb5cbb1ac3f361e544cde54560410acbb889236c442157026ddc3e8b995e37"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/366.mp3",
+    "bytes": 455662,
+    "sha256": "78c9db3252126a06f2824248d43a7489e79dab9c7df0b42dd16a0bdcd8cba657"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/367.mp3",
+    "bytes": 745904,
+    "sha256": "bf66e549cd0aeb4fbc54c636666dd61e680d3f718169c556631b37809734b953"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/368.mp3",
+    "bytes": 245408,
+    "sha256": "bbdb6f58349d244b38d16c803ec1074389f0cc879301f4d06ef21c8493d2c632"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/369.mp3",
+    "bytes": 150721,
+    "sha256": "766beb0c0e60a19b8bea62433f2a757f8a8334234ef1690b30f5a18b12e783d6"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/307.mp3",
+    "bytes": 197917,
+    "sha256": "366ad7446eb37c28b54bc033b1c30ef2f83a5efe21a3ca9dc32da5ae64a8e2d4"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/370.mp3",
+    "bytes": 265781,
+    "sha256": "bf56a6a50b3bfe40b6635500e003e189cfc023e1a1e83f3a7eb904b71c14ae3a"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/371.mp3",
+    "bytes": 223545,
+    "sha256": "dbe99680e22e49781cb8c06f1c8e9240238026b7ca9fe299ae95f07af1d282d7"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/372.mp3",
+    "bytes": 573186,
+    "sha256": "dd48ef2d892f99ac1a4a45251e6f6893ec133df58be0005a79fbd51eb562f1e3"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/373.mp3",
+    "bytes": 276304,
+    "sha256": "24b7eac2f006d6df32c49b698afa4547ccbfd50810b6802d3ad4e5f7e04164ad"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/374.mp3",
+    "bytes": 242331,
+    "sha256": "6031644b72813908ffd0bd981ad6fdea7c618bc78809aac44f98da4d3c7a3d89"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/375.mp3",
+    "bytes": 265928,
+    "sha256": "a1b4dce42b30c54f239034264d6382d0e623bd63819f6436fcee6a1e22462aa6"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/376.mp3",
+    "bytes": 321230,
+    "sha256": "45a6491a70fa2aba6f89591acec536c00680df0637bd18b4c0267f18e2925f24"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/377.mp3",
+    "bytes": 206441,
+    "sha256": "9d4d4dd5c6a73c0851947f1193b12c61c8d2eedfb378de8b6f654e6903eda297"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/378.mp3",
+    "bytes": 483220,
+    "sha256": "a0b9eb079fba6e531df67e0723dbc8fd76a56dde3e92b02fc7a6b27500744e92"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/379.mp3",
+    "bytes": 1260223,
+    "sha256": "9f56208e3b6e88fd9d5f689472d73996692a21ca90011575664cc3263e5000f8"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/308.mp3",
+    "bytes": 1041590,
+    "sha256": "0ece617f5bf019378f30afcc46a86ce8f80607f3833da98b7fe54c40d2b47eb6"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/380.mp3",
+    "bytes": 662959,
+    "sha256": "8da022a6746a621fb2ef9dcb4432b485faae6cb23bfaea948ca05b372f2d4561"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/381.mp3",
+    "bytes": 510341,
+    "sha256": "b5954c8b9339dbaf60ffe448e13f04ac977120fcba4bbbf4c83e353835cae2b2"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/382.mp3",
+    "bytes": 543238,
+    "sha256": "a837949156072ce2c98b757b035b6f091580d92d6435f73c48db0c07eb3a9fe0"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/383.mp3",
+    "bytes": 208330,
+    "sha256": "056636112a9b2b78bdf33b71139d98e4c2b87454272328b8a3a04a0ab86b4667"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/384.mp3",
+    "bytes": 1448367,
+    "sha256": "88657348d9f2ebbf7c7f463e82b525584ae9af136fef11a37457ab2326f05bc0"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/385.mp3",
+    "bytes": 557789,
+    "sha256": "df5c1dcdc5b0d13cfb6d4e72464a2cf32a83a9b1d5018d3897ce311c735ab3c6"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/386.mp3",
+    "bytes": 9376936,
+    "sha256": "e2bfdbb75c1e2f219bc6aa8c4daf3891dfa49f0ba8935487693bbb499e1b1ec6"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/387.mp3",
+    "bytes": 313072,
+    "sha256": "0f569dee1640838302b07a110e81c9e9d7ef30529bdadb11445b1f2183c77d04"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/388.mp3",
+    "bytes": 119172,
+    "sha256": "478da910d7b8773e17d87be0c04ed255ef051627c9b4b9ed0eecffe9d2f1f648"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/309.mp3",
+    "bytes": 416324,
+    "sha256": "752883906cf17669a7113dc155544c5ad0078fad79ebe7ad7dac6dd20997ab85"
+  },
+  {
+    "url": "/audio/adhkar/saad-alghamdi/sections/300.mp3",
+    "bytes": 428387,
+    "sha256": "a7d91b78c6e75d26fbf6d62f6536e178bb5262f6d0c9be61b9ee5d9b9809f42a"
+  },
+  {
+    "url": "/audio/adhkar/hani-alrifai/sections/201.mp3",
+    "bytes": 16510283,
+    "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0"
+  },
+  {
+    "url": "/audio/adhkar/idrees-abkar/sections/202.mp3",
+    "bytes": 14529350,
+    "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b"
+  },
+  {
+    "url": "/audio/adhkar/salman-alotaibi/sections/203.mp3",
+    "bytes": 5070825,
+    "sha256": "7a8f38b0241e354e91f69d09dd2c7bcaee9f598b5ecdcf8e3e1f828553f88a16"
+  },
+  {
+    "url": "/audio/adhkar/salman-alotaibi/sections/204.mp3",
+    "bytes": 4699051,
+    "sha256": "a07886af48c90095fab684e063ed24b9ba97fdc54e3b706313205cc54c45ef2d"
+  }
+]

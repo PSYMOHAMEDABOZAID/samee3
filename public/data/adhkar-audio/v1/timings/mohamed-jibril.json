@@ -1,0 +1,796 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "2026-11-06.3",
+  "reciter": "mohamed-jibril",
+  "timeUnit": "milliseconds",
+  "items": [
+    {
+      "itemId": "1:1",
+      "categoryId": 1,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/mohamed-jibril/001/001-107.mp3",
+      "startMs": 0,
+      "endMs": 60944,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_07.mp3",
+        "sha256": "c5a65e4fc6c29218f86611e000990174d23f4af7e82fe80a52de42b4d04d65b2",
+        "startMs": 9680,
+        "endMs": 70565
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.94,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-quran-passage",
+        "matchedText": "اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَّهُ مَا فِي السَّمَوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاء وَسِعَ كُرْسِيُّهُ السَّمَوَاتِ وَالْأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ"
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:3",
+      "categoryId": 1,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/mohamed-jibril/001/003-107-morning.mp3",
+      "startMs": 0,
+      "endMs": 62433,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_07.mp3",
+        "sha256": "c5a65e4fc6c29218f86611e000990174d23f4af7e82fe80a52de42b4d04d65b2",
+        "startMs": 1055235,
+        "endMs": 1117605
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9672,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ ، وَالْحَمْدُ لِلَّهِ، لاَ إِلَهَ إلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذَا الْيَوْمِ وَخَيرَ مَا بَعْدَهُ ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي  هَذَا الْيَوْمِ وَشَرِّ مَا بَعْدَهُ، رَبِّ أَعُوذُ بِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ، رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ"
+      },
+      "contextSection": "morning",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:4",
+      "categoryId": 1,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/mohamed-jibril/001/004-107-morning.mp3",
+      "startMs": 0,
+      "endMs": 14994,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_07.mp3",
+        "sha256": "c5a65e4fc6c29218f86611e000990174d23f4af7e82fe80a52de42b4d04d65b2",
+        "startMs": 883295,
+        "endMs": 898220
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا ، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ وَإِلَيْكَ النُّشُورُ"
+      },
+      "contextSection": "morning",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:5",
+      "categoryId": 1,
+      "dhikrId": 5,
+      "url": "/audio/adhkar/mohamed-jibril/001/005-107.mp3",
+      "startMs": 0,
+      "endMs": 41561,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_07.mp3",
+        "sha256": "c5a65e4fc6c29218f86611e000990174d23f4af7e82fe80a52de42b4d04d65b2",
+        "startMs": 748275,
+        "endMs": 789765
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلاَّ أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي فَإِنَّهُ لاَ يَغْفِرُ الذُّنوبَ إِلاَّ أَنْتَ))."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:8",
+      "categoryId": 1,
+      "dhikrId": 8,
+      "url": "/audio/adhkar/mohamed-jibril/001/008-107.mp3",
+      "startMs": 0,
+      "endMs": 37616,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_07.mp3",
+        "sha256": "c5a65e4fc6c29218f86611e000990174d23f4af7e82fe80a52de42b4d04d65b2",
+        "startMs": 710695,
+        "endMs": 748245
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ عَافِنِي فِي بَدَنِي، اللَّهُمَّ عَافِنِي فِي سَمْعِي، اللَّهُمَّ عَافِنِي فِي بَصَرِي، لاَ إِلَهَ إِلاَّ أَنْتَ. اللَّهُمَّ  إِنِّي أَعُوذُ بِكَ مِنَ الْكُفْرِ، وَالفَقْرِ، وَأَعُوذُ بِكَ مِنْ عَذَابِ القَبْرِ، لاَ إِلَهَ إِلاَّ أَنْتَ)) (ثلاثَ مرَّاتٍ)."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:9",
+      "categoryId": 1,
+      "dhikrId": 9,
+      "url": "/audio/adhkar/mohamed-jibril/001/009-107.mp3",
+      "startMs": 0,
+      "endMs": 13505,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_07.mp3",
+        "sha256": "c5a65e4fc6c29218f86611e000990174d23f4af7e82fe80a52de42b4d04d65b2",
+        "startMs": 475695,
+        "endMs": 489145
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "حَسْبِيَ اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ عَلَيهِ تَوَكَّلتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ"
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:10",
+      "categoryId": 1,
+      "dhikrId": 10,
+      "url": "/audio/adhkar/mohamed-jibril/001/010-107.mp3",
+      "startMs": 0,
+      "endMs": 51722,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_07.mp3",
+        "sha256": "c5a65e4fc6c29218f86611e000990174d23f4af7e82fe80a52de42b4d04d65b2",
+        "startMs": 831595,
+        "endMs": 883265
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9626,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي الدُّنْيَا وَالآخِرَةِ، اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ: فِي دِينِي وَدُنْيَايَ وَأَهْلِي، وَمَالِي، اللَّهُمَّ اسْتُرْ عَوْرَاتِي، وَآمِنْ رَوْعَاتِي، اللَّهُمَّ احْفَظْنِي مِنْ بَينِ يَدَيَّ، وَمِنْ خَلْفِي، وَعَنْ يَمِينِي، وَعَنْ شِمَالِي، وَمِنْ فَوْقِي، وَأَعُوذُ بِعَظَمَتِكَ أَنْ أُغْتَالَ مِنْ تَحْتِي))."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:12",
+      "categoryId": 1,
+      "dhikrId": 12,
+      "url": "/audio/adhkar/mohamed-jibril/001/012-107.mp3",
+      "startMs": 0,
+      "endMs": 15308,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_07.mp3",
+        "sha256": "c5a65e4fc6c29218f86611e000990174d23f4af7e82fe80a52de42b4d04d65b2",
+        "startMs": 550595,
+        "endMs": 565845
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((بِسْمِ اللَّهِ الَّذِي لاَ يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلاَ فِي السّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ)) (ثلاثَ مرَّاتٍ)."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:13",
+      "categoryId": 1,
+      "dhikrId": 13,
+      "url": "/audio/adhkar/mohamed-jibril/001/013-107.mp3",
+      "startMs": 0,
+      "endMs": 16039,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_07.mp3",
+        "sha256": "c5a65e4fc6c29218f86611e000990174d23f4af7e82fe80a52de42b4d04d65b2",
+        "startMs": 598435,
+        "endMs": 614405
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((رَضِيتُ بِاللَّهِ رَبَّاً، وَبِالْإِسْلاَمِ دِيناً، وَبِمُحَمَّدٍ صلى الله عليه وسلم نَبِيّاً)) (ثلاثَ مرَّاتٍ)."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:14",
+      "categoryId": 1,
+      "dhikrId": 14,
+      "url": "/audio/adhkar/mohamed-jibril/001/014-107.mp3",
+      "startMs": 0,
+      "endMs": 20140,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_07.mp3",
+        "sha256": "c5a65e4fc6c29218f86611e000990174d23f4af7e82fe80a52de42b4d04d65b2",
+        "startMs": 614435,
+        "endMs": 634505
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((يَا حَيُّ يَا قَيُّومُ بِرَحْمَتِكَ أَسْتَغيثُ أَصْلِحْ لِي شَأْنِيَ كُلَّهُ وَلاَ تَكِلْنِي إِلَى نَفْسِي طَرْفَةَ عَيْنٍ))."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:16",
+      "categoryId": 1,
+      "dhikrId": 16,
+      "url": "/audio/adhkar/mohamed-jibril/001/016-107-morning.mp3",
+      "startMs": 0,
+      "endMs": 32705,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_07.mp3",
+        "sha256": "c5a65e4fc6c29218f86611e000990174d23f4af7e82fe80a52de42b4d04d65b2",
+        "startMs": 1117635,
+        "endMs": 1150285
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "أَصْبَحْنا عَلَى فِطْرَةِ الْإِسْلاَمِ، وَعَلَى كَلِمَةِ الْإِخْلاَصِ، وَعَلَى دِينِ نَبِيِّنَا مُحَمَّدٍ صلى الله عليه وسلم، وَعَلَى مِلَّةِ أَبِينَا إِبْرَاهِيمَ، حَنِيفاً مُسْلِماً وَمَا كَانَ مِنَ الْمُشرِكِينَ"
+      },
+      "contextSection": "morning",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:17",
+      "categoryId": 1,
+      "dhikrId": 17,
+      "url": "/audio/adhkar/mohamed-jibril/001/017-107.mp3",
+      "startMs": 0,
+      "endMs": 4127,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_07.mp3",
+        "sha256": "c5a65e4fc6c29218f86611e000990174d23f4af7e82fe80a52de42b4d04d65b2",
+        "startMs": 1288015,
+        "endMs": 1292085
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((سُبْحَانَ اللَّهِ وَبِحَمْدِهِ)) (مائة مرَّةٍ)."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:18",
+      "categoryId": 1,
+      "dhikrId": 18,
+      "url": "/audio/adhkar/mohamed-jibril/001/018-107.mp3",
+      "startMs": 0,
+      "endMs": 17058,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_07.mp3",
+        "sha256": "c5a65e4fc6c29218f86611e000990174d23f4af7e82fe80a52de42b4d04d65b2",
+        "startMs": 1179920,
+        "endMs": 1196900
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ"
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:19",
+      "categoryId": 1,
+      "dhikrId": 19,
+      "url": "/audio/adhkar/mohamed-jibril/001/019-107.mp3",
+      "startMs": 0,
+      "endMs": 17058,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_07.mp3",
+        "sha256": "c5a65e4fc6c29218f86611e000990174d23f4af7e82fe80a52de42b4d04d65b2",
+        "startMs": 1179920,
+        "endMs": 1196900
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((لاَ إِلَهَ إِلاَّ اللَّهُ، وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ)) (مائةَ مرَّةٍ إذا أصبحَ)."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:23",
+      "categoryId": 1,
+      "dhikrId": 23,
+      "url": "/audio/adhkar/mohamed-jibril/001/023-108.mp3",
+      "startMs": 0,
+      "endMs": 23432,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_08.mp3",
+        "sha256": "97ad392361f73451449f861ea9a6eb57fa91052651af1d695919ae2dce36dcd6",
+        "startMs": 1222055,
+        "endMs": 1245425
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ)) (ثلاثَ مرَّاتٍ إذا أمسى)."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "2:2",
+      "categoryId": 2,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/mohamed-jibril/002/002-107.mp3",
+      "startMs": 0,
+      "endMs": 60944,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_07.mp3",
+        "sha256": "c5a65e4fc6c29218f86611e000990174d23f4af7e82fe80a52de42b4d04d65b2",
+        "startMs": 9680,
+        "endMs": 70565
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.94,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "﴿اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَّهُ مَا فِي السَّمَوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْـــــــــــدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاء وَسِعَ كُرْسِيُّهُ السَّمَوَاتِ وَالأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ﴾."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "2:3",
+      "categoryId": 2,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/mohamed-jibril/002/003-108.mp3",
+      "startMs": 0,
+      "endMs": 119954,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_08.mp3",
+        "sha256": "97ad392361f73451449f861ea9a6eb57fa91052651af1d695919ae2dce36dcd6",
+        "startMs": 80275,
+        "endMs": 200165
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9605,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "﴿آمَنَ الرَّسُولُ بِمَا أُنزِلَ إِلَيْهِ مِن رَّبِّهِ وَالْمُؤْمِنُونَ كُلٌّ آمَنَ بِاللَّهِ وَمَلآئِكَتِهِ وَكُتُبِهِ وَرُسُلِهِ لاَ نُفَرِّقُ بَيْنَ أَحَدٍ مِّن رُّسُلِهِ وَقَالُواْ سَمِعْنَا وَأَطَعْنَا غُفْرَانَكَ رَبَّنَا وَإِلَيْكَ الْمَصِيرُ* لاَ يُكَلِّفُ اللَّهُ نَفْساً إِلاَّ وُسْعَهَا لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا اكْتَسَبَتْ رَبَّنَا لاَ تُؤَاخِذْنَا إِن نَّسِينَا أَوْ أَخْطَأْنَا رَبَّنَا وَلاَ تَحْمِلْ عَلَيْنَا إِصْراً كَمَا حَمَلْتَهُ عَلَى الَّذِينَ مِن قَبْلِنَا رَبَّنَا وَلاَ تُحَمِّلْنَا مَا لاَ طَاقَةَ لَنَا بِهِ وَاعْفُ عَنَّا وَاغْفِرْ لَنَا وَارْحَمْنَآ أَنتَ مَوْلاَنَا فَانصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ﴾."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "6:1",
+      "categoryId": 6,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/mohamed-jibril/006/001-107.mp3",
+      "startMs": 0,
+      "endMs": 2743,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_07.mp3",
+        "sha256": "c5a65e4fc6c29218f86611e000990174d23f4af7e82fe80a52de42b4d04d65b2",
+        "startMs": 550595,
+        "endMs": 553265
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "(بِسْمِ اللَّهِ)."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "17:1",
+      "categoryId": 17,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/mohamed-jibril/017/001-107.mp3",
+      "startMs": 0,
+      "endMs": 2743,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_07.mp3",
+        "sha256": "c5a65e4fc6c29218f86611e000990174d23f4af7e82fe80a52de42b4d04d65b2",
+        "startMs": 550595,
+        "endMs": 553265
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "(بِسْمِ اللَّهِ)."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "25:1",
+      "categoryId": 25,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/mohamed-jibril/025/001-107.mp3",
+      "startMs": 0,
+      "endMs": 41247,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_07.mp3",
+        "sha256": "c5a65e4fc6c29218f86611e000990174d23f4af7e82fe80a52de42b4d04d65b2",
+        "startMs": 1198800,
+        "endMs": 1239985
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9412,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ، وَعَلَى آلِ مُحَمَّدٍ، كَمَا صَلَّيتَ عَلَى إِبْرَاهِيمَ، وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ، كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ))."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "27:6",
+      "categoryId": 27,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/mohamed-jibril/027/006-107.mp3",
+      "startMs": 0,
+      "endMs": 60944,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_07.mp3",
+        "sha256": "c5a65e4fc6c29218f86611e000990174d23f4af7e82fe80a52de42b4d04d65b2",
+        "startMs": 9680,
+        "endMs": 70565
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.94,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-quran-passage",
+        "matchedText": "اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَّهُ مَا فِي السَّمَوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاءَ وَسِعَ كُرْسِيُّهُ السَّمَوَاتِ وَالأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ"
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "82:1",
+      "categoryId": 82,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/mohamed-jibril/082/001-107.mp3",
+      "startMs": 0,
+      "endMs": 6635,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_07.mp3",
+        "sha256": "c5a65e4fc6c29218f86611e000990174d23f4af7e82fe80a52de42b4d04d65b2",
+        "startMs": 70595,
+        "endMs": 77165
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ))."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "99:1",
+      "categoryId": 99,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/mohamed-jibril/099/001-107.mp3",
+      "startMs": 0,
+      "endMs": 2743,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_07.mp3",
+        "sha256": "c5a65e4fc6c29218f86611e000990174d23f4af7e82fe80a52de42b4d04d65b2",
+        "startMs": 550595,
+        "endMs": 553265
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((بِسْمِ اللَّهِ))."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "104:1",
+      "categoryId": 104,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/mohamed-jibril/104/001-108.mp3",
+      "startMs": 0,
+      "endMs": 23432,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_08.mp3",
+        "sha256": "97ad392361f73451449f861ea9a6eb57fa91052651af1d695919ae2dce36dcd6",
+        "startMs": 1222055,
+        "endMs": 1245425
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ))."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "122:1",
+      "categoryId": 122,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/mohamed-jibril/122/001-107.mp3",
+      "startMs": 0,
+      "endMs": 2560,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_07.mp3",
+        "sha256": "c5a65e4fc6c29218f86611e000990174d23f4af7e82fe80a52de42b4d04d65b2",
+        "startMs": 1288015,
+        "endMs": 1290505
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((سُبْحَانَ اللَّهِ!))."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "126:1",
+      "categoryId": 126,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/mohamed-jibril/126/001-107.mp3",
+      "startMs": 0,
+      "endMs": 5198,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_07.mp3",
+        "sha256": "c5a65e4fc6c29218f86611e000990174d23f4af7e82fe80a52de42b4d04d65b2",
+        "startMs": 1179920,
+        "endMs": 1185045
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((لاَ إِلَهَ إِلاَّ اللَّهُ!))."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    }
+  ],
+  "variants": [
+    {
+      "itemId": "1:3",
+      "categoryId": 1,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/mohamed-jibril/001/003-107-morning.mp3",
+      "startMs": 0,
+      "endMs": 62433,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_07.mp3",
+        "sha256": "c5a65e4fc6c29218f86611e000990174d23f4af7e82fe80a52de42b4d04d65b2",
+        "startMs": 1055235,
+        "endMs": 1117605
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9672,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ ، وَالْحَمْدُ لِلَّهِ، لاَ إِلَهَ إلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذَا الْيَوْمِ وَخَيرَ مَا بَعْدَهُ ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي  هَذَا الْيَوْمِ وَشَرِّ مَا بَعْدَهُ، رَبِّ أَعُوذُ بِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ، رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ"
+      },
+      "contextSection": "morning",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:4",
+      "categoryId": 1,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/mohamed-jibril/001/004-107-morning.mp3",
+      "startMs": 0,
+      "endMs": 14994,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_07.mp3",
+        "sha256": "c5a65e4fc6c29218f86611e000990174d23f4af7e82fe80a52de42b4d04d65b2",
+        "startMs": 883295,
+        "endMs": 898220
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا ، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ وَإِلَيْكَ النُّشُورُ"
+      },
+      "contextSection": "morning",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:16",
+      "categoryId": 1,
+      "dhikrId": 16,
+      "url": "/audio/adhkar/mohamed-jibril/001/016-108-evening.mp3",
+      "startMs": 0,
+      "endMs": 33672,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_08.mp3",
+        "sha256": "97ad392361f73451449f861ea9a6eb57fa91052651af1d695919ae2dce36dcd6",
+        "startMs": 1144715,
+        "endMs": 1178325
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-evening-instruction",
+        "matchedText": "امسينا علي فطرة الاسلام وعلي كلمة الاخلاص وعلي دين نبينا محمد صلي الله عليه وسلم وعلي ملة ابينا ابراهيم حنيفا مسلما وما كان من المشركين"
+      },
+      "contextSection": "evening",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:16",
+      "categoryId": 1,
+      "dhikrId": 16,
+      "url": "/audio/adhkar/mohamed-jibril/001/016-107-morning.mp3",
+      "startMs": 0,
+      "endMs": 32705,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_07.mp3",
+        "sha256": "c5a65e4fc6c29218f86611e000990174d23f4af7e82fe80a52de42b4d04d65b2",
+        "startMs": 1117635,
+        "endMs": 1150285
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "أَصْبَحْنا عَلَى فِطْرَةِ الْإِسْلاَمِ، وَعَلَى كَلِمَةِ الْإِخْلاَصِ، وَعَلَى دِينِ نَبِيِّنَا مُحَمَّدٍ صلى الله عليه وسلم، وَعَلَى مِلَّةِ أَبِينَا إِبْرَاهِيمَ، حَنِيفاً مُسْلِماً وَمَا كَانَ مِنَ الْمُشرِكِينَ"
+      },
+      "contextSection": "morning",
+      "rightsId": "tvquran-noncommercial"
+    }
+  ],
+  "sections": [
+    {
+      "id": "mohamed-jibril:107",
+      "readerId": "mohamed-jibril",
+      "title": "أذكار الصباح",
+      "type": "morning",
+      "categoryIds": [
+        1
+      ],
+      "url": "/audio/adhkar/mohamed-jibril/sections/107.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 10473433,
+      "durationMs": 1308411,
+      "sha256": "c5a65e4fc6c29218f86611e000990174d23f4af7e82fe80a52de42b4d04d65b2",
+      "timing": {
+        "startMs": 0,
+        "endMs": 1308411
+      },
+      "rightsId": "tvquran-noncommercial",
+      "sourcePage": "https://www.tvquran.com/ar/selection/7/embeddable",
+      "publisher": "TVQuran.com",
+      "attributionLevel": "publisher-attributed",
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_07.mp3",
+        "sha256": "c5a65e4fc6c29218f86611e000990174d23f4af7e82fe80a52de42b4d04d65b2",
+        "startMs": 0,
+        "endMs": 1308411
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "mohamed-jibril:108",
+      "readerId": "mohamed-jibril",
+      "title": "أذكار المساء",
+      "type": "evening",
+      "categoryIds": [
+        1
+      ],
+      "url": "/audio/adhkar/mohamed-jibril/sections/108.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 10782096,
+      "durationMs": 1346994,
+      "sha256": "97ad392361f73451449f861ea9a6eb57fa91052651af1d695919ae2dce36dcd6",
+      "timing": {
+        "startMs": 0,
+        "endMs": 1346994
+      },
+      "rightsId": "tvquran-noncommercial",
+      "sourcePage": "https://www.tvquran.com/ar/selection/8/embeddable",
+      "publisher": "TVQuran.com",
+      "attributionLevel": "publisher-attributed",
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_08.mp3",
+        "sha256": "97ad392361f73451449f861ea9a6eb57fa91052651af1d695919ae2dce36dcd6",
+        "startMs": 0,
+        "endMs": 1346994
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    }
+  ]
+}

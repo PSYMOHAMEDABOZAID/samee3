@@ -1,0 +1,482 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "2026-11-06.3",
+  "reciter": "faisal-labban",
+  "timeUnit": "milliseconds",
+  "items": [
+    {
+      "itemId": "1:1",
+      "categoryId": 1,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faisal-labban/001/001-500.mp3",
+      "startMs": 0,
+      "endMs": 60839,
+      "source": {
+        "url": "https://archive.org/download/3568585368358353568568thkarAlsabahAbdulazizBinIbrahim/Athkar%20Alsabah%20-%20Faisal%20Labban.mp3",
+        "sha256": "02e950882c3f9da1c8235179fa0345f31afff576a713abe407a136c2754de6fe",
+        "startMs": 0,
+        "endMs": 60800
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9813,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "quoted-quran-passage",
+        "matchedText": "اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَّهُ مَا فِي السَّمَوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاء وَسِعَ كُرْسِيُّهُ السَّمَوَاتِ وَالْأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:4",
+      "categoryId": 1,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/faisal-labban/001/004-500-morning.mp3",
+      "startMs": 0,
+      "endMs": 14367,
+      "source": {
+        "url": "https://archive.org/download/3568585368358353568568thkarAlsabahAbdulazizBinIbrahim/Athkar%20Alsabah%20-%20Faisal%20Labban.mp3",
+        "sha256": "02e950882c3f9da1c8235179fa0345f31afff576a713abe407a136c2754de6fe",
+        "startMs": 262920,
+        "endMs": 277240
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا ، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ وَإِلَيْكَ النُّشُورُ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:5",
+      "categoryId": 1,
+      "dhikrId": 5,
+      "url": "/audio/adhkar/faisal-labban/001/005-501.mp3",
+      "startMs": 0,
+      "endMs": 39811,
+      "source": {
+        "url": "https://archive.org/download/3568585368358353568568thkarAlsabahAbdulazizBinIbrahim/Athkar%20Almasaa%20-%20Faisal%20Labban.mp3",
+        "sha256": "a519af9a27e3d640199535f50798731f12de1e289b3434138a254df9217bd6a7",
+        "startMs": 218340,
+        "endMs": 258120
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلاَّ أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي فَإِنَّهُ لاَ يَغْفِرُ الذُّنوبَ إِلاَّ أَنْتَ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:10",
+      "categoryId": 1,
+      "dhikrId": 10,
+      "url": "/audio/adhkar/faisal-labban/001/010-501.mp3",
+      "startMs": 0,
+      "endMs": 46942,
+      "source": {
+        "url": "https://archive.org/download/3568585368358353568568thkarAlsabahAbdulazizBinIbrahim/Athkar%20Almasaa%20-%20Faisal%20Labban.mp3",
+        "sha256": "a519af9a27e3d640199535f50798731f12de1e289b3434138a254df9217bd6a7",
+        "startMs": 314060,
+        "endMs": 360960
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9783,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي الدُّنْيَا وَالآخِرَةِ، اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ: فِي دِينِي وَدُنْيَايَ وَأَهْلِي، وَمَالِي، اللَّهُمَّ اسْتُرْ عَوْرَاتِي، وَآمِنْ رَوْعَاتِي، اللَّهُمَّ احْفَظْنِي مِنْ بَينِ يَدَيَّ، وَمِنْ خَلْفِي، وَعَنْ يَمِينِي، وَعَنْ شِمَالِي، وَمِنْ فَوْقِي، وَأَعُوذُ بِعَظَمَتِكَ أَنْ أُغْتَالَ مِنْ تَحْتِي",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:12",
+      "categoryId": 1,
+      "dhikrId": 12,
+      "url": "/audio/adhkar/faisal-labban/001/012-501.mp3",
+      "startMs": 0,
+      "endMs": 13479,
+      "source": {
+        "url": "https://archive.org/download/3568585368358353568568thkarAlsabahAbdulazizBinIbrahim/Athkar%20Almasaa%20-%20Faisal%20Labban.mp3",
+        "sha256": "a519af9a27e3d640199535f50798731f12de1e289b3434138a254df9217bd6a7",
+        "startMs": 433100,
+        "endMs": 446540
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "بِسْمِ اللَّهِ الَّذِي لاَ يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلاَ فِي السّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:13",
+      "categoryId": 1,
+      "dhikrId": 13,
+      "url": "/audio/adhkar/faisal-labban/001/013-500.mp3",
+      "startMs": 0,
+      "endMs": 13061,
+      "source": {
+        "url": "https://archive.org/download/3568585368358353568568thkarAlsabahAbdulazizBinIbrahim/Athkar%20Alsabah%20-%20Faisal%20Labban.mp3",
+        "sha256": "02e950882c3f9da1c8235179fa0345f31afff576a713abe407a136c2754de6fe",
+        "startMs": 430560,
+        "endMs": 443580
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "رَضِيتُ بِاللَّهِ رَبَّاً، وَبِالْإِسْلاَمِ دِيناً، وَبِمُحَمَّدٍ صلى الله عليه وسلم نَبِيّاً",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:16",
+      "categoryId": 1,
+      "dhikrId": 16,
+      "url": "/audio/adhkar/faisal-labban/001/016-500-morning.mp3",
+      "startMs": 0,
+      "endMs": 26070,
+      "source": {
+        "url": "https://archive.org/download/3568585368358353568568thkarAlsabahAbdulazizBinIbrahim/Athkar%20Alsabah%20-%20Faisal%20Labban.mp3",
+        "sha256": "02e950882c3f9da1c8235179fa0345f31afff576a713abe407a136c2754de6fe",
+        "startMs": 382460,
+        "endMs": 408500
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.96,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "أَصْبَحْنا عَلَى فِطْرَةِ الْإِسْلاَمِ، وَعَلَى كَلِمَةِ الْإِخْلاَصِ، وَعَلَى دِينِ نَبِيِّنَا مُحَمَّدٍ صلى الله عليه وسلم، وَعَلَى مِلَّةِ أَبِينَا إِبْرَاهِيمَ، حَنِيفاً مُسْلِماً وَمَا كَانَ مِنَ الْمُشرِكِينَ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:17",
+      "categoryId": 1,
+      "dhikrId": 17,
+      "url": "/audio/adhkar/faisal-labban/001/017-500.mp3",
+      "startMs": 0,
+      "endMs": 4101,
+      "source": {
+        "url": "https://archive.org/download/3568585368358353568568thkarAlsabahAbdulazizBinIbrahim/Athkar%20Alsabah%20-%20Faisal%20Labban.mp3",
+        "sha256": "02e950882c3f9da1c8235179fa0345f31afff576a713abe407a136c2754de6fe",
+        "startMs": 161940,
+        "endMs": 166000
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:18",
+      "categoryId": 1,
+      "dhikrId": 18,
+      "url": "/audio/adhkar/faisal-labban/001/018-501.mp3",
+      "startMs": 0,
+      "endMs": 13140,
+      "source": {
+        "url": "https://archive.org/download/3568585368358353568568thkarAlsabahAbdulazizBinIbrahim/Athkar%20Almasaa%20-%20Faisal%20Labban.mp3",
+        "sha256": "a519af9a27e3d640199535f50798731f12de1e289b3434138a254df9217bd6a7",
+        "startMs": 368240,
+        "endMs": 381340
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:19",
+      "categoryId": 1,
+      "dhikrId": 19,
+      "url": "/audio/adhkar/faisal-labban/001/019-501.mp3",
+      "startMs": 0,
+      "endMs": 13140,
+      "source": {
+        "url": "https://archive.org/download/3568585368358353568568thkarAlsabahAbdulazizBinIbrahim/Athkar%20Almasaa%20-%20Faisal%20Labban.mp3",
+        "sha256": "a519af9a27e3d640199535f50798731f12de1e289b3434138a254df9217bd6a7",
+        "startMs": 368240,
+        "endMs": 381340
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "لاَ إِلَهَ إِلاَّ اللَّهُ، وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:22",
+      "categoryId": 1,
+      "dhikrId": 22,
+      "url": "/audio/adhkar/faisal-labban/001/022-500.mp3",
+      "startMs": 0,
+      "endMs": 4571,
+      "source": {
+        "url": "https://archive.org/download/3568585368358353568568thkarAlsabahAbdulazizBinIbrahim/Athkar%20Alsabah%20-%20Faisal%20Labban.mp3",
+        "sha256": "02e950882c3f9da1c8235179fa0345f31afff576a713abe407a136c2754de6fe",
+        "startMs": 258380,
+        "endMs": 262920
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:23",
+      "categoryId": 1,
+      "dhikrId": 23,
+      "url": "/audio/adhkar/faisal-labban/001/023-501.mp3",
+      "startMs": 0,
+      "endMs": 8255,
+      "source": {
+        "url": "https://archive.org/download/3568585368358353568568thkarAlsabahAbdulazizBinIbrahim/Athkar%20Almasaa%20-%20Faisal%20Labban.mp3",
+        "sha256": "a519af9a27e3d640199535f50798731f12de1e289b3434138a254df9217bd6a7",
+        "startMs": 424880,
+        "endMs": 433100
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    }
+  ],
+  "variants": [
+    {
+      "itemId": "1:4",
+      "categoryId": 1,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/faisal-labban/001/004-500-morning.mp3",
+      "startMs": 0,
+      "endMs": 14367,
+      "source": {
+        "url": "https://archive.org/download/3568585368358353568568thkarAlsabahAbdulazizBinIbrahim/Athkar%20Alsabah%20-%20Faisal%20Labban.mp3",
+        "sha256": "02e950882c3f9da1c8235179fa0345f31afff576a713abe407a136c2754de6fe",
+        "startMs": 262920,
+        "endMs": 277240
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا ، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ وَإِلَيْكَ النُّشُورُ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:4",
+      "categoryId": 1,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/faisal-labban/001/004-501-evening.mp3",
+      "startMs": 0,
+      "endMs": 12748,
+      "source": {
+        "url": "https://archive.org/download/3568585368358353568568thkarAlsabahAbdulazizBinIbrahim/Athkar%20Almasaa%20-%20Faisal%20Labban.mp3",
+        "sha256": "a519af9a27e3d640199535f50798731f12de1e289b3434138a254df9217bd6a7",
+        "startMs": 263000,
+        "endMs": 275720
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "اللهم بك امسينا وبك اصبحنا وبك نحيا وبك نموت واليك المصير",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "evening",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:16",
+      "categoryId": 1,
+      "dhikrId": 16,
+      "url": "/audio/adhkar/faisal-labban/001/016-500-morning.mp3",
+      "startMs": 0,
+      "endMs": 26070,
+      "source": {
+        "url": "https://archive.org/download/3568585368358353568568thkarAlsabahAbdulazizBinIbrahim/Athkar%20Alsabah%20-%20Faisal%20Labban.mp3",
+        "sha256": "02e950882c3f9da1c8235179fa0345f31afff576a713abe407a136c2754de6fe",
+        "startMs": 382460,
+        "endMs": 408500
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.96,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "أَصْبَحْنا عَلَى فِطْرَةِ الْإِسْلاَمِ، وَعَلَى كَلِمَةِ الْإِخْلاَصِ، وَعَلَى دِينِ نَبِيِّنَا مُحَمَّدٍ صلى الله عليه وسلم، وَعَلَى مِلَّةِ أَبِينَا إِبْرَاهِيمَ، حَنِيفاً مُسْلِماً وَمَا كَانَ مِنَ الْمُشرِكِينَ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:16",
+      "categoryId": 1,
+      "dhikrId": 16,
+      "url": "/audio/adhkar/faisal-labban/001/016-501-evening.mp3",
+      "startMs": 0,
+      "endMs": 26932,
+      "source": {
+        "url": "https://archive.org/download/3568585368358353568568thkarAlsabahAbdulazizBinIbrahim/Athkar%20Almasaa%20-%20Faisal%20Labban.mp3",
+        "sha256": "a519af9a27e3d640199535f50798731f12de1e289b3434138a254df9217bd6a7",
+        "startMs": 397980,
+        "endMs": 424880
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.96,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "امسينا علي فطرة الاسلام وعلي كلمة الاخلاص وعلي دين نبينا محمد صلي الله عليه وسلم وعلي ملة ابينا ابراهيم حنيفا مسلما وما كان من المشركين",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "evening",
+      "rightsId": "original-source-rights"
+    }
+  ],
+  "sections": [
+    {
+      "id": "faisal-labban:500",
+      "readerId": "faisal-labban",
+      "title": "أذكار الصباح",
+      "type": "morning",
+      "categoryIds": [
+        1
+      ],
+      "url": "/audio/adhkar/faisal-labban/sections/500.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 7302418,
+      "durationMs": 448321,
+      "sha256": "02e950882c3f9da1c8235179fa0345f31afff576a713abe407a136c2754de6fe",
+      "timing": {
+        "startMs": 0,
+        "endMs": 448321
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://archive.org/details/3568585368358353568568thkarAlsabahAbdulazizBinIbrahim",
+      "publisher": "Internet Archive / named source recording",
+      "attributionLevel": "archive-and-published-index",
+      "verificationPages": [
+        "https://www.manhaj.om/2026/05/morning-evening-athkar-radio.html"
+      ],
+      "source": {
+        "url": "https://archive.org/download/3568585368358353568568thkarAlsabahAbdulazizBinIbrahim/Athkar%20Alsabah%20-%20Faisal%20Labban.mp3",
+        "sha256": "02e950882c3f9da1c8235179fa0345f31afff576a713abe407a136c2754de6fe",
+        "startMs": 0,
+        "endMs": 448321
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "faisal-labban:501",
+      "readerId": "faisal-labban",
+      "title": "أذكار المساء",
+      "type": "evening",
+      "categoryIds": [
+        1
+      ],
+      "url": "/audio/adhkar/faisal-labban/sections/501.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 7638457,
+      "durationMs": 469324,
+      "sha256": "a519af9a27e3d640199535f50798731f12de1e289b3434138a254df9217bd6a7",
+      "timing": {
+        "startMs": 0,
+        "endMs": 469324
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://archive.org/details/3568585368358353568568thkarAlsabahAbdulazizBinIbrahim",
+      "publisher": "Internet Archive / named source recording",
+      "attributionLevel": "archive-and-published-index",
+      "verificationPages": [
+        "https://www.manhaj.om/2026/05/morning-evening-athkar-radio.html"
+      ],
+      "source": {
+        "url": "https://archive.org/download/3568585368358353568568thkarAlsabahAbdulazizBinIbrahim/Athkar%20Almasaa%20-%20Faisal%20Labban.mp3",
+        "sha256": "a519af9a27e3d640199535f50798731f12de1e289b3434138a254df9217bd6a7",
+        "startMs": 0,
+        "endMs": 469324
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    }
+  ]
+}
