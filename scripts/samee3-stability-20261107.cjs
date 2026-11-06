@@ -1,5 +1,3 @@
-
-#!/usr/bin/env node
 /*
  SAMEE3 — targeted stability patch for 2026-11-07
  Based on public main as inspected 2026-11-07.
