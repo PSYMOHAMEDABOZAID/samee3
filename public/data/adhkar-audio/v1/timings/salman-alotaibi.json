@@ -1,0 +1,676 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "2026-11-06.3",
+  "reciter": "salman-alotaibi",
+  "timeUnit": "milliseconds",
+  "items": [
+    {
+      "itemId": "1:3",
+      "categoryId": 1,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/salman-alotaibi/001/003-203-morning.mp3",
+      "startMs": 0,
+      "endMs": 50834,
+      "source": {
+        "url": "https://archive.org/download/way2sona_20160320_2316/athkar_22.mp3",
+        "sha256": "7a8f38b0241e354e91f69d09dd2c7bcaee9f598b5ecdcf8e3e1f828553f88a16",
+        "startMs": 194135,
+        "endMs": 244940
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9508,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ ، وَالْحَمْدُ لِلَّهِ، لاَ إِلَهَ إلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذَا الْيَوْمِ وَخَيرَ مَا بَعْدَهُ ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي  هَذَا الْيَوْمِ وَشَرِّ مَا بَعْدَهُ، رَبِّ أَعُوذُ بِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ، رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:4",
+      "categoryId": 1,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/salman-alotaibi/001/004-203-morning.mp3",
+      "startMs": 0,
+      "endMs": 16771,
+      "source": {
+        "url": "https://archive.org/download/way2sona_20160320_2316/athkar_22.mp3",
+        "sha256": "7a8f38b0241e354e91f69d09dd2c7bcaee9f598b5ecdcf8e3e1f828553f88a16",
+        "startMs": 258115,
+        "endMs": 274845
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا ، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ وَإِلَيْكَ النُّشُورُ"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:5",
+      "categoryId": 1,
+      "dhikrId": 5,
+      "url": "/audio/adhkar/salman-alotaibi/001/005-203.mp3",
+      "startMs": 0,
+      "endMs": 35997,
+      "source": {
+        "url": "https://archive.org/download/way2sona_20160320_2316/athkar_22.mp3",
+        "sha256": "7a8f38b0241e354e91f69d09dd2c7bcaee9f598b5ecdcf8e3e1f828553f88a16",
+        "startMs": 289475,
+        "endMs": 325445
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9444,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلاَّ أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي فَإِنَّهُ لاَ يَغْفِرُ الذُّنوبَ إِلاَّ أَنْتَ))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:6",
+      "categoryId": 1,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/salman-alotaibi/001/006-203-morning.mp3",
+      "startMs": 0,
+      "endMs": 28447,
+      "source": {
+        "url": "https://archive.org/download/way2sona_20160320_2316/athkar_22.mp3",
+        "sha256": "7a8f38b0241e354e91f69d09dd2c7bcaee9f598b5ecdcf8e3e1f828553f88a16",
+        "startMs": 340255,
+        "endMs": 368665
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "اللَّهُمَّ إِنِّي أَصْبَحْتُ أُشْهِدُكَ، وَأُشْهِدُ حَمَلَةَ عَرْشِكَ، وَمَلاَئِكَتِكَ، وَجَمِيعَ خَلْقِكَ، أَنَّكَ أَنْتَ اللَّهُ لَا إِلَهَ إِلاَّ أَنْتَ وَحْدَكَ لاَ شَرِيكَ لَكَ، وَأَنَّ مُحَمَّداً عَبْدُكَ وَرَسُولُكَ"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:10",
+      "categoryId": 1,
+      "dhikrId": 10,
+      "url": "/audio/adhkar/salman-alotaibi/001/010-204.mp3",
+      "startMs": 0,
+      "endMs": 47229,
+      "source": {
+        "url": "https://archive.org/download/way2sona_20160320_2316/athkar_21.mp3",
+        "sha256": "a07886af48c90095fab684e063ed24b9ba97fdc54e3b706313205cc54c45ef2d",
+        "startMs": 342335,
+        "endMs": 389520
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9679,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي الدُّنْيَا وَالآخِرَةِ، اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ: فِي دِينِي وَدُنْيَايَ وَأَهْلِي، وَمَالِي، اللَّهُمَّ اسْتُرْ عَوْرَاتِي، وَآمِنْ رَوْعَاتِي، اللَّهُمَّ احْفَظْنِي مِنْ بَينِ يَدَيَّ، وَمِنْ خَلْفِي، وَعَنْ يَمِينِي، وَعَنْ شِمَالِي، وَمِنْ فَوْقِي، وَأَعُوذُ بِعَظَمَتِكَ أَنْ أُغْتَالَ مِنْ تَحْتِي))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:12",
+      "categoryId": 1,
+      "dhikrId": 12,
+      "url": "/audio/adhkar/salman-alotaibi/001/012-203.mp3",
+      "startMs": 0,
+      "endMs": 16562,
+      "source": {
+        "url": "https://archive.org/download/way2sona_20160320_2316/athkar_22.mp3",
+        "sha256": "7a8f38b0241e354e91f69d09dd2c7bcaee9f598b5ecdcf8e3e1f828553f88a16",
+        "startMs": 439440,
+        "endMs": 455965
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((بِسْمِ اللَّهِ الَّذِي لاَ يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلاَ فِي السّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ)) (ثلاثَ مرَّاتٍ)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:13",
+      "categoryId": 1,
+      "dhikrId": 13,
+      "url": "/audio/adhkar/salman-alotaibi/001/013-203.mp3",
+      "startMs": 0,
+      "endMs": 15256,
+      "source": {
+        "url": "https://archive.org/download/way2sona_20160320_2316/athkar_22.mp3",
+        "sha256": "7a8f38b0241e354e91f69d09dd2c7bcaee9f598b5ecdcf8e3e1f828553f88a16",
+        "startMs": 467175,
+        "endMs": 482380
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((رَضِيتُ بِاللَّهِ رَبَّاً، وَبِالْإِسْلاَمِ دِيناً، وَبِمُحَمَّدٍ صلى الله عليه وسلم نَبِيّاً)) (ثلاثَ مرَّاتٍ)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:18",
+      "categoryId": 1,
+      "dhikrId": 18,
+      "url": "/audio/adhkar/salman-alotaibi/001/018-203.mp3",
+      "startMs": 0,
+      "endMs": 15229,
+      "source": {
+        "url": "https://archive.org/download/way2sona_20160320_2316/athkar_22.mp3",
+        "sha256": "7a8f38b0241e354e91f69d09dd2c7bcaee9f598b5ecdcf8e3e1f828553f88a16",
+        "startMs": 541195,
+        "endMs": 556385
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:19",
+      "categoryId": 1,
+      "dhikrId": 19,
+      "url": "/audio/adhkar/salman-alotaibi/001/019-203.mp3",
+      "startMs": 0,
+      "endMs": 15229,
+      "source": {
+        "url": "https://archive.org/download/way2sona_20160320_2316/athkar_22.mp3",
+        "sha256": "7a8f38b0241e354e91f69d09dd2c7bcaee9f598b5ecdcf8e3e1f828553f88a16",
+        "startMs": 541195,
+        "endMs": 556385
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((لاَ إِلَهَ إِلاَّ اللَّهُ، وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ)) (مائةَ مرَّةٍ إذا أصبحَ)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:21",
+      "categoryId": 1,
+      "dhikrId": 21,
+      "url": "/audio/adhkar/salman-alotaibi/001/021-203.mp3",
+      "startMs": 0,
+      "endMs": 11990,
+      "source": {
+        "url": "https://archive.org/download/way2sona_20160320_2316/athkar_22.mp3",
+        "sha256": "7a8f38b0241e354e91f69d09dd2c7bcaee9f598b5ecdcf8e3e1f828553f88a16",
+        "startMs": 565315,
+        "endMs": 577265
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْماً نَافِعاً، وَرِزْقاً طَيِّباً، وَعَمَلاً مُتَقَبَّلاً"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:23",
+      "categoryId": 1,
+      "dhikrId": 23,
+      "url": "/audio/adhkar/salman-alotaibi/001/023-203.mp3",
+      "startMs": 0,
+      "endMs": 6139,
+      "source": {
+        "url": "https://archive.org/download/way2sona_20160320_2316/athkar_22.mp3",
+        "sha256": "7a8f38b0241e354e91f69d09dd2c7bcaee9f598b5ecdcf8e3e1f828553f88a16",
+        "startMs": 577295,
+        "endMs": 583400
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ)) (ثلاثَ مرَّاتٍ إذا أمسى)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:24",
+      "categoryId": 1,
+      "dhikrId": 24,
+      "url": "/audio/adhkar/salman-alotaibi/001/024-203.mp3",
+      "startMs": 0,
+      "endMs": 4937,
+      "source": {
+        "url": "https://archive.org/download/way2sona_20160320_2316/athkar_22.mp3",
+        "sha256": "7a8f38b0241e354e91f69d09dd2c7bcaee9f598b5ecdcf8e3e1f828553f88a16",
+        "startMs": 584500,
+        "endMs": 589405
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ صَلِّ وَسَلِّمْ عَلَى نَبَيِّنَا مُحَمَّدٍ)) (عشرَ مرَّاتٍ)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "2:3",
+      "categoryId": 2,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/salman-alotaibi/002/003-203.mp3",
+      "startMs": 0,
+      "endMs": 88059,
+      "source": {
+        "url": "https://archive.org/download/way2sona_20160320_2316/athkar_22.mp3",
+        "sha256": "7a8f38b0241e354e91f69d09dd2c7bcaee9f598b5ecdcf8e3e1f828553f88a16",
+        "startMs": 87515,
+        "endMs": 175525
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9605,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "﴿آمَنَ الرَّسُولُ بِمَا أُنزِلَ إِلَيْهِ مِن رَّبِّهِ وَالْمُؤْمِنُونَ كُلٌّ آمَنَ بِاللَّهِ وَمَلآئِكَتِهِ وَكُتُبِهِ وَرُسُلِهِ لاَ نُفَرِّقُ بَيْنَ أَحَدٍ مِّن رُّسُلِهِ وَقَالُواْ سَمِعْنَا وَأَطَعْنَا غُفْرَانَكَ رَبَّنَا وَإِلَيْكَ الْمَصِيرُ* لاَ يُكَلِّفُ اللَّهُ نَفْساً إِلاَّ وُسْعَهَا لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا اكْتَسَبَتْ رَبَّنَا لاَ تُؤَاخِذْنَا إِن نَّسِينَا أَوْ أَخْطَأْنَا رَبَّنَا وَلاَ تَحْمِلْ عَلَيْنَا إِصْراً كَمَا حَمَلْتَهُ عَلَى الَّذِينَ مِن قَبْلِنَا رَبَّنَا وَلاَ تُحَمِّلْنَا مَا لاَ طَاقَةَ لَنَا بِهِ وَاعْفُ عَنَّا وَاغْفِرْ لَنَا وَارْحَمْنَآ أَنتَ مَوْلاَنَا فَانصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ﴾."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "6:1",
+      "categoryId": 6,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/salman-alotaibi/006/001-203.mp3",
+      "startMs": 0,
+      "endMs": 1672,
+      "source": {
+        "url": "https://archive.org/download/way2sona_20160320_2316/athkar_22.mp3",
+        "sha256": "7a8f38b0241e354e91f69d09dd2c7bcaee9f598b5ecdcf8e3e1f828553f88a16",
+        "startMs": 439440,
+        "endMs": 441085
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "(بِسْمِ اللَّهِ)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "17:1",
+      "categoryId": 17,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/salman-alotaibi/017/001-203.mp3",
+      "startMs": 0,
+      "endMs": 1672,
+      "source": {
+        "url": "https://archive.org/download/way2sona_20160320_2316/athkar_22.mp3",
+        "sha256": "7a8f38b0241e354e91f69d09dd2c7bcaee9f598b5ecdcf8e3e1f828553f88a16",
+        "startMs": 439440,
+        "endMs": 441085
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "(بِسْمِ اللَّهِ)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "27:8",
+      "categoryId": 27,
+      "dhikrId": 8,
+      "url": "/audio/adhkar/salman-alotaibi/027/008-203.mp3",
+      "startMs": 0,
+      "endMs": 11990,
+      "source": {
+        "url": "https://archive.org/download/way2sona_20160320_2316/athkar_22.mp3",
+        "sha256": "7a8f38b0241e354e91f69d09dd2c7bcaee9f598b5ecdcf8e3e1f828553f88a16",
+        "startMs": 565315,
+        "endMs": 577265
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْماً نافِعاً، وَرِزْقاً طَيِّباً، وَعَمَلاً مُتَقَبَّلاً"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "82:1",
+      "categoryId": 82,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/salman-alotaibi/082/001-203.mp3",
+      "startMs": 0,
+      "endMs": 5747,
+      "source": {
+        "url": "https://archive.org/download/way2sona_20160320_2316/athkar_22.mp3",
+        "sha256": "7a8f38b0241e354e91f69d09dd2c7bcaee9f598b5ecdcf8e3e1f828553f88a16",
+        "startMs": 81775,
+        "endMs": 87485
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "99:1",
+      "categoryId": 99,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/salman-alotaibi/099/001-203.mp3",
+      "startMs": 0,
+      "endMs": 1672,
+      "source": {
+        "url": "https://archive.org/download/way2sona_20160320_2316/athkar_22.mp3",
+        "sha256": "7a8f38b0241e354e91f69d09dd2c7bcaee9f598b5ecdcf8e3e1f828553f88a16",
+        "startMs": 439440,
+        "endMs": 441085
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((بِسْمِ اللَّهِ))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "104:1",
+      "categoryId": 104,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/salman-alotaibi/104/001-203.mp3",
+      "startMs": 0,
+      "endMs": 6139,
+      "source": {
+        "url": "https://archive.org/download/way2sona_20160320_2316/athkar_22.mp3",
+        "sha256": "7a8f38b0241e354e91f69d09dd2c7bcaee9f598b5ecdcf8e3e1f828553f88a16",
+        "startMs": 577295,
+        "endMs": 583400
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "126:1",
+      "categoryId": 126,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/salman-alotaibi/126/001-203.mp3",
+      "startMs": 0,
+      "endMs": 4153,
+      "source": {
+        "url": "https://archive.org/download/way2sona_20160320_2316/athkar_22.mp3",
+        "sha256": "7a8f38b0241e354e91f69d09dd2c7bcaee9f598b5ecdcf8e3e1f828553f88a16",
+        "startMs": 541195,
+        "endMs": 545305
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((لاَ إِلَهَ إِلاَّ اللَّهُ!))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    }
+  ],
+  "variants": [
+    {
+      "itemId": "1:3",
+      "categoryId": 1,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/salman-alotaibi/001/003-204-evening.mp3",
+      "startMs": 0,
+      "endMs": 51278,
+      "source": {
+        "url": "https://archive.org/download/way2sona_20160320_2316/athkar_21.mp3",
+        "sha256": "a07886af48c90095fab684e063ed24b9ba97fdc54e3b706313205cc54c45ef2d",
+        "startMs": 193735,
+        "endMs": 244980
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9508,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-evening-instruction",
+        "matchedText": "امسينا وامسي الملك لله والحمد لله لا اله الا الله وحده لا شريك له له الملك وله الحمد وهو علي كل شيء قدير رب اسالك خير ما في هذه الليلة وخير ما بعدها واعوذ بك من شر ما في هذه الليلة وشر ما بعدها رب اعوذ بك من الكسل وسوء الكبر رب اعوذ بك من عذاب في النار وعذاب في القبر"
+      },
+      "contextSection": "evening",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:3",
+      "categoryId": 1,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/salman-alotaibi/001/003-203-morning.mp3",
+      "startMs": 0,
+      "endMs": 50834,
+      "source": {
+        "url": "https://archive.org/download/way2sona_20160320_2316/athkar_22.mp3",
+        "sha256": "7a8f38b0241e354e91f69d09dd2c7bcaee9f598b5ecdcf8e3e1f828553f88a16",
+        "startMs": 194135,
+        "endMs": 244940
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9508,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ ، وَالْحَمْدُ لِلَّهِ، لاَ إِلَهَ إلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذَا الْيَوْمِ وَخَيرَ مَا بَعْدَهُ ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي  هَذَا الْيَوْمِ وَشَرِّ مَا بَعْدَهُ، رَبِّ أَعُوذُ بِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ، رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:4",
+      "categoryId": 1,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/salman-alotaibi/001/004-204-evening.mp3",
+      "startMs": 0,
+      "endMs": 15308,
+      "source": {
+        "url": "https://archive.org/download/way2sona_20160320_2316/athkar_21.mp3",
+        "sha256": "a07886af48c90095fab684e063ed24b9ba97fdc54e3b706313205cc54c45ef2d",
+        "startMs": 258235,
+        "endMs": 273500
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-evening-instruction",
+        "matchedText": "اللهم بك امسينا وبك اصبحنا وبك نحيا وبك نموت واليك المصير"
+      },
+      "contextSection": "evening",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:4",
+      "categoryId": 1,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/salman-alotaibi/001/004-203-morning.mp3",
+      "startMs": 0,
+      "endMs": 16771,
+      "source": {
+        "url": "https://archive.org/download/way2sona_20160320_2316/athkar_22.mp3",
+        "sha256": "7a8f38b0241e354e91f69d09dd2c7bcaee9f598b5ecdcf8e3e1f828553f88a16",
+        "startMs": 258115,
+        "endMs": 274845
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا ، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ وَإِلَيْكَ النُّشُورُ"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:6",
+      "categoryId": 1,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/salman-alotaibi/001/006-203-morning.mp3",
+      "startMs": 0,
+      "endMs": 28447,
+      "source": {
+        "url": "https://archive.org/download/way2sona_20160320_2316/athkar_22.mp3",
+        "sha256": "7a8f38b0241e354e91f69d09dd2c7bcaee9f598b5ecdcf8e3e1f828553f88a16",
+        "startMs": 340255,
+        "endMs": 368665
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "اللَّهُمَّ إِنِّي أَصْبَحْتُ أُشْهِدُكَ، وَأُشْهِدُ حَمَلَةَ عَرْشِكَ، وَمَلاَئِكَتِكَ، وَجَمِيعَ خَلْقِكَ، أَنَّكَ أَنْتَ اللَّهُ لَا إِلَهَ إِلاَّ أَنْتَ وَحْدَكَ لاَ شَرِيكَ لَكَ، وَأَنَّ مُحَمَّداً عَبْدُكَ وَرَسُولُكَ"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    }
+  ],
+  "sections": [
+    {
+      "id": "salman-alotaibi:203",
+      "readerId": "salman-alotaibi",
+      "title": "أذكار الصباح والمساء",
+      "type": "morning",
+      "categoryIds": [
+        1
+      ],
+      "url": "/audio/adhkar/salman-alotaibi/sections/203.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 5070825,
+      "durationMs": 631840,
+      "sha256": "7a8f38b0241e354e91f69d09dd2c7bcaee9f598b5ecdcf8e3e1f828553f88a16",
+      "timing": {
+        "startMs": 0,
+        "endMs": 631840
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://archive.org/details/way2sona_20160320_2316",
+      "publisher": "Internet Archive community archive",
+      "attributionLevel": "archive-and-published-index",
+      "source": {
+        "url": "https://archive.org/download/way2sona_20160320_2316/athkar_22.mp3",
+        "sha256": "7a8f38b0241e354e91f69d09dd2c7bcaee9f598b5ecdcf8e3e1f828553f88a16",
+        "startMs": 0,
+        "endMs": 631840
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "salman-alotaibi:204",
+      "readerId": "salman-alotaibi",
+      "title": "أذكار الصباح والمساء",
+      "type": "evening",
+      "categoryIds": [
+        1
+      ],
+      "url": "/audio/adhkar/salman-alotaibi/sections/204.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 4699051,
+      "durationMs": 585368,
+      "sha256": "a07886af48c90095fab684e063ed24b9ba97fdc54e3b706313205cc54c45ef2d",
+      "timing": {
+        "startMs": 0,
+        "endMs": 585368
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://archive.org/details/way2sona_20160320_2316",
+      "publisher": "Internet Archive community archive",
+      "attributionLevel": "archive-and-published-index",
+      "source": {
+        "url": "https://archive.org/download/way2sona_20160320_2316/athkar_21.mp3",
+        "sha256": "a07886af48c90095fab684e063ed24b9ba97fdc54e3b706313205cc54c45ef2d",
+        "startMs": 0,
+        "endMs": 585368
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    }
+  ]
+}

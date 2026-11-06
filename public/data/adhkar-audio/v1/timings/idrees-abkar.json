@@ -1,0 +1,1004 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "2026-11-06.3",
+  "reciter": "idrees-abkar",
+  "timeUnit": "milliseconds",
+  "items": [
+    {
+      "itemId": "1:1",
+      "categoryId": 1,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/idrees-abkar/001/001-202.mp3",
+      "startMs": 0,
+      "endMs": 54700,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 109775,
+        "endMs": 164425
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9455,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "أَعُوذُ بِاللَّهِ مِنَ الشَّيطَانِ الرَّجِيمِ ﴿اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَّهُ مَا فِي السَّمَوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاء وَسِعَ كُرْسِيُّهُ السَّمَوَاتِ وَالْأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ﴾."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:2",
+      "categoryId": 1,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/idrees-abkar/001/002-202.mp3",
+      "startMs": 0,
+      "endMs": 66560,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 164455,
+        "endMs": 230985
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9961,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "بسم الله الرحمن الرحيم ﴿قُلْ هُوَ اللَّهُ أَحَدٌ* اللَّهُ الصَّمَدُ* لَمْ يَلِدْ وَلَمْ يُولَدْ* وَلَمْ يَكُن لَّهُ كُفُواً أَحَدٌ﴾.  بسم الله الرحمن الرحيم ﴿قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ* مِن شَرِّ مَا خَلَقَ* وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ* وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ* وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ﴾.  بسم الله الرحمن الرحيم ﴿قُلْ أَعُوذُ بِرَبِّ النَّاسِ* مَلِكِ النَّاسِ* إِلَهِ النَّاسِ* مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ* الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ* مِنَ الْجِنَّةِ وَ النَّاسِ﴾ (ثلاثَ مرَّاتٍ)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:4",
+      "categoryId": 1,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/idrees-abkar/001/004-202-morning.mp3",
+      "startMs": 0,
+      "endMs": 13296,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 69855,
+        "endMs": 83100
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا ، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ وَإِلَيْكَ النُّشُورُ"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:5",
+      "categoryId": 1,
+      "dhikrId": 5,
+      "url": "/audio/adhkar/idrees-abkar/001/005-202.mp3",
+      "startMs": 0,
+      "endMs": 32131,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 255875,
+        "endMs": 287965
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلاَّ أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي فَإِنَّهُ لاَ يَغْفِرُ الذُّنوبَ إِلاَّ أَنْتَ))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:6",
+      "categoryId": 1,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/idrees-abkar/001/006-202-morning.mp3",
+      "startMs": 0,
+      "endMs": 25861,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 307495,
+        "endMs": 333305
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "اللَّهُمَّ إِنِّي أَصْبَحْتُ أُشْهِدُكَ، وَأُشْهِدُ حَمَلَةَ عَرْشِكَ، وَمَلاَئِكَتِكَ، وَجَمِيعَ خَلْقِكَ، أَنَّكَ أَنْتَ اللَّهُ لَا إِلَهَ إِلاَّ أَنْتَ وَحْدَكَ لاَ شَرِيكَ لَكَ، وَأَنَّ مُحَمَّداً عَبْدُكَ وَرَسُولُكَ"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:7",
+      "categoryId": 1,
+      "dhikrId": 7,
+      "url": "/audio/adhkar/idrees-abkar/001/007-202-morning.mp3",
+      "startMs": 0,
+      "endMs": 13897,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 349075,
+        "endMs": 362925
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "اللَّهُمَّ مَا أَصْبَحَ بِي مِنْ نِعْمَةٍ أَوْ بِأَحَدٍ مِنْ خَلْقِكَ فَمِنْكَ وَحْدَكَ لاَ شَرِيكَ لَكَ، فَلَكَ الْحَمْدُ وَلَكَ الشُّكْرُ"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:8",
+      "categoryId": 1,
+      "dhikrId": 8,
+      "url": "/audio/adhkar/idrees-abkar/001/008-202.mp3",
+      "startMs": 0,
+      "endMs": 29022,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 383195,
+        "endMs": 412185
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ عَافِنِي فِي بَدَنِي، اللَّهُمَّ عَافِنِي فِي سَمْعِي، اللَّهُمَّ عَافِنِي فِي بَصَرِي، لاَ إِلَهَ إِلاَّ أَنْتَ. اللَّهُمَّ  إِنِّي أَعُوذُ بِكَ مِنَ الْكُفْرِ، وَالفَقْرِ، وَأَعُوذُ بِكَ مِنْ عَذَابِ القَبْرِ، لاَ إِلَهَ إِلاَّ أَنْتَ)) (ثلاثَ مرَّاتٍ)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:9",
+      "categoryId": 1,
+      "dhikrId": 9,
+      "url": "/audio/adhkar/idrees-abkar/001/009-202.mp3",
+      "startMs": 0,
+      "endMs": 9718,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 423675,
+        "endMs": 433365
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "حَسْبِيَ اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ عَلَيهِ تَوَكَّلتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:10",
+      "categoryId": 1,
+      "dhikrId": 10,
+      "url": "/audio/adhkar/idrees-abkar/001/010-202.mp3",
+      "startMs": 0,
+      "endMs": 41221,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 441775,
+        "endMs": 482965
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9762,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي الدُّنْيَا وَالآخِرَةِ، اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ: فِي دِينِي وَدُنْيَايَ وَأَهْلِي، وَمَالِي، اللَّهُمَّ اسْتُرْ عَوْرَاتِي، وَآمِنْ رَوْعَاتِي، اللَّهُمَّ احْفَظْنِي مِنْ بَينِ يَدَيَّ، وَمِنْ خَلْفِي، وَعَنْ يَمِينِي، وَعَنْ شِمَالِي، وَمِنْ فَوْقِي، وَأَعُوذُ بِعَظَمَتِكَ أَنْ أُغْتَالَ مِنْ تَحْتِي))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:11",
+      "categoryId": 1,
+      "dhikrId": 11,
+      "url": "/audio/adhkar/idrees-abkar/001/011-202.mp3",
+      "startMs": 0,
+      "endMs": 31060,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 482995,
+        "endMs": 514005
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9429,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ عَالِمَ الغَيْبِ وَالشَّهَادَةِ فَاطِرَ السَّمَوَاتِ وَالْأَرْضِ، رَبَّ كُلِّ شَيْءٍ وَمَلِيكَهُ، أَشْهَدُ أَنْ لاَ إِلَهَ إِلاَّ أَنْتَ، أَعُوذُ بِكَ مِنْ شَرِّ نَفْسِي، وَمِنْ شَرِّ الشَّيْطانِ وَشَرَكِهِ، وَأَنْ أَقْتَرِفَ عَلَى  نَفْسِي سُوءاً، أَوْ أَجُرَّهُ إِلَى مُسْلِمٍ))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:12",
+      "categoryId": 1,
+      "dhikrId": 12,
+      "url": "/audio/adhkar/idrees-abkar/001/012-202.mp3",
+      "startMs": 0,
+      "endMs": 12278,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 514035,
+        "endMs": 526285
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((بِسْمِ اللَّهِ الَّذِي لاَ يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلاَ فِي السّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ)) (ثلاثَ مرَّاتٍ)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:13",
+      "categoryId": 1,
+      "dhikrId": 13,
+      "url": "/audio/adhkar/idrees-abkar/001/013-202.mp3",
+      "startMs": 0,
+      "endMs": 15282,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 542295,
+        "endMs": 557545
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((رَضِيتُ بِاللَّهِ رَبَّاً، وَبِالْإِسْلاَمِ دِيناً، وَبِمُحَمَّدٍ صلى الله عليه وسلم نَبِيّاً)) (ثلاثَ مرَّاتٍ)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:15",
+      "categoryId": 1,
+      "dhikrId": 15,
+      "url": "/audio/adhkar/idrees-abkar/001/015-202-morning.mp3",
+      "startMs": 0,
+      "endMs": 24424,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 600395,
+        "endMs": 624785
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ رَبِّ الْعَالَمِينَ، اللَّهُـمَّ إِنِّي أَسْأَلُكَ خَيْرَ هَذَا الْيَوْمِ:فَتْحَهُ، وَنَصْرَهُ، وَنورَهُ، وَبَرَكَتَهُ، وَهُدَاهُ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِيهِ وَشَرِّ مَا بَعْدَهُ"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:16",
+      "categoryId": 1,
+      "dhikrId": 16,
+      "url": "/audio/adhkar/idrees-abkar/001/016-202-morning.mp3",
+      "startMs": 0,
+      "endMs": 25391,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 629195,
+        "endMs": 654540
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.96,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "أَصْبَحْنا عَلَى فِطْرَةِ الْإِسْلاَمِ، وَعَلَى كَلِمَةِ الْإِخْلاَصِ، وَعَلَى دِينِ نَبِيِّنَا مُحَمَّدٍ صلى الله عليه وسلم، وَعَلَى مِلَّةِ أَبِينَا إِبْرَاهِيمَ، حَنِيفاً مُسْلِماً وَمَا كَانَ مِنَ الْمُشرِكِينَ"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:17",
+      "categoryId": 1,
+      "dhikrId": 17,
+      "url": "/audio/adhkar/idrees-abkar/001/017-202.mp3",
+      "startMs": 0,
+      "endMs": 3840,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 752435,
+        "endMs": 756225
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((سُبْحَانَ اللَّهِ وَبِحَمْدِهِ)) (مائة مرَّةٍ)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:18",
+      "categoryId": 1,
+      "dhikrId": 18,
+      "url": "/audio/adhkar/idrees-abkar/001/018-202.mp3",
+      "startMs": 0,
+      "endMs": 13584,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 704895,
+        "endMs": 718440
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:19",
+      "categoryId": 1,
+      "dhikrId": 19,
+      "url": "/audio/adhkar/idrees-abkar/001/019-202.mp3",
+      "startMs": 0,
+      "endMs": 13584,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 704895,
+        "endMs": 718440
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((لاَ إِلَهَ إِلاَّ اللَّهُ، وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ)) (مائةَ مرَّةٍ إذا أصبحَ)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:21",
+      "categoryId": 1,
+      "dhikrId": 21,
+      "url": "/audio/adhkar/idrees-abkar/001/021-202.mp3",
+      "startMs": 0,
+      "endMs": 12722,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 774075,
+        "endMs": 786765
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْماً نَافِعاً، وَرِزْقاً طَيِّباً، وَعَمَلاً مُتَقَبَّلاً"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:22",
+      "categoryId": 1,
+      "dhikrId": 22,
+      "url": "/audio/adhkar/idrees-abkar/001/022-202.mp3",
+      "startMs": 0,
+      "endMs": 5198,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 791535,
+        "endMs": 796705
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:23",
+      "categoryId": 1,
+      "dhikrId": 23,
+      "url": "/audio/adhkar/idrees-abkar/001/023-202.mp3",
+      "startMs": 0,
+      "endMs": 7419,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 803015,
+        "endMs": 810385
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ)) (ثلاثَ مرَّاتٍ إذا أمسى)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "2:2",
+      "categoryId": 2,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/idrees-abkar/002/002-202.mp3",
+      "startMs": 0,
+      "endMs": 49267,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 115200,
+        "endMs": 164425
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.94,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "﴿اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَّهُ مَا فِي السَّمَوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْـــــــــــدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاء وَسِعَ كُرْسِيُّهُ السَّمَوَاتِ وَالأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ﴾."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "2:11",
+      "categoryId": 2,
+      "dhikrId": 11,
+      "url": "/audio/adhkar/idrees-abkar/002/011-202.mp3",
+      "startMs": 0,
+      "endMs": 31060,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 482995,
+        "endMs": 514005
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9429,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ عَالِمَ الغَيْبِ وَالشَّهَادَةِ فَاطِرَ السَّمَوَاتِ وَالْأَرْضِ، رَبَّ كُلِّ شَيْءٍ وَمَلِيكَهُ، أَشْهَدُ أَنْ لاَ إِلَهَ إِلاَّ أَنْتَ، أَعُوذُ بِكَ مِنْ شَرِّ نَفْسِي، وَمِنْ شَرِّ الشَّيْطانِ وَشِرْكِهِ، وَأَنْ أَقْتَرِفَ عَلَى نَفْسِي سُوءاً، أَوْ أَجُرَّهُ إِلَى مُسْلِمٍ))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "6:1",
+      "categoryId": 6,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/idrees-abkar/006/001-202.mp3",
+      "startMs": 0,
+      "endMs": 1933,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 514035,
+        "endMs": 515925
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "(بِسْمِ اللَّهِ)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "17:1",
+      "categoryId": 17,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/idrees-abkar/017/001-202.mp3",
+      "startMs": 0,
+      "endMs": 1933,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 514035,
+        "endMs": 515925
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "(بِسْمِ اللَّهِ)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "25:1",
+      "categoryId": 25,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/idrees-abkar/025/001-202.mp3",
+      "startMs": 0,
+      "endMs": 45688,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 831680,
+        "endMs": 877325
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9412,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ، وَعَلَى آلِ مُحَمَّدٍ، كَمَا صَلَّيتَ عَلَى إِبْرَاهِيمَ، وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ، كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "27:6",
+      "categoryId": 27,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/idrees-abkar/027/006-202.mp3",
+      "startMs": 0,
+      "endMs": 49267,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 115200,
+        "endMs": 164425
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.94,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-quran-passage",
+        "matchedText": "اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَّهُ مَا فِي السَّمَوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاءَ وَسِعَ كُرْسِيُّهُ السَّمَوَاتِ وَالأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "27:8",
+      "categoryId": 27,
+      "dhikrId": 8,
+      "url": "/audio/adhkar/idrees-abkar/027/008-202.mp3",
+      "startMs": 0,
+      "endMs": 12722,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 774075,
+        "endMs": 786765
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْماً نافِعاً، وَرِزْقاً طَيِّباً، وَعَمَلاً مُتَقَبَّلاً"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "82:1",
+      "categoryId": 82,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/idrees-abkar/082/001-202.mp3",
+      "startMs": 0,
+      "endMs": 5172,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 109775,
+        "endMs": 114900
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "99:1",
+      "categoryId": 99,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/idrees-abkar/099/001-202.mp3",
+      "startMs": 0,
+      "endMs": 1933,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 514035,
+        "endMs": 515925
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((بِسْمِ اللَّهِ))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "104:1",
+      "categoryId": 104,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/idrees-abkar/104/001-202.mp3",
+      "startMs": 0,
+      "endMs": 7419,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 803015,
+        "endMs": 810385
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "122:1",
+      "categoryId": 122,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/idrees-abkar/122/001-202.mp3",
+      "startMs": 0,
+      "endMs": 2273,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 752435,
+        "endMs": 754665
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((سُبْحَانَ اللَّهِ!))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "126:1",
+      "categoryId": 126,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/idrees-abkar/126/001-202.mp3",
+      "startMs": 0,
+      "endMs": 3657,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 704895,
+        "endMs": 708525
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((لاَ إِلَهَ إِلاَّ اللَّهُ!))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    }
+  ],
+  "variants": [
+    {
+      "itemId": "1:4",
+      "categoryId": 1,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/idrees-abkar/001/004-202-evening.mp3",
+      "startMs": 0,
+      "endMs": 12669,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 91795,
+        "endMs": 104425
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-evening-instruction",
+        "matchedText": "اللهم بك امسينا وبك اصبحنا وبك نحيا وبك نموت واليك المصير"
+      },
+      "contextSection": "evening",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:4",
+      "categoryId": 1,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/idrees-abkar/001/004-202-morning.mp3",
+      "startMs": 0,
+      "endMs": 13296,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 69855,
+        "endMs": 83100
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا ، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ وَإِلَيْكَ النُّشُورُ"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:6",
+      "categoryId": 1,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/idrees-abkar/001/006-202-evening.mp3",
+      "startMs": 0,
+      "endMs": 25861,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 307495,
+        "endMs": 333305
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.96,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-evening-instruction",
+        "matchedText": "اللهم اني امسيت اشهدك واشهد حملة عرشك وملايكتك وجميع خلقك انك انت الله لا اله الا انت وحدك لا شريك لك وان محمدا عبدك ورسولك"
+      },
+      "contextSection": "evening",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:6",
+      "categoryId": 1,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/idrees-abkar/001/006-202-morning.mp3",
+      "startMs": 0,
+      "endMs": 25861,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 307495,
+        "endMs": 333305
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "اللَّهُمَّ إِنِّي أَصْبَحْتُ أُشْهِدُكَ، وَأُشْهِدُ حَمَلَةَ عَرْشِكَ، وَمَلاَئِكَتِكَ، وَجَمِيعَ خَلْقِكَ، أَنَّكَ أَنْتَ اللَّهُ لَا إِلَهَ إِلاَّ أَنْتَ وَحْدَكَ لاَ شَرِيكَ لَكَ، وَأَنَّ مُحَمَّداً عَبْدُكَ وَرَسُولُكَ"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:7",
+      "categoryId": 1,
+      "dhikrId": 7,
+      "url": "/audio/adhkar/idrees-abkar/001/007-202-evening.mp3",
+      "startMs": 0,
+      "endMs": 13897,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 349075,
+        "endMs": 362925
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9474,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-evening-instruction",
+        "matchedText": "اللهم ما امسي بي من نعمة او باحد من خلقك فمنك وحدك لا شريك لك فلك الحمد ولك الشكر"
+      },
+      "contextSection": "evening",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:7",
+      "categoryId": 1,
+      "dhikrId": 7,
+      "url": "/audio/adhkar/idrees-abkar/001/007-202-morning.mp3",
+      "startMs": 0,
+      "endMs": 13897,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 349075,
+        "endMs": 362925
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "اللَّهُمَّ مَا أَصْبَحَ بِي مِنْ نِعْمَةٍ أَوْ بِأَحَدٍ مِنْ خَلْقِكَ فَمِنْكَ وَحْدَكَ لاَ شَرِيكَ لَكَ، فَلَكَ الْحَمْدُ وَلَكَ الشُّكْرُ"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:15",
+      "categoryId": 1,
+      "dhikrId": 15,
+      "url": "/audio/adhkar/idrees-abkar/001/015-202-morning.mp3",
+      "startMs": 0,
+      "endMs": 24424,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 600395,
+        "endMs": 624785
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ رَبِّ الْعَالَمِينَ، اللَّهُـمَّ إِنِّي أَسْأَلُكَ خَيْرَ هَذَا الْيَوْمِ:فَتْحَهُ، وَنَصْرَهُ، وَنورَهُ، وَبَرَكَتَهُ، وَهُدَاهُ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِيهِ وَشَرِّ مَا بَعْدَهُ"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:16",
+      "categoryId": 1,
+      "dhikrId": 16,
+      "url": "/audio/adhkar/idrees-abkar/001/016-202-morning.mp3",
+      "startMs": 0,
+      "endMs": 25391,
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 629195,
+        "endMs": 654540
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.96,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "أَصْبَحْنا عَلَى فِطْرَةِ الْإِسْلاَمِ، وَعَلَى كَلِمَةِ الْإِخْلاَصِ، وَعَلَى دِينِ نَبِيِّنَا مُحَمَّدٍ صلى الله عليه وسلم، وَعَلَى مِلَّةِ أَبِينَا إِبْرَاهِيمَ، حَنِيفاً مُسْلِماً وَمَا كَانَ مِنَ الْمُشرِكِينَ"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    }
+  ],
+  "sections": [
+    {
+      "id": "idrees-abkar:202",
+      "readerId": "idrees-abkar",
+      "title": "أذكار الصباح و المساء للقارئ إدريس أبكر",
+      "type": "day-and-night",
+      "categoryIds": [
+        1
+      ],
+      "url": "/audio/adhkar/idrees-abkar/sections/202.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 14529350,
+      "durationMs": 900005,
+      "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+      "timing": {
+        "startMs": 0,
+        "endMs": 900005
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://archive.org/details/AthkarIdreesAbka245724724724724r",
+      "publisher": "Internet Archive community archive",
+      "attributionLevel": "archive-and-published-index",
+      "source": {
+        "url": "https://archive.org/download/AthkarIdreesAbka245724724724724r/Athkar%20Idrees%20Abkar.mp3",
+        "sha256": "d9d401d7accbad1e0979267431968c737e378c80289f2a4f874a2eb8ad2e9a4b",
+        "startMs": 0,
+        "endMs": 900005
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    }
+  ]
+}

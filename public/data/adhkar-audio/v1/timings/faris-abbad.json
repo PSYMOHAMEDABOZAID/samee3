@@ -1,0 +1,1834 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "2026-11-06.3",
+  "reciter": "faris-abbad",
+  "timeUnit": "milliseconds",
+  "items": [
+    {
+      "itemId": "1:1",
+      "categoryId": 1,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/001/001.mp3",
+      "startMs": 0,
+      "endMs": 55432,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_11_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "3ed1f288adab34f68fd8ad9254387de3a73d7c506de3ea6160e564a691470904",
+        "startMs": 10420,
+        "endMs": 65780
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9455,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:2",
+      "categoryId": 1,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/faris-abbad/001/002.mp3",
+      "startMs": 0,
+      "endMs": 71053,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_11_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "3ed1f288adab34f68fd8ad9254387de3a73d7c506de3ea6160e564a691470904",
+        "startMs": 76275,
+        "endMs": 147265
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9844,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:3",
+      "categoryId": 1,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/faris-abbad/001/003-105-morning.mp3",
+      "startMs": 0,
+      "endMs": 48536,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_05.mp3",
+        "sha256": "2efd563bf5fe3367a1638404253c70c2abef5e5b0d3c9d8fc3a0cfc954531579",
+        "startMs": 618060,
+        "endMs": 666520
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9672,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ ، وَالْحَمْدُ لِلَّهِ، لاَ إِلَهَ إلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذَا الْيَوْمِ وَخَيرَ مَا بَعْدَهُ ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي  هَذَا الْيَوْمِ وَشَرِّ مَا بَعْدَهُ، رَبِّ أَعُوذُ بِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ، رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ"
+      },
+      "contextSection": "morning",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:4",
+      "categoryId": 1,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/faris-abbad/001/004.mp3",
+      "startMs": 0,
+      "endMs": 23066,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_11_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "3ed1f288adab34f68fd8ad9254387de3a73d7c506de3ea6160e564a691470904",
+        "startMs": 261675,
+        "endMs": 284665
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:5",
+      "categoryId": 1,
+      "dhikrId": 5,
+      "url": "/audio/adhkar/faris-abbad/001/005-105.mp3",
+      "startMs": 0,
+      "endMs": 34482,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_05.mp3",
+        "sha256": "2efd563bf5fe3367a1638404253c70c2abef5e5b0d3c9d8fc3a0cfc954531579",
+        "startMs": 995740,
+        "endMs": 1030160
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلاَّ أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي فَإِنَّهُ لاَ يَغْفِرُ الذُّنوبَ إِلاَّ أَنْتَ))."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:6",
+      "categoryId": 1,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/faris-abbad/001/006.mp3",
+      "startMs": 0,
+      "endMs": 31608,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_11_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "3ed1f288adab34f68fd8ad9254387de3a73d7c506de3ea6160e564a691470904",
+        "startMs": 284695,
+        "endMs": 316225
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation"
+      },
+      "contextSection": "morning",
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:7",
+      "categoryId": 1,
+      "dhikrId": 7,
+      "url": "/audio/adhkar/faris-abbad/001/007.mp3",
+      "startMs": 0,
+      "endMs": 16771,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_11_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "3ed1f288adab34f68fd8ad9254387de3a73d7c506de3ea6160e564a691470904",
+        "startMs": 322175,
+        "endMs": 338885
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation"
+      },
+      "contextSection": "morning",
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:8",
+      "categoryId": 1,
+      "dhikrId": 8,
+      "url": "/audio/adhkar/faris-abbad/001/008-105.mp3",
+      "startMs": 0,
+      "endMs": 46524,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_05.mp3",
+        "sha256": "2efd563bf5fe3367a1638404253c70c2abef5e5b0d3c9d8fc3a0cfc954531579",
+        "startMs": 847355,
+        "endMs": 893820
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ عَافِنِي فِي بَدَنِي، اللَّهُمَّ عَافِنِي فِي سَمْعِي، اللَّهُمَّ عَافِنِي فِي بَصَرِي، لاَ إِلَهَ إِلاَّ أَنْتَ. اللَّهُمَّ  إِنِّي أَعُوذُ بِكَ مِنَ الْكُفْرِ، وَالفَقْرِ، وَأَعُوذُ بِكَ مِنْ عَذَابِ القَبْرِ، لاَ إِلَهَ إِلاَّ أَنْتَ)) (ثلاثَ مرَّاتٍ)."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:9",
+      "categoryId": 1,
+      "dhikrId": 9,
+      "url": "/audio/adhkar/faris-abbad/001/009.mp3",
+      "startMs": 0,
+      "endMs": 12147,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_11_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "3ed1f288adab34f68fd8ad9254387de3a73d7c506de3ea6160e564a691470904",
+        "startMs": 484115,
+        "endMs": 496200
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:12",
+      "categoryId": 1,
+      "dhikrId": 12,
+      "url": "/audio/adhkar/faris-abbad/001/012-105.mp3",
+      "startMs": 0,
+      "endMs": 13140,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_05.mp3",
+        "sha256": "2efd563bf5fe3367a1638404253c70c2abef5e5b0d3c9d8fc3a0cfc954531579",
+        "startMs": 442260,
+        "endMs": 455325
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((بِسْمِ اللَّهِ الَّذِي لاَ يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلاَ فِي السّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ)) (ثلاثَ مرَّاتٍ)."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:13",
+      "categoryId": 1,
+      "dhikrId": 13,
+      "url": "/audio/adhkar/faris-abbad/001/013-105.mp3",
+      "startMs": 0,
+      "endMs": 11363,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_05.mp3",
+        "sha256": "2efd563bf5fe3367a1638404253c70c2abef5e5b0d3c9d8fc3a0cfc954531579",
+        "startMs": 506355,
+        "endMs": 517665
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((رَضِيتُ بِاللَّهِ رَبَّاً، وَبِالْإِسْلاَمِ دِيناً، وَبِمُحَمَّدٍ صلى الله عليه وسلم نَبِيّاً)) (ثلاثَ مرَّاتٍ)."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:16",
+      "categoryId": 1,
+      "dhikrId": 16,
+      "url": "/audio/adhkar/faris-abbad/001/016-105-morning.mp3",
+      "startMs": 0,
+      "endMs": 26070,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_05.mp3",
+        "sha256": "2efd563bf5fe3367a1638404253c70c2abef5e5b0d3c9d8fc3a0cfc954531579",
+        "startMs": 591555,
+        "endMs": 617560
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.96,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "أَصْبَحْنا عَلَى فِطْرَةِ الْإِسْلاَمِ، وَعَلَى كَلِمَةِ الْإِخْلاَصِ، وَعَلَى دِينِ نَبِيِّنَا مُحَمَّدٍ صلى الله عليه وسلم، وَعَلَى مِلَّةِ أَبِينَا إِبْرَاهِيمَ، حَنِيفاً مُسْلِماً وَمَا كَانَ مِنَ الْمُشرِكِينَ"
+      },
+      "contextSection": "morning",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:17",
+      "categoryId": 1,
+      "dhikrId": 17,
+      "url": "/audio/adhkar/faris-abbad/001/017-105.mp3",
+      "startMs": 0,
+      "endMs": 12016,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_05.mp3",
+        "sha256": "2efd563bf5fe3367a1638404253c70c2abef5e5b0d3c9d8fc3a0cfc954531579",
+        "startMs": 1211600,
+        "endMs": 1223560
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((سُبْحَانَ اللَّهِ وَبِحَمْدِهِ)) (مائة مرَّةٍ)."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:18",
+      "categoryId": 1,
+      "dhikrId": 18,
+      "url": "/audio/adhkar/faris-abbad/001/018.mp3",
+      "startMs": 0,
+      "endMs": 15543,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_11_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "3ed1f288adab34f68fd8ad9254387de3a73d7c506de3ea6160e564a691470904",
+        "startMs": 192955,
+        "endMs": 208420
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:19",
+      "categoryId": 1,
+      "dhikrId": 19,
+      "url": "/audio/adhkar/faris-abbad/001/019.mp3",
+      "startMs": 0,
+      "endMs": 15543,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_11_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "3ed1f288adab34f68fd8ad9254387de3a73d7c506de3ea6160e564a691470904",
+        "startMs": 192955,
+        "endMs": 208420
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:21",
+      "categoryId": 1,
+      "dhikrId": 21,
+      "url": "/audio/adhkar/faris-abbad/001/021-105.mp3",
+      "startMs": 0,
+      "endMs": 11598,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_05.mp3",
+        "sha256": "2efd563bf5fe3367a1638404253c70c2abef5e5b0d3c9d8fc3a0cfc954531579",
+        "startMs": 983875,
+        "endMs": 995420
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْماً نَافِعاً، وَرِزْقاً طَيِّباً، وَعَمَلاً مُتَقَبَّلاً"
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:23",
+      "categoryId": 1,
+      "dhikrId": 23,
+      "url": "/audio/adhkar/faris-abbad/001/023-105.mp3",
+      "startMs": 0,
+      "endMs": 24163,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_05.mp3",
+        "sha256": "2efd563bf5fe3367a1638404253c70c2abef5e5b0d3c9d8fc3a0cfc954531579",
+        "startMs": 455355,
+        "endMs": 479445
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ)) (ثلاثَ مرَّاتٍ إذا أمسى)."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "2:2",
+      "categoryId": 2,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/faris-abbad/002/002.mp3",
+      "startMs": 0,
+      "endMs": 51566,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_12_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "04643a295824d46c4916fb7347b62e3a85d25b8bba3972e4617daa91277d137b",
+        "startMs": 3735,
+        "endMs": 55225
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.94,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "2:3",
+      "categoryId": 2,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/faris-abbad/002/003.mp3",
+      "startMs": 0,
+      "endMs": 92865,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_12_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "04643a295824d46c4916fb7347b62e3a85d25b8bba3972e4617daa91277d137b",
+        "startMs": 69535,
+        "endMs": 162325
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9615,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "2:4",
+      "categoryId": 2,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/faris-abbad/002/004.mp3",
+      "startMs": 0,
+      "endMs": 21917,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_12_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "04643a295824d46c4916fb7347b62e3a85d25b8bba3972e4617daa91277d137b",
+        "startMs": 182125,
+        "endMs": 203970
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9444,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "6:1",
+      "categoryId": 6,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/006/001-105.mp3",
+      "startMs": 0,
+      "endMs": 1698,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_05.mp3",
+        "sha256": "2efd563bf5fe3367a1638404253c70c2abef5e5b0d3c9d8fc3a0cfc954531579",
+        "startMs": 442260,
+        "endMs": 443885
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "(بِسْمِ اللَّهِ)."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "8:1",
+      "categoryId": 8,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/008/001.mp3",
+      "startMs": 0,
+      "endMs": 9482,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_04_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "cafa99f59caddbfe44317dacb57227eb31f25576cce1d1ebd7662a2716d42cfd",
+        "startMs": 2415,
+        "endMs": 11825
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "8:2",
+      "categoryId": 8,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/faris-abbad/008/002.mp3",
+      "startMs": 0,
+      "endMs": 13166,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_04_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "cafa99f59caddbfe44317dacb57227eb31f25576cce1d1ebd7662a2716d42cfd",
+        "startMs": 11855,
+        "endMs": 24960
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "9:1",
+      "categoryId": 9,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/009/001.mp3",
+      "startMs": 0,
+      "endMs": 24101,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_05_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "5b05399914fb9b7a8c963c19b4cad83d121e53529bc9836fe1d84bce905af8a4",
+        "startMs": 0,
+        "endMs": 24101
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "10:1",
+      "categoryId": 10,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/010/001.mp3",
+      "startMs": 0,
+      "endMs": 86116,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_06_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "67db7f511d61f0748bb2863870f98106d1fa1606f7fc4dd85a47015649021a44",
+        "startMs": 0,
+        "endMs": 86116
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "11:1",
+      "categoryId": 11,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/011/001.mp3",
+      "startMs": 0,
+      "endMs": 69920,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_07_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "37fc2c47a646082acfa098b6da308842844582c164369a5bf98bfbe2c72e3b23",
+        "startMs": 0,
+        "endMs": 69920
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "14:1",
+      "categoryId": 14,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/014/001.mp3",
+      "startMs": 0,
+      "endMs": 15794,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_02_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "0e061ee696c0c5149850538ca14cb0201379911549306d736eed47499b27b46e",
+        "startMs": 0,
+        "endMs": 15794
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "15:1",
+      "categoryId": 15,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/015/001.mp3",
+      "startMs": 0,
+      "endMs": 15716,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_03_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "5805c9ca43377f27c6f36ab61875109637991f5918afe5105b99de475b4f2ae5",
+        "startMs": 0,
+        "endMs": 15716
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "17:1",
+      "categoryId": 17,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/017/001-105.mp3",
+      "startMs": 0,
+      "endMs": 1698,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_05.mp3",
+        "sha256": "2efd563bf5fe3367a1638404253c70c2abef5e5b0d3c9d8fc3a0cfc954531579",
+        "startMs": 442260,
+        "endMs": 443885
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "(بِسْمِ اللَّهِ)."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "23:2",
+      "categoryId": 23,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/faris-abbad/023/002.mp3",
+      "startMs": 0,
+      "endMs": 19775,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_08_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "a970c26a11732b148ea4d6c761a49e911ee6c183e68b69776d8127dc218e039e",
+        "startMs": 1995,
+        "endMs": 21700
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "27:8",
+      "categoryId": 27,
+      "dhikrId": 8,
+      "url": "/audio/adhkar/faris-abbad/027/008.mp3",
+      "startMs": 0,
+      "endMs": 17084,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_09_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "bdf0517727a15af7b94b72f06f56f87d1a46e2c5905ab843498327f3d523d232",
+        "startMs": 5520,
+        "endMs": 22540
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "28:1",
+      "categoryId": 28,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/028/001.mp3",
+      "startMs": 0,
+      "endMs": 115895,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_10_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "5750be6a8e6d7decc7de3ae53d1c7ccb8d8958b0fd30ae2b4744c07561266636",
+        "startMs": 0,
+        "endMs": 115895
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "29:1",
+      "categoryId": 29,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/029/001.mp3",
+      "startMs": 0,
+      "endMs": 21018,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_13_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "097a9a4b4635849fdc76157ef92f0c9440e834cf532242e5832b9ffaa894251a",
+        "startMs": 0,
+        "endMs": 21018
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "30:1",
+      "categoryId": 30,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/030/001.mp3",
+      "startMs": 0,
+      "endMs": 22090,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_14_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "79d503f6047833e4e2c822c8190566401328cd670f62c7b2e35f5d4cd24aaf18",
+        "startMs": 0,
+        "endMs": 22090
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "31:1",
+      "categoryId": 31,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/031/001.mp3",
+      "startMs": 0,
+      "endMs": 13740,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_15_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "504dd54eafb5426b52aba3a946055ab026e5e1a7fa7faf927230f7bc0113c373",
+        "startMs": 2695,
+        "endMs": 16365
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9583,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "33:1",
+      "categoryId": 33,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/033/001.mp3",
+      "startMs": 0,
+      "endMs": 28098,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_16_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "d61c8bb03c1bbc43e9c0f20e75ed99f3cd1661a5d4acb4a34c0064ade10be75e",
+        "startMs": 0,
+        "endMs": 28098
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "34:1",
+      "categoryId": 34,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/034/001.mp3",
+      "startMs": 0,
+      "endMs": 49737,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_17_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "b70cd3924a03579f384e8a4b15d2330dcd4ef444e9082956d0dccbdf4decacff",
+        "startMs": 1955,
+        "endMs": 51625
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9608,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "34:2",
+      "categoryId": 34,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/faris-abbad/034/002.mp3",
+      "startMs": 0,
+      "endMs": 17084,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_17_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "b70cd3924a03579f384e8a4b15d2330dcd4ef444e9082956d0dccbdf4decacff",
+        "startMs": 60115,
+        "endMs": 77145
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9333,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "36:1",
+      "categoryId": 36,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/036/001.mp3",
+      "startMs": 0,
+      "endMs": 7811,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_18_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "6cfe94ac9e23ed30e025cd6cfa783b1907866dd9dd22df75b94d4a805f98e24f",
+        "startMs": 3160,
+        "endMs": 10905
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "36:3",
+      "categoryId": 36,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/faris-abbad/036/003.mp3",
+      "startMs": 0,
+      "endMs": 4153,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_18_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "6cfe94ac9e23ed30e025cd6cfa783b1907866dd9dd22df75b94d4a805f98e24f",
+        "startMs": 24075,
+        "endMs": 28160
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "38:1",
+      "categoryId": 38,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/038/001.mp3",
+      "startMs": 0,
+      "endMs": 31807,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_20_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "f0042b3e9ce5d1c284cbc8d082f43a682f9ebb6dbc27fd718fb71a5dff489511",
+        "startMs": 0,
+        "endMs": 31807
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "39:1",
+      "categoryId": 39,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/039/001.mp3",
+      "startMs": 0,
+      "endMs": 7174,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_21_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "d7d6f8f8c45016bd80512d71a2ff41d65cc482e0c120df8fed955f944818ddce",
+        "startMs": 0,
+        "endMs": 7174
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "41:1",
+      "categoryId": 41,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/041/001.mp3",
+      "startMs": 0,
+      "endMs": 11886,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_22_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "3a318fb0df6cce4694e767d11750bf6b80217c3e5f5b82c2e735c28af1fa6d5b",
+        "startMs": 1755,
+        "endMs": 13565
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "41:2",
+      "categoryId": 41,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/faris-abbad/041/002.mp3",
+      "startMs": 0,
+      "endMs": 16875,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_22_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "3a318fb0df6cce4694e767d11750bf6b80217c3e5f5b82c2e735c28af1fa6d5b",
+        "startMs": 15715,
+        "endMs": 32520
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9714,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "42:1",
+      "categoryId": 42,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/042/001.mp3",
+      "startMs": 0,
+      "endMs": 12372,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_23_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "7e991a298028246ca9ae673803a176bb6fbf25d5cacd2a70de9efdae0dcdd61d",
+        "startMs": 0,
+        "endMs": 12372
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "43:1",
+      "categoryId": 43,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/043/001.mp3",
+      "startMs": 0,
+      "endMs": 15898,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_24_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "3b716a12e8110e9fe1d9f6f8a9af65eb2693668e4b6947b15a149e9c32b2f092",
+        "startMs": 0,
+        "endMs": 15898
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "46:1",
+      "categoryId": 46,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/046/001.mp3",
+      "startMs": 0,
+      "endMs": 42778,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_25_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "b74c7289670e3b0df3b81bdd455a20e5531c890f02167943519bc057230c40d2",
+        "startMs": 0,
+        "endMs": 42778
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "48:1",
+      "categoryId": 48,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/048/001.mp3",
+      "startMs": 0,
+      "endMs": 26974,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_26_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "5921095b4e0d6e8654a6256c2e8a64ac1cf9593365b3a9f15e4b0193a00c3882",
+        "startMs": 0,
+        "endMs": 26974
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "53:1",
+      "categoryId": 53,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/053/001.mp3",
+      "startMs": 0,
+      "endMs": 21907,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_27_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "0a12ae962b14106659eceb355c85d5f20a74e04d0f049b4748d1ef6da78a2629",
+        "startMs": 0,
+        "endMs": 21907
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "60:1",
+      "categoryId": 60,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/060/001.mp3",
+      "startMs": 0,
+      "endMs": 43902,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_28_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "bed08c355352417cbdefb0a496ff6307d9be5a41e07666f591eeceb95c82cf43",
+        "startMs": 0,
+        "endMs": 43902
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "61:1",
+      "categoryId": 61,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/061/001.mp3",
+      "startMs": 0,
+      "endMs": 7001,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_29_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "5efe4d30d6130eb44b03509192f09528bc5e07d0caabb65980f1164105e77491",
+        "startMs": 1235,
+        "endMs": 8165
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "62:1",
+      "categoryId": 62,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/062/001.mp3",
+      "startMs": 0,
+      "endMs": 11144,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_30_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "f508d003d6fb0b5fc930a63d4ffffd7cec60bca282fd9c274f2633f673bedde6",
+        "startMs": 0,
+        "endMs": 11144
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "63:2",
+      "categoryId": 63,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/faris-abbad/063/002.mp3",
+      "startMs": 0,
+      "endMs": 9587,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_31_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "3b41e2e1eb4bf7ea18e83f36f24ad9d97d5956568fe2d11ebf7482baf215c9b1",
+        "startMs": 18135,
+        "endMs": 27645
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "64:1",
+      "categoryId": 64,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/064/001.mp3",
+      "startMs": 0,
+      "endMs": 6520,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_32_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "ad86852cc9cc33889b425d936050f2055fee04347c2b37737d424b5b909644dc",
+        "startMs": 0,
+        "endMs": 6520
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "65:1",
+      "categoryId": 65,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/065/001.mp3",
+      "startMs": 0,
+      "endMs": 5711,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_33_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "bbb489bf4a7db41fcb0d30b908fbdb5f375ece63c7b442a4a93bc3e47ea52a07",
+        "startMs": 0,
+        "endMs": 5711
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "67:1",
+      "categoryId": 67,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/067/001.mp3",
+      "startMs": 0,
+      "endMs": 25067,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_34_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "19177cf593319d736bc8f2f47c36246cc16a136f63fe803cd9c2cbe307ca6d31",
+        "startMs": 0,
+        "endMs": 25067
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "70:1",
+      "categoryId": 70,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/070/001.mp3",
+      "startMs": 0,
+      "endMs": 12330,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_35_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "ade04a9ead7dcd79da70fdd2188d46afec6e2ea4053c02c4e65eb48d76d4992a",
+        "startMs": 2535,
+        "endMs": 14800
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "81:1",
+      "categoryId": 81,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/081/001.mp3",
+      "startMs": 0,
+      "endMs": 12476,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_36_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "b9c36fd574a5188c2ad8052c9686af37f00c4931c2af49d5c9f0f2d863750d44",
+        "startMs": 0,
+        "endMs": 12476
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "83:1",
+      "categoryId": 83,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/083/001.mp3",
+      "startMs": 0,
+      "endMs": 15898,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_37_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "098787bbc8a2c90c6a120ec5882ff6a248a715be7dfd771a6178677b61889374",
+        "startMs": 0,
+        "endMs": 15898
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "85:1",
+      "categoryId": 85,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/085/001.mp3",
+      "startMs": 0,
+      "endMs": 19059,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_47_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "bb659fb14b34e98c217cf9b0f0468b75dc71e352a75edd346bc9f2f1137b5501",
+        "startMs": 0,
+        "endMs": 19059
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "95:1",
+      "categoryId": 95,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/095/001.mp3",
+      "startMs": 0,
+      "endMs": 45495,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_38_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "6f8ab9e0af1fb77291083491d6bfbe27c0cf916958517a003d976721465badf2",
+        "startMs": 0,
+        "endMs": 45495
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "96:1",
+      "categoryId": 96,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/096/001.mp3",
+      "startMs": 0,
+      "endMs": 70520,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_39_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "72c2409dc86f7db89be3500fb27496b29c37f053ae4817b920252853f84c9e74",
+        "startMs": 0,
+        "endMs": 70520
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "97:1",
+      "categoryId": 97,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/097/001.mp3",
+      "startMs": 0,
+      "endMs": 37110,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_40_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "fa8c343f75f8ffc29d5780ebb233c964fd867b654ea93bdc99eef1158529c05b",
+        "startMs": 0,
+        "endMs": 37110
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "98:1",
+      "categoryId": 98,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/098/001.mp3",
+      "startMs": 0,
+      "endMs": 30161,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_41_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "b9e2d215e6487ac714de0d2c3715284f5a36643a4b752933a8607948d027a516",
+        "startMs": 0,
+        "endMs": 30161
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "99:1",
+      "categoryId": 99,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/099/001-105.mp3",
+      "startMs": 0,
+      "endMs": 1698,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_05.mp3",
+        "sha256": "2efd563bf5fe3367a1638404253c70c2abef5e5b0d3c9d8fc3a0cfc954531579",
+        "startMs": 442260,
+        "endMs": 443885
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((بِسْمِ اللَّهِ))."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "100:1",
+      "categoryId": 100,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/100/001.mp3",
+      "startMs": 0,
+      "endMs": 9185,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_42_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "6938653a3f3972aeb9bb134d4cf476639ac27d0e00aebfcfb96bbf9f4ae5c96f",
+        "startMs": 0,
+        "endMs": 9185
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "101:2",
+      "categoryId": 101,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/faris-abbad/101/002.mp3",
+      "startMs": 0,
+      "endMs": 9117,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_43_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "2d060ec0b5840a4e8263bcb3bc6d37bfc8065ea92e8ad9b92986aa07cfae9aed",
+        "startMs": 10315,
+        "endMs": 19373
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "104:1",
+      "categoryId": 104,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/104/001-105.mp3",
+      "startMs": 0,
+      "endMs": 24163,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_05.mp3",
+        "sha256": "2efd563bf5fe3367a1638404253c70c2abef5e5b0d3c9d8fc3a0cfc954531579",
+        "startMs": 455355,
+        "endMs": 479445
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ))."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "114:1",
+      "categoryId": 114,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/114/001.mp3",
+      "startMs": 0,
+      "endMs": 16734,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_44_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "e1715fcee141ed44eccd2aab00ee4f8494260622de0ccd4d18c948a0fa459a2c",
+        "startMs": 0,
+        "endMs": 16734
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "122:1",
+      "categoryId": 122,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/122/001-105.mp3",
+      "startMs": 0,
+      "endMs": 3004,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_05.mp3",
+        "sha256": "2efd563bf5fe3367a1638404253c70c2abef5e5b0d3c9d8fc3a0cfc954531579",
+        "startMs": 1211600,
+        "endMs": 1214545
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((سُبْحَانَ اللَّهِ!))."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "126:1",
+      "categoryId": 126,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/126/001-105.mp3",
+      "startMs": 0,
+      "endMs": 3344,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_05.mp3",
+        "sha256": "2efd563bf5fe3367a1638404253c70c2abef5e5b0d3c9d8fc3a0cfc954531579",
+        "startMs": 625075,
+        "endMs": 628345
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((لاَ إِلَهَ إِلاَّ اللَّهُ!))."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "127:1",
+      "categoryId": 127,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/127/001.mp3",
+      "startMs": 0,
+      "endMs": 11797,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_45_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "0c7c61f06f7b0dd7fb5af555c6d0bc54c8b76689066cab0bdfdef4ea6bf8ca9a",
+        "startMs": 0,
+        "endMs": 11797
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "128:1",
+      "categoryId": 128,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/faris-abbad/128/001.mp3",
+      "startMs": 0,
+      "endMs": 52914,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_Faris/ar_46_Hisn_Almuslim_Faris_Abbad.mp3",
+        "sha256": "a972dffcfde595b5771762965108aba4c4e7412d3577d16ca9958cb641fcb3a4",
+        "startMs": 0,
+        "endMs": 52914
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    }
+  ],
+  "variants": [
+    {
+      "itemId": "1:3",
+      "categoryId": 1,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/faris-abbad/001/003-106-evening.mp3",
+      "startMs": 0,
+      "endMs": 49241,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_06.mp3",
+        "sha256": "0d13c4744325e0fc5ab7a2c35ea0d65fe8b794dfb21ae01f6449be8471b819d0",
+        "startMs": 616580,
+        "endMs": 665765
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-evening-instruction",
+        "matchedText": "امسينا وامسي الملك لله والحمد لله لا اله الا الله وحده لا شريك له له الملك وله الحمد وهو علي كل شيء قدير رب اسالك خير ما في هذه الليلة وخير ما بعدها واعوذ بك من شر ما في هذه الليلة وشر ما بعدها رب اعوذ بك من الكسل وسوء الكبر رب اعوذ بك من عذاب في النار وعذاب في القبر"
+      },
+      "contextSection": "evening",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:3",
+      "categoryId": 1,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/faris-abbad/001/003-105-morning.mp3",
+      "startMs": 0,
+      "endMs": 48536,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_05.mp3",
+        "sha256": "2efd563bf5fe3367a1638404253c70c2abef5e5b0d3c9d8fc3a0cfc954531579",
+        "startMs": 618060,
+        "endMs": 666520
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9672,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ ، وَالْحَمْدُ لِلَّهِ، لاَ إِلَهَ إلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذَا الْيَوْمِ وَخَيرَ مَا بَعْدَهُ ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي  هَذَا الْيَوْمِ وَشَرِّ مَا بَعْدَهُ، رَبِّ أَعُوذُ بِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ، رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ"
+      },
+      "contextSection": "morning",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:4",
+      "categoryId": 1,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/faris-abbad/001/004-106-evening.mp3",
+      "startMs": 0,
+      "endMs": 12225,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_06.mp3",
+        "sha256": "0d13c4744325e0fc5ab7a2c35ea0d65fe8b794dfb21ae01f6449be8471b819d0",
+        "startMs": 665795,
+        "endMs": 677960
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-evening-instruction",
+        "matchedText": "اللهم بك امسينا وبك اصبحنا وبك نحيا وبك نموت واليك المصير"
+      },
+      "contextSection": "evening",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:4",
+      "categoryId": 1,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/faris-abbad/001/004-105-morning.mp3",
+      "startMs": 0,
+      "endMs": 11912,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_05.mp3",
+        "sha256": "2efd563bf5fe3367a1638404253c70c2abef5e5b0d3c9d8fc3a0cfc954531579",
+        "startMs": 667040,
+        "endMs": 678880
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا ، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ وَإِلَيْكَ النُّشُورُ"
+      },
+      "contextSection": "morning",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:6",
+      "categoryId": 1,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/faris-abbad/001/006-106-evening.mp3",
+      "startMs": 0,
+      "endMs": 27873,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_06.mp3",
+        "sha256": "0d13c4744325e0fc5ab7a2c35ea0d65fe8b794dfb21ae01f6449be8471b819d0",
+        "startMs": 758820,
+        "endMs": 786640
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.96,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-evening-instruction",
+        "matchedText": "اللهم اني امسيت اشهدك واشهد حملة عرشك وملايكتك وجميع خلقك انك انت الله لا اله الا انت وحدك لا شريك لك وان محمدا عبدك ورسولك"
+      },
+      "contextSection": "evening",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:6",
+      "categoryId": 1,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/faris-abbad/001/006-105-morning.mp3",
+      "startMs": 0,
+      "endMs": 26828,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_05.mp3",
+        "sha256": "2efd563bf5fe3367a1638404253c70c2abef5e5b0d3c9d8fc3a0cfc954531579",
+        "startMs": 759015,
+        "endMs": 785780
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.96,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "اللَّهُمَّ إِنِّي أَصْبَحْتُ أُشْهِدُكَ، وَأُشْهِدُ حَمَلَةَ عَرْشِكَ، وَمَلاَئِكَتِكَ، وَجَمِيعَ خَلْقِكَ، أَنَّكَ أَنْتَ اللَّهُ لَا إِلَهَ إِلاَّ أَنْتَ وَحْدَكَ لاَ شَرِيكَ لَكَ، وَأَنَّ مُحَمَّداً عَبْدُكَ وَرَسُولُكَ"
+      },
+      "contextSection": "morning",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:7",
+      "categoryId": 1,
+      "dhikrId": 7,
+      "url": "/audio/adhkar/faris-abbad/001/007-106-evening.mp3",
+      "startMs": 0,
+      "endMs": 13244,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_06.mp3",
+        "sha256": "0d13c4744325e0fc5ab7a2c35ea0d65fe8b794dfb21ae01f6449be8471b819d0",
+        "startMs": 786720,
+        "endMs": 799905
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9474,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-evening-instruction",
+        "matchedText": "اللهم ما امسي بي من نعمة او باحد من خلقك فمنك وحدك لا شريك لك فلك الحمد ولك الشكر"
+      },
+      "contextSection": "evening",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:7",
+      "categoryId": 1,
+      "dhikrId": 7,
+      "url": "/audio/adhkar/faris-abbad/001/007-105-morning.mp3",
+      "startMs": 0,
+      "endMs": 14158,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_05.mp3",
+        "sha256": "2efd563bf5fe3367a1638404253c70c2abef5e5b0d3c9d8fc3a0cfc954531579",
+        "startMs": 785960,
+        "endMs": 800045
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "اللَّهُمَّ مَا أَصْبَحَ بِي مِنْ نِعْمَةٍ أَوْ بِأَحَدٍ مِنْ خَلْقِكَ فَمِنْكَ وَحْدَكَ لاَ شَرِيكَ لَكَ، فَلَكَ الْحَمْدُ وَلَكَ الشُّكْرُ"
+      },
+      "contextSection": "morning",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:16",
+      "categoryId": 1,
+      "dhikrId": 16,
+      "url": "/audio/adhkar/faris-abbad/001/016-105-morning.mp3",
+      "startMs": 0,
+      "endMs": 26070,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_05.mp3",
+        "sha256": "2efd563bf5fe3367a1638404253c70c2abef5e5b0d3c9d8fc3a0cfc954531579",
+        "startMs": 591555,
+        "endMs": 617560
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.96,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "أَصْبَحْنا عَلَى فِطْرَةِ الْإِسْلاَمِ، وَعَلَى كَلِمَةِ الْإِخْلاَصِ، وَعَلَى دِينِ نَبِيِّنَا مُحَمَّدٍ صلى الله عليه وسلم، وَعَلَى مِلَّةِ أَبِينَا إِبْرَاهِيمَ، حَنِيفاً مُسْلِماً وَمَا كَانَ مِنَ الْمُشرِكِينَ"
+      },
+      "contextSection": "morning",
+      "rightsId": "tvquran-noncommercial"
+    }
+  ],
+  "sections": [
+    {
+      "id": "faris-abbad:105",
+      "readerId": "faris-abbad",
+      "title": "أذكار الصباح",
+      "type": "morning",
+      "categoryIds": [
+        1
+      ],
+      "url": "/audio/adhkar/faris-abbad/sections/105.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 9873243,
+      "durationMs": 1233387,
+      "sha256": "2efd563bf5fe3367a1638404253c70c2abef5e5b0d3c9d8fc3a0cfc954531579",
+      "timing": {
+        "startMs": 0,
+        "endMs": 1233387
+      },
+      "rightsId": "tvquran-noncommercial",
+      "sourcePage": "https://www.tvquran.com/ar/selection/5/embeddable",
+      "publisher": "TVQuran.com",
+      "attributionLevel": "publisher-attributed",
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_05.mp3",
+        "sha256": "2efd563bf5fe3367a1638404253c70c2abef5e5b0d3c9d8fc3a0cfc954531579",
+        "startMs": 0,
+        "endMs": 1233387
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "faris-abbad:106",
+      "readerId": "faris-abbad",
+      "title": "أذكار المساء",
+      "type": "evening",
+      "categoryIds": [
+        1
+      ],
+      "url": "/audio/adhkar/faris-abbad/sections/106.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 9830403,
+      "durationMs": 1228032,
+      "sha256": "0d13c4744325e0fc5ab7a2c35ea0d65fe8b794dfb21ae01f6449be8471b819d0",
+      "timing": {
+        "startMs": 0,
+        "endMs": 1228032
+      },
+      "rightsId": "tvquran-noncommercial",
+      "sourcePage": "https://www.tvquran.com/ar/selection/6/embeddable",
+      "publisher": "TVQuran.com",
+      "attributionLevel": "publisher-attributed",
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_06.mp3",
+        "sha256": "0d13c4744325e0fc5ab7a2c35ea0d65fe8b794dfb21ae01f6449be8471b819d0",
+        "startMs": 0,
+        "endMs": 1228032
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    }
+  ]
+}

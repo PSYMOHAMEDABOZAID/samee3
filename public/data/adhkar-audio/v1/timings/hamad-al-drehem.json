@@ -1,0 +1,5083 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "2026-11-06.3",
+  "reciter": "hamad-al-drehem",
+  "timeUnit": "milliseconds",
+  "items": [
+    {
+      "itemId": "1:1",
+      "categoryId": 1,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/001/001.mp3",
+      "startMs": 0,
+      "endMs": 74823,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/75.mp3",
+        "sha256": "f4013b5035e4108afd8d1a47376a11520cb74a7da0b307e8555a0d744392359b",
+        "startMs": 0,
+        "endMs": 74823
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:2",
+      "categoryId": 1,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/001/002.mp3",
+      "startMs": 0,
+      "endMs": 90784,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/76.mp3",
+        "sha256": "8c5493937b4bb7e8976fe07f1b6fcf1c3ac583be77232aca40b9b3a5b432e55e",
+        "startMs": 0,
+        "endMs": 90784
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:3",
+      "categoryId": 1,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/hamad-al-drehem/001/003.mp3",
+      "startMs": 0,
+      "endMs": 53872,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/77.mp3",
+        "sha256": "3ddb2c1f13058cfe2ede03231d6aa964a1bf973b6fe01aa6f07a8e8ca83d6244",
+        "startMs": 0,
+        "endMs": 53872
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:4",
+      "categoryId": 1,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/hamad-al-drehem/001/004.mp3",
+      "startMs": 0,
+      "endMs": 22970,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/78.mp3",
+        "sha256": "b654dcbdc2e76ac893b2b098d767634f8342102fe587c2e082b5b4d5b0f16509",
+        "startMs": 0,
+        "endMs": 22970
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:5",
+      "categoryId": 1,
+      "dhikrId": 5,
+      "url": "/audio/adhkar/hamad-al-drehem/001/005.mp3",
+      "startMs": 0,
+      "endMs": 26966,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/79.mp3",
+        "sha256": "a97f8c9b98712bddd5c50c8d33f1128028d92033ee3485728d1c37b9ac995766",
+        "startMs": 0,
+        "endMs": 26966
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:6",
+      "categoryId": 1,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/hamad-al-drehem/001/006.mp3",
+      "startMs": 0,
+      "endMs": 24981,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/80.mp3",
+        "sha256": "caecbd39ce40617a6970da63316f57115d8438998ded1426b9a0242df98c1012",
+        "startMs": 0,
+        "endMs": 24981
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:7",
+      "categoryId": 1,
+      "dhikrId": 7,
+      "url": "/audio/adhkar/hamad-al-drehem/001/007.mp3",
+      "startMs": 0,
+      "endMs": 11006,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/81.mp3",
+        "sha256": "36833e94a06a40671b5d74a4e17a366a5d90982a72a8ddf5e59593fb4f05684c",
+        "startMs": 0,
+        "endMs": 11006
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:8",
+      "categoryId": 1,
+      "dhikrId": 8,
+      "url": "/audio/adhkar/hamad-al-drehem/001/008.mp3",
+      "startMs": 0,
+      "endMs": 31956,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/82.mp3",
+        "sha256": "a92359c5def750f6801dd3138e6aa8f786b78b213f07c8af865bbdaaa7a3e65c",
+        "startMs": 0,
+        "endMs": 31956
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:9",
+      "categoryId": 1,
+      "dhikrId": 9,
+      "url": "/audio/adhkar/hamad-al-drehem/001/009.mp3",
+      "startMs": 0,
+      "endMs": 10013,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/83.mp3",
+        "sha256": "043e01a9fce0b1a96d0aa5ce34d5de12d2e77191329a208d7f9c08c0533479a1",
+        "startMs": 0,
+        "endMs": 10013
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:10",
+      "categoryId": 1,
+      "dhikrId": 10,
+      "url": "/audio/adhkar/hamad-al-drehem/001/010.mp3",
+      "startMs": 0,
+      "endMs": 35926,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/84.mp3",
+        "sha256": "7349914e738eabfff35ffc2d7c5ebe1df3de5243e3600f9c8d7be192031054c3",
+        "startMs": 0,
+        "endMs": 35926
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:11",
+      "categoryId": 1,
+      "dhikrId": 11,
+      "url": "/audio/adhkar/hamad-al-drehem/001/011.mp3",
+      "startMs": 0,
+      "endMs": 27959,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/85.mp3",
+        "sha256": "864f0e5d804ceb874de0e1c9716aa9ce1c81ba26a88297b6bc8d0f0e274501d2",
+        "startMs": 0,
+        "endMs": 27959
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:12",
+      "categoryId": 1,
+      "dhikrId": 12,
+      "url": "/audio/adhkar/hamad-al-drehem/001/012.mp3",
+      "startMs": 0,
+      "endMs": 11998,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/86.mp3",
+        "sha256": "ba25e2c40ea87b9e9f767a2f0c5da71c38205bd4a8fecfbb652f8a957810c99c",
+        "startMs": 0,
+        "endMs": 11998
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:13",
+      "categoryId": 1,
+      "dhikrId": 13,
+      "url": "/audio/adhkar/hamad-al-drehem/001/013.mp3",
+      "startMs": 0,
+      "endMs": 13017,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/87.mp3",
+        "sha256": "8991c6c180ecc7f4f969f4909e4464af977668991d5db63546cabb1f4f6b524e",
+        "startMs": 0,
+        "endMs": 13017
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:14",
+      "categoryId": 1,
+      "dhikrId": 14,
+      "url": "/audio/adhkar/hamad-al-drehem/001/014.mp3",
+      "startMs": 0,
+      "endMs": 15002,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/88.mp3",
+        "sha256": "0ab04832456d070e7e3154cbb3a064a4f60371181b1be332824944387f697e7e",
+        "startMs": 0,
+        "endMs": 15002
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:15",
+      "categoryId": 1,
+      "dhikrId": 15,
+      "url": "/audio/adhkar/hamad-al-drehem/001/015.mp3",
+      "startMs": 0,
+      "endMs": 20984,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/89.mp3",
+        "sha256": "586b112b608afb04e4fd56e0284d4d24f7b9c49287e1abb3e9a1fcf9e2e8ecc1",
+        "startMs": 0,
+        "endMs": 20984
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:16",
+      "categoryId": 1,
+      "dhikrId": 16,
+      "url": "/audio/adhkar/hamad-al-drehem/001/016.mp3",
+      "startMs": 0,
+      "endMs": 22970,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/90.mp3",
+        "sha256": "037ee1f00288d7fc35611461cc2bcc8a52c065c6b7cb75127258b9e56a130f4a",
+        "startMs": 0,
+        "endMs": 22970
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:17",
+      "categoryId": 1,
+      "dhikrId": 17,
+      "url": "/audio/adhkar/hamad-al-drehem/001/017.mp3",
+      "startMs": 0,
+      "endMs": 5024,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/91.mp3",
+        "sha256": "1b743aafba753a144f72761044876f8036c485bcf6ccd4a9abf942c28318b444",
+        "startMs": 0,
+        "endMs": 5024
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:18",
+      "categoryId": 1,
+      "dhikrId": 18,
+      "url": "/audio/adhkar/hamad-al-drehem/001/018.mp3",
+      "startMs": 0,
+      "endMs": 17980,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/92.mp3",
+        "sha256": "10e5fad258ee7f39f7c891a38c66df99460620a06289b902a7430c6758c84a59",
+        "startMs": 0,
+        "endMs": 17980
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:19",
+      "categoryId": 1,
+      "dhikrId": 19,
+      "url": "/audio/adhkar/hamad-al-drehem/001/019.mp3",
+      "startMs": 0,
+      "endMs": 15002,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/93.mp3",
+        "sha256": "a0b274af9c3006334f6a09c8632542f6310cab8bbaf2b662287a714eea0e1b39",
+        "startMs": 0,
+        "endMs": 15002
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:20",
+      "categoryId": 1,
+      "dhikrId": 20,
+      "url": "/audio/adhkar/hamad-al-drehem/001/020.mp3",
+      "startMs": 0,
+      "endMs": 15995,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/94.mp3",
+        "sha256": "767b1db4e25319c31ad0e5fc526549c4c3c235b3445938e178428db8035b40c1",
+        "startMs": 0,
+        "endMs": 15995
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:21",
+      "categoryId": 1,
+      "dhikrId": 21,
+      "url": "/audio/adhkar/hamad-al-drehem/001/021.mp3",
+      "startMs": 0,
+      "endMs": 11998,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/95.mp3",
+        "sha256": "b9683e27a735c77d0fdf402e54af2db50c03dd1f26539507612cf016e20419de",
+        "startMs": 0,
+        "endMs": 11998
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:22",
+      "categoryId": 1,
+      "dhikrId": 22,
+      "url": "/audio/adhkar/hamad-al-drehem/001/022.mp3",
+      "startMs": 0,
+      "endMs": 8028,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/96.mp3",
+        "sha256": "056b361984d4550623043cca7c3599c9caf4d5008fa75ed1fa568abb69c30db5",
+        "startMs": 0,
+        "endMs": 8028
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:23",
+      "categoryId": 1,
+      "dhikrId": 23,
+      "url": "/audio/adhkar/hamad-al-drehem/001/023.mp3",
+      "startMs": 0,
+      "endMs": 10013,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/97.mp3",
+        "sha256": "73ad9882959eec1fb8925247d9999b4c5aafa396ae4560d76faae0327cbe7e84",
+        "startMs": 0,
+        "endMs": 10013
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:24",
+      "categoryId": 1,
+      "dhikrId": 24,
+      "url": "/audio/adhkar/hamad-al-drehem/001/024.mp3",
+      "startMs": 0,
+      "endMs": 9752,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/98.mp3",
+        "sha256": "8fcd6a491203dff8c2ed635462c23b81e7079227464ea4cca719bf63b5bd20d2",
+        "startMs": 0,
+        "endMs": 9752
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "2:1",
+      "categoryId": 2,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/002/001.mp3",
+      "startMs": 0,
+      "endMs": 111708,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/99.mp3",
+        "sha256": "57d9be074d4d46830d1846105da27d6a9cd692e5d439b6ef9c694e5db204fae6",
+        "startMs": 0,
+        "endMs": 111708
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "2:2",
+      "categoryId": 2,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/002/002.mp3",
+      "startMs": 0,
+      "endMs": 61840,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/100.mp3",
+        "sha256": "adec2492cf77fe557d1418ffd2a28a9ae968beded43eacd0dc1a32a043f385fa",
+        "startMs": 0,
+        "endMs": 61840
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "2:3",
+      "categoryId": 2,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/hamad-al-drehem/002/003.mp3",
+      "startMs": 0,
+      "endMs": 86787,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/101.mp3",
+        "sha256": "02fd47ec54740f1a2545c788ddd29a1007505dcf139b22b71ee806df212b09b0",
+        "startMs": 0,
+        "endMs": 86787
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "2:4",
+      "categoryId": 2,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/hamad-al-drehem/002/004.mp3",
+      "startMs": 0,
+      "endMs": 16988,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/102.mp3",
+        "sha256": "5dabbcdca3882bdcbe0156f695a1f733167dd96e27a32892518fce8f4bcde463",
+        "startMs": 0,
+        "endMs": 16988
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "2:5",
+      "categoryId": 2,
+      "dhikrId": 5,
+      "url": "/audio/adhkar/hamad-al-drehem/002/005.mp3",
+      "startMs": 0,
+      "endMs": 20984,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/103.mp3",
+        "sha256": "f011017b6c42184b8b1396c723c697247fd75cd30cf7f33d20453fed8cf43a18",
+        "startMs": 0,
+        "endMs": 20984
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "2:6",
+      "categoryId": 2,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/hamad-al-drehem/002/006.mp3",
+      "startMs": 0,
+      "endMs": 8028,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/104.mp3",
+        "sha256": "c0e8aeb82a1d188e4ab3ccc0ceb4432fdbe771e60541c6152c81517066a94715",
+        "startMs": 0,
+        "endMs": 8028
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "2:7",
+      "categoryId": 2,
+      "dhikrId": 7,
+      "url": "/audio/adhkar/hamad-al-drehem/002/007.mp3",
+      "startMs": 0,
+      "endMs": 4031,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/105.mp3",
+        "sha256": "061186700304569d18309673471059625b2a10530b3e8748919ca99c92d315a0",
+        "startMs": 0,
+        "endMs": 4031
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "2:8",
+      "categoryId": 2,
+      "dhikrId": 8,
+      "url": "/audio/adhkar/hamad-al-drehem/002/008.mp3",
+      "startMs": 0,
+      "endMs": 15995,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/106.mp3",
+        "sha256": "83019346e8c65ffcfa2a7464a77f66042f1955420171a0ee817efa0075015ddc",
+        "startMs": 0,
+        "endMs": 15995
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "2:9",
+      "categoryId": 2,
+      "dhikrId": 9,
+      "url": "/audio/adhkar/hamad-al-drehem/002/009.mp3",
+      "startMs": 0,
+      "endMs": 48909,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/107.mp3",
+        "sha256": "619b1a74712342a74d4836c0f869d330c5a544db8589ec8323c64f901b02e61f",
+        "startMs": 0,
+        "endMs": 48909
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "2:10",
+      "categoryId": 2,
+      "dhikrId": 10,
+      "url": "/audio/adhkar/hamad-al-drehem/002/010.mp3",
+      "startMs": 0,
+      "endMs": 13984,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/108.mp3",
+        "sha256": "d585daec3599f9a5b31983d21a5fadfde44eae27c8103953cc3a766cf8148655",
+        "startMs": 0,
+        "endMs": 13984
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "2:11",
+      "categoryId": 2,
+      "dhikrId": 11,
+      "url": "/audio/adhkar/hamad-al-drehem/002/011.mp3",
+      "startMs": 0,
+      "endMs": 26966,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/109.mp3",
+        "sha256": "c1edf76d9f7b8533ba6d8c121ec85c3f9df2e40b6f3b8598960c581ea384e47f",
+        "startMs": 0,
+        "endMs": 26966
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "2:12",
+      "categoryId": 2,
+      "dhikrId": 12,
+      "url": "/audio/adhkar/hamad-al-drehem/002/012.mp3",
+      "startMs": 0,
+      "endMs": 8028,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/110.mp3",
+        "sha256": "9706cfbf21da2e9b373d9ca3704072901373155547b65a9fde9c10e9ca02285f",
+        "startMs": 0,
+        "endMs": 8028
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "2:13",
+      "categoryId": 2,
+      "dhikrId": 13,
+      "url": "/audio/adhkar/hamad-al-drehem/002/013.mp3",
+      "startMs": 0,
+      "endMs": 31068,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/111.mp3",
+        "sha256": "1457074ee78d10666e2ec2f68e8d69f603209ab323541c888838580abbf44ca7",
+        "startMs": 0,
+        "endMs": 31068
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "3:1",
+      "categoryId": 3,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/003/001.mp3",
+      "startMs": 0,
+      "endMs": 13168,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/1.mp3",
+        "sha256": "d63f0c06418eb5df7deb7f98168cc0d133f1cb79a0009d35ebcf3ba520529412",
+        "startMs": 0,
+        "endMs": 13168
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "3:2",
+      "categoryId": 3,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/003/002.mp3",
+      "startMs": 0,
+      "endMs": 31930,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/2.mp3",
+        "sha256": "a033ef142f2e936b311fbad25b309a9155ffeab45c52017f0be663d0b5583e7f",
+        "startMs": 0,
+        "endMs": 31930
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "3:3",
+      "categoryId": 3,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/hamad-al-drehem/003/003.mp3",
+      "startMs": 0,
+      "endMs": 11006,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/3.mp3",
+        "sha256": "dcd101a6a0b119e5e6e4ac614928280c1bda78b8f3b57becc7373e7449ead64d",
+        "startMs": 0,
+        "endMs": 11006
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "3:4",
+      "categoryId": 3,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/hamad-al-drehem/003/004.mp3",
+      "startMs": 0,
+      "endMs": 324762,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/4.mp3",
+        "sha256": "f276925bd911a457b5fed4e5b12022aa4df0e2e6944bc3adb67b73f9a23fe9c7",
+        "startMs": 0,
+        "endMs": 324762
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "4:1",
+      "categoryId": 4,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/004/001.mp3",
+      "startMs": 0,
+      "endMs": 12712,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/10.mp3",
+        "sha256": "61d2463d6bf5b7848dc1bb445004069f876c0859f0b6ca2ea91c7b4a704d2c6a",
+        "startMs": 0,
+        "endMs": 12712
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "5:1",
+      "categoryId": 5,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/005/001.mp3",
+      "startMs": 0,
+      "endMs": 6856,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/11.mp3",
+        "sha256": "b30b274f6459fc3c3bb66f6b881931448f1ea52c5e187428e2171832a80918b7",
+        "startMs": 0,
+        "endMs": 6856
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "6:1",
+      "categoryId": 6,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/006/001.mp3",
+      "startMs": 0,
+      "endMs": 8680,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/12.mp3",
+        "sha256": "6f6b716b533d3ac984002011cc18eb2219d8905da92d128c56fb0fea402d5552",
+        "startMs": 0,
+        "endMs": 8680
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "7:1",
+      "categoryId": 7,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/007/001.mp3",
+      "startMs": 0,
+      "endMs": 17170,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/13.mp3",
+        "sha256": "18db47d0cd2fe1ed481d8948304f45b615b874ff679b718782e994a3f59a305e",
+        "startMs": 0,
+        "endMs": 17170
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "7:2",
+      "categoryId": 7,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/007/002.mp3",
+      "startMs": 0,
+      "endMs": 7975,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/14.mp3",
+        "sha256": "1b015bb081065f5a90b4d6f4c93c78d545f03d6fb11d266dac2ba577198de2d2",
+        "startMs": 0,
+        "endMs": 7975
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "7:3",
+      "categoryId": 7,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/hamad-al-drehem/007/003.mp3",
+      "startMs": 0,
+      "endMs": 13095,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/15.mp3",
+        "sha256": "17ccd8c8ea5e4ca86654bf2ac2131d2d12795645adc8bec0e8766e54597877c7",
+        "startMs": 0,
+        "endMs": 13095
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "8:1",
+      "categoryId": 8,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/008/001.mp3",
+      "startMs": 0,
+      "endMs": 15237,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/16.mp3",
+        "sha256": "d082def86385868392c6cd3e07c3e1d02b29308282bfa64b05ef8c09e7c79580",
+        "startMs": 0,
+        "endMs": 15237
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "8:2",
+      "categoryId": 8,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/008/002.mp3",
+      "startMs": 0,
+      "endMs": 17771,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/17.mp3",
+        "sha256": "2b95546a19ec056926ff087d8c3e45ce392b784ac7d0193622134f743ae85612",
+        "startMs": 0,
+        "endMs": 17771
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "9:1",
+      "categoryId": 9,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/009/001.mp3",
+      "startMs": 0,
+      "endMs": 20152,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/18.mp3",
+        "sha256": "542fc4c3515277efdd7d60f75f013ab7ca50a6e305f8371270a1895ddbe99123",
+        "startMs": 0,
+        "endMs": 20152
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "10:1",
+      "categoryId": 10,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/010/001.mp3",
+      "startMs": 0,
+      "endMs": 95128,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/19.mp3",
+        "sha256": "956c7f735724de24d332bda35ab625ffe9f5d446d16eda8af08563a67d334d8a",
+        "startMs": 0,
+        "endMs": 95128
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "11:1",
+      "categoryId": 11,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/011/001.mp3",
+      "startMs": 0,
+      "endMs": 28984,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/20.mp3",
+        "sha256": "406c711ff04cbe0775ec72fdf8a894337a53f9ca24983f2ae8b049cb765b2291",
+        "startMs": 0,
+        "endMs": 28984
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "12:1",
+      "categoryId": 12,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/012/001.mp3",
+      "startMs": 0,
+      "endMs": 19912,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/21.mp3",
+        "sha256": "f588144fc327a4fb517a2fac0d14319047904f2c5d25e5ab6a8445708f34cb28",
+        "startMs": 0,
+        "endMs": 19912
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "13:1",
+      "categoryId": 13,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/013/001.mp3",
+      "startMs": 0,
+      "endMs": 19156,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/22.mp3",
+        "sha256": "f06a1544478191cecf5b48d2c388ade08f8f08db0b60470da747c65cc017c032",
+        "startMs": 0,
+        "endMs": 19156
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "13:2",
+      "categoryId": 13,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/013/002.mp3",
+      "startMs": 0,
+      "endMs": 22865,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/23.mp3",
+        "sha256": "12095d4c8dade869884e2e3b2cb7e9ee466c2d97a889ff2f8aafff84fd88271c",
+        "startMs": 0,
+        "endMs": 22865
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "13:3",
+      "categoryId": 13,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/hamad-al-drehem/013/003.mp3",
+      "startMs": 0,
+      "endMs": 7479,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/24.mp3",
+        "sha256": "a4d2cba7cc5fe3c27d7eca90dc073e0313857ee07ccc3ff0eb276f4ae4f90ccc",
+        "startMs": 0,
+        "endMs": 7479
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "13:4",
+      "categoryId": 13,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/hamad-al-drehem/013/004.mp3",
+      "startMs": 0,
+      "endMs": 22055,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/25.mp3",
+        "sha256": "63bd5315d73ebc8ffb6bb1b7d5045b4f2967f1443532d71264202f849c01f3e9",
+        "startMs": 0,
+        "endMs": 22055
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "13:5",
+      "categoryId": 13,
+      "dhikrId": 5,
+      "url": "/audio/adhkar/hamad-al-drehem/013/005.mp3",
+      "startMs": 0,
+      "endMs": 8289,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/26.mp3",
+        "sha256": "875e68cacedd4a7eb348962c949593e54281ff2106dbcf9ab93319d6d7ad9d0c",
+        "startMs": 0,
+        "endMs": 8289
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "14:1",
+      "categoryId": 14,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/014/001.mp3",
+      "startMs": 0,
+      "endMs": 14440,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/5.mp3",
+        "sha256": "f547b76ffe76f13c5a4a2a612e0f5fca676ca666a4d8cd6a4de87d14634eb699",
+        "startMs": 0,
+        "endMs": 14440
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "15:1",
+      "categoryId": 15,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/015/001.mp3",
+      "startMs": 0,
+      "endMs": 20296,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/6.mp3",
+        "sha256": "9e99bc67a8694fd8e038d75d84f26b09ed9ce2c3695a7e01c5a09de71e19d3e7",
+        "startMs": 0,
+        "endMs": 20296
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "16:1",
+      "categoryId": 16,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/016/001.mp3",
+      "startMs": 0,
+      "endMs": 9778,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/7.mp3",
+        "sha256": "25f7f97dcd2fec484e18aa9ffbeda4ead699c30f386cbc53ea890bf42000622c",
+        "startMs": 0,
+        "endMs": 9778
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "16:2",
+      "categoryId": 16,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/016/002.mp3",
+      "startMs": 0,
+      "endMs": 8315,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/8.mp3",
+        "sha256": "3c30ebb61caa060332977fe42ea9926584b2bbbb0e2c1240ceec523b7afddb96",
+        "startMs": 0,
+        "endMs": 8315
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "17:1",
+      "categoryId": 17,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/017/001.mp3",
+      "startMs": 0,
+      "endMs": 8464,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/9.mp3",
+        "sha256": "5b7c875d5358f2148cc18b7dbc904fd95f38f4d3d61fcd54a3ffc0e01d8174e4",
+        "startMs": 0,
+        "endMs": 8464
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "18:1",
+      "categoryId": 18,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/018/001.mp3",
+      "startMs": 0,
+      "endMs": 27959,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/27.mp3",
+        "sha256": "57d19e83a452cbc7970123ea18bd0e92a47710d5d563c63d4150a8631ad734d1",
+        "startMs": 0,
+        "endMs": 27959
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "18:2",
+      "categoryId": 18,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/018/002.mp3",
+      "startMs": 0,
+      "endMs": 12233,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/28.mp3",
+        "sha256": "c26040ec9c8c9b8fd68207f0615b0a090dbb65a934c9fcf737139e01bb5b2573",
+        "startMs": 0,
+        "endMs": 12233
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "18:3",
+      "categoryId": 18,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/hamad-al-drehem/018/003.mp3",
+      "startMs": 0,
+      "endMs": 79838,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/29.mp3",
+        "sha256": "5d9937bc4777a61847620c1cd569e6ad0ca852ac50c937724d99630b241adccd",
+        "startMs": 0,
+        "endMs": 79838
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "18:4",
+      "categoryId": 18,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/hamad-al-drehem/018/004.mp3",
+      "startMs": 0,
+      "endMs": 29970,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/30.mp3",
+        "sha256": "2ebdba133c2b23321ebe2cf754aa3aba5d7cec25be33819bffe881931bb339d4",
+        "startMs": 0,
+        "endMs": 29970
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "18:5",
+      "categoryId": 18,
+      "dhikrId": 5,
+      "url": "/audio/adhkar/hamad-al-drehem/018/005.mp3",
+      "startMs": 0,
+      "endMs": 32974,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/31.mp3",
+        "sha256": "2173ea741dd9c1be089148a3666b57216115ecdfb224085c6ef4f67d3e0f9fac",
+        "startMs": 0,
+        "endMs": 32974
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "18:6",
+      "categoryId": 18,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/hamad-al-drehem/018/006.mp3",
+      "startMs": 0,
+      "endMs": 96400,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/32.mp3",
+        "sha256": "27662bc53ed9dc5d2df71d580a8be0087d5fc62438de8fde4da3c62606c51744",
+        "startMs": 0,
+        "endMs": 96400
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "19:1",
+      "categoryId": 19,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/019/001.mp3",
+      "startMs": 0,
+      "endMs": 10196,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/33.mp3",
+        "sha256": "f55484719560dc63d6daeac6dc1a46bd0ef81cf2712d4624c1656f118ba744d6",
+        "startMs": 0,
+        "endMs": 10196
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "19:2",
+      "categoryId": 19,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/019/002.mp3",
+      "startMs": 0,
+      "endMs": 7244,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/34.mp3",
+        "sha256": "be4b9708c000857435efcaff9562098386e05c201e6d7038bef98ef7a780ac50",
+        "startMs": 0,
+        "endMs": 7244
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "19:3",
+      "categoryId": 19,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/hamad-al-drehem/019/003.mp3",
+      "startMs": 0,
+      "endMs": 6121,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/35.mp3",
+        "sha256": "0be5922c3cda17c48c2849928cb7bc66b3c7f0a7d6144f38d95c8b3ae2d0b5f2",
+        "startMs": 0,
+        "endMs": 6121
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "19:4",
+      "categoryId": 19,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/hamad-al-drehem/019/004.mp3",
+      "startMs": 0,
+      "endMs": 16988,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/36.mp3",
+        "sha256": "931a6aaf0f0cf90c1d4c0f65b52916fc8d46ad923e2c8908108747ee2aba2dcf",
+        "startMs": 0,
+        "endMs": 16988
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "19:5",
+      "categoryId": 19,
+      "dhikrId": 5,
+      "url": "/audio/adhkar/hamad-al-drehem/019/005.mp3",
+      "startMs": 0,
+      "endMs": 7270,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/37.mp3",
+        "sha256": "fc9c14c4504d37be7339b5e8079fa1477cf9c6b7cece951f02481cf4c9b6b42e",
+        "startMs": 0,
+        "endMs": 7270
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "20:1",
+      "categoryId": 20,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/020/001.mp3",
+      "startMs": 0,
+      "endMs": 8028,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/38.mp3",
+        "sha256": "a7c369d995517f1bbeb455ce4df448d27f9717b7d290ae29f32b6ad7edd43858",
+        "startMs": 0,
+        "endMs": 8028
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "20:2",
+      "categoryId": 20,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/020/002.mp3",
+      "startMs": 0,
+      "endMs": 7714,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/39.mp3",
+        "sha256": "5b56700258ffe62a2d891b76fbc2919244163f10c41044c9836b472c5aaa6943",
+        "startMs": 0,
+        "endMs": 7714
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "20:3",
+      "categoryId": 20,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/hamad-al-drehem/020/003.mp3",
+      "startMs": 0,
+      "endMs": 32269,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/40.mp3",
+        "sha256": "30c3971e5d87dd237cc8d136234f4e6817a5f4b230e49dee08e51c9acf3f02c1",
+        "startMs": 0,
+        "endMs": 32269
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "21:1",
+      "categoryId": 21,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/021/001.mp3",
+      "startMs": 0,
+      "endMs": 9673,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/41.mp3",
+        "sha256": "e26368fbbeb4d363c0f621644da1ab56ce38de5f6e90c23a1c9a6bbe43fea624",
+        "startMs": 0,
+        "endMs": 9673
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "21:2",
+      "categoryId": 21,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/021/002.mp3",
+      "startMs": 0,
+      "endMs": 7061,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/42.mp3",
+        "sha256": "fe4aa3537374faa060ba4b3cf4a4a4595d17869ff40f5bf766b00be818ac9eeb",
+        "startMs": 0,
+        "endMs": 7061
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "21:3",
+      "categoryId": 21,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/hamad-al-drehem/021/003.mp3",
+      "startMs": 0,
+      "endMs": 6068,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/43.mp3",
+        "sha256": "5a7798a35ec47bef49a55598204f0df58815e0f3ef59e2a66c03e2d2be1d2f43",
+        "startMs": 0,
+        "endMs": 6068
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "21:4",
+      "categoryId": 21,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/hamad-al-drehem/021/004.mp3",
+      "startMs": 0,
+      "endMs": 19992,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/44.mp3",
+        "sha256": "f3839903ca8e0e117b60ffe5f1bc1b398d8290139402f6349e6d955da07cffa9",
+        "startMs": 0,
+        "endMs": 19992
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "21:5",
+      "categoryId": 21,
+      "dhikrId": 5,
+      "url": "/audio/adhkar/hamad-al-drehem/021/005.mp3",
+      "startMs": 0,
+      "endMs": 7061,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/45.mp3",
+        "sha256": "1e0c3c80b818424061322f2fcba3b7499ba81addb0ed98883acd696db41a33b8",
+        "startMs": 0,
+        "endMs": 7061
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "21:6",
+      "categoryId": 21,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/hamad-al-drehem/021/006.mp3",
+      "startMs": 0,
+      "endMs": 12599,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/46.mp3",
+        "sha256": "cc60210a0fd24290285e61d007a127756926cf5f726a2671c0dd8d1732347dae",
+        "startMs": 0,
+        "endMs": 12599
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "21:7",
+      "categoryId": 21,
+      "dhikrId": 7,
+      "url": "/audio/adhkar/hamad-al-drehem/021/007.mp3",
+      "startMs": 0,
+      "endMs": 19600,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/47.mp3",
+        "sha256": "9772bf300d2e8051a01005957a62a27b35a19e8405fd6a3f0eef9db38f5c4402",
+        "startMs": 0,
+        "endMs": 19600
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "22:1",
+      "categoryId": 22,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/022/001.mp3",
+      "startMs": 0,
+      "endMs": 11580,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/48.mp3",
+        "sha256": "300e9f78edb4a7fea521be1a95f1a80cb6675e93a99a16ff50a8c11496a23610",
+        "startMs": 0,
+        "endMs": 11580
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "22:2",
+      "categoryId": 22,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/022/002.mp3",
+      "startMs": 0,
+      "endMs": 13017,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/49.mp3",
+        "sha256": "08b896eeb6b0f1e33e8ad1eb2fa762eb858823e74012b570473445a88891af4f",
+        "startMs": 0,
+        "endMs": 13017
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "23:1",
+      "categoryId": 23,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/023/001.mp3",
+      "startMs": 0,
+      "endMs": 19443,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/50.mp3",
+        "sha256": "0885c908438dc98fd83726f2c55e9cfaa67e0de726c0805cf4cd15f04f9ce766",
+        "startMs": 0,
+        "endMs": 19443
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "23:2",
+      "categoryId": 23,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/023/002.mp3",
+      "startMs": 0,
+      "endMs": 16779,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/51.mp3",
+        "sha256": "d7c066af1bdc227e2756ea7d63968ca740c42fece0548da5fcac49bd0919056e",
+        "startMs": 0,
+        "endMs": 16779
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "24:1",
+      "categoryId": 24,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/024/001.mp3",
+      "startMs": 0,
+      "endMs": 33352,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/52.mp3",
+        "sha256": "4a0017363fc6138198ca5b0ed9eecda20840e3f96984daa2cd0dce7d6bb2ee6b",
+        "startMs": 0,
+        "endMs": 33352
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "25:1",
+      "categoryId": 25,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/025/001.mp3",
+      "startMs": 0,
+      "endMs": 37337,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/53.mp3",
+        "sha256": "eb86f16ff5ab91b70ad1f0b342f5e80c8160e8edfcc30d525db70845977af125",
+        "startMs": 0,
+        "endMs": 37337
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "25:2",
+      "categoryId": 25,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/025/002.mp3",
+      "startMs": 0,
+      "endMs": 23988,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/54.mp3",
+        "sha256": "0c7712ed713ca48a87eea5b7c9b8eb2e868f541c2f2245d7e2c26c6e5a942192",
+        "startMs": 0,
+        "endMs": 23988
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "26:1",
+      "categoryId": 26,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/026/001.mp3",
+      "startMs": 0,
+      "endMs": 24014,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/55.mp3",
+        "sha256": "d25a120a072d07ab3a28842f1f5eb85924167d1fdb30a1767b85866a0e7775d7",
+        "startMs": 0,
+        "endMs": 24014
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "26:2",
+      "categoryId": 26,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/026/002.mp3",
+      "startMs": 0,
+      "endMs": 20018,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/56.mp3",
+        "sha256": "bee3d7f295c75321b2054e695f24ea00fb2d09f8cd8f8de29cc6339645a48248",
+        "startMs": 0,
+        "endMs": 20018
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "26:3",
+      "categoryId": 26,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/hamad-al-drehem/026/003.mp3",
+      "startMs": 0,
+      "endMs": 17014,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/57.mp3",
+        "sha256": "56d785b6393c1a835ab722caa21099cabed45e3cb58ee7aaa6dbbd6e394ea343",
+        "startMs": 0,
+        "endMs": 17014
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "26:4",
+      "categoryId": 26,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/hamad-al-drehem/026/004.mp3",
+      "startMs": 0,
+      "endMs": 22996,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/58.mp3",
+        "sha256": "861a8180525a70fe8153c66e3c600e501b941d3bd544824ad89752ae1b707e5a",
+        "startMs": 0,
+        "endMs": 22996
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "26:5",
+      "categoryId": 26,
+      "dhikrId": 5,
+      "url": "/audio/adhkar/hamad-al-drehem/026/005.mp3",
+      "startMs": 0,
+      "endMs": 6042,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/59.mp3",
+        "sha256": "2d16ca7655ed72525b8d461c1a1e939afab9214575f9325ca8773f461ee0582f",
+        "startMs": 0,
+        "endMs": 6042
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "26:6",
+      "categoryId": 26,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/hamad-al-drehem/026/006.mp3",
+      "startMs": 0,
+      "endMs": 19025,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/60.mp3",
+        "sha256": "da34ab66824803e32d95a4ed5adad503889eb9df800179d1a781eb712b2a16a7",
+        "startMs": 0,
+        "endMs": 19025
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "26:7",
+      "categoryId": 26,
+      "dhikrId": 7,
+      "url": "/audio/adhkar/hamad-al-drehem/026/007.mp3",
+      "startMs": 0,
+      "endMs": 5441,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/61.mp3",
+        "sha256": "8425af6a03e29d840e8d0fa5ddddb3f30d6f8240507a8f3863bd958c2d8ac143",
+        "startMs": 0,
+        "endMs": 5441
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "26:8",
+      "categoryId": 26,
+      "dhikrId": 8,
+      "url": "/audio/adhkar/hamad-al-drehem/026/008.mp3",
+      "startMs": 0,
+      "endMs": 70930,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/62.mp3",
+        "sha256": "088f0481bc74c5781a178165669abb953972270b0604103e02be64282630d5a6",
+        "startMs": 0,
+        "endMs": 70930
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "26:9",
+      "categoryId": 26,
+      "dhikrId": 9,
+      "url": "/audio/adhkar/hamad-al-drehem/026/009.mp3",
+      "startMs": 0,
+      "endMs": 21010,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/63.mp3",
+        "sha256": "1434544269b3cc0d31e0734e25fc0baad391d4854d35b5384579153bd9b851c1",
+        "startMs": 0,
+        "endMs": 21010
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "26:10",
+      "categoryId": 26,
+      "dhikrId": 10,
+      "url": "/audio/adhkar/hamad-al-drehem/026/010.mp3",
+      "startMs": 0,
+      "endMs": 28011,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/64.mp3",
+        "sha256": "637daaf75af6a5c27a3a58980ee0ea0f88ab9801150395af26fcee0a793489e0",
+        "startMs": 0,
+        "endMs": 28011
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "26:11",
+      "categoryId": 26,
+      "dhikrId": 11,
+      "url": "/audio/adhkar/hamad-al-drehem/026/011.mp3",
+      "startMs": 0,
+      "endMs": 16596,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/65.mp3",
+        "sha256": "94595d67a571bd7bb94953467d66162df8c923021f51f519ca52bcd8fbd8f660",
+        "startMs": 0,
+        "endMs": 16596
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "27:1",
+      "categoryId": 27,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/027/001.mp3",
+      "startMs": 0,
+      "endMs": 20958,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/66.mp3",
+        "sha256": "89f26483c51e9a7f5efcb40793e5fb6c400e01742d43de4466720c317aad6d0b",
+        "startMs": 0,
+        "endMs": 20958
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "27:2",
+      "categoryId": 27,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/027/002.mp3",
+      "startMs": 0,
+      "endMs": 22970,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/67.mp3",
+        "sha256": "ed9edb505aab272c149b4eb826957545d939fa3cbfb472db9e27386c6edb996f",
+        "startMs": 0,
+        "endMs": 22970
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "27:3",
+      "categoryId": 27,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/hamad-al-drehem/027/003.mp3",
+      "startMs": 0,
+      "endMs": 35900,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/68.mp3",
+        "sha256": "9f1ea016fec235366f4003343c03b3e7df372e3928c471cb062ece6b4ce21a03",
+        "startMs": 0,
+        "endMs": 35900
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "27:4",
+      "categoryId": 27,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/hamad-al-drehem/027/004.mp3",
+      "startMs": 0,
+      "endMs": 23962,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/69.mp3",
+        "sha256": "018cf1ad59a9a82a00f0632aa5fc765238d9a561b669426a2890c7bbfa74e0d0",
+        "startMs": 0,
+        "endMs": 23962
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "27:5",
+      "categoryId": 27,
+      "dhikrId": 5,
+      "url": "/audio/adhkar/hamad-al-drehem/027/005.mp3",
+      "startMs": 0,
+      "endMs": 89712,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/70.mp3",
+        "sha256": "4eaedc5eddf9b0fee6c23d1c62e3119b844f393ca6494a2e94c51f8b27474cc0",
+        "startMs": 0,
+        "endMs": 89712
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "27:6",
+      "categoryId": 27,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/hamad-al-drehem/027/006.mp3",
+      "startMs": 0,
+      "endMs": 58888,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/71.mp3",
+        "sha256": "8f53c6331daee9cc16ee92e08d20f8e674a56faf3ac46e33589b035590af8294",
+        "startMs": 0,
+        "endMs": 58888
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "27:7",
+      "categoryId": 27,
+      "dhikrId": 7,
+      "url": "/audio/adhkar/hamad-al-drehem/027/007.mp3",
+      "startMs": 0,
+      "endMs": 18973,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/72.mp3",
+        "sha256": "e32726be1a874abea97b9bc42adcc1245b930fa798106bcb7062df20f031c6cf",
+        "startMs": 0,
+        "endMs": 18973
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "27:8",
+      "categoryId": 27,
+      "dhikrId": 8,
+      "url": "/audio/adhkar/hamad-al-drehem/027/008.mp3",
+      "startMs": 0,
+      "endMs": 13984,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/73.mp3",
+        "sha256": "bf283c69f838a250c299e6feac24f4a6ccfbb6464bd5c541fdcded2cd5fca32a",
+        "startMs": 0,
+        "endMs": 13984
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "28:1",
+      "categoryId": 28,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/028/001.mp3",
+      "startMs": 0,
+      "endMs": 114280,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/74.mp3",
+        "sha256": "2658dec5e698f16b60419cc8c9da04a074ed27651f6707c455b03f5aa7f66935",
+        "startMs": 0,
+        "endMs": 114280
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "29:1",
+      "categoryId": 29,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/029/001.mp3",
+      "startMs": 0,
+      "endMs": 19384,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/112.mp3",
+        "sha256": "6ae89fea117c8814cb7e5c4d81339d2a7e082d8ddf4493509aeb20209a1a05aa",
+        "startMs": 0,
+        "endMs": 19384
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "30:1",
+      "categoryId": 30,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/030/001.mp3",
+      "startMs": 0,
+      "endMs": 22648,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/113.mp3",
+        "sha256": "62636c0ccbc6b15fa5369c0b47290083e5f4b08cccdd8c96b5c2b397e71179b8",
+        "startMs": 0,
+        "endMs": 22648
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "31:1",
+      "categoryId": 31,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/031/001.mp3",
+      "startMs": 0,
+      "endMs": 22003,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/114.mp3",
+        "sha256": "4428a13e1790006b411bd357b7db3064369e8dab821a954963a3d044c1ce09f4",
+        "startMs": 0,
+        "endMs": 22003
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "31:2",
+      "categoryId": 31,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/031/002.mp3",
+      "startMs": 0,
+      "endMs": 5703,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/115.mp3",
+        "sha256": "167dccb27e4c6f0823552c896136672a64e9431f6e54791f9394ff2c3791295a",
+        "startMs": 0,
+        "endMs": 5703
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "32:1",
+      "categoryId": 32,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/032/001.mp3",
+      "startMs": 0,
+      "endMs": 43267,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/116.mp3",
+        "sha256": "0436a8eb64f1192972f997494de5c2a9fe6ac4a52e41b81da3838aa9849863d8",
+        "startMs": 0,
+        "endMs": 43267
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "32:2",
+      "categoryId": 32,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/032/002.mp3",
+      "startMs": 0,
+      "endMs": 17876,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/117.mp3",
+        "sha256": "7ef83b8217fe59728d56ca91afaaa09511525d9246016da2592498d35946b39d",
+        "startMs": 0,
+        "endMs": 17876
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "32:3",
+      "categoryId": 32,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/hamad-al-drehem/032/003.mp3",
+      "startMs": 0,
+      "endMs": 38251,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/118.mp3",
+        "sha256": "41e181f033a2bda4d66e850f525498785a887cfc5826df9506decd6ee718335b",
+        "startMs": 0,
+        "endMs": 38251
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "33:1",
+      "categoryId": 33,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/033/001.mp3",
+      "startMs": 0,
+      "endMs": 22960,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/119.mp3",
+        "sha256": "11de2d69d3483087239d5edc585b89398f3af459c119cb69388209c73e400cd7",
+        "startMs": 0,
+        "endMs": 22960
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "34:1",
+      "categoryId": 34,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/034/001.mp3",
+      "startMs": 0,
+      "endMs": 50006,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/120.mp3",
+        "sha256": "fe28ffe44fb2d4ea67e307054070d6a0f6841c925e0c20be457a8d791c48f706",
+        "startMs": 0,
+        "endMs": 50006
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "34:2",
+      "categoryId": 34,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/034/002.mp3",
+      "startMs": 0,
+      "endMs": 14924,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/121.mp3",
+        "sha256": "383443ce904d800e7c7e3ff7b97f45a5cc36df897c6cdc4809baa9d25db2df9f",
+        "startMs": 0,
+        "endMs": 14924
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "35:1",
+      "categoryId": 35,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/035/001.mp3",
+      "startMs": 0,
+      "endMs": 26966,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/122.mp3",
+        "sha256": "0f23111ae531230cfad9683f7217a07660f3dfd81dce848d108a6096d1e00a7f",
+        "startMs": 0,
+        "endMs": 26966
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "35:2",
+      "categoryId": 35,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/035/002.mp3",
+      "startMs": 0,
+      "endMs": 12912,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/123.mp3",
+        "sha256": "9d04895a0806764c8379cfee7737b4cd1bcceae1a5a2ab114e05c1f1183b8493",
+        "startMs": 0,
+        "endMs": 12912
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "35:3",
+      "categoryId": 35,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/hamad-al-drehem/035/003.mp3",
+      "startMs": 0,
+      "endMs": 7009,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/124.mp3",
+        "sha256": "9e4cda39a605d14e6ce3cf60e0a5a1437bdc13bb87ed55bd9a185c895732c1c1",
+        "startMs": 0,
+        "endMs": 7009
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "35:4",
+      "categoryId": 35,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/hamad-al-drehem/035/004.mp3",
+      "startMs": 0,
+      "endMs": 6774,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/125.mp3",
+        "sha256": "83f5c58a45c2404c00a8281f3eb28a503ba3797bd5d11650f901c1b328b0e836",
+        "startMs": 0,
+        "endMs": 6774
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "36:1",
+      "categoryId": 36,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/036/001.mp3",
+      "startMs": 0,
+      "endMs": 17980,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/126.mp3",
+        "sha256": "d99dcecafeefca39cda42bb74a22cc8cc6471e9734794de092e158c84d8085c4",
+        "startMs": 0,
+        "endMs": 17980
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "36:2",
+      "categoryId": 36,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/036/002.mp3",
+      "startMs": 0,
+      "endMs": 9961,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/127.mp3",
+        "sha256": "475d77d0f4bf652d5d4a391de79977415ff2ae29c6e1d0ebdf8bdaf65fd8fb69",
+        "startMs": 0,
+        "endMs": 9961
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "36:3",
+      "categoryId": 36,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/hamad-al-drehem/036/003.mp3",
+      "startMs": 0,
+      "endMs": 4527,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/128.mp3",
+        "sha256": "e8aaf015e6b09ca3fdcf153d0d6f9dbcc1cfdca3a9a68a78a281413454e3cfc4",
+        "startMs": 0,
+        "endMs": 4527
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "37:1",
+      "categoryId": 37,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/037/001.mp3",
+      "startMs": 0,
+      "endMs": 33105,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/129.mp3",
+        "sha256": "fdd0791f5a50d44e2473158a4ec55adfd6b624e6753416b484b6ed192a8bb88a",
+        "startMs": 0,
+        "endMs": 33105
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "37:2",
+      "categoryId": 37,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/037/002.mp3",
+      "startMs": 0,
+      "endMs": 51887,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/130.mp3",
+        "sha256": "b5506fae8f65a6993916f9ddf6493a3d5c763b25b2005fc85ac8fb4520a302c2",
+        "startMs": 0,
+        "endMs": 51887
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "38:1",
+      "categoryId": 38,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/038/001.mp3",
+      "startMs": 0,
+      "endMs": 16720,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/131.mp3",
+        "sha256": "26c0f45594287a5f9427785d14edb8e338881c547d2ce0f11609bde799a9d449",
+        "startMs": 0,
+        "endMs": 16720
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "39:1",
+      "categoryId": 39,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/039/001.mp3",
+      "startMs": 0,
+      "endMs": 9040,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/132.mp3",
+        "sha256": "b119a3ebdcf6bcc6175293bfd3594b85b8f7a105a4a2e11fe44e54358bdf5a67",
+        "startMs": 0,
+        "endMs": 9040
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "40:1",
+      "categoryId": 40,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/040/001.mp3",
+      "startMs": 0,
+      "endMs": 10457,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/133.mp3",
+        "sha256": "be3d2f657a415e7afd560a4a8f30c67c954cfb1fff5838299f3b3dd7f3723abb",
+        "startMs": 0,
+        "endMs": 10457
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "40:2",
+      "categoryId": 40,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/040/002.mp3",
+      "startMs": 0,
+      "endMs": 4005,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/134.mp3",
+        "sha256": "dfa971a467e3d61af59d4c439e030997ea8cc399d68844fd52981dbdf253733c",
+        "startMs": 0,
+        "endMs": 4005
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "40:3",
+      "categoryId": 40,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/hamad-al-drehem/040/003.mp3",
+      "startMs": 0,
+      "endMs": 11789,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/135.mp3",
+        "sha256": "197d3a80dedd27d58dd9663f30679075b3393d03b1453ee0ee3341c9c3d9ed24",
+        "startMs": 0,
+        "endMs": 11789
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "41:1",
+      "categoryId": 41,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/041/001.mp3",
+      "startMs": 0,
+      "endMs": 14010,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/136.mp3",
+        "sha256": "dd1f69616720bc8c5ee00f39d411ff2cc74422749f2337ef729cfcab66f89da3",
+        "startMs": 0,
+        "endMs": 14010
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "41:2",
+      "categoryId": 41,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/041/002.mp3",
+      "startMs": 0,
+      "endMs": 17197,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/137.mp3",
+        "sha256": "56f67d3336440e2f28862b6694886bea92b996deeecd087e02b8572e3b7aec72",
+        "startMs": 0,
+        "endMs": 17197
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "42:1",
+      "categoryId": 42,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/042/001.mp3",
+      "startMs": 0,
+      "endMs": 14824,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/138.mp3",
+        "sha256": "3e3fa5426b41f9b945a6fb4ba2f512675228f506b8458b12ec24084b56850ae1",
+        "startMs": 0,
+        "endMs": 14824
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "43:1",
+      "categoryId": 43,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/043/001.mp3",
+      "startMs": 0,
+      "endMs": 16912,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/139.mp3",
+        "sha256": "bce74ef48d31f68ff37cfd5634cff0ae18d7930a650ba3a59e308de2a0aba5f9",
+        "startMs": 0,
+        "endMs": 16912
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "44:1",
+      "categoryId": 44,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/044/001.mp3",
+      "startMs": 0,
+      "endMs": 21280,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/140.mp3",
+        "sha256": "985018fcc6d572ee635c1eb06899aa03546de1bb9e9617778b51a2fa6afc17d8",
+        "startMs": 0,
+        "endMs": 21280
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "45:1",
+      "categoryId": 45,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/045/001.mp3",
+      "startMs": 0,
+      "endMs": 7688,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/141.mp3",
+        "sha256": "e4b2a15928910fa3d0a1d70d2cba9c56ea4e0ab42155257f28d8ca9a9626d8b7",
+        "startMs": 0,
+        "endMs": 7688
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "45:2",
+      "categoryId": 45,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/045/002.mp3",
+      "startMs": 0,
+      "endMs": 2098,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/142.mp3",
+        "sha256": "f5ea66d90fbb0d05b98075ea0af6c950ec2a4719e95caf2ff4ae6b9f5f9fa415",
+        "startMs": 0,
+        "endMs": 2098
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "45:3",
+      "categoryId": 45,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/hamad-al-drehem/045/003.mp3",
+      "startMs": 0,
+      "endMs": 3456,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/143.mp3",
+        "sha256": "7a976255d29a470f356f4f5c60403e7d8d507809e7d7e5299ac940bc071b2f69",
+        "startMs": 0,
+        "endMs": 3456
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "46:1",
+      "categoryId": 46,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/046/001.mp3",
+      "startMs": 0,
+      "endMs": 10816,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/144.mp3",
+        "sha256": "ea5a043d5f467e6cdae227fa6b9cc663943dcca1a68946fb3f1225cf68f8ef8d",
+        "startMs": 0,
+        "endMs": 10816
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "47:1",
+      "categoryId": 47,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/047/001.mp3",
+      "startMs": 0,
+      "endMs": 35440,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/145.mp3",
+        "sha256": "23cda037a6604e8e8a08a5158d2c0f0e66bb68b3e7aa3dcb4804ad6a23cc8459",
+        "startMs": 0,
+        "endMs": 35440
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "48:1",
+      "categoryId": 48,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/048/001.mp3",
+      "startMs": 0,
+      "endMs": 23176,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/146.mp3",
+        "sha256": "df212f89876da404d98a374333d668aa75641ba7f61cb468e87030ca7a098e4b",
+        "startMs": 0,
+        "endMs": 23176
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "49:1",
+      "categoryId": 49,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/049/001.mp3",
+      "startMs": 0,
+      "endMs": 10666,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/147.mp3",
+        "sha256": "8b2179671464ef1e32436751a4dde8eb0d88b1e4e3e84f723a78993c1140a382",
+        "startMs": 0,
+        "endMs": 10666
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "49:2",
+      "categoryId": 49,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/049/002.mp3",
+      "startMs": 0,
+      "endMs": 8263,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/148.mp3",
+        "sha256": "e484e83108b25a5690cf81bb1e9d43da60afa1caf71d403dff4ceef44250ca7e",
+        "startMs": 0,
+        "endMs": 8263
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "50:1",
+      "categoryId": 50,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/050/001.mp3",
+      "startMs": 0,
+      "endMs": 31960,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/149.mp3",
+        "sha256": "67ee9456cc59031969babfbb6d4bab9452d29ea742d6d8f629047b9b025d269d",
+        "startMs": 0,
+        "endMs": 31960
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "51:1",
+      "categoryId": 51,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/051/001.mp3",
+      "startMs": 0,
+      "endMs": 13069,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/150.mp3",
+        "sha256": "3421b2255ca236c839f82914f482189349e735ef73103f4d28ca9674e88885dc",
+        "startMs": 0,
+        "endMs": 13069
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "51:2",
+      "categoryId": 51,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/051/002.mp3",
+      "startMs": 0,
+      "endMs": 18085,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/151.mp3",
+        "sha256": "05de813932302d42b9b839deab144426d72ec1fc98a40acfa3e7d6c4b0993ad4",
+        "startMs": 0,
+        "endMs": 18085
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "51:3",
+      "categoryId": 51,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/hamad-al-drehem/051/003.mp3",
+      "startMs": 0,
+      "endMs": 29108,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/152.mp3",
+        "sha256": "1191d9ee8ee357eebdddd01b82a1978a9d69973bca2998d40387a8ac2ae34bf7",
+        "startMs": 0,
+        "endMs": 29108
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "52:1",
+      "categoryId": 52,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/052/001.mp3",
+      "startMs": 0,
+      "endMs": 12904,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/ar_7esn_AlMoslem_by_Doors_053.mp3",
+        "sha256": "a98ffeb1c9ec09ad055ed61f263bc91298e9df6e1c087aca2e8c993477666fde",
+        "startMs": 0,
+        "endMs": 12904
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "53:1",
+      "categoryId": 53,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/053/001.mp3",
+      "startMs": 0,
+      "endMs": 19384,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/154.mp3",
+        "sha256": "9e39c889ff557d578bffb302b4348d8b3c57b0c23db08f7b0cde94676557a14e",
+        "startMs": 0,
+        "endMs": 19384
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "54:1",
+      "categoryId": 54,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/054/001.mp3",
+      "startMs": 0,
+      "endMs": 31360,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/155.mp3",
+        "sha256": "ff52f973207026356a5b6a08a5824abd27c313cf3cb8187aadc00e9a09eb2bc0",
+        "startMs": 0,
+        "endMs": 31360
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "55:1",
+      "categoryId": 55,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/055/001.mp3",
+      "startMs": 0,
+      "endMs": 47316,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/156.mp3",
+        "sha256": "0dbc4b815419d03f1b1377f94b055b84bdacdbf75321e1ee6866f51892de46fc",
+        "startMs": 0,
+        "endMs": 47316
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "55:2",
+      "categoryId": 55,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/055/002.mp3",
+      "startMs": 0,
+      "endMs": 32661,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/157.mp3",
+        "sha256": "433e478ed5dd3945b828958c3f51f9819b7833934f2cf5bb70cf1af651351553",
+        "startMs": 0,
+        "endMs": 32661
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "55:3",
+      "categoryId": 55,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/hamad-al-drehem/055/003.mp3",
+      "startMs": 0,
+      "endMs": 22160,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/158.mp3",
+        "sha256": "5d00fa296e007e10fa055acbadcf7cc5d0e40af140c4870a96f7c2566ce05b89",
+        "startMs": 0,
+        "endMs": 22160
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "55:4",
+      "categoryId": 55,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/hamad-al-drehem/055/004.mp3",
+      "startMs": 0,
+      "endMs": 19025,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/159.mp3",
+        "sha256": "74655437523c2ad6f4ab2ff389fc5fce763d3b3f91e27a9a05502a9c7d343c13",
+        "startMs": 0,
+        "endMs": 19025
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "56:1",
+      "categoryId": 56,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/056/001.mp3",
+      "startMs": 0,
+      "endMs": 55623,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/160.mp3",
+        "sha256": "7425cadd097e25ef3ccead4449ef9c0013da1e49faabfa5a82f3f239007c4bc1",
+        "startMs": 0,
+        "endMs": 55623
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "56:2",
+      "categoryId": 56,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/056/002.mp3",
+      "startMs": 0,
+      "endMs": 5102,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/161.mp3",
+        "sha256": "33acd2f0e1f95a201f5a414dc3a9266777df361f0cd669e9c4beb329644b938d",
+        "startMs": 0,
+        "endMs": 5102
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "57:1",
+      "categoryId": 57,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/057/001.mp3",
+      "startMs": 0,
+      "endMs": 29728,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/162.mp3",
+        "sha256": "4e1d18e2ec441f54d5affb20b9958dd96db936de28cf69b74f907295c0b486e7",
+        "startMs": 0,
+        "endMs": 29728
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "58:1",
+      "categoryId": 58,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/058/001.mp3",
+      "startMs": 0,
+      "endMs": 10912,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/163.mp3",
+        "sha256": "2fe2656eba0d0275780f3d037e78dde6d27c2764eb443edf412ec881272e432a",
+        "startMs": 0,
+        "endMs": 10912
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "59:1",
+      "categoryId": 59,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/059/001.mp3",
+      "startMs": 0,
+      "endMs": 10432,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/164.mp3",
+        "sha256": "d413b4664f923e1a73cd2a46216e730946823df0bd7b5bd3d8ff42bcf7a5968a",
+        "startMs": 0,
+        "endMs": 10432
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "60:1",
+      "categoryId": 60,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/060/001.mp3",
+      "startMs": 0,
+      "endMs": 25456,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/165.mp3",
+        "sha256": "310f168167fcd444be486f25e3a8e49b071cddaaad4971c036895c1b6bbb549c",
+        "startMs": 0,
+        "endMs": 25456
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "61:1",
+      "categoryId": 61,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/061/001.mp3",
+      "startMs": 0,
+      "endMs": 13017,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/166.mp3",
+        "sha256": "1c5d4223503ec7a112c7708eeafcce7c4929217c77770c6cb0545560d5efd8df",
+        "startMs": 0,
+        "endMs": 13017
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "61:2",
+      "categoryId": 61,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/061/002.mp3",
+      "startMs": 0,
+      "endMs": 16021,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/167.mp3",
+        "sha256": "015227d0ac7446c2e82df4289c4dea700056cf089c55df386d42948679721245",
+        "startMs": 0,
+        "endMs": 16021
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "62:1",
+      "categoryId": 62,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/062/001.mp3",
+      "startMs": 0,
+      "endMs": 14392,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/168.mp3",
+        "sha256": "a0fdca9f6ac2379724de6cd26793e9aa547df1b3c98f93a5238f723ac8af8abb",
+        "startMs": 0,
+        "endMs": 14392
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "63:1",
+      "categoryId": 63,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/063/001.mp3",
+      "startMs": 0,
+      "endMs": 18006,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/169.mp3",
+        "sha256": "94660d246e283eb37d36c4ab816214e7397e987ed8bd16ed57209b9a13dfcbdf",
+        "startMs": 0,
+        "endMs": 18006
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "63:2",
+      "categoryId": 63,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/063/002.mp3",
+      "startMs": 0,
+      "endMs": 9020,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/170.mp3",
+        "sha256": "1858b07da00111b7079098f7358668924a80d67b821af319a6e58dddc1cb8258",
+        "startMs": 0,
+        "endMs": 9020
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "63:3",
+      "categoryId": 63,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/hamad-al-drehem/063/003.mp3",
+      "startMs": 0,
+      "endMs": 9229,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/171.mp3",
+        "sha256": "3e240e5aa20724402576bfa045ba0a52878ee704f6880ee72a924fc459a5542a",
+        "startMs": 0,
+        "endMs": 9229
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "64:1",
+      "categoryId": 64,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/064/001.mp3",
+      "startMs": 0,
+      "endMs": 9592,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/172.mp3",
+        "sha256": "ddbe724592a1d861ca9e59e2fe2ffe1dbe098a2613fa69f8c278fdf201d880c4",
+        "startMs": 0,
+        "endMs": 9592
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "65:1",
+      "categoryId": 65,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/065/001.mp3",
+      "startMs": 0,
+      "endMs": 9256,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/173.mp3",
+        "sha256": "48d71150d8a5ec494f5ca6e138faa1480108e8763503eb4b16baf3ee5d90126c",
+        "startMs": 0,
+        "endMs": 9256
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "66:1",
+      "categoryId": 66,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/066/001.mp3",
+      "startMs": 0,
+      "endMs": 16408,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/174.mp3",
+        "sha256": "63f7978059d2befe10a15273a39903f9dbcb330c73c6b95bfc90145944d9d38d",
+        "startMs": 0,
+        "endMs": 16408
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "67:1",
+      "categoryId": 67,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/067/001.mp3",
+      "startMs": 0,
+      "endMs": 23656,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/175.mp3",
+        "sha256": "f7eee017954c13523f58e5f6a6b055f244beddcced2e61c1b8812c285fbecbdf",
+        "startMs": 0,
+        "endMs": 23656
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "68:1",
+      "categoryId": 68,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/068/001.mp3",
+      "startMs": 0,
+      "endMs": 13043,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/176.mp3",
+        "sha256": "9e87059df0e6af7e2dd7c179ad01d70911fa967aeb1e32b736bc13104db0cc94",
+        "startMs": 0,
+        "endMs": 13043
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "68:2",
+      "categoryId": 68,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/068/002.mp3",
+      "startMs": 0,
+      "endMs": 7636,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/177.mp3",
+        "sha256": "b7b30ab7d548a2520f3556dcdada178f21ddb4e6462dce780245e9b6601bf294",
+        "startMs": 0,
+        "endMs": 7636
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "69:1",
+      "categoryId": 69,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/069/001.mp3",
+      "startMs": 0,
+      "endMs": 14976,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/178.mp3",
+        "sha256": "943ea5d058939094364691f2bcd3b159057094396192542e5652b1b8b7fd4b33",
+        "startMs": 0,
+        "endMs": 14976
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "69:2",
+      "categoryId": 69,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/069/002.mp3",
+      "startMs": 0,
+      "endMs": 20305,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/179.mp3",
+        "sha256": "d4ea21b6a0253fb272f2ebbc251d6b08fa2e8dbdde3966660cda2ba5d90b2f6e",
+        "startMs": 0,
+        "endMs": 20305
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "70:1",
+      "categoryId": 70,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/070/001.mp3",
+      "startMs": 0,
+      "endMs": 16361,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/180.mp3",
+        "sha256": "fe6b1c49519545d0c397a0cce3f86120aad42d03d41273a26733c13cfb595618",
+        "startMs": 0,
+        "endMs": 16361
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "70:2",
+      "categoryId": 70,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/070/002.mp3",
+      "startMs": 0,
+      "endMs": 12286,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/181.mp3",
+        "sha256": "84b62e717d1c94757d9152cf47a586050aeddff9927a0958a2c9ab50d8d03292",
+        "startMs": 0,
+        "endMs": 12286
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "71:1",
+      "categoryId": 71,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/071/001.mp3",
+      "startMs": 0,
+      "endMs": 14152,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/182.mp3",
+        "sha256": "6c8789f2a61cc377974652ea85f7bf6654e45c8c149f9f44e564d15a6a313372",
+        "startMs": 0,
+        "endMs": 14152
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "72:1",
+      "categoryId": 72,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/072/001.mp3",
+      "startMs": 0,
+      "endMs": 13192,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/183.mp3",
+        "sha256": "0dc2c18cf472408a49adf6ef4cc4053d13e65b5167662271b93574a2a90de0d0",
+        "startMs": 0,
+        "endMs": 13192
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "73:1",
+      "categoryId": 73,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/073/001.mp3",
+      "startMs": 0,
+      "endMs": 16384,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/184.mp3",
+        "sha256": "c716de879138c780ed500860d343f32e775f681fe04884fc76ecb6f681cb7623",
+        "startMs": 0,
+        "endMs": 16384
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "74:1",
+      "categoryId": 74,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/074/001.mp3",
+      "startMs": 0,
+      "endMs": 20968,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/185.mp3",
+        "sha256": "5ce6a04cf68e8c3980f48739f7982bf99f7a046c9d13c74b5b7d10c6653614ff",
+        "startMs": 0,
+        "endMs": 20968
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "75:1",
+      "categoryId": 75,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/075/001.mp3",
+      "startMs": 0,
+      "endMs": 10504,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/186.mp3",
+        "sha256": "e4e82c7928b52a841d322ce33ce6dc7af131b054dc9e280c418b23ecf86f35f2",
+        "startMs": 0,
+        "endMs": 10504
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "76:1",
+      "categoryId": 76,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/076/001.mp3",
+      "startMs": 0,
+      "endMs": 22000,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/187.mp3",
+        "sha256": "fac2dd5246774c3e7720590ee082b340f70626c51a1a45aa9a2ed9d8d560ea81",
+        "startMs": 0,
+        "endMs": 22000
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "77:1",
+      "categoryId": 77,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/077/001.mp3",
+      "startMs": 0,
+      "endMs": 22984,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/188.mp3",
+        "sha256": "04d552c2ce164602b12b3310ff47b51e0c11f85aec3090727377959db59e68e4",
+        "startMs": 0,
+        "endMs": 22984
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "78:1",
+      "categoryId": 78,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/078/001.mp3",
+      "startMs": 0,
+      "endMs": 10984,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/189.mp3",
+        "sha256": "982f0cd1604372d3ec4ac718e35e5be4edbd8b3eabff7754d6de9c73408be606",
+        "startMs": 0,
+        "endMs": 10984
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "79:1",
+      "categoryId": 79,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/079/001.mp3",
+      "startMs": 0,
+      "endMs": 14080,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/190.mp3",
+        "sha256": "94b735170778a162d36dcda621fee34350703674bda5a43b2cb6d92550beb97b",
+        "startMs": 0,
+        "endMs": 14080
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "80:1",
+      "categoryId": 80,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/080/001.mp3",
+      "startMs": 0,
+      "endMs": 30184,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/191.mp3",
+        "sha256": "71a89b9427a5cadfe45879c794cc9eeca93aa5a28dfd2ec58c90e76389ff8bb4",
+        "startMs": 0,
+        "endMs": 30184
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "81:1",
+      "categoryId": 81,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/081/001.mp3",
+      "startMs": 0,
+      "endMs": 13792,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/192.mp3",
+        "sha256": "82346f08ddd342a628241c92e2a69d7b37b9e16b1df5a164a5bc351b4f0cac37",
+        "startMs": 0,
+        "endMs": 13792
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "82:1",
+      "categoryId": 82,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/082/001.mp3",
+      "startMs": 0,
+      "endMs": 9232,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/193.mp3",
+        "sha256": "ecb7d73fdb0b405e68822c6b5a732c2d3c3702035abe3f811ca385d08fc6ccf3",
+        "startMs": 0,
+        "endMs": 9232
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "83:1",
+      "categoryId": 83,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/083/001.mp3",
+      "startMs": 0,
+      "endMs": 15544,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/194.mp3",
+        "sha256": "9006915a4e90a4ad91a32d6b667fa993f735173e722572b8f424d0c2e30f7f51",
+        "startMs": 0,
+        "endMs": 15544
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "84:1",
+      "categoryId": 84,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/084/001.mp3",
+      "startMs": 0,
+      "endMs": 21232,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/195.mp3",
+        "sha256": "f67cceba162f3347e7ef1e3b4c5159e3a9cc9309f0dd920ab4b8ba7541398ea1",
+        "startMs": 0,
+        "endMs": 21232
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "85:1",
+      "categoryId": 85,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/085/001.mp3",
+      "startMs": 0,
+      "endMs": 15040,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/196.mp3",
+        "sha256": "217f762d76a2b6425bb1e6d14047e3e8db9e584b5ac5bfc1eb13738c2ebd7c43",
+        "startMs": 0,
+        "endMs": 15040
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "86:1",
+      "categoryId": 86,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/086/001.mp3",
+      "startMs": 0,
+      "endMs": 7360,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/197.mp3",
+        "sha256": "cbcc7560dda4fc4948295b6fb808a5d676efc6e3075f40460b04b71e7b97e898",
+        "startMs": 0,
+        "endMs": 7360
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "87:1",
+      "categoryId": 87,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/087/001.mp3",
+      "startMs": 0,
+      "endMs": 9208,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/198.mp3",
+        "sha256": "311bedae04ac625b7b5d45ec0c59343477fa319279abc93f3785438524bbf3e9",
+        "startMs": 0,
+        "endMs": 9208
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "88:1",
+      "categoryId": 88,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/088/001.mp3",
+      "startMs": 0,
+      "endMs": 16672,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/199.mp3",
+        "sha256": "698ba3247eda4331eb6e9778153e161273362b4cb134654bf17e6b27cd536be1",
+        "startMs": 0,
+        "endMs": 16672
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "89:1",
+      "categoryId": 89,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/089/001.mp3",
+      "startMs": 0,
+      "endMs": 10096,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/200.mp3",
+        "sha256": "5a155838b8c4c3b65705c84525ebd613bae81bb3ea43dab24a36fb232e99cc48",
+        "startMs": 0,
+        "endMs": 10096
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "90:1",
+      "categoryId": 90,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/090/001.mp3",
+      "startMs": 0,
+      "endMs": 9328,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/201.mp3",
+        "sha256": "23d10f1af4f395f179a7440375cc050fc2bf1516a4f1a1defaa997179ae5f2f8",
+        "startMs": 0,
+        "endMs": 9328
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "91:1",
+      "categoryId": 91,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/091/001.mp3",
+      "startMs": 0,
+      "endMs": 14344,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/202.mp3",
+        "sha256": "1dd4562a460fe98cfc56016813c19e3208fe5112d0a4d67d3920b295be45b432",
+        "startMs": 0,
+        "endMs": 14344
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "92:1",
+      "categoryId": 92,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/092/001.mp3",
+      "startMs": 0,
+      "endMs": 14704,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/203.mp3",
+        "sha256": "318b8e6a6ee8eb91f36d9a74e7fc86130427aaef584d088be23587c585b2228e",
+        "startMs": 0,
+        "endMs": 14704
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "93:1",
+      "categoryId": 93,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/093/001.mp3",
+      "startMs": 0,
+      "endMs": 7912,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/204.mp3",
+        "sha256": "b359ef2ef34222881e9f26d81f1750c9abf3d08f9bf14106bc48274281d93b2e",
+        "startMs": 0,
+        "endMs": 7912
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "94:1",
+      "categoryId": 94,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/094/001.mp3",
+      "startMs": 0,
+      "endMs": 15088,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/205.mp3",
+        "sha256": "8cf2a499dceef7f1b3c9d96dd4f6b0eeb865dd05f3cf57d6b9bbe3ee340e9d1f",
+        "startMs": 0,
+        "endMs": 15088
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "95:1",
+      "categoryId": 95,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/095/001.mp3",
+      "startMs": 0,
+      "endMs": 45496,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/206.mp3",
+        "sha256": "7c449b12ac105fb7f70cc9a94dcc8e23a9a4f03234ead075c090563be40739f1",
+        "startMs": 0,
+        "endMs": 45496
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "96:1",
+      "categoryId": 96,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/096/001.mp3",
+      "startMs": 0,
+      "endMs": 71128,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/207.mp3",
+        "sha256": "5bd6796919ee77f40b333cd47eca0355537279ed2554e0af3e51e5aecb361bc9",
+        "startMs": 0,
+        "endMs": 71128
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "97:1",
+      "categoryId": 97,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/097/001.mp3",
+      "startMs": 0,
+      "endMs": 38632,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/208.mp3",
+        "sha256": "c134f2b098081d7145ccf0cf47c1e1c33312179348c5e365ff5d8c435e87fe69",
+        "startMs": 0,
+        "endMs": 38632
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "98:1",
+      "categoryId": 98,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/098/001.mp3",
+      "startMs": 0,
+      "endMs": 24856,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/209.mp3",
+        "sha256": "8482fb61e248718f1c05f2f225cb0d39c348fc67eef707d92e0c82e2629c0f67",
+        "startMs": 0,
+        "endMs": 24856
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "99:1",
+      "categoryId": 99,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/099/001.mp3",
+      "startMs": 0,
+      "endMs": 7744,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/210.mp3",
+        "sha256": "53b3e35dc0174bb4da8f9de8cd7a1472da929d47793211af1ca113f4dcd656ff",
+        "startMs": 0,
+        "endMs": 7744
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "100:1",
+      "categoryId": 100,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/100/001.mp3",
+      "startMs": 0,
+      "endMs": 10912,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/211.mp3",
+        "sha256": "eb143d96d16c61a8a7ee51c9bf1eaac02cee7fea19829fd411dfa6a3754499cf",
+        "startMs": 0,
+        "endMs": 10912
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "101:1",
+      "categoryId": 101,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/101/001.mp3",
+      "startMs": 0,
+      "endMs": 11214,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/212.mp3",
+        "sha256": "1053704d02e641c0bd3b9e1cb3db4408d6bc1133a7a27194905c55b64d1a6a93",
+        "startMs": 0,
+        "endMs": 11214
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "101:2",
+      "categoryId": 101,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/101/002.mp3",
+      "startMs": 0,
+      "endMs": 10300,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/213.mp3",
+        "sha256": "72d813817c14b787e0be0e1bfbbb67ee60e085491684c35490f3cd92a5084a14",
+        "startMs": 0,
+        "endMs": 10300
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "102:1",
+      "categoryId": 102,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/102/001.mp3",
+      "startMs": 0,
+      "endMs": 14608,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/214.mp3",
+        "sha256": "887482396b4d2590571a08db456b0a293a63394227f65e473f17ca4580f535f9",
+        "startMs": 0,
+        "endMs": 14608
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "103:1",
+      "categoryId": 103,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/103/001.mp3",
+      "startMs": 0,
+      "endMs": 20416,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/215.mp3",
+        "sha256": "0584af2c870c707f27e89473aad19295e5cc1258d29292d6f40d6278a94d31f7",
+        "startMs": 0,
+        "endMs": 20416
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "104:1",
+      "categoryId": 104,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/104/001.mp3",
+      "startMs": 0,
+      "endMs": 13096,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/216.mp3",
+        "sha256": "bb8b24a594e87c42410590042b2d009ac2bff302a875ff55d915833ace8be55b",
+        "startMs": 0,
+        "endMs": 13096
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "105:1",
+      "categoryId": 105,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/105/001.mp3",
+      "startMs": 0,
+      "endMs": 37432,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/217.mp3",
+        "sha256": "3afa75c78e9686b47949f5ab35453106e654a8c9d9731a1df5a1cb9cca54bbd0",
+        "startMs": 0,
+        "endMs": 37432
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "106:1",
+      "categoryId": 106,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/106/001.mp3",
+      "startMs": 0,
+      "endMs": 27304,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/218.mp3",
+        "sha256": "1007eb7ab5bc1c3bd8a13106c887e171609570b0d70f8e7a2fe5876e11bac110",
+        "startMs": 0,
+        "endMs": 27304
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "107:1",
+      "categoryId": 107,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/107/001.mp3",
+      "startMs": 0,
+      "endMs": 14140,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/219.mp3",
+        "sha256": "157a1dffa9755e7c8baba123d16e9f1ae5a58499dd61e1870554215951355e48",
+        "startMs": 0,
+        "endMs": 14140
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "107:2",
+      "categoryId": 107,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/107/002.mp3",
+      "startMs": 0,
+      "endMs": 14036,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/220.mp3",
+        "sha256": "c668a17db6634fd4ee90ad49936ed328f44ab67cec104a2d40a0ee9b5a9e56d1",
+        "startMs": 0,
+        "endMs": 14036
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "107:3",
+      "categoryId": 107,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/hamad-al-drehem/107/003.mp3",
+      "startMs": 0,
+      "endMs": 9490,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/221.mp3",
+        "sha256": "27d19f9b86d12c7fc91c098a0f5db17a381ca38d8da8ee0d4a16cb6e31e233ea",
+        "startMs": 0,
+        "endMs": 9490
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "107:4",
+      "categoryId": 107,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/hamad-al-drehem/107/004.mp3",
+      "startMs": 0,
+      "endMs": 13330,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/222.mp3",
+        "sha256": "f252850cfda00d18b826f78e42adbbae888372b19835d498d4a8634148a25e74",
+        "startMs": 0,
+        "endMs": 13330
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "107:5",
+      "categoryId": 107,
+      "dhikrId": 5,
+      "url": "/audio/adhkar/hamad-al-drehem/107/005.mp3",
+      "startMs": 0,
+      "endMs": 15629,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/223.mp3",
+        "sha256": "ef5e9a66fe91c85c6ed72942bc9cb60390c29a87d70e27f680f5a331ddd13cab",
+        "startMs": 0,
+        "endMs": 15629
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "108:1",
+      "categoryId": 108,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/108/001.mp3",
+      "startMs": 0,
+      "endMs": 25164,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/224.mp3",
+        "sha256": "62e01db1ebf0697680f30c3e38e15f14d66fcd90a5ff6ce2babc6539ffc7ed21",
+        "startMs": 0,
+        "endMs": 25164
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "108:2",
+      "categoryId": 108,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/108/002.mp3",
+      "startMs": 0,
+      "endMs": 16021,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/225.mp3",
+        "sha256": "0241cb451fbd388c84f19f2e97f51a0788561343fd50a3ce06c6964ebca5711a",
+        "startMs": 0,
+        "endMs": 16021
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "108:3",
+      "categoryId": 108,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/hamad-al-drehem/108/003.mp3",
+      "startMs": 0,
+      "endMs": 31041,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/226.mp3",
+        "sha256": "4adadbe9f1d3152403dd2215fc5bc225c33144d3338a621321fa0b54eee829fd",
+        "startMs": 0,
+        "endMs": 31041
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "109:1",
+      "categoryId": 109,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/109/001.mp3",
+      "startMs": 0,
+      "endMs": 10888,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/227.mp3",
+        "sha256": "f0cee5c3caaadd72116ce6a58da063e20883f9a38b9093e9574608ae60f78af6",
+        "startMs": 0,
+        "endMs": 10888
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "110:1",
+      "categoryId": 110,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/110/001.mp3",
+      "startMs": 0,
+      "endMs": 24304,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/228.mp3",
+        "sha256": "da3516f47a9869624cfffbaa1f4388aac34acf759a5d9e48c0463a90cd0bc423",
+        "startMs": 0,
+        "endMs": 24304
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "111:1",
+      "categoryId": 111,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/111/001.mp3",
+      "startMs": 0,
+      "endMs": 18496,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/229.mp3",
+        "sha256": "158131dfd5b60bbc755ff09eaab64d304237a9ea1073cd2ab87d777593ac8152",
+        "startMs": 0,
+        "endMs": 18496
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "112:1",
+      "categoryId": 112,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/112/001.mp3",
+      "startMs": 0,
+      "endMs": 17560,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/230.mp3",
+        "sha256": "c56ff1dca5223690d2abee38556c85864aef2bacf4e1d465b5f4aadbf80cff2b",
+        "startMs": 0,
+        "endMs": 17560
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "113:1",
+      "categoryId": 113,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/113/001.mp3",
+      "startMs": 0,
+      "endMs": 31120,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/231.mp3",
+        "sha256": "a1edd33b6efd084be4a8ba73f851f1fc5cf2f999dd2c9df6de173875c1d93439",
+        "startMs": 0,
+        "endMs": 31120
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "114:1",
+      "categoryId": 114,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/114/001.mp3",
+      "startMs": 0,
+      "endMs": 19240,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/232.mp3",
+        "sha256": "c7b1bbe21cb7bb89ab2042286c6b569c8e31459492a3f6a509c0d8476c898700",
+        "startMs": 0,
+        "endMs": 19240
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "115:1",
+      "categoryId": 115,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/115/001.mp3",
+      "startMs": 0,
+      "endMs": 22624,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/233.mp3",
+        "sha256": "4d838e3d7322825769125df588fe50bfae388b860d95656b5e34ffdea7795e33",
+        "startMs": 0,
+        "endMs": 22624
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "116:1",
+      "categoryId": 116,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/116/001.mp3",
+      "startMs": 0,
+      "endMs": 14392,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/234.mp3",
+        "sha256": "58bdce12b3a4f738a90d976a773c169c0fce9a08d6cffc78202432c1c51337ed",
+        "startMs": 0,
+        "endMs": 14392
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "117:1",
+      "categoryId": 117,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/117/001.mp3",
+      "startMs": 0,
+      "endMs": 17056,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/235.mp3",
+        "sha256": "77a81b061f1e2373de6d5d33336de8b72187b041c960a76a2e28d398adc22766",
+        "startMs": 0,
+        "endMs": 17056
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "118:1",
+      "categoryId": 118,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/118/001.mp3",
+      "startMs": 0,
+      "endMs": 67576,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/236.mp3",
+        "sha256": "438abbd57bb62017f1383929c168242d779b4ce75b8315cba7eee066946f60f0",
+        "startMs": 0,
+        "endMs": 67576
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "119:1",
+      "categoryId": 119,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/119/001.mp3",
+      "startMs": 0,
+      "endMs": 23272,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/237.mp3",
+        "sha256": "cde60a47d19127af7d6f7b40cf7308d2418cf11a22a61f89f500c6e85a38c929",
+        "startMs": 0,
+        "endMs": 23272
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "120:1",
+      "categoryId": 120,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/120/001.mp3",
+      "startMs": 0,
+      "endMs": 25360,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/238.mp3",
+        "sha256": "f5a81a7ddf0d55e577e7b23aa1f64c0fc86b2690d25cca9c7b39f702e903f909",
+        "startMs": 0,
+        "endMs": 25360
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "121:1",
+      "categoryId": 121,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/121/001.mp3",
+      "startMs": 0,
+      "endMs": 31120,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/239.mp3",
+        "sha256": "548208076192dee7b0d7496e96fa1cd8070ca60a469ed1c328dfbf92642bfee4",
+        "startMs": 0,
+        "endMs": 31120
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "122:1",
+      "categoryId": 122,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/122/001.mp3",
+      "startMs": 0,
+      "endMs": 6878,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/240.mp3",
+        "sha256": "3dcc789d9867c08d34d639cbb873aaa09a8cc7dbae9c7443a5a4a01b1d3e3d1b",
+        "startMs": 0,
+        "endMs": 6878
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "122:2",
+      "categoryId": 122,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/122/002.mp3",
+      "startMs": 0,
+      "endMs": 1941,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/241.mp3",
+        "sha256": "7028ce95bbc76291848d384c8326f749dc3354205a5c0a14d226cebbbd345310",
+        "startMs": 0,
+        "endMs": 1941
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "123:1",
+      "categoryId": 123,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/123/001.mp3",
+      "startMs": 0,
+      "endMs": 16792,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/242.mp3",
+        "sha256": "146e7c1db422057373d2f1194ffdfe8538ad72f8967b19fe2430d748d05e632d",
+        "startMs": 0,
+        "endMs": 16792
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "124:1",
+      "categoryId": 124,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/124/001.mp3",
+      "startMs": 0,
+      "endMs": 20800,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/243.mp3",
+        "sha256": "236311f4855ecc517e4bcc5a1f16785197b77071c5e199719896ab2ac7fc0b56",
+        "startMs": 0,
+        "endMs": 20800
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "125:1",
+      "categoryId": 125,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/125/001.mp3",
+      "startMs": 0,
+      "endMs": 18016,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/244.mp3",
+        "sha256": "25643972637dcab9347015b5f91b34a9731bebf1fb32feeb7d37f032e12ba2ba",
+        "startMs": 0,
+        "endMs": 18016
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "126:1",
+      "categoryId": 126,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/126/001.mp3",
+      "startMs": 0,
+      "endMs": 8248,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/245.mp3",
+        "sha256": "de7bc0503995c6c1543d2c70cf1a1af9a44f9ebe817483ea1d1bef965073af45",
+        "startMs": 0,
+        "endMs": 8248
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "127:1",
+      "categoryId": 127,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/127/001.mp3",
+      "startMs": 0,
+      "endMs": 13792,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/246.mp3",
+        "sha256": "e2cf1547d2423b9bcd9fdee3938999561b28a1787bf0a33f4661ad1b72e1c5eb",
+        "startMs": 0,
+        "endMs": 13792
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "128:1",
+      "categoryId": 128,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/128/001.mp3",
+      "startMs": 0,
+      "endMs": 43840,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/247.mp3",
+        "sha256": "a902a2928fbe079ad833edbf663858b40067f0b1795be74702c84ce053184466",
+        "startMs": 0,
+        "endMs": 43840
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "129:1",
+      "categoryId": 129,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/129/001.mp3",
+      "startMs": 0,
+      "endMs": 15995,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/248.mp3",
+        "sha256": "24160dfbc37aacb752572bc58cdf300cb0cf812a4b59ea5a4fb813aa8ebd5a3c",
+        "startMs": 0,
+        "endMs": 15995
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "129:2",
+      "categoryId": 129,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/129/002.mp3",
+      "startMs": 0,
+      "endMs": 13357,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/249.mp3",
+        "sha256": "1be07ae4679d50f8f4aa5f246ae3e9e6d2b9173a149caee973848d81062c90bd",
+        "startMs": 0,
+        "endMs": 13357
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "129:3",
+      "categoryId": 129,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/hamad-al-drehem/129/003.mp3",
+      "startMs": 0,
+      "endMs": 17014,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/250.mp3",
+        "sha256": "9bd830ff20130a3548c07aba7a486f5780bd5e7dcd2803257ba1ce5b3b9529f3",
+        "startMs": 0,
+        "endMs": 17014
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "129:4",
+      "categoryId": 129,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/hamad-al-drehem/129/004.mp3",
+      "startMs": 0,
+      "endMs": 15995,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/251.mp3",
+        "sha256": "28757a0927f684081e046954c3b796c720a73d32daac16af12abcf5f2fb9a489",
+        "startMs": 0,
+        "endMs": 15995
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "129:5",
+      "categoryId": 129,
+      "dhikrId": 5,
+      "url": "/audio/adhkar/hamad-al-drehem/129/005.mp3",
+      "startMs": 0,
+      "endMs": 11032,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/252.mp3",
+        "sha256": "5441fc074fc43c969030430640652218cf4bf194a87aeb87a2ccabd86d3d6e96",
+        "startMs": 0,
+        "endMs": 11032
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "129:6",
+      "categoryId": 129,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/hamad-al-drehem/129/006.mp3",
+      "startMs": 0,
+      "endMs": 12129,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/253.mp3",
+        "sha256": "788b3edfd775aa9da68ead1806549eb7d7ce235a6719c50d7cfddfd63332b5c1",
+        "startMs": 0,
+        "endMs": 12129
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "130:1",
+      "categoryId": 130,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/130/001.mp3",
+      "startMs": 0,
+      "endMs": 19966,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/254.mp3",
+        "sha256": "fdb0b3f13349f225408a7470a17cb7e2704d4b560fac6c7f72accfb747212a77",
+        "startMs": 0,
+        "endMs": 19966
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "130:2",
+      "categoryId": 130,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hamad-al-drehem/130/002.mp3",
+      "startMs": 0,
+      "endMs": 21951,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/255.mp3",
+        "sha256": "d81019ebe94ef30dfcf797ef9fda6e3ae8cd7416123eb7c099cfb09d1028b41f",
+        "startMs": 0,
+        "endMs": 21951
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "130:3",
+      "categoryId": 130,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/hamad-al-drehem/130/003.mp3",
+      "startMs": 0,
+      "endMs": 18973,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/256.mp3",
+        "sha256": "0ea572848cf086bf2f08d2cc7a1512cc8c512e9b7baaff389f9b61a74a19978e",
+        "startMs": 0,
+        "endMs": 18973
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "130:4",
+      "categoryId": 130,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/hamad-al-drehem/130/004.mp3",
+      "startMs": 0,
+      "endMs": 16988,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/257.mp3",
+        "sha256": "742b7d89090aa9bdefe55fe65824016eef963325604e83e00280068bd049fcac",
+        "startMs": 0,
+        "endMs": 16988
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "130:5",
+      "categoryId": 130,
+      "dhikrId": 5,
+      "url": "/audio/adhkar/hamad-al-drehem/130/005.mp3",
+      "startMs": 0,
+      "endMs": 26940,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/258.mp3",
+        "sha256": "8918912660e9de7d5bd8ffb15729870fe743b8a6ec79e9ff832580c984792d6b",
+        "startMs": 0,
+        "endMs": 26940
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "130:6",
+      "categoryId": 130,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/hamad-al-drehem/130/006.mp3",
+      "startMs": 0,
+      "endMs": 11006,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/259.mp3",
+        "sha256": "5fbc6bee47e8079c4eca2b854a80457cbe36e8cf83f9361b49d11588bee33a4a",
+        "startMs": 0,
+        "endMs": 11006
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "130:7",
+      "categoryId": 130,
+      "dhikrId": 7,
+      "url": "/audio/adhkar/hamad-al-drehem/130/007.mp3",
+      "startMs": 0,
+      "endMs": 20958,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/260.mp3",
+        "sha256": "2cf929dd048c7d47eb007663e21d624aa156d6b32348a8053331255d62c848ed",
+        "startMs": 0,
+        "endMs": 20958
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "130:8",
+      "categoryId": 130,
+      "dhikrId": 8,
+      "url": "/audio/adhkar/hamad-al-drehem/130/008.mp3",
+      "startMs": 0,
+      "endMs": 19966,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/261.mp3",
+        "sha256": "5fdf5a3c3653abe2f2d87dd2b8791729bdbb58558ee89f7a7acd79f3ed81d8f5",
+        "startMs": 0,
+        "endMs": 19966
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "130:9",
+      "categoryId": 130,
+      "dhikrId": 9,
+      "url": "/audio/adhkar/hamad-al-drehem/130/009.mp3",
+      "startMs": 0,
+      "endMs": 47864,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/262.mp3",
+        "sha256": "d1ab2260c77b76d6b28a90f103feb787a20c8fda16a9fddc667617fc179c16ab",
+        "startMs": 0,
+        "endMs": 47864
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "130:10",
+      "categoryId": 130,
+      "dhikrId": 10,
+      "url": "/audio/adhkar/hamad-al-drehem/130/010.mp3",
+      "startMs": 0,
+      "endMs": 18973,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/263.mp3",
+        "sha256": "68cb8b05c1830328623933f7ba6aaebf11ac17bf9f4a6f5e71263846540faf1d",
+        "startMs": 0,
+        "endMs": 18973
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "130:11",
+      "categoryId": 130,
+      "dhikrId": 11,
+      "url": "/audio/adhkar/hamad-al-drehem/130/011.mp3",
+      "startMs": 0,
+      "endMs": 10013,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/264.mp3",
+        "sha256": "6330fd7d1f1c90200a4f5fcbfa149e8d14be3879146283c231e2ff55271c7dd0",
+        "startMs": 0,
+        "endMs": 10013
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "130:12",
+      "categoryId": 130,
+      "dhikrId": 12,
+      "url": "/audio/adhkar/hamad-al-drehem/130/012.mp3",
+      "startMs": 0,
+      "endMs": 17876,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/265.mp3",
+        "sha256": "9322ec53a6db44fbcbac7cf285a8355ee9d73d4b6c864faa03d51845c21a3a32",
+        "startMs": 0,
+        "endMs": 17876
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "131:1",
+      "categoryId": 131,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/131/001.mp3",
+      "startMs": 0,
+      "endMs": 17008,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/266.mp3",
+        "sha256": "207a4e485c35161d506ff791f0144a08d5213bd564f9e518f1c7c82b09ad478a",
+        "startMs": 0,
+        "endMs": 17008
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "132:1",
+      "categoryId": 132,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hamad-al-drehem/132/001.mp3",
+      "startMs": 0,
+      "endMs": 52775,
+      "source": {
+        "url": "https://raw.githubusercontent.com/rn0x/Adhkar-json/93dc3fc489e4291da8816265920b3cb7e2c3b569/audio/267.mp3",
+        "sha256": "0e9b4f82e51e3a4d05910d5e1c3ed2f66170ad7dcf9c6c34a9e2064f2c31b7f5",
+        "startMs": 0,
+        "endMs": 52775
+      },
+      "alignment": {
+        "method": "publisher-individual-file",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    }
+  ],
+  "variants": [],
+  "sections": []
+}

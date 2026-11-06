@@ -1,0 +1,457 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "2026-11-06.3",
+  "reciter": "samir-albashiri",
+  "timeUnit": "milliseconds",
+  "items": [
+    {
+      "itemId": "1:4",
+      "categoryId": 1,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/samir-albashiri/001/004-507-morning.mp3",
+      "startMs": 0,
+      "endMs": 13949,
+      "source": {
+        "url": "https://archive.org/download/dorar-doaa/Azkar-sabah-samirbashiri-Aldorar-Net.mp3",
+        "sha256": "771aba5bf452ee182ae3a856a2fba25cc73b0a6dc075724affa61fab2c8b5d59",
+        "startMs": 61000,
+        "endMs": 74920
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا ، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ وَإِلَيْكَ النُّشُورُ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:5",
+      "categoryId": 1,
+      "dhikrId": 5,
+      "url": "/audio/adhkar/samir-albashiri/001/005-507.mp3",
+      "startMs": 0,
+      "endMs": 41535,
+      "source": {
+        "url": "https://archive.org/download/dorar-doaa/Azkar-sabah-samirbashiri-Aldorar-Net.mp3",
+        "sha256": "771aba5bf452ee182ae3a856a2fba25cc73b0a6dc075724affa61fab2c8b5d59",
+        "startMs": 76240,
+        "endMs": 117740
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلاَّ أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي فَإِنَّهُ لاَ يَغْفِرُ الذُّنوبَ إِلاَّ أَنْتَ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:6",
+      "categoryId": 1,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/samir-albashiri/001/006-507-morning.mp3",
+      "startMs": 0,
+      "endMs": 32731,
+      "source": {
+        "url": "https://archive.org/download/dorar-doaa/Azkar-sabah-samirbashiri-Aldorar-Net.mp3",
+        "sha256": "771aba5bf452ee182ae3a856a2fba25cc73b0a6dc075724affa61fab2c8b5d59",
+        "startMs": 117740,
+        "endMs": 150420
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "اللَّهُمَّ إِنِّي أَصْبَحْتُ أُشْهِدُكَ، وَأُشْهِدُ حَمَلَةَ عَرْشِكَ، وَمَلاَئِكَتِكَ، وَجَمِيعَ خَلْقِكَ، أَنَّكَ أَنْتَ اللَّهُ لَا إِلَهَ إِلاَّ أَنْتَ وَحْدَكَ لاَ شَرِيكَ لَكَ، وَأَنَّ مُحَمَّداً عَبْدُكَ وَرَسُولُكَ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:7",
+      "categoryId": 1,
+      "dhikrId": 7,
+      "url": "/audio/adhkar/samir-albashiri/001/007-507-morning.mp3",
+      "startMs": 0,
+      "endMs": 19069,
+      "source": {
+        "url": "https://archive.org/download/dorar-doaa/Azkar-sabah-samirbashiri-Aldorar-Net.mp3",
+        "sha256": "771aba5bf452ee182ae3a856a2fba25cc73b0a6dc075724affa61fab2c8b5d59",
+        "startMs": 152420,
+        "endMs": 171460
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "اللَّهُمَّ مَا أَصْبَحَ بِي مِنْ نِعْمَةٍ أَوْ بِأَحَدٍ مِنْ خَلْقِكَ فَمِنْكَ وَحْدَكَ لاَ شَرِيكَ لَكَ، فَلَكَ الْحَمْدُ وَلَكَ الشُّكْرُ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:9",
+      "categoryId": 1,
+      "dhikrId": 9,
+      "url": "/audio/adhkar/samir-albashiri/001/009-508.mp3",
+      "startMs": 0,
+      "endMs": 13688,
+      "source": {
+        "url": "https://archive.org/download/dorar-doaa/Azkar-masaa-samirbashiri-Aldorar-Net.mp3",
+        "sha256": "27bbe96e310cf0e21b778c0a6ff8501318db9097b9c51159cb1105ecf8c4d2a8",
+        "startMs": 170760,
+        "endMs": 184400
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "حَسْبِيَ اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ عَلَيهِ تَوَكَّلتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:12",
+      "categoryId": 1,
+      "dhikrId": 12,
+      "url": "/audio/adhkar/samir-albashiri/001/012-508.mp3",
+      "startMs": 0,
+      "endMs": 17580,
+      "source": {
+        "url": "https://archive.org/download/dorar-doaa/Azkar-masaa-samirbashiri-Aldorar-Net.mp3",
+        "sha256": "27bbe96e310cf0e21b778c0a6ff8501318db9097b9c51159cb1105ecf8c4d2a8",
+        "startMs": 185800,
+        "endMs": 203340
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "بِسْمِ اللَّهِ الَّذِي لاَ يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلاَ فِي السّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:13",
+      "categoryId": 1,
+      "dhikrId": 13,
+      "url": "/audio/adhkar/samir-albashiri/001/013-508.mp3",
+      "startMs": 0,
+      "endMs": 16170,
+      "source": {
+        "url": "https://archive.org/download/dorar-doaa/Azkar-masaa-samirbashiri-Aldorar-Net.mp3",
+        "sha256": "27bbe96e310cf0e21b778c0a6ff8501318db9097b9c51159cb1105ecf8c4d2a8",
+        "startMs": 203340,
+        "endMs": 219480
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "رَضِيتُ بِاللَّهِ رَبَّاً، وَبِالْإِسْلاَمِ دِيناً، وَبِمُحَمَّدٍ صلى الله عليه وسلم نَبِيّاً",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:18",
+      "categoryId": 1,
+      "dhikrId": 18,
+      "url": "/audio/adhkar/samir-albashiri/001/018-508.mp3",
+      "startMs": 0,
+      "endMs": 16039,
+      "source": {
+        "url": "https://archive.org/download/dorar-doaa/Azkar-masaa-samirbashiri-Aldorar-Net.mp3",
+        "sha256": "27bbe96e310cf0e21b778c0a6ff8501318db9097b9c51159cb1105ecf8c4d2a8",
+        "startMs": 11280,
+        "endMs": 27280
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:19",
+      "categoryId": 1,
+      "dhikrId": 19,
+      "url": "/audio/adhkar/samir-albashiri/001/019-508.mp3",
+      "startMs": 0,
+      "endMs": 16039,
+      "source": {
+        "url": "https://archive.org/download/dorar-doaa/Azkar-masaa-samirbashiri-Aldorar-Net.mp3",
+        "sha256": "27bbe96e310cf0e21b778c0a6ff8501318db9097b9c51159cb1105ecf8c4d2a8",
+        "startMs": 11280,
+        "endMs": 27280
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "لاَ إِلَهَ إِلاَّ اللَّهُ، وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    }
+  ],
+  "variants": [
+    {
+      "itemId": "1:4",
+      "categoryId": 1,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/samir-albashiri/001/004-507-morning.mp3",
+      "startMs": 0,
+      "endMs": 13949,
+      "source": {
+        "url": "https://archive.org/download/dorar-doaa/Azkar-sabah-samirbashiri-Aldorar-Net.mp3",
+        "sha256": "771aba5bf452ee182ae3a856a2fba25cc73b0a6dc075724affa61fab2c8b5d59",
+        "startMs": 61000,
+        "endMs": 74920
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا ، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ وَإِلَيْكَ النُّشُورُ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:4",
+      "categoryId": 1,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/samir-albashiri/001/004-508-evening.mp3",
+      "startMs": 0,
+      "endMs": 12826,
+      "source": {
+        "url": "https://archive.org/download/dorar-doaa/Azkar-masaa-samirbashiri-Aldorar-Net.mp3",
+        "sha256": "27bbe96e310cf0e21b778c0a6ff8501318db9097b9c51159cb1105ecf8c4d2a8",
+        "startMs": 59520,
+        "endMs": 72320
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "اللهم بك امسينا وبك اصبحنا وبك نحيا وبك نموت واليك المصير",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "evening",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:6",
+      "categoryId": 1,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/samir-albashiri/001/006-507-morning.mp3",
+      "startMs": 0,
+      "endMs": 32731,
+      "source": {
+        "url": "https://archive.org/download/dorar-doaa/Azkar-sabah-samirbashiri-Aldorar-Net.mp3",
+        "sha256": "771aba5bf452ee182ae3a856a2fba25cc73b0a6dc075724affa61fab2c8b5d59",
+        "startMs": 117740,
+        "endMs": 150420
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "اللَّهُمَّ إِنِّي أَصْبَحْتُ أُشْهِدُكَ، وَأُشْهِدُ حَمَلَةَ عَرْشِكَ، وَمَلاَئِكَتِكَ، وَجَمِيعَ خَلْقِكَ، أَنَّكَ أَنْتَ اللَّهُ لَا إِلَهَ إِلاَّ أَنْتَ وَحْدَكَ لاَ شَرِيكَ لَكَ، وَأَنَّ مُحَمَّداً عَبْدُكَ وَرَسُولُكَ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:6",
+      "categoryId": 1,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/samir-albashiri/001/006-508-evening.mp3",
+      "startMs": 0,
+      "endMs": 33463,
+      "source": {
+        "url": "https://archive.org/download/dorar-doaa/Azkar-masaa-samirbashiri-Aldorar-Net.mp3",
+        "sha256": "27bbe96e310cf0e21b778c0a6ff8501318db9097b9c51159cb1105ecf8c4d2a8",
+        "startMs": 115940,
+        "endMs": 149360
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "اللهم اني امسيت اشهدك واشهد حملة عرشك وملايكتك وجميع خلقك انك انت الله لا اله الا انت وحدك لا شريك لك وان محمدا عبدك ورسولك",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "evening",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:7",
+      "categoryId": 1,
+      "dhikrId": 7,
+      "url": "/audio/adhkar/samir-albashiri/001/007-507-morning.mp3",
+      "startMs": 0,
+      "endMs": 19069,
+      "source": {
+        "url": "https://archive.org/download/dorar-doaa/Azkar-sabah-samirbashiri-Aldorar-Net.mp3",
+        "sha256": "771aba5bf452ee182ae3a856a2fba25cc73b0a6dc075724affa61fab2c8b5d59",
+        "startMs": 152420,
+        "endMs": 171460
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "اللَّهُمَّ مَا أَصْبَحَ بِي مِنْ نِعْمَةٍ أَوْ بِأَحَدٍ مِنْ خَلْقِكَ فَمِنْكَ وَحْدَكَ لاَ شَرِيكَ لَكَ، فَلَكَ الْحَمْدُ وَلَكَ الشُّكْرُ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:7",
+      "categoryId": 1,
+      "dhikrId": 7,
+      "url": "/audio/adhkar/samir-albashiri/001/007-508-evening.mp3",
+      "startMs": 0,
+      "endMs": 18024,
+      "source": {
+        "url": "https://archive.org/download/dorar-doaa/Azkar-masaa-samirbashiri-Aldorar-Net.mp3",
+        "sha256": "27bbe96e310cf0e21b778c0a6ff8501318db9097b9c51159cb1105ecf8c4d2a8",
+        "startMs": 150780,
+        "endMs": 168760
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "اللهم ما امسي بي من نعمة او باحد من خلقك فمنك وحدك لا شريك لك فلك الحمد ولك الشكر",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "evening",
+      "rightsId": "original-source-rights"
+    }
+  ],
+  "sections": [
+    {
+      "id": "samir-albashiri:507",
+      "readerId": "samir-albashiri",
+      "title": "أذكار الصباح",
+      "type": "morning",
+      "categoryIds": [
+        1
+      ],
+      "url": "/audio/adhkar/samir-albashiri/sections/507.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 6260748,
+      "durationMs": 260859,
+      "sha256": "771aba5bf452ee182ae3a856a2fba25cc73b0a6dc075724affa61fab2c8b5d59",
+      "timing": {
+        "startMs": 0,
+        "endMs": 260859
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://archive.org/details/dorar-doaa",
+      "publisher": "Internet Archive / named source recording",
+      "attributionLevel": "archive-and-published-index",
+      "verificationPages": [
+        "https://www.aldorar.net/2017/10/azkar-sabah-msaa.html"
+      ],
+      "source": {
+        "url": "https://archive.org/download/dorar-doaa/Azkar-sabah-samirbashiri-Aldorar-Net.mp3",
+        "sha256": "771aba5bf452ee182ae3a856a2fba25cc73b0a6dc075724affa61fab2c8b5d59",
+        "startMs": 0,
+        "endMs": 260859
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    },
+    {
+      "id": "samir-albashiri:508",
+      "readerId": "samir-albashiri",
+      "title": "أذكار المساء",
+      "type": "evening",
+      "categoryIds": [
+        1
+      ],
+      "url": "/audio/adhkar/samir-albashiri/sections/508.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 6384000,
+      "durationMs": 265994,
+      "sha256": "27bbe96e310cf0e21b778c0a6ff8501318db9097b9c51159cb1105ecf8c4d2a8",
+      "timing": {
+        "startMs": 0,
+        "endMs": 265994
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://archive.org/details/dorar-doaa",
+      "publisher": "Internet Archive / named source recording",
+      "attributionLevel": "archive-and-published-index",
+      "verificationPages": [
+        "https://www.aldorar.net/2017/10/azkar-sabah-msaa.html"
+      ],
+      "source": {
+        "url": "https://archive.org/download/dorar-doaa/Azkar-masaa-samirbashiri-Aldorar-Net.mp3",
+        "sha256": "27bbe96e310cf0e21b778c0a6ff8501318db9097b9c51159cb1105ecf8c4d2a8",
+        "startMs": 0,
+        "endMs": 265994
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    }
+  ]
+}

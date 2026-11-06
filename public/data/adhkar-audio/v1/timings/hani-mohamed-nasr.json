@@ -1,0 +1,622 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "2026-11-06.3",
+  "reciter": "hani-mohamed-nasr",
+  "timeUnit": "milliseconds",
+  "items": [
+    {
+      "itemId": "1:1",
+      "categoryId": 1,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hani-mohamed-nasr/001/001-518.mp3",
+      "startMs": 0,
+      "endMs": 45035,
+      "source": {
+        "url": "https://www.ourquraan.com/audio/remembrace/Hany.Muhammed.Nasr%20-%20Morning.remembrance.mp3",
+        "sha256": "a8e554ff614b980952ea642ac51c084ac854a5bdff3ce8a57b798f7f34a7c46e",
+        "startMs": 4080,
+        "endMs": 49040
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9867,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "quoted-quran-passage",
+        "matchedText": "اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَّهُ مَا فِي السَّمَوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاء وَسِعَ كُرْسِيُّهُ السَّمَوَاتِ وَالْأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:2",
+      "categoryId": 1,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hani-mohamed-nasr/001/002-518.mp3",
+      "startMs": 0,
+      "endMs": 69094,
+      "source": {
+        "url": "https://www.ourquraan.com/audio/remembrace/Hany.Muhammed.Nasr%20-%20Morning.remembrance.mp3",
+        "sha256": "a8e554ff614b980952ea642ac51c084ac854a5bdff3ce8a57b798f7f34a7c46e",
+        "startMs": 196680,
+        "endMs": 265720
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "بسم الله الرحمن الرحيم ﴿قُلْ هُوَ اللَّهُ أَحَدٌ* اللَّهُ الصَّمَدُ* لَمْ يَلِدْ وَلَمْ يُولَدْ* وَلَمْ يَكُن لَّهُ كُفُواً أَحَدٌ﴾.  بسم الله الرحمن الرحيم ﴿قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ* مِن شَرِّ مَا خَلَقَ* وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ* وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ* وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ﴾.  بسم الله الرحمن الرحيم ﴿قُلْ أَعُوذُ بِرَبِّ النَّاسِ* مَلِكِ النَّاسِ* إِلَهِ النَّاسِ* مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ* الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ* مِنَ الْجِنَّةِ وَ النَّاسِ﴾",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:3",
+      "categoryId": 1,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/hani-mohamed-nasr/001/003-518-morning.mp3",
+      "startMs": 0,
+      "endMs": 43964,
+      "source": {
+        "url": "https://www.ourquraan.com/audio/remembrace/Hany.Muhammed.Nasr%20-%20Morning.remembrance.mp3",
+        "sha256": "a8e554ff614b980952ea642ac51c084ac854a5bdff3ce8a57b798f7f34a7c46e",
+        "startMs": 729960,
+        "endMs": 773860
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.99,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ ، وَالْحَمْدُ لِلَّهِ، لاَ إِلَهَ إلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذَا الْيَوْمِ وَخَيرَ مَا بَعْدَهُ ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي  هَذَا الْيَوْمِ وَشَرِّ مَا بَعْدَهُ، رَبِّ أَعُوذُ بِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ، رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:5",
+      "categoryId": 1,
+      "dhikrId": 5,
+      "url": "/audio/adhkar/hani-mohamed-nasr/001/005-518.mp3",
+      "startMs": 0,
+      "endMs": 35344,
+      "source": {
+        "url": "https://www.ourquraan.com/audio/remembrace/Hany.Muhammed.Nasr%20-%20Morning.remembrance.mp3",
+        "sha256": "a8e554ff614b980952ea642ac51c084ac854a5bdff3ce8a57b798f7f34a7c46e",
+        "startMs": 336120,
+        "endMs": 371400
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.973,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلاَّ أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي فَإِنَّهُ لاَ يَغْفِرُ الذُّنوبَ إِلاَّ أَنْتَ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:6",
+      "categoryId": 1,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/hani-mohamed-nasr/001/006-518-morning.mp3",
+      "startMs": 0,
+      "endMs": 24503,
+      "source": {
+        "url": "https://www.ourquraan.com/audio/remembrace/Hany.Muhammed.Nasr%20-%20Morning.remembrance.mp3",
+        "sha256": "a8e554ff614b980952ea642ac51c084ac854a5bdff3ce8a57b798f7f34a7c46e",
+        "startMs": 837920,
+        "endMs": 862360
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "اللَّهُمَّ إِنِّي أَصْبَحْتُ أُشْهِدُكَ، وَأُشْهِدُ حَمَلَةَ عَرْشِكَ، وَمَلاَئِكَتِكَ، وَجَمِيعَ خَلْقِكَ، أَنَّكَ أَنْتَ اللَّهُ لَا إِلَهَ إِلاَّ أَنْتَ وَحْدَكَ لاَ شَرِيكَ لَكَ، وَأَنَّ مُحَمَّداً عَبْدُكَ وَرَسُولُكَ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:7",
+      "categoryId": 1,
+      "dhikrId": 7,
+      "url": "/audio/adhkar/hani-mohamed-nasr/001/007-518-morning.mp3",
+      "startMs": 0,
+      "endMs": 12513,
+      "source": {
+        "url": "https://www.ourquraan.com/audio/remembrace/Hany.Muhammed.Nasr%20-%20Morning.remembrance.mp3",
+        "sha256": "a8e554ff614b980952ea642ac51c084ac854a5bdff3ce8a57b798f7f34a7c46e",
+        "startMs": 887680,
+        "endMs": 900120
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "اللَّهُمَّ مَا أَصْبَحَ بِي مِنْ نِعْمَةٍ أَوْ بِأَحَدٍ مِنْ خَلْقِكَ فَمِنْكَ وَحْدَكَ لاَ شَرِيكَ لَكَ، فَلَكَ الْحَمْدُ وَلَكَ الشُّكْرُ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:8",
+      "categoryId": 1,
+      "dhikrId": 8,
+      "url": "/audio/adhkar/hani-mohamed-nasr/001/008-518.mp3",
+      "startMs": 0,
+      "endMs": 30198,
+      "source": {
+        "url": "https://www.ourquraan.com/audio/remembrace/Hany.Muhammed.Nasr%20-%20Morning.remembrance.mp3",
+        "sha256": "a8e554ff614b980952ea642ac51c084ac854a5bdff3ce8a57b798f7f34a7c46e",
+        "startMs": 516440,
+        "endMs": 546580
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "اللَّهُمَّ عَافِنِي فِي بَدَنِي، اللَّهُمَّ عَافِنِي فِي سَمْعِي، اللَّهُمَّ عَافِنِي فِي بَصَرِي، لاَ إِلَهَ إِلاَّ أَنْتَ. اللَّهُمَّ  إِنِّي أَعُوذُ بِكَ مِنَ الْكُفْرِ، وَالفَقْرِ، وَأَعُوذُ بِكَ مِنْ عَذَابِ القَبْرِ، لاَ إِلَهَ إِلاَّ أَنْتَ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:9",
+      "categoryId": 1,
+      "dhikrId": 9,
+      "url": "/audio/adhkar/hani-mohamed-nasr/001/009-518.mp3",
+      "startMs": 0,
+      "endMs": 8751,
+      "source": {
+        "url": "https://www.ourquraan.com/audio/remembrace/Hany.Muhammed.Nasr%20-%20Morning.remembrance.mp3",
+        "sha256": "a8e554ff614b980952ea642ac51c084ac854a5bdff3ce8a57b798f7f34a7c46e",
+        "startMs": 430040,
+        "endMs": 438720
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "حَسْبِيَ اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ عَلَيهِ تَوَكَّلتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:10",
+      "categoryId": 1,
+      "dhikrId": 10,
+      "url": "/audio/adhkar/hani-mohamed-nasr/001/010-518.mp3",
+      "startMs": 0,
+      "endMs": 38896,
+      "source": {
+        "url": "https://www.ourquraan.com/audio/remembrace/Hany.Muhammed.Nasr%20-%20Morning.remembrance.mp3",
+        "sha256": "a8e554ff614b980952ea642ac51c084ac854a5bdff3ce8a57b798f7f34a7c46e",
+        "startMs": 571980,
+        "endMs": 610800
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.992,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي الدُّنْيَا وَالآخِرَةِ، اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ: فِي دِينِي وَدُنْيَايَ وَأَهْلِي، وَمَالِي، اللَّهُمَّ اسْتُرْ عَوْرَاتِي، وَآمِنْ رَوْعَاتِي، اللَّهُمَّ احْفَظْنِي مِنْ بَينِ يَدَيَّ، وَمِنْ خَلْفِي، وَعَنْ يَمِينِي، وَعَنْ شِمَالِي، وَمِنْ فَوْقِي، وَأَعُوذُ بِعَظَمَتِكَ أَنْ أُغْتَالَ مِنْ تَحْتِي",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:12",
+      "categoryId": 1,
+      "dhikrId": 12,
+      "url": "/audio/adhkar/hani-mohamed-nasr/001/012-518.mp3",
+      "startMs": 0,
+      "endMs": 11624,
+      "source": {
+        "url": "https://www.ourquraan.com/audio/remembrace/Hany.Muhammed.Nasr%20-%20Morning.remembrance.mp3",
+        "sha256": "a8e554ff614b980952ea642ac51c084ac854a5bdff3ce8a57b798f7f34a7c46e",
+        "startMs": 638260,
+        "endMs": 649820
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9828,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "بِسْمِ اللَّهِ الَّذِي لاَ يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلاَ فِي السّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:14",
+      "categoryId": 1,
+      "dhikrId": 14,
+      "url": "/audio/adhkar/hani-mohamed-nasr/001/014-518.mp3",
+      "startMs": 0,
+      "endMs": 14393,
+      "source": {
+        "url": "https://www.ourquraan.com/audio/remembrace/Hany.Muhammed.Nasr%20-%20Morning.remembrance.mp3",
+        "sha256": "a8e554ff614b980952ea642ac51c084ac854a5bdff3ce8a57b798f7f34a7c46e",
+        "startMs": 439760,
+        "endMs": 454080
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "يَا حَيُّ يَا قَيُّومُ بِرَحْمَتِكَ أَسْتَغيثُ أَصْلِحْ لِي شَأْنِيَ كُلَّهُ وَلاَ تَكِلْنِي إِلَى نَفْسِي طَرْفَةَ عَيْنٍ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:15",
+      "categoryId": 1,
+      "dhikrId": 15,
+      "url": "/audio/adhkar/hani-mohamed-nasr/001/015-518-morning.mp3",
+      "startMs": 0,
+      "endMs": 23719,
+      "source": {
+        "url": "https://www.ourquraan.com/audio/remembrace/Hany.Muhammed.Nasr%20-%20Morning.remembrance.mp3",
+        "sha256": "a8e554ff614b980952ea642ac51c084ac854a5bdff3ce8a57b798f7f34a7c46e",
+        "startMs": 900120,
+        "endMs": 923780
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ رَبِّ الْعَالَمِينَ، اللَّهُـمَّ إِنِّي أَسْأَلُكَ خَيْرَ هَذَا الْيَوْمِ:فَتْحَهُ، وَنَصْرَهُ، وَنورَهُ، وَبَرَكَتَهُ، وَهُدَاهُ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِيهِ وَشَرِّ مَا بَعْدَهُ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:16",
+      "categoryId": 1,
+      "dhikrId": 16,
+      "url": "/audio/adhkar/hani-mohamed-nasr/001/016-518-morning.mp3",
+      "startMs": 0,
+      "endMs": 24346,
+      "source": {
+        "url": "https://www.ourquraan.com/audio/remembrace/Hany.Muhammed.Nasr%20-%20Morning.remembrance.mp3",
+        "sha256": "a8e554ff614b980952ea642ac51c084ac854a5bdff3ce8a57b798f7f34a7c46e",
+        "startMs": 923780,
+        "endMs": 948060
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "أَصْبَحْنا عَلَى فِطْرَةِ الْإِسْلاَمِ، وَعَلَى كَلِمَةِ الْإِخْلاَصِ، وَعَلَى دِينِ نَبِيِّنَا مُحَمَّدٍ صلى الله عليه وسلم، وَعَلَى مِلَّةِ أَبِينَا إِبْرَاهِيمَ، حَنِيفاً مُسْلِماً وَمَا كَانَ مِنَ الْمُشرِكِينَ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:17",
+      "categoryId": 1,
+      "dhikrId": 17,
+      "url": "/audio/adhkar/hani-mohamed-nasr/001/017-518.mp3",
+      "startMs": 0,
+      "endMs": 2586,
+      "source": {
+        "url": "https://www.ourquraan.com/audio/remembrace/Hany.Muhammed.Nasr%20-%20Morning.remembrance.mp3",
+        "sha256": "a8e554ff614b980952ea642ac51c084ac854a5bdff3ce8a57b798f7f34a7c46e",
+        "startMs": 1055280,
+        "endMs": 1057800
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:18",
+      "categoryId": 1,
+      "dhikrId": 18,
+      "url": "/audio/adhkar/hani-mohamed-nasr/001/018-518.mp3",
+      "startMs": 0,
+      "endMs": 11442,
+      "source": {
+        "url": "https://www.ourquraan.com/audio/remembrace/Hany.Muhammed.Nasr%20-%20Morning.remembrance.mp3",
+        "sha256": "a8e554ff614b980952ea642ac51c084ac854a5bdff3ce8a57b798f7f34a7c46e",
+        "startMs": 737180,
+        "endMs": 748560
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:19",
+      "categoryId": 1,
+      "dhikrId": 19,
+      "url": "/audio/adhkar/hani-mohamed-nasr/001/019-518.mp3",
+      "startMs": 0,
+      "endMs": 11442,
+      "source": {
+        "url": "https://www.ourquraan.com/audio/remembrace/Hany.Muhammed.Nasr%20-%20Morning.remembrance.mp3",
+        "sha256": "a8e554ff614b980952ea642ac51c084ac854a5bdff3ce8a57b798f7f34a7c46e",
+        "startMs": 737180,
+        "endMs": 748560
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "لاَ إِلَهَ إِلاَّ اللَّهُ، وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:20",
+      "categoryId": 1,
+      "dhikrId": 20,
+      "url": "/audio/adhkar/hani-mohamed-nasr/001/020-518.mp3",
+      "startMs": 0,
+      "endMs": 9378,
+      "source": {
+        "url": "https://www.ourquraan.com/audio/remembrace/Hany.Muhammed.Nasr%20-%20Morning.remembrance.mp3",
+        "sha256": "a8e554ff614b980952ea642ac51c084ac854a5bdff3ce8a57b798f7f34a7c46e",
+        "startMs": 710920,
+        "endMs": 720240
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ: عَدَدَ خَلْقِهِ، وَرِضَا نَفْسِهِ، وَزِنَةَ عَرْشِهِ، وَمِدَادَ كَلِمَاتِهِ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:23",
+      "categoryId": 1,
+      "dhikrId": 23,
+      "url": "/audio/adhkar/hani-mohamed-nasr/001/023-518.mp3",
+      "startMs": 0,
+      "endMs": 25469,
+      "source": {
+        "url": "https://www.ourquraan.com/audio/remembrace/Hany.Muhammed.Nasr%20-%20Morning.remembrance.mp3",
+        "sha256": "a8e554ff614b980952ea642ac51c084ac854a5bdff3ce8a57b798f7f34a7c46e",
+        "startMs": 546580,
+        "endMs": 571980
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    }
+  ],
+  "variants": [
+    {
+      "itemId": "1:3",
+      "categoryId": 1,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/hani-mohamed-nasr/001/003-518-morning.mp3",
+      "startMs": 0,
+      "endMs": 43964,
+      "source": {
+        "url": "https://www.ourquraan.com/audio/remembrace/Hany.Muhammed.Nasr%20-%20Morning.remembrance.mp3",
+        "sha256": "a8e554ff614b980952ea642ac51c084ac854a5bdff3ce8a57b798f7f34a7c46e",
+        "startMs": 729960,
+        "endMs": 773860
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.99,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ ، وَالْحَمْدُ لِلَّهِ، لاَ إِلَهَ إلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذَا الْيَوْمِ وَخَيرَ مَا بَعْدَهُ ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي  هَذَا الْيَوْمِ وَشَرِّ مَا بَعْدَهُ، رَبِّ أَعُوذُ بِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ، رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:6",
+      "categoryId": 1,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/hani-mohamed-nasr/001/006-518-morning.mp3",
+      "startMs": 0,
+      "endMs": 24503,
+      "source": {
+        "url": "https://www.ourquraan.com/audio/remembrace/Hany.Muhammed.Nasr%20-%20Morning.remembrance.mp3",
+        "sha256": "a8e554ff614b980952ea642ac51c084ac854a5bdff3ce8a57b798f7f34a7c46e",
+        "startMs": 837920,
+        "endMs": 862360
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "اللَّهُمَّ إِنِّي أَصْبَحْتُ أُشْهِدُكَ، وَأُشْهِدُ حَمَلَةَ عَرْشِكَ، وَمَلاَئِكَتِكَ، وَجَمِيعَ خَلْقِكَ، أَنَّكَ أَنْتَ اللَّهُ لَا إِلَهَ إِلاَّ أَنْتَ وَحْدَكَ لاَ شَرِيكَ لَكَ، وَأَنَّ مُحَمَّداً عَبْدُكَ وَرَسُولُكَ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:7",
+      "categoryId": 1,
+      "dhikrId": 7,
+      "url": "/audio/adhkar/hani-mohamed-nasr/001/007-518-morning.mp3",
+      "startMs": 0,
+      "endMs": 12513,
+      "source": {
+        "url": "https://www.ourquraan.com/audio/remembrace/Hany.Muhammed.Nasr%20-%20Morning.remembrance.mp3",
+        "sha256": "a8e554ff614b980952ea642ac51c084ac854a5bdff3ce8a57b798f7f34a7c46e",
+        "startMs": 887680,
+        "endMs": 900120
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "اللَّهُمَّ مَا أَصْبَحَ بِي مِنْ نِعْمَةٍ أَوْ بِأَحَدٍ مِنْ خَلْقِكَ فَمِنْكَ وَحْدَكَ لاَ شَرِيكَ لَكَ، فَلَكَ الْحَمْدُ وَلَكَ الشُّكْرُ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:15",
+      "categoryId": 1,
+      "dhikrId": 15,
+      "url": "/audio/adhkar/hani-mohamed-nasr/001/015-518-morning.mp3",
+      "startMs": 0,
+      "endMs": 23719,
+      "source": {
+        "url": "https://www.ourquraan.com/audio/remembrace/Hany.Muhammed.Nasr%20-%20Morning.remembrance.mp3",
+        "sha256": "a8e554ff614b980952ea642ac51c084ac854a5bdff3ce8a57b798f7f34a7c46e",
+        "startMs": 900120,
+        "endMs": 923780
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ رَبِّ الْعَالَمِينَ، اللَّهُـمَّ إِنِّي أَسْأَلُكَ خَيْرَ هَذَا الْيَوْمِ:فَتْحَهُ، وَنَصْرَهُ، وَنورَهُ، وَبَرَكَتَهُ، وَهُدَاهُ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِيهِ وَشَرِّ مَا بَعْدَهُ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:16",
+      "categoryId": 1,
+      "dhikrId": 16,
+      "url": "/audio/adhkar/hani-mohamed-nasr/001/016-518-morning.mp3",
+      "startMs": 0,
+      "endMs": 24346,
+      "source": {
+        "url": "https://www.ourquraan.com/audio/remembrace/Hany.Muhammed.Nasr%20-%20Morning.remembrance.mp3",
+        "sha256": "a8e554ff614b980952ea642ac51c084ac854a5bdff3ce8a57b798f7f34a7c46e",
+        "startMs": 923780,
+        "endMs": 948060
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "أَصْبَحْنا عَلَى فِطْرَةِ الْإِسْلاَمِ، وَعَلَى كَلِمَةِ الْإِخْلاَصِ، وَعَلَى دِينِ نَبِيِّنَا مُحَمَّدٍ صلى الله عليه وسلم، وَعَلَى مِلَّةِ أَبِينَا إِبْرَاهِيمَ، حَنِيفاً مُسْلِماً وَمَا كَانَ مِنَ الْمُشرِكِينَ",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    }
+  ],
+  "sections": [
+    {
+      "id": "hani-mohamed-nasr:518",
+      "readerId": "hani-mohamed-nasr",
+      "title": "أذكار الصباح",
+      "type": "morning",
+      "categoryIds": [
+        1
+      ],
+      "url": "/audio/adhkar/hani-mohamed-nasr/sections/518.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 4364667,
+      "durationMs": 1060943,
+      "sha256": "a8e554ff614b980952ea642ac51c084ac854a5bdff3ce8a57b798f7f34a7c46e",
+      "timing": {
+        "startMs": 0,
+        "endMs": 1060943
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://ourquraan.com/audios/",
+      "publisher": "ourquraan.com",
+      "attributionLevel": "publisher-index",
+      "verificationPages": [
+        "https://ourquraan.com/audios/"
+      ],
+      "source": {
+        "url": "https://www.ourquraan.com/audio/remembrace/Hany.Muhammed.Nasr%20-%20Morning.remembrance.mp3",
+        "sha256": "a8e554ff614b980952ea642ac51c084ac854a5bdff3ce8a57b798f7f34a7c46e",
+        "startMs": 0,
+        "endMs": 1060943
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    }
+  ]
+}

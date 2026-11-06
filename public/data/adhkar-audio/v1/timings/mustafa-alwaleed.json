@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "2026-11-06.3",
+  "reciter": "mustafa-alwaleed",
+  "timeUnit": "milliseconds",
+  "items": [
+    {
+      "itemId": "3:2",
+      "categoryId": 3,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/mustafa-alwaleed/003/002-519.mp3",
+      "startMs": 0,
+      "endMs": 77505,
+      "source": {
+        "url": "https://www.ourquraan.com/audio/remembrace/Mustafa.Alwalid%20-%20Remembrance.waking.from.sleep.mp3",
+        "sha256": "157fc9b4663fc0cec33b7d30244f6612d64a952dee8dd6a40a08d9aa7f64b51d",
+        "startMs": 23960,
+        "endMs": 101420
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9211,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَريكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، سُبْحَانَ اللَّهِ، وَالْحَمْدُ للَّهِ، وَلاَ إِلَهَ إِلاَّ اللَّهُ، وَاللَّهُ أَكبَرُ، وَلاَ حَوْلَ وَلاَ قُوَّةَ إِلاَّ بِاللَّهِ الْعَلِيِّ الْعَظِيمِ، رَبِّ اغْفرْ لِي",
+        "transcriptionModel": "faster-whisper-large-v3-turbo"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    }
+  ],
+  "variants": [],
+  "sections": [
+    {
+      "id": "mustafa-alwaleed:519",
+      "readerId": "mustafa-alwaleed",
+      "title": "أذكار الاستيقاظ من النوم",
+      "type": "waking",
+      "categoryIds": [
+        3
+      ],
+      "url": "/audio/adhkar/mustafa-alwaleed/sections/519.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 4208393,
+      "durationMs": 127743,
+      "sha256": "157fc9b4663fc0cec33b7d30244f6612d64a952dee8dd6a40a08d9aa7f64b51d",
+      "timing": {
+        "startMs": 0,
+        "endMs": 127743
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://ourquraan.com/audios/",
+      "publisher": "ourquraan.com",
+      "attributionLevel": "publisher-index",
+      "verificationPages": [
+        "https://ourquraan.com/audios/"
+      ],
+      "source": {
+        "url": "https://www.ourquraan.com/audio/remembrace/Mustafa.Alwalid%20-%20Remembrance.waking.from.sleep.mp3",
+        "sha256": "157fc9b4663fc0cec33b7d30244f6612d64a952dee8dd6a40a08d9aa7f64b51d",
+        "startMs": 0,
+        "endMs": 127743
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    }
+  ]
+}

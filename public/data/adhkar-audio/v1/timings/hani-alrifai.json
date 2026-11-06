@@ -1,0 +1,980 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "2026-11-06.3",
+  "reciter": "hani-alrifai",
+  "timeUnit": "milliseconds",
+  "items": [
+    {
+      "itemId": "1:1",
+      "categoryId": 1,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hani-alrifai/001/001-201.mp3",
+      "startMs": 0,
+      "endMs": 58096,
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 91675,
+        "endMs": 149720
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.94,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-quran-passage",
+        "matchedText": "اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَّهُ مَا فِي السَّمَوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاء وَسِعَ كُرْسِيُّهُ السَّمَوَاتِ وَالْأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:3",
+      "categoryId": 1,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/hani-alrifai/001/003-201-morning.mp3",
+      "startMs": 0,
+      "endMs": 55484,
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 389520,
+        "endMs": 444960
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ ، وَالْحَمْدُ لِلَّهِ، لاَ إِلَهَ إلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذَا الْيَوْمِ وَخَيرَ مَا بَعْدَهُ ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي  هَذَا الْيَوْمِ وَشَرِّ مَا بَعْدَهُ، رَبِّ أَعُوذُ بِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ، رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:4",
+      "categoryId": 1,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/hani-alrifai/001/004-201-morning.mp3",
+      "startMs": 0,
+      "endMs": 14968,
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 452660,
+        "endMs": 467580
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا ، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ وَإِلَيْكَ النُّشُورُ"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:6",
+      "categoryId": 1,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/hani-alrifai/001/006-201-morning.mp3",
+      "startMs": 0,
+      "endMs": 28238,
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 515300,
+        "endMs": 543505
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "اللَّهُمَّ إِنِّي أَصْبَحْتُ أُشْهِدُكَ، وَأُشْهِدُ حَمَلَةَ عَرْشِكَ، وَمَلاَئِكَتِكَ، وَجَمِيعَ خَلْقِكَ، أَنَّكَ أَنْتَ اللَّهُ لَا إِلَهَ إِلاَّ أَنْتَ وَحْدَكَ لاَ شَرِيكَ لَكَ، وَأَنَّ مُحَمَّداً عَبْدُكَ وَرَسُولُكَ"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:7",
+      "categoryId": 1,
+      "dhikrId": 7,
+      "url": "/audio/adhkar/hani-alrifai/001/007-201-morning.mp3",
+      "startMs": 0,
+      "endMs": 16901,
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 545575,
+        "endMs": 562425
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "اللَّهُمَّ مَا أَصْبَحَ بِي مِنْ نِعْمَةٍ أَوْ بِأَحَدٍ مِنْ خَلْقِكَ فَمِنْكَ وَحْدَكَ لاَ شَرِيكَ لَكَ، فَلَكَ الْحَمْدُ وَلَكَ الشُّكْرُ"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:8",
+      "categoryId": 1,
+      "dhikrId": 8,
+      "url": "/audio/adhkar/hani-alrifai/001/008-201.mp3",
+      "startMs": 0,
+      "endMs": 35056,
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 565795,
+        "endMs": 600805
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ عَافِنِي فِي بَدَنِي، اللَّهُمَّ عَافِنِي فِي سَمْعِي، اللَّهُمَّ عَافِنِي فِي بَصَرِي، لاَ إِلَهَ إِلاَّ أَنْتَ. اللَّهُمَّ  إِنِّي أَعُوذُ بِكَ مِنَ الْكُفْرِ، وَالفَقْرِ، وَأَعُوذُ بِكَ مِنْ عَذَابِ القَبْرِ، لاَ إِلَهَ إِلاَّ أَنْتَ)) (ثلاثَ مرَّاتٍ)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:9",
+      "categoryId": 1,
+      "dhikrId": 9,
+      "url": "/audio/adhkar/hani-alrifai/001/009-201.mp3",
+      "startMs": 0,
+      "endMs": 13140,
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 602975,
+        "endMs": 616085
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "حَسْبِيَ اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ عَلَيهِ تَوَكَّلتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:10",
+      "categoryId": 1,
+      "dhikrId": 10,
+      "url": "/audio/adhkar/hani-alrifai/001/010-201.mp3",
+      "startMs": 0,
+      "endMs": 52950,
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 618555,
+        "endMs": 671460
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9762,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي الدُّنْيَا وَالآخِرَةِ، اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ: فِي دِينِي وَدُنْيَايَ وَأَهْلِي، وَمَالِي، اللَّهُمَّ اسْتُرْ عَوْرَاتِي، وَآمِنْ رَوْعَاتِي، اللَّهُمَّ احْفَظْنِي مِنْ بَينِ يَدَيَّ، وَمِنْ خَلْفِي، وَعَنْ يَمِينِي، وَعَنْ شِمَالِي، وَمِنْ فَوْقِي، وَأَعُوذُ بِعَظَمَتِكَ أَنْ أُغْتَالَ مِنْ تَحْتِي))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:11",
+      "categoryId": 1,
+      "dhikrId": 11,
+      "url": "/audio/adhkar/hani-alrifai/001/011-201.mp3",
+      "startMs": 0,
+      "endMs": 36075,
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 673840,
+        "endMs": 709885
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9429,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ عَالِمَ الغَيْبِ وَالشَّهَادَةِ فَاطِرَ السَّمَوَاتِ وَالْأَرْضِ، رَبَّ كُلِّ شَيْءٍ وَمَلِيكَهُ، أَشْهَدُ أَنْ لاَ إِلَهَ إِلاَّ أَنْتَ، أَعُوذُ بِكَ مِنْ شَرِّ نَفْسِي، وَمِنْ شَرِّ الشَّيْطانِ وَشَرَكِهِ، وَأَنْ أَقْتَرِفَ عَلَى  نَفْسِي سُوءاً، أَوْ أَجُرَّهُ إِلَى مُسْلِمٍ))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:12",
+      "categoryId": 1,
+      "dhikrId": 12,
+      "url": "/audio/adhkar/hani-alrifai/001/012-201.mp3",
+      "startMs": 0,
+      "endMs": 15856,
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 709915,
+        "endMs": 725725
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((بِسْمِ اللَّهِ الَّذِي لاَ يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلاَ فِي السّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ)) (ثلاثَ مرَّاتٍ)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:13",
+      "categoryId": 1,
+      "dhikrId": 13,
+      "url": "/audio/adhkar/hani-alrifai/001/013-201.mp3",
+      "startMs": 0,
+      "endMs": 14550,
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 728255,
+        "endMs": 742765
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((رَضِيتُ بِاللَّهِ رَبَّاً، وَبِالْإِسْلاَمِ دِيناً، وَبِمُحَمَّدٍ صلى الله عليه وسلم نَبِيّاً)) (ثلاثَ مرَّاتٍ)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:14",
+      "categoryId": 1,
+      "dhikrId": 14,
+      "url": "/audio/adhkar/hani-alrifai/001/014-201.mp3",
+      "startMs": 0,
+      "endMs": 16170,
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 745495,
+        "endMs": 761625
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((يَا حَيُّ يَا قَيُّومُ بِرَحْمَتِكَ أَسْتَغيثُ أَصْلِحْ لِي شَأْنِيَ كُلَّهُ وَلاَ تَكِلْنِي إِلَى نَفْسِي طَرْفَةَ عَيْنٍ))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:15",
+      "categoryId": 1,
+      "dhikrId": 15,
+      "url": "/audio/adhkar/hani-alrifai/001/015-201-morning.mp3",
+      "startMs": 0,
+      "endMs": 31373,
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 761655,
+        "endMs": 792985
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ رَبِّ الْعَالَمِينَ، اللَّهُـمَّ إِنِّي أَسْأَلُكَ خَيْرَ هَذَا الْيَوْمِ:فَتْحَهُ، وَنَصْرَهُ، وَنورَهُ، وَبَرَكَتَهُ، وَهُدَاهُ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِيهِ وَشَرِّ مَا بَعْدَهُ"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:16",
+      "categoryId": 1,
+      "dhikrId": 16,
+      "url": "/audio/adhkar/hani-alrifai/001/016-201-morning.mp3",
+      "startMs": 0,
+      "endMs": 31112,
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 796095,
+        "endMs": 827165
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "أَصْبَحْنا عَلَى فِطْرَةِ الْإِسْلاَمِ، وَعَلَى كَلِمَةِ الْإِخْلاَصِ، وَعَلَى دِينِ نَبِيِّنَا مُحَمَّدٍ صلى الله عليه وسلم، وَعَلَى مِلَّةِ أَبِينَا إِبْرَاهِيمَ، حَنِيفاً مُسْلِماً وَمَا كَانَ مِنَ الْمُشرِكِينَ"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:17",
+      "categoryId": 1,
+      "dhikrId": 17,
+      "url": "/audio/adhkar/hani-alrifai/001/017-201.mp3",
+      "startMs": 0,
+      "endMs": 3631,
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 914755,
+        "endMs": 918345
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((سُبْحَانَ اللَّهِ وَبِحَمْدِهِ)) (مائة مرَّةٍ)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:18",
+      "categoryId": 1,
+      "dhikrId": 18,
+      "url": "/audio/adhkar/hani-alrifai/001/018-201.mp3",
+      "startMs": 0,
+      "endMs": 16718,
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 869495,
+        "endMs": 886185
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:19",
+      "categoryId": 1,
+      "dhikrId": 19,
+      "url": "/audio/adhkar/hani-alrifai/001/019-201.mp3",
+      "startMs": 0,
+      "endMs": 16718,
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 869495,
+        "endMs": 886185
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((لاَ إِلَهَ إِلاَّ اللَّهُ، وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ)) (مائةَ مرَّةٍ إذا أصبحَ)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:21",
+      "categoryId": 1,
+      "dhikrId": 21,
+      "url": "/audio/adhkar/hani-alrifai/001/021-201.mp3",
+      "startMs": 0,
+      "endMs": 14733,
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 930335,
+        "endMs": 945025
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْماً نَافِعاً، وَرِزْقاً طَيِّباً، وَعَمَلاً مُتَقَبَّلاً"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:22",
+      "categoryId": 1,
+      "dhikrId": 22,
+      "url": "/audio/adhkar/hani-alrifai/001/022-201.mp3",
+      "startMs": 0,
+      "endMs": 5303,
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 957655,
+        "endMs": 962925
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:23",
+      "categoryId": 1,
+      "dhikrId": 23,
+      "url": "/audio/adhkar/hani-alrifai/001/023-201.mp3",
+      "startMs": 0,
+      "endMs": 8281,
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 981755,
+        "endMs": 989985
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ)) (ثلاثَ مرَّاتٍ إذا أمسى)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:24",
+      "categoryId": 1,
+      "dhikrId": 24,
+      "url": "/audio/adhkar/hani-alrifai/001/024-201.mp3",
+      "startMs": 0,
+      "endMs": 8176,
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 1001415,
+        "endMs": 1009560
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ صَلِّ وَسَلِّمْ عَلَى نَبَيِّنَا مُحَمَّدٍ)) (عشرَ مرَّاتٍ)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "2:2",
+      "categoryId": 2,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/hani-alrifai/002/002-201.mp3",
+      "startMs": 0,
+      "endMs": 58096,
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 91675,
+        "endMs": 149720
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.94,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "﴿اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَّهُ مَا فِي السَّمَوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْـــــــــــدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاء وَسِعَ كُرْسِيُّهُ السَّمَوَاتِ وَالأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ﴾."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "2:11",
+      "categoryId": 2,
+      "dhikrId": 11,
+      "url": "/audio/adhkar/hani-alrifai/002/011-201.mp3",
+      "startMs": 0,
+      "endMs": 36075,
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 673840,
+        "endMs": 709885
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9429,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((اللَّهُمَّ عَالِمَ الغَيْبِ وَالشَّهَادَةِ فَاطِرَ السَّمَوَاتِ وَالْأَرْضِ، رَبَّ كُلِّ شَيْءٍ وَمَلِيكَهُ، أَشْهَدُ أَنْ لاَ إِلَهَ إِلاَّ أَنْتَ، أَعُوذُ بِكَ مِنْ شَرِّ نَفْسِي، وَمِنْ شَرِّ الشَّيْطانِ وَشِرْكِهِ، وَأَنْ أَقْتَرِفَ عَلَى نَفْسِي سُوءاً، أَوْ أَجُرَّهُ إِلَى مُسْلِمٍ))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "6:1",
+      "categoryId": 6,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hani-alrifai/006/001-201.mp3",
+      "startMs": 0,
+      "endMs": 2429,
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 709915,
+        "endMs": 712305
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "(بِسْمِ اللَّهِ)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "17:1",
+      "categoryId": 17,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hani-alrifai/017/001-201.mp3",
+      "startMs": 0,
+      "endMs": 2429,
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 709915,
+        "endMs": 712305
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "(بِسْمِ اللَّهِ)."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "27:6",
+      "categoryId": 27,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/hani-alrifai/027/006-201.mp3",
+      "startMs": 0,
+      "endMs": 58096,
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 91675,
+        "endMs": 149720
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.94,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-quran-passage",
+        "matchedText": "اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَّهُ مَا فِي السَّمَوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاءَ وَسِعَ كُرْسِيُّهُ السَّمَوَاتِ وَالأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "27:8",
+      "categoryId": 27,
+      "dhikrId": 8,
+      "url": "/audio/adhkar/hani-alrifai/027/008-201.mp3",
+      "startMs": 0,
+      "endMs": 14733,
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 930335,
+        "endMs": 945025
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْماً نافِعاً، وَرِزْقاً طَيِّباً، وَعَمَلاً مُتَقَبَّلاً"
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "99:1",
+      "categoryId": 99,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hani-alrifai/099/001-201.mp3",
+      "startMs": 0,
+      "endMs": 2429,
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 709915,
+        "endMs": 712305
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((بِسْمِ اللَّهِ))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "104:1",
+      "categoryId": 104,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hani-alrifai/104/001-201.mp3",
+      "startMs": 0,
+      "endMs": 8281,
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 981755,
+        "endMs": 989985
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "122:1",
+      "categoryId": 122,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hani-alrifai/122/001-201.mp3",
+      "startMs": 0,
+      "endMs": 2011,
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 914755,
+        "endMs": 916725
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((سُبْحَانَ اللَّهِ!))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "126:1",
+      "categoryId": 126,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/hani-alrifai/126/001-201.mp3",
+      "startMs": 0,
+      "endMs": 4676,
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 869495,
+        "endMs": 874125
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((لاَ إِلَهَ إِلاَّ اللَّهُ!))."
+      },
+      "contextSection": "any",
+      "rightsId": "original-source-rights"
+    }
+  ],
+  "variants": [
+    {
+      "itemId": "1:3",
+      "categoryId": 1,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/hani-alrifai/001/003-201-morning.mp3",
+      "startMs": 0,
+      "endMs": 55484,
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 389520,
+        "endMs": 444960
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ ، وَالْحَمْدُ لِلَّهِ، لاَ إِلَهَ إلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذَا الْيَوْمِ وَخَيرَ مَا بَعْدَهُ ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي  هَذَا الْيَوْمِ وَشَرِّ مَا بَعْدَهُ، رَبِّ أَعُوذُ بِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ، رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:4",
+      "categoryId": 1,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/hani-alrifai/001/004-201-morning.mp3",
+      "startMs": 0,
+      "endMs": 14968,
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 452660,
+        "endMs": 467580
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا ، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ وَإِلَيْكَ النُّشُورُ"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:6",
+      "categoryId": 1,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/hani-alrifai/001/006-201-evening.mp3",
+      "startMs": 0,
+      "endMs": 28238,
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 515300,
+        "endMs": 543505
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.96,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-evening-instruction",
+        "matchedText": "اللهم اني امسيت اشهدك واشهد حملة عرشك وملايكتك وجميع خلقك انك انت الله لا اله الا انت وحدك لا شريك لك وان محمدا عبدك ورسولك"
+      },
+      "contextSection": "evening",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:6",
+      "categoryId": 1,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/hani-alrifai/001/006-201-morning.mp3",
+      "startMs": 0,
+      "endMs": 28238,
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 515300,
+        "endMs": 543505
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "اللَّهُمَّ إِنِّي أَصْبَحْتُ أُشْهِدُكَ، وَأُشْهِدُ حَمَلَةَ عَرْشِكَ، وَمَلاَئِكَتِكَ، وَجَمِيعَ خَلْقِكَ، أَنَّكَ أَنْتَ اللَّهُ لَا إِلَهَ إِلاَّ أَنْتَ وَحْدَكَ لاَ شَرِيكَ لَكَ، وَأَنَّ مُحَمَّداً عَبْدُكَ وَرَسُولُكَ"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:7",
+      "categoryId": 1,
+      "dhikrId": 7,
+      "url": "/audio/adhkar/hani-alrifai/001/007-201-evening.mp3",
+      "startMs": 0,
+      "endMs": 16901,
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 545575,
+        "endMs": 562425
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9474,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-evening-instruction",
+        "matchedText": "اللهم ما امسي بي من نعمة او باحد من خلقك فمنك وحدك لا شريك لك فلك الحمد ولك الشكر"
+      },
+      "contextSection": "evening",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:7",
+      "categoryId": 1,
+      "dhikrId": 7,
+      "url": "/audio/adhkar/hani-alrifai/001/007-201-morning.mp3",
+      "startMs": 0,
+      "endMs": 16901,
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 545575,
+        "endMs": 562425
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "اللَّهُمَّ مَا أَصْبَحَ بِي مِنْ نِعْمَةٍ أَوْ بِأَحَدٍ مِنْ خَلْقِكَ فَمِنْكَ وَحْدَكَ لاَ شَرِيكَ لَكَ، فَلَكَ الْحَمْدُ وَلَكَ الشُّكْرُ"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:15",
+      "categoryId": 1,
+      "dhikrId": 15,
+      "url": "/audio/adhkar/hani-alrifai/001/015-201-morning.mp3",
+      "startMs": 0,
+      "endMs": 31373,
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 761655,
+        "endMs": 792985
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ رَبِّ الْعَالَمِينَ، اللَّهُـمَّ إِنِّي أَسْأَلُكَ خَيْرَ هَذَا الْيَوْمِ:فَتْحَهُ، وَنَصْرَهُ، وَنورَهُ، وَبَرَكَتَهُ، وَهُدَاهُ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِيهِ وَشَرِّ مَا بَعْدَهُ"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    },
+    {
+      "itemId": "1:16",
+      "categoryId": 1,
+      "dhikrId": 16,
+      "url": "/audio/adhkar/hani-alrifai/001/016-201-morning.mp3",
+      "startMs": 0,
+      "endMs": 31112,
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 796095,
+        "endMs": 827165
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "canonical-morning-invocation",
+        "matchedText": "أَصْبَحْنا عَلَى فِطْرَةِ الْإِسْلاَمِ، وَعَلَى كَلِمَةِ الْإِخْلاَصِ، وَعَلَى دِينِ نَبِيِّنَا مُحَمَّدٍ صلى الله عليه وسلم، وَعَلَى مِلَّةِ أَبِينَا إِبْرَاهِيمَ، حَنِيفاً مُسْلِماً وَمَا كَانَ مِنَ الْمُشرِكِينَ"
+      },
+      "contextSection": "morning",
+      "rightsId": "original-source-rights"
+    }
+  ],
+  "sections": [
+    {
+      "id": "hani-alrifai:201",
+      "readerId": "hani-alrifai",
+      "title": "أذكار الصباح و المساء للشيخ هاني الرفاعي",
+      "type": "day-and-night",
+      "categoryIds": [
+        1
+      ],
+      "url": "/audio/adhkar/hani-alrifai/sections/201.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 16510283,
+      "durationMs": 1023799,
+      "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+      "timing": {
+        "startMs": 0,
+        "endMs": 1023799
+      },
+      "rightsId": "original-source-rights",
+      "sourcePage": "https://archive.org/details/AthkarHani247247247247245242aei",
+      "publisher": "Internet Archive community archive",
+      "attributionLevel": "archive-and-published-index",
+      "source": {
+        "url": "https://archive.org/download/AthkarHani247247247247245242aei/Athkar%20Hani%20Alrefaei.mp3",
+        "sha256": "0e3a4134b9118eb7303c9b775b70411faea6b449035a9fc6fe5bd3d0d5c6c3f0",
+        "startMs": 0,
+        "endMs": 1023799
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 // SAMEE3_AUDIO_LIBRARY_STABLE_V1: update service-worker code; never delete audio caches.
 try { importScripts('/sw-build.js') } catch (_) { /* offline first installation */ }
-const SW_VERSION = 'samee3-sw-v13-' + (self.SAMEE3_BUILD_ID || 'fallback')
+const SW_VERSION = 'samee3-sw-v17-' + (self.SAMEE3_BUILD_ID || 'fallback')
 
 const SHELL_CACHE = `${SW_VERSION}-shell`
 const NAV_CACHE = `${SW_VERSION}-navigation`
@@ -26,9 +26,11 @@ const PUBLIC_ROUTES = new Set([
   '/offline/manage',
   '/offline/test',
   '/audio',
+  '/audio/alafasy-riwayat',
   '/surahs',
   '/hadith',
   '/adhkar',
+  '/adhkar/recordings',
   '/prayer',
   '/islamic-library',
   '/index',
@@ -372,7 +374,8 @@ async function cachedAudioRange(response, rangeHeader, reload, key) {
 
           if (next.done) {
             finished = true
-            controller.close()
+            if (position <= end) controller.error(new Error('Saved recording is incomplete'))
+            else controller.close()
             return
           }
 
@@ -690,6 +693,17 @@ async function shellPage(request, url) {
 // Next.js App Router support
 // ========================================
 
+function offlineRscKey(input) {
+  const url = new URL(input, self.location.origin)
+  url.searchParams.delete('_rsc')
+  return new URL('/__samee3_rsc?path=' + encodeURIComponent(url.pathname + url.search), self.location.origin).href
+}
+const QUERY_INDEPENDENT_ROUTES = new Set([
+  '/', '/mushaf', '/surahs', '/index', '/adhkar', '/adhkar/read', '/adhkar/recordings', '/hadith',
+  '/audio', '/audio/alafasy-riwayat', '/prayer', '/islamic-library',
+  '/offline', '/offline/manage', '/offline/test', '/notifications',
+])
+
 async function publicRsc(request) {
   try {
     const response = await fetch(request)
@@ -700,7 +714,12 @@ async function publicRsc(request) {
 
     return response
   } catch {
-    const saved = await getFromCaches([RSC_CACHE], request)
+    let saved = await getFromCaches([RSC_CACHE], request)
+    if (!saved) {
+      const cache = await caches.open(RSC_CACHE), url = new URL(request.url)
+      saved = await cache.match(offlineRscKey(url.href), { ignoreVary: true })
+      if (!saved && QUERY_INDEPENDENT_ROUTES.has(url.pathname)) saved = await cache.match(offlineRscKey(url.pathname), { ignoreVary: true })
+    }
 
     return (
       saved ||
@@ -945,6 +964,54 @@ self.addEventListener(
 // Fetch routing
 // ========================================
 
+async function serveSavedLibraryAudio(request, url) {
+  const source = url.searchParams.get('url') || ''
+  if (source) {
+    let original
+    try { original = new URL(source, self.location.origin) } catch { return new Response(null, { status: 400 }) }
+    if (original.protocol !== 'https:' && original.origin !== self.location.origin) return new Response(null, { status: 400 })
+    const names = [AUDIO_CACHE, ...OLD_AUDIO_CACHES]
+    const saved = await getFromCaches(names, original.href)
+    if (saved && saved.status === 200 && !saved.headers.has('Content-Range')) {
+      const range = request.headers.get('Range')
+      return range ? cachedAudioRange(saved, range, () => getFromCaches(names, original.href), original.href) : saved
+    }
+  }
+  // IndexedDB Blobs are sliced on disk; large recordings never become an
+  // ArrayBuffer or a page-owned object URL during offline playback.
+  const key = url.searchParams.get('key') || ''
+  if (!key || key.length > 1000) return new Response(null, { status: 404 })
+  const blob = await new Promise(resolve => {
+    let done = false, db
+    const finish = value => { if (done) return; done = true; clearTimeout(timer); db?.close(); resolve(value) }
+    const timer = setTimeout(() => finish(null), 8000)
+    const opening = indexedDB.open('samee-audio-library')
+    opening.onupgradeneeded = () => opening.transaction.abort()
+    opening.onerror = opening.onblocked = () => finish(null)
+    opening.onsuccess = () => {
+      db = opening.result
+      if (done || !db.objectStoreNames.contains('audio')) { db.close(); finish(null); return }
+      try {
+        const transaction = db.transaction('audio', 'readonly')
+        const read = transaction.objectStore('audio').get(key)
+        let result = null
+        read.onsuccess = () => {
+          const row = read.result
+          if (row?.item?.audioUrl && source && row.item.audioUrl !== source) return
+          if (row?.blob instanceof Blob && row.blob.size > 0) result = row.blob
+        }
+        transaction.oncomplete = () => finish(result)
+        transaction.onerror = transaction.onabort = () => finish(null)
+      } catch { finish(null) }
+    }
+  })
+  if (!blob) return new Response('Audio not downloaded', { status: 404 })
+  const headers = new Headers({ 'Content-Type': blob.type || 'audio/mpeg', 'Content-Length': String(blob.size), 'Accept-Ranges': 'bytes' })
+  const response = new Response(blob.stream(), { headers })
+  const range = request.headers.get('Range')
+  return range ? cachedAudioRange(response, range) : response
+}
+
 self.addEventListener(
   'fetch',
   (event) => {
@@ -971,25 +1038,33 @@ self.addEventListener(
       event.respondWith(serveArchiveDownload(request, url))
       return
     }
-    if (isSameOrigin(url) && url.pathname === '/__samee3_adhkar_offline') {
+    if (isSameOrigin(url) && url.pathname === '/__samee3_library_offline') {
+      event.respondWith(serveSavedLibraryAudio(request, url).catch(() => new Response('Audio not downloaded', { status: 404 })))
+      return
+    }
+    const localAdhkar = /^\/audio\/adhkar\/[a-z0-9-]+\/(?:\d{3}\/\d{3}(?:-\d{3}(?:-(?:morning|evening))?)?|sections\/\d{3})\.mp3$/.test(url.pathname)
+    if (isSameOrigin(url) && (url.pathname === '/__samee3_adhkar_offline' || url.pathname === '/api/adhkar-audio' || localAdhkar)) {
       event.respondWith((async () => {
-        const source = url.searchParams.get('url') || ''
+        const direct = url.pathname === '/api/adhkar-audio' || localAdhkar
+        const source = direct ? url.href : url.searchParams.get('url') || ''
         let original
         try { original = new URL(source) } catch {
           return new Response('Invalid audio key', { status: 400 })
         }
         if (original.origin !== self.location.origin ||
-            original.pathname !== '/api/adhkar-audio' ||
-            !original.searchParams.get('url')) {
+            !(original.pathname === '/api/adhkar-audio' && original.searchParams.get('url')) &&
+            !/^\/audio\/adhkar\/[a-z0-9-]+\/(?:\d{3}\/\d{3}(?:-\d{3}(?:-(?:morning|evening))?)?|sections\/\d{3})\.mp3$/.test(original.pathname)) {
           return new Response('Invalid saved audio URL', { status: 400 })
         }
-        const saved = await (await caches.open('samee3-adhkar-audio-v1')).match(original.href)
+        const cache = await caches.open('samee3-adhkar-audio-v1')
+        const saved = await cache.match(original.href)
         if (!saved || saved.status !== 200 || saved.headers.has('Content-Range')) {
+          if (direct) return fetch(request)
           return new Response('Audio not downloaded', { status: 404 })
         }
         const range = request.headers.get('Range')
-        return range ? cachedAudioRange(saved, range) : saved
-      })())
+        return range ? cachedAudioRange(saved, range, () => cache.match(original.href), original.href) : saved
+      })().catch(() => url.pathname === '/api/adhkar-audio' || localAdhkar ? fetch(request) : new Response('Audio not downloaded', { status: 404 })))
       return
     }
 

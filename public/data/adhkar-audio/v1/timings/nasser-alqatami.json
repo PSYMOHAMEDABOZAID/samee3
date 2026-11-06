@@ -1,0 +1,403 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "2026-11-06.3",
+  "reciter": "nasser-alqatami",
+  "timeUnit": "milliseconds",
+  "items": [
+    {
+      "itemId": "1:1",
+      "categoryId": 1,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/nasser-alqatami/001/001-102.mp3",
+      "startMs": 0,
+      "endMs": 48431,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_02.mp3",
+        "sha256": "43d38a9a887a2a13c015e3af92e10acb41526251869fdb7f7d8790404cfb56a6",
+        "startMs": 6880,
+        "endMs": 55245
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.96,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-quran-passage",
+        "matchedText": "اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَّهُ مَا فِي السَّمَوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاء وَسِعَ كُرْسِيُّهُ السَّمَوَاتِ وَالْأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ"
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:2",
+      "categoryId": 1,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/nasser-alqatami/001/002-102.mp3",
+      "startMs": 0,
+      "endMs": 65567,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_02.mp3",
+        "sha256": "43d38a9a887a2a13c015e3af92e10acb41526251869fdb7f7d8790404cfb56a6",
+        "startMs": 68915,
+        "endMs": 134405
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "quoted-quran-passages",
+        "matchedText": "قُلْ هُوَ اللَّهُ أَحَدٌ* اللَّهُ الصَّمَدُ* لَمْ يَلِدْ وَلَمْ يُولَدْ* وَلَمْ يَكُن لَّهُ كُفُواً أَحَدٌ قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ* مِن شَرِّ مَا خَلَقَ* وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ* وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ* وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ قُلْ أَعُوذُ بِرَبِّ النَّاسِ* مَلِكِ النَّاسِ* إِلَهِ النَّاسِ* مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ* الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ* مِنَ الْجِنَّةِ وَ النَّاسِ"
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:17",
+      "categoryId": 1,
+      "dhikrId": 17,
+      "url": "/audio/adhkar/nasser-alqatami/001/017-102.mp3",
+      "startMs": 0,
+      "endMs": 3579,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_02.mp3",
+        "sha256": "43d38a9a887a2a13c015e3af92e10acb41526251869fdb7f7d8790404cfb56a6",
+        "startMs": 243775,
+        "endMs": 247285
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((سُبْحَانَ اللَّهِ وَبِحَمْدِهِ)) (مائة مرَّةٍ)."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:18",
+      "categoryId": 1,
+      "dhikrId": 18,
+      "url": "/audio/adhkar/nasser-alqatami/001/018-102.mp3",
+      "startMs": 0,
+      "endMs": 15882,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_02.mp3",
+        "sha256": "43d38a9a887a2a13c015e3af92e10acb41526251869fdb7f7d8790404cfb56a6",
+        "startMs": 166335,
+        "endMs": 182140
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ"
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "1:19",
+      "categoryId": 1,
+      "dhikrId": 19,
+      "url": "/audio/adhkar/nasser-alqatami/001/019-102.mp3",
+      "startMs": 0,
+      "endMs": 15882,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_02.mp3",
+        "sha256": "43d38a9a887a2a13c015e3af92e10acb41526251869fdb7f7d8790404cfb56a6",
+        "startMs": 166335,
+        "endMs": 182140
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((لاَ إِلَهَ إِلاَّ اللَّهُ، وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ)) (مائةَ مرَّةٍ إذا أصبحَ)."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "2:1",
+      "categoryId": 2,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/nasser-alqatami/002/001-102.mp3",
+      "startMs": 0,
+      "endMs": 65567,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_02.mp3",
+        "sha256": "43d38a9a887a2a13c015e3af92e10acb41526251869fdb7f7d8790404cfb56a6",
+        "startMs": 68915,
+        "endMs": 134405
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "quoted-quran-passages",
+        "matchedText": "قُلْ هُوَ اللَّهُ أَحَدٌ * اللَّهُ الصَّمَدُ* لَمْ يَلِدْ وَلَمْ يُولَدْ* وَلَمْ يَكُن لَّهُ كُفُواً أَحَدٌ قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ* مِن شَرِّ مَا خَلَقَ* وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ* وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ* وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ قُلْ أَعُوذُ بِرَبِّ النَّاسِ* مَلِكِ النَّاسِ* إِلَهِ النَّاسِ* مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ* الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ* مِنَ الْجِنَّةِ وَ النَّاسِ"
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "2:2",
+      "categoryId": 2,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/nasser-alqatami/002/002-102.mp3",
+      "startMs": 0,
+      "endMs": 48431,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_02.mp3",
+        "sha256": "43d38a9a887a2a13c015e3af92e10acb41526251869fdb7f7d8790404cfb56a6",
+        "startMs": 6880,
+        "endMs": 55245
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.96,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "﴿اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَّهُ مَا فِي السَّمَوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْـــــــــــدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاء وَسِعَ كُرْسِيُّهُ السَّمَوَاتِ وَالأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ﴾."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "6:1",
+      "categoryId": 6,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/nasser-alqatami/006/001-102.mp3",
+      "startMs": 0,
+      "endMs": 1228,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_02.mp3",
+        "sha256": "43d38a9a887a2a13c015e3af92e10acb41526251869fdb7f7d8790404cfb56a6",
+        "startMs": 3855,
+        "endMs": 5025
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "(بِسْمِ اللَّهِ)."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "17:1",
+      "categoryId": 17,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/nasser-alqatami/017/001-102.mp3",
+      "startMs": 0,
+      "endMs": 1228,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_02.mp3",
+        "sha256": "43d38a9a887a2a13c015e3af92e10acb41526251869fdb7f7d8790404cfb56a6",
+        "startMs": 3855,
+        "endMs": 5025
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "(بِسْمِ اللَّهِ)."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "27:5",
+      "categoryId": 27,
+      "dhikrId": 5,
+      "url": "/audio/adhkar/nasser-alqatami/027/005-102.mp3",
+      "startMs": 0,
+      "endMs": 65567,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_02.mp3",
+        "sha256": "43d38a9a887a2a13c015e3af92e10acb41526251869fdb7f7d8790404cfb56a6",
+        "startMs": 68915,
+        "endMs": 134405
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "quoted-quran-passages",
+        "matchedText": "قُلْ هُوَ اللَّهُ أَحَدٌ* اللَّهُ الصَّمَدُ* لَمْ يَلِدْ وَلَمْ يُولَدْ* وَلَمْ يَكُن لَّهُ كُفُواً أَحَدٌ قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ* مِن شَرِّ مَا خَلَقَ* وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ* وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ* وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ قُلْ أَعُوذُ بِرَبِّ النَّاسِ* مَلِكِ النَّاسِ* إِلَهِ النَّاسِ* مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ* الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ* مِنَ الْجِنَّةِ وَ النَّاسِ"
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "27:6",
+      "categoryId": 27,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/nasser-alqatami/027/006-102.mp3",
+      "startMs": 0,
+      "endMs": 48431,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_02.mp3",
+        "sha256": "43d38a9a887a2a13c015e3af92e10acb41526251869fdb7f7d8790404cfb56a6",
+        "startMs": 6880,
+        "endMs": 55245
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.96,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-quran-passage",
+        "matchedText": "اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَّهُ مَا فِي السَّمَوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاءَ وَسِعَ كُرْسِيُّهُ السَّمَوَاتِ وَالأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ"
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "99:1",
+      "categoryId": 99,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/nasser-alqatami/099/001-102.mp3",
+      "startMs": 0,
+      "endMs": 1228,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_02.mp3",
+        "sha256": "43d38a9a887a2a13c015e3af92e10acb41526251869fdb7f7d8790404cfb56a6",
+        "startMs": 3855,
+        "endMs": 5025
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((بِسْمِ اللَّهِ))."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "107:1",
+      "categoryId": 107,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/nasser-alqatami/107/001-102.mp3",
+      "startMs": 0,
+      "endMs": 6217,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_02.mp3",
+        "sha256": "43d38a9a887a2a13c015e3af92e10acb41526251869fdb7f7d8790404cfb56a6",
+        "startMs": 317755,
+        "endMs": 323905
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation",
+        "matchedText": "مَنْ صَلَّى عَلَيَّ صَلاَةً صَلَّى اللَّهُ عَلَيْهِ بِهَا عَشْراً"
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "122:1",
+      "categoryId": 122,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/nasser-alqatami/122/001-102.mp3",
+      "startMs": 0,
+      "endMs": 2011,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_02.mp3",
+        "sha256": "43d38a9a887a2a13c015e3af92e10acb41526251869fdb7f7d8790404cfb56a6",
+        "startMs": 243775,
+        "endMs": 245725
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((سُبْحَانَ اللَّهِ!))."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    },
+    {
+      "itemId": "126:1",
+      "categoryId": 126,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/nasser-alqatami/126/001-102.mp3",
+      "startMs": 0,
+      "endMs": 4885,
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_02.mp3",
+        "sha256": "43d38a9a887a2a13c015e3af92e10acb41526251869fdb7f7d8790404cfb56a6",
+        "startMs": 166335,
+        "endMs": 171145
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions",
+        "matchedText": "((لاَ إِلَهَ إِلاَّ اللَّهُ!))."
+      },
+      "contextSection": "any",
+      "rightsId": "tvquran-noncommercial"
+    }
+  ],
+  "variants": [],
+  "sections": [
+    {
+      "id": "nasser-alqatami:102",
+      "readerId": "nasser-alqatami",
+      "title": "أذكار اليوم والليلة",
+      "type": "day-and-night",
+      "categoryIds": [
+        1
+      ],
+      "url": "/audio/adhkar/nasser-alqatami/sections/102.mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 2836306,
+      "durationMs": 353923,
+      "sha256": "43d38a9a887a2a13c015e3af92e10acb41526251869fdb7f7d8790404cfb56a6",
+      "timing": {
+        "startMs": 0,
+        "endMs": 353923
+      },
+      "rightsId": "tvquran-noncommercial",
+      "sourcePage": "https://www.tvquran.com/ar/selection/2/embeddable",
+      "publisher": "TVQuran.com",
+      "attributionLevel": "publisher-attributed",
+      "source": {
+        "url": "https://download.tvquran.com/download/TvQuran.com__Athkar/TvQuran.com_athkar_02.mp3",
+        "sha256": "43d38a9a887a2a13c015e3af92e10acb41526251869fdb7f7d8790404cfb56a6",
+        "startMs": 0,
+        "endMs": 353923
+      },
+      "alignment": {
+        "method": "publisher-complete-recording",
+        "manuallyReviewed": false
+      }
+    }
+  ]
+}

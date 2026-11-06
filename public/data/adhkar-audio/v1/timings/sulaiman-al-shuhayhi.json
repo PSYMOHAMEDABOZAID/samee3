@@ -1,0 +1,4447 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "2026-11-06.3",
+  "reciter": "sulaiman-al-shuhayhi",
+  "timeUnit": "milliseconds",
+  "items": [
+    {
+      "itemId": "1:1",
+      "categoryId": 1,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/001/001.mp3",
+      "startMs": 0,
+      "endMs": 42893,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_029_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "ee3a0e1b6d372c2d528d420f085e48efe77d2b33a0c02f6d62e268f9ff5519de",
+        "startMs": 11160,
+        "endMs": 54005
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9858,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:2",
+      "categoryId": 1,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/001/002.mp3",
+      "startMs": 0,
+      "endMs": 52480,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_029_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "ee3a0e1b6d372c2d528d420f085e48efe77d2b33a0c02f6d62e268f9ff5519de",
+        "startMs": 54035,
+        "endMs": 106485
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9922,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:3",
+      "categoryId": 1,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/001/003.mp3",
+      "startMs": 0,
+      "endMs": 40777,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_029_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "ee3a0e1b6d372c2d528d420f085e48efe77d2b33a0c02f6d62e268f9ff5519de",
+        "startMs": 107795,
+        "endMs": 148525
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9804,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "quoted-invocation"
+      },
+      "contextSection": "morning",
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:4",
+      "categoryId": 1,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/001/004.mp3",
+      "startMs": 0,
+      "endMs": 10658,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_029_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "ee3a0e1b6d372c2d528d420f085e48efe77d2b33a0c02f6d62e268f9ff5519de",
+        "startMs": 148555,
+        "endMs": 159165
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation"
+      },
+      "contextSection": "morning",
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:5",
+      "categoryId": 1,
+      "dhikrId": 5,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/001/005.mp3",
+      "startMs": 0,
+      "endMs": 27977,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_029_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "ee3a0e1b6d372c2d528d420f085e48efe77d2b33a0c02f6d62e268f9ff5519de",
+        "startMs": 159195,
+        "endMs": 187125
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9444,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:6",
+      "categoryId": 1,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/001/006.mp3",
+      "startMs": 0,
+      "endMs": 22256,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_029_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "ee3a0e1b6d372c2d528d420f085e48efe77d2b33a0c02f6d62e268f9ff5519de",
+        "startMs": 187155,
+        "endMs": 209365
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation"
+      },
+      "contextSection": "morning",
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:7",
+      "categoryId": 1,
+      "dhikrId": 7,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/001/007.mp3",
+      "startMs": 0,
+      "endMs": 12774,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_029_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "ee3a0e1b6d372c2d528d420f085e48efe77d2b33a0c02f6d62e268f9ff5519de",
+        "startMs": 210775,
+        "endMs": 223505
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9474,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation"
+      },
+      "contextSection": "morning",
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:8",
+      "categoryId": 1,
+      "dhikrId": 8,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/001/008.mp3",
+      "startMs": 0,
+      "endMs": 26253,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_029_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "ee3a0e1b6d372c2d528d420f085e48efe77d2b33a0c02f6d62e268f9ff5519de",
+        "startMs": 223535,
+        "endMs": 249745
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:10",
+      "categoryId": 1,
+      "dhikrId": 10,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/001/010.mp3",
+      "startMs": 0,
+      "endMs": 40176,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_029_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "ee3a0e1b6d372c2d528d420f085e48efe77d2b33a0c02f6d62e268f9ff5519de",
+        "startMs": 262035,
+        "endMs": 302185
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.984,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:11",
+      "categoryId": 1,
+      "dhikrId": 11,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/001/011.mp3",
+      "startMs": 0,
+      "endMs": 28891,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_029_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "ee3a0e1b6d372c2d528d420f085e48efe77d2b33a0c02f6d62e268f9ff5519de",
+        "startMs": 302215,
+        "endMs": 331065
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9621,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:12",
+      "categoryId": 1,
+      "dhikrId": 12,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/001/012.mp3",
+      "startMs": 0,
+      "endMs": 11677,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_029_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "ee3a0e1b6d372c2d528d420f085e48efe77d2b33a0c02f6d62e268f9ff5519de",
+        "startMs": 331095,
+        "endMs": 342725
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:13",
+      "categoryId": 1,
+      "dhikrId": 13,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/001/013.mp3",
+      "startMs": 0,
+      "endMs": 10501,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_029_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "ee3a0e1b6d372c2d528d420f085e48efe77d2b33a0c02f6d62e268f9ff5519de",
+        "startMs": 344135,
+        "endMs": 354585
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:14",
+      "categoryId": 1,
+      "dhikrId": 14,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/001/014.mp3",
+      "startMs": 0,
+      "endMs": 13767,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_029_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "ee3a0e1b6d372c2d528d420f085e48efe77d2b33a0c02f6d62e268f9ff5519de",
+        "startMs": 355995,
+        "endMs": 369725
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:16",
+      "categoryId": 1,
+      "dhikrId": 16,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/001/016.mp3",
+      "startMs": 0,
+      "endMs": 24895,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_029_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "ee3a0e1b6d372c2d528d420f085e48efe77d2b33a0c02f6d62e268f9ff5519de",
+        "startMs": 393655,
+        "endMs": 418505
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation"
+      },
+      "contextSection": "morning",
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:17",
+      "categoryId": 1,
+      "dhikrId": 17,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/001/017.mp3",
+      "startMs": 0,
+      "endMs": 3187,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_029_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "ee3a0e1b6d372c2d528d420f085e48efe77d2b33a0c02f6d62e268f9ff5519de",
+        "startMs": 453055,
+        "endMs": 456205
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:18",
+      "categoryId": 1,
+      "dhikrId": 18,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/001/018.mp3",
+      "startMs": 0,
+      "endMs": 11598,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_029_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "ee3a0e1b6d372c2d528d420f085e48efe77d2b33a0c02f6d62e268f9ff5519de",
+        "startMs": 439555,
+        "endMs": 451105
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:19",
+      "categoryId": 1,
+      "dhikrId": 19,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/001/019.mp3",
+      "startMs": 0,
+      "endMs": 11598,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_029_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "ee3a0e1b6d372c2d528d420f085e48efe77d2b33a0c02f6d62e268f9ff5519de",
+        "startMs": 439555,
+        "endMs": 451105
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:22",
+      "categoryId": 1,
+      "dhikrId": 22,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/001/022.mp3",
+      "startMs": 0,
+      "endMs": 4441,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_029_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "ee3a0e1b6d372c2d528d420f085e48efe77d2b33a0c02f6d62e268f9ff5519de",
+        "startMs": 477755,
+        "endMs": 482165
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "1:24",
+      "categoryId": 1,
+      "dhikrId": 24,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/001/024.mp3",
+      "startMs": 0,
+      "endMs": 5669,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_029_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "ee3a0e1b6d372c2d528d420f085e48efe77d2b33a0c02f6d62e268f9ff5519de",
+        "startMs": 493115,
+        "endMs": 498745
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "2:1",
+      "categoryId": 2,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/002/001.mp3",
+      "startMs": 0,
+      "endMs": 77322,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_030_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "333bf07da5a9b3c12a6d943b5d5c6e772f5834e8678dd3e87490b6de02ef2c4c",
+        "startMs": 2135,
+        "endMs": 79425
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.986,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "2:2",
+      "categoryId": 2,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/002/002.mp3",
+      "startMs": 0,
+      "endMs": 35579,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_030_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "333bf07da5a9b3c12a6d943b5d5c6e772f5834e8678dd3e87490b6de02ef2c4c",
+        "startMs": 79455,
+        "endMs": 114985
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9786,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "2:3",
+      "categoryId": 2,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/002/003.mp3",
+      "startMs": 0,
+      "endMs": 59820,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_030_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "333bf07da5a9b3c12a6d943b5d5c6e772f5834e8678dd3e87490b6de02ef2c4c",
+        "startMs": 115015,
+        "endMs": 174785
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9342,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "2:4",
+      "categoryId": 2,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/002/004.mp3",
+      "startMs": 0,
+      "endMs": 15229,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_030_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "333bf07da5a9b3c12a6d943b5d5c6e772f5834e8678dd3e87490b6de02ef2c4c",
+        "startMs": 174815,
+        "endMs": 190000
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "2:5",
+      "categoryId": 2,
+      "dhikrId": 5,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/002/005.mp3",
+      "startMs": 0,
+      "endMs": 19540,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_030_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "333bf07da5a9b3c12a6d943b5d5c6e772f5834e8678dd3e87490b6de02ef2c4c",
+        "startMs": 190200,
+        "endMs": 209705
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "2:6",
+      "categoryId": 2,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/002/006.mp3",
+      "startMs": 0,
+      "endMs": 5303,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_030_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "333bf07da5a9b3c12a6d943b5d5c6e772f5834e8678dd3e87490b6de02ef2c4c",
+        "startMs": 209735,
+        "endMs": 215005
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "2:7",
+      "categoryId": 2,
+      "dhikrId": 7,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/002/007.mp3",
+      "startMs": 0,
+      "endMs": 4206,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_030_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "333bf07da5a9b3c12a6d943b5d5c6e772f5834e8678dd3e87490b6de02ef2c4c",
+        "startMs": 215035,
+        "endMs": 219205
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "2:9",
+      "categoryId": 2,
+      "dhikrId": 9,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/002/009.mp3",
+      "startMs": 0,
+      "endMs": 42658,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_030_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "333bf07da5a9b3c12a6d943b5d5c6e772f5834e8678dd3e87490b6de02ef2c4c",
+        "startMs": 231195,
+        "endMs": 273825
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9957,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "2:10",
+      "categoryId": 2,
+      "dhikrId": 10,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/002/010.mp3",
+      "startMs": 0,
+      "endMs": 11990,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_030_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "333bf07da5a9b3c12a6d943b5d5c6e772f5834e8678dd3e87490b6de02ef2c4c",
+        "startMs": 273855,
+        "endMs": 285805
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9649,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "2:11",
+      "categoryId": 2,
+      "dhikrId": 11,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/002/011.mp3",
+      "startMs": 0,
+      "endMs": 27429,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_030_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "333bf07da5a9b3c12a6d943b5d5c6e772f5834e8678dd3e87490b6de02ef2c4c",
+        "startMs": 285835,
+        "endMs": 313225
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9848,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "2:13",
+      "categoryId": 2,
+      "dhikrId": 13,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/002/013.mp3",
+      "startMs": 0,
+      "endMs": 26776,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_030_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "333bf07da5a9b3c12a6d943b5d5c6e772f5834e8678dd3e87490b6de02ef2c4c",
+        "startMs": 322435,
+        "endMs": 349187
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9845,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "3:2",
+      "categoryId": 3,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/003/002.mp3",
+      "startMs": 0,
+      "endMs": 22622,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_003_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "a2e8558d7143e94345444c031e93f30e0c5e455fbe5b3856ad432c2e02aa9bdc",
+        "startMs": 9620,
+        "endMs": 32205
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9737,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "3:4",
+      "categoryId": 3,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/003/004.mp3",
+      "startMs": 0,
+      "endMs": 138971,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_003_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "a2e8558d7143e94345444c031e93f30e0c5e455fbe5b3856ad432c2e02aa9bdc",
+        "startMs": 40495,
+        "endMs": 179420
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.971,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "4:1",
+      "categoryId": 4,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/004/001.mp3",
+      "startMs": 0,
+      "endMs": 10091,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_008_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "1dd445f24ecd7e3c759afdf132561c414d277a8e7ec979f9618d1c7943bb8d91",
+        "startMs": 0,
+        "endMs": 10091
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "5:1",
+      "categoryId": 5,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/005/001.mp3",
+      "startMs": 0,
+      "endMs": 4527,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_009_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "3b2c0787b41ec2166a7fe13dc6c5029770e337fc97eda489a95178192e7fc3c0",
+        "startMs": 0,
+        "endMs": 4527
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "6:1",
+      "categoryId": 6,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/006/001.mp3",
+      "startMs": 0,
+      "endMs": 4788,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_010_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "646bc4edb888f747bfc36eab5b657a47d9ebf4cc07f805b47fac4c4bf8e5b811",
+        "startMs": 0,
+        "endMs": 4788
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "7:1",
+      "categoryId": 7,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/007/001.mp3",
+      "startMs": 0,
+      "endMs": 10606,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_011_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "7b45af831cd682214d3fb8635c18ed01cd7db5abdbb128da164edd656c2de780",
+        "startMs": 3315,
+        "endMs": 13885
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9333,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "7:3",
+      "categoryId": 7,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/007/003.mp3",
+      "startMs": 0,
+      "endMs": 9770,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_011_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "7b45af831cd682214d3fb8635c18ed01cd7db5abdbb128da164edd656c2de780",
+        "startMs": 21035,
+        "endMs": 30760
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "8:1",
+      "categoryId": 8,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/008/001.mp3",
+      "startMs": 0,
+      "endMs": 7628,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_012_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "bc5f01da0f5d1edd35d44c236047ae571a480aa23d62f78aa247430f086a7ec5",
+        "startMs": 3300,
+        "endMs": 10900
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "9:1",
+      "categoryId": 9,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/009/001.mp3",
+      "startMs": 0,
+      "endMs": 15499,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_013_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "f43c86f181cba19409757685f45520ed819d8d89873e666ff94aaf6391b01f94",
+        "startMs": 0,
+        "endMs": 15499
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "10:1",
+      "categoryId": 10,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/010/001.mp3",
+      "startMs": 0,
+      "endMs": 68423,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_014_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "6308da78c8c9e12dd53bec3babbb3e0ed9508f4e9450d7a9259973b9cc6a7d48",
+        "startMs": 0,
+        "endMs": 68423
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "11:1",
+      "categoryId": 11,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/011/001.mp3",
+      "startMs": 0,
+      "endMs": 24850,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_015_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "ca36066c4b968788ff81c4c250698f9d0ceb523f3a6c50dbf0288dd08c952c26",
+        "startMs": 0,
+        "endMs": 24850
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "12:1",
+      "categoryId": 12,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/012/001.mp3",
+      "startMs": 0,
+      "endMs": 17118,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_016_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "3f2571e295f5e4ccf1a1fdc43347e29bede96b1c630b21f79220290607a7f21b",
+        "startMs": 0,
+        "endMs": 17118
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "13:1",
+      "categoryId": 13,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/013/001.mp3",
+      "startMs": 0,
+      "endMs": 13636,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_017_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "6afacd0d7d1412aa0009f90856d46c51398b316f3dd2f8208ceba93195a4b0f8",
+        "startMs": 2180,
+        "endMs": 15765
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "13:2",
+      "categoryId": 13,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/013/002.mp3",
+      "startMs": 0,
+      "endMs": 23693,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_017_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "6afacd0d7d1412aa0009f90856d46c51398b316f3dd2f8208ceba93195a4b0f8",
+        "startMs": 15620,
+        "endMs": 39265
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9821,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "13:3",
+      "categoryId": 13,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/013/003.mp3",
+      "startMs": 0,
+      "endMs": 8960,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_017_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "6afacd0d7d1412aa0009f90856d46c51398b316f3dd2f8208ceba93195a4b0f8",
+        "startMs": 39295,
+        "endMs": 48205
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "13:4",
+      "categoryId": 13,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/013/004.mp3",
+      "startMs": 0,
+      "endMs": 20637,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_017_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "6afacd0d7d1412aa0009f90856d46c51398b316f3dd2f8208ceba93195a4b0f8",
+        "startMs": 48235,
+        "endMs": 68825
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9524,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "13:5",
+      "categoryId": 13,
+      "dhikrId": 5,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/013/005.mp3",
+      "startMs": 0,
+      "endMs": 8934,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_017_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "6afacd0d7d1412aa0009f90856d46c51398b316f3dd2f8208ceba93195a4b0f8",
+        "startMs": 68855,
+        "endMs": 77740
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "14:1",
+      "categoryId": 14,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/014/001.mp3",
+      "startMs": 0,
+      "endMs": 12312,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_004_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "d76b5683471ca0c9d040370e33c375d33aec7931fd1d1cca47ebf3d0482e452d",
+        "startMs": 0,
+        "endMs": 12312
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "15:1",
+      "categoryId": 15,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/015/001.mp3",
+      "startMs": 0,
+      "endMs": 17275,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_005_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "fe5544f461be5e73d04ea8193ec027139e7529ad649f80f83e4a628efc9d51b6",
+        "startMs": 0,
+        "endMs": 17275
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "16:1",
+      "categoryId": 16,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/016/001.mp3",
+      "startMs": 0,
+      "endMs": 3187,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_006_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "22a2a13db6a8306172b22451faa58427c7b1d428f89bde974ee65028056c3799",
+        "startMs": 4615,
+        "endMs": 7765
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "17:1",
+      "categoryId": 17,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/017/001.mp3",
+      "startMs": 0,
+      "endMs": 5520,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_007_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "246ec7f3aff8218493878db65208bb0e50a470f46880417468a5cba6ec86534e",
+        "startMs": 0,
+        "endMs": 5520
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "18:1",
+      "categoryId": 18,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/018/001.mp3",
+      "startMs": 0,
+      "endMs": 23223,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_018_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "a7ae0a5598e81845e337c8870c746c32b039a3b77d09d80e4bc28957b069eedd",
+        "startMs": 2155,
+        "endMs": 25345
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9762,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "18:2",
+      "categoryId": 18,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/018/002.mp3",
+      "startMs": 0,
+      "endMs": 8777,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_018_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "a7ae0a5598e81845e337c8870c746c32b039a3b77d09d80e4bc28957b069eedd",
+        "startMs": 25375,
+        "endMs": 34125
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "18:3",
+      "categoryId": 18,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/018/003.mp3",
+      "startMs": 0,
+      "endMs": 72020,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_018_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "a7ae0a5598e81845e337c8870c746c32b039a3b77d09d80e4bc28957b069eedd",
+        "startMs": 34155,
+        "endMs": 106125
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9832,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "18:4",
+      "categoryId": 18,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/018/004.mp3",
+      "startMs": 0,
+      "endMs": 30563,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_018_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "a7ae0a5598e81845e337c8870c746c32b039a3b77d09d80e4bc28957b069eedd",
+        "startMs": 106155,
+        "endMs": 136685
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9868,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "19:1",
+      "categoryId": 19,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/019/001.mp3",
+      "startMs": 0,
+      "endMs": 5068,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_019_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "990dde21ed355d552f3d1bd14df1a6691402d72e338a38d31dc67e9df2d88277",
+        "startMs": 2135,
+        "endMs": 7165
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "19:2",
+      "categoryId": 19,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/019/002.mp3",
+      "startMs": 0,
+      "endMs": 6635,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_019_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "990dde21ed355d552f3d1bd14df1a6691402d72e338a38d31dc67e9df2d88277",
+        "startMs": 7195,
+        "endMs": 13785
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "19:4",
+      "categoryId": 19,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/019/004.mp3",
+      "startMs": 0,
+      "endMs": 14420,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_019_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "990dde21ed355d552f3d1bd14df1a6691402d72e338a38d31dc67e9df2d88277",
+        "startMs": 20015,
+        "endMs": 34405
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9444,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "19:5",
+      "categoryId": 19,
+      "dhikrId": 5,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/019/005.mp3",
+      "startMs": 0,
+      "endMs": 6844,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_019_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "990dde21ed355d552f3d1bd14df1a6691402d72e338a38d31dc67e9df2d88277",
+        "startMs": 34435,
+        "endMs": 41240
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "20:1",
+      "categoryId": 20,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/020/001.mp3",
+      "startMs": 0,
+      "endMs": 3082,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_020_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "f8b4912ddc39b3d8adadb2c5d2a1fc35b7b3697830d10199a7f5c021677487b3",
+        "startMs": 2595,
+        "endMs": 5645
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "20:2",
+      "categoryId": 20,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/020/002.mp3",
+      "startMs": 0,
+      "endMs": 7288,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_020_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "f8b4912ddc39b3d8adadb2c5d2a1fc35b7b3697830d10199a7f5c021677487b3",
+        "startMs": 5675,
+        "endMs": 12925
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "21:1",
+      "categoryId": 21,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/021/001.mp3",
+      "startMs": 0,
+      "endMs": 4650,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_021_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "3c31b21b830ae897a7fe35eefbd51c5ed3d20747e5e43dbf0716a131185b8193",
+        "startMs": 1995,
+        "endMs": 6605
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "21:2",
+      "categoryId": 21,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/021/002.mp3",
+      "startMs": 0,
+      "endMs": 6478,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_021_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "3c31b21b830ae897a7fe35eefbd51c5ed3d20747e5e43dbf0716a131185b8193",
+        "startMs": 6635,
+        "endMs": 13085
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "21:4",
+      "categoryId": 21,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/021/004.mp3",
+      "startMs": 0,
+      "endMs": 17136,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_021_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "3c31b21b830ae897a7fe35eefbd51c5ed3d20747e5e43dbf0716a131185b8193",
+        "startMs": 18655,
+        "endMs": 35765
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9474,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "21:6",
+      "categoryId": 21,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/021/006.mp3",
+      "startMs": 0,
+      "endMs": 11416,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_021_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "3c31b21b830ae897a7fe35eefbd51c5ed3d20747e5e43dbf0716a131185b8193",
+        "startMs": 42375,
+        "endMs": 53745
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "21:7",
+      "categoryId": 21,
+      "dhikrId": 7,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/021/007.mp3",
+      "startMs": 0,
+      "endMs": 18051,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_021_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "3c31b21b830ae897a7fe35eefbd51c5ed3d20747e5e43dbf0716a131185b8193",
+        "startMs": 53775,
+        "endMs": 71780
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9524,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "22:2",
+      "categoryId": 22,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/022/002.mp3",
+      "startMs": 0,
+      "endMs": 9456,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_022_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "a7892f847ada08319ff4218fb9015f97bbdb5c811ec0260621a58e63a0147441",
+        "startMs": 6815,
+        "endMs": 16240
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "23:1",
+      "categoryId": 23,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/023/001.mp3",
+      "startMs": 0,
+      "endMs": 13218,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_023_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "7e49417f3886f1f474c8aea89bb9995c5c5c196ff721afba2586b8684f8fffb3",
+        "startMs": 2635,
+        "endMs": 15805
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9831,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "23:2",
+      "categoryId": 23,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/023/002.mp3",
+      "startMs": 0,
+      "endMs": 18991,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_023_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "7e49417f3886f1f474c8aea89bb9995c5c5c196ff721afba2586b8684f8fffb3",
+        "startMs": 15835,
+        "endMs": 34780
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "24:1",
+      "categoryId": 24,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/024/001.mp3",
+      "startMs": 0,
+      "endMs": 30049,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_024_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "ba11dbb1534885e1401094ad7682cd89734424f88c23ea963faf63b81e770f44",
+        "startMs": 0,
+        "endMs": 30049
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "25:1",
+      "categoryId": 25,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/025/001.mp3",
+      "startMs": 0,
+      "endMs": 31451,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_025_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "e5bd6d8b3e1563b4df26fa48b4047415446da2ab76669ba56d21158fe1526b51",
+        "startMs": 5100,
+        "endMs": 36505
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "25:2",
+      "categoryId": 25,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/025/002.mp3",
+      "startMs": 0,
+      "endMs": 26122,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_025_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "e5bd6d8b3e1563b4df26fa48b4047415446da2ab76669ba56d21158fe1526b51",
+        "startMs": 36535,
+        "endMs": 62620
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9231,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "26:1",
+      "categoryId": 26,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/026/001.mp3",
+      "startMs": 0,
+      "endMs": 15256,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_026_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "98e222fa1d700e068312ff107014f9b1f96dbf50ea56dc20e2044fd32c89e26f",
+        "startMs": 4500,
+        "endMs": 19725
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9474,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "26:2",
+      "categoryId": 26,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/026/002.mp3",
+      "startMs": 0,
+      "endMs": 21917,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_026_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "98e222fa1d700e068312ff107014f9b1f96dbf50ea56dc20e2044fd32c89e26f",
+        "startMs": 19755,
+        "endMs": 41645
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "26:3",
+      "categoryId": 26,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/026/003.mp3",
+      "startMs": 0,
+      "endMs": 17659,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_026_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "98e222fa1d700e068312ff107014f9b1f96dbf50ea56dc20e2044fd32c89e26f",
+        "startMs": 41675,
+        "endMs": 59305
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "26:5",
+      "categoryId": 26,
+      "dhikrId": 5,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/026/005.mp3",
+      "startMs": 0,
+      "endMs": 7654,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_026_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "98e222fa1d700e068312ff107014f9b1f96dbf50ea56dc20e2044fd32c89e26f",
+        "startMs": 79955,
+        "endMs": 87565
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "26:7",
+      "categoryId": 26,
+      "dhikrId": 7,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/026/007.mp3",
+      "startMs": 0,
+      "endMs": 6896,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_026_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "98e222fa1d700e068312ff107014f9b1f96dbf50ea56dc20e2044fd32c89e26f",
+        "startMs": 107355,
+        "endMs": 114205
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "26:8",
+      "categoryId": 26,
+      "dhikrId": 8,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/026/008.mp3",
+      "startMs": 0,
+      "endMs": 67840,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_026_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "98e222fa1d700e068312ff107014f9b1f96dbf50ea56dc20e2044fd32c89e26f",
+        "startMs": 114235,
+        "endMs": 182025
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9822,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "26:9",
+      "categoryId": 26,
+      "dhikrId": 9,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/026/009.mp3",
+      "startMs": 0,
+      "endMs": 23641,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_026_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "98e222fa1d700e068312ff107014f9b1f96dbf50ea56dc20e2044fd32c89e26f",
+        "startMs": 182055,
+        "endMs": 205645
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9802,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "26:10",
+      "categoryId": 26,
+      "dhikrId": 10,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/026/010.mp3",
+      "startMs": 0,
+      "endMs": 28578,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_026_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "98e222fa1d700e068312ff107014f9b1f96dbf50ea56dc20e2044fd32c89e26f",
+        "startMs": 205675,
+        "endMs": 234205
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9762,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "27:2",
+      "categoryId": 27,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/027/002.mp3",
+      "startMs": 0,
+      "endMs": 22335,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_027_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "bf76ce00381a76cdd191ab0a1ff3a57efc2a61ad592fd6056cfb1790ba3741eb",
+        "startMs": 16080,
+        "endMs": 38365
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9697,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "27:3",
+      "categoryId": 27,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/027/003.mp3",
+      "startMs": 0,
+      "endMs": 34717,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_027_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "bf76ce00381a76cdd191ab0a1ff3a57efc2a61ad592fd6056cfb1790ba3741eb",
+        "startMs": 38395,
+        "endMs": 73065
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9881,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "27:4",
+      "categoryId": 27,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/027/004.mp3",
+      "startMs": 0,
+      "endMs": 18887,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_027_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "bf76ce00381a76cdd191ab0a1ff3a57efc2a61ad592fd6056cfb1790ba3741eb",
+        "startMs": 73095,
+        "endMs": 91945
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.92,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "27:6",
+      "categoryId": 27,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/027/006.mp3",
+      "startMs": 0,
+      "endMs": 46864,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_027_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "bf76ce00381a76cdd191ab0a1ff3a57efc2a61ad592fd6056cfb1790ba3741eb",
+        "startMs": 151355,
+        "endMs": 198185
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9245,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "27:7",
+      "categoryId": 27,
+      "dhikrId": 7,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/027/007.mp3",
+      "startMs": 0,
+      "endMs": 16405,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_027_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "bf76ce00381a76cdd191ab0a1ff3a57efc2a61ad592fd6056cfb1790ba3741eb",
+        "startMs": 198215,
+        "endMs": 214585
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "27:8",
+      "categoryId": 27,
+      "dhikrId": 8,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/027/008.mp3",
+      "startMs": 0,
+      "endMs": 12826,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_027_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "bf76ce00381a76cdd191ab0a1ff3a57efc2a61ad592fd6056cfb1790ba3741eb",
+        "startMs": 214615,
+        "endMs": 227400
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "28:1",
+      "categoryId": 28,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/028/001.mp3",
+      "startMs": 0,
+      "endMs": 97837,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_028_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "1be9a28155054bdc28df1d74534bd27fb96ede28aa42a110e016f6c8b5ef7a3a",
+        "startMs": 0,
+        "endMs": 97837
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "29:1",
+      "categoryId": 29,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/029/001.mp3",
+      "startMs": 0,
+      "endMs": 16204,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_031_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "e18546f2a2d6b92fce3ce14e83d75b9ef40d2e86a1d9e0de1bf296b5e6395286",
+        "startMs": 0,
+        "endMs": 16204
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "30:1",
+      "categoryId": 30,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/030/001.mp3",
+      "startMs": 0,
+      "endMs": 18686,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_032_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "fc09f109030b183c4176ac87bde1b1bd873ad267ef2b3cf23144ea3a2b92382a",
+        "startMs": 0,
+        "endMs": 18686
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "31:1",
+      "categoryId": 31,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/031/001.mp3",
+      "startMs": 0,
+      "endMs": 18730,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_033_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "e5ffbd3ebadd84893d97079b6b3a06ea6a84923e5dd743ddb2d11fad9f8f5142",
+        "startMs": 4055,
+        "endMs": 22745
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9583,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "33:1",
+      "categoryId": 33,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/033/001.mp3",
+      "startMs": 0,
+      "endMs": 17876,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_034_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "c8cebafcb6925a9a907ce375793e2c1bf6596408bae197c1d22874c505c2813f",
+        "startMs": 0,
+        "endMs": 17876
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "34:2",
+      "categoryId": 34,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/034/002.mp3",
+      "startMs": 0,
+      "endMs": 13662,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_035_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "215fe6ec29b1580f065a9021f0ba69c99a19ec4fcc0dc02ca8fb393023af82db",
+        "startMs": 42635,
+        "endMs": 56245
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9857,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "35:1",
+      "categoryId": 35,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/035/001.mp3",
+      "startMs": 0,
+      "endMs": 18521,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_036_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "61c5b57db346d225e9121f8ed26b309d05d4b7bf7ab230c69ac99f826dc692af",
+        "startMs": 1815,
+        "endMs": 20285
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9785,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "35:2",
+      "categoryId": 35,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/035/002.mp3",
+      "startMs": 0,
+      "endMs": 12539,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_036_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "61c5b57db346d225e9121f8ed26b309d05d4b7bf7ab230c69ac99f826dc692af",
+        "startMs": 21795,
+        "endMs": 34305
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "35:3",
+      "categoryId": 35,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/035/003.mp3",
+      "startMs": 0,
+      "endMs": 7131,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_036_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "61c5b57db346d225e9121f8ed26b309d05d4b7bf7ab230c69ac99f826dc692af",
+        "startMs": 35395,
+        "endMs": 42485
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "36:1",
+      "categoryId": 36,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/036/001.mp3",
+      "startMs": 0,
+      "endMs": 7706,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_037_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "0319f65714845c7bb4ddc8feea38418474feef57040d5c0b4a9e0c9ee7191c29",
+        "startMs": 3635,
+        "endMs": 11305
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "36:2",
+      "categoryId": 36,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/036/002.mp3",
+      "startMs": 0,
+      "endMs": 8751,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_037_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "0319f65714845c7bb4ddc8feea38418474feef57040d5c0b4a9e0c9ee7191c29",
+        "startMs": 12615,
+        "endMs": 21325
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "36:3",
+      "categoryId": 36,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/036/003.mp3",
+      "startMs": 0,
+      "endMs": 3997,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_037_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "0319f65714845c7bb4ddc8feea38418474feef57040d5c0b4a9e0c9ee7191c29",
+        "startMs": 23015,
+        "endMs": 26980
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "37:1",
+      "categoryId": 37,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/037/001.mp3",
+      "startMs": 0,
+      "endMs": 22361,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_038_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "6a9a86bdd1899968f919cf2438273cd94e62b71718172ef3db0566f3daef1e41",
+        "startMs": 3555,
+        "endMs": 25885
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9655,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "37:2",
+      "categoryId": 37,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/037/002.mp3",
+      "startMs": 0,
+      "endMs": 40829,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_038_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "6a9a86bdd1899968f919cf2438273cd94e62b71718172ef3db0566f3daef1e41",
+        "startMs": 27215,
+        "endMs": 68005
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9659,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "38:1",
+      "categoryId": 38,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/038/001.mp3",
+      "startMs": 0,
+      "endMs": 13043,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_039_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "3f3572bae10cdbf840ce0668fc9dfb53a270a14888ed77ed7821b5010294d093",
+        "startMs": 0,
+        "endMs": 13043
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "39:1",
+      "categoryId": 39,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/039/001.mp3",
+      "startMs": 0,
+      "endMs": 14872,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_040_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "5877ce84ac4755cdfc72c6d23dc7267d955f9a866692227c9a02bc3fc8eed09f",
+        "startMs": 0,
+        "endMs": 14872
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "40:2",
+      "categoryId": 40,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/040/002.mp3",
+      "startMs": 0,
+      "endMs": 4258,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_041_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "a73d159daa9e108021f73ad290d7150db16b6f9e1cee5a4e20f0b1fd2b3847e4",
+        "startMs": 9335,
+        "endMs": 13565
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "40:3",
+      "categoryId": 40,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/040/003.mp3",
+      "startMs": 0,
+      "endMs": 10397,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_041_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "a73d159daa9e108021f73ad290d7150db16b6f9e1cee5a4e20f0b1fd2b3847e4",
+        "startMs": 13595,
+        "endMs": 23940
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "41:1",
+      "categoryId": 41,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/041/001.mp3",
+      "startMs": 0,
+      "endMs": 8438,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_042_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "4a135b3dccf3ebde321c4acd2b5e67773a963a30da7e8d8207a7f41122c8b4d9",
+        "startMs": 2355,
+        "endMs": 10765
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "41:2",
+      "categoryId": 41,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/041/002.mp3",
+      "startMs": 0,
+      "endMs": 13035,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_042_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "4a135b3dccf3ebde321c4acd2b5e67773a963a30da7e8d8207a7f41122c8b4d9",
+        "startMs": 11875,
+        "endMs": 24860
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9333,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "42:1",
+      "categoryId": 42,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/042/001.mp3",
+      "startMs": 0,
+      "endMs": 12259,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_043_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "12c1868411ec0ac579e998cf6d1bea0811811c6c62f2d7a4e6206c459748cd28",
+        "startMs": 0,
+        "endMs": 12259
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "43:1",
+      "categoryId": 43,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/043/001.mp3",
+      "startMs": 0,
+      "endMs": 14010,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_044_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "f918c2d3a557c81b403ed1735dd87df768861f114404f033fa75d242d0f326f1",
+        "startMs": 0,
+        "endMs": 14010
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "44:1",
+      "categoryId": 44,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/044/001.mp3",
+      "startMs": 0,
+      "endMs": 18268,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_045_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "e662bd0cf9b64477b9f64fa3df1f40290e7062397a2f3c4470ebe7c836df6673",
+        "startMs": 0,
+        "endMs": 18268
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "45:1",
+      "categoryId": 45,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/045/001.mp3",
+      "startMs": 0,
+      "endMs": 3213,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_046_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "5079fc332f4b0ef41399dbbec9a3869808488c93363a33be0fb3a3e299c73314",
+        "startMs": 2715,
+        "endMs": 5885
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "45:3",
+      "categoryId": 45,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/045/003.mp3",
+      "startMs": 0,
+      "endMs": 3814,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_046_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "5079fc332f4b0ef41399dbbec9a3869808488c93363a33be0fb3a3e299c73314",
+        "startMs": 7435,
+        "endMs": 11220
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "46:1",
+      "categoryId": 46,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/046/001.mp3",
+      "startMs": 0,
+      "endMs": 9255,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_047_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "e937e61d10521e7e35207f1ec279363f61ad4e39ca32955d2a0c6634a447152b",
+        "startMs": 0,
+        "endMs": 9255
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "47:1",
+      "categoryId": 47,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/047/001.mp3",
+      "startMs": 0,
+      "endMs": 26940,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_048_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "bb2fcc8a41a7c3e8d5a3c590c9a6eecc4348cc7314a1d172f338ecaeaf526f29",
+        "startMs": 0,
+        "endMs": 26940
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "48:1",
+      "categoryId": 48,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/048/001.mp3",
+      "startMs": 0,
+      "endMs": 24328,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_049_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "9e7d88675b3e6bb6ce7dfe0d3920d12ed37488fb3f974b4b5c5282b10dee5cf8",
+        "startMs": 0,
+        "endMs": 24328
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "49:1",
+      "categoryId": 49,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/049/001.mp3",
+      "startMs": 0,
+      "endMs": 3840,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_050_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "fb6b1b11805e6aa969b3f102d0fed836d4efaeb9f964f22b4922e91c0b009aab",
+        "startMs": 2815,
+        "endMs": 6625
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "49:2",
+      "categoryId": 49,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/049/002.mp3",
+      "startMs": 0,
+      "endMs": 7837,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_050_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "fb6b1b11805e6aa969b3f102d0fed836d4efaeb9f964f22b4922e91c0b009aab",
+        "startMs": 7815,
+        "endMs": 15620
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "50:1",
+      "categoryId": 50,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/050/001.mp3",
+      "startMs": 0,
+      "endMs": 29997,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_051_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "ad5760d3d0c8c721539ee3eb1b5ec7bf8bba3ad34a33e99d742ac730e3c2a713",
+        "startMs": 0,
+        "endMs": 29997
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "51:2",
+      "categoryId": 51,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/051/002.mp3",
+      "startMs": 0,
+      "endMs": 16222,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_052_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "f3237a5cb12dab4bf92f1d6395771cb5543338a403d905bb5111fdd3ee155e2d",
+        "startMs": 11495,
+        "endMs": 27685
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "52:1",
+      "categoryId": 52,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/052/001.mp3",
+      "startMs": 0,
+      "endMs": 9908,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_053_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "57862a48af76ec14352b0c2e7dfef17901c3ad80f6db068e1c80165b4a3c27e7",
+        "startMs": 0,
+        "endMs": 9908
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "53:1",
+      "categoryId": 53,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/053/001.mp3",
+      "startMs": 0,
+      "endMs": 14689,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_054_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "384919bac56010ce1a4f3cb105436e38b66e2976342bbeee161b32b684c0572a",
+        "startMs": 0,
+        "endMs": 14689
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "54:1",
+      "categoryId": 54,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/054/001.mp3",
+      "startMs": 0,
+      "endMs": 24955,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_055_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "70b2ecfb0a8c7d3ead3c3fd8b85800bd0cd34286e05a856b73d1d8e6410a708a",
+        "startMs": 0,
+        "endMs": 24955
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "55:1",
+      "categoryId": 55,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/055/001.mp3",
+      "startMs": 0,
+      "endMs": 36676,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_056_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "7fd03530953dfeb5349cd6eacba486fef9fc73c48771775222923e81e8ad99ce",
+        "startMs": 3215,
+        "endMs": 39845
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9745,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "56:1",
+      "categoryId": 56,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/056/001.mp3",
+      "startMs": 0,
+      "endMs": 42919,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_057_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "aa2b98f934a906775527cb0205a61feff7cdb569466bfe40ecdd3f22781e9dc9",
+        "startMs": 3655,
+        "endMs": 46545
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9651,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "quoted-invocation"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "56:2",
+      "categoryId": 56,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/056/002.mp3",
+      "startMs": 0,
+      "endMs": 5224,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_057_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "aa2b98f934a906775527cb0205a61feff7cdb569466bfe40ecdd3f22781e9dc9",
+        "startMs": 49335,
+        "endMs": 54520
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "57:1",
+      "categoryId": 57,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/057/001.mp3",
+      "startMs": 0,
+      "endMs": 23048,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_058_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "09877e788ef405ce350fd8a4e7b7b7a7b09073bb2897991296375286fd9c885e",
+        "startMs": 0,
+        "endMs": 23048
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "58:1",
+      "categoryId": 58,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/058/001.mp3",
+      "startMs": 0,
+      "endMs": 8785,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_059_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "72d72f224253b662fa040de5be0fdf7d46f2ef606cd8cf0084389395b8e95788",
+        "startMs": 0,
+        "endMs": 8785
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "59:1",
+      "categoryId": 59,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/059/001.mp3",
+      "startMs": 0,
+      "endMs": 7218,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_060_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "5e11c567428ca5ce2ebc4e4951b0f26c23e292bcfcfe4d4e5f21546606d7c611",
+        "startMs": 0,
+        "endMs": 7218
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "60:1",
+      "categoryId": 60,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/060/001.mp3",
+      "startMs": 0,
+      "endMs": 24093,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_061_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "31334c1b25bb0fcdb00743fec7b87db21049f844bbf535b3a8a18fd7b1b52828",
+        "startMs": 0,
+        "endMs": 24093
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "62:1",
+      "categoryId": 62,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/062/001.mp3",
+      "startMs": 0,
+      "endMs": 10117,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_063_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "624428bd6212ea141ba110105a3bd53e499b4ecf4ea2040102d55fad3b37d53b",
+        "startMs": 0,
+        "endMs": 10117
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "63:2",
+      "categoryId": 63,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/063/002.mp3",
+      "startMs": 0,
+      "endMs": 6583,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_064_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "41360dffd7e1fc51a4437c310d43bda3094cbbe8a63c48a893b84c2ed0a8431c",
+        "startMs": 13855,
+        "endMs": 20405
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "64:1",
+      "categoryId": 64,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/064/001.mp3",
+      "startMs": 0,
+      "endMs": 7218,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_065_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "a98f8db45ecbd5314e93ad59f31fc1389dc893473a8e039b25dd20829abc183a",
+        "startMs": 0,
+        "endMs": 7218
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "65:1",
+      "categoryId": 65,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/065/001.mp3",
+      "startMs": 0,
+      "endMs": 7610,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_066_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "f6d0d60475bac205c149821d0b0e4ff518db4cbfd98fde71c43b84aa54556eea",
+        "startMs": 0,
+        "endMs": 7610
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "66:1",
+      "categoryId": 66,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/066/001.mp3",
+      "startMs": 0,
+      "endMs": 15943,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_067_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "2299c11685321fd6338e1819302a4e57e89d1b199592c91b9edebf0114c90776",
+        "startMs": 0,
+        "endMs": 15943
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "67:1",
+      "categoryId": 67,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/067/001.mp3",
+      "startMs": 0,
+      "endMs": 20775,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_068_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "77fcfe2210dd1cc641c8b03545d0b3398662631ed511b6696c3544ee4da16ccb",
+        "startMs": 0,
+        "endMs": 20775
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "69:1",
+      "categoryId": 69,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/069/001.mp3",
+      "startMs": 0,
+      "endMs": 12278,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_070_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "607a3524f4847d9af6c79b672562dfced0496fd067d26dcc32115226b0811867",
+        "startMs": 2275,
+        "endMs": 14525
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "70:2",
+      "categoryId": 70,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/070/002.mp3",
+      "startMs": 0,
+      "endMs": 13531,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_071_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "87ab07afaabd79178945db1fe7f5cf5b7241e84d84934579c39c88feedb0299c",
+        "startMs": 13395,
+        "endMs": 26880
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9667,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "71:1",
+      "categoryId": 71,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/071/001.mp3",
+      "startMs": 0,
+      "endMs": 11424,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_072_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "0f3037d02d3a32229d0148b16a68ad95f13f26a9a68d98b4a144d63d5a8adb25",
+        "startMs": 0,
+        "endMs": 11424
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "72:1",
+      "categoryId": 72,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/072/001.mp3",
+      "startMs": 0,
+      "endMs": 10352,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_073_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "8b08763cfadb0c1833c478aa02211752d62fe377819539f2bb7813afc1bce94d",
+        "startMs": 0,
+        "endMs": 10352
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "73:1",
+      "categoryId": 73,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/073/001.mp3",
+      "startMs": 0,
+      "endMs": 13539,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_074_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "c1be00b0ea37de64a95bbbe244dfe116cb7a0c742cb3276286f7b25863a8dbe9",
+        "startMs": 0,
+        "endMs": 13539
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "74:1",
+      "categoryId": 74,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/074/001.mp3",
+      "startMs": 0,
+      "endMs": 19208,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_075_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "86dfa6dfee8de51ac157198767f621aa63b9d39d32656c93c72594741e093df7",
+        "startMs": 0,
+        "endMs": 19208
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "75:1",
+      "categoryId": 75,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/075/001.mp3",
+      "startMs": 0,
+      "endMs": 8550,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_076_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "912d6ddf309ae836a6b24a96662e49018fb9c96ce4d233d17db7adc1e7baee44",
+        "startMs": 0,
+        "endMs": 8550
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "76:1",
+      "categoryId": 76,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/076/001.mp3",
+      "startMs": 0,
+      "endMs": 16726,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_077_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "e6f40da906bbc64b1024c7899095e06e556fb9d7c948fdc0ecb326b45913ce46",
+        "startMs": 0,
+        "endMs": 16726
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "77:1",
+      "categoryId": 77,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/077/001.mp3",
+      "startMs": 0,
+      "endMs": 21925,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_078_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "48b825de33bc93d1cada29a6e736a0ba65991d6684413aca9e8215a274b794f8",
+        "startMs": 0,
+        "endMs": 21925
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "78:1",
+      "categoryId": 78,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/078/001.mp3",
+      "startMs": 0,
+      "endMs": 9360,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_079_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "28d557cc37eb2e821895f587f0d8498e7b57b85ec9096d12adab617a3fbb88d5",
+        "startMs": 0,
+        "endMs": 9360
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "79:1",
+      "categoryId": 79,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/079/001.mp3",
+      "startMs": 0,
+      "endMs": 10770,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_080_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "d38e19a8f9ae767b39bd66d15c7c6af3f4a19f24107e2fbf8245c92ed69aa8d3",
+        "startMs": 0,
+        "endMs": 10770
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "80:1",
+      "categoryId": 80,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/080/001.mp3",
+      "startMs": 0,
+      "endMs": 31538,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_081_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "ca0d3d643b5e8797c4deb7fa26c5cc5f93cfee8bf66bf052f2188dd47f765ad9",
+        "startMs": 0,
+        "endMs": 31538
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "81:1",
+      "categoryId": 81,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/081/001.mp3",
+      "startMs": 0,
+      "endMs": 12103,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_082_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "8fb3b1298044bc6414f900e09a2c480d75ef062d758ec5d1bff6e71c2e73fc21",
+        "startMs": 0,
+        "endMs": 12103
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "82:1",
+      "categoryId": 82,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/082/001.mp3",
+      "startMs": 0,
+      "endMs": 6695,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_083_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "bb5cf9e6949a014a5c175e804fb39c9f12213292dbb5db342eba75ee6b93cdd9",
+        "startMs": 0,
+        "endMs": 6695
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "83:1",
+      "categoryId": 83,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/083/001.mp3",
+      "startMs": 0,
+      "endMs": 14584,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_084_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "bda2c8ecc0314082fc97fb962bd53e0b0ffea93e96aec2adce5b1c3b4523e650",
+        "startMs": 0,
+        "endMs": 14584
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "84:1",
+      "categoryId": 84,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/084/001.mp3",
+      "startMs": 0,
+      "endMs": 25242,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_085_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "827689134bc621a83a5440a56dc6e706dd6802a493a0ef5ad3358fbeda34a29d",
+        "startMs": 0,
+        "endMs": 25242
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "85:1",
+      "categoryId": 85,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/085/001.mp3",
+      "startMs": 0,
+      "endMs": 12050,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_086_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "b22325c1ac580ff523193f40d05a016c1c3dcc0fd6e0a610d34c7caf07332338",
+        "startMs": 0,
+        "endMs": 12050
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "86:1",
+      "categoryId": 86,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/086/001.mp3",
+      "startMs": 0,
+      "endMs": 6147,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_087_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "074fd64ad0c12a399f91810ad7f37dd3631948748bd8c05c02ebe729ea3e9ac0",
+        "startMs": 0,
+        "endMs": 6147
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "87:1",
+      "categoryId": 87,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/087/001.mp3",
+      "startMs": 0,
+      "endMs": 7949,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_088_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "88844d90da19160031db708826f6384d69989a37b16f035156eb0feb7698169a",
+        "startMs": 0,
+        "endMs": 7949
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "88:1",
+      "categoryId": 88,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/088/001.mp3",
+      "startMs": 0,
+      "endMs": 20645,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_089_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "d9ee5f6fa7821633fbc1ccef5baf59fa335d4b583dfd9654524b8834de24079d",
+        "startMs": 0,
+        "endMs": 20645
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "89:1",
+      "categoryId": 89,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/089/001.mp3",
+      "startMs": 0,
+      "endMs": 9020,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_090_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "c5b7abf4b6d5582351b7b8ad92f83d075437c2d78caafed74645d31d6cb0cba3",
+        "startMs": 0,
+        "endMs": 9020
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "90:1",
+      "categoryId": 90,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/090/001.mp3",
+      "startMs": 0,
+      "endMs": 8916,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_091_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "f7a4091e124d68bc71f2e6c80316c7f3e81fcb58c65711ae5154ca6e184bf1ac",
+        "startMs": 0,
+        "endMs": 8916
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "91:1",
+      "categoryId": 91,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/091/001.mp3",
+      "startMs": 0,
+      "endMs": 12103,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_092_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "a5a07fdff01dbff1d375fdf62a079c4654547b0d971c0b9681392015de21b296",
+        "startMs": 0,
+        "endMs": 12103
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "92:1",
+      "categoryId": 92,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/092/001.mp3",
+      "startMs": 0,
+      "endMs": 13461,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_093_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "ad1d1ac6760cee2c447722721a4c4544b973e74a552f0f7fbffb44e3e0dba61c",
+        "startMs": 0,
+        "endMs": 13461
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "93:1",
+      "categoryId": 93,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/093/001.mp3",
+      "startMs": 0,
+      "endMs": 7453,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_094_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "e79478449b133aa150be22b9177e501f356222034e405b90b8b2334a5f7b60e0",
+        "startMs": 0,
+        "endMs": 7453
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "94:1",
+      "categoryId": 94,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/094/001.mp3",
+      "startMs": 0,
+      "endMs": 12912,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_095_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "a32cdc51e777e39908fbdc76b7cd9b54ffbb50b07e3f1a5a781691465d6066af",
+        "startMs": 0,
+        "endMs": 12912
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "95:1",
+      "categoryId": 95,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/095/001.mp3",
+      "startMs": 0,
+      "endMs": 37259,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_096_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "cc0169e71788b2a6cbe61920a8afc3de454f0e32bc264e88e441d947212c1c9d",
+        "startMs": 0,
+        "endMs": 37259
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "96:1",
+      "categoryId": 96,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/096/001.mp3",
+      "startMs": 0,
+      "endMs": 65941,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_097_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "653be617dcf75f84d246ec3c49b8f487f445537551399b5bffb166267f62b95e",
+        "startMs": 0,
+        "endMs": 65941
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "97:1",
+      "categoryId": 97,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/097/001.mp3",
+      "startMs": 0,
+      "endMs": 36109,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_098_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "35e2523cbe614a38e666d5fb97b67549baa3bb88822c7ebe762c574342029346",
+        "startMs": 0,
+        "endMs": 36109
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "98:1",
+      "categoryId": 98,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/098/001.mp3",
+      "startMs": 0,
+      "endMs": 20619,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_099_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "d172c4b7201607917215a7f1289b1e79b7ee9c10e24a4a1e7796639b8ae8b0b8",
+        "startMs": 0,
+        "endMs": 20619
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "99:1",
+      "categoryId": 99,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/099/001.mp3",
+      "startMs": 0,
+      "endMs": 6304,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_100_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "e34087418217a82821ae33352c4ecae9f8dcba530e5bd64c57269aba4852027f",
+        "startMs": 0,
+        "endMs": 6304
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "100:1",
+      "categoryId": 100,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/100/001.mp3",
+      "startMs": 0,
+      "endMs": 9046,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_101_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "8c98c98b16b1668d4efb7ab91e2e78079a7998117e0fa08d4307b33d0eecdd4f",
+        "startMs": 0,
+        "endMs": 9046
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "101:1",
+      "categoryId": 101,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/101/001.mp3",
+      "startMs": 0,
+      "endMs": 6583,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_102_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "83e33ee676806a91776643dec83ec279cb782b30c69fdad40b427a226463e875",
+        "startMs": 2815,
+        "endMs": 9365
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "101:2",
+      "categoryId": 101,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/101/002.mp3",
+      "startMs": 0,
+      "endMs": 8333,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_102_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "83e33ee676806a91776643dec83ec279cb782b30c69fdad40b427a226463e875",
+        "startMs": 10615,
+        "endMs": 18920
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "102:1",
+      "categoryId": 102,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/102/001.mp3",
+      "startMs": 0,
+      "endMs": 13566,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_103_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "91b43321ef0fd920679cff67432abfc49688bdd80718d8b98350e1960b27ac8d",
+        "startMs": 0,
+        "endMs": 13566
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "103:1",
+      "categoryId": 103,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/103/001.mp3",
+      "startMs": 0,
+      "endMs": 19365,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_104_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "faa8adc8281228e2d60031229f23c13fcc2bb75935c54d80bc841c32a0c3d7b7",
+        "startMs": 0,
+        "endMs": 19365
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "104:1",
+      "categoryId": 104,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/104/001.mp3",
+      "startMs": 0,
+      "endMs": 10405,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_105_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "c5976397f0826b628d7721d0b6ad1e8b78e498b61c10e24d5c1e8ce5acace14f",
+        "startMs": 0,
+        "endMs": 10405
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "105:1",
+      "categoryId": 105,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/105/001.mp3",
+      "startMs": 0,
+      "endMs": 31329,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_106_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "ccad27def3778f20d91790c4dd6d82d35aa1fdbbdca65ee9287d233059867a2f",
+        "startMs": 0,
+        "endMs": 31329
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "106:1",
+      "categoryId": 106,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/106/001.mp3",
+      "startMs": 0,
+      "endMs": 25112,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_107_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "362556ac5c3e5bff7292f8510657753e9eda5ca8726fe8ab6cf73649eeb479f5",
+        "startMs": 0,
+        "endMs": 25112
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "107:3",
+      "categoryId": 107,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/107/003.mp3",
+      "startMs": 0,
+      "endMs": 8333,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_108_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "92d92ba1656d8981372a933b284ebad0aa90ab9aee71f91585a65da3de17c648",
+        "startMs": 27695,
+        "endMs": 35985
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "107:4",
+      "categoryId": 107,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/107/004.mp3",
+      "startMs": 0,
+      "endMs": 11259,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_108_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "92d92ba1656d8981372a933b284ebad0aa90ab9aee71f91585a65da3de17c648",
+        "startMs": 37315,
+        "endMs": 48545
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9677,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "107:5",
+      "categoryId": 107,
+      "dhikrId": 5,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/107/005.mp3",
+      "startMs": 0,
+      "endMs": 12852,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_108_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "92d92ba1656d8981372a933b284ebad0aa90ab9aee71f91585a65da3de17c648",
+        "startMs": 50135,
+        "endMs": 62940
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "108:1",
+      "categoryId": 108,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/108/001.mp3",
+      "startMs": 0,
+      "endMs": 20219,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_109_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "54570b0c12ea2d2b8b016c82c338ad04a89d1f3a802ade07ab84c5185606a095",
+        "startMs": 1595,
+        "endMs": 21785
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9231,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "108:2",
+      "categoryId": 108,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/108/002.mp3",
+      "startMs": 0,
+      "endMs": 12487,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_109_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "54570b0c12ea2d2b8b016c82c338ad04a89d1f3a802ade07ab84c5185606a095",
+        "startMs": 23115,
+        "endMs": 35565
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "108:3",
+      "categoryId": 108,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/108/003.mp3",
+      "startMs": 0,
+      "endMs": 7262,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_109_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "54570b0c12ea2d2b8b016c82c338ad04a89d1f3a802ade07ab84c5185606a095",
+        "startMs": 49175,
+        "endMs": 56400
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "109:1",
+      "categoryId": 109,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/109/001.mp3",
+      "startMs": 0,
+      "endMs": 10849,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_110_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "6e82496e83822b96b415cb3a78d0b83595edf258fdd2e0dd6bf1a26dbbc7c717",
+        "startMs": 0,
+        "endMs": 10849
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "110:1",
+      "categoryId": 110,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/110/001.mp3",
+      "startMs": 0,
+      "endMs": 25268,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_111_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "0932505602dd52d1b3e41aa75d628d456fe2721dd5436109eff9e98c4bf563d2",
+        "startMs": 0,
+        "endMs": 25268
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "111:1",
+      "categoryId": 111,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/111/001.mp3",
+      "startMs": 0,
+      "endMs": 17562,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_112_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "d8c6d57fee821baea8da52b05d757db217a5f66d3f8e61f0285bdda6eb17e9ad",
+        "startMs": 0,
+        "endMs": 17562
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "112:1",
+      "categoryId": 112,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/112/001.mp3",
+      "startMs": 0,
+      "endMs": 16831,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_113_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "cfb115b2fd7fcb0333bcd96f033b085d90dad5402f0c32c35b94ca92a8956f1e",
+        "startMs": 0,
+        "endMs": 16831
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "113:1",
+      "categoryId": 113,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/113/001.mp3",
+      "startMs": 0,
+      "endMs": 26130,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_114_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "5075264d07bb788b1623854619c3ade1904446880361cd201ecca975f8c01486",
+        "startMs": 0,
+        "endMs": 26130
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "114:1",
+      "categoryId": 114,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/114/001.mp3",
+      "startMs": 0,
+      "endMs": 16334,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_115_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "58aea498e66496d2e01155bd6243bc1f81b23825dd0af2f41514013ac067ba6e",
+        "startMs": 0,
+        "endMs": 16334
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "115:1",
+      "categoryId": 115,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/115/001.mp3",
+      "startMs": 0,
+      "endMs": 16204,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_116_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "35efb09f68906767d2517bc3acefd6c1e1c52da967bca12ed15ae4598a8b79c8",
+        "startMs": 0,
+        "endMs": 16204
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "116:1",
+      "categoryId": 116,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/116/001.mp3",
+      "startMs": 0,
+      "endMs": 16674,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_117_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "11105ad44462d71370fe38cd317909f01a9e1d73b44e37f049bd1868e89ef1ca",
+        "startMs": 0,
+        "endMs": 16674
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "117:1",
+      "categoryId": 117,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/117/001.mp3",
+      "startMs": 0,
+      "endMs": 14506,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_118_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "e3f4f61907cef1617eaa766d14a247822070e934acd4ea81ed734de20832bc1f",
+        "startMs": 0,
+        "endMs": 14506
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "118:1",
+      "categoryId": 118,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/118/001.mp3",
+      "startMs": 0,
+      "endMs": 65941,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_119_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "144ed15f09a9bc1ab686d04a45d7b449e2881141f2b627f0dffb8249f3b7c3b4",
+        "startMs": 0,
+        "endMs": 65941
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "119:1",
+      "categoryId": 119,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/119/001.mp3",
+      "startMs": 0,
+      "endMs": 23361,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_120_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "eebd17afc68e164fa77a94c0ba421921d7d2a288707207a732d2b0922b8de0f8",
+        "startMs": 0,
+        "endMs": 23361
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "120:1",
+      "categoryId": 120,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/120/001.mp3",
+      "startMs": 0,
+      "endMs": 25765,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_121_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "40074b3671c07941a3eff081d786cc62e93d9a8398a7c425838c83bf6eb81e5e",
+        "startMs": 0,
+        "endMs": 25765
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "121:1",
+      "categoryId": 121,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/121/001.mp3",
+      "startMs": 0,
+      "endMs": 32974,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_122_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "d3186f0ba4aabd849d7fc86c0cbe2620adb662161b68c4df22a199cb774602d5",
+        "startMs": 0,
+        "endMs": 32974
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "122:1",
+      "categoryId": 122,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/122/001.mp3",
+      "startMs": 0,
+      "endMs": 1907,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_123_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "c15471452d1bf93753bec681cd63e2f3085852819f023899af73c7ffd1213761",
+        "startMs": 3595,
+        "endMs": 5465
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "122:2",
+      "categoryId": 122,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/122/002.mp3",
+      "startMs": 0,
+      "endMs": 2194,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_123_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "c15471452d1bf93753bec681cd63e2f3085852819f023899af73c7ffd1213761",
+        "startMs": 7015,
+        "endMs": 9160
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "123:1",
+      "categoryId": 123,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/123/001.mp3",
+      "startMs": 0,
+      "endMs": 19051,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_124_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "833c819b2bc8823d67a8f6e047411ec110d79cc61737c5740e141244145a7b6a",
+        "startMs": 0,
+        "endMs": 19051
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "124:1",
+      "categoryId": 124,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/124/001.mp3",
+      "startMs": 0,
+      "endMs": 22238,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_125_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "aab4ad01fd15235d37d307638a1d388cd3c69b70c12c8d2f5dc6b53ad0647ecd",
+        "startMs": 0,
+        "endMs": 22238
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "125:1",
+      "categoryId": 125,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/125/001.mp3",
+      "startMs": 0,
+      "endMs": 17850,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_126_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "89034eb8fa5362bbfb371f557618a3fedadd8301ab2129344489728dd33ac0b6",
+        "startMs": 0,
+        "endMs": 17850
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "126:1",
+      "categoryId": 126,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/126/001.mp3",
+      "startMs": 0,
+      "endMs": 6330,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_127_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "ac055a678a8d62014efb5d90ca6ad56550661f8d391af584557017821c51a065",
+        "startMs": 0,
+        "endMs": 6330
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "127:1",
+      "categoryId": 127,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/127/001.mp3",
+      "startMs": 0,
+      "endMs": 13174,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_128_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "ce88123c2cf712e09a9e25e0584f055e62db300910c9042743a5233c2752e7cd",
+        "startMs": 0,
+        "endMs": 13174
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "128:1",
+      "categoryId": 128,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/128/001.mp3",
+      "startMs": 0,
+      "endMs": 46036,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_129_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "ef68157aabcba39c39afe81974bf5a31454333011f3d7c7fc7f2f27bc3416c3c",
+        "startMs": 0,
+        "endMs": 46036
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "129:1",
+      "categoryId": 129,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/129/001.mp3",
+      "startMs": 0,
+      "endMs": 12147,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_130_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "cf7742938a72544d8b42e1742881ee26f9bd8fb45401619cf1ad68656f0b2021",
+        "startMs": 2175,
+        "endMs": 14285
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.96,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "129:3",
+      "categoryId": 129,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/129/003.mp3",
+      "startMs": 0,
+      "endMs": 17319,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_130_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "cf7742938a72544d8b42e1742881ee26f9bd8fb45401619cf1ad68656f0b2021",
+        "startMs": 27335,
+        "endMs": 44625
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "129:4",
+      "categoryId": 129,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/129/004.mp3",
+      "startMs": 0,
+      "endMs": 12513,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_130_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "cf7742938a72544d8b42e1742881ee26f9bd8fb45401619cf1ad68656f0b2021",
+        "startMs": 48875,
+        "endMs": 61345
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9524,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "129:5",
+      "categoryId": 129,
+      "dhikrId": 5,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/129/005.mp3",
+      "startMs": 0,
+      "endMs": 6870,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_130_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "cf7742938a72544d8b42e1742881ee26f9bd8fb45401619cf1ad68656f0b2021",
+        "startMs": 66155,
+        "endMs": 72985
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "quoted-invocation"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "130:2",
+      "categoryId": 130,
+      "dhikrId": 2,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/130/002.mp3",
+      "startMs": 0,
+      "endMs": 18338,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_131_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "71dc99ee545b99f5bb82a2846d181693e91c63d64850996ffaca36ea5ee71bae",
+        "startMs": 18315,
+        "endMs": 36625
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9412,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "130:3",
+      "categoryId": 130,
+      "dhikrId": 3,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/130/003.mp3",
+      "startMs": 0,
+      "endMs": 15778,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_131_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "71dc99ee545b99f5bb82a2846d181693e91c63d64850996ffaca36ea5ee71bae",
+        "startMs": 36655,
+        "endMs": 52385
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "130:4",
+      "categoryId": 130,
+      "dhikrId": 4,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/130/004.mp3",
+      "startMs": 0,
+      "endMs": 15621,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_131_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "71dc99ee545b99f5bb82a2846d181693e91c63d64850996ffaca36ea5ee71bae",
+        "startMs": 52415,
+        "endMs": 68005
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.9886,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "130:6",
+      "categoryId": 130,
+      "dhikrId": 6,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/130/006.mp3",
+      "startMs": 0,
+      "endMs": 7131,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_131_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "71dc99ee545b99f5bb82a2846d181693e91c63d64850996ffaca36ea5ee71bae",
+        "startMs": 95115,
+        "endMs": 102205
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "130:7",
+      "categoryId": 130,
+      "dhikrId": 7,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/130/007.mp3",
+      "startMs": 0,
+      "endMs": 17424,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_131_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "71dc99ee545b99f5bb82a2846d181693e91c63d64850996ffaca36ea5ee71bae",
+        "startMs": 102235,
+        "endMs": 119625
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "130:10",
+      "categoryId": 130,
+      "dhikrId": 10,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/130/010.mp3",
+      "startMs": 0,
+      "endMs": 18260,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_131_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "71dc99ee545b99f5bb82a2846d181693e91c63d64850996ffaca36ea5ee71bae",
+        "startMs": 177975,
+        "endMs": 196205
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 0.972,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "130:11",
+      "categoryId": 130,
+      "dhikrId": 11,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/130/011.mp3",
+      "startMs": 0,
+      "endMs": 6687,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_131_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "71dc99ee545b99f5bb82a2846d181693e91c63d64850996ffaca36ea5ee71bae",
+        "startMs": 199695,
+        "endMs": 206345
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "words",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "130:12",
+      "categoryId": 130,
+      "dhikrId": 12,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/130/012.mp3",
+      "startMs": 0,
+      "endMs": 13819,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_131_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "71dc99ee545b99f5bb82a2846d181693e91c63d64850996ffaca36ea5ee71bae",
+        "startMs": 207495,
+        "endMs": 221280
+      },
+      "alignment": {
+        "method": "audio-word-alignment",
+        "manuallyReviewed": false,
+        "textMatchScore": 1.0,
+        "textMatchUnit": "arabic-characters",
+        "textMatchScope": "entry-without-repeat-instructions"
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "131:1",
+      "categoryId": 131,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/131/001.mp3",
+      "startMs": 0,
+      "endMs": 15681,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_132_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "d4516440059c3e8ab3cdee95b9508020e668d45e498b03bf0083f12c704c219d",
+        "startMs": 0,
+        "endMs": 15681
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    },
+    {
+      "itemId": "132:1",
+      "categoryId": 132,
+      "dhikrId": 1,
+      "url": "/audio/adhkar/sulaiman-al-shuhayhi/132/001.mp3",
+      "startMs": 0,
+      "endMs": 59724,
+      "source": {
+        "url": "https://d1.islamhouse.com/data/ar/ih_sounds/chain_01/Hisn_Almuslim/Hisn_Almuslim_AlShwehi/ar_133_Hisn_Almuslim_Alshwehi.mp3",
+        "sha256": "14ef941f6f1e7722ac13e6431906ef1c1d136bd0bea0014cc5e063ea4e80a3d9",
+        "startMs": 0,
+        "endMs": 59724
+      },
+      "alignment": {
+        "method": "publisher-single-item-chapter",
+        "manuallyReviewed": false
+      },
+      "rightsId": "source-distribution-terms"
+    }
+  ],
+  "variants": [],
+  "sections": []
+}
