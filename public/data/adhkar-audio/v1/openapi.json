@@ -3,7 +3,7 @@
   "info": {
     "title": "SAMEE3 Adhkar Developer API",
     "version": "1.1.0",
-    "description": "Public read-only Arabic adhkar audio catalog. Times use milliseconds. Source rights remain with the original publishers. Machine-aligned clips are explicitly labeled."
+    "description": "Public read-only Arabic adhkar audio catalog. Times use milliseconds. Source rights remain with the original publishers. Machine-aligned clips are explicitly labeled. Free API access without accounts or API keys. Audio source terms and attribution still apply. JavaScript SDK: /adhkar-sdk/v1/index.js."
   },
   "servers": [
     {
@@ -127,6 +127,17 @@
                 "waking"
               ]
             }
+          },
+          {
+            "name": "format",
+            "in": "query",
+            "description": "Use simple with a reciter for flat items containing absolute audioUrl, text and timing. Omit to retain the original v1 response.",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "simple"
+              ]
+            }
           }
         ],
         "responses": {
@@ -229,6 +240,30 @@
           },
           "400": {
             "description": "Invalid query"
+          }
+        }
+      }
+    },
+    "/api/adhkar/v1/sections/{recording}/timings": {
+      "get": {
+        "summary": "Published dhikr segments aligned to the exact complete recording",
+        "parameters": [
+          {
+            "name": "recording",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "mishary-alafasy:104"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Recording metadata and available text segments with startMs and endMs, in milliseconds; gaps are not assigned estimated timings."
+          },
+          "404": {
+            "description": "Unknown recording"
           }
         }
       }

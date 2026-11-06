@@ -1,11 +1,12 @@
 import { RIWAYAT, SURAH_NAMES_AR, type RiwayaId } from './Samee3DataAdapter'
 import { createMediaArtwork } from './media-artwork'
 import { bindAudioFocus } from '../audio-focus'
+import { currentMediaDhikr, parseMediaDhikrs, type AdhkarMedia, type MediaDhikr } from '../adhkar-media'
 
 type Timing = { ayah?: number; start_time?: number; end_time?: number }
 
 export type MediaTrack = {
-  kind: 'quran' | 'library'
+  kind: 'quran' | 'library' | 'adhkar'
   title: string
   subtitle: string
   audioUrl: string
@@ -14,6 +15,11 @@ export type MediaTrack = {
   riwayaId?: number
   moshafId?: number
   isStream?: boolean
+  adhkar?: AdhkarMedia
+  next?: () => void
+  previous?: () => void
+  play?: () => void
+  pause?: () => void
 }
 
 type QuranAudio = HTMLMediaElement & {
@@ -35,6 +41,7 @@ type Entry = {
   metadataKey: string
   texts: Map<number, string>
   timings: Timing[]
+  dhikrs: MediaDhikr[]
   controller?: AbortController
   artworkKey: string
   artworkUrl?: string
@@ -127,6 +134,7 @@ function describe(entry: Entry) {
     reciter: track?.reciterName || audio.__samee3ReciterName || '',
     label: track?.subtitle || definition?.label || '',
     source: track?.audioUrl || audio.__samee3NetworkUrl || audio.src,
+    adhkar: track?.kind === 'adhkar' ? track.adhkar : undefined,
   }
 }
 
@@ -154,6 +162,11 @@ async function cachedJson(url: string, signal: AbortSignal): Promise<unknown> {
   }
 }
 
+/** Save known chapter metadata alongside a complete audio download when available. */
+export async function prepareAdhkarMedia(recordingId: string, signal: AbortSignal): Promise<void> {
+  await cachedJson(`/api/adhkar/v1/sections/${encodeURIComponent(recordingId)}/timings`, signal)
+}
+
 async function loadTimings(read: number, surah: number, signal: AbortSignal) {
   if (!read) return []
   try {
@@ -168,10 +181,22 @@ function refreshData(entry: Entry, info: ReturnType<typeof describe>) {
   entry.controller = new AbortController()
   entry.texts.clear()
   entry.timings = []
+  entry.dhikrs = []
   entry.artworkKey = ''
   entry.artworkUrl = undefined
   const signal = entry.controller.signal
   const key = entry.key
+  if (info.adhkar?.recordingId) {
+    const recordingId = info.adhkar.recordingId
+    void cachedJson(`/api/adhkar/v1/sections/${encodeURIComponent(recordingId)}/timings`, signal).then(value => {
+      const result = value as { recording?: { id?: string }; items?: unknown }
+      if (signal.aborted || entry.key !== key || result.recording?.id !== recordingId) return
+      entry.dhikrs = parseMediaDhikrs(result.items)
+      if (active === entry) handlers(true)
+      sync(entry)
+    }).catch(() => undefined)
+    return
+  }
   if (!info.quran || !info.riwaya || info.surah < 1 || info.surah > 114) return
   void cachedJson(`/api/quran-now-playing?riwaya=${info.riwaya}&surah=${info.surah}`, signal).then((value) => {
     const data = value as { riwaya?: string; surah?: number; ayahs?: { number: number; text: string }[] }
@@ -214,7 +239,7 @@ function sync(entry: Entry) {
     return
   }
   const info = describe(entry)
-  const key = JSON.stringify([audio.src, info.source, info.surah, info.riwaya, info.read, info.title, info.reciter, info.label])
+  const key = JSON.stringify([audio.src, info.source, info.surah, info.riwaya, info.read, info.title, info.reciter, info.label, info.adhkar])
   if (entry.key !== key) {
     entry.key = key
     entry.metadataKey = ''
@@ -224,12 +249,21 @@ function sync(entry: Entry) {
   const rows = !entry.track && audio.__samee3Timings?.length ? audio.__samee3Timings : entry.timings
   const ayah = info.quran && !audio.__samee3Switching && audio.readyState >= 1
     ? currentMediaAyah(rows, audio.currentTime, audio.duration) : null
-  const text = ayah ? entry.texts.get(ayah) : undefined
-  const title = text && ayah
+  const dhikr = info.adhkar?.text
+    ? { text: info.adhkar.text, number: info.adhkar.number || 1 }
+    : info.adhkar && audio.readyState >= 1 ? currentMediaDhikr(entry.dhikrs, audio.currentTime) : null
+  const text = dhikr?.text || (ayah ? entry.texts.get(ayah) : undefined)
+  const numberAr = (number: number) => String(number).replace(/\d/g, digit => '٠١٢٣٤٥٦٧٨٩'[Number(digit)])
+  const title = dhikr
+    ? `الذكر ${numberAr(dhikr.number)} · ${dhikr.text.replace(/\s+/g, ' ').trim()}`
+    : text && ayah
     ? `الآية ${String(ayah).replace(/\d/g, (digit) => '٠١٢٣٤٥٦٧٨٩'[Number(digit)])}`
     : info.title
-  if (text && ayah) {
-    const artworkInput = { text, surah: info.title, ayah, reciter: info.reciter, riwaya: info.label }
+  if (text && (ayah || dhikr)) {
+    const artworkInput = { text, surah: info.adhkar?.section || info.title, ayah: dhikr?.number || ayah!,
+      reciter: info.reciter, riwaya: dhikr ? 'أذكار سميع' : info.label,
+      kind: dhikr ? 'adhkar' as const : 'quran' as const,
+      total: dhikr ? info.adhkar?.total || entry.dhikrs.length || undefined : undefined }
     const artworkKey = JSON.stringify([entry.key, artworkInput])
     if (entry.artworkKey !== artworkKey) {
       entry.artworkKey = artworkKey
@@ -277,21 +311,40 @@ function handlers(enabled: boolean) {
     try { audio.currentTime = Math.max(0, Math.min(audio.duration, seconds)) } catch { return }
     if (active) sync(active)
   }
+  const nextDhikr = (offset: number) => {
+    const entry = active
+    if (!entry) return
+    if (entry.track?.kind === 'adhkar' && entry.dhikrs.length) {
+      const at = entry.audio.currentTime * 1000
+      const current = currentMediaDhikr(entry.dhikrs, entry.audio.currentTime)
+      const target = offset > 0 ? entry.dhikrs.find(row => row.startMs > at + 50)
+        : [...entry.dhikrs].reverse().find(row => row.startMs < (current?.startMs ?? at) - 50)
+      if (target) { seek(target.startMs / 1000); return }
+    }
+    if (offset > 0) entry.track?.next?.()
+    else entry.track?.previous?.()
+  }
   const actions: [MediaSessionAction, MediaSessionActionHandler][] = [
     ['play', () => {
       const entry = active
       if (!entry) return
+      if (entry.track?.play) { entry.track.play(); return }
       setIntent(entry.audio, true)
       void entry.audio.play().catch(() => { setIntent(entry.audio, false); sync(entry) })
     }],
-    ['pause', () => { if (active) { setIntent(active.audio, false); active.audio.pause(); sync(active) } }],
-    ['stop', () => { if (active) { setIntent(active.audio, false); active.audio.pause(); sync(active) } }],
+    ['pause', () => { if (active?.track?.pause) active.track.pause(); else if (active) { setIntent(active.audio, false); active.audio.pause(); sync(active) } }],
+    ['stop', () => { if (active?.track?.pause) active.track.pause(); else if (active) { setIntent(active.audio, false); active.audio.pause(); sync(active) } }],
     ['seekbackward', (event) => seek((active?.audio.currentTime || 0) - (event.seekOffset || 10))],
     ['seekforward', (event) => seek((active?.audio.currentTime || 0) + (event.seekOffset || 10))],
     ['seekto', (event) => { if (typeof event.seekTime === 'number') seek(event.seekTime) }],
+    ['nexttrack', () => nextDhikr(1)],
+    ['previoustrack', () => nextDhikr(-1)],
   ]
   for (const [action, handler] of actions) {
-    try { navigator.mediaSession.setActionHandler(action, enabled ? handler : null) } catch { /* Unsupported action. */ }
+    const timedDhikrs = active?.track?.kind === 'adhkar' && active.dhikrs.length > 1
+    const available = enabled && (action === 'nexttrack' ? Boolean(active?.track?.next || timedDhikrs)
+      : action === 'previoustrack' ? Boolean(active?.track?.previous || timedDhikrs) : true)
+    try { navigator.mediaSession.setActionHandler(action, available ? handler : null) } catch { /* Unsupported action. */ }
   }
 }
 
@@ -314,9 +367,10 @@ export function bindQuranMediaSession(element: HTMLMediaElement, track?: MediaTr
   if (entry) {
     entry.track = track
     sync(entry)
+    if (active === entry) handlers(true)
     return
   }
-  entry = { audio: element as QuranAudio, track, key: '', metadataKey: '', texts: new Map(), timings: [], artworkKey: '' }
+  entry = { audio: element as QuranAudio, track, key: '', metadataKey: '', texts: new Map(), timings: [], dhikrs: [], artworkKey: '' }
   entries.set(element, entry)
   const bound = entry
   const update = () => sync(bound)

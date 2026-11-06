@@ -4,6 +4,8 @@ type ArtworkInput = {
   ayah: number
   reciter: string
   riwaya: string
+  kind?: 'quran' | 'adhkar'
+  total?: number
 }
 
 type TextLayout = {
@@ -113,7 +115,10 @@ export async function createMediaArtwork(input: ArtworkInput): Promise<string> {
   context.drawImage(logo, SIZE / 2 - 46, 49, 92, 92)
 
   context.fillStyle = '#846232'
-  label(context, `${input.surah}  •  الآية ${digits(input.ayah)}`, 184, 29)
+  const reference = input.kind === 'adhkar'
+    ? `الذكر ${digits(input.ayah)}${input.total ? ` من ${digits(input.total)}` : ''}`
+    : `الآية ${digits(input.ayah)}`
+  label(context, `${input.surah}  •  ${reference}`, 184, 29)
   context.strokeStyle = '#dfcba4'
   context.beginPath()
   context.moveTo(350, 204)

@@ -1,0 +1,189 @@
+{
+  "release": "SAMEE3 Adhkar lock-screen playback, complete library and free API v4",
+  "basedOnCommit": "249cf753cc41951853b5d2c79e0fc57c6236cb58",
+  "deployed": false,
+  "existingMp3FilesPreserved": 1300,
+  "datasetVersion": "2026-11-06.3",
+  "completeRecordings": 122,
+  "recordingsWithPublishedTimings": 99,
+  "alignedSegments": 547,
+  "validation": {
+    "testsPassed": 150,
+    "newMediaAndSdkTestsPassed": 19,
+    "typecheck": "passed",
+    "productionBuild": "passed",
+    "httpChecks": [
+      {
+        "name": "simple API and CORS",
+        "ok": true
+      },
+      {
+        "name": "public audio URLs and per-file timings",
+        "ok": true
+      },
+      {
+        "name": "exact-recording timings",
+        "ok": true
+      },
+      {
+        "name": "SDK CORS and source",
+        "ok": true
+      },
+      {
+        "name": "recordings page rendered",
+        "ok": true,
+        "details": {
+          "status": 200,
+          "heading": true,
+          "fallback": true
+        }
+      },
+      {
+        "name": "developer navigation removed",
+        "ok": true
+      },
+      {
+        "name": "direct developer guide retained",
+        "ok": true
+      },
+      {
+        "name": "standalone code example",
+        "ok": true
+      }
+    ],
+    "visualBrowserCheck": "Unavailable in the verification environment",
+    "physicalIPhoneCheck": "Required after deployment"
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 7398,
+      "sha256": "a842a5affa021e94365d1eb7a50a1c6e60bb3cbb8fe01b7e2f4920eaba0dc627"
+    },
+    {
+      "path": "READ-ADHKAR-V4-AR.md",
+      "bytes": 5976,
+      "sha256": "c2fbe0db6c7eff79aaa7390f256bda4aed6c4b3bcdd1ab75d2321a5c0daf7e9b"
+    },
+    {
+      "path": "app/adhkar/page.tsx",
+      "bytes": 31293,
+      "sha256": "83bdf0bbbc50d46fdbdae00c46cb449e64fce20f54f52f4404f591aea8fdf8e5"
+    },
+    {
+      "path": "app/adhkar/read/page.tsx",
+      "bytes": 57199,
+      "sha256": "bd3ca44710f8289566c4f85ddcbd610908eb4355315b5a535cfe0e49c9047e2a"
+    },
+    {
+      "path": "app/adhkar/recordings/page.tsx",
+      "bytes": 65,
+      "sha256": "9f51086c6ce9f574d6faa441bea9f4f0e1b510169541deb7e7fe4c27afbd73bd"
+    },
+    {
+      "path": "app/api/adhkar/v1/items/route.ts",
+      "bytes": 735,
+      "sha256": "c5043c7ee783332ca89332d6364b92b78ee491f811a3c712a1922143f69ad46b"
+    },
+    {
+      "path": "app/api/adhkar/v1/sections/[recording]/timings/route.ts",
+      "bytes": 484,
+      "sha256": "9e6218a499d58bbecdf7076025671dc9f5148959a8727c925eaa9c2d633f8e55"
+    },
+    {
+      "path": "app/developers/adhkar/page.tsx",
+      "bytes": 7038,
+      "sha256": "789ff14cd64c0b13fe26e5400248def6b6d34f9e56117d09fa03bc8b82a30718"
+    },
+    {
+      "path": "components/adhkar/CompleteRecordings.tsx",
+      "bytes": 16388,
+      "sha256": "b175420cbaca618662055713c61a03da92390ed049e80327889f86639c0b511e"
+    },
+    {
+      "path": "components/adhkar/DeveloperQuickStart.tsx",
+      "bytes": 5225,
+      "sha256": "e6251ae3f3460926e478e4ae1f3058610ef0efdc8341f48f3b892c901008b832"
+    },
+    {
+      "path": "docs/ADHKAR-QUICK-START-AR.md",
+      "bytes": 6397,
+      "sha256": "3f15624a550e64735c0cd0ef03dc74e186352e0a7113410463b9f43a26f1f9f2"
+    },
+    {
+      "path": "lib/adhkar-developer-api.ts",
+      "bytes": 10477,
+      "sha256": "dd1b2466b0332cbd48faf83d10f7887a9689cc421e17d9f737c450d2b4ace7e1"
+    },
+    {
+      "path": "lib/adhkar-media.ts",
+      "bytes": 1260,
+      "sha256": "a9de9684bc877631f72fc2221df38552df015d77edd09bdf601f225e94115d30"
+    },
+    {
+      "path": "lib/adhkar-recordings.ts",
+      "bytes": 1733,
+      "sha256": "1f62b00c36ceec700befe8d5cd24a1a77c52a657cc258600c9f423b28f4ec553"
+    },
+    {
+      "path": "lib/app-audio.ts",
+      "bytes": 4854,
+      "sha256": "1fee155cec5e713a68f22112333b5f7925248d21c80506d6340382b0b7c391b5"
+    },
+    {
+      "path": "lib/persistent-player.ts",
+      "bytes": 11035,
+      "sha256": "ac0d0bce3d0a9226c0945e57879b6cc03700377d655683f0c8143275bb3cb734"
+    },
+    {
+      "path": "lib/quran/media-artwork.ts",
+      "bytes": 5101,
+      "sha256": "4c4a0ed135956adbf1350565f1b958b92bda4ad74b1576e3da10b9bcd6db1ddf"
+    },
+    {
+      "path": "lib/quran/media-session.ts",
+      "bytes": 17623,
+      "sha256": "d7feaea25936f4a1703c93324e2f82a53db46b30403e8cb8c378218eb4c0de4f"
+    },
+    {
+      "path": "next.config.js",
+      "bytes": 3420,
+      "sha256": "4a2610bc53004baad8c6496c5e789545a9ef400bb34396246a0bfcc92430de1d"
+    },
+    {
+      "path": "package.json",
+      "bytes": 2593,
+      "sha256": "33e4de5ae3fb7bd51c81be0b1959fc286b8b6c02baeed18868fcbe82f74bf121"
+    },
+    {
+      "path": "public/adhkar-sdk/v1/index.js",
+      "bytes": 3073,
+      "sha256": "1e3071891a43de0effbff878b87e3008f66c3d30a9d311d7b434e27f3ab79755"
+    },
+    {
+      "path": "public/adhkar-sdk/v1/LICENSE.txt",
+      "bytes": 1290,
+      "sha256": "5bf346ef37275a3b72b80a961ce9a1fda27c8fa03e7d9abd78c40fba6983325d"
+    },
+    {
+      "path": "public/adhkar-sdk/v1/example.html",
+      "bytes": 4860,
+      "sha256": "7c7724defc169d2032dce0c52c223898f5ee6ab74f283b8c2862ae9b7da5127b"
+    },
+    {
+      "path": "public/data/adhkar-audio/v1/openapi.json",
+      "bytes": 8735,
+      "sha256": "e128518c81e87dd7d066afef289bf5a19714474721989400bdadf9d5aa1f069c"
+    },
+    {
+      "path": "scripts/adhkar-media-session.test.cjs",
+      "bytes": 11076,
+      "sha256": "8b3b67f8164d6249b0d0b191b01a642a4061b9867fa84b9394d2b59803acae53"
+    },
+    {
+      "path": "scripts/adhkar-sdk.test.cjs",
+      "bytes": 8455,
+      "sha256": "73000857e11f186cd47833ebfb94b76b795ed5842bdc09d90129ce5267266621"
+    }
+  ]
+}

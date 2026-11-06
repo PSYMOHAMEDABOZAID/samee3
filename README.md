@@ -58,3 +58,21 @@ npm audit
 ```
 
 `test:rules` يشغّل محاكي Firestore في مشروع `demo-samee3` ويحتاج Java 17 والإنترنت لتنزيل أدوات المحاكي لأول مرة، ولا يكتب إلى بيانات المشروع الحقيقية. بقية الاختبارات الأساسية لا تحتاج حساب Firebase. راجع `REVIEW_AR.md` لنطاق التحقق و`SOURCES.md` للمصادر.
+
+
+## استخدام الأذكار في تطبيقات أخرى
+
+واجهة الأذكار متاحة مجانًا دون حساب أو مفتاح API، مع CORS للاستدعاء من المواقع والتطبيقات. [دليل الاستدعاء والأمثلة](docs/ADHKAR-QUICK-START-AR.md) و[SDK JavaScript](public/adhkar-sdk/v1/index.js) متاحان في المستودع، والدليل المباشر على `/developers/adhkar`.
+
+```javascript
+const response = await fetch(
+  'https://samee3.vercel.app/api/adhkar/v1/items' +
+  '?format=simple&reciter=hamad-al-drehem&category=1&limit=100'
+);
+if (!response.ok) throw new Error('تعذر تحميل الأذكار');
+const { items, nextOffset } = await response.json();
+console.log(items[0].text, items[0].audioUrl);
+console.log(items[0].startMs, items[0].endMs);
+```
+
+الكود الجديد لـSDK والأمثلة متاح بترخيص MIT. تبقى الصوتيات خاضعة لشروط مصادرها ونسبتها إلى أصحابها؛ راجع `rightsId` وملف الشروط في البيانات.

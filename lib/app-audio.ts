@@ -58,6 +58,17 @@ export const appAudio = createPersistentPlayer({
     return { src: source.startsWith('/api/audio-proxy?') ? `${source}&stream=1` : source }
   },
   bind(audio, track: PlaybackTrack) {
+    if (appAudio.getSnapshot().scope === 'adhkar') {
+      bindQuranMediaSession(audio, {
+        kind: 'adhkar', title: track.title, subtitle: track.adhkar?.section || track.title,
+        audioUrl: track.url, reciterName: track.subtitle, adhkar: track.adhkar,
+        next: appAudio.getSnapshot().queue.length > 1 ? () => appAudio.next(1) : undefined,
+        previous: appAudio.getSnapshot().queue.length > 1 ? () => appAudio.next(-1) : undefined,
+        play: () => { const state = appAudio.getSnapshot(); if (!state.playing && !state.loading) appAudio.toggle() },
+        pause: () => { const state = appAudio.getSnapshot(); if (state.playing || state.loading) appAudio.toggle() },
+      })
+      return
+    }
     bindQuranMediaSession(audio, track.library || {
       kind: 'library', title: track.title, subtitle: track.subtitle,
       audioUrl: track.url, reciterName: track.subtitle,

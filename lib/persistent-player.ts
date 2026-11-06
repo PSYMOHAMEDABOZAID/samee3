@@ -1,4 +1,5 @@
 /** Playback belongs to the application, so route unmounts only detach views. */
+import type { AdhkarMedia } from './adhkar-media'
 export type LibraryPlayerItem = {
   kind: 'quran' | 'library'; title: string; subtitle: string; audioUrl: string; reciterName: string
   surahId?: number; reciterId?: number; riwayaId?: number; moshafId?: number
@@ -9,6 +10,7 @@ export type PlaybackTrack = {
   itemId?: number; repetitions?: number; repeatRemaining?: boolean
   listenRepeats?: number
   editionId?: string; surah?: number; savedUrl?: string
+  adhkar?: AdhkarMedia
 }
 export type PlaybackState = {
   scope: 'library' | 'adhkar' | 'riwayat' | null; contextKey: string; href: string; readerId: string

@@ -22,7 +22,8 @@ type Catalog = {
 export const adhkarAudioCatalog = rawCatalog as unknown as Catalog
 export function adhkarApiIndex() {
   const {items:_items,sectionRecordings:_sections,...index} = adhkarAudioCatalog
-  return {...index,endpoints:{index:'/api/adhkar/v1',items:'/api/adhkar/v1/items',reciters:'/api/adhkar/v1/reciters',sections:'/api/adhkar/v1/sections',timings:'/api/adhkar/v1/timings/{reciter}',catalog:'/data/adhkar-audio/v1/catalog.json',coverage:'/data/adhkar-audio/v1/coverage.json',documentation:'/developers/adhkar'}}
+  return {...index,access:{api:'free',apiKeyRequired:false,accountRequired:false,cors:'*',audioRights:'See rightsId and the original source terms.'},
+    endpoints:{index:'/api/adhkar/v1',items:'/api/adhkar/v1/items',simpleItems:'/api/adhkar/v1/items?format=simple&reciter={reciter}',reciters:'/api/adhkar/v1/reciters',sections:'/api/adhkar/v1/sections',sectionTimings:'/api/adhkar/v1/sections/{recording}/timings',timings:'/api/adhkar/v1/timings/{reciter}',catalog:'/data/adhkar-audio/v1/catalog.json',coverage:'/data/adhkar-audio/v1/coverage.json',documentation:'/developers/adhkar',javascriptSdk:'/adhkar-sdk/v1/index.js'}}
 }
 export function selectAdhkarAudio(item:AdhkarAudioItem,reader:string,section=''):AdhkarAudioRecording|undefined {
   const clip = section ? item.variants?.[reader]?.[section] || item.recordings[reader] : item.recordings[reader]
@@ -66,4 +67,66 @@ export function filterAdhkarSections(params:URLSearchParams) {
   if(category&&!/^[1-9]\d{0,3}$/.test(category))throw new Error('Invalid category')
   const recordings=adhkarAudioCatalog.sectionRecordings.filter(s=>(!reader||s.readerId===reader)&&(!type||s.type===type)&&(!category||s.categoryIds.includes(Number(category))))
   return {schemaVersion:1,datasetVersion:adhkarAudioCatalog.datasetVersion,total:recordings.length,recordings}
+}
+
+/** A compact response for applications; the original v1 response stays unchanged. */
+export function adhkarPublicOrigin(value?: string) {
+  try {
+    const url = new URL(value || 'https://samee3.vercel.app')
+    const local = ['localhost', '127.0.0.1', '[::1]'].includes(url.hostname)
+    if ((url.protocol === 'https:' || local && url.protocol === 'http:') && !url.username && !url.password) return url.origin
+  } catch { /* A bad public-origin setting must not expose an internal server URL. */ }
+  return 'https://samee3.vercel.app'
+}
+export function simpleAdhkarAudio(params: URLSearchParams, origin = 'https://samee3.vercel.app') {
+  const reader = params.get('reciter') || ''
+  if (!reader) throw new Error('reciter is required for format=simple')
+  const result = filterAdhkarAudio(params)
+  const reciter = adhkarAudioCatalog.reciters.find(row => row.id === reader)!
+  return { ...result, reciter: { id: reciter.id, name: reciter.name }, timeUnit: 'milliseconds',
+    access: { api: 'free', apiKeyRequired: false, accountRequired: false },
+    rights: adhkarAudioCatalog.rights,
+    items: result.items.map(item => {
+      const clip = item.recordings[reader]
+      return { id: item.id, categoryId: item.categoryId, itemId: item.itemId, category: item.category,
+        text: item.text, repeatCount: item.repeatCount,
+        audioUrl: clip ? new URL(clip.url, origin).href : null,
+        startMs: clip?.timing.startMs ?? null, endMs: clip?.timing.endMs ?? null,
+        durationMs: clip?.durationMs ?? null, rightsId: clip?.rightsId ?? null,
+        sourcePage: clip?.sourcePage || reciter.sourcePage,
+        sourceTiming: clip ? { startMs: clip.source.startMs, endMs: clip.source.endMs } : null,
+        alignment: clip?.alignment ?? null,
+      }
+    }),
+  }
+}
+
+/** Timings are matched to the SAME source file/hash, never borrowed from another performance. */
+export function adhkarSectionTimings(id: string) {
+  const recording = adhkarAudioCatalog.sectionRecordings.find(row => row.id === id)
+  if (!recording) return null
+  const seen = new Set<string>()
+  const rows: { id: string; categoryId: number; itemId: number; category: string; text: string; repeatCount: number; startMs: number; endMs: number; alignment: AdhkarAudioRecording['alignment'] }[] = []
+  for (const item of adhkarAudioCatalog.items) {
+    const clips = [item.recordings[recording.readerId], ...Object.values(item.variants?.[recording.readerId] || {})]
+    for (const clip of clips) {
+      if (!clip || clip.source.url !== recording.source.url || clip.source.sha256 !== recording.source.sha256) continue
+      const startMs = clip.source.startMs - recording.source.startMs
+      const endMs = Math.min(recording.durationMs, clip.source.endMs - recording.source.startMs)
+      if (startMs < 0 || !Number.isFinite(startMs) || !Number.isFinite(endMs) || endMs <= startMs) continue
+      const key = `${item.id}:${startMs}:${endMs}`
+      if (seen.has(key)) continue
+      seen.add(key)
+      rows.push({ id: item.id, categoryId: item.categoryId, itemId: item.itemId, category: item.category,
+        text: clip.alignment.matchedText || item.text, repeatCount: item.repeatCount,
+        startMs, endMs, alignment: clip.alignment })
+    }
+  }
+  rows.sort((a, b) => a.startMs - b.startMs || a.endMs - b.endMs)
+  return { schemaVersion: 1, datasetVersion: adhkarAudioCatalog.datasetVersion, timeUnit: 'milliseconds',
+    recording: { id: recording.id, title: recording.title, readerId: recording.readerId, url: recording.url, durationMs: recording.durationMs, rightsId: recording.rightsId, sourcePage: recording.sourcePage },
+    total: rows.length, coverage: rows.length ? 'published-segments-only' : 'no-published-segments',
+    timingPolicy: 'Only published alignments from this exact recording are included. Gaps are left unlabelled; no timings are estimated for missing dhikr.',
+    items: rows.map((row, index) => ({ ...row, number: index + 1 })),
+  }
 }

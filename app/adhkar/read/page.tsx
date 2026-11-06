@@ -5,6 +5,7 @@ import ReaderPicker from '@/components/adhkar/ReaderPicker'
 import RepeatControls from '@/components/adhkar/RepeatControls'
 import { adhkarListeningCount, parseAdhkarListening, type AdhkarListeningMode } from '@/lib/adhkar-listening'
 import { appAudio, useAppAudio } from '@/lib/app-audio'
+import { localAdhkarSectionUrl, localAdhkarSections } from '@/lib/adhkar-local-audio'
 import {
   Suspense,
   useCallback,
@@ -541,11 +542,14 @@ function ReadAdhkarContent() {
   ) => {
     setMessage('')
     const listenRepeats = listeningMode === 'remaining' ? undefined : listeningMode === 'once' ? 1 : customRepeats
-    const queue = mode === 'section' ? [{ url, title, subtitle: selectedReader.name, listenRepeats: listenRepeats || 1 }]
+    const localSection = mode === 'section' ? localAdhkarSections().find(row => row.url === (localAdhkarSectionUrl(url) || url)) : undefined
+    const queue = mode === 'section' ? [{ url, title, subtitle: selectedReader.name, listenRepeats: listenRepeats || 1,
+      adhkar: { section: title, recordingId: localSection?.id } }]
       : items.slice(index, sequential ? undefined : index + 1)
         .filter(item => Boolean(itemUrl(item)) && (!sequential || !onlyFavorites || favorites.includes(item.id)) && (listenRepeats !== undefined || (countsRef.current[item.id] ?? item.count) > 0))
         .map(item => ({ url: itemUrl(item), title: `${title} · الذكر ${numberAr(items.indexOf(item) + 1)}`, subtitle: selectedReader.name,
-          itemId: item.id, repetitions: item.count, repeatRemaining: true, listenRepeats }))
+          itemId: item.id, repetitions: item.count, repeatRemaining: true, listenRepeats,
+          adhkar: { section: title, text: item.text, number: items.indexOf(item) + 1, total: items.length } }))
     if (!queue.length) { setMessage('اكتمل عدّ هذا الذكر. اختر «مرة واحدة» لإعادة الاستماع أو أعد عدّاده.'); return }
     appAudio.start({ scope: 'adhkar', contextKey: progressKey, readerId: selectedReader.id,
       href: `/adhkar/read?${categoryId ? `categoryId=${categoryId}` : `type=${type}`}&reciter=${encodeURIComponent(selectedReader.id)}`,

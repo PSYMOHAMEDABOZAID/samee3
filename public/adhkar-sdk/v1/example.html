@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>مثال مجاني لاستدعاء أذكار سميع</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f8f6f0;color:#214e40;font:16px/1.9 system-ui,sans-serif}main{max-width:800px;margin:auto;padding:32px 18px}h1{font-size:28px;margin-bottom:8px}p{color:#68766b}label{display:grid;gap:6px;flex:1}select,button{font:inherit;border-radius:12px;padding:10px 14px;border:1px solid #dcd0b7;background:white;color:#214e40}button{cursor:pointer}button:disabled{opacity:.5;cursor:wait}.filters{display:flex;gap:12px;flex-wrap:wrap}article{background:white;border:1px solid #e4dccd;border-radius:20px;padding:20px;margin:18px 0}article p{color:#244b3e;white-space:pre-wrap}small{display:block;color:#8e8066}audio{width:100%;margin:14px 0}a{color:#3a6d4f}.player{position:sticky;top:0;padding:12px;background:#f8f6f0f2;border-bottom:1px solid #e4dccd}#current{font-weight:700}button:hover{background:#edf2e8}
+</style>
+<main>
+  <h1>أذكار سميع في تطبيقك</h1>
+  <p>مثال HTML يعمل بالاستدعاء المباشر، دون حساب أو مفتاح API. النص ورابط MP3 وتوقيتاته تأتي في طلب واحد.</p>
+  <div class="filters">
+    <label>القارئ<select id="reader" aria-label="القارئ"></select></label>
+    <label>الورد<select id="section"><option value="morning">الصباح</option><option value="evening">المساء</option></select></label>
+    <button id="load" disabled>تحميل الأذكار</button>
+  </div>
+  <div class="player"><div id="current">اختر ذكرًا للاستماع</div><audio id="player" controls preload="none"></audio></div>
+  <p id="status" role="status" aria-live="polite">جارٍ تحميل القراء…</p>
+  <div id="items"></div>
+  <p>الوصول مجاني. حقوق الصوتيات وشروط المصدر موضحة في بيانات API. كود هذا المثال وSDK متاحان بترخيص <a href="./LICENSE.txt">MIT</a>.</p>
+</main>
+<script type="module">
+const origin = /^https?:$/.test(location.protocol) ? location.origin : 'https://samee3.vercel.app';
+const reader = document.querySelector('#reader'), section = document.querySelector('#section');
+const button = document.querySelector('#load'), status = document.querySelector('#status');
+const list = document.querySelector('#items'), audio = document.querySelector('#player');
+let controller;
+async function get(path, signal) {
+  const response = await fetch(new URL(path, origin), { signal });
+  const data = await response.json();
+  if (!response.ok) throw new Error(data.error || 'تعذر تحميل البيانات');
+  return data;
+}
+async function loadItems() {
+  controller?.abort(); controller = new AbortController();
+  const current = controller;
+  button.disabled = true; status.textContent = 'جارٍ تحميل الأذكار…';
+  try {
+    const query = new URLSearchParams({ format: 'simple', reciter: reader.value, category: '1', section: section.value, limit: '100' });
+    const data = await get('/api/adhkar/v1/items?' + query, current.signal);
+    if (current.signal.aborted) return;
+    list.replaceChildren();
+    for (const item of data.items) {
+      const card = document.createElement('article');
+      const text = document.createElement('p'); text.textContent = item.text;
+      const details = document.createElement('small');
+      details.textContent = 'التكرار: ' + item.repeatCount + ' · المدة: ' + Math.round(item.durationMs / 1000) + ' ثانية · المصدر: ' + item.rightsId;
+      const play = document.createElement('button'); play.textContent = 'تشغيل هذا الذكر';
+      play.onclick = () => {
+        audio.src = item.audioUrl;
+        document.querySelector('#current').textContent = item.category;
+        audio.play().catch(() => { status.textContent = 'اضغط تشغيل من شريط الصوت للسماح بالتشغيل.'; });
+      };
+      card.append(text, details, play); list.append(card);
+    }
+    status.textContent = data.total ? data.total + ' ذكرًا مسجلًا بهذا الاختيار.' : 'لا توجد مقاطع لهذا الاختيار.';
+  } catch (error) { if (!current.signal.aborted) status.textContent = error.message; }
+  finally { if (controller === current) button.disabled = false; }
+}
+button.onclick = loadItems;
+try {
+  const data = await get('/api/adhkar/v1/reciters');
+  for (const row of data.reciters) {
+    const option = document.createElement('option'); option.value = row.id; option.textContent = row.name; reader.append(option);
+  }
+  reader.value = 'hamad-al-drehem'; button.disabled = false;
+  await loadItems();
+} catch (error) { status.textContent = error.message; }
+</script>
+</html>

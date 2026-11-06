@@ -616,8 +616,7 @@ export default function AdhkarPage() {
           </Link>
         </header>
 
-        <Link href="/adhkar/recordings" className="mb-4 ml-2 inline-flex min-h-10 items-center rounded-xl border border-[#e6d9c7] bg-white px-4 text-xs font-bold text-[#194f43]">التسجيلات الكاملة للقراء</Link>
-        <Link href="/developers/adhkar" className="mb-4 inline-flex min-h-10 items-center rounded-xl border border-[#e6d9c7] bg-white px-4 text-xs font-bold text-[#194f43]">للمطورين: صوتيات الأذكار والتوقيتات</Link>
+        <Link href="/adhkar/recordings" className="mb-5 flex min-h-20 items-center gap-4 rounded-2xl border border-[#e6d9c7] bg-[#fffdf8] p-4 text-[#194f43] shadow-sm transition hover:border-[#b89960]"><span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#eee5d3] text-[#a1844d]"><Headphones size={24}/></span><span className="flex-1"><span className="block text-sm font-extrabold">الأذكار الكاملة</span><span className="mt-1 block text-xs leading-6 text-[#7f8979]">أصوات تحبّها، واستماع متواصل في كل وقت</span></span><ArrowRight size={17} className="rotate-180 text-[#a1844d]"/></Link>
 
         <section className="relative overflow-hidden rounded-[30px] bg-gradient-to-br from-[#123d42] via-[#154f52] to-[#0b2f36] p-6 text-white shadow-[0_18px_50px_rgba(15,62,63,0.18)] sm:p-9">
           <div className="pointer-events-none absolute -left-20 -top-28 h-72 w-72 rounded-full border border-[#ecd1a0]/15" />
