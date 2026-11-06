@@ -14,7 +14,7 @@
     "test:library": "node scripts/test-library.cjs",
     "typecheck": "tsc --noEmit",
     "test:core": "node --test scripts/core.test.cjs",
-    "test": "npm run test:core && npm run test:library && npm run test:proxy && npm run test:android-web && npm run test:downloads && npm run test:release && npm run test:playback && npm run test:adhkar-api && npm run test:adhkar-experience",
+    "test": "npm run test:core && npm run test:library && npm run test:proxy && npm run test:android-web && npm run test:downloads && npm run test:release && npm run test:playback && npm run test:adhkar-api && npm run test:adhkar-experience && npm run test:web-push",
     "test:rules": "npx --yes firebase-tools@14.22.0 emulators:exec --only firestore --project demo-samee3 'node --test --test-concurrency=1 scripts/firestore.test.cjs scripts/support-messages.test.cjs'",
     "test:android-web": "node --test scripts/android-notifications.test.cjs",
     "test:downloads": "node --test scripts/app-downloads.test.cjs",
@@ -24,7 +24,8 @@
     "test:release": "node --test scripts/release-fixes.test.cjs scripts/managed-library.test.cjs scripts/library-youtube-details.test.cjs",
     "test:playback": "node --test scripts/playback-recovery.test.cjs",
     "test:adhkar-api": "node --test scripts/adhkar-developer-api.test.cjs",
-    "test:adhkar-experience": "node --test scripts/adhkar-experience.test.cjs"
+    "test:adhkar-experience": "node --test scripts/adhkar-experience.test.cjs",
+    "test:web-push": "node --test scripts/web-push-delivery.test.cjs"
   },
   "dependencies": {
     "@quran.ws/text": "^0.1.0",

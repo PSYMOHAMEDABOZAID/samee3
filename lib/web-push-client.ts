@@ -16,11 +16,12 @@ export function storeWebSettings(settings: WebReminderSettings) {
   localStorage.setItem(WEB_SETTINGS_KEY, JSON.stringify(settings))
   window.dispatchEvent(new Event('samee3:prayer-settings'))
 }
-export function pushIdentity(): { id: string; token: string } | null {
+export function pushIdentity(): { id: string; token: string; publicKey?: string } | null {
   try {
     const value = JSON.parse(localStorage.getItem(AUTH_KEY) || 'null')
     return value && typeof value.id === 'string' && /^[a-f0-9]{64}$/.test(value.id) &&
-      typeof value.token === 'string' && /^[\w-]{40,60}$/.test(value.token) ? value : null
+      typeof value.token === 'string' && /^[\w-]{40,60}$/.test(value.token)
+      ? { id: value.id, token: value.token, publicKey: validPushPublicKey(value.publicKey) ? value.publicKey : undefined } : null
   } catch { return null }
 }
 export type WebPushConfig = { configured: boolean; publicKey?: string; code?: string; error?: string }
@@ -41,7 +42,7 @@ export async function fetchWebPushConfig(signal?: AbortSignal): Promise<WebPushC
 export async function pushCommand(action: 'test' | 'unsubscribe' | 'status') {
   const identity = pushIdentity()
   if (!identity) throw new Error('فعّل اشتراك الإشعارات أولًا.')
-  const response = await fetch('/api/web-push', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action, ...identity }), signal: timeoutSignal(20000) })
+  const response = await fetch('/api/web-push', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action, id: identity.id, token: identity.token }), signal: timeoutSignal(20000) })
   const result = await response.json()
   if (!response.ok) throw new Error(result.error || 'تعذر الاتصال بخدمة الإشعارات.')
   return result
@@ -52,34 +53,79 @@ function keyBytes(value: string) {
   for (let i = 0; i < bytes.length; i++) result[i] = bytes.charCodeAt(i)
   return result
 }
-export async function enableWebPush(settings: WebReminderSettings, publicKey: string) {
+function readyPushRegistration() {
+  return new Promise<ServiceWorkerRegistration>((resolve, reject) => {
+    const timer = setTimeout(() => reject(new Error('أعد فتح التطبيق لتجهيز خدمة الإشعارات.')), 15000)
+    navigator.serviceWorker.ready.then(value => { clearTimeout(timer); resolve(value) }, error => { clearTimeout(timer); reject(error) })
+  })
+}
+export async function enableWebPush(settings: WebReminderSettings, publicKey: string, renew = false) {
   if (!pushSupport()) throw new Error(iosDevice() ? 'ثبّت سميع من «إضافة إلى الشاشة الرئيسية» ثم افتحه من الأيقونة على iOS 16.4 أو أحدث.' : 'إشعارات الويب غير متاحة على هذا الجهاز. استخدم متصفحًا حديثًا أو نسخة أندرويد.')
   if (!validPushPublicKey(publicKey)) throw new Error('مفتاح الإشعارات العام غير صالح. يلزم تصحيح إعداد الخادم أولًا.')
   const validated = parseWebSettings(settings)
   // Must be the first asynchronous browser call in the actual button click on iOS.
   const permission = await Notification.requestPermission()
   if (permission !== 'granted') throw new Error('اسمح بإشعارات سميع من إعدادات النظام ثم جرّب مجددًا.')
-  const registration = await new Promise<ServiceWorkerRegistration>((resolve, reject) => {
-    const timer = setTimeout(() => reject(new Error('أعد فتح التطبيق لتجهيز خدمة الإشعارات.')), 15000)
-    navigator.serviceWorker.ready.then(value => { clearTimeout(timer); resolve(value) }, error => { clearTimeout(timer); reject(error) })
-  })
+  const registration = await readyPushRegistration()
   let subscription = await registration.pushManager.getSubscription()
   const identity = pushIdentity()
   const requestedKey = keyBytes(publicKey)
   const existingKey = subscription?.options.applicationServerKey
-  const changedKey = existingKey && (existingKey.byteLength !== requestedKey.length || new Uint8Array(existingKey).some((value, index) => value !== requestedKey[index]))
-  if (subscription && (!identity || changedKey)) {
+  const changedKey = (identity?.publicKey && identity.publicKey !== publicKey) || (existingKey && (existingKey.byteLength !== requestedKey.length || new Uint8Array(existingKey).some((value, index) => value !== requestedKey[index])))
+  if (subscription && (renew || !identity || changedKey)) {
     if (identity) await pushCommand('unsubscribe').catch(() => undefined)
-    await subscription.unsubscribe(); subscription = null
+    if (!await subscription.unsubscribe()) throw new Error('تعذر تجديد اشتراك الجهاز. أعد فتح سميع ثم حاول مجددًا.')
+    subscription = null
   }
   subscription = subscription || await registration.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: keyBytes(publicKey) })
   const response = await fetch('/api/web-push', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'subscribe', subscription: subscription.toJSON(), settings: validated, token: identity?.token }), signal: timeoutSignal(55000) })
   const data = await response.json()
   if (!response.ok) throw new Error(data.error || 'تعذر تسجيل الاشتراك على الخادم.')
-  localStorage.setItem(AUTH_KEY, JSON.stringify({ id: data.id, token: data.token }))
+  localStorage.setItem(AUTH_KEY, JSON.stringify({ id: data.id, token: data.token, publicKey }))
   storeWebSettings(validated)
   window.dispatchEvent(new Event('samee3:push-changed'))
   return data
+}
+export type PushDeviceStatus = {
+  permission: NotificationPermission | 'unsupported'
+  browserSubscription: boolean
+  savedSubscription: boolean
+  receiverReady: boolean | null
+}
+async function probePushReceiver(worker: ServiceWorker | null): Promise<boolean | null> {
+  if (!worker || typeof MessageChannel === 'undefined') return null
+  return new Promise(resolve => {
+    const channel = new MessageChannel()
+    const finish = (value: boolean) => {
+      clearTimeout(timer)
+      try { channel.port1.close(); channel.port2.close() } catch { /* A transferred port may already be detached. */ }
+      resolve(value)
+    }
+    const timer = setTimeout(() => finish(false), 1500)
+    channel.port1.onmessage = event => finish(event.data?.type === 'SAMEE3_PUSH_CAPABILITIES' && event.data?.version === 1)
+    try { worker.postMessage({ type: 'SAMEE3_PUSH_CAPABILITIES' }, [channel.port2]) } catch { finish(false) }
+  })
+}
+export async function inspectWebPushDevice(): Promise<PushDeviceStatus> {
+  const status: PushDeviceStatus = { permission: 'Notification' in window ? Notification.permission : 'unsupported', browserSubscription: false, savedSubscription: Boolean(pushIdentity()), receiverReady: null }
+  if (!pushSupport()) return status
+  const registration = await navigator.serviceWorker.getRegistration('/')
+  if (!registration) return status
+  status.browserSubscription = Boolean(await registration.pushManager.getSubscription())
+  status.receiverReady = await probePushReceiver(registration.active)
+  return status
+}
+/** A user-triggered OS-display check, independent of the remote push transport. */
+export async function showLocalNotificationTest() {
+  if (!pushSupport()) throw new Error('افتح سميع من الأيقونة المثبتة على جهاز يدعم الإشعارات.')
+  const permission = await Notification.requestPermission()
+  if (permission !== 'granted') throw new Error('اسمح بإشعارات سميع من إعدادات الجهاز أولًا.')
+  const registration = await readyPushRegistration()
+  await registration.showNotification('اختبار العرض على هذا الجهاز', {
+    body: 'هذا اختبار من الجهاز نفسه. ظهوره يؤكد أن النظام يعرض إشعارات سميع.',
+    icon: '/icon-192.png', tag: `samee3-local-test-${Date.now()}`, dir: 'rtl', lang: 'ar',
+    data: { url: '/notifications' },
+  })
 }
 export async function disableWebPush() {
   // Revoke the server schedule before removing the browser subscription, so disabling is reliable.

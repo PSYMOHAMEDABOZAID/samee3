@@ -7,7 +7,8 @@ import Link from 'next/link'
 import { BellRing, Check, ChevronRight, Loader2, MapPin } from 'lucide-react'
 import { DEFAULT_WEB_REMINDERS, PRAYER_METHODS, parseWebSettings, reminderEvents, type ReminderEvent, type WebReminderSettings } from '@/lib/web-reminders'
 import { PRAYERS, fetchPrayerDay, locationDate, shiftPrayerDate } from '@/lib/prayer-times'
-import { disableWebPush, enableWebPush, fetchWebPushConfig, type WebPushConfig, installedWebApp, iosDevice, pushCommand, pushIdentity, pushSupport, readWebSettings, storeWebSettings } from '@/lib/web-push-client'
+import { disableWebPush, enableWebPush, fetchWebPushConfig, type WebPushConfig, installedWebApp, iosDevice, pushCommand, pushIdentity, pushSupport, readWebSettings, storeWebSettings, inspectWebPushDevice, showLocalNotificationTest, type PushDeviceStatus } from '@/lib/web-push-client'
+import type { PushSchedulerStatus } from '@/lib/web-push-status'
 export default function WebNotificationsPanel() {
   const [form, setForm] = useState(DEFAULT_WEB_REMINDERS)
   const [config, setConfig] = useState<WebPushConfig | null>(null)
@@ -15,6 +16,9 @@ export default function WebNotificationsPanel() {
   const [enabled, setEnabled] = useState(false), [busy, setBusy] = useState(false), [locating, setLocating] = useState(false)
   const [localTv, setLocalTv] = useState(false)
   const [message, setMessage] = useState(''), [error, setError] = useState(''), [next, setNext] = useState<ReminderEvent[]>([])
+  const [device, setDevice] = useState<PushDeviceStatus | null>(null)
+  const [scheduler, setScheduler] = useState<PushSchedulerStatus | null>(null)
+  const [checking, setChecking] = useState(false)
   const refreshConfig = useCallback(async (signal?: AbortSignal) => {
     setConfig(null)
     try {
@@ -36,7 +40,8 @@ export default function WebNotificationsPanel() {
       setEnabled((Boolean(pushIdentity()) && 'Notification' in window && Notification.permission === 'granted') || tvEnabled)
     }
     sync(); void refreshConfig(controller.signal)
-    if (pushIdentity()) void pushCommand('status').then(result => { if (!controller.signal.aborted) { setNext(result.next || []); if (result.lastError) setError(result.lastError) } }).catch(() => {})
+    void inspectWebPushDevice().then(value => { if (!controller.signal.aborted) setDevice(value) }).catch(() => {})
+    if (pushIdentity()) void pushCommand('status').then(result => { if (!controller.signal.aborted) { setNext(result.next || []); setScheduler(result.scheduler || null); if (result.lastError) setError(result.lastError) } }).catch(() => {})
     window.addEventListener('pageshow', sync); window.addEventListener('samee3:push-changed', sync)
     return () => { controller.abort(); window.removeEventListener('pageshow', sync); window.removeEventListener('samee3:push-changed', sync) }
   }, [refreshConfig])
@@ -63,7 +68,45 @@ export default function WebNotificationsPanel() {
     if (!config?.configured || !config.publicKey) { setError(config?.error || 'خدمة الإشعارات غير جاهزة. اضغط إعادة فحص الخدمة بعد التأكد من إعداد الخادم.'); return }
     setBusy(true); setError(''); setMessage('')
     // No await before enableWebPush; the iPhone permission request retains the click gesture.
-    void enableWebPush(form, config.publicKey).then(result => { setEnabled(true); setNext(result.next || []); setMessage('تم تفعيل الإشعارات وحفظ مواعيدك. يمكنك إغلاق التطبيق واستقبال التذكيرات عند توفر الإنترنت.') }).catch(cause => setError(cause instanceof Error ? cause.message : 'تعذر تفعيل الإشعارات.')).finally(() => setBusy(false))
+    void enableWebPush(form, config.publicKey).then(result => {
+      setEnabled(true); setNext(result.next || []); setScheduler(result.scheduler || null)
+      setMessage(result.scheduler?.state === 'running'
+        ? 'تم حفظ الاشتراك والمواعيد. اختبر وصول إشعار لهذا الجهاز قبل الاعتماد على التذكيرات.'
+        : 'تم حفظ اشتراك الجهاز والمواعيد. راجع حالة تشغيل المواعيد أدناه، ثم اختبر وصول إشعار.')
+      void inspectWebPushDevice().then(setDevice).catch(() => {})
+    }).catch(cause => setError(cause instanceof Error ? cause.message : 'تعذر تفعيل الإشعارات.')).finally(() => setBusy(false))
+  }
+  const diagnose = async () => {
+    setChecking(true); setError(''); setMessage('')
+    try {
+      setDevice(await inspectWebPushDevice())
+      if (pushIdentity()) { const result = await pushCommand('status'); setScheduler(result.scheduler || null); setNext(result.next || []) }
+    } catch (cause) { setError(cause instanceof Error ? cause.message : 'تعذر فحص الإشعارات الآن.') }
+    finally { setChecking(false) }
+  }
+  const testLocal = () => {
+    setBusy(true); setError(''); setMessage('')
+    // Permission is requested directly in the user's click, including on iPhone.
+    void showLocalNotificationTest().then(() => {
+      setMessage('طلب الجهاز عرض «اختبار العرض على هذا الجهاز». إذا لم تره، راجع إعدادات إشعارات سميع والتركيز والملخص المجدول في النظام.')
+      void inspectWebPushDevice().then(setDevice).catch(() => {})
+    }).catch(cause => setError(cause instanceof Error ? cause.message : 'تعذر عرض إشعار على الجهاز.')).finally(() => setBusy(false))
+  }
+  const testRemote = () => {
+    setBusy(true); setError(''); setMessage('')
+    void pushCommand('test').then(result => {
+      setScheduler(result.scheduler || null)
+      setMessage('قبلت خدمة الدفع طلب الإرسال لهذا الجهاز. هذا لا يؤكد ظهوره على الشاشة. إذا لم يظهر، جرّب «اختبار العرض على الجهاز» أدناه.')
+    }).catch(cause => setError(cause instanceof Error ? cause.message : 'تعذر إرسال الاختبار.')).finally(() => setBusy(false))
+  }
+  const renewSubscription = () => {
+    if (!config?.publicKey) { setError('أعد فحص خدمة الإشعارات أولًا.'); return }
+    setBusy(true); setError(''); setMessage('')
+    void enableWebPush(readWebSettings(), config.publicKey, true).then(result => {
+      setEnabled(true); setNext(result.next || []); setScheduler(result.scheduler || null)
+      setMessage('تم تجديد اشتراك إشعارات هذا الجهاز. اضغط اختبار إشعار للتحقق من الوصول.')
+      void inspectWebPushDevice().then(setDevice).catch(() => {})
+    }).catch(cause => setError(cause instanceof Error ? cause.message : 'تعذر تجديد الاشتراك.')).finally(() => setBusy(false))
   }
   const locate = () => {
     if (!navigator.geolocation) { setError('اكتب إحداثيات موقعك يدويًا.'); return }
@@ -93,8 +136,32 @@ export default function WebNotificationsPanel() {
       </div>}
     </section>)}
     <section className={panel}><label className="grid gap-2 text-xs">المنطقة الزمنية<input dir="ltr" className={input} value={form.timezone} onChange={event => change('timezone', event.target.value)}/></label><button type="button" onClick={() => change('timezone', Intl.DateTimeFormat().resolvedOptions().timeZone)} className="mt-2 min-h-10 text-xs font-bold text-emerald-800">استخدام منطقة الجهاز</button></section>
-    <button type="button" disabled={busy} aria-busy={busy} onClick={save} className="flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl bg-[#194f43] p-4 text-sm font-bold text-white disabled:opacity-50">{busy ? <Loader2 size={18} className="animate-spin"/> : <Check size={18}/>} {enabled ? 'حفظ وتحديث المواعيد' : localTv && !supported ? 'تفعيل تذكيرات الشاشة' : ios && !installed ? 'خطوات تفعيل إشعارات الآيفون' : 'السماح بالإشعارات وتفعيل المواعيد'}</button>
-    {enabled && <div className="flex flex-wrap gap-3">{supported && <button disabled={busy} type="button" className="min-h-11 rounded-xl border bg-white px-4 text-sm" onClick={() => { setError(''); void pushCommand('test').then(() => setMessage('أُرسل إشعار تجريبي. راجع مركز الإشعارات.')).catch(cause => setError(cause.message)) }}>اختبار إشعار</button>}<button disabled={busy} type="button" className="min-h-11 rounded-xl border bg-white px-4 text-sm text-red-800" onClick={() => { setBusy(true); localStorage.removeItem('samee3_tv_reminders'); void (supported ? disableWebPush() : Promise.resolve()).then(() => { setEnabled(false); setNext([]); setMessage('أُوقفت إشعارات هذا الجهاز.') }).catch(cause => setError(cause.message)).finally(() => setBusy(false)) }}>إيقاف الإشعارات</button></div>}
+    <button type="button" disabled={busy || checking} aria-busy={busy} onClick={save} className="flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl bg-[#194f43] p-4 text-sm font-bold text-white disabled:opacity-50">{busy ? <Loader2 size={18} className="animate-spin"/> : <Check size={18}/>} {enabled ? 'حفظ وتحديث المواعيد' : localTv && !supported ? 'تفعيل تذكيرات الشاشة' : ios && !installed ? 'خطوات تفعيل إشعارات الآيفون' : 'السماح بالإشعارات وتفعيل المواعيد'}</button>
+    {enabled && <div className="flex flex-wrap gap-3">{supported && <button disabled={busy || checking} type="button" className="min-h-11 rounded-xl border bg-white px-4 text-sm" onClick={testRemote}>اختبار إشعار</button>}<button disabled={busy || checking} type="button" className="min-h-11 rounded-xl border bg-white px-4 text-sm text-red-800" onClick={() => { setBusy(true); localStorage.removeItem('samee3_tv_reminders'); void (supported ? disableWebPush() : Promise.resolve()).then(() => { setEnabled(false); setNext([]); setScheduler(null); setDevice(null); setMessage('أُوقفت إشعارات هذا الجهاز.') }).catch(cause => setError(cause.message)).finally(() => setBusy(false)) }}>إيقاف الإشعارات</button></div>}
+    {supported && <section className={panel} aria-label="فحص وصول الإشعارات">
+      <h2 className="font-bold text-[#194f43]">فحص وصول الإشعارات</h2>
+      <p className="mt-2 text-xs leading-6 text-slate-600">اختبار الإرسال مخصص للجهاز الذي تضغط منه. اختبار العرض يفحص عرض إشعار من هذا الجهاز، دون انتظار إرسال من الخادم.</p>
+      {device && <ul className="mt-3 space-y-2 text-sm leading-7">
+        <li>إذن الجهاز: {device.permission === 'granted' ? 'مسموح' : device.permission === 'denied' ? 'مرفوض — اسمح به من إعدادات الجهاز' : 'لم يُسمح به بعد'}</li>
+        <li>اشتراك الجهاز: {device.browserSubscription && device.savedSubscription ? 'محفوظ' : 'يحتاج تفعيلًا أو تجديدًا'}</li>
+        <li>خدمة عرض الإشعار: {device.receiverReady === true ? 'تم التحقق من النسخة الحالية' : 'لم نتحقق من النسخة الحالية؛ حدّث سميع ثم أعد الفحص'}</li>
+      </ul>}
+      {enabled && <p role="status" className={`mt-3 rounded-xl p-3 text-sm leading-7 ${scheduler?.state === 'running' ? 'bg-emerald-50 text-emerald-900' : 'bg-amber-50 text-amber-900'}`}>
+        {scheduler?.state === 'running' ? 'إرسال التذكيرات بالمواعيد يعمل على الخادم.'
+          : scheduler?.state === 'not-started' ? 'لم يبدأ إرسال التذكيرات بالمواعيد بعد. يلزم إكمال تشغيلها من الإدارة؛ الاختبار الفوري يعمل بصورة مستقلة.'
+          : scheduler?.state === 'stale' ? 'توقف تشغيل المواعيد أو تأخر. يلزم مراجعته من الإدارة؛ الاختبار الفوري يعمل بصورة مستقلة.'
+          : 'لم نتحقق من تشغيل المواعيد. اضغط إعادة الفحص؛ حفظ المواعيد وحده لا يؤكد بدء إرسالها.'}
+      </p>}
+      <div className="mt-3 flex flex-wrap gap-3">
+        <button type="button" disabled={busy || checking} onClick={testLocal} className="min-h-11 rounded-xl border px-4 text-sm">اختبار العرض على الجهاز</button>
+        <button type="button" disabled={busy || checking} onClick={() => void diagnose()} className="min-h-11 rounded-xl border px-4 text-sm">{checking ? 'جارٍ الفحص…' : 'إعادة فحص الجهاز والمواعيد'}</button>
+        {enabled && config?.configured && <button type="button" disabled={busy || checking} onClick={renewSubscription} className="min-h-11 rounded-xl border px-4 text-sm">تجديد اشتراك هذا الجهاز</button>}
+      </div>
+      <details className="mt-3 text-xs leading-7 text-slate-600"><summary className="cursor-pointer font-bold">الإرسال ينجح والإشعار لا يظهر؟</summary>
+        <p>في الآيفون: الإعدادات ← الإشعارات ← مصحف سميع. فعّل شاشة القفل ومركز الإشعارات واللافتات، واختر التسليم الفوري إذا كنت تستخدم الملخص المجدول. راجع وضع التركيز أيضًا.</p>
+        <p>إذا ظهر اختبار العرض المحلي وحده، جدّد اشتراك هذا الجهاز ثم أعد الاختبار من الأيقونة المثبتة. عند ظهور تحديث لسميع طبّقه؛ لا تحتاج حذف التطبيق أو تنزيلاتك.</p>
+      </details>
+    </section>}
     {error && <p role="alert" className="rounded-2xl bg-red-50 p-4 text-sm leading-7 text-red-800">{error}</p>}{message && <p role="status" className="rounded-2xl bg-emerald-50 p-4 text-sm leading-7 text-emerald-900">{message}</p>}
     {next.length > 0 && <section className={panel}><h2 className="mb-3 text-sm font-bold">التذكيرات التالية</h2><ul className="space-y-2 text-xs leading-6">{next.map(event => <li key={`${event.kind}-${event.at}`}>{event.title} • {new Intl.DateTimeFormat('ar', { dateStyle: 'short', timeStyle: 'short' }).format(event.at)}</li>)}</ul></section>}
   </div></main>

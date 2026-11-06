@@ -1,6 +1,6 @@
 // SAMEE3_AUDIO_LIBRARY_STABLE_V1: update service-worker code; never delete audio caches.
 try { importScripts('/sw-build.js') } catch (_) { /* offline first installation */ }
-const SW_VERSION = 'samee3-sw-v17-' + (self.SAMEE3_BUILD_ID || 'fallback')
+const SW_VERSION = 'samee3-sw-v18-' + (self.SAMEE3_BUILD_ID || 'fallback')
 
 const SHELL_CACHE = `${SW_VERSION}-shell`
 const NAV_CACHE = `${SW_VERSION}-navigation`
@@ -1179,6 +1179,11 @@ self.addEventListener(
       return
     }
 
+    if (data.type === 'SAMEE3_PUSH_CAPABILITIES') {
+      try { event.ports?.[0]?.postMessage({ type: 'SAMEE3_PUSH_CAPABILITIES', version: 1 }) } catch (_) {}
+      return
+    }
+
     if (
       data.type === 'CACHE_AUDIO_URL' &&
       typeof data.url === 'string'
@@ -1305,13 +1310,17 @@ async function serveArchiveDownload(request, url) {
 self.addEventListener('push', (event) => {
   let data = {}
   try { data = event.data ? event.data.json() : {} } catch (_) {}
-  const title = typeof data.title === 'string' ? data.title.slice(0, 150) : 'مصحف سميع'
+  if (!data || typeof data !== 'object' || Array.isArray(data)) data = {}
+  // Older browsers display declarative payloads through this legacy handler.
+  const notification = data.web_push === 8030 && data.notification && typeof data.notification === 'object'
+    ? data.notification : data
+  const title = typeof notification.title === 'string' && notification.title ? notification.title.slice(0, 150) : 'مصحف سميع'
   let target = '/notifications'
-  try { const link = new URL(data.url || '/notifications', self.location.origin); if (link.origin === self.location.origin) target = link.pathname + link.search } catch (_) {}
+  try { const link = new URL(notification.navigate || data.url || '/notifications', self.location.origin); if (link.origin === self.location.origin && !link.username && !link.password) target = link.pathname + link.search + link.hash } catch (_) {}
   event.waitUntil(self.registration.showNotification(title, {
-    body: typeof data.body === 'string' ? data.body.slice(0, 700) : 'حان موعد تذكيرك من سميع',
+    body: typeof notification.body === 'string' ? notification.body.slice(0, 700) : 'حان موعد تذكيرك من سميع',
     icon: '/icon-192.png', badge: '/icon-192.png', dir: 'rtl', lang: 'ar',
-    tag: typeof data.tag === 'string' ? data.tag.slice(0, 100) : 'samee3-reminder',
+    tag: typeof notification.tag === 'string' ? notification.tag.slice(0, 100) : 'samee3-reminder',
     data: { url: target },
   }))
 })

@@ -1,0 +1,72 @@
+{
+  "update": "SAMEE3 iPhone push display and diagnostics v1",
+  "based_on_commit": "6caf0cb8083242268bbc24fabdd41e6f15036f93",
+  "deployed": false,
+  "validation": {
+    "web_push_tests_passed": 14,
+    "release_tests_passed": 25,
+    "playback_tests_passed": 26,
+    "android_web_tests_passed": 7,
+    "typecheck": "passed",
+    "production_build": "passed",
+    "physical_iPhone_display": "requires testing after deployment",
+    "full_test_command": "not completed: core background-gallery fixture absent from source-only checkout (27 core tests passed, one media-dependent test failed)"
+  },
+  "files": [
+    {
+      "path": "app/api/web-push/route.ts",
+      "bytes": 5382,
+      "sha256": "e243625bdafc68a34b28a2327c90b53d8831d0626ee6d1de0727e883010ed05f"
+    },
+    {
+      "path": "components/WebNotificationsPanel.tsx",
+      "bytes": 22159,
+      "sha256": "399c278f2359fe3b8e0dd5ab0944175fdcfbff3817a53ad0dd783b6c8ac3337c"
+    },
+    {
+      "path": "lib/server/web-push.ts",
+      "bytes": 8531,
+      "sha256": "f952cae4add9dfcdcd80a1bb80cfe8978554129a3f0b739f96a2ce848734ffe3"
+    },
+    {
+      "path": "lib/server/web-push-payload.ts",
+      "bytes": 2332,
+      "sha256": "d7f0cef0e4305f6e239509f1b85130495a4651816bdba395a71da9d6d66244c1"
+    },
+    {
+      "path": "lib/web-push-client.ts",
+      "bytes": 9633,
+      "sha256": "08a1e87866adfc467151b1b58e4e232ac9f8d73c9d502d28087f9bd9186e23a4"
+    },
+    {
+      "path": "lib/web-push-status.ts",
+      "bytes": 640,
+      "sha256": "6b3d3f2bde780d801843d10be09421d5c84701f7dd5090472ccc9f4eeb1eb1d8"
+    },
+    {
+      "path": "public/sw.js",
+      "bytes": 35073,
+      "sha256": "ecc9743a7291c5dd7b3f9227d53d6a14677c26dd6d48b9d518ac798b201cd4fb"
+    },
+    {
+      "path": "package.json",
+      "bytes": 2458,
+      "sha256": "1f2a60be495b4f9d4f265c23a608108aca9893502a20208295925cfb508d3061"
+    },
+    {
+      "path": "scripts/web-push-delivery.test.cjs",
+      "bytes": 11632,
+      "sha256": "3cdc32c1dfc640c6982395aa63e95063ea92d7a24c2d1e15abc7346e9fdc65f9"
+    },
+    {
+      "path": "READ-PUSH-DISPLAY-AR.md",
+      "bytes": 5768,
+      "sha256": "ec817b10a4543afad02b8cd3c39d5abd40d1b2c4d87e106312095575a67f6ad9"
+    },
+    {
+      "path": "docs/WEB-PUSH-SETUP-AR.md",
+      "bytes": 6455,
+      "sha256": "6a83ba3fa3682c5eb1daf9723b538c37da0587770e4b78b4adb1fcde327c3236"
+    }
+  ]
+}

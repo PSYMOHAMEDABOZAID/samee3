@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { limitedJson, sameOrigin } from '@/lib/server/http'
-import { authorizedSubscription, pushConfiguration, pushConfigured, registerWebPush, sendWebNotification, validSubscription } from '@/lib/server/web-push'
+import { authorizedSubscription, pushConfiguration, pushConfigured, registerWebPush, sendWebNotification, validSubscription, webPushSchedulerStatus } from '@/lib/server/web-push'
 import { parseWebSettings } from '@/lib/web-reminders'
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -49,10 +49,10 @@ export async function POST(request: NextRequest) {
         tx.update(reference, { lastTestAt: Date.now() }); return true
       })
       if (!allowed) return json({ error: 'انتظر نصف دقيقة قبل تكرار الاختبار.' }, 429)
-      await sendWebNotification(data.subscription, { title: 'إشعارات سميع تعمل', body: 'هذا إشعار تجريبي. يمكنك الآن ضبط الأذكار وورد القرآن ومواقيت الصلاة.', url: '/notifications', tag: 'samee3-test' })
-      return json({ ok: true })
+      const response = await sendWebNotification(data.subscription, { title: 'اختبار إشعارات سميع', body: 'هذا اختبار وصول إشعار من الخادم إلى هذا الجهاز.', url: '/notifications', tag: `samee3-test-${Date.now()}` })
+      return json({ ok: true, accepted: true, providerStatus: response.statusCode, scheduler: await webPushSchedulerStatus() })
     }
-    if (body.action === 'status') return json({ next: (data.events || []).slice(0, 8), lastError: data.lastError || '' })
+    if (body.action === 'status') return json({ next: (data.events || []).slice(0, 8), lastError: data.lastError || '', scheduler: await webPushSchedulerStatus() })
     return json({ error: 'طلب غير صالح.' }, 400)
   } catch (error) {
     console.error('SAMEE3_WEB_PUSH_FAILURE', { action, ...failureDetails(error) })

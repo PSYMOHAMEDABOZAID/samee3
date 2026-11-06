@@ -6,6 +6,8 @@ import { locationDate, shiftPrayerDate, type PrayerDay } from '@/lib/prayer-time
 import { reminderEvents, type ReminderEvent, type WebReminderSettings } from '@/lib/web-reminders'
 import { prayerSource } from './prayer-source'
 import { validatePushConfiguration } from './push-config'
+import { webPushPayload } from './web-push-payload'
+import { schedulerStatus, type PushSchedulerStatus } from '@/lib/web-push-status'
 
 const subscriptions = 'webPushSubscriptions'
 export const pushConfiguration = () => {
@@ -59,7 +61,7 @@ export async function registerWebPush(subscription: PushSubscription, settings: 
       leaseUntil: 0, lastError: '',
     }, { merge: true })
   })
-  return { id, token: nextToken, next: events.slice(0, 8) }
+  return { id, token: nextToken, next: events.slice(0, 8), scheduler: await webPushSchedulerStatus() }
 }
 export async function authorizedSubscription(id: string, token: string) {
   if (!/^[a-f0-9]{64}$/.test(id) || !/^[\w-]{40,60}$/.test(token)) throw new Error('UNAUTHORIZED')
@@ -69,10 +71,16 @@ export async function authorizedSubscription(id: string, token: string) {
 }
 export async function sendWebNotification(subscription: PushSubscription, event: Omit<ReminderEvent, 'at' | 'kind'> & { tag: string }) {
   if (!pushConfigured()) throw new Error('إعداد الإشعارات على الخادم غير مكتمل.')
-  return webPush.sendNotification(subscription, JSON.stringify(event), {
+  return webPush.sendNotification(subscription, JSON.stringify(webPushPayload(event, process.env.SAMEE3_PUBLIC_ORIGIN)), {
     vapidDetails: { subject: process.env.WEB_PUSH_SUBJECT!, publicKey: process.env.NEXT_PUBLIC_WEB_PUSH_VAPID_KEY!, privateKey: process.env.WEB_PUSH_VAPID_PRIVATE_KEY! },
     TTL: 120, urgency: 'high', timeout: 10000,
   })
+}
+export async function webPushSchedulerStatus(): Promise<PushSchedulerStatus> {
+  try {
+    const snapshot = await serverDb().doc('appMetrics/pushScheduler').get()
+    return schedulerStatus(snapshot.data())
+  } catch { return { state: 'unknown', lastCompletedAt: null } }
 }
 export async function dispatchWebReminders() {
   const db = serverDb(), now = Date.now()
