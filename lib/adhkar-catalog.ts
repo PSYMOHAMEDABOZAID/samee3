@@ -854,7 +854,7 @@ async function fetchCorpus(
   const timeoutId =
     setTimeout(
       stop,
-      TIMEOUT_MS,
+      url === ADHKAR_CATALOG_SOURCE.localUrl ? 4000 : TIMEOUT_MS,
     )
 
   signal?.addEventListener(
@@ -907,59 +907,21 @@ async function fetchCorpus(
   }
 }
 
-export async function readCachedAdhkar():
-  Promise<AdhkarCategory[] | null> {
-  if (
-    typeof caches === 'undefined'
-  ) {
-    return null
-  }
-
+export async function readCachedAdhkar(): Promise<AdhkarCategory[] | null> {
+  if (typeof caches === 'undefined') return null
+  const keys = [ADHKAR_CATALOG_SOURCE.localUrl, ADHKAR_CATALOG_SOURCE.primaryUrl]
   try {
-    const names =
-      await caches.keys()
-
-    if (
-      !names.includes(
-        ADHKAR_CATALOG_SOURCE.cacheName,
-      )
-    ) {
-      return null
-    }
-
-    const cache =
-      await caches.open(
-        ADHKAR_CATALOG_SOURCE.cacheName,
-      )
-
-    const keys = [
-      ADHKAR_CATALOG_SOURCE.localUrl,
-      ADHKAR_CATALOG_SOURCE.primaryUrl,
-    ]
-
+    const names = await caches.keys()
+    const cache = names.includes(ADHKAR_CATALOG_SOURCE.cacheName) ? await caches.open(ADHKAR_CATALOG_SOURCE.cacheName) : null
     for (const key of keys) {
       try {
-        const response =
-          await cache.match(key)
-
-        if (!response) {
-          continue
-        }
-
-        const result =
-          await parseResponse(
-            response,
-          )
-
-        return result.categories
-      } catch {
-        // Try the remaining cache entry.
-      }
+        // First-install precaching lives in the SW shell cache. It is already
+        // a valid saved corpus even before the Adhkar page was opened once.
+        const response = await cache?.match(key) || (key === ADHKAR_CATALOG_SOURCE.localUrl ? await caches.match(key) : undefined)
+        if (response) return (await parseResponse(response)).categories
+      } catch { /* try the remaining complete snapshot */ }
     }
-  } catch {
-    // Storage may be unavailable.
-  }
-
+  } catch { /* storage is optional */ }
   return null
 }
 
@@ -1027,7 +989,7 @@ export async function loadAdhkarCatalog(
       'undefined' &&
     navigator.onLine === false
 
-  if (offline && cached) {
+  if (cached && (offline || !options.refresh)) {
     return makeCatalog(
       cached,
       'cache',

@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "newIndividualFiles": 248,
+  "quietestPeakDb": -11.9,
+  "failed": [],
+  "method": "FFmpeg volumedetect on every newly cut individual file; requires peak above -60 dBFS. This detects silent/near-silent output, not correct pronunciation or speaker identity."
+}

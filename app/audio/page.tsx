@@ -4,8 +4,8 @@ import { collectedAlafasyLibraryReciter } from '@/lib/quran/alafasy-collected'
 import { KHUTBAH_SCHOLARS, libraryAudioSource } from '@/lib/audio-catalog'
 // SAMEE3_ALAFASY_RIWAYAT_V3
 import { alafasyFullMushafsForRiwaya, extendRiwayatWithAlafasy } from '@/lib/alafasy-five-mushafs'
-import { bindQuranMediaSession } from '@/lib/quran/media-session'
-import { useAudioContinuity } from '@/lib/use-audio-continuity'
+import { appAudio, useAppAudio } from '@/lib/app-audio'
+import type { LibraryPlayerItem as PlayerItem } from '@/lib/persistent-player'
 import {
   useCallback,
   useEffect,
@@ -109,22 +109,6 @@ type LibraryAudio = {
   bookId?: string
   record?: number
   isSynthetic?: boolean
-}
-
-type PlayerItem = {
-  kind: 'quran' | 'library'
-  legacyOpaque?: boolean
-  title: string
-  subtitle: string
-  audioUrl: string
-  reciterName: string
-  surahId?: number
-  reciterId?: number
-  riwayaId?: number
-  moshafId?: number
-  libraryId?: string
-  sourceName?: string
-  isStream?: boolean
 }
 
 type OfflineRecord = {
@@ -1097,16 +1081,20 @@ export default function AudioPage() {
   const [error, setError] = useState('')
   const [toast, setToast] = useState('')
 
-  const [player, setPlayer] = useState<PlayerItem | null>(null)
-  const [queue, setQueue] = useState<PlayerItem[]>([])
-  const [queueIndex, setQueueIndex] = useState(-1)
-  const [isPlaying, setIsPlaying] = useState(false)
-  const [progress, setProgress] = useState(0)
-  const [duration, setDuration] = useState(0)
-  const [playbackRate, setPlaybackRate] = useState(1)
-  const [volume, setVolume] = useState(1)
-  const [isMuted, setIsMuted] = useState(false)
-  const [repeatMode, setRepeatMode] = useState<'off' | 'one' | 'all'>('off')
+  const playback = useAppAudio()
+  const libraryActive = playback.scope === 'library'
+  const player = libraryActive ? playback.queue[playback.index]?.library || null : null
+  const queue = libraryActive ? playback.queue.flatMap(track => track.library ? [track.library] : []) : []
+  const queueIndex = libraryActive ? playback.index : -1
+  const isPlaying = libraryActive && playback.playing
+  const progress = libraryActive ? playback.position : 0
+  const duration = libraryActive ? playback.duration : 0
+  const playbackRate = playback.rate, volume = playback.volume, isMuted = playback.muted
+  const repeatMode = playback.repeat
+  const setPlaybackRate = (rate: number) => appAudio.settings({ rate })
+  const setVolume = (value: number) => appAudio.settings({ volume: value })
+  const setIsMuted = (value: boolean | ((previous: boolean) => boolean)) => appAudio.settings({ muted: typeof value === 'function' ? value(appAudio.getSnapshot().muted) : value })
+  const setRepeatMode = (value: typeof repeatMode | ((previous: typeof repeatMode) => typeof repeatMode)) => appAudio.settings({ repeat: typeof value === 'function' ? value(appAudio.getSnapshot().repeat) : value })
 
   const [offlineKeys, setOfflineKeys] = useState<Set<string>>(new Set())
   const [sharedQuranUrls, setSharedQuranUrls] = useState<Set<string>>(new Set())
@@ -1122,8 +1110,6 @@ export default function AudioPage() {
   const libraryAbortRef = useRef<AbortController | null>(null)
   const toastTimerRef = useRef<number | undefined>(undefined)
 
-  const playbackSettingsRef = useRef({ playbackRate, volume, isMuted })
-  playbackSettingsRef.current = { playbackRate, volume, isMuted }
 
   const [offlineBusyKey, setOfflineBusyKey] = useState<string | null>(null)
   const [zipBusy, setZipBusy] = useState(false)
@@ -1132,9 +1118,7 @@ export default function AudioPage() {
   const [batchStatus, setBatchStatus] = useState('')
 
   const batchAbortRef = useRef<AbortController | null>(null)
-  const audioRef = useRef<HTMLAudioElement | null>(null)
-  const objectUrlRef = useRef<string | null>(null)
-  const pendingPlayRef = useRef(false)
+  const audioRef = { current: libraryActive ? appAudio.element() : null }
   const contextReady = useRef(false)
   // SAMEE3_AUDIO_LIBRARY_STABLE_V1: persisted browser navigation, not audio/file storage.
   const rememberedSelection = useRef<{
@@ -1149,7 +1133,7 @@ export default function AudioPage() {
     toastTimerRef.current = window.setTimeout(() => setToast(''), 3800)
   }, [])
 
-  useAudioContinuity(audioRef, notify)
+  useEffect(() => { if (libraryActive && playback.error) notify(playback.error) }, [libraryActive, playback.error, notify])
 
   const loadOfflineIndex = useCallback(async () => {
     const requestId = ++indexRequestRef.current
@@ -1636,238 +1620,19 @@ export default function AudioPage() {
     }))
   }, [availableSurahs, selectedMoshaf, selectedReciter, selectedRiwaya])
 
-  const revokeObjectUrl = useCallback(() => {
-    if (objectUrlRef.current) {
-      URL.revokeObjectURL(objectUrlRef.current)
-      objectUrlRef.current = null
-    }
-  }, [])
-
   const startPlayer = useCallback(
-    async (item: PlayerItem, nextQueue: PlayerItem[], nextIndex: number, autoplay = true) => {
-      if (!audioRef.current) return
-      pendingPlayRef.current = autoplay
-      setQueue(nextQueue)
-      setQueueIndex(nextIndex)
-      setPlayer(item)
-      setProgress(0)
-      setDuration(0)
-    },
-    []
+    async (_item: PlayerItem, nextQueue: PlayerItem[], nextIndex: number, autoplay = true) => {
+      appAudio.start({ scope: 'library', href: '/audio', index: nextIndex, autoplay,
+        queue: nextQueue.map(item => ({ url: item.audioUrl, title: item.title, subtitle: item.reciterName, library: item })) })
+    }, []
   )
-
-  useEffect(() => {
-    if (!audioRef.current || !player) return
-
-    const currentAudio = audioRef.current
-    const currentPlayer = player
-    let disposed = false
-    let playListener: (() => void) | null = null
-    let ownedObjectUrl: string | null = null
-
-    async function prepare() {
-      try {
-        // SAMEE3_AUDIO_STABILITY_2026_11
-        // Prefer streaming complete cached recordings.
-
-        const cacheStreamSupported = Boolean(
-          currentPlayer.kind === 'quran' &&
-          navigator.serviceWorker?.controller &&
-          /^https:\/\/(?:[a-z0-9-]+\.)*mp3quran\.net\//i.test(
-            currentPlayer.audioUrl
-          )
-        )
-
-        const cacheResponse = cacheStreamSupported
-          ? await findCachedAudio(currentPlayer.audioUrl)
-          : null
-
-        const cachedStream = Boolean(cacheResponse)
-
-        if (cacheResponse) {
-          void cacheResponse.body?.cancel().catch(
-            () => undefined
-          )
-        }
-
-        // Stream all online recordings: converting cached MP3s to Blob URLs
-        // used to evict the page under iOS memory pressure.
-        const needsLocalBlob = navigator.onLine === false || !currentPlayer.audioUrl
-        const savedBlob = cachedStream || !needsLocalBlob
-          ? null
-          : await getSavedBlob(currentPlayer, 32 * 1024 * 1024)
-        if (disposed || audioRef.current !== currentAudio) return
-
-        let source = currentPlayer.audioUrl
-
-        if (savedBlob) {
-          ownedObjectUrl = URL.createObjectURL(savedBlob)
-          objectUrlRef.current = ownedObjectUrl
-          source = ownedObjectUrl
-        } else if (!source || (navigator.onLine === false && !cachedStream)) {
-          const legacyAvailable = await hasLegacyOpaque(source)
-          if (disposed || audioRef.current !== currentAudio) return
-
-          if (!legacyAvailable) {
-            throw new Error('هذا الملف غير محفوظ كاملًا. اتصل بالإنترنت واحفظه أولًا.')
-          }
-        }
-
-        currentAudio.pause()
-
-        const playbackSource = cachedStream ? source : libraryAudioSource(source)
-        currentAudio.src = savedBlob
-          ? source
-          : playbackSource.startsWith('/api/audio-proxy?')
-            ? `${playbackSource}&stream=1`
-            : playbackSource
-
-        bindQuranMediaSession(currentAudio, currentPlayer)
-        currentAudio.load()
-
-        const settings = playbackSettingsRef.current
-        currentAudio.playbackRate = settings.playbackRate
-        currentAudio.volume = settings.isMuted ? 0 : settings.volume
-
-        const playNow = async () => {
-          playListener = null
-          if (!pendingPlayRef.current || disposed) return
-
-          pendingPlayRef.current = false
-
-          try {
-            await currentAudio.play()
-          } catch (err) {
-            if (disposed) return
-            console.error('Audio play failed:', err)
-            setIsPlaying(false)
-            notify('اضغط تشغيل من المشغل لبدء التلاوة.')
-          }
-        }
-
-        if (currentAudio.readyState >= HTMLMediaElement.HAVE_FUTURE_DATA) {
-          await playNow()
-        } else {
-          playListener = playNow
-          currentAudio.addEventListener('canplay', playNow, { once: true })
-        }
-      } catch (err) {
-        if (disposed) return
-        console.error('Player prepare error:', err)
-        setIsPlaying(false)
-        notify(err instanceof Error ? err.message : 'تعذر تجهيز الملف الصوتي.')
-      }
-    }
-
-    void prepare()
-
-    return () => {
-      disposed = true
-
-      if (playListener) {
-        currentAudio.removeEventListener('canplay', playListener)
-        playListener = null
-      }
-
-      currentAudio.pause()
-      currentAudio.removeAttribute('src')
-      currentAudio.load()
-
-      if (ownedObjectUrl) {
-        URL.revokeObjectURL(ownedObjectUrl)
-        if (objectUrlRef.current === ownedObjectUrl) objectUrlRef.current = null
-      }
-    }
-  }, [notify, player])
-
-  useEffect(() => {
-    const audio = audioRef.current
-    if (!audio) return
-
-    // Updating this very large library component every ~250ms on iOS
-    // made scrolling and track changes unresponsive. 2-second cadence.
-    const handleTimeUpdate = () =>
-      setProgress(old =>
-        Math.floor(old / 2) === Math.floor((audio.currentTime || 0) / 2)
-          ? old
-          : audio.currentTime || 0
-      )
-
-    const handleLoadedMetadata = () =>
-      setDuration(Number.isFinite(audio.duration) ? audio.duration : 0)
-
-    const handlePlay = () => setIsPlaying(true)
-    const handlePause = () => setIsPlaying(false)
-
-    const handleEnded = () => {
-      setIsPlaying(false)
-
-      if (repeatMode === 'one') {
-        audio.currentTime = 0
-        void audio.play().catch(() => {
-          setIsPlaying(false)
-          notify('اضغط تشغيل لاستكمال التسجيل.')
-        })
-        return
-      }
-
-      const nextIndex = queueIndex + 1
-
-      if (nextIndex < queue.length) {
-        pendingPlayRef.current = true
-        setQueueIndex(nextIndex)
-        setPlayer(queue[nextIndex])
-        return
-      }
-
-      if (repeatMode === 'all' && queue.length > 0) {
-        pendingPlayRef.current = true
-        setQueueIndex(0)
-        setPlayer(queue[0])
-        return
-      }
-
-      setProgress(0)
-    }
-
-    const handleError = () => setIsPlaying(false)
-
-    audio.addEventListener('timeupdate', handleTimeUpdate)
-    audio.addEventListener('loadedmetadata', handleLoadedMetadata)
-    audio.addEventListener('play', handlePlay)
-    audio.addEventListener('pause', handlePause)
-    audio.addEventListener('ended', handleEnded)
-    audio.addEventListener('error', handleError)
-
-    return () => {
-      audio.removeEventListener('timeupdate', handleTimeUpdate)
-      audio.removeEventListener('loadedmetadata', handleLoadedMetadata)
-      audio.removeEventListener('play', handlePlay)
-      audio.removeEventListener('pause', handlePause)
-      audio.removeEventListener('ended', handleEnded)
-      audio.removeEventListener('error', handleError)
-    }
-  }, [notify, queue, queueIndex, repeatMode])
-
-  useEffect(() => {
-    if (audioRef.current) audioRef.current.playbackRate = playbackRate
-  }, [playbackRate])
-
-  useEffect(() => {
-    if (audioRef.current) audioRef.current.volume = isMuted ? 0 : volume
-  }, [isMuted, volume])
-
-  useEffect(() => () => revokeObjectUrl(), [revokeObjectUrl])
 
   const selectRiwaya = (riwaya: Riwaya) => {
     rememberedSelection.current = null
     restoredReader.current = true
     restoredSurah.current = true
-    pendingPlayRef.current = false
     audioRef.current?.pause()
-    setPlayer(null)
-    setQueue([])
-    setQueueIndex(-1)
+    appAudio.stop('library')
     setSelectedRiwaya(riwaya)
     setSelectedReciter(null)
     setSelectedMoshaf(null)
@@ -1893,10 +1658,7 @@ export default function AudioPage() {
       return
     }
 
-    pendingPlayRef.current = false
-    setPlayer(null)
-    setQueue([])
-    setQueueIndex(-1)
+    appAudio.stop('library')
     setSelectedReciter(reciter)
     setSelectedMoshaf(moshaf)
     setSelectedSurah(null)
@@ -1967,82 +1729,14 @@ export default function AudioPage() {
     await startPlayer(queueItems[index], queueItems, index, true)
   }
 
-  const togglePlayer = async () => {
-    const audio = audioRef.current
-    if (!audio || !player) return
-
-    if (audio.error) {
-      audio.dispatchEvent(new Event('samee3-audio-retry'))
-      return
-    }
-
-    if (pendingPlayRef.current) {
-      pendingPlayRef.current = false
-      audio.pause()
-      return
-    }
-    if (audio.paused) {
-      await audio.play().catch(() => notify('تعذر بدء التسجيل. أعد المحاولة.'))
-    } else {
-      pendingPlayRef.current = false
-      audio.pause()
-    }
-  }
-
-  const closePlayer = () => {
-    pendingPlayRef.current = false
-    const audio = audioRef.current
-
-    if (audio) {
-      audio.pause()
-      audio.removeAttribute('src')
-      audio.load()
-    }
-
-    setPlayer(null)
-    setQueue([])
-    setQueueIndex(-1)
-    setIsPlaying(false)
-    setProgress(0)
-    setDuration(0)
-  }
-
-  const seekTo = (value: number) => {
-    const audio = audioRef.current
-    if (!audio || !Number.isFinite(value) || !Number.isFinite(audio.duration) || audio.duration <= 0) return
-
-    const next = Math.max(0, Math.min(audio.duration, value))
-
-    try {
-      audio.currentTime = next
-      setProgress(next)
-    } catch {
-      notify('انتظر اكتمال تجهيز التسجيل ثم حاول مجددًا.')
-    }
-  }
-
+  const togglePlayer = async () => { if (player) appAudio.toggle() }
+  const closePlayer = () => appAudio.stop('library')
+  const seekTo = (value: number) => appAudio.seek(value)
   const goQueue = async (offset: number) => {
-    if (!queue.length) return
-    const nextIndex = queueIndex + offset
-
-    if (nextIndex < 0 || nextIndex >= queue.length) {
-      if (repeatMode === 'all') {
-        const wrapped = nextIndex < 0 ? queue.length - 1 : 0
-        pendingPlayRef.current = true
-        setQueueIndex(wrapped)
-        setPlayer(queue[wrapped])
-      }
-      return
-    }
-
-    pendingPlayRef.current = true
-    setQueueIndex(nextIndex)
-    setPlayer(queue[nextIndex])
-
-    if (queue[nextIndex].kind === 'quran' && queue[nextIndex].surahId) {
-      const surah = availableSurahs.find(entry => entry.id === queue[nextIndex].surahId)
-      if (surah) setSelectedSurah(surah)
-    }
+    appAudio.next(offset)
+    const item = appAudio.getSnapshot().queue[appAudio.getSnapshot().index]?.library
+    const surah = availableSurahs.find(entry => entry.id === item?.surahId)
+    if (surah) setSelectedSurah(surah)
   }
 
   const downloadDirect = async (url: string, suggestedName: string, isStream = false) => {
@@ -2365,7 +2059,6 @@ export default function AudioPage() {
   }
 
   const resetSelection = () => {
-    pendingPlayRef.current = false
 
     if (audioRef.current) {
       audioRef.current.pause()
@@ -2373,10 +2066,7 @@ export default function AudioPage() {
       audioRef.current.load()
     }
 
-    revokeObjectUrl()
-    setPlayer(null)
-    setQueue([])
-    setQueueIndex(-1)
+    appAudio.stop('library')
     setSelectedReciter(null)
     setSelectedMoshaf(null)
     setSelectedSurah(null)
@@ -2409,7 +2099,6 @@ export default function AudioPage() {
 
   return (
     <div className="min-h-screen bg-mushaf-paper pb-44" dir="rtl">
-      <audio ref={audioRef} preload="metadata" />
 
       <header className="sticky top-0 z-40 border-b border-mushaf-border/25 bg-mushaf-paper/90 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center gap-3 px-4 py-4">
@@ -2721,7 +2410,7 @@ export default function AudioPage() {
                   onClick={() => {
                     libraryRequestRef.current += 1
                     setLibraryLoading(false)
-                    if (tab === 'alafasy') audioRef.current?.pause()
+                    if (tab === 'alafasy') appAudio.element()?.pause()
                     setActiveTab(tab)
                     setSearch('')
                     setShowRiwayat(false)

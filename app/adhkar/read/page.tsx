@@ -1,7 +1,10 @@
 'use client'
 
 import ShareCardDesigner from '@/components/ShareCardDesigner'
-import { bindAudioFocus } from '@/lib/audio-focus'
+import ReaderPicker from '@/components/adhkar/ReaderPicker'
+import RepeatControls from '@/components/adhkar/RepeatControls'
+import { adhkarListeningCount, parseAdhkarListening, type AdhkarListeningMode } from '@/lib/adhkar-listening'
+import { appAudio, useAppAudio } from '@/lib/app-audio'
 import {
   Suspense,
   useCallback,
@@ -16,13 +19,13 @@ import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import { adhkarCitation, findAdhkarCategory, loadAdhkarCatalog, readCachedAdhkar } from '@/lib/adhkar-catalog'
 import {
-  cachedAdhkarPlaybackUrl,
   downloadAdhkarForOffline,
 } from '@/lib/adhkar-offline'
 import {
   checkAdhkarRecording,
   findAdhkarReciter,
   findAdhkarRecording,
+  findAdhkarCategoryRecording,
   getIndividualAdhkarAudio,
   listAdhkarReciters,
   makeAdhkarAudioUrl,
@@ -85,7 +88,7 @@ type ProgressRecord = { counts: Record<string, number>; savedAt: number }
 const SETTINGS_KEY = 'samee3_adhkar_read_settings_v1'
 const RECITER_KEY = 'samee3_adhkar_reciter'
 // Show only readers with an identified audio URL, not source-only or legacy entries.
-const RECITERS = listAdhkarReciters()
+const RECITERS = listAdhkarReciters({ hasIndividualAudio: true })
 
 const LABELS: Record<AdhkarType, string> = {
   morning: 'أذكار الصباح',
@@ -130,20 +133,15 @@ function timeLabel(value: number) {
   return `${numberAr(Math.floor(seconds / 60))}:${String(seconds % 60).padStart(2, '0').replace(/\d/g, (digit) => '٠١٢٣٤٥٦٧٨٩'[Number(digit)])}`
 }
 
-// Cache Storage is consumed as a stream. Avoid allocating a whole MP3 Blob in iOS memory.
-async function readSavedAudio(url: string): Promise<string | null> {
-  return cachedAdhkarPlaybackUrl(url)
+async function downloadAudio(url: string, signal: AbortSignal, progress: (loaded: number, total: number | null) => void): Promise<void> {
+  return downloadAdhkarForOffline(url, signal, progress)
 }
 
-async function downloadAudio(url: string, signal: AbortSignal): Promise<void> {
-  return downloadAdhkarForOffline(url, signal)
-}
-
-async function retryDownloadAudio(url: string, signal: AbortSignal): Promise<void> {
+async function retryDownloadAudio(url: string, signal: AbortSignal, progress: (loaded: number, total: number | null) => void): Promise<void> {
   for (let attempt = 0; attempt < 3; attempt += 1) {
     if (signal.aborted) throw new Error('أُوقف التنزيل.')
     try {
-      await downloadAudio(url, signal)
+      await downloadAudio(url, signal, progress)
       return
     } catch (error) {
       if (signal.aborted || attempt === 2) throw error
@@ -319,16 +317,25 @@ function ReadAdhkarContent() {
   const [message, setMessage] = useState('')
   const [activeId, setActiveId] = useState<number | null>(null)
   const [copied, setCopied] = useState<number | null>(null)
-  const [audioMode, setAudioMode] = useState<AudioMode>(null)
-  const [playing, setPlaying] = useState(false)
-  const [audioLoading, setAudioLoading] = useState(false)
-  const [muted, setMuted] = useState(false)
-  const [speed, setSpeed] = useState(1)
-  const [position, setPosition] = useState(0)
-  const [duration, setDuration] = useState(0)
+  const playback = useAppAudio()
+  const ownsAudio = playback.scope === 'adhkar' && playback.contextKey === progressKey
+  const currentTrack = ownsAudio ? playback.queue[playback.index] : undefined
+  const audioMode: AudioMode = currentTrack ? currentTrack.itemId === undefined ? 'section' : 'item' : null
+  const playing = ownsAudio && playback.playing
+  const audioLoading = ownsAudio && playback.loading
+  const position = ownsAudio ? playback.position : 0, duration = ownsAudio ? playback.duration : 0
+  const muted = playback.muted, speed = playback.rate
+  const setMuted = (value: boolean | ((old: boolean) => boolean)) => appAudio.settings({ muted: typeof value === 'function' ? value(appAudio.getSnapshot().muted) : value })
+  const setSpeed = (rate: number) => appAudio.settings({ rate })
   const [downloadCount, setDownloadCount] = useState<number | null>(null)
   const [downloadTotal, setDownloadTotal] = useState(0)
+  const [downloadPercent, setDownloadPercent] = useState(0)
   const [settingsOpen, setSettingsOpen] = useState(false)
+  const [listeningMode, setListeningMode] = useState<AdhkarListeningMode>('remaining')
+  const [repeatInput, setRepeatInput] = useState('3')
+  const [viewMode, setViewMode] = useState<'focus' | 'list'>('focus')
+  const [focusIndex, setFocusIndex] = useState(0)
+  const customRepeats = adhkarListeningCount(repeatInput)
   const [darkMode, setDarkMode] = useState(false)
   const [fontSize, setFontSize] = useState(25)
   const [showMarks, setShowMarks] = useState(true)
@@ -338,10 +345,6 @@ function ReadAdhkarContent() {
   const [imageTheme, setImageTheme] = useState<'ivory' | 'emerald' | 'night'>('ivory')
   const [makingImage, setMakingImage] = useState(false)
 
-  const audioRef = useRef<HTMLAudioElement | null>(null)
-  const objectUrlRef = useRef<string | null>(null)
-  const audioTokenRef = useRef(0)
-  const sequenceRef = useRef(false)
   const itemsRef = useRef<AdhkarItem[]>([])
   const countsRef = useRef<Record<number, number>>({})
   const loadKeyRef = useRef('')
@@ -349,15 +352,14 @@ function ReadAdhkarContent() {
   const dayRef = useRef(localDay(Date.now()))
   const [settingsLoaded, setSettingsLoaded] = useState(false)
   const downloadControllerRef = useRef<AbortController | null>(null)
-  const speedRef = useRef(speed)
-  const mutedRef = useRef(muted)
 
   // List only reciters with a recording for the *current* section.
   // A recorded book or profile link is not an alternative for a daily section.
   const visibleReciters = RECITERS.filter((reader) => {
     if (audioSectionType && findAdhkarRecording(reader.id, audioSectionType, { allowCombined: true })) return true
+    if (categoryId && findAdhkarCategoryRecording(reader.id, categoryId)) return true
     return reader.individualAudio && items.some((item) =>
-      Boolean(getIndividualAdhkarAudio(reader.id, item)))
+      Boolean(getIndividualAdhkarAudio(reader.id, item, audioSectionType || undefined)))
   })
   const selectedReader = findAdhkarReciter(
     visibleReciters.some((reader) => reader.id === reciterId)
@@ -366,10 +368,10 @@ function ReadAdhkarContent() {
   ) || RECITERS[0]
   const sectionTrack: AdhkarRecording | null = audioSectionType
     ? findAdhkarRecording(selectedReader.id, audioSectionType, { allowCombined: true })
-    : null
+    : categoryId ? findAdhkarCategoryRecording(selectedReader.id, categoryId) : null
   const sectionUrl = sectionTrack ? makeAdhkarAudioUrl(sectionTrack.url) : null
   const itemUrl = (item: AdhkarItem): string =>
-    getIndividualAdhkarAudio(selectedReader.id, item) || ''
+    getIndividualAdhkarAudio(selectedReader.id, item, audioSectionType || undefined) || ''
   const recordedItems = selectedReader.individualAudio
     ? items.filter((item) => Boolean(itemUrl(item)))
     : []
@@ -386,57 +388,39 @@ function ReadAdhkarContent() {
   useEffect(() => { setCheckState(null) }, [reciterId, audioSectionType])
   useEffect(() => { itemsRef.current = items }, [items])
   useEffect(() => { countsRef.current = counts }, [counts])
-  useEffect(() => { speedRef.current = speed; if (audioRef.current) audioRef.current.playbackRate = speed }, [speed])
-  useEffect(() => { mutedRef.current = muted; if (audioRef.current) audioRef.current.muted = muted }, [muted])
+  useEffect(() => {
+    if (!ownsAudio) return
+    setActiveId(currentTrack?.itemId ?? null)
+    const index = itemsRef.current.findIndex(item => item.id === currentTrack?.itemId)
+    if (index >= 0) setFocusIndex(index)
+    if (Object.keys(playback.counts).length) { countsRef.current = playback.counts; setCounts(playback.counts) }
+  }, [ownsAudio, currentTrack, playback.counts, items])
+  useEffect(() => { if (ownsAudio && playback.error) setMessage(playback.error) }, [ownsAudio, playback.error])
 
   const updateCount = useCallback((item: AdhkarItem, value: number) => {
     const next = Math.max(0, Math.min(item.count, value))
     countsRef.current = { ...countsRef.current, [item.id]: next }
     setCounts(countsRef.current)
+    appAudio.setCounts(progressKey, countsRef.current)
     return next
-  }, [])
+  }, [progressKey])
 
   const stopAudio = useCallback(() => {
-    audioTokenRef.current += 1
-    sequenceRef.current = false
-    const audio = audioRef.current
-    if (audio) {
-      audio.onended = null
-      audio.onerror = null
-      audio.onplay = null
-      audio.onpause = null
-      audio.ontimeupdate = null
-      audio.onloadedmetadata = null
-      audio.pause()
-      audio.removeAttribute('src')
-      audio.load()
-      audioRef.current = null
-    }
-    if (objectUrlRef.current?.startsWith('blob:')) {
-      URL.revokeObjectURL(objectUrlRef.current)
-    }
-    objectUrlRef.current = null
-    setPlaying(false)
-    setAudioLoading(false)
-    setAudioMode(null)
-    setPosition(0)
-    setDuration(0)
-  }, [])
+    const current = appAudio.getSnapshot()
+    if (current.scope === 'adhkar' && current.contextKey === progressKey) appAudio.stop('adhkar')
+  }, [progressKey])
 
-  // Safely stop sound when the reader changes, URL changes or the page unmounts.
-  useEffect(() => () => {
-    audioTokenRef.current += 1
-    sequenceRef.current = false
-    const audio = audioRef.current
-    if (audio) { audio.onended = null; audio.pause(); audio.removeAttribute('src'); audioRef.current = null }
-    if (objectUrlRef.current?.startsWith('blob:')) URL.revokeObjectURL(objectUrlRef.current)
-    downloadControllerRef.current?.abort()
-  }, [])
+  // Navigating away detaches this view. The app owns audio and its sequence.
+  useEffect(() => () => { downloadControllerRef.current?.abort() }, [])
 
   useEffect(() => {
     try {
       const saved: unknown = JSON.parse(localStorage.getItem(SETTINGS_KEY) || 'null')
       if (isObject(saved)) {
+        const listening = parseAdhkarListening(saved)
+        setListeningMode(listening.listeningMode)
+        setRepeatInput(String(listening.customRepeats))
+        setViewMode(listening.viewMode)
         setDarkMode(saved.darkMode === true)
         setShowMarks(saved.showMarks !== false)
         const size = Number(saved.fontSize)
@@ -448,20 +432,22 @@ function ReadAdhkarContent() {
 
   useEffect(() => {
     if (!settingsLoaded) return
-    try { localStorage.setItem(SETTINGS_KEY, JSON.stringify({ darkMode, showMarks, fontSize })) }
+    try { localStorage.setItem(SETTINGS_KEY, JSON.stringify({ darkMode, showMarks, fontSize, listeningMode, customRepeats, viewMode })) }
     catch { /* optional display settings */ }
-  }, [darkMode, showMarks, fontSize, settingsLoaded])
+  }, [darkMode, showMarks, fontSize, listeningMode, customRepeats, viewMode, settingsLoaded])
 
   useEffect(() => {
     try {
-      if (!requestedReader) {
+      const current = appAudio.getSnapshot()
+      if (current.scope === 'adhkar' && current.contextKey === progressKey && current.readerId) setReciterId(current.readerId)
+      else if (!requestedReader) {
         const saved = localStorage.getItem(RECITER_KEY)
         if (saved && RECITERS.some((reader) => reader.id === saved)) setReciterId(saved)
       }
       const parsed: unknown = JSON.parse(localStorage.getItem(favoriteKey) || '[]')
       setFavorites(Array.isArray(parsed) ? parsed.map(Number).filter(Number.isFinite) : [])
     } catch { setFavorites([]) }
-  }, [favoriteKey, requestedReader])
+  }, [favoriteKey, requestedReader, progressKey])
 
   useEffect(() => {
     if (!ready || readyKeyRef.current !== progressKey) return
@@ -471,12 +457,11 @@ function ReadAdhkarContent() {
   useEffect(() => {
     let disposed = false
     const controller = new AbortController()
-    const timeout = window.setTimeout(() => controller.abort(), 15000)
+    const timeout = window.setTimeout(() => controller.abort(), 40000)
     setReady(false)
     setLoading(true)
     setError('')
     setItems([])
-    stopAudio()
     loadKeyRef.current = ''
 
     const apply = (categories: AdhkarCategory[], cached: boolean) => {
@@ -486,11 +471,15 @@ function ReadAdhkarContent() {
       const daily = selected.category.includes('الصباح') || selected.category.includes('المساء')
       setIsDaily(daily)
       if (loadKeyRef.current !== progressKey) {
-        const savedCounts = readProgress(progressKey, selected.array, daily)
+        const active = appAudio.getSnapshot()
+        const savedCounts = active.scope === 'adhkar' && active.contextKey === progressKey && Object.keys(active.counts).length
+          ? active.counts : readProgress(progressKey, selected.array, daily)
         loadKeyRef.current = progressKey
         countsRef.current = savedCounts
         setCounts(savedCounts)
         setActiveId(null)
+        const first = selected.array.findIndex(item => (savedCounts[item.id] ?? item.count) > 0)
+        setFocusIndex(Math.max(0, first))
       }
       itemsRef.current = selected.array
       setItems(selected.array)
@@ -548,119 +537,28 @@ function ReadAdhkarContent() {
   }, [isDaily, stopAudio])
 
   const playSource = async (
-    url: string,
-    mode: Exclude<AudioMode, null>,
-    index: number,
-    sequential: boolean,
+    url: string, mode: Exclude<AudioMode, null>, index: number, sequential: boolean,
   ) => {
-    const token = ++audioTokenRef.current
-    sequenceRef.current = sequential
     setMessage('')
-    setAudioLoading(true)
-    setPlaying(false)
-    setAudioMode(mode)
-    setPosition(0)
-    setDuration(0)
-
-    const old = audioRef.current
-    if (old) {
-      old.onended = null; old.onerror = null; old.onplay = null; old.onpause = null
-      old.pause(); old.removeAttribute('src')
-    }
-    if (objectUrlRef.current?.startsWith('blob:')) URL.revokeObjectURL(objectUrlRef.current)
-    objectUrlRef.current = null
-
-    const cached = await readSavedAudio(url)
-    if (audioTokenRef.current !== token) {
-      if (cached?.startsWith('blob:')) URL.revokeObjectURL(cached)
-      return
-    }
-    if (!cached && navigator.onLine === false) {
-      setAudioLoading(false)
-      setAudioMode(null)
-      setMessage('التسجيل غير محفوظ على هذا الجهاز. نزّله أثناء الاتصال لتشغيله دون نت.')
-      return
-    }
-
-    const audio = old || new Audio()
-    bindAudioFocus(audio)
-    audioRef.current = audio
-    objectUrlRef.current = cached
-    audio.preload = 'auto'
-    audio.playbackRate = speedRef.current
-    audio.muted = mutedRef.current
-    audio.src = cached || url
-    audio.onloadedmetadata = () => { if (token === audioTokenRef.current) setDuration(Number.isFinite(audio.duration) ? audio.duration : 0) }
-    audio.ontimeupdate = () => { if (token === audioTokenRef.current) setPosition(audio.currentTime) }
-    audio.onplay = () => { if (token === audioTokenRef.current) { setPlaying(true); setAudioLoading(false) } }
-    audio.onpause = () => { if (token === audioTokenRef.current) setPlaying(false) }
-    audio.onerror = () => {
-      if (token !== audioTokenRef.current) return
-      sequenceRef.current = false
-      setPlaying(false)
-      setAudioLoading(false)
-      setAudioMode(null)
-      setMessage('تعذّر تشغيل التسجيل. ربما الملف الصوتي غير متاح من المصدر.')
-    }
-    audio.onended = () => {
-      if (token !== audioTokenRef.current) return
-      if (mode === 'section') {
-        sequenceRef.current = false
-        setPlaying(false)
-        setAudioMode(null)
-        return
-      }
-      const item = itemsRef.current[index]
-      if (!item) return
-      const left = updateCount(item, (countsRef.current[item.id] ?? item.count) - 1)
-      if (!sequenceRef.current) {
-        setPlaying(false)
-        setAudioMode(null)
-        return
-      }
-      if (left > 0) {
-        audio.currentTime = 0
-        void audio.play().catch(() => {
-          if (token === audioTokenRef.current) {
-            sequenceRef.current = false
-            setPlaying(false)
-            setMessage('توقف التشغيل التلقائي. اضغط تشغيل للاستكمال.')
-          }
-        })
-        return
-      }
-      const nextIndex = itemsRef.current.findIndex((entry, i) =>
-        i > index && Boolean(getIndividualAdhkarAudio(selectedReader.id, entry)) && (countsRef.current[entry.id] ?? entry.count) > 0,
-      )
-      if (nextIndex < 0) {
-        sequenceRef.current = false
-        setPlaying(false)
-        setAudioMode(null)
-        return
-      }
-      const next = itemsRef.current[nextIndex]
-      setActiveId(next.id)
-      const nextUrl = getIndividualAdhkarAudio(selectedReader.id, next)
-      if (nextUrl) void playSource(nextUrl, 'item', nextIndex, true)
-      else { sequenceRef.current = false; setAudioMode(null); setPlaying(false) }
-    }
-
-    try { await audio.play() }
-    catch {
-      if (token === audioTokenRef.current) {
-        setAudioLoading(false)
-        setPlaying(false)
-        setMessage('تعذّر بدء الصوت. اضغط تشغيل مرة أخرى أو جرّب تسجيلًا آخر.')
-      }
-    }
+    const listenRepeats = listeningMode === 'remaining' ? undefined : listeningMode === 'once' ? 1 : customRepeats
+    const queue = mode === 'section' ? [{ url, title, subtitle: selectedReader.name, listenRepeats: listenRepeats || 1 }]
+      : items.slice(index, sequential ? undefined : index + 1)
+        .filter(item => Boolean(itemUrl(item)) && (!sequential || !onlyFavorites || favorites.includes(item.id)) && (listenRepeats !== undefined || (countsRef.current[item.id] ?? item.count) > 0))
+        .map(item => ({ url: itemUrl(item), title: `${title} · الذكر ${numberAr(items.indexOf(item) + 1)}`, subtitle: selectedReader.name,
+          itemId: item.id, repetitions: item.count, repeatRemaining: true, listenRepeats }))
+    if (!queue.length) { setMessage('اكتمل عدّ هذا الذكر. اختر «مرة واحدة» لإعادة الاستماع أو أعد عدّاده.'); return }
+    appAudio.start({ scope: 'adhkar', contextKey: progressKey, readerId: selectedReader.id,
+      href: `/adhkar/read?${categoryId ? `categoryId=${categoryId}` : `type=${type}`}&reciter=${encodeURIComponent(selectedReader.id)}`,
+      queue, index: 0, counts: countsRef.current, daily: isDaily, repeat: 'off' })
   }
 
-  const startItem = (index: number, sequential = true) => {
+  const startItem = (index: number, sequential = false) => {
     const item = items[index]
     if (!item) return
     const url = itemUrl(item)
     if (!url) return
     setActiveId(item.id)
+    setFocusIndex(index)
     void playSource(url, 'item', index, sequential)
   }
 
@@ -670,20 +568,19 @@ function ReadAdhkarContent() {
     void playSource(sectionUrl, 'section', -1, false)
   }
 
-  const togglePlayback = () => {
-    if (audioLoading) { stopAudio(); return }
-    const current = audioRef.current
-    if (current && audioMode) {
-      if (!current.paused) { current.pause(); return }
-      void current.play().catch(() => setMessage('تعذّر استكمال التسجيل.'))
+  const startAll = () => {
+    if (canPlayItem) {
+      const first = items.findIndex(item => Boolean(itemUrl(item)) && (!onlyFavorites || favorites.includes(item.id)) && (listeningMode !== 'remaining' || (counts[item.id] ?? item.count) > 0))
+      if (first >= 0) startItem(first, true)
+      else setMessage('انتهت الأذكار المسجّلة. يمكنك إعادة الأعداد للتشغيل من البداية.')
       return
     }
-    if (sectionTrack) { startSection(); return }
-    if (canPlayItem) {
-      const first = items.findIndex((item) => Boolean(itemUrl(item)) && (counts[item.id] ?? item.count) > 0)
-      if (first >= 0) startItem(first)
-      else setMessage('انتهت الأذكار المسجّلة. يمكنك إعادة الأعداد للتشغيل من البداية.')
-    }
+    if (sectionTrack) startSection()
+  }
+
+  const togglePlayback = () => {
+    if (ownsAudio && audioMode) appAudio.toggle()
+    else startAll()
   }
 
   const changeReciter = (id: string) => {
@@ -724,6 +621,7 @@ function ReadAdhkarContent() {
     items.forEach((item) => { reset[item.id] = item.count })
     countsRef.current = reset
     setCounts(reset)
+    appAudio.setCounts(progressKey, reset)
     setActiveId(null)
     setMessage('تمت إعادة عدادات الورد إلى البداية.')
   }
@@ -744,12 +642,11 @@ function ReadAdhkarContent() {
     } catch { setMessage('تعذّر النسخ. حاول مجددًا.') }
   }
 
-  const saveRecordings = async () => {
+  const saveRecordings = async (mode: 'individual' | 'section' = 'individual') => {
     if (downloadControllerRef.current) return
-    const urls = sectionUrl ? [sectionUrl]
-      : selectedReader.individualAudio
-        ? Array.from(new Set(items.map(itemUrl).filter(Boolean)))
-        : []
+    const urls = mode === 'section' && sectionUrl ? [sectionUrl]
+      : canPlayItem ? Array.from(new Set(items.map(itemUrl).filter(Boolean)))
+        : sectionUrl ? [sectionUrl] : []
     if (!urls.length) return
     const controller = new AbortController()
     downloadControllerRef.current = controller
@@ -758,6 +655,8 @@ function ReadAdhkarContent() {
     setMessage('')
     let succeeded = 0
     let failed = 0
+    let failureReason = ''
+    setDownloadPercent(0)
     let cursor = 0
     const workers = 1 // Keep only one download open on iPhone.
     try {
@@ -767,14 +666,20 @@ function ReadAdhkarContent() {
           const index = cursor
           cursor += 1
           if (index >= urls.length) return
-          try { await retryDownloadAudio(urls[index], controller.signal); succeeded += 1 }
-          catch { if (controller.signal.aborted) return; failed += 1 }
+          try {
+            await retryDownloadAudio(urls[index], controller.signal, (loaded, total) => { if (total) setDownloadPercent(Math.min(99, Math.round(loaded / total * 100))) })
+            succeeded += 1; setDownloadPercent(100)
+          } catch (cause) {
+            if (controller.signal.aborted) return
+            failed += 1
+            failureReason = cause instanceof Error ? cause.name === 'QuotaExceededError' ? 'مساحة التخزين غير كافية. وفّر مساحة على الجهاز وأعد المحاولة.' : cause.message : 'تعذر الاتصال بمصدر التسجيل.'
+          }
           if (!controller.signal.aborted) setDownloadCount(succeeded + failed)
         }
       }))
       setMessage(controller.signal.aborted
         ? `تم إيقاف التنزيل. المحفوظ: ${numberAr(succeeded)}.`
-        : failed ? `حُفظ ${numberAr(succeeded)} تسجيل وتعذّر حفظ ${numberAr(failed)}. يمكن إعادة المحاولة لاحقًا.`
+        : failed ? `حُفظ ${numberAr(succeeded)} تسجيل وتعذّر حفظ ${numberAr(failed)}. ${failureReason}`
         : 'تم حفظ التسجيلات المتاحة على هذا الجهاز للتشغيل دون إنترنت.')
     } finally {
       downloadControllerRef.current = null
@@ -783,9 +688,17 @@ function ReadAdhkarContent() {
   }
 
 
-  const visibleItems = onlyFavorites
+  const readingItems = onlyFavorites
     ? items.filter((item) => favorites.includes(item.id))
     : items
+  const focusPosition = Math.max(0, readingItems.findIndex(item => items.indexOf(item) === focusIndex))
+  const visibleItems = viewMode === 'list' ? readingItems : readingItems[focusPosition] ? [readingItems[focusPosition]] : []
+  const moveFocus = (position: number) => {
+    const item = readingItems[position]
+    if (!item) return
+    setFocusIndex(items.indexOf(item))
+    window.requestAnimationFrame(() => document.querySelector<HTMLElement>('article[aria-label^="الذكر "]')?.scrollIntoView?.({ behavior: 'smooth', block: 'start' }))
+  }
 
   const readingText = (text: string) => showMarks ? text
     : text.replace(/[\u064b-\u065f\u0670]/g, '')
@@ -794,10 +707,10 @@ function ReadAdhkarContent() {
 
   return (
     <div dir="rtl" className={`min-h-screen pb-32 ${darkMode ? 'bg-[#13232c] text-white' : 'bg-[#f7f5ef] text-[#183e46]'}`}>
-      <header className="sticky top-0 z-40 border-b border-[#e7dccb] bg-[#f7f5ef]/95 backdrop-blur-xl">
+      <header className={`sticky top-0 z-40 border-b backdrop-blur-xl ${darkMode ? 'border-white/10 bg-[#13232c]/95' : 'border-[#e7dccb] bg-[#f7f5ef]/95'}`}>
         <div className="mx-auto flex max-w-4xl items-center justify-between gap-3 px-4 py-3">
-          <Link href="/adhkar" aria-label="العودة إلى الأذكار" className="flex h-11 w-11 items-center justify-center rounded-2xl border border-[#e7dccb] bg-white shadow-sm"><ArrowRight size={20} /></Link>
-          <div className="min-w-0 text-center"><h1 className="truncate text-lg font-black">{title}</h1><p className="text-[11px] text-[#889493]">وردك اليومي</p></div>
+          <Link href="/adhkar" aria-label="العودة إلى الأذكار" className="flex h-11 w-11 items-center justify-center rounded-2xl border border-[#e7dccb] bg-white text-[#175760] shadow-sm"><ArrowRight size={20} /></Link>
+          <div className="min-w-0 text-center"><h1 className="truncate text-lg font-black">{title}</h1><p className={`text-[11px] ${darkMode ? 'text-[#b4c5c1]' : 'text-[#586e6a]'}`}>وردك اليومي</p></div>
           <div className="flex items-center gap-2">
             <button type="button" aria-label="إعدادات القراءة" onClick={() => setSettingsOpen((old) => !old)} className="flex h-11 w-11 items-center justify-center rounded-2xl border border-[#e7dccb] bg-white text-[#175760]"><Settings2 size={19} /></button>
             <button type="button" aria-label={muted ? 'إلغاء كتم الصوت' : 'كتم الصوت'} onClick={() => setMuted((value) => !value)} className="flex h-11 w-11 items-center justify-center rounded-2xl border border-[#e7dccb] bg-white text-[#175760]">{muted ? <VolumeX size={19} /> : <Volume2 size={19} />}</button>
@@ -810,7 +723,7 @@ function ReadAdhkarContent() {
       </header>
 
       <main className="mx-auto max-w-4xl space-y-5 px-4 pt-5 sm:px-5">
-        {settingsOpen && <section aria-label="إعدادات القراءة" className="rounded-[24px] border border-[#e9dac2] bg-white p-5 shadow-sm">
+        {settingsOpen && <section aria-label="إعدادات القراءة" className={`rounded-[24px] border p-5 shadow-sm ${darkMode ? 'border-white/10 bg-[#203841] text-white' : 'border-[#e9dac2] bg-white'}`}>
           <div className="flex items-center justify-between"><h2 className="flex items-center gap-2 text-sm font-black"><TypeIcon size={18} /> تفضيلات القراءة</h2><button type="button" onClick={() => setSettingsOpen(false)} aria-label="إغلاق الإعدادات"><X size={18} /></button></div>
           <div className="mt-4 flex flex-wrap items-center gap-3">
             <span className="text-xs font-bold">حجم الخط</span>
@@ -822,43 +735,48 @@ function ReadAdhkarContent() {
           </div>
           <p className="mt-3 text-[11px] leading-6 text-slate-500">إخفاء التشكيل يغيّر طريقة العرض فقط؛ النص الأصلي محفوظ بلا تغيير.</p>
         </section>}
-        <section className="relative overflow-hidden rounded-[28px] bg-gradient-to-br from-[#1c5960] via-[#13484f] to-[#0e3038] p-5 text-white shadow-[0_16px_42px_rgba(13,54,58,0.18)] sm:p-7">
-          <div aria-hidden="true" className="pointer-events-none absolute -left-12 -top-12 h-44 w-44 rounded-full border border-white/10" />
-          <div className="relative flex items-start gap-3"><span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/10 text-[#e9ca92]"><Headphones size={23} /></span><div className="min-w-0 flex-1"><p className="text-xs font-bold text-[#e9ca92]">القراءة والتلاوة</p><h2 className="mt-1 text-xl font-black">{selectedReader.name}</h2><p className="mt-2 text-xs leading-6 text-white/70">الورد النصي مستقل عن التسجيلات. لا تُحسب الأذكار تلقائيًا عند تشغيل تسجيل القسم كاملًا، لعدم توفر توقيت مطابق لكل ذكر.</p></div></div>
-          <div className="relative mt-5">
-            <select aria-label="اختيار قارئ الأذكار" value={visibleReciters.length ? selectedReader.id : ''} disabled={!visibleReciters.length} onChange={(event: ChangeEvent<HTMLSelectElement>) => changeReciter(event.target.value)} className="w-full appearance-none rounded-2xl border border-white/20 bg-white px-4 py-3.5 pl-11 text-sm font-black text-[#183e46] outline-none disabled:opacity-70">
-              {!visibleReciters.length && <option value="">لا توجد تسجيلات صوتية لهذا القسم</option>}
-              {visibleReciters.map((reader) => <option value={reader.id} key={reader.id}>{reader.name}</option>)}
-            </select>
-            <ChevronDown size={18} className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#ac894f]" />
-          </div>
-          <div className="mt-3 flex flex-wrap gap-2 text-[11px] font-bold">
-            <span className="rounded-full bg-white/10 px-3 py-1.5">{hasAudio ? 'تسجيل مُدرج — يتحقق عند التشغيل' : 'قراءة وعداد فقط'}</span>
-            {cachedData && <span className="inline-flex items-center gap-1 rounded-full bg-white/10 px-3 py-1.5"><WifiOff size={13} /> بيانات محفوظة</span>}
-          </div>
+        <section className="rounded-[26px] bg-gradient-to-br from-[#245c54] to-[#153f48] p-4 text-white shadow-sm sm:p-5">
+          <div className="mb-3 flex items-center justify-between gap-3"><p className="text-xs font-bold text-[#ead3ac]">صوت يرافق وردك</p><span className="text-[11px] text-white/70">{numberAr(recordedItems.length)} من {numberAr(items.length)} ذكرًا مسجّلًا</span></div>
+          <ReaderPicker dark={darkMode} value={selectedReader.id} onChange={changeReciter} readers={visibleReciters.map(reader => ({
+            id: reader.id, name: reader.name, totalCount: items.length,
+            availableCount: items.filter(item => Boolean(getIndividualAdhkarAudio(reader.id, item, audioSectionType || undefined))).length,
+            hasComplete: Boolean(audioSectionType ? findAdhkarRecording(reader.id, audioSectionType, {allowCombined:true}) : categoryId && findAdhkarCategoryRecording(reader.id, categoryId)),
+          }))}/>
         </section>
 
         {error && <div role="alert" className="rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm leading-7 text-amber-900">{error}<Link href="/adhkar" className="mr-2 font-bold underline">العودة للأذكار</Link></div>}
         {message && <p role="status" className="rounded-2xl border border-[#ddcba8] bg-[#fffaf0] p-4 text-sm leading-7 text-[#786039]">{message}</p>}
 
-        <section className="rounded-[26px] border border-[#e9dece] bg-white p-4 shadow-sm sm:p-5">
-          {combinedTrack && <p className="mb-3 rounded-2xl border border-[#e9d4a9] bg-[#fff8e8] p-3 text-xs leading-6 text-[#806030]">هذا تسجيل واحد يجمع أذكار اليوم والليلة، وليس تسجيلًا مستقلًا لكل من الصباح والمساء. تشغيله لا يحتسب عدّاد أي ذكر تلقائيًا.</p>}
-          {sectionTrack && sectionUrl && <div className="mb-3 flex flex-wrap items-center gap-3 text-xs"><span className="text-[#82908c]">حالة رابط التسجيل: {checkState === 'checking' ? 'جارٍ الفحص…' : checkState === 'available' ? 'تم الوصول إلى الصوت' : checkState === 'unavailable' ? 'الرابط غير متاح حاليًا' : checkState === 'unknown' ? 'تعذر التأكد من الرابط' : 'لم يُفحص'}</span><button type="button" disabled={checkState === 'checking'} onClick={() => { setCheckState('checking'); void checkAdhkarRecording(sectionTrack).then((result) => setCheckState(result.status)).catch(() => setCheckState('unknown')) }} className="rounded-xl border border-[#e6d7bf] bg-white px-3 py-2 font-bold text-[#765e3c] disabled:opacity-50">فحص التسجيل</button></div>}
-          <div className="mb-4 flex items-center justify-between gap-3"><div><p className="text-xs font-black text-[#b08b4e]">المشغّل الصوتي</p><h2 className="mt-1 text-base font-black">{audioMode === 'item' && activeItem ? 'تشغيل الذكر بالتكرار' : sectionTrack?.title || 'تسجيلات الأذكار'}</h2></div><span className="rounded-full bg-[#f7f1e7] px-3 py-1.5 text-[11px] font-bold text-[#927345]">{audioMode === 'item' ? 'متتابع' : audioMode === 'section' ? 'الورد كاملًا' : 'جاهز'}</span></div>
+        <section aria-label="مشغل الأذكار" className={`rounded-[26px] border p-4 shadow-sm sm:p-5 ${darkMode ? 'border-white/10 bg-[#203841]' : 'border-[#e9dece] bg-white'}`}>
+          <div className="mb-4 flex items-center justify-between gap-3"><div><p className={`text-xs font-black ${darkMode ? 'text-[#dfc79b]' : 'text-[#836030]'}`}>المشغّل الصوتي</p><h2 className="mt-1 text-base font-black">{audioMode === 'item' && activeItem ? 'تشغيل الذكر بالتكرار' : canPlayItem ? 'ملفات الأذكار الفردية' : sectionTrack?.title || 'تسجيلات الأذكار'}</h2></div><span className="rounded-full bg-[#f7f1e7] px-3 py-1.5 text-[11px] font-bold text-[#765930]">{audioMode === 'item' ? playback.queue.length > 1 ? 'متتابع' : 'ذكر واحد' : audioMode === 'section' ? 'الورد كاملًا' : 'جاهز'}</span></div>
           <div className="rounded-[22px] bg-[#153f48] p-4 text-white">
             <div className="flex items-center gap-3"><span className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 text-[#ecc993]"><Volume2 size={20} /></span><div className="min-w-0 flex-1"><p className="truncate text-sm font-bold">{selectedReader.name}</p><p className="mt-1 line-clamp-1 text-xs text-white/60">{audioMode === 'item' && activeItem ? activeItem.text : sectionTrack?.title || 'اختر ذكرًا مسجّلًا'}</p></div>
               <button type="button" onClick={togglePlayback} disabled={!hasAudio} aria-label={audioLoading ? 'إيقاف تحميل التسجيل' : playing ? 'إيقاف مؤقت' : 'تشغيل'} className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#d9b77d] text-[#163a41] disabled:opacity-40">{audioLoading ? <Loader2 size={19} className="animate-spin" /> : playing ? <Pause size={20} fill="currentColor" /> : <Play size={20} fill="currentColor" />}</button>
               <button type="button" onClick={stopAudio} disabled={!audioMode} aria-label="إيقاف التسجيل" className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10 disabled:opacity-30"><Square size={16} fill="currentColor" /></button>
             </div>
             <div className="mt-4 flex items-center justify-between text-[11px] text-white/60"><span>{timeLabel(position)}</span><span>{timeLabel(duration)}</span></div>
-            <input aria-label="تغيير موضع التلاوة" type="range" min={0} max={Math.max(duration, 1)} step={1} value={Math.min(position, Math.max(duration, 1))} disabled={!duration || !audioMode} onChange={(event: ChangeEvent<HTMLInputElement>) => { const value = Number(event.target.value); if (audioRef.current && Number.isFinite(value)) { audioRef.current.currentTime = value; setPosition(value) } }} className="mt-2 w-full accent-[#d9b77d] disabled:opacity-40" />
-            <div className="mt-3 flex items-center justify-between gap-3 text-xs"><span className="text-white/70">السرعة</span><select aria-label="سرعة تشغيل الأذكار" value={speed} onChange={(event: ChangeEvent<HTMLSelectElement>) => setSpeed(Number(event.target.value))} className="rounded-xl border border-white/20 bg-white/10 px-3 py-2 text-white"><option className="text-black" value={0.85}>0.85×</option><option className="text-black" value={1}>1×</option><option className="text-black" value={1.15}>1.15×</option><option className="text-black" value={1.3}>1.3×</option></select></div>
+            <input aria-label="تغيير موضع التلاوة" type="range" min={0} max={Math.max(duration, 1)} step={1} value={Math.min(position, Math.max(duration, 1))} disabled={!duration || !audioMode} onChange={(event: ChangeEvent<HTMLInputElement>) => { const value = Number(event.target.value); if (ownsAudio && Number.isFinite(value)) appAudio.seek(value) }} className="mt-2 w-full accent-[#d9b77d] disabled:opacity-40" />
+
           </div>
-          {hasAudio && <div className="mt-3 flex flex-wrap gap-2"><button type="button" onClick={() => void saveRecordings()} disabled={downloadCount !== null} className="inline-flex items-center gap-2 rounded-xl border border-[#e8d9bf] bg-[#fffaf0] px-4 py-3 text-xs font-bold text-[#85653a]"><Download size={16} />{downloadCount !== null ? `جارٍ الحفظ ${numberAr(downloadCount)} / ${numberAr(downloadTotal)}` : 'تنزيل الصوت المتاح دون نت'}</button>{downloadCount !== null && <button type="button" onClick={() => downloadControllerRef.current?.abort()} className="rounded-xl bg-[#fff1ef] px-4 py-3 text-xs font-bold text-red-700">إيقاف التنزيل</button>}</div>}
+          <div className="mt-3 flex flex-wrap items-center gap-2">{canPlayItem && <button type="button" onClick={startAll} className="inline-flex min-h-11 items-center gap-2 rounded-xl bg-[#245d4e] px-4 text-xs font-bold text-white"><Play size={15}/>{onlyFavorites ? 'تشغيل المفضلة المتاحة' : listeningMode==='remaining' ? 'تشغيل المتبقي من الأذكار' : 'تشغيل كل المتاح'}</button>}{audioMode==='item' && ownsAudio && <span role="status" className="rounded-full bg-[#bca06c]/15 px-3 py-2 text-[11px] font-bold">الاستماع {numberAr(Math.min(playback.playTarget,playback.playCount+(playing||audioLoading?1:0)))} / {numberAr(playback.playTarget)}</span>}</div>
+          <details className="mt-3 border-t border-[#bca06c]/20 pt-3"><summary className={`cursor-pointer py-1 text-xs font-bold ${darkMode ? 'text-[#dfc79b]' : 'text-[#836030]'}`}>التكرار والسرعة والتنزيل</summary>
+            <RepeatControls mode={listeningMode} value={repeatInput} dark={darkMode} onMode={mode=>{stopAudio();setListeningMode(mode)}} onValue={value=>{stopAudio();setRepeatInput(value)}} onBlur={()=>setRepeatInput(String(customRepeats))}/>
+            <div className="mb-3 rounded-2xl bg-[#153f48] p-3 text-white">
+            <div className="mt-3 flex items-center justify-between gap-3 text-xs"><span className="text-white/70">السرعة</span><select aria-label="سرعة تشغيل الأذكار" value={speed} onChange={(event: ChangeEvent<HTMLSelectElement>) => setSpeed(Number(event.target.value))} className="rounded-xl border border-white/20 bg-white/10 px-3 py-2 text-white"><option className="text-black" value={0.85}>0.85×</option><option className="text-black" value={1}>1×</option><option className="text-black" value={1.15}>1.15×</option><option className="text-black" value={1.3}>1.3×</option></select></div>
+            </div>
+          {hasAudio && <div className="mt-3 flex flex-wrap gap-2"><button type="button" onClick={() => void saveRecordings()} disabled={downloadCount !== null} className="inline-flex items-center gap-2 rounded-xl border border-[#e8d9bf] bg-[#fffaf0] px-4 py-3 text-xs font-bold text-[#85653a]"><Download size={16} />{downloadCount !== null ? `جارٍ الحفظ ${numberAr(downloadCount)} / ${numberAr(downloadTotal)} · ${numberAr(downloadPercent)}٪` : canPlayItem ? 'تنزيل ملفات الأذكار المتاحة دون نت' : 'تنزيل الصوت المتاح دون نت'}</button>{downloadCount !== null && <button type="button" onClick={() => downloadControllerRef.current?.abort()} className="rounded-xl bg-[#fff1ef] px-4 py-3 text-xs font-bold text-red-700">إيقاف التنزيل</button>}</div>}
+          {canPlayItem && recordedItems.length < items.length && <p className="mt-3 text-xs leading-7 text-[#7a8b8c]">المتاح بصوت هذا القارئ {numberAr(recordedItems.length)} من {numberAr(items.length)} ذكرًا في هذا الباب. الأذكار الأخرى متاحة للقراءة والعد.</p>}
+          {canPlayItem && sectionUrl && <div className="mt-3 flex flex-wrap gap-2"><button type="button" onClick={startSection} className={`rounded-xl border border-[#e8d9bf] px-3 py-2 text-xs font-bold ${darkMode ? 'text-[#dfc79b]' : 'text-[#765930]'}`}>تشغيل تسجيل الورد كاملًا</button><button type="button" disabled={downloadCount !== null} onClick={() => void saveRecordings('section')} className={`rounded-xl border border-[#e8d9bf] px-3 py-2 text-xs font-bold disabled:opacity-50 ${darkMode ? 'text-[#dfc79b]' : 'text-[#765930]'}`}>تنزيل تسجيل الورد كاملًا</button></div>}
+
+          {combinedTrack && <p className="mb-3 rounded-2xl border border-[#e9d4a9] bg-[#fff8e8] p-3 text-xs leading-6 text-[#806030]">هذا تسجيل واحد يجمع أذكار اليوم والليلة، وليس تسجيلًا مستقلًا لكل من الصباح والمساء. تشغيله لا يحتسب عدّاد أي ذكر تلقائيًا.</p>}
+          {sectionTrack && sectionUrl && <div className="mb-3 flex flex-wrap items-center gap-3 text-xs"><span className="text-[#82908c]">حالة رابط التسجيل: {checkState === 'checking' ? 'جارٍ الفحص…' : checkState === 'available' ? 'تم الوصول إلى الصوت' : checkState === 'unavailable' ? 'الرابط غير متاح حاليًا' : checkState === 'unknown' ? 'تعذر التأكد من الرابط' : 'لم يُفحص'}</span><button type="button" disabled={checkState === 'checking'} onClick={() => { setCheckState('checking'); void checkAdhkarRecording(sectionTrack).then((result) => setCheckState(result.status)).catch(() => setCheckState('unknown')) }} className="rounded-xl border border-[#e6d7bf] bg-white px-3 py-2 font-bold text-[#765e3c] disabled:opacity-50">فحص التسجيل</button></div>}
+          </details>
           {!hasAudio && <p className="mt-3 text-xs leading-6 text-[#899394]">القارئ المختار لا يتوفر له تسجيل مطابق لهذا القسم حاليًا. يمكنك القراءة والعد بشكل طبيعي.</p>}
         </section>
 
-        <div className="flex flex-wrap items-center justify-between gap-3"><div><h2 className="text-lg font-black">{title}</h2><p className="mt-1 text-xs text-[#7a8b8c]">اضغط على دائرة العد الذهبية بعد كل تكرار، وسينقص الرقم تلقائيًا ويُحفظ تقدمك.</p></div><div className="flex items-center gap-2"><button type="button" onClick={() => setOnlyFavorites((v) => !v)} className={`inline-flex items-center gap-2 rounded-xl border px-3 py-2.5 text-xs font-bold ${onlyFavorites ? 'border-[#d9b77d] bg-[#f7ead5] text-[#755323]' : 'border-[#e9dece] bg-white text-[#5e777a]'}`}><ListFilter size={16} />{onlyFavorites ? 'كل الأذكار' : 'المفضلة'}</button><button type="button" onClick={resetAll} disabled={!items.length} className="inline-flex items-center gap-2 rounded-xl border border-[#e9dece] bg-white px-3 py-2.5 text-xs font-bold text-[#21464b] disabled:opacity-50"><RotateCcw size={16} />إعادة الكل</button></div></div>
+        <div className="flex flex-wrap items-center justify-between gap-3"><div><h2 className="text-lg font-black">{title}</h2><p className="mt-1 text-xs opacity-60">اقرأ بتأنٍّ، واضغط العدّاد بعد كل مرة تقرؤها بنفسك.</p></div><div role="group" aria-label="طريقة عرض الأذكار" className="inline-flex rounded-xl bg-[#b8a17c]/15 p-1">{([['focus','ذكر واحد'],['list','القائمة']] as const).map(([mode,label])=><button key={mode} type="button" aria-pressed={viewMode===mode} onClick={()=>setViewMode(mode)} className={`min-h-10 rounded-lg px-4 text-xs font-bold ${viewMode===mode?darkMode?'bg-[#245d4e] text-white':'bg-white text-[#245d4e] shadow-sm':'opacity-60'}`}>{label}</button>)}</div></div>
+        <div className="flex flex-wrap items-center justify-between gap-2"><button type="button" onClick={()=>setOnlyFavorites(v=>!v)} aria-pressed={onlyFavorites} className={`inline-flex min-h-11 items-center gap-2 rounded-xl border px-3 text-xs font-bold ${onlyFavorites?'border-[#c4a66d] bg-[#f4ead7] text-[#806239]':darkMode?'border-white/15':'border-[#e4daca] bg-white'}`}><Heart size={15} fill={onlyFavorites?'currentColor':'none'}/>{onlyFavorites?'المفضلة فقط':'عرض المفضلة'}</button><button type="button" onClick={resetAll} disabled={!items.length} className="inline-flex min-h-11 items-center gap-2 px-3 text-xs font-bold opacity-65"><RotateCcw size={15}/>إعادة عدّادات الورد</button></div>
+        {viewMode==='focus' && readingItems.length>0 && <nav aria-label="التنقل بين الأذكار" className={`flex items-center justify-between rounded-2xl border p-2 ${darkMode?'border-white/10':'border-[#e5daca] bg-white'}`}><button type="button" disabled={focusPosition===0} onClick={()=>moveFocus(focusPosition-1)} className="min-h-11 rounded-xl px-3 text-xs font-bold disabled:opacity-30">السابق</button><p role="status" className="text-xs font-bold opacity-65">الذكر {numberAr(focusPosition+1)} من {numberAr(readingItems.length)}</p><button type="button" disabled={focusPosition+1>=readingItems.length} onClick={()=>moveFocus(focusPosition+1)} className="min-h-11 rounded-xl px-3 text-xs font-bold disabled:opacity-30">التالي</button></nav>}
 
         {loading && <div className="flex flex-col items-center justify-center gap-3 py-16"><Loader2 size={32} className="animate-spin text-[#ba965e]" /><p className="text-sm text-[#7a8b8c]">جارٍ تجهيز الأذكار…</p></div>}
         {!loading && !items.length && !error && <div className="rounded-2xl bg-white p-8 text-center text-sm text-[#7a8b8c]">لا توجد أذكار للعرض في هذا القسم.</div>}
@@ -873,8 +791,8 @@ function ReadAdhkarContent() {
             const liked = favorites.includes(item.id)
             const itemPlayable = Boolean(itemUrl(item))
             return (
-              <article key={`${item.id}-${index}`} className={`rounded-[26px] border p-5 shadow-sm transition sm:p-6 ${darkMode ? 'border-[#435657] bg-[#203841] text-[#f5f1e8]' : done ? 'border-[#b9dbd0] bg-[#f5fbf7]' : active ? 'border-[#c7a56c] bg-white ring-1 ring-[#e8d7b8]' : 'border-[#e9dfd1] bg-white'}`}>
-                <div className="mb-4 flex items-center justify-between gap-3"><div className="flex items-center gap-3"><span className={`flex h-10 w-10 items-center justify-center rounded-xl text-sm font-black ${done ? 'bg-[#e4f4e9] text-[#31765d]' : 'bg-[#f4ede1] text-[#987645]'}`}>{done ? <Check size={20} /> : numberAr(index + 1)}</span><div><p className="text-[11px] text-[#8d9797]">العدد المطلوب</p><p className="text-sm font-black">{numberAr(item.count)} {item.count === 1 ? 'مرة' : 'مرات'}</p></div></div><button type="button" onClick={() => toggleFavorite(item.id)} aria-label={liked ? 'إزالة من المفضلة' : 'إضافة للمفضلة'} className={`rounded-xl p-2.5 ${liked ? 'bg-red-50 text-red-500' : 'bg-[#f9f6f1] text-[#aaa19a]'}`}><Heart size={19} fill={liked ? 'currentColor' : 'none'} /></button></div>
+              <article key={`${item.id}-${index}`} aria-label={`الذكر ${numberAr(index+1)}`} className={`scroll-mt-36 rounded-[26px] border p-5 shadow-sm transition sm:p-6 ${darkMode ? 'border-[#435657] bg-[#203841] text-[#f5f1e8]' : done ? 'border-[#b9dbd0] bg-[#f5fbf7]' : active ? 'border-[#c7a56c] bg-white ring-1 ring-[#e8d7b8]' : 'border-[#e9dfd1] bg-white'}`}>
+                <div className="mb-4 flex items-center justify-between gap-3"><div className="flex items-center gap-3"><span className={`flex h-10 w-10 items-center justify-center rounded-xl text-sm font-black ${done ? 'bg-[#e4f4e9] text-[#31765d]' : 'bg-[#f4ede1] text-[#987645]'}`}>{done ? <Check size={20} /> : numberAr(index + 1)}</span><div><p className={`text-[11px] ${darkMode ? 'text-[#b4c5c1]' : 'text-[#60736f]'}`}>العدد المطلوب</p><p className="text-sm font-black">{numberAr(item.count)} {item.count === 1 ? 'مرة' : 'مرات'}</p></div></div><button type="button" onClick={() => toggleFavorite(item.id)} aria-label={liked ? 'إزالة من المفضلة' : 'إضافة للمفضلة'} className={`rounded-xl p-2.5 ${liked ? 'bg-red-50 text-red-500' : 'bg-[#f9f6f1] text-[#7f766e]'}`}><Heart size={19} fill={liked ? 'currentColor' : 'none'} /></button></div>
                 <p className={`font-uthmani leading-[2.15] ${darkMode ? 'text-[#f9f4e9]' : 'text-[#214349]'} ${done ? 'opacity-75' : ''}`} style={{ fontSize: `${fontSize}px` }}>{readingText(item.text)}</p>
 
                 <div className={`mt-6 flex flex-col items-center gap-3 rounded-[24px] border px-4 py-5 ${darkMode ? 'border-white/10 bg-[#162d35]' : done ? 'border-[#cce3d6] bg-[#eff8f2]' : 'border-[#eee0ca] bg-gradient-to-b from-[#fffcf6] to-[#faf3e7]'}`}>
@@ -909,7 +827,7 @@ function ReadAdhkarContent() {
                 </div>
 
                 <div className="mt-5 flex flex-wrap items-center gap-2 border-t border-[#f0e8dc] pt-4">
-                  {itemPlayable && <button type="button" onClick={() => { if (active && audioMode === 'item') togglePlayback(); else startItem(index) }} className="inline-flex items-center gap-1.5 rounded-xl bg-[#175660] px-3 py-2.5 text-xs font-bold text-white">{active && playing && audioMode === 'item' ? <Pause size={16} /> : <Play size={16} />} تشغيل الذكر</button>}
+                  {itemPlayable && <button type="button" onClick={() => { if (active && audioMode === 'item') togglePlayback(); else startItem(index) }} className="inline-flex items-center gap-1.5 rounded-xl bg-[#175660] px-3 py-2.5 text-xs font-bold text-white">{active && playing && audioMode === 'item' ? <Pause size={16} /> : <Play size={16} />} استمع لهذا الذكر</button>}
                   <button type="button" onClick={() => void copyText(item)} className="inline-flex items-center gap-1.5 rounded-xl bg-[#f5efe5] px-3 py-2.5 text-xs font-bold text-[#80613b]">{copied === item.id ? <CheckCheck size={16} /> : <Copy size={16} />}{copied === item.id ? 'تم النسخ' : 'نسخ'}</button>
                   <button type="button" onClick={() => resetOne(item)} className="inline-flex items-center gap-1.5 rounded-xl bg-[#f5f6f5] px-3 py-2.5 text-xs font-bold text-[#6e7f80]"><RotateCcw size={16} />إعادة</button>
                   <button type="button" onClick={() => setSourceItem(item)} className="inline-flex items-center gap-1.5 rounded-xl bg-[#edf4f1] px-3 py-2.5 text-xs font-bold text-[#396c5b]"><Info size={16} />المصدر</button>
@@ -919,6 +837,11 @@ function ReadAdhkarContent() {
             )
           })}
         </div>
+
+        {viewMode === 'focus' && readingItems.length > 1 && <nav aria-label="متابعة قراءة الأذكار" className="grid grid-cols-2 gap-3">
+          <button type="button" disabled={focusPosition === 0} onClick={() => moveFocus(focusPosition - 1)} className={`flex min-h-12 items-center justify-center gap-2 rounded-2xl border text-sm font-bold disabled:opacity-40 ${darkMode ? 'border-white/15' : 'border-[#e1d6c5] bg-white'}`}><ArrowRight size={17}/>الذكر السابق</button>
+          <button type="button" disabled={focusPosition + 1 >= readingItems.length} onClick={() => moveFocus(focusPosition + 1)} className="flex min-h-12 items-center justify-center gap-2 rounded-2xl bg-[#245d4e] text-sm font-bold text-white disabled:opacity-40">الذكر التالي<ArrowRight size={17} className="rotate-180"/></button>
+        </nav>}
 
         {!!items.length && progress === 100 && <section className="rounded-[26px] bg-[#184a52] p-7 text-center text-white shadow-lg"><CheckCheck size={43} className="mx-auto text-[#e9c68e]" /><h2 className="mt-3 text-2xl font-black">تقبّل الله طاعتكم</h2><p className="mt-2 text-sm text-white/70">أتممت {title} كاملًا.</p><Link href="/adhkar" className="mt-5 inline-flex items-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-bold text-[#184a52]"><BookOpen size={18} />العودة إلى الأذكار</Link></section>}
         {sourceItem && <div className="fixed inset-0 z-[110] flex items-center justify-center bg-black/60 p-4" onClick={() => setSourceItem(null)}>

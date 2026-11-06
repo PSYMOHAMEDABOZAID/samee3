@@ -46,6 +46,8 @@ module.exports = (phase) => {
 
   async headers() {
     return [
+      { source: '/audio/adhkar/:path*', headers: [{ key: 'Access-Control-Allow-Origin', value: '*' }, { key: 'Access-Control-Expose-Headers', value: 'Content-Length, Content-Range, Accept-Ranges, ETag' }, { key: 'Cache-Control', value: 'public, max-age=3600' }] },
+      { source: '/data/adhkar-audio/:path*', headers: [{ key: 'Access-Control-Allow-Origin', value: '*' }, { key: 'Cache-Control', value: 'public, max-age=300' }] },
       { source: '/sw.js', headers: [{ key: 'Cache-Control', value: 'no-cache, max-age=0, must-revalidate' }, { key: 'Service-Worker-Allowed', value: '/' }] },
       { source: '/sw-build.js', headers: [{ key: 'Cache-Control', value: 'no-cache, max-age=0, must-revalidate' }] },
       { source: '/manifest.json', headers: [{ key: 'Cache-Control', value: 'no-cache, max-age=0, must-revalidate' }] },

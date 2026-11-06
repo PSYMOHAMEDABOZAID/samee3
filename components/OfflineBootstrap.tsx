@@ -1,6 +1,9 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation'
+import { appAudio } from '@/lib/app-audio'
+import { currentOfflineCache, offlineRscKey, QUERY_INDEPENDENT_ROUTES } from '@/lib/offline-navigation'
 import {
   pageDataUrl,
   pageSvgUrl,
@@ -27,8 +30,8 @@ import {
  */
 
 const PUBLIC_PAGES = [
-  '/', '/mushaf', '/surahs', '/index', '/adhkar', '/adhkar/read',
-  '/hadith', '/audio', '/prayer', '/islamic-library',
+  '/', '/mushaf', '/surahs', '/index', '/adhkar', '/adhkar/read', '/adhkar/recordings',
+  '/hadith', '/audio', '/audio/alafasy-riwayat', '/prayer', '/islamic-library',
   '/offline', '/offline/manage', '/offline/test', '/notifications',
   '/notifications/hadith',
 ] as const
@@ -41,14 +44,7 @@ const isPublic = (path: string): boolean =>
   PUBLIC_PAGES.some((route) => route === path) ||
   /^\/islamic-library\/(?:level|book)\//.test(path)
 
-function cacheName(names: string[], type: 'navigation' | 'assets'): string | null {
-  const pattern = new RegExp(`^samee3-sw-v(\\d+)-${type}$`)
-  const matches = names
-    .map((name) => ({ name, match: pattern.exec(name) }))
-    .filter((entry) => entry.match !== null)
-    .sort((a, b) => Number(b.match?.[1] || 0) - Number(a.match?.[1] || 0))
-  return matches[0]?.name || null
-}
+const cacheName = currentOfflineCache
 
 function safeResponse(response: Response, expected: 'html' | 'asset'): boolean {
   if (!response.ok || response.redirected || response.type === 'opaque') return false
@@ -83,6 +79,8 @@ async function warmPublicSections(signal: AbortSignal): Promise<void> {
   if (!navName || !assetsName) return
   const nav = await caches.open(navName)
   const assets = await caches.open(assetsName)
+  const rscName = cacheName(names, 'rsc')
+  const rsc = rscName ? await caches.open(rscName) : null
   const assetUrls = new Set<string>()
 
   for (const path of PUBLIC_PAGES) {
@@ -102,6 +100,14 @@ async function warmPublicSections(signal: AbortSignal): Promise<void> {
         const url = new URL(normalized, location.origin)
         if (url.origin === location.origin && url.pathname.startsWith('/_next/static/')) {
           assetUrls.add(url.href)
+        }
+      }
+      if (rsc && QUERY_INDEPENDENT_ROUTES.has(path)) {
+        // A full Flight response (without a router-state/prefetch header) can
+        // restore this public route from any previous page without a reload.
+        const flight = await fetch(path, { credentials: 'omit', cache: 'no-cache', signal, headers: { RSC: '1' } })
+        if (safeResponse(flight, 'asset') && (flight.headers.get('Content-Type') || '').includes('text/x-component')) {
+          await rsc.put(offlineRscKey(path, location.origin), flight)
         }
       }
     } catch { /* One missing page must not prevent preparing the others. */ }
@@ -248,6 +254,8 @@ async function warmHafs(signal: AbortSignal): Promise<void> {
     let processed = 0
     const work = async () => {
       while (next < queue.length && failures < 10 && !signal.aborted && navigator.onLine) {
+        const playback = appAudio.getSnapshot()
+        if (playback.playing || playback.loading) { await delay(1500, signal); continue }
         const page = queue[next++]
         if (++processed % 15 === 0 && !(await hasSpace())) break
         refreshLock(token)
@@ -266,6 +274,8 @@ async function warmHafs(signal: AbortSignal): Promise<void> {
 }
 
 export default function OfflineBootstrap() {
+  const router = useRouter()
+  const [navigationMessage, setNavigationMessage] = useState('')
   useEffect(() => {
     if (!('caches' in window) || !('serviceWorker' in navigator) || !window.isSecureContext) return
     let disposed = false
@@ -319,11 +329,23 @@ export default function OfflineBootstrap() {
       let url: URL
       try { url = new URL(link.href) } catch { return }
       if (url.origin !== location.origin || !isPublic(url.pathname)) return
-      // App Router RSC prefetch URLs are not guaranteed to exist offline;
-      // a full document navigation uses the already-cached public HTML.
       event.preventDefault()
       event.stopPropagation()
-      location.assign(url.href)
+      void (async () => {
+        try {
+          const name = cacheName(await caches.keys(), 'rsc')
+          const cache = name ? await caches.open(name) : null
+          const saved = await cache?.match(offlineRscKey(url.href, location.origin), { ignoreVary: true }) ||
+            (QUERY_INDEPENDENT_ROUTES.has(url.pathname) ? await cache?.match(offlineRscKey(url.pathname, location.origin), { ignoreVary: true }) : null)
+          if (saved) { setNavigationMessage(''); router.push(url.pathname + url.search + url.hash); return }
+        } catch { /* the saved HTML may still be usable */ }
+        const playback = appAudio.getSnapshot()
+        if (playback.playing || playback.loading) {
+          setNavigationMessage('هذه الصفحة لم يكتمل تجهيزها دون إنترنت. اتصل بالإنترنت لفتحها مع استمرار الصوت.')
+          return
+        }
+        location.assign(url.href)
+      })()
     }
     const timer = window.setTimeout(() => { void start() }, 350)
     window.addEventListener('online', onOnline)
@@ -339,6 +361,6 @@ export default function OfflineBootstrap() {
       navigator.serviceWorker.removeEventListener('controllerchange', onControllerChange)
       document.removeEventListener('click', onClick, true)
     }
-  }, [])
-  return null
+  }, [router])
+  return navigationMessage ? <aside dir="rtl" role="status" className="fixed inset-x-4 top-4 z-[135] mx-auto max-w-lg rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm leading-7 text-amber-900" onClick={() => setNavigationMessage('')}>{navigationMessage}</aside> : null
 }

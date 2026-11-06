@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { BellRing, Maximize, X } from 'lucide-react'
 import { useAndroidApp, nativeRequest } from '@/lib/android-native'
-import { enableWebPush, installedWebApp, iosDevice, pushIdentity, pushSupport, readWebSettings } from '@/lib/web-push-client'
+import { enableWebPush, fetchWebPushConfig, installedWebApp, iosDevice, pushIdentity, pushSupport, readWebSettings } from '@/lib/web-push-client'
 import { reminderEvents } from '@/lib/web-reminders'
 const ID_KEY = 'samee3_install_id_v1', PROMPT_KEY = 'samee3_notification_onboarding_v1'
 function installId() {
@@ -52,7 +52,7 @@ export default function AppExperience() {
   useEffect(() => {
     if (!prompt || android || !pushSupport()) return
     const controller = new AbortController()
-    void fetch('/api/web-push', { cache: 'no-store', signal: controller.signal }).then(r => r.json()).then(setConfig).catch(() => {})
+    void fetchWebPushConfig(controller.signal).then(value => { if (!controller.signal.aborted) setConfig(value) }).catch(() => {})
     return () => controller.abort()
   }, [prompt, android?.platform])
   useEffect(() => {

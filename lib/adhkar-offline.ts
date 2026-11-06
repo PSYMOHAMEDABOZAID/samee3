@@ -3,17 +3,19 @@
  * Caches only fully downloaded audio, without converting full MP3 files to Blob.
  * Does not delete any existing recordings.
  */
+import { isLocalAdhkarMediaPath } from './adhkar-media-path'
+
 export const ADHKAR_AUDIO_CACHE = 'samee3-adhkar-audio-v1'
 export const ADHKAR_AUDIO_PLAY_PATH = '/__samee3_adhkar_offline'
 const MAX_BYTES = 180 * 1024 * 1024
-const CHUNK_BYTES = 1024 * 1024
+const CHUNK_BYTES = 512 * 1024
+const REQUEST_TIMEOUT_MS = 25000
 
 function checkedURL(url: string): string {
-  if (!url.startsWith('/api/adhkar-audio?url=')) {
-    throw new Error('رابط الأذكار غير صالح.')
-  }
   const resolved = new URL(url, location.origin)
-  if (resolved.origin !== location.origin || resolved.pathname !== '/api/adhkar-audio') {
+  const local = isLocalAdhkarMediaPath(resolved.pathname) && !resolved.search && !resolved.hash
+  const proxy = resolved.pathname === '/api/adhkar-audio' && Boolean(resolved.searchParams.get('url'))
+  if (resolved.origin !== location.origin || (!proxy && !local)) {
     throw new Error('رابط التسجيل يجب أن يكون من داخل سميع.')
   }
   return resolved.href
@@ -53,25 +55,71 @@ async function saveResponse(cache: Cache, url: string, response: Response, signa
 
 async function fetchPart(url: string, first: number, last: number, signal: AbortSignal): Promise<Response> {
   let lastError: unknown
-  for (let attempt = 0; attempt < 2; attempt += 1) {
+  for (let attempt = 0; attempt < 3; attempt += 1) {
     if (signal.aborted) throw new DOMException('Aborted', 'AbortError')
+    const controller = new AbortController()
+    const cancel = () => controller.abort()
+    signal.addEventListener('abort', cancel, { once: true })
+    let timer = setTimeout(cancel, REQUEST_TIMEOUT_MS)
+    let transferred = false
+    const finish = () => { clearTimeout(timer); signal.removeEventListener('abort', cancel) }
     try {
       const response = await fetch(url, {
         method: 'GET',
         cache: 'no-store',
-        signal,
+        signal: controller.signal,
         headers: { Range: `bytes=${first}-${last}` },
       })
-      if ((response.status === 206 || response.status === 200) && validAudio(response)) return response
+      if ((response.status === 206 || response.status === 200) && validAudio(response) && response.body) {
+        // Retry an interrupted *part*, including body-read failures. Previously
+        // a dropped connection restarted the entire long recording three times.
+        if (response.status === 206) {
+          const match = /^bytes\s+(\d+)-(\d+)\/(\d+)$/i.exec(response.headers.get('Content-Range') || '')
+          if (!match || Number(match[1]) !== first || Number(match[2]) > last || Number(match[2]) < first || Number(match[3]) > MAX_BYTES || Number(match[2]) >= Number(match[3])) {
+            await response.body.cancel(); throw new Error('الخادم أعاد جزءًا غير مطابق للتسجيل.')
+          }
+          const expected = Number(match[2]) - first + 1
+          const reader = response.body.getReader(), chunks: Uint8Array[] = []
+          let received = 0
+          try {
+            for (;;) {
+              const next = await reader.read()
+              if (next.done) break
+              received += next.value.byteLength
+              if (received > expected || received > CHUNK_BYTES) throw new Error('حجم الجزء الصوتي غير صالح.')
+              chunks.push(next.value)
+            }
+          } finally { await reader.cancel().catch(() => undefined); reader.releaseLock() }
+          if (received !== expected) throw new Error('انقطع تحميل جزء من التسجيل؛ أعد المحاولة.')
+          return new Response(new Blob(chunks as BlobPart[], { type: 'audio/mpeg' }), { status: 206, headers: response.headers })
+        }
+        // A host without Range is streamed with an idle timeout, not a deadline
+        // for the whole recording. Cancellation also interrupts a stalled read.
+        const reader = response.body.getReader()
+        transferred = true
+        const stream = new ReadableStream<Uint8Array>({
+          async pull(output) {
+            clearTimeout(timer); timer = setTimeout(cancel, REQUEST_TIMEOUT_MS)
+            try {
+              const next = await reader.read()
+              if (next.done) { finish(); reader.releaseLock(); output.close() }
+              else output.enqueue(next.value)
+            } catch (error) { finish(); output.error(error) }
+          },
+          async cancel(reason) { controller.abort(); finish(); await reader.cancel(reason).catch(() => undefined) },
+        })
+        return new Response(stream, { status: 200, headers: response.headers })
+      }
       await response.body?.cancel().catch(() => undefined)
       if (response.status === 400 || response.status === 404 || response.status === 416) {
         throw new Error(`مصدر التسجيل غير متاح (${response.status}).`)
       }
       throw new Error(`تعذر تحميل الصوت (${response.status}).`)
     } catch (error) {
-      lastError = error
-      if (signal.aborted || attempt === 1) break
-    }
+      lastError = controller.signal.aborted && !signal.aborted
+        ? new Error('انتهت مهلة تحميل جزء من التسجيل. تحقق من الاتصال وأعد المحاولة.') : error
+      if (signal.aborted || attempt === 2) break
+    } finally { if (!transferred) finish() }
   }
   throw lastError instanceof Error ? lastError : new Error('فشل اتصال الصوت.')
 }
@@ -81,11 +129,11 @@ export async function isAdhkarAudioSaved(input: string): Promise<boolean> {
     const url = checkedURL(input)
     if (!('caches' in window)) return false
     const response = await (await caches.open(ADHKAR_AUDIO_CACHE)).match(url)
-    return Boolean(response && response.status === 200 && validAudio(response) && !response.headers.has('Content-Range'))
+    return Boolean(response && response.status === 200 && response.body && response.headers.get('Content-Length') !== '0' && validAudio(response) && !response.headers.has('Content-Range'))
   } catch { return false }
 }
 
-export async function downloadAdhkarForOffline(input: string, signal: AbortSignal): Promise<void> {
+export async function downloadAdhkarForOffline(input: string, signal: AbortSignal, progress?: (loaded: number, total: number | null) => void): Promise<void> {
   if (!('caches' in window)) throw new Error('التخزين دون إنترنت غير مدعوم هنا.')
   if (signal.aborted) throw new DOMException('Aborted', 'AbortError')
   const url = checkedURL(input)
@@ -122,6 +170,8 @@ export async function downloadAdhkarForOffline(input: string, signal: AbortSigna
   if (firstBytes.length !== end + 1) throw new Error('أول جزء من التسجيل غير مكتمل.')
 
   let offset = end + 1
+  progress?.(offset, total)
+  const validator = first.headers.get('ETag') || first.headers.get('Last-Modified')
   let emittedFirst = false
   const stream = new ReadableStream<Uint8Array>({
     async pull(controller) {
@@ -140,14 +190,20 @@ export async function downloadAdhkarForOffline(input: string, signal: AbortSigna
         throw new Error('المصدر توقف عن دعم تحميل الأجزاء.')
       }
       const gotRange = response.headers.get('Content-Range') || ''
-      const expectedRange = `bytes ${offset}-${expectedLast}/${total}`
-      if (gotRange.trim() !== expectedRange) {
+      const nextValidator = response.headers.get('ETag') || response.headers.get('Last-Modified')
+      if (validator && nextValidator && validator !== nextValidator) {
+        await response.body?.cancel().catch(() => undefined)
+        throw new Error('تغير ملف التسجيل أثناء التنزيل. أعد المحاولة لحفظ نسخة متكاملة.')
+      }
+      const partRange = /^bytes\s+(\d+)-(\d+)\/(\d+)$/i.exec(gotRange.trim())
+      if (!partRange || Number(partRange[1]) !== offset || Number(partRange[2]) > expectedLast || Number(partRange[3]) !== total) {
         await response.body?.cancel().catch(() => undefined)
         throw new Error('ترتيب أجزاء التسجيل غير صحيح.')
       }
       const chunk = new Uint8Array(await response.arrayBuffer())
-      if (chunk.byteLength !== expectedLast - offset + 1) throw new Error('جزء من الملف ناقص.')
+      if (chunk.byteLength !== Number(partRange[2]) - offset + 1) throw new Error('جزء من الملف ناقص.')
       offset += chunk.length
+      progress?.(offset, total)
       controller.enqueue(chunk)
       if (offset >= total) controller.close()
     },

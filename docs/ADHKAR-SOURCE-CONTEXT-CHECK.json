@@ -1,0 +1,206 @@
+{
+  "method": "Machine-transcript consistency check of distinctive morning/evening wording; not human listening review or speaker verification.",
+  "sources": [
+    {
+      "readerId": "faisal-labban",
+      "sourceIndex": 500,
+      "declaredSection": "morning",
+      "sourceSha256": "02e950882c3f9da1c8235179fa0345f31afff576a713abe407a136c2754de6fe",
+      "sourceUrl": "https://archive.org/download/3568585368358353568568thkarAlsabahAbdulazizBinIbrahim/Athkar%20Alsabah%20-%20Faisal%20Labban.mp3",
+      "morningWordingOccurrences": 2,
+      "eveningWordingOccurrences": 0,
+      "oppositeWordingConflict": false
+    },
+    {
+      "readerId": "faisal-labban",
+      "sourceIndex": 501,
+      "declaredSection": "evening",
+      "sourceSha256": "a519af9a27e3d640199535f50798731f12de1e289b3434138a254df9217bd6a7",
+      "sourceUrl": "https://archive.org/download/3568585368358353568568thkarAlsabahAbdulazizBinIbrahim/Athkar%20Almasaa%20-%20Faisal%20Labban.mp3",
+      "morningWordingOccurrences": 0,
+      "eveningWordingOccurrences": 2,
+      "oppositeWordingConflict": false
+    },
+    {
+      "readerId": "abdulaziz-bin-ibrahim",
+      "sourceIndex": 502,
+      "declaredSection": "morning",
+      "sourceSha256": "ac52778ed333f7f1e885437acf48c5da00fd9c05a492c9dcb28d175741025a0c",
+      "sourceUrl": "https://archive.org/download/3568585368358353568568thkarAlsabahAbdulazizBinIbrahim/AthkarAlsabah-AbdulazizBinIbrahim.mp3",
+      "morningWordingOccurrences": 7,
+      "eveningWordingOccurrences": 0,
+      "oppositeWordingConflict": false
+    },
+    {
+      "readerId": "abdulaziz-bin-ibrahim",
+      "sourceIndex": 503,
+      "declaredSection": "evening",
+      "sourceSha256": "f5263a906bbb6f6306e63bffb2da86b7ca24ca8ce8982f4c35234a2706cd2e90",
+      "sourceUrl": "https://archive.org/download/3568585368358353568568thkarAlsabahAbdulazizBinIbrahim/AthkarAlmasaa-AbdulazizBinIbrahim.mp3",
+      "morningWordingOccurrences": 0,
+      "eveningWordingOccurrences": 7,
+      "oppositeWordingConflict": false
+    },
+    {
+      "readerId": "wadie-alyamani",
+      "sourceIndex": 504,
+      "declaredSection": "morning",
+      "sourceSha256": "422cdef18d19864196221206da3c9760f821629c84f4a1e5f1349c7b412df9e2",
+      "sourceUrl": "https://archive.org/download/20200828_20200828_1458/%D8%A7%D9%84%D9%82%D8%A7%D8%B1%D8%A6%20%D9%88%D8%AF%D9%8A%D8%B9%20%D8%A7%D9%84%D9%8A%D9%85%D9%86%D9%8A%20%D8%A3%D8%B0%D9%83%D8%A7%D8%B1%20%D8%A7%D9%84%D8%B5%D8%A8%D8%A7%D8%AD.mp3",
+      "morningWordingOccurrences": 7,
+      "eveningWordingOccurrences": 0,
+      "oppositeWordingConflict": false
+    },
+    {
+      "readerId": "wadie-alyamani",
+      "sourceIndex": 505,
+      "declaredSection": "evening",
+      "sourceSha256": "9b996732280f1143412be42fac1b82df8b492027b9466f2a0d74ee78bc5eec1a",
+      "sourceUrl": "https://archive.org/download/20200828_20200828_1510/%D8%A7%D9%84%D9%82%D8%A7%D8%B1%D8%A6%20%D9%88%D8%AF%D9%8A%D8%B9%20%D8%A7%D9%84%D9%8A%D9%85%D9%86%D9%8A%20%D8%A3%D8%B0%D9%83%D8%A7%D8%B1%20%D8%A7%D9%84%D9%85%D8%B3%D8%A7%D8%A1.mp3",
+      "morningWordingOccurrences": 0,
+      "eveningWordingOccurrences": 7,
+      "oppositeWordingConflict": false
+    },
+    {
+      "readerId": "omar-hisham-alarabi",
+      "sourceIndex": 506,
+      "declaredSection": "morning",
+      "sourceSha256": "6631b0dc9da70c08a8c78d008ed8a48c8c22d0d2bba025e8b49eeb7942a6050f",
+      "sourceUrl": "https://archive.org/download/morning-dua-in-full-adhkar-omar-hisham-mp-3-160-k/Morning%20Dua%20in%20Full%20%D8%A3%D8%B0%D9%83%D8%A7%D8%B1%20%D8%A7%D9%84%D8%B5%D8%A8%D8%A7%D8%AD%20%D9%83%D8%A7%D9%85%D9%84%D8%A9%20%D8%A8%D8%AF%D9%82%D8%A9%20%D8%B9%D8%A7%D9%84%D9%8A%D8%A9%20%D8%A8%D8%B5%D9%88%D8%AA%20%D8%B9%D9%85%D8%B1%20%D9%87%D8%B4%D8%A7%D9%85%20%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%20%28adhkar%29%20Omar%20Hisham%28MP3_160K%29.mp3",
+      "morningWordingOccurrences": 7,
+      "eveningWordingOccurrences": 0,
+      "oppositeWordingConflict": false
+    },
+    {
+      "readerId": "samir-albashiri",
+      "sourceIndex": 507,
+      "declaredSection": "morning",
+      "sourceSha256": "771aba5bf452ee182ae3a856a2fba25cc73b0a6dc075724affa61fab2c8b5d59",
+      "sourceUrl": "https://archive.org/download/dorar-doaa/Azkar-sabah-samirbashiri-Aldorar-Net.mp3",
+      "morningWordingOccurrences": 3,
+      "eveningWordingOccurrences": 0,
+      "oppositeWordingConflict": false
+    },
+    {
+      "readerId": "samir-albashiri",
+      "sourceIndex": 508,
+      "declaredSection": "evening",
+      "sourceSha256": "27bbe96e310cf0e21b778c0a6ff8501318db9097b9c51159cb1105ecf8c4d2a8",
+      "sourceUrl": "https://archive.org/download/dorar-doaa/Azkar-masaa-samirbashiri-Aldorar-Net.mp3",
+      "morningWordingOccurrences": 0,
+      "eveningWordingOccurrences": 3,
+      "oppositeWordingConflict": false
+    },
+    {
+      "readerId": "ramy-mohamed",
+      "sourceIndex": 509,
+      "declaredSection": "morning",
+      "sourceSha256": "9a1dc2e2bb1fbeeb8a404e08a81c698fad3f7511c9465ddc7e96b26f67b111cb",
+      "sourceUrl": "https://archive.org/download/azkar-alsaba7-Ramy-mohamed-qurancloud/azkar-alsaba7-Ramy-mohamed-qurancloud.mp3",
+      "morningWordingOccurrences": 6,
+      "eveningWordingOccurrences": 0,
+      "oppositeWordingConflict": false
+    },
+    {
+      "readerId": "emad-abdelkhaleq",
+      "sourceIndex": 510,
+      "declaredSection": "morning",
+      "sourceSha256": "ebf3d05ff676355744df44b814a3929c7683d495897ecb5a73a78bba8a9e5b41",
+      "sourceUrl": "https://archive.org/download/azkar-sabah-emad-eldeen-abdul-khale/Azkar%20Sabah%20EmadEldeenAbdulKhale.mp3",
+      "morningWordingOccurrences": 7,
+      "eveningWordingOccurrences": 0,
+      "oppositeWordingConflict": false
+    },
+    {
+      "readerId": "abdulaziz-salim-alzahrani",
+      "sourceIndex": 511,
+      "declaredSection": "morning",
+      "sourceSha256": "8e6a4dd9307c71f0c3baf6efa25036f408fe07ab2c26d48502aafaf37ba1bc2c",
+      "sourceUrl": "https://archive.org/download/add-M3rfa_MP32020/%D8%A7%D8%B0%D9%83%D8%A7%D8%B1%20%D8%A7%D9%84%D8%B5%D8%A8%D8%A7%D8%AD%20%D9%84%D9%84%D8%B4%D9%8A%D8%AE%20%D8%B9%D8%A8%D8%AF%20%D8%A7%D9%84%D8%B9%D8%B2%D9%8A%D8%B2%20%D8%A8%D9%86%20%D8%B3%D8%A7%D9%84%D9%85%20%D8%A7%D9%84%D8%B2%D9%87%D8%B1%D8%A7%D9%86%D9%8A%20-%20%D8%A3%D8%AF%D8%AF%20%D9%85%D8%B9%D8%B1%D9%81%D8%A9%20-%20add-M3rfa.mp3",
+      "morningWordingOccurrences": 7,
+      "eveningWordingOccurrences": 0,
+      "oppositeWordingConflict": false
+    },
+    {
+      "readerId": "abdulaziz-salim-alzahrani",
+      "sourceIndex": 512,
+      "declaredSection": "evening",
+      "sourceSha256": "aab7e5978eca95868c07fe7fd304494c0b7b4c0ddc490c432da8d1af1627830e",
+      "sourceUrl": "https://archive.org/download/evening-remembrance-abdul-aziz-al-zahrani/%D8%A7%D8%B0%D9%83%D8%A7%D8%B1%20%D8%A7%D9%84%D9%85%D8%B3%D8%A7%D8%A1%20%D8%B9%D8%A8%D8%AF%20%D8%A7%D9%84%D8%B9%D8%B2%D9%8A%D8%B2%20%D8%A8%D9%86%20%D8%B3%D8%A7%D9%84%D9%85%20-%D9%85%D8%AF%D9%88%D9%86%D8%A9%20%D8%A7%D9%84%D9%85%D9%81%D8%B1%D8%AF%D9%88%D9%86.mp3",
+      "morningWordingOccurrences": 0,
+      "eveningWordingOccurrences": 3,
+      "oppositeWordingConflict": false
+    },
+    {
+      "readerId": "ahmad-alnufais",
+      "sourceIndex": 513,
+      "declaredSection": "morning",
+      "sourceSha256": "7395eb54a57cec3f64ababb7b9bb3605ca77cbb9ac3652e866fdacc552c23739",
+      "sourceUrl": "https://archive.org/download/20250607_20250607_0953/%D8%A3%D8%B0%D9%83%D8%A7%D8%B1%20%D8%A7%D9%84%D8%B5%D8%A8%D8%A7%D8%AD%20%EF%BD%9C%20%D8%A3%D8%AD%D9%85%D8%AF%20%D8%A7%D9%84%D9%86%D9%81%D9%8A%D8%B3.mp3",
+      "morningWordingOccurrences": 7,
+      "eveningWordingOccurrences": 0,
+      "oppositeWordingConflict": false
+    },
+    {
+      "readerId": "omar-abdelkafy",
+      "sourceIndex": 514,
+      "declaredSection": "evening",
+      "sourceSha256": "d03a80d07345ede3ff29227a8ac6175adaa90b6f758c842f629ed3bdcc3abe19",
+      "sourceUrl": "https://archive.org/download/02._2024031402./02.%D8%A3%D8%B0%D9%83%D8%A7%D8%B1%20%D8%A7%D9%84%D9%85%D8%B3%D8%A7%D8%A1%20%D9%84%D8%AA%D8%AD%D8%B5%D9%8A%D9%86%20%D9%86%D9%81%D8%B3%D9%83%20%D9%84%D9%84%D8%B4%D9%8A%D8%AE%20%D8%B9%D9%85%D8%B1%20%D8%B9%D8%A8%D8%AF%20%D8%A7%D9%84%D9%83%D8%A7%D9%81%D9%8A.mp3",
+      "morningWordingOccurrences": 0,
+      "eveningWordingOccurrences": 5,
+      "oppositeWordingConflict": false
+    },
+    {
+      "readerId": "muhammad-dibirov",
+      "sourceIndex": 515,
+      "declaredSection": "evening",
+      "sourceSha256": "82039b489b2a2802a084ccbb58850a5395396d2edf0a76e5ade6026711a9ff39",
+      "sourceUrl": "https://archive.org/download/002_20251011_202510/001.mp3",
+      "morningWordingOccurrences": 0,
+      "eveningWordingOccurrences": 3,
+      "oppositeWordingConflict": false
+    },
+    {
+      "readerId": "muhammad-dibirov",
+      "sourceIndex": 516,
+      "declaredSection": "morning",
+      "sourceSha256": "f4200319ef6ab3f58a65cd9a76c339510b1fa6fa0b3041912d192fe53c4d9da8",
+      "sourceUrl": "https://archive.org/download/002_20251011_202510/002.mp3",
+      "morningWordingOccurrences": 4,
+      "eveningWordingOccurrences": 0,
+      "oppositeWordingConflict": false
+    },
+    {
+      "readerId": "yahya-hawwa",
+      "sourceIndex": 517,
+      "declaredSection": "morning",
+      "sourceSha256": "d04c5f7554cae3a4c26a844932f1c01d69243dc698b405ee18c7b95ad48b23f7",
+      "sourceUrl": "https://www.ashefaa.com/ruqia/Azkar/azkar-saba7.mp3",
+      "morningWordingOccurrences": 6,
+      "eveningWordingOccurrences": 0,
+      "oppositeWordingConflict": false
+    },
+    {
+      "readerId": "hani-mohamed-nasr",
+      "sourceIndex": 518,
+      "declaredSection": "morning",
+      "sourceSha256": "a8e554ff614b980952ea642ac51c084ac854a5bdff3ce8a57b798f7f34a7c46e",
+      "sourceUrl": "https://www.ourquraan.com/audio/remembrace/Hany.Muhammed.Nasr%20-%20Morning.remembrance.mp3",
+      "morningWordingOccurrences": 7,
+      "eveningWordingOccurrences": 0,
+      "oppositeWordingConflict": false
+    },
+    {
+      "readerId": "mustafa-alwaleed",
+      "sourceIndex": 519,
+      "declaredSection": "waking",
+      "sourceSha256": "157fc9b4663fc0cec33b7d30244f6612d64a952dee8dd6a40a08d9aa7f64b51d",
+      "sourceUrl": "https://www.ourquraan.com/audio/remembrace/Mustafa.Alwalid%20-%20Remembrance.waking.from.sleep.mp3",
+      "morningWordingOccurrences": 0,
+      "eveningWordingOccurrences": 0,
+      "oppositeWordingConflict": false
+    }
+  ],
+  "conflicts": []
+}

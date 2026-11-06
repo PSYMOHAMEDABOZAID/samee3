@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { limitedJson, sameOrigin } from '@/lib/server/http'
-import { authorizedSubscription, pushConfigured, registerWebPush, sendWebNotification, validSubscription } from '@/lib/server/web-push'
+import { authorizedSubscription, pushConfiguration, pushConfigured, registerWebPush, sendWebNotification, validSubscription } from '@/lib/server/web-push'
 import { parseWebSettings } from '@/lib/web-reminders'
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -24,7 +24,11 @@ function failureDetails(error: unknown) {
   // Never log the raw error, body, headers, endpoint, keys, or credentials.
   return { category, code, statusCode, providerReason }
 }
-export function GET() { return json({ configured: pushConfigured(), publicKey: process.env.NEXT_PUBLIC_WEB_PUSH_VAPID_KEY || null }) }
+export function GET() {
+  const status = pushConfiguration()
+  return json({ configured: status.ok, publicKey: status.ok ? process.env.NEXT_PUBLIC_WEB_PUSH_VAPID_KEY : null,
+    code: status.code, error: status.ok ? null : 'إعداد الإشعارات على الخادم غير صالح. يلزم مراجعة مفتاحي VAPID معًا وإعادة النشر من الإدارة.' })
+}
 export async function POST(request: NextRequest) {
   if (!sameOrigin(request)) return json({ error: 'هذا الطلب يجب أن يأتي من تطبيق سميع.' }, 403)
   if (!pushConfigured()) return json({ error: 'إشعارات الويب تحتاج إكمال إعداد الخادم من الإدارة.' }, 503)

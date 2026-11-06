@@ -132,6 +132,7 @@ export default function ServiceWorkerRegistration() {
   const apply = () => {
     if (!target || applying) return
     setApplying(true)
+    rememberBuild(target)
     // Only reload as a direct result of the user's action. Never interrupt
     // playback merely because a newer deployment exists.
     const waiting = registrationRef.current?.waiting
