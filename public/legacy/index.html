@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#194f43">
+  <title>سميع — نسخة الأجهزة والمتصفحات القديمة</title>
+  <style>
+  body {margin:0;background:#f7f2e7;color:#194f43;font:17px/1.9 Tahoma,Arial,sans-serif}
+  header {background:#194f43;color:#fff;text-align:center;padding:28px 16px}
+  h1 {font-size:30px;margin:0;color:#f6ddb0}
+  .subtitle {font-size:15px;margin:5px 0}
+  main {max-width:820px;margin:0 auto;padding:16px}
+  section {border:1px solid #d9c39d;border-radius:16px;background:#fffdf9;margin:15px 0;padding:18px}
+  h2 {font-size:20px;margin:0 0 10px}
+  p {margin:6px 0 12px;color:#536259}
+  a.btn {display:inline-block;background:#194f43;color:#fff;text-decoration:none;padding:9px 14px;margin:5px 2px;border-radius:9px;font-size:15px;font-weight:bold}
+  a.light {background:#fff;color:#194f43;border:1px solid #c5a269}
+  a:focus {outline:3px solid #ad7f3b}
+  .note{font-size:14px}
+  footer{text-align:center;margin:20px;padding:15px}
+  </style>
+</head>
+<body>
+<header><h1>مصحف سميع</h1><div class="subtitle">نسخة خفيفة للأجهزة القديمة — بدون React أو JavaScript</div></header>
+<main>
+  <section>
+    <h2>القرآن الكريم</h2>
+    <p>قراءة آيات المصحف من بيانات سميع، مع تقليب الصفحات واختيار الرواية. يعمل أيضًا عند إيقاف JavaScript.</p>
+    <a class="btn" href="/api/legacy-quran?page=1&amp;riwaya=hafs">فتح المصحف — الصفحة الأولى</a>
+    <a class="btn light" href="/api/legacy-quran?page=604&amp;riwaya=hafs">آخر صفحة</a>
+  </section>
+  <section>
+    <h2>الاستماع للقرآن</h2>
+    <p>مشغل MP3 عادي لِـ114 سورة بصوت مشاري العفاسي، مع روابط صوت مباشرة لا تحتاج تطبيقًا أو حسابًا.</p>
+    <a class="btn" href="/legacy/audio/index.html">المكتبة الصوتية الخفيفة</a>
+  </section>
+  <section>
+    <h2>تنزيل تطبيقات سميع</h2>
+    <p>اضغط على الملف المناسب، حتى لو كانت واجهة التحميلات الحديثة لا تستجيب.</p>
+    <a class="btn" href="/api/legacy-download?kind=tv">تطبيق شاشات Android TV — APK</a>
+    <a class="btn" href="/api/legacy-download?kind=android">تطبيق هاتف أندرويد — APK</a>
+    <a class="btn light" href="/api/legacy-download?kind=webos">شاشات LG webOS — IPK</a>
+    <a class="btn light" href="/api/legacy-download?kind=windows">Windows — EXE</a>
+    <a class="btn light" href="/api/legacy-download?kind=mac-arm">Mac Apple Silicon</a>
+    <a class="btn light" href="/api/legacy-download?kind=mac-intel">Mac Intel</a>
+    <p class="note">لن يبدأ تنزيل ملف غير منشور. بعض متصفحات الشاشات لا تسمح بتنزيل ملفات APK نفسها؛ يمكن نقل الملف من هاتف أو وحدة USB.</p>
+  </section>
+  <section>
+    <h2>بقية أقسام سميع</h2>
+    <p>قد تتطلب الأحاديث والأذكار والمكتبة الشرعية والمواقيت محرك متصفح حديثًا؛ الروابط التالية تفتح واجهتها الكاملة إن كان جهازك يدعمها.</p>
+    <a class="btn light" href="/hadith">الأحاديث</a>
+    <a class="btn light" href="/adhkar">الأذكار</a>
+    <a class="btn light" href="/prayer">مواقيت الصلاة</a>
+    <a class="btn light" href="/audio">المكتبة الصوتية الكاملة</a>
+    <a class="btn light" href="/">الموقع الكامل</a>
+  </section>
+  <section><h2>ما حدود النسخة الخفيفة؟</h2>
+    <p>الصفحات والروابط تعمل دون JavaScript، لكن تشغيل MP3 يحتاج دعمًا من المتصفح. ميزات مثل الدخول، الإشعارات، العمل دون إنترنت وميزات الفيديو تحتاج متصفحًا أو نظامًا متوافقًا. إذا كان الجهاز لا يدعم تنزيل APK فتثبيته يتم من USB أو تطبيق مدير ملفات.</p>
+  </section>
+</main>
+<footer>مصحف سميع — صفحات خفيفة مُهيأة للمتصفحات القديمة</footer>
+</body>
+</html>
