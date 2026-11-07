@@ -15,6 +15,70 @@
         </activity>
         <activity android:name=".MainActivity" android:exported="false" android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:windowSoftInputMode="adjustResize" />
         <activity android:name=".WebActivity" android:exported="false" android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:windowSoftInputMode="adjustResize" />
+        <receiver android:name=".Samee3Widgets$Reading" android:exported="true">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/samee3_widget_reading" />
+        </receiver>
+        <receiver android:name=".Samee3Widgets$Ayah" android:exported="true">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/samee3_widget_ayah" />
+        </receiver>
+        <receiver android:name=".Samee3Widgets$Surahs" android:exported="true">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/samee3_widget_surahs" />
+        </receiver>
+        <receiver android:name=".Samee3Widgets$Audio" android:exported="true">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/samee3_widget_audio" />
+        </receiver>
+        <receiver android:name=".Samee3Widgets$Morning" android:exported="true">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/samee3_widget_morning" />
+        </receiver>
+        <receiver android:name=".Samee3Widgets$Evening" android:exported="true">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/samee3_widget_evening" />
+        </receiver>
+        <receiver android:name=".Samee3Widgets$Tasbih" android:exported="true">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/samee3_widget_tasbih" />
+        </receiver>
+        <receiver android:name=".Samee3Widgets$Prayer" android:exported="true">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/samee3_widget_prayer" />
+        </receiver>
+        <receiver android:name=".Samee3Widgets$Hadith" android:exported="true">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/samee3_widget_hadith" />
+        </receiver>
+        <receiver android:name=".Samee3Widgets$Library" android:exported="true">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/samee3_widget_library" />
+        </receiver>
+        <receiver android:name=".Samee3Widgets$Tarbiyah" android:exported="true">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/samee3_widget_tarbiyah" />
+        </receiver>
+        <receiver android:name=".Samee3Widgets$Visual" android:exported="true">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/samee3_widget_visual" />
+        </receiver>
+        <receiver android:name=".Samee3Widgets$Favorites" android:exported="true">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/samee3_widget_favorites" />
+        </receiver>
+        <receiver android:name=".Samee3Widgets$Reminders" android:exported="true">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/samee3_widget_reminders" />
+        </receiver>
+        <receiver android:name=".Samee3Widgets$Messages" android:exported="true">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/samee3_widget_messages" />
+        </receiver>
+        <receiver android:name=".Samee3Widgets$Profile" android:exported="true">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/samee3_widget_profile" />
+        </receiver>
         <receiver android:name=".ReminderReceiver" android:exported="false" />
         <receiver android:name=".ReminderSystemReceiver" android:exported="false">
             <intent-filter>

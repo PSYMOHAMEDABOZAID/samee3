@@ -1315,8 +1315,38 @@ self.addEventListener('push', (event) => {
   const notification = data.web_push === 8030 && data.notification && typeof data.notification === 'object'
     ? data.notification : data
   const title = typeof notification.title === 'string' && notification.title ? notification.title.slice(0, 150) : 'مصحف سميع'
+  // Target an actual verse, hadith or dhikr rather than opening a generic section.
+  // Supports the new data.url and older payloads with nested metadata.
+  const source = notification.data && typeof notification.data === 'object' ? notification.data : data
+  const kind = String(source.kind || source.type || data.kind || data.type || '').toLowerCase()
+  const toPositive = (value, max) => {
+    const number = Number(value)
+    return Number.isSafeInteger(number) && number > 0 && number <= max ? number : null
+  }
+  let intended = notification.navigate || source.url || data.url || '/notifications'
+  if (kind === 'hadith' && typeof source.id === 'string' && /^[a-z0-9_-]{1,80}$/i.test(source.id)) {
+    intended = '/notifications/hadith?id=' + encodeURIComponent(source.id)
+  } else if (kind === 'hadith' && /^[a-z0-9_]{1,60}$/i.test(String(source.book || source.bookId || ''))
+      && toPositive(source.chapter || source.chapterId, 100000) && toPositive(source.hadith || source.hadithId, 1000000)) {
+    const params = new URLSearchParams({ book: String(source.book || source.bookId), chapter: String(source.chapter || source.chapterId), hadith: String(source.hadith || source.hadithId) })
+    intended = '/hadith?' + params.toString()
+  } else if ((kind === 'ayah' || kind === 'verse' || kind === 'quran') && toPositive(source.surah, 114) && toPositive(source.ayah, 286)) {
+    const params = new URLSearchParams({ type: 'ayah', surah: String(source.surah), ayah: String(source.ayah) })
+    if (toPositive(source.page, 604)) params.set('page', String(source.page))
+    intended = '/notifications/open?' + params.toString()
+  } else if ((kind === 'dhikr' || kind === 'adhkar') && toPositive(source.itemId, 10000000)) {
+    const params = new URLSearchParams({ type: 'dhikr', itemId: String(source.itemId) })
+    if (toPositive(source.categoryId, 1000000)) params.set('categoryId', String(source.categoryId))
+    if (['morning','evening','sleep','waking'].includes(source.section)) params.set('section', source.section)
+    intended = '/notifications/open?' + params.toString()
+  } else if ((kind === 'quran' || kind === 'reading') && (intended === '/mushaf' || intended === '/notifications')) {
+    intended = '/notifications/open?type=reading'
+  }
   let target = '/notifications'
-  try { const link = new URL(notification.navigate || data.url || '/notifications', self.location.origin); if (link.origin === self.location.origin && !link.username && !link.password) target = link.pathname + link.search + link.hash } catch (_) {}
+  try {
+    const link = new URL(intended, self.location.origin)
+    if (link.origin === self.location.origin && !link.username && !link.password && link.pathname.startsWith('/') && !link.pathname.startsWith('//') && link.href.length < 1300) target = link.pathname + link.search + link.hash
+  } catch (_) {}
   event.waitUntil(self.registration.showNotification(title, {
     body: typeof notification.body === 'string' ? notification.body.slice(0, 700) : 'حان موعد تذكيرك من سميع',
     icon: '/icon-192.png', badge: '/icon-192.png', dir: 'rtl', lang: 'ar',
@@ -1327,8 +1357,9 @@ self.addEventListener('push', (event) => {
 self.addEventListener('notificationclick', (event) => {
   event.notification.close()
   const path = event.notification.data && event.notification.data.url || '/notifications'
-  const target = new URL(path, self.location.origin)
-  if (target.origin !== self.location.origin) return
+  let target
+  try { target = new URL(path, self.location.origin) } catch (_) { target = new URL('/notifications', self.location.origin) }
+  if (target.origin !== self.location.origin || !target.pathname.startsWith('/') || target.pathname.startsWith('//')) target = new URL('/notifications', self.location.origin)
   event.waitUntil((async () => {
     const windows = await self.clients.matchAll({ type: 'window', includeUncontrolled: true })
     for (const client of windows) {

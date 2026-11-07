@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+ <key>CFBundleDevelopmentRegion</key><string>ar</string>
+ <key>CFBundleDisplayName</key><string>مصحف سميع</string>
+ <key>CFBundleURLTypes</key><array><dict>
+  <key>CFBundleURLName</key><string>com.samee3.app</string>
+  <key>CFBundleURLSchemes</key><array><string>samee3</string></array>
+ </dict></array>
+ <key>UILaunchScreen</key><dict></dict>
+ <key>NSLocationWhenInUseUsageDescription</key><string>تستخدم سميع موقعك عند السماح لتحديد مواقيت الصلاة.</string>
+</dict></plist>

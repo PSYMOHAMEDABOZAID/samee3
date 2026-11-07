@@ -586,6 +586,10 @@ export default function HomePage() {
             />
           </div>
         </section>
+        <Link href="/widgets" className="mb-6 flex items-center justify-between gap-3 rounded-3xl border border-emerald-200 bg-[#eaf5ed] px-5 py-5 text-[#114936] shadow-sm transition hover:bg-emerald-100">
+          <span><span className="block text-lg font-extrabold">ويدجت مصحف سميع</span><span className="mt-1 block text-xs font-medium leading-6">خصّص بطاقات الآيات والأذكار والصلاة والمكتبات — 16 ويدجت</span></span>
+          <span className="shrink-0 rounded-2xl bg-emerald-700 px-4 py-2 text-xs font-bold text-white">فتح المركز</span>
+        </Link>
         <AppDownloadsCard />
       </div>
     </div>

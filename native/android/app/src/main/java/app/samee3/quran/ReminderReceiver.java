@@ -49,11 +49,20 @@ public final class ReminderReceiver extends BroadcastReceiver {
         channels(context);
         boolean prayer = Arrays.asList(ReminderSettings.PRAYERS).contains(key);
         String title = "مصحف سميع", body = "حان موعد وردك من القرآن الكريم. افتح المصحف وتابع قراءتك.", path = "/mushaf";
-        if (key.equals("quran")) title = "موعد وردك من القرآن";
+        if (key.equals("quran")) {
+            String[] names = {"الفاتحة", "الفاتحة", "الفاتحة", "الإخلاص", "الإخلاص", "الفلق", "الناس"};
+            String[] excerpt = {"بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ", "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ", "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ", "قُلْ هُوَ اللَّهُ أَحَدٌ", "اللَّهُ الصَّمَدُ", "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ", "قُلْ أَعُوذُ بِرَبِّ النَّاسِ"};
+            String[] refs = {"1:1", "1:2", "1:5", "112:1", "112:2", "113:1", "114:1"};
+            int day = (int) Math.floorDiv(System.currentTimeMillis(), 86400000L);
+            int index = Math.floorMod(day, refs.length);
+            title = "آية من سورة " + names[index];
+            body = excerpt[index];
+            path = "/mushaf?page=" + (index < 3 ? "1" : "604") + "&ayah=" + refs[index] + "&riwaya=hafs";
+        }
         if (key.equals("morning") || key.equals("evening")) {
             title = key.equals("morning") ? "أذكار الصباح" : "أذكار المساء";
             body = "اذكر الله وابدأ " + (key.equals("morning") ? "يومك" : "مساءك") + " بطمأنينة. اضغط لقراءة الأذكار.";
-            path = "/adhkar";
+            path = key.equals("morning") ? "/adhkar/read?type=morning" : "/adhkar/read?type=evening";
         }
         if (key.equals("hadith")) {
             title = "حديث تقرؤه اليوم";

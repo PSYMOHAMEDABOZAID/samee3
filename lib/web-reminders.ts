@@ -2,6 +2,21 @@ import { PRAYERS, locationDate, prayerInstant, shiftPrayerDate, type PrayerDay }
 import hadithCorpus from '@/native/shared/reminders.json'
 export const PRAYER_METHODS = [[8, 'الخليج'], [4, 'أم القرى'], [5, 'الهيئة المصرية للمساحة'], [3, 'رابطة العالم الإسلامي'], [1, 'جامعة كراتشي'], [2, 'أمريكا الشمالية'], [9, 'الكويت'], [10, 'قطر'], [11, 'سنغافورة'], [12, 'فرنسا'], [13, 'تركيا'], [14, 'روسيا'], [15, 'لجنة رؤية الهلال'], [16, 'دبي'], [18, 'تونس'], [19, 'الجزائر'], [20, 'إندونيسيا'], [21, 'المغرب'], [22, 'البرتغال'], [23, 'الأردن']] as const
 export const WEB_SETTINGS_KEY = 'samee3_web_reminders_v1'
+// References and short Arabic excerpts verified against canonical Quran verses; page references are Hafs/KFQC.
+// Complete verse is read inside the native mushaf; excerpts are not presented as full ayat.
+const DAILY_AYAHS = [
+  { surah: 1, ayah: 1, page: 1, text: 'بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ', name: 'الفاتحة' },
+  { surah: 1, ayah: 2, page: 1, text: 'الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ', name: 'الفاتحة' },
+  { surah: 1, ayah: 5, page: 1, text: 'إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ', name: 'الفاتحة' },
+  { surah: 112, ayah: 1, page: 604, text: 'قُلْ هُوَ اللَّهُ أَحَدٌ', name: 'الإخلاص' },
+  { surah: 112, ayah: 2, page: 604, text: 'اللَّهُ الصَّمَدُ', name: 'الإخلاص' },
+  { surah: 113, ayah: 1, page: 604, text: 'قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ', name: 'الفلق' },
+  { surah: 114, ayah: 1, page: 604, text: 'قُلْ أَعُوذُ بِرَبِّ النَّاسِ', name: 'الناس' },
+] as const
+function dailyAyah(date: string) {
+  const days = Math.floor(Date.parse(date + 'T12:00:00Z') / 86400000)
+  return DAILY_AYAHS[Math.abs(days) % DAILY_AYAHS.length]
+}
 export type WebReminderSettings = {
   quran: boolean; adhkar: boolean; hadith: boolean; prayer: boolean; audio: boolean; library: boolean
   quranTime: string; morningTime: string; eveningTime: string; audioTime: string; libraryTime: string
@@ -56,7 +71,10 @@ export function reminderEvents(settings: WebReminderSettings, after: number, day
   }
   for (let offset = 0; offset < 3; offset++) {
     const date = shiftPrayerDate(today, offset)
-    if (settings.quran) add(date, settings.quranTime, 'quran', 'وردك من القرآن', 'افتح المصحف وتابع تلاوتك من حيث توقفت.', '/mushaf')
+    if (settings.quran) {
+      const verse = dailyAyah(date)
+      add(date, settings.quranTime, 'quran', `آية من سورة ${verse.name}`, verse.text, `/mushaf?page=${verse.page}&ayah=${verse.surah}%3A${verse.ayah}&riwaya=hafs`)
+    }
     if (settings.adhkar) {
       add(date, settings.morningTime, 'morning', 'أذكار الصباح', 'ابدأ يومك بذكر الله.', '/adhkar/read?type=morning')
       add(date, settings.eveningTime, 'evening', 'أذكار المساء', 'حان موعد أذكار المساء.', '/adhkar/read?type=evening')
@@ -66,7 +84,7 @@ export function reminderEvents(settings: WebReminderSettings, after: number, day
     if (settings.hadith) for (let hour = settings.hadithStart; hour < settings.hadithEnd; hour += settings.hadithHours) {
       const short = hadithCorpus.hadiths.filter(item => item.text.length < 500)
       const hadith = short[(Math.floor(Date.parse(date + 'T12:00:00Z') / 86400000) + hour) % short.length]
-      add(date, `${String(hour).padStart(2, '0')}:00`, 'hadith', 'حديث نبوي', `${hadith.text}\n${hadith.reference}`, '/hadith')
+      add(date, `${String(hour).padStart(2, '0')}:00`, 'hadith', 'حديث نبوي', `${hadith.text}\n${hadith.reference}`, `/notifications/hadith?id=${encodeURIComponent(hadith.id)}`)
     }
   }
   if (settings.prayer) for (const day of days) for (const prayer of PRAYERS) {

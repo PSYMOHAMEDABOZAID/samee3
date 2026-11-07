@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/samee3_widget_root"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#093D30" android:gravity="center_vertical"
+    android:orientation="vertical" android:padding="16dp">
+    <TextView android:id="@+id/samee3_widget_brand"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="مصحف سميع" android:textColor="#F3D8A1"
+        android:textDirection="rtl" android:gravity="right" android:textSize="11sp" />
+    <TextView android:id="@+id/samee3_widget_title"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="7dp" android:text="مصحف سميع"
+        android:textStyle="bold" android:textColor="#FFFFFF"
+        android:textDirection="rtl" android:gravity="right" android:textSize="18sp"
+        android:maxLines="1" android:ellipsize="end" />
+    <TextView android:id="@+id/samee3_widget_subtitle"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="4dp" android:text="افتح التطبيق لتحديث البيانات"
+        android:textColor="#FFFFFF" android:textDirection="rtl"
+        android:gravity="right" android:textSize="13sp" android:maxLines="2" android:ellipsize="end" />
+    <TextView android:id="@+id/samee3_widget_detail"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="4dp" android:textColor="#E8F1EB"
+        android:textDirection="rtl" android:gravity="right"
+        android:textSize="11sp" android:maxLines="2" android:ellipsize="end" />
+</LinearLayout>
