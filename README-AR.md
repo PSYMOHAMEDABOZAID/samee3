@@ -1,4 +1,4 @@
-# مصحف سميع — توافق المتصفحات القديمة — 7 نوفمبر 2026
+# مصحف سميع — توافق المتصفحات القديمة + اختيار القارئ — 7 نوفمبر 2026
 
 ## الهدف
 
@@ -17,7 +17,11 @@
 - `components/TelevisionDownloads.tsx`: زر تنزيل التلفاز دائم الظهور وليس مشروطًا بنتيجة fetch.
 - `app/api/legacy-download/route.ts`: روابط تنزيل عبر HTTP 302 إلى الملفات المنشورة فقط، ورسالة عربية إذا لم يكن الملف موجودًا.
 - `app/api/legacy-quran/route.ts`: قراءة صفحات 1–604 بالروايات الـ7 من API سميع الحالي دون نسخ أو تعديل نص القرآن، مع تشغيل MP3 لسورة الصفحة برواية حفص.
-- `app/api/legacy-audio/route.ts`: مشغل HTML/MP3 بالاستماع إلى السور الـ114 من مصدر العفاسي في mp3quran.
+- `lib/legacy-reciters.ts`: مصدر مركزي للقراء، يبدأ بمصحف مشاري العفاسي **المجمّع الأصلي** من سميع (`/api/alafasy-audio/NNN.mp3`)، مع قائمة قراء إضافيين؛ يعتمد على بيانات MP3Quran للقراء الآخرين.
+- `app/api/legacy-audio/route.ts`: مشغل HTML/MP3 بالاستماع إلى السور الـ114 من **المصحف المجمّع** افتراضيًا، مع اختيار القارئ والسورة دون JavaScript، وحفظ اختيار القارئ في روابط التالي والسابق.
+- `app/api/legacy-quran/route.ts`: يضيف اختيار القارئ في قراءة صفحات المصحف ويُبقي القارئ المختار عند تقليب الصفحات. يمكن تشغيل سورة الصفحة كاملة برواية حفص فقط، بدون الادعاء بأن التسجيل متزامن مع الآيات.
+- `public/legacy/audio/index.html`: خيارات للقراء وفهرس الـ114 سورة؛ الروابط السريعة تفتح المصحف المجمّع حتى عند غياب JavaScript.
+- `public/legacy/index.html`: وصف واضح بأن العفاسي المجمّع هو الافتراضي.
 - `public/legacy/index.html`: صفحة البداية الخفيفة بلا React أو JavaScript.
 - `public/legacy/audio/index.html`: فهرس 114 سورة بلا JavaScript.
 - `next.config.js`: إضافة مسار قارئ HTML إلى outputFileTracingIncludes حتى ينشر معه بيانات المصحف المستخدمة في المصدر الحالي.
@@ -29,9 +33,19 @@
 - https://samee3.vercel.app/legacy/index.html
 - https://samee3.vercel.app/api/legacy-quran?page=1&riwaya=hafs
 - https://samee3.vercel.app/legacy/audio/index.html
-- https://samee3.vercel.app/api/legacy-audio?surah=1
+- https://samee3.vercel.app/api/legacy-audio?surah=1 (العفاسي المجمّع)
+- https://samee3.vercel.app/api/legacy-audio?surah=1&reciter=husary (الحصري)
+- https://samee3.vercel.app/api/legacy-quran?page=1&riwaya=hafs&reciter=husary (صفحة مع الحصري)
 - https://samee3.vercel.app/api/legacy-download?kind=tv
 - https://samee3.vercel.app/downloads
+
+## تفاصيل الصوت واختيار القارئ
+
+- الافتراضي هو **مشاري العفاسي — المصحف المجمّع**، وليس تسجيل العفاسي العادي من MP3Quran. يُخدَّم من `/api/alafasy-audio/{surah}.mp3` الموجود بالفعل في مشروع SAMEE3. إذا لم يكن هذا الـAPI منشورًا أو تعطّل GitHub Release فلن يتوفر التشغيل؛ **لا يتم استبداله** بالتسجيل العادي.
+- القراء الإضافيون: العفاسي المرتل، الحصري، المنشاوي، المعيقلي، عبد الباسط، السديس، الدوسري، والغمدي. تأتي الملفات من خوادم MP3Quran أو فهرسها الرسمي. بعض القراء يحتاجون نجاح وصول خادم سميع إلى واجهة MP3Quran لكي يتحدد عنوان ملف MP3؛ عند الفشل تُعرض رسالة دون تبديل التسجيل.
+- في صفحة قراءة الروايات غير حفص يُحجب مشغل حفص لتجنّب عرض صوت لا يطابق الرواية.
+- الاختيار يُحفظ في عنوان URL أثناء تنقل المستخدم داخل صفحات القراءة والسور فقط؛ لا نعتمد على LocalStorage أو JavaScript.
+- بعد دمج الملفات، اختبر `node scripts/test-legacy-compat.cjs` و`node scripts/test-legacy-routes.cjs`. الفحوص محاكاة و**ليست** اختبار اتصال حي بخوادم الصوت، ولم يُجرَ بناء Vercel كامل هنا.
 
 ## حدود مهمة
 

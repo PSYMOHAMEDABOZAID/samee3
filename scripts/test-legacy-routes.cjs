@@ -28,6 +28,7 @@ function load(file, mocks) {
   vm.runInNewContext(compiled, {
     module, exports: module.exports, require(id) {
       if (id === 'next/server') return { NextRequest, NextResponse }
+      if (id === '@/lib/legacy-reciters') return load('lib/legacy-reciters.ts', mocks)
       if (id === '@/public/android/release.json') return { available: true, apkPath: '/android/Samee3-1.1.0.apk' }
       if (id === '@/public/app-downloads.json') return config
       if (id === '../quran/route') return { GET: async () => Response.json({ success: true, ayahs: [{ text: 'بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ', numberInSurah: 1, surah: { name: 'الفاتحة', number: 1 } }] }) }
@@ -35,7 +36,7 @@ function load(file, mocks) {
     },
     Response, URL, AbortController, setTimeout, clearTimeout,
     fetch: mocks.fetch,
-    console,
+    console, Date,
   }, { filename: file })
   return module.exports
 }
@@ -46,7 +47,9 @@ async function test() {
   const body = await success.text()
   assert.ok(body.includes('بِسْمِ اللَّهِ'))
   assert.ok(body.includes('الصفحة التالية'))
-  assert.ok(body.includes('cdn.mp3quran.net'))
+  assert.ok(body.includes('/api/alafasy-audio/001.mp3'))
+  assert.ok(body.includes('name="reciter"'))
+  assert.ok(body.includes('reciter=alafasy-collected'))
   const invalid = await quran.GET(new NextRequest('https://samee3.vercel.app/api/legacy-quran?page=999'))
   assert.equal(invalid.status, 400)
   const releaseUrl = 'https://github.com/PSYMOHAMEDABOZAID/samee3/releases/download/samee3-tv/SAMEE3-TV.apk'
@@ -64,8 +67,24 @@ async function test() {
   const audioResp = await audio.GET(new NextRequest('https://samee3.vercel.app/api/legacy-audio?surah=114'))
   const audioHtml = await audioResp.text()
   assert.equal(audioResp.status, 200)
-  assert.ok(audioHtml.includes('114.mp3'))
-  assert.ok(audioHtml.includes('مصدر MP3 بديل'))
-  console.log('SAMEE3 Legacy Compatibility: mocked route tests passed.')
+  assert.ok(audioHtml.includes('/api/alafasy-audio/114.mp3'))
+  assert.ok(audioHtml.includes('التسجيل الأصلي للمصحف المجمّع'))
+  assert.ok(audioHtml.includes('reciter=alafasy-collected'))
+  assert.ok(audioHtml.includes('name="reciter"'))
+  const husary = await audio.GET(new NextRequest('https://samee3.vercel.app/api/legacy-audio?surah=20&reciter=husary'))
+  assert.ok((await husary.text()).includes('mahmoud-husary/r1/020.mp3'))
+  const alternateQuran = await quran.GET(new NextRequest('https://samee3.vercel.app/api/legacy-quran?page=2&reciter=husary'))
+  const alternateHtml = await alternateQuran.text()
+  assert.ok(alternateHtml.includes('mahmoud-husary/r1/001.mp3'))
+  assert.ok(alternateHtml.includes('reciter=husary'))
+  const nonHafs = await quran.GET(new NextRequest('https://samee3.vercel.app/api/legacy-quran?page=1&riwaya=warsh'))
+  assert.ok((await nonHafs.text()).includes('لا يُعرض تلقائيًا'))
+  const api = load('app/api/legacy-audio/route.ts', { fetch: async () => ({ ok: true, async json() { return { reciters: [{ name: 'ماهر المعيقلي', moshaf: [{ name: 'رواية حفص عن عاصم', server: 'https://server12.mp3quran.net/maher/', surah_total: 114, surah_list: '1,2,20,114' }] }] } } }) })
+  const dynamic = await api.GET(new NextRequest('https://samee3.vercel.app/api/legacy-audio?surah=20&reciter=maher'))
+  assert.ok((await dynamic.text()).includes('https://server12.mp3quran.net/maher/020.mp3'))
+  const failApi = load('app/api/legacy-audio/route.ts', { fetch: async () => ({ ok: false }) })
+  const unavailable = await failApi.GET(new NextRequest('https://samee3.vercel.app/api/legacy-audio?surah=20&reciter=maher'))
+  assert.ok((await unavailable.text()).includes('لم نتمكن من تحديد تسجيل موثوق'))
+  console.log('SAMEE3 Legacy: mocked Quran, reciter, audio and download tests passed.')
 }
 test().catch((error) => { console.error(error); process.exitCode = 1 })

@@ -8,7 +8,7 @@ const read = (file) => fs.readFileSync(path.join(root, file), 'utf8')
 const mustExist = [
   'app/layout.tsx', 'app/downloads/page.tsx',
   'app/api/legacy-quran/route.ts', 'app/api/legacy-download/route.ts',
-  'app/api/legacy-audio/route.ts', 'public/legacy/index.html',
+  'app/api/legacy-audio/route.ts', 'lib/legacy-reciters.ts', 'public/legacy/index.html',
   'public/legacy/audio/index.html', 'components/TelevisionDownloads.tsx',
   'next.config.js',
 ]
@@ -35,7 +35,13 @@ assert.ok(lite.includes('/api/legacy-quran?page=1'))
 assert.ok(lite.includes('/api/legacy-download?kind=tv'))
 assert.ok(!/<script\b/i.test(lite), 'Lite page must work with no JavaScript')
 const audio = read('public/legacy/audio/index.html')
-assert.equal((audio.match(/<option value=/g) || []).length, 114, 'Audio index must expose 114 surahs')
+const surahOptions = audio.split('id="surah"')[1].split('</select>')[0]
+assert.equal((surahOptions.match(/<option value=/g) || []).length, 114, 'Audio index must expose 114 surahs')
+assert.ok(audio.includes('name="reciter"'), 'Audio index must allow reciter selection')
+assert.ok(audio.includes('value="alafasy-collected" selected'), 'Compiled Alafasy must be selected')
+const quran = read('app/api/legacy-quran/route.ts')
+assert.ok(quran.includes('legacyReciterOptions(reciter)'), 'Quran reader must have a reciter selector')
+assert.ok(quran.includes('legacySurahAudioUrl(reciter'), 'Quran audio must use selected reciter')
 const downloads = read('app/downloads/page.tsx')
 assert.ok(downloads.includes('/api/legacy-download?kind=tv'))
 const tv = read('components/TelevisionDownloads.tsx')
