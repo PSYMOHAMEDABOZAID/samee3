@@ -143,7 +143,11 @@ export async function GET() {
     },
     {
       headers: {
-        'Cache-Control': 'no-store',
+        // A short shared edge cache avoids repeating the same GitHub listing
+        // for every visitor. Never cache a transient GitHub failure.
+        'Cache-Control': warning
+          ? 'no-store'
+          : 'public, s-maxage=300, stale-while-revalidate=600',
       },
     }
   )

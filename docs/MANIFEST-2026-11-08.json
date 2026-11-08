@@ -1,0 +1,56 @@
+{
+  "repo": "PSYMOHAMEDABOZAID/samee3",
+  "base_branch": "main",
+  "base_commit": "48c5410e43550d855b6e9532c85cad7e27d95dcf",
+  "scope": "5 previous app files + 1 modified existing global audio player; no GitHub Actions; no Alafasy code files",
+  "files": [
+    {
+      "path": "app/layout.tsx",
+      "bytes": 4488,
+      "sha256": "56b515266167aeabe88dae10af4c3bbe16375352612a9551b52150d6f99145bd",
+      "original_blob_sha": "69820fdd9228ed9df77c406765247540899528c7"
+    },
+    {
+      "path": "components/Samee3SleepTimer.tsx",
+      "bytes": 15362,
+      "sha256": "fd49b054a584be622481afed278f92d684035e7268cd08f49d931d35bfb159e2",
+      "original_blob_sha": null
+    },
+    {
+      "path": "components/PersistentAudioPlayer.tsx",
+      "bytes": 9684,
+      "sha256": "185d681ec7b0cd271abe896377a416690fb7769190cc7dde4358ae1fdea978f3",
+      "original_blob_sha": "1a1326e40f133bff41f7c5aaa9c55dc4b59ff987"
+    },
+    {
+      "path": "lib/app-audio.ts",
+      "bytes": 11036,
+      "sha256": "c6912f7f3356bc703250c03ea48bc8d14cbc7409aa959723a6f2c0e04b96fdfc",
+      "original_blob_sha": "4922bd3736acc94c617c9a0a179d0046e122a5a7"
+    },
+    {
+      "path": "lib/samee3-usage-optimizer.ts",
+      "bytes": 1131,
+      "sha256": "1a86dd776afb71e284d600af8b80ebce9c6f1a31506cf16a2898c93cee9371e0",
+      "original_blob_sha": null
+    },
+    {
+      "path": "app/api/visual-backgrounds/route.ts",
+      "bytes": 4163,
+      "sha256": "f2b453fe7a494a836b1269781d1c8f97ae4156f4e3c1a75ccf28afe4a9ffbf09",
+      "original_blob_sha": "8031226638ac3ebc682a1073306c3bbbff547d7"
+    },
+    {
+      "path": "scripts/verify-samee3-usage.cjs",
+      "bytes": 4202,
+      "sha256": "64ea32afec03b1423ffe7349e3b6b1d6698032b636c1afff37e06731b18529b5",
+      "original_blob_sha": null
+    },
+    {
+      "path": "README-AR.md",
+      "bytes": 10122,
+      "sha256": "fd53d1b6ae7eec608b056876a3ca38251a1acd0f49a6b0fb962eeb86123058c6",
+      "original_blob_sha": null
+    }
+  ]
+}

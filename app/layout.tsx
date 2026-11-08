@@ -11,6 +11,8 @@ import AudioFocus from '@/components/AudioFocus'
 import RiwayatDownloadStatus from '@/components/RiwayatDownloadStatus'
 import AppExperience from '@/components/AppExperience'
 import Samee3WidgetSync from '@/components/Samee3WidgetSync'
+import PersistentAudioPlayer from '@/components/PersistentAudioPlayer'
+import Samee3SleepTimer from '@/components/Samee3SleepTimer'
 import { APP_BUILD_ID } from '@/lib/app-version'
 
 const iconVersion = encodeURIComponent(APP_BUILD_ID)
@@ -76,6 +78,8 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
         <RiwayatDownloadStatus />
         <AppExperience />
         <Samee3WidgetSync />
+        <Suspense fallback={null}><PersistentAudioPlayer /></Suspense>
+        <Suspense fallback={null}><Samee3SleepTimer /></Suspense>
       </AuthProvider>
     </body>
   </html>
