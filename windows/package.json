@@ -1,0 +1,69 @@
+{
+  "name": "samee3-windows",
+  "productName": "Samee3",
+  "version": "1.1.0",
+  "description": "مصحف سميع لويندوز — القرآن المحفوظ والموقع الأصلي والتذكيرات والأذان",
+  "main": "main.cjs",
+  "private": true,
+  "author": "SAMEE3",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test test/*.test.cjs",
+    "dist:windows": "electron-builder --win nsis --x64"
+  },
+  "devDependencies": {
+    "electron": "45.1.0",
+    "electron-builder": "26.18.0"
+  },
+  "build": {
+    "appId": "com.samee3.windows",
+    "productName": "Samee3",
+    "executableName": "Samee3",
+    "asar": true,
+    "compression": "maximum",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.cjs",
+      "core.cjs",
+      "platform.cjs",
+      "preload.cjs",
+      "ui/**/*",
+      "data/**/*",
+      "widgets-window.cjs"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "ui/app.ico",
+      "artifactName": "Samee3-Windows-${version}-x64-Setup.${ext}",
+      "requestedExecutionLevel": "asInvoker"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": false,
+      "allowToChangeInstallationDirectory": false,
+      "deleteAppDataOnUninstall": false,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "مصحف سميع",
+      "uninstallDisplayName": "مصحف سميع",
+      "installerLanguages": [
+        "ar",
+        "en_US"
+      ],
+      "language": "1025",
+      "installerIcon": "ui/app.ico",
+      "uninstallerIcon": "ui/app.ico",
+      "runAfterFinish": true
+    }
+  }
+}

@@ -1,0 +1,8 @@
+بيانات القرآن من مصادر مشروع سميع نفسها. النص محفوظ دون تطبيع أو حذف تشكيل.
+Quranpedia: https://quranpedia.net — https://api.quranpedia.net/v1
+المصادر المحلية للسوسي والبزي موجودة في data/mushaf في المستودع الأصلي.
+التلاوات وبيانات القراء: MP3Quran https://mp3quran.net
+الخطوط: ملفات public/fonts من المشروع الأصلي؛ راجع حقوق الناشرين المرفقة بها.
+
+Adhan recordings: https://github.com/Kiwifu/adhan-mp3
+20 named voices and one separate Fajr recording; source URLs, pinned commit and SHA-256 values in adhan-catalog.json. Names follow the publisher. The publisher describes the recordings as free for Islamic apps, prayer-time software and personal use.

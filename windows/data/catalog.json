@@ -1,0 +1,61 @@
+{
+  "schema": 1,
+  "readings": [
+    {
+      "id": "hafs",
+      "name": "حفص عن عاصم",
+      "verses": 6236,
+      "sha256": "90cb44ca25ae865148a2f6e89de60ff39dc8aa5cdf2540c19e0e7f931c40ec7f",
+      "sourceSha256": "5f33d7c44f88c2e93fc8b1f65339d9676071b3d8101f3863b6c5ba129754d4e0",
+      "source": "https://api.quranpedia.net/v1/mushafs/1"
+    },
+    {
+      "id": "warsh",
+      "name": "ورش عن نافع",
+      "verses": 6214,
+      "sha256": "885f730ee6aa3ecfbe749031f3cf02447ff30978dde0ac80594ff5d0891f60a9",
+      "sourceSha256": "5224c0117e05dd12d258652cb26eb8eb9ffc0282d65220c640500056975d6f44",
+      "source": "https://api.quranpedia.net/v1/mushafs/4"
+    },
+    {
+      "id": "qalun",
+      "name": "قالون عن نافع",
+      "verses": 6214,
+      "sha256": "5a958b6bb42d44e25a7e3f5ab5b1db910e0187e6003aaffdfa8f5f3b3430f281",
+      "sourceSha256": "67bdded5d120108c896049c20b7b6bb10777e3336e9a996d9d57d91d1e512000",
+      "source": "https://api.quranpedia.net/v1/mushafs/7"
+    },
+    {
+      "id": "douri",
+      "name": "الدوري عن أبي عمرو",
+      "verses": 6218,
+      "sha256": "5c975424f180d481072aab8abafa4225440200367e8577d48751d7bcd3f14d1e",
+      "sourceSha256": "f1160e430554c595adeba7b7d2e5452012dbefdfc6a50d1171b0ff7d4de1bc2a",
+      "source": "https://api.quranpedia.net/v1/mushafs/6"
+    },
+    {
+      "id": "shubah",
+      "name": "شعبة عن عاصم",
+      "verses": 6236,
+      "sha256": "7f7f7a66d0d54fc57bcf661c7effb93760f4d258762f962f9ec5dcb5dfb0bcfc",
+      "sourceSha256": "07ab3b5e673d8637faa0ddcb0b34f537021a509bdb6497b160309c02b6ede844",
+      "source": "https://api.quranpedia.net/v1/mushafs/9"
+    },
+    {
+      "id": "sousi",
+      "name": "السوسي عن أبي عمرو",
+      "verses": 6217,
+      "sha256": "22330afd7d540238dc4ac5a518adf9d7441708ffd5aea3f6eaa40a5ee37eee58",
+      "sourceSha256": "d74e4eb0c9975d06ddbc745d93bac2456bde9be269767cfe4bd7e15e529eb338",
+      "source": "../data/mushaf/sousi.text.json.gz"
+    },
+    {
+      "id": "bazzi",
+      "name": "البزي عن ابن كثير",
+      "verses": 6221,
+      "sha256": "c2e8cf1457cf35f95e4c6d4d20240064d9b34313cf89974ba64366424d299776",
+      "sourceSha256": "574df07c1101501e2ce04fc01f7829ec6a6938374eeeb3fa51518c03e7937ec6",
+      "source": "../data/mushaf/bazzi.text.json.gz"
+    }
+  ]
+}

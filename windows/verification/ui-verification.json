@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "cases": [
+    "The real Electron reader runs with Node unavailable and the isolated preload API present",
+    "All seven readings render through page604 with their bundled fonts and working previous/next navigation",
+    "Bookmarks and last page survive reload; Quran search, selection, copy and night mode work offline",
+    "Reminder settings persist, contain20 muezzins plus Fajr, schedule the next events, and stop an audio preview",
+    "Small desktop layout fits at800x650 and sharing copies the website link"
+  ],
+  "pageErrors": [],
+  "environment": "actual Electron45.1.0 Linux runtime and production Windows app sources",
+  "productionWrites": false,
+  "limitations": [
+    "Windows OS installation, startup registration and native Windows notification delivery are not tested here",
+    "AF_UNIX single-instance locking is replaced only in the private Linux UI harness; shipped application retains it"
+  ]
+}

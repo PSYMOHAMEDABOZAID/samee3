@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "installer": {
+    "id": "x64",
+    "assetName": "Samee3-Windows-1.0.0-x64-Setup.exe",
+    "versionName": "1.0.0",
+    "minimumOS": "10",
+    "bytes": 167372328,
+    "sha256": "34b287da8d552149f8e0043282b35e59d8930d2c7e6a6177ea72a2060f60b124",
+    "format": "NSIS3 Unicode",
+    "scope": "current user",
+    "signed": false
+  },
+  "application": {
+    "machine": 34404,
+    "optionalHeader": 523,
+    "version": "1.0.0",
+    "filesCompared": 69,
+    "allFilesMatch": true
+  },
+  "uninstallerArchiveValid": true,
+  "toolchain": {
+    "electron": "45.1.0",
+    "electronBuilder": "26.18.0",
+    "runtime": {
+      "name": "electron-v45.1.0-win32-x64.zip",
+      "sha256": "55eaba17abff7b5bba6c3bbc85068967379024fe742fe9c7fdba9118922ccbe2",
+      "bytes": 158224448,
+      "url": "https://github.com/electron/electron/releases/download/v45.1.0/electron-v45.1.0-win32-x64.zip"
+    },
+    "linuxPackaging": "electron-builder UninstallerReader fallback; no Windows execution"
+  },
+  "windowsOSRun": false
+}
