@@ -42,8 +42,8 @@ export function createPersistentPlayer(deps: Dependencies) {
   let audio: HTMLAudioElement | null = null
   let serial = 0, wanted = false, switching = false
   let release: (() => void) | undefined
-  let daily = false, startedDay = ''
   let pendingSeek = 0
+  let lastEndedSerial = -1
   const listeners = new Set<() => void>()
   const update = (patch: Partial<PlaybackState>) => {
     state = { ...state, ...patch }
@@ -60,6 +60,12 @@ export function createPersistentPlayer(deps: Dependencies) {
   const play = (request: number) => {
     if (!audio || request !== serial || !wanted) return
     try {
+      // On supporting Safari versions, keep a playback-type audio session
+      // when the user locks the screen. It does not bypass OS restrictions.
+      try {
+        const session = (navigator as Navigator & { audioSession?: { type: string } }).audioSession
+        if (session) session.type = 'playback'
+      } catch { /* Optional Safari API. */ }
       // SAMEE3_STABILITY_20261107: preserve playback intent.
       ;(audio as HTMLAudioElement & {
         __samee3ExplicitPause?: boolean
@@ -68,6 +74,13 @@ export function createPersistentPlayer(deps: Dependencies) {
       void result?.catch((error: unknown) => {
         if (request !== serial || !wanted) return
         if (error instanceof Error && error.name === 'AbortError') return
+        // Safari can refuse the next track when background playback is
+        // suspended. Do not discard the queue or the user's play intent.
+        if (error instanceof Error && error.name === 'NotAllowedError') {
+          update({ playing: false, loading: false,
+            error: 'تعذر بدء التسجيل في الخلفية. افتح سميع أو اضغط تشغيل للاستكمال.' })
+          return
+        }
         fail('تعذر بدء الصوت. اضغط تشغيل للاستكمال أو أعد المحاولة عند عودة الاتصال.')
       })
     } catch { fail('تعذر بدء الصوت. اضغط تشغيل للاستكمال.') }
@@ -85,17 +98,20 @@ export function createPersistentPlayer(deps: Dependencies) {
         }
       ).__samee3ExplicitPause === true
 
-      // SAMEE3_STABILITY_20261107: retain intent on background interruptions.
-      if (
-        !switching &&
-        !(
-          typeof document !== 'undefined' &&
-          document.visibilityState === 'hidden' &&
-          wanted &&
-          !explicitlyPaused &&
-          !audio?.ended
+      // Some iOS versions emit `pause` a moment before `ended`. This
+      // must not cancel the automatic next dhikr / next surah transition.
+      const closeToNaturalEnd = Boolean(audio && (
+        audio.ended || (
+          Number.isFinite(audio.duration) && audio.duration > 0 &&
+          audio.currentTime >= audio.duration - 0.45
         )
-      ) wanted = false
+      ))
+      const interruptedInBackground = Boolean(
+        typeof document !== 'undefined' &&
+        document.visibilityState === 'hidden' && wanted
+      )
+      if (explicitlyPaused) wanted = false
+      else if (!switching && !closeToNaturalEnd && !interruptedInBackground) wanted = false
 
       update({
         playing: false,
@@ -128,32 +144,64 @@ export function createPersistentPlayer(deps: Dependencies) {
 
       fail('تعذر تشغيل التسجيل. تحقق من الاتصال أو من حفظه كاملًا على الجهاز.')
     })
-    audio.addEventListener('ended', () => {
-      if (switching || !current() || !audio?.getAttribute('src')) return
-      wanted = false
-      if (daily && startedDay !== deps.day?.()) {
-        fail('بدأ يوم جديد. افتح الأذكار لبدء ورد اليوم.')
+    audio.addEventListener('ended', advanceAfterEnd)
+    // If the OS delays the end event until foreground, settle the same
+    // item once rather than leaving a silent ended audio element.
+    const onReturn = () => {
+      if (!audio || !wanted || switching || !current()) return
+      const explicitlyPaused = (
+        audio as HTMLAudioElement & { __samee3ExplicitPause?: boolean }
+      ).__samee3ExplicitPause === true
+      if (explicitlyPaused) return
+      if (audio.ended) { advanceAfterEnd(); return }
+      if (audio.error?.code === 2 && audio.getAttribute('src')) {
+        // Delegate network reconnection to SAMEE3's existing bounded retry
+        // handler instead of competing with it or spawning multiple streams.
+        audio.dispatchEvent(new Event('samee3-audio-retry'))
         return
       }
-      const track = current()
-      update({ playCount: state.playCount + 1 })
-      if (track?.itemId !== undefined) {
-        const before = state.counts[track.itemId] ?? track.repetitions ?? 1
-        const remaining = Math.max(0, before - 1)
-        if (before > 0) {
-          update({ counts: { ...state.counts, [track.itemId]: remaining } })
-          persistCounts()
-        }
-        if (track.listenRepeats === undefined && remaining > 0 && track.repeatRemaining !== false) { replay(); return }
+      if (audio.paused && audio.getAttribute('src') && !audio.error &&
+        (typeof document === 'undefined' || document.visibilityState === 'visible')) {
+        update({ playing: false, loading: true, error: '' })
+        play(++serial)
       }
-      if (track?.listenRepeats !== undefined && state.playCount < state.playTarget) { replay(); return }
-      if (state.repeat === 'one') { replay(); return }
-      if (state.index + 1 < state.queue.length) { void playAt(state.index + 1); return }
-      if (state.repeat === 'all' && state.queue.length) { void playAt(0); return }
-      update({ playing: false, loading: false, position: 0 })
+    }
+    if (typeof document !== 'undefined') document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') onReturn()
     })
+    if (typeof window !== 'undefined') {
+      window.addEventListener('pageshow', onReturn)
+      window.addEventListener('online', onReturn)
+    }
     return audio
   }
+  /** Advance only after a genuinely completed track, not after user Stop. */
+  function advanceAfterEnd() {
+    if (!audio || switching || !current() || !audio.getAttribute('src') || !wanted || !audio.ended) return
+    if ((audio as HTMLAudioElement & { __samee3ExplicitPause?: boolean }).__samee3ExplicitPause) return
+    if (lastEndedSerial === serial) return
+    lastEndedSerial = serial
+    const track = current()
+    update({ playCount: state.playCount + 1 })
+    if (track?.itemId !== undefined) {
+      const before = state.counts[track.itemId] ?? track.repetitions ?? 1
+      const remaining = Math.max(0, before - 1)
+      if (before > 0) {
+        update({ counts: { ...state.counts, [track.itemId]: remaining } })
+        persistCounts()
+      }
+      if (track.listenRepeats === undefined && remaining > 0 && track.repeatRemaining !== false) {
+        replay(); return
+      }
+    }
+    if (track?.listenRepeats !== undefined && state.playCount < state.playTarget) { replay(); return }
+    if (state.repeat === 'one') { replay(); return }
+    if (state.index + 1 < state.queue.length) { playAt(state.index + 1, true, true); return }
+    if (state.repeat === 'all' && state.queue.length) { playAt(0, true, true); return }
+    wanted = false
+    update({ playing: false, loading: false, position: 0 })
+  }
+
   function replay() {
     if (!audio) return
     try { audio.currentTime = 0 } catch { playAt(state.index); return }
@@ -161,7 +209,7 @@ export function createPersistentPlayer(deps: Dependencies) {
     update({ position: 0, loading: true, error: '' })
     play(++serial)
   }
-  function playAt(index: number, autoplay = true) {
+  function playAt(index: number, autoplay = true, automatic = false) {
     if (!Number.isInteger(index) || index < 0 || index >= state.queue.length) {
       wanted = false; update({ playing: false, loading: false }); return
     }
@@ -171,11 +219,18 @@ export function createPersistentPlayer(deps: Dependencies) {
     if (!track) { wanted = false; update({ playing: false, loading: false }); return }
     const element = ensure()
     const request = ++serial
+    lastEndedSerial = -1
     switching = true
     wanted = autoplay
-    element.pause()
-    element.removeAttribute('src')
-    element.load()
+    // During an `ended` event, setting the next URL and calling play() in
+    // the same event turn preserves background audio session continuity.
+    // Do NOT pause/unload between automatic tracks; iOS may suspend the tab
+    // before the next `play()` reaches the media engine.
+    if (!automatic) {
+      element.pause()
+      element.removeAttribute('src')
+      element.load()
+    }
     release?.(); release = undefined
     const fixed = Number(track.listenRepeats)
     const playTarget = track.listenRepeats !== undefined
@@ -218,8 +273,12 @@ export function createPersistentPlayer(deps: Dependencies) {
     subscribe(listener: () => void) { listeners.add(listener); return () => { listeners.delete(listener) } },
     element: () => audio,
     start(options: PlaybackStart) {
-      daily = options.daily === true; startedDay = deps.day?.() || ''
-      const repeat = options.repeat ?? (state.scope === options.scope ? state.repeat : 'off')
+      // Quran playlists are continuous by default; adhkar have a finite end.
+      // Explicit user repeat settings always take priority.
+      const isQuranQueue = options.scope === 'library' &&
+        options.queue.some(track => track.library?.kind === 'quran')
+      const repeat = options.repeat ?? (isQuranQueue ? 'all' :
+        (state.scope === options.scope ? state.repeat : 'off'))
       update({ scope: options.scope, contextKey: options.contextKey || '', href: options.href, readerId: options.readerId || '',
         queue: options.queue, counts: options.counts || {}, repeat })
       playAt(options.index, options.autoplay !== false)
@@ -227,6 +286,7 @@ export function createPersistentPlayer(deps: Dependencies) {
     stop(scope?: PlaybackState['scope']) {
       if (scope && state.scope !== scope) return
       ++serial
+      lastEndedSerial = -1
       wanted = false
       switching = true
 
@@ -244,7 +304,8 @@ export function createPersistentPlayer(deps: Dependencies) {
     },
     toggle() {
       if (!audio || !current()) return
-      if (daily && startedDay !== deps.day?.()) { audio.pause(); fail('بدأ يوم جديد. افتح الأذكار لبدء ورد اليوم.'); return }
+      // Finish the already-started adhkar queue even across midnight.
+      // Day-specific counts are still persisted under the original key.
       if (state.loading || state.playing) {
         (audio as HTMLAudioElement & {
           __samee3ExplicitPause?: boolean
@@ -260,7 +321,7 @@ export function createPersistentPlayer(deps: Dependencies) {
       }
       wanted = true
       update({ loading: true, error: '' })
-      if (audio.error || !audio.getAttribute('src') || (audio.ended && current()?.listenRepeats !== undefined)) playAt(state.index)
+      if (audio.error || !audio.getAttribute('src') || audio.ended) playAt(state.index)
       else { ++serial; play(serial) }
     },
     next(offset: number) {
