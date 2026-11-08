@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">مصحف سميع TV</string>
+    <string name="loading">جارٍ فتح مصحف سميع…</string>
+    <string name="connection_error">تعذّر فتح مصحف سميع. تأكد من الإنترنت وتحديث Android System WebView.</string>
+    <string name="try_again">إعادة المحاولة</string>
+    <string name="download_started">بدأ تحميل الملف في مجلد التنزيلات</string>
+    <string name="download_problem">تعذّر التحميل. جرّب فتح الرابط في المتصفح.</string>
+    <string name="no_browser">لا يوجد متصفح مناسب على الجهاز لفتح الرابط.</string>
+</resources>

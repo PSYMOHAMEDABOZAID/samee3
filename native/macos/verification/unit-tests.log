@@ -1,0 +1,24 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> samee3-mac@1.0.0 test
+> node --test test/*.test.cjs
+
+✔ remote and local URL checks reject protocol confusion, credentials and lookalike hosts (1.08688ms)
+✔ resource mapping cannot reach application code or files outside the resource folders (0.366493ms)
+✔ all reminders are opt-in and settings accept only bounded known values (1.898073ms)
+✔ daily reminders use their selected timezone and exclude past instants (12.265297ms)
+✔ spring DST gap skips a nonexistent local time; fall overlap chooses the next real instant (6.76669ms)
+✔ hadith respects the selected waking hours and library reminders are on Friday (8.694788ms)
+✔ prayer calendars preserve source offsets and select the next cached prayer only (0.836342ms)
+✔ location or calculation changes invalidate a cached prayer identity (0.336518ms)
+✔ hadith notification opens exactly the displayed bundled text with its reference (4.659962ms)
+✔ all seven Quran readings have their original verified data and complete indexes (127.969415ms)
+✔ twenty distinct muezzins and the extra Fajr recording are all included offline and match their fingerprints (52.28499ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 333.691641
