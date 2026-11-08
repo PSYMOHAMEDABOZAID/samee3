@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState, type ChangeEvent, type MouseEvent } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
-import { Clock3, MoonStar, X, Check, TimerOff } from 'lucide-react'
+import { Clock3, X, Check, TimerOff } from 'lucide-react'
 import { appAudio } from '@/lib/app-audio'
 
 /**
@@ -12,6 +12,9 @@ import { appAudio } from '@/lib/app-audio'
  */
 const KEY = 'samee3_sleep_timer_v1'
 const EXPIRED_KEY = 'samee3_sleep_timer_expired_v1'
+const CHANGED_EVENT = 'samee3:sleep-timer-changed'
+const OPEN_EVENT = 'samee3:open-sleep-timer'
+function notifyChanged() { window.dispatchEvent(new Event(CHANGED_EVENT)) }
 type Mode = 'audio' | 'mushaf' | 'adhkar' | 'all'
 type TimerRecord = { id: string; until: number; mode: Mode }
 const MODES: { value: Mode; label: string; detail: string }[] = [
@@ -113,6 +116,7 @@ export default function Samee3SleepTimer() {
       localStorage.setItem(EXPIRED_KEY, JSON.stringify({ ...timer, at: Date.now() }))
     } catch { /* storage may be unavailable in private mode */ }
     endPlayback(timer.mode, pathnameRef.current, () => router.replace('/'))
+    notifyChanged()
     setRecord(null)
     setRemaining(0)
     setNotice('انتهى الوقت المحدد، وتم إيقاف التشغيل حسب اختيارك.')
@@ -127,6 +131,12 @@ export default function Samee3SleepTimer() {
     setRecord(previous => previous?.id === timer.id ? previous : timer)
     setRemaining(left)
   }, [expire])
+
+  useEffect(() => {
+    const openDialog = () => { setNotice(''); setOpen(true) }
+    window.addEventListener(OPEN_EVENT, openDialog)
+    return () => window.removeEventListener(OPEN_EVENT, openDialog)
+  }, [])
 
   useEffect(() => {
     check()
@@ -160,6 +170,7 @@ export default function Samee3SleepTimer() {
               (!current || current.id === timer.id) && !completed.current.has(timer.id)) {
               completed.current.add(timer.id)
               endPlayback(timer.mode, pathnameRef.current, () => router.replace('/'))
+              notifyChanged()
               setRecord(null)
               setRemaining(0)
               setNotice('انتهى مؤقت القراءة.')
@@ -216,6 +227,7 @@ export default function Samee3SleepTimer() {
       until,
     }
     try { localStorage.setItem(KEY, JSON.stringify(next)) } catch { /* will remain active in this tab */ }
+    notifyChanged()
     setRecord(next)
     setRemaining(next.until - Date.now())
     setNotice('تم تشغيل مؤقت القراءة.')
@@ -223,26 +235,15 @@ export default function Samee3SleepTimer() {
   }
   const cancel = () => {
     try { localStorage.removeItem(KEY) } catch {}
+    notifyChanged()
     setRecord(null)
     setRemaining(0)
     setNotice('تم إلغاء المؤقت.')
     setOpen(false)
   }
 
-  const supportedPage = /^\/(mushaf|audio|adhkar)(?:\/|$)/.test(pathname)
-  if (!supportedPage && !record) return null
-
+  // UI lives inside PersistentAudioPlayer. No floating timer button over Qur'an text.
   return <>
-    <button
-      type="button"
-      onClick={() => { setOpen(true); setNotice('') }}
-      aria-label="ضبط مؤقت القراءة والإيقاف التلقائي"
-      title="مؤقت القراءة والإيقاف التلقائي"
-      className="fixed bottom-[calc(11rem+env(safe-area-inset-bottom))] left-3 z-[85] flex items-center gap-2 rounded-full border border-[#d9c39d] bg-[#194f43] px-3 py-2 text-xs font-bold text-white shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a87931]"
-    >
-      <MoonStar size={16} aria-hidden="true" />
-      {record ? timeLeft(remaining) : 'مؤقت القراءة'}
-    </button>
     {isOpen && <div className="fixed inset-0 z-[120] flex items-center justify-center bg-black/65 p-4" dir="rtl" role="presentation" onMouseDown={(event: MouseEvent<HTMLDivElement>) => { if (event.target === event.currentTarget) setOpen(false) }}>
       <section role="dialog" aria-modal="true" aria-label="إعداد مؤقت القراءة" className="w-full max-w-md rounded-3xl border border-[#d9c39d] bg-[#fffbf3] p-5 text-[#194f43] shadow-2xl">
         <div className="mb-3 flex items-center justify-between">
@@ -273,11 +274,12 @@ export default function Samee3SleepTimer() {
           <input id="samee3-sleep-time" type="time" value={clockTime} onChange={(event: ChangeEvent<HTMLInputElement>) => setClockTime(event.target.value)} className="w-full rounded-xl border border-[#ded5c7] bg-white p-3 text-center text-base font-bold" />
         </div>}
         {record && <p className="mb-3 rounded-xl bg-[#ecf1eb] p-3 text-sm" role="status">المؤقت الحالي: {timeLeft(remaining)} متبقية.</p>}
+        {notice && <p role="status" className="mb-3 rounded-lg bg-[#e9f0e8] p-2 text-xs font-medium">{notice}</p>}
         <button type="button" onClick={start} className="w-full rounded-xl bg-[#194f43] px-4 py-3 font-extrabold text-white">{record ? 'تغيير المؤقت' : 'بدء المؤقت'}</button>
         {record && <button type="button" onClick={cancel} className="mt-2 flex w-full items-center justify-center gap-2 rounded-xl border border-red-200 bg-white px-4 py-3 text-sm font-bold text-red-700"><TimerOff size={17}/> إلغاء المؤقت</button>}
         <p className="mt-3 text-[11px] leading-5 text-[#6b756b]">الإغلاق يعني الخروج للرئيسية، وليس قفل الهاتف. عند تعطيل المتصفح للصوت أو JavaScript في الخلفية قد يتأخر التنفيذ حتى عودة التطبيق.</p>
       </section>
     </div>}
-    {notice && <div role="status" className="fixed bottom-[calc(14.5rem+env(safe-area-inset-bottom))] left-3 z-[90] max-w-xs rounded-xl bg-[#194f43] px-3 py-2 text-xs text-white shadow-md" onClick={() => setNotice('')}>{notice}</div>}
+
   </>
 }
