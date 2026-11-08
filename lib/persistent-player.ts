@@ -44,6 +44,9 @@ export function createPersistentPlayer(deps: Dependencies) {
   let release: (() => void) | undefined
   let pendingSeek = 0
   let lastEndedSerial = -1
+  // A replay of the SAME dhikr has begun but hasn't emitted `playing` yet.
+  // Keep this distinct from a finished item so retries preserve the count.
+  let replayPending = false
   const listeners = new Set<() => void>()
   const update = (patch: Partial<PlaybackState>) => {
     state = { ...state, ...patch }
@@ -55,6 +58,7 @@ export function createPersistentPlayer(deps: Dependencies) {
   }
   const fail = (message: string) => {
     wanted = false
+    replayPending = false
     update({ playing: false, loading: false, error: message })
   }
   const play = (request: number) => {
@@ -89,7 +93,12 @@ export function createPersistentPlayer(deps: Dependencies) {
     if (audio) return audio
     audio = deps.createAudio()
     audio.preload = 'metadata'
-    audio.addEventListener('playing', () => { wanted = true; update({ playing: true, loading: false, error: '' }) })
+    audio.addEventListener('playing', () => {
+      wanted = true
+      replayPending = false
+      lastEndedSerial = -1
+      update({ playing: true, loading: false, error: '' })
+    })
     audio.addEventListener('play', () => { wanted = true; update({ playing: true }) })
     audio.addEventListener('pause', () => {
       const explicitlyPaused = (
@@ -111,7 +120,7 @@ export function createPersistentPlayer(deps: Dependencies) {
         document.visibilityState === 'hidden' && wanted
       )
       if (explicitlyPaused) wanted = false
-      else if (!switching && !closeToNaturalEnd && !interruptedInBackground) wanted = false
+      else if (!switching && !replayPending && !closeToNaturalEnd && !interruptedInBackground) wanted = false
 
       update({
         playing: false,
@@ -127,6 +136,12 @@ export function createPersistentPlayer(deps: Dependencies) {
       update({ duration: Number.isFinite(audio!.duration) ? audio!.duration : 0 })
     })
     audio.addEventListener('timeupdate', () => {
+      // On some mobile browsers `playing` can be delayed in the background.
+      // Actual advancing audio time is sufficient to confirm a new repetition.
+      if (replayPending && !audio!.paused && audio!.currentTime > 0.05) {
+        replayPending = false
+        lastEndedSerial = -1
+      }
       const position = audio!.currentTime || 0
       if (Math.floor(position / 2) !== Math.floor(state.position / 2)) update({ position })
     })
@@ -153,6 +168,12 @@ export function createPersistentPlayer(deps: Dependencies) {
         audio as HTMLAudioElement & { __samee3ExplicitPause?: boolean }
       ).__samee3ExplicitPause === true
       if (explicitlyPaused) return
+      // A repeat may have been counted already when Safari declined to
+      // restart it in the background. Retry ONLY the audio, not the count.
+      if (replayPending) {
+        if (audio.paused && !state.loading) replay()
+        return
+      }
       if (audio.ended) { advanceAfterEnd(); return }
       if (audio.error?.code === 2 && audio.getAttribute('src')) {
         // Delegate network reconnection to SAMEE3's existing bounded retry
@@ -179,7 +200,7 @@ export function createPersistentPlayer(deps: Dependencies) {
   function advanceAfterEnd() {
     if (!audio || switching || !current() || !audio.getAttribute('src') || !wanted || !audio.ended) return
     if ((audio as HTMLAudioElement & { __samee3ExplicitPause?: boolean }).__samee3ExplicitPause) return
-    if (lastEndedSerial === serial) return
+    if (replayPending || lastEndedSerial === serial) return
     lastEndedSerial = serial
     const track = current()
     update({ playCount: state.playCount + 1 })
@@ -199,15 +220,32 @@ export function createPersistentPlayer(deps: Dependencies) {
     if (state.index + 1 < state.queue.length) { playAt(state.index + 1, true, true); return }
     if (state.repeat === 'all' && state.queue.length) { playAt(0, true, true); return }
     wanted = false
+    replayPending = false
     update({ playing: false, loading: false, position: 0 })
   }
 
+  /** Restart the very same recording; never reset its repeat progress. */
   function replay() {
-    if (!audio) return
-    try { audio.currentTime = 0 } catch { playAt(state.index); return }
+    if (!audio || !current()) return
+    replayPending = true
     wanted = true
+    const request = ++serial
+    // Block duplicate ended events until this repetition actually plays.
+    lastEndedSerial = request
     update({ position: 0, loading: true, error: '' })
-    play(++serial)
+    try {
+      audio.currentTime = 0
+    } catch {
+      // Safari may reject a seek on an ended/non-seekable resource. Reload
+      // the identical URL WITHOUT calling playAt(), which resets playCount.
+      try {
+        const source = audio.getAttribute('src')
+        if (!source) { fail('تعذر إعادة الذكر؛ افتح التسجيل وحاول مجددًا.'); return }
+        audio.src = source
+        audio.load()
+      } catch { fail('تعذر إعادة الذكر؛ افتح التسجيل وحاول مجددًا.'); return }
+    }
+    play(request)
   }
   function playAt(index: number, autoplay = true, automatic = false) {
     if (!Number.isInteger(index) || index < 0 || index >= state.queue.length) {
@@ -220,6 +258,7 @@ export function createPersistentPlayer(deps: Dependencies) {
     const element = ensure()
     const request = ++serial
     lastEndedSerial = -1
+    replayPending = false
     switching = true
     wanted = autoplay
     // During an `ended` event, setting the next URL and calling play() in
@@ -287,6 +326,7 @@ export function createPersistentPlayer(deps: Dependencies) {
       if (scope && state.scope !== scope) return
       ++serial
       lastEndedSerial = -1
+      replayPending = false
       wanted = false
       switching = true
 
@@ -312,6 +352,7 @@ export function createPersistentPlayer(deps: Dependencies) {
         }).__samee3ExplicitPause = true
 
         wanted = false
+        replayPending = false
         ++serial
         switching = false
         audio.pause()
@@ -321,7 +362,8 @@ export function createPersistentPlayer(deps: Dependencies) {
       }
       wanted = true
       update({ loading: true, error: '' })
-      if (audio.error || !audio.getAttribute('src') || audio.ended) playAt(state.index)
+      if (replayPending) replay()
+      else if (audio.error || !audio.getAttribute('src') || audio.ended) playAt(state.index)
       else { ++serial; play(serial) }
     },
     next(offset: number) {

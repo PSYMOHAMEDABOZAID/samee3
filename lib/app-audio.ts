@@ -101,28 +101,10 @@ export const appAudio = createPersistentPlayer({
     document.addEventListener('visibilitychange', resumeOnReturn)
     window.addEventListener('pageshow', resumeOnReturn)
 
-    // Browser engines occasionally finish a track without allowing the
-    // application's normal end-of-track transition to settle (e.g. after a
-    // background interruption). Retry only when the *same ended item* is
-    // still selected. Never skip an adhkar repeat or an Alafasy recording.
-    audio.addEventListener('ended', () => {
-      const before = appAudio.getSnapshot()
-      if (before.scope !== 'adhkar' && before.scope !== 'library') return
-      const finishedIndex = before.index
-      const finishedScope = before.scope
-      window.setTimeout(() => {
-        const now = appAudio.getSnapshot()
-        const explicitlyPaused = (audio as HTMLAudioElement & {
-          __samee3ExplicitPause?: boolean
-        }).__samee3ExplicitPause === true
-        if (now.scope !== finishedScope || now.index !== finishedIndex ||
-          now.repeat !== 'off' || !audio.ended || explicitlyPaused ||
-          finishedIndex + 1 >= now.queue.length ||
-          (now.queue[finishedIndex]?.listenRepeats !== undefined &&
-            now.playCount < now.playTarget)) return
-        appAudio.next(1)
-      }, 1600)
-    })
+    // End-of-track counting and auto-next are owned exclusively by
+    // createPersistentPlayer. The old 1.6-second fallback could SKIP a dhikr
+    // still awaiting its remaining repetitions when Safari blocked replay.
+    // Never advance a second time from this adapter.
 
     attachAudioContinuity(audio, message => appAudio.report(message))
     let lastSaved = -1

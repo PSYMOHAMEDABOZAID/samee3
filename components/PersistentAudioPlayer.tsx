@@ -269,7 +269,6 @@ export default function PersistentAudioPlayer() {
   // The same persistent widget is used throughout the site. Inside the Mushaf
   // it starts as a small icon in the unused lower-right area, not on the verses.
   const isMushafPage = pathname === '/mushaf' || pathname.startsWith('/mushaf/')
-  const isReadingPage = /^\/(mushaf|adhkar|audio)(?:\/|$)/.test(pathname)
 
   useEffect(() => {
     if (isMushafPage) setMushafExpanded(false)
@@ -283,12 +282,14 @@ export default function PersistentAudioPlayer() {
   useEffect(() => { setDismissed(false) }, [pathname])
 
   // If both engines happen to have a track, give priority to the one playing.
-  const showMushaf = Boolean(mushaf?.src && (
-    mushaf.playing || !track || (!playback.playing && !playback.loading)
-  ))
-  const playing = showMushaf ? Boolean(mushaf?.playing) : playback.playing
+  // Never show the floating widget merely because a Quran page was opened,
+  // a track was previously selected, or a sleep timer exists. Display it
+  // only during real playback or the loading transition of a started track.
+  const appSessionActive = Boolean(track && (playback.playing || playback.loading))
+  const showMushaf = Boolean(mushaf?.src && mushaf.playing && !appSessionActive)
+  const playing = showMushaf ? true : playback.playing
   const loading = !showMushaf && playback.loading
-  const active = showMushaf || Boolean(track)
+  const active = showMushaf || appSessionActive
   const section = showMushaf ? 'المصحف' : playback.scope === 'adhkar' ? 'الأذكار' :
     playback.scope === 'riwayat' ? 'روايات القرآن' : 'المكتبة الصوتية'
   const displayTitle = showMushaf
@@ -303,7 +304,7 @@ export default function PersistentAudioPlayer() {
   const timeRemaining = timerUntil === null ? 0 : Math.max(0, timerUntil - now)
   const timerText = timeRemaining > 0 ? `${Math.ceil(timeRemaining / 60000)} د` : 'المؤقت'
   const isCompact = collapsed || (isMushafPage && !mushafExpanded)
-  const canShow = active || isReadingPage || timeRemaining > 0
+  const canShow = active
 
   const miniContext: MiniContext = isMushafPage ? 'mushaf' : 'other'
 
