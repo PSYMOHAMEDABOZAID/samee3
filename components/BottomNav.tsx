@@ -1,4 +1,3 @@
-
 'use client'
 
 import { useCallback, useEffect, useRef, useState } from 'react'
@@ -51,6 +50,14 @@ const EMPTY_PLAYER: MiniPlayer = {
   surah: 0,
   reciter: '',
 }
+
+/**
+ * Keep all legacy playback controls in this file for safe rollback.
+ * The unified PersistentAudioPlayer is already mounted in app/layout.tsx,
+ * so its modern design replaces the old duplicate bar on screen.
+ * Set to true only if you intentionally remove the unified player.
+ */
+const SHOW_LEGACY_QURAN_BAR = false
 
 const QURAN_SURAHS = [
   'الفاتحة', 'البقرة', 'آل عمران', 'النساء', 'المائدة', 'الأنعام',
@@ -329,7 +336,7 @@ export default function BottomNav() {
 
   return (
     <>
-      {player.visible && (
+      {SHOW_LEGACY_QURAN_BAR && player.visible && (
         <aside
           dir="rtl"
           aria-label="التحكم في تلاوة المصحف"
