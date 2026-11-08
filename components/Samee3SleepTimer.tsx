@@ -25,6 +25,39 @@ const MODES: { value: Mode; label: string; detail: string }[] = [
 ]
 const PRESETS = [10, 15, 20, 30, 45, 60, 90]
 
+// Only explicit user stops cancel the timer. Natural `pause` before `ended`,
+// changing surahs, repeating an adhkar and a system background interruption
+// must NEVER be treated as a user stop.
+type AudibleQuran = HTMLAudioElement & {
+  __samee3Continue?: boolean
+  __samee3Switching?: boolean
+  __samee3Serial?: number
+}
+type AppMedia = HTMLAudioElement & { __samee3ExplicitPause?: boolean }
+
+function activeMushafAudio(): AudibleQuran | null {
+  if (typeof window === 'undefined') return null
+  return (window as Window & { __samee3PersistentAudio?: AudibleQuran }).__samee3PersistentAudio || null
+}
+
+function manuallyPausedQuran(audio: AudibleQuran): boolean {
+  // Internal transitions retain `__samee3Continue=true` and/or switch state.
+  // A natural ending is not an explicit Pause/Stop.
+  return audio.__samee3Continue === false && !audio.__samee3Switching && !audio.ended
+}
+
+function manuallyPausedAppAudio(audio: AppMedia): boolean {
+  return audio.__samee3ExplicitPause === true && !audio.ended
+}
+
+function anotherPlayerIsStartingOrPlaying(): boolean {
+  const current = appAudio.getSnapshot()
+  const quran = activeMushafAudio()
+  return Boolean((current.scope && (current.playing || current.loading)) ||
+    (quran && !quran.paused && quran.__samee3Continue !== false))
+}
+
+
 function validMode(value: unknown): value is Mode {
   return value === 'audio' || value === 'mushaf' || value === 'adhkar' || value === 'all'
 }
@@ -106,6 +139,24 @@ export default function Samee3SleepTimer() {
   const [remaining, setRemaining] = useState(0)
   const [notice, setNotice] = useState('')
   const completed = useRef(new Set<string>())
+  // Mirrors the timer even if private browsing blocks localStorage.
+  const liveRecordRef = useRef<TimerRecord | null>(null)
+
+  const cancelAfterManualStop = useCallback((expectedId: string) => {
+    const current = readTimer() || liveRecordRef.current
+    if (!current || current.id !== expectedId || current.until <= Date.now()) return
+    if (anotherPlayerIsStartingOrPlaying()) return
+    try {
+      if (readTimer()?.id === expectedId) localStorage.removeItem(KEY)
+    } catch { /* In-memory fallback still stops the local countdown. */ }
+    liveRecordRef.current = null
+    notifyChanged()
+    setRecord(null)
+    setRemaining(0)
+    setNotice('')
+    setOpen(false)
+  }, [])
+
 
   const expire = useCallback((timer: TimerRecord) => {
     if (completed.current.has(timer.id)) return
@@ -115,6 +166,7 @@ export default function Samee3SleepTimer() {
       if (current?.id === timer.id) localStorage.removeItem(KEY)
       localStorage.setItem(EXPIRED_KEY, JSON.stringify({ ...timer, at: Date.now() }))
     } catch { /* storage may be unavailable in private mode */ }
+    liveRecordRef.current = null
     endPlayback(timer.mode, pathnameRef.current, () => router.replace('/'))
     notifyChanged()
     setRecord(null)
@@ -124,10 +176,11 @@ export default function Samee3SleepTimer() {
   }, [router])
 
   const check = useCallback(() => {
-    const timer = readTimer()
-    if (!timer) { setRecord(null); setRemaining(0); return }
+    const timer = readTimer() || liveRecordRef.current
+    if (!timer) { liveRecordRef.current = null; setRecord(null); setRemaining(0); return }
     const left = timer.until - Date.now()
     if (left <= 0) { expire(timer); return }
+    liveRecordRef.current = timer
     setRecord(previous => previous?.id === timer.id ? previous : timer)
     setRemaining(left)
   }, [expire])
@@ -159,7 +212,7 @@ export default function Samee3SleepTimer() {
     const interval = window.setInterval(() => { keepMediaObserved(); check() }, 1000)
     const onFocus = () => check()
     const onStorage = (event: StorageEvent) => {
-      if (event.key === KEY) check()
+      if (event.key === KEY) { if (!event.newValue) liveRecordRef.current = null; check() }
       if (event.key === EXPIRED_KEY && event.newValue) {
         try {
           const item: unknown = JSON.parse(event.newValue)
@@ -199,6 +252,71 @@ export default function Samee3SleepTimer() {
     }
   }, [check, router])
 
+  // Observe audio that persists outside React routes. The normal ended event,
+  // a transient iOS suspension, and the source changes between adkhar or surahs
+  // do not cancel the countdown. This effect never creates a second audio player.
+  useEffect(() => {
+    let appElement: AppMedia | null = null
+    let quranElement: AudibleQuran | null = null
+    let pendingManualCancel: number | undefined
+    let previousScope = appAudio.getSnapshot().scope
+
+    const scheduleManualStop = () => {
+      const timer = readTimer() || liveRecordRef.current
+      if (!timer || timer.until <= Date.now()) return
+      if (pendingManualCancel !== undefined) window.clearTimeout(pendingManualCancel)
+      const id = timer.id
+      // The short grace period distinguishes a manual stop from audio-focus
+      // handoff to another player (which may be loading a new source).
+      pendingManualCancel = window.setTimeout(() => {
+        pendingManualCancel = undefined
+        cancelAfterManualStop(id)
+      }, 250)
+    }
+
+    const onAppPause = () => {
+      if (appElement && manuallyPausedAppAudio(appElement)) scheduleManualStop()
+    }
+    const onMushafPause = () => {
+      if (quranElement && manuallyPausedQuran(quranElement)) scheduleManualStop()
+    }
+    const watchMedia = () => {
+      const currentApp = appAudio.element() as AppMedia | null
+      const currentQuran = activeMushafAudio()
+      if (currentApp !== appElement) {
+        appElement?.removeEventListener('pause', onAppPause)
+        appElement = currentApp
+        appElement?.addEventListener('pause', onAppPause)
+      }
+      if (currentQuran !== quranElement) {
+        quranElement?.removeEventListener('pause', onMushafPause)
+        quranElement = currentQuran
+        quranElement?.addEventListener('pause', onMushafPause)
+      }
+    }
+    const onAppState = () => {
+      watchMedia()
+      const nextScope = appAudio.getSnapshot().scope
+      // stop() also works while already paused, when there is no 'pause'
+      // event to observe. A switch to a different scope is NOT a stop.
+      if (previousScope !== null && nextScope === null) scheduleManualStop()
+      previousScope = nextScope
+    }
+
+    watchMedia()
+    const unsubscribe = appAudio.subscribe(onAppState)
+    const mediaPoll = window.setInterval(watchMedia, 500)
+    window.addEventListener('pageshow', watchMedia)
+    return () => {
+      unsubscribe()
+      window.clearInterval(mediaPoll)
+      window.removeEventListener('pageshow', watchMedia)
+      if (pendingManualCancel !== undefined) window.clearTimeout(pendingManualCancel)
+      appElement?.removeEventListener('pause', onAppPause)
+      quranElement?.removeEventListener('pause', onMushafPause)
+    }
+  }, [cancelAfterManualStop])
+
   // If the Qur'an audio element is first created after this component mounts,
   // the interval above still checks the deadline; no global player is replaced.
   const start = () => {
@@ -226,6 +344,7 @@ export default function Samee3SleepTimer() {
       mode,
       until,
     }
+    liveRecordRef.current = next
     try { localStorage.setItem(KEY, JSON.stringify(next)) } catch { /* will remain active in this tab */ }
     notifyChanged()
     setRecord(next)
@@ -234,6 +353,7 @@ export default function Samee3SleepTimer() {
     setOpen(false)
   }
   const cancel = () => {
+    liveRecordRef.current = null
     try { localStorage.removeItem(KEY) } catch {}
     notifyChanged()
     setRecord(null)
