@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent, type MouseEvent as ReactMouseEvent } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { ChevronDown, Headphones, Loader2, MoonStar, Pause, Play, SkipBack, SkipForward, Square, Volume2, X } from 'lucide-react'
@@ -15,6 +15,87 @@ type MushafAudio = HTMLAudioElement & {
   __samee3ReciterName?: string
 }
 type MushafView = { src: string; playing: boolean; surah: number; reciter: string; position: number; duration: number }
+
+/**
+ * The mini-player position is stored as viewport-relative coordinates, not raw
+ * pixels. This keeps it reachable after orientation changes and screen resizing.
+ * Mushaf and other pages have separate remembered positions for their layouts.
+ */
+const MINI_POSITION_KEY = 'samee3_miniplayer_position_v1'
+type MiniContext = 'mushaf' | 'other'
+type MiniPoint = { left: number; top: number }
+type FractionalPosition = { x: number; y: number }
+type MiniStore = Partial<Record<MiniContext, FractionalPosition>>
+type MiniDrag = {
+  id: number
+  startX: number
+  startY: number
+  originLeft: number
+  originTop: number
+  moved: boolean
+  current: MiniPoint
+  bounds: { minLeft: number; maxLeft: number; minTop: number; maxTop: number }
+}
+
+function clamp(value: number, lower: number, upper: number) {
+  return Math.min(upper, Math.max(lower, value))
+}
+
+function readMiniStore(): MiniStore {
+  try {
+    const value: unknown = JSON.parse(localStorage.getItem(MINI_POSITION_KEY) || '{}')
+    if (!value || typeof value !== 'object' || Array.isArray(value)) return {}
+    return value as MiniStore
+  } catch { return {} }
+}
+
+function validFraction(point: FractionalPosition | undefined): point is FractionalPosition {
+  return !!point && Number.isFinite(point.x) && Number.isFinite(point.y) &&
+    point.x >= 0 && point.x <= 1 && point.y >= 0 && point.y <= 1
+}
+
+function saveMiniPosition(context: MiniContext, point: MiniPoint, bounds: MiniDrag['bounds']) {
+  const travelX = Math.max(0, bounds.maxLeft - bounds.minLeft)
+  const travelY = Math.max(0, bounds.maxTop - bounds.minTop)
+  const normalized = {
+    x: travelX ? clamp((point.left - bounds.minLeft) / travelX, 0, 1) : 0,
+    y: travelY ? clamp((point.top - bounds.minTop) / travelY, 0, 1) : 0,
+  }
+  try {
+    localStorage.setItem(MINI_POSITION_KEY, JSON.stringify({ ...readMiniStore(), [context]: normalized }))
+  } catch { /* The draggable mini player still works if storage is blocked. */ }
+}
+
+function miniBounds(element: HTMLElement): MiniDrag['bounds'] {
+  // Safe-area insets protect the iPhone home indicator and camera cutout.
+  let safeTop = 0, safeRight = 0, safeBottom = 0, safeLeft = 0
+  const probe = document.createElement('div')
+  try {
+    probe.style.cssText = 'position:fixed;visibility:hidden;pointer-events:none;padding-top:env(safe-area-inset-top);padding-right:env(safe-area-inset-right);padding-bottom:env(safe-area-inset-bottom);padding-left:env(safe-area-inset-left)'
+    document.body.appendChild(probe)
+    const styles = window.getComputedStyle(probe)
+    safeTop = parseFloat(styles.paddingTop) || 0
+    safeRight = parseFloat(styles.paddingRight) || 0
+    safeBottom = parseFloat(styles.paddingBottom) || 0
+    safeLeft = parseFloat(styles.paddingLeft) || 0
+  } catch { /* Fallback to an ordinary small margin. */ }
+  finally { probe.remove() }
+  const minLeft = safeLeft + 8
+  const minTop = safeTop + 8
+  const maxLeft = Math.max(minLeft, window.innerWidth - element.offsetWidth - safeRight - 8)
+  const maxTop = Math.max(minTop, window.innerHeight - element.offsetHeight - safeBottom - 8)
+  return { minLeft, maxLeft, minTop, maxTop }
+}
+
+function restoreMiniPosition(context: MiniContext, element: HTMLElement): MiniPoint | null {
+  const saved = readMiniStore()[context]
+  if (!validFraction(saved)) return null
+  const limits = miniBounds(element)
+  return {
+    left: limits.minLeft + saved.x * (limits.maxLeft - limits.minLeft),
+    top: limits.minTop + saved.y * (limits.maxTop - limits.minTop),
+  }
+}
 
 function mushafElement(): MushafAudio | null {
   if (typeof window === 'undefined') return null
@@ -59,6 +140,11 @@ export default function PersistentAudioPlayer() {
   const [mushafExpanded, setMushafExpanded] = useState(false)
   const [timerUntil, setTimerUntil] = useState<number | null>(null)
   const [now, setNow] = useState(0)
+  const miniButtonRef = useRef<HTMLButtonElement | null>(null)
+  const miniDragRef = useRef<MiniDrag | null>(null)
+  const ignoreClickUntilRef = useRef(0)
+  const [miniPoint, setMiniPoint] = useState<MiniPoint | null>(null)
+  const [draggingMini, setDraggingMini] = useState(false)
 
   useEffect(() => {
     const readTimer = () => {
@@ -219,6 +305,90 @@ export default function PersistentAudioPlayer() {
   const isCompact = collapsed || (isMushafPage && !mushafExpanded)
   const canShow = active || isReadingPage || timeRemaining > 0
 
+  const miniContext: MiniContext = isMushafPage ? 'mushaf' : 'other'
+
+  useEffect(() => {
+    if (!isCompact) return
+    const reposition = () => {
+      const button = miniButtonRef.current
+      if (!button || miniDragRef.current) return
+      // No stored position means the existing lower-right default is retained.
+      setMiniPoint(restoreMiniPosition(miniContext, button))
+    }
+    reposition()
+    window.addEventListener('resize', reposition)
+    window.addEventListener('orientationchange', reposition)
+    window.visualViewport?.addEventListener('resize', reposition)
+    return () => {
+      window.removeEventListener('resize', reposition)
+      window.removeEventListener('orientationchange', reposition)
+      window.visualViewport?.removeEventListener('resize', reposition)
+    }
+  }, [isCompact, miniContext])
+
+  const beginMiniDrag = (event: ReactPointerEvent<HTMLButtonElement>) => {
+    if (event.pointerType === 'mouse' && event.button !== 0) return
+    if (miniDragRef.current) return // Ignore a second finger during a drag.
+    const rectangle = event.currentTarget.getBoundingClientRect()
+    const limits = miniBounds(event.currentTarget)
+    miniDragRef.current = {
+      id: event.pointerId,
+      startX: event.clientX,
+      startY: event.clientY,
+      originLeft: rectangle.left,
+      originTop: rectangle.top,
+      moved: false,
+      current: { left: rectangle.left, top: rectangle.top },
+      bounds: limits,
+    }
+    try { event.currentTarget.setPointerCapture(event.pointerId) } catch { /* Older Safari falls back to native pointer events. */ }
+  }
+
+  const moveMiniDrag = (event: ReactPointerEvent<HTMLButtonElement>) => {
+    const gesture = miniDragRef.current
+    if (!gesture || gesture.id !== event.pointerId) return
+    const dx = event.clientX - gesture.startX
+    const dy = event.clientY - gesture.startY
+    if (!gesture.moved && Math.hypot(dx, dy) < 7) return
+    if (!gesture.moved) {
+      gesture.moved = true
+      setDraggingMini(true)
+    }
+    const next = {
+      left: clamp(gesture.originLeft + dx, gesture.bounds.minLeft, gesture.bounds.maxLeft),
+      top: clamp(gesture.originTop + dy, gesture.bounds.minTop, gesture.bounds.maxTop),
+    }
+    gesture.current = next
+    setMiniPoint(next)
+  }
+
+  const finishMiniDrag = (event: ReactPointerEvent<HTMLButtonElement>) => {
+    const gesture = miniDragRef.current
+    if (!gesture || gesture.id !== event.pointerId) return
+    miniDragRef.current = null
+    if (gesture.moved) {
+      // A swipe must NEVER turn into a click that expands the player.
+      ignoreClickUntilRef.current = Date.now() + 250
+      saveMiniPosition(miniContext, gesture.current, gesture.bounds)
+      setMiniPoint(gesture.current)
+    }
+    setDraggingMini(false)
+    try {
+      if (event.currentTarget.hasPointerCapture(event.pointerId)) {
+        event.currentTarget.releasePointerCapture(event.pointerId)
+      }
+    } catch { /* Pointer capture may have been released by the browser. */ }
+  }
+
+  const tapMiniPlayer = (event: ReactMouseEvent<HTMLButtonElement>) => {
+    if (Date.now() < ignoreClickUntilRef.current) {
+      event.preventDefault()
+      event.stopPropagation()
+      return
+    }
+    expandPlayer()
+  }
+
   const stopMushaf = () => {
     const audio = mushafElement()
     if (!audio) return
@@ -281,11 +451,26 @@ export default function PersistentAudioPlayer() {
   if (isCompact) {
     return (
       <button type="button"
-        onClick={expandPlayer}
-        aria-label={active ? 'تكبير مشغل سميع وعرض التفاصيل' : 'فتح مشغل سميع ومؤقت القراءة'}
-        title="مشغل سميع — اضغط للتكبير"
+        ref={miniButtonRef}
+        onClick={tapMiniPlayer}
+        onPointerDown={beginMiniDrag}
+        onPointerMove={moveMiniDrag}
+        onPointerUp={finishMiniDrag}
+        onPointerCancel={finishMiniDrag}
+        aria-label={active ? 'مشغل سميع: اضغط للتكبير أو اسحب لتحريكه' : 'مشغل سميع ومؤقت القراءة: اضغط للفتح أو اسحب للتحريك'}
+        title="اضغط لفتح المشغل، أو اسحب لتحريك الدائرة"
         dir="rtl"
-        className={`fixed right-3 z-[88] flex min-h-[48px] min-w-[48px] items-center justify-center gap-1.5 rounded-full border border-[#dfc99d] bg-[#fffdf8] px-3 text-[#15586e] shadow-[0_7px_24px_rgba(20,64,62,0.2)] transition active:scale-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#15586e] ${
+        draggable={false}
+        style={{
+          touchAction: 'none',
+          userSelect: 'none',
+          WebkitUserSelect: 'none',
+          cursor: draggingMini ? 'grabbing' : 'grab',
+          ...(miniPoint ? { left: `${miniPoint.left}px`, top: `${miniPoint.top}px`, right: 'auto', bottom: 'auto' } : {}),
+        }}
+        className={`fixed right-3 z-[88] flex min-h-[48px] min-w-[48px] items-center justify-center gap-1.5 rounded-full border border-[#dfc99d] bg-[#fffdf8] px-3 text-[#15586e] shadow-[0_7px_24px_rgba(20,64,62,0.2)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#15586e] ${
+          draggingMini ? 'scale-[1.06] shadow-2xl' : 'transition-transform active:scale-95'
+        } ${
           isMushafPage
             ? 'bottom-[calc(3.5rem+env(safe-area-inset-bottom))]'
             : 'bottom-[calc(6.7rem+env(safe-area-inset-bottom))]'
