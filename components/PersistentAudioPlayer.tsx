@@ -36,7 +36,7 @@ export default function PersistentAudioPlayer() {
 
   useEffect(() => {
     let attached: MushafAudio | null = null
-    let recoveryTimer: ReturnType<typeof setTimeout> | undefined
+    let recoveryTimer: number | undefined
     let recoveryUrl = ''
     let recoveryCount = 0
     const onTemporaryError = () => {
