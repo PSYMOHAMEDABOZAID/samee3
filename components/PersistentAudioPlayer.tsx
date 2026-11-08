@@ -16,6 +16,19 @@ type MushafAudio = HTMLAudioElement & {
 }
 type MushafView = { src: string; playing: boolean; surah: number; reciter: string; position: number; duration: number }
 
+// Keep the last visible controls only on the page where audio was stopped.
+// This is a display snapshot, not a new audio element or a playback request.
+type LastVisiblePlayer = {
+  pathname: string
+  source: 'mushaf' | 'app'
+  title: string
+  subtitle: string
+  section: string
+  destination: string
+  position: number
+  duration: number
+}
+
 /**
  * The mini-player position is stored as viewport-relative coordinates, not raw
  * pixels. This keeps it reachable after orientation changes and screen resizing.
@@ -136,6 +149,8 @@ export default function PersistentAudioPlayer() {
   const [mushaf, setMushaf] = useState<MushafView | null>(null)
   const [message, setMessage] = useState('')
   const [dismissed, setDismissed] = useState(false)
+  const [lastVisible, setLastVisible] = useState<LastVisiblePlayer | null>(null)
+  const previousPathnameRef = useRef(pathname)
   const [collapsed, setCollapsed] = useState(false)
   const [mushafExpanded, setMushafExpanded] = useState(false)
   const [timerUntil, setTimerUntil] = useState<number | null>(null)
@@ -281,26 +296,64 @@ export default function PersistentAudioPlayer() {
   }, [mushaf?.playing, playback.playing])
   useEffect(() => { setDismissed(false) }, [pathname])
 
-  // If both engines happen to have a track, give priority to the one playing.
-  // Never show the floating widget merely because a Quran page was opened,
-  // a track was previously selected, or a sleep timer exists. Display it
-  // only during real playback or the loading transition of a started track.
+  // A real playback starts the widget. Pausing/stopping retains its last
+  // appearance on the CURRENT route; navigating away removes that snapshot.
+  // Opening a page or having a saved timer never opens the player on its own.
   const appSessionActive = Boolean(track && (playback.playing || playback.loading))
-  const showMushaf = Boolean(mushaf?.src && mushaf.playing && !appSessionActive)
-  const playing = showMushaf ? true : playback.playing
-  const loading = !showMushaf && playback.loading
-  const active = showMushaf || appSessionActive
-  const section = showMushaf ? 'المصحف' : playback.scope === 'adhkar' ? 'الأذكار' :
+  const liveMushaf = Boolean(mushaf?.src && mushaf.playing && !appSessionActive)
+  const liveActive = liveMushaf || appSessionActive
+  const liveSection = liveMushaf ? 'المصحف' : playback.scope === 'adhkar' ? 'الأذكار' :
     playback.scope === 'riwayat' ? 'روايات القرآن' : 'المكتبة الصوتية'
-  const displayTitle = showMushaf
+  const liveTitle = liveMushaf
     ? (mushaf?.surah && SURAH_NAMES[mushaf.surah - 1]
       ? `سورة ${SURAH_NAMES[mushaf.surah - 1]}` : 'تلاوة القرآن الكريم')
     : (track?.title || 'مشغل سميع')
-  const displaySubtitle = showMushaf ? (message || mushaf?.reciter || 'القرآن الكريم') :
+  const liveSubtitle = liveMushaf ? (message || mushaf?.reciter || 'القرآن الكريم') :
     (playback.error || track?.subtitle || 'المصحف · الأذكار · المكتبة الصوتية')
-  const destination = showMushaf ? '/mushaf' : (playback.href || '/audio')
-  const position = showMushaf ? (mushaf?.position || 0) : playback.position
-  const duration = showMushaf ? (mushaf?.duration || 0) : playback.duration
+  const liveDestination = liveMushaf ? '/mushaf' : (playback.href || '/audio')
+  const livePosition = liveMushaf ? (mushaf?.position || 0) : playback.position
+  const liveDuration = liveMushaf ? (mushaf?.duration || 0) : playback.duration
+
+  // On route change, discard a stopped player's display permanently. An
+  // ongoing player remains visible and gets a new snapshot for the new route.
+  useEffect(() => {
+    if (previousPathnameRef.current !== pathname) {
+      previousPathnameRef.current = pathname
+      setLastVisible(null)
+    }
+  }, [pathname])
+
+  useEffect(() => {
+    if (!liveActive) return
+    setLastVisible(previous => {
+      const next: LastVisiblePlayer = {
+        pathname,
+        source: liveMushaf ? 'mushaf' : 'app',
+        title: liveTitle,
+        subtitle: liveSubtitle,
+        section: liveSection,
+        destination: liveDestination,
+        position: livePosition,
+        duration: liveDuration,
+      }
+      if (previous && Object.keys(next).every(key =>
+        previous[key as keyof LastVisiblePlayer] === next[key as keyof LastVisiblePlayer])) return previous
+      return next
+    })
+  }, [liveActive, liveMushaf, pathname, liveTitle, liveSubtitle, liveSection, liveDestination, livePosition, liveDuration])
+
+  const retained = !liveActive && lastVisible?.pathname === pathname ? lastVisible : null
+  const showMushaf = liveActive ? liveMushaf : retained?.source === 'mushaf'
+  const playing = liveActive ? (liveMushaf || playback.playing) : false
+  const loading = liveActive && !liveMushaf && playback.loading
+  const active = liveActive || Boolean(retained)
+  const section = liveActive ? liveSection : retained?.section || liveSection
+  const displayTitle = liveActive ? liveTitle : retained?.title || liveTitle
+  const displaySubtitle = liveActive ? liveSubtitle : retained?.subtitle || liveSubtitle
+  const destination = liveActive ? liveDestination : retained?.destination || liveDestination
+  const position = liveActive ? livePosition : retained?.position || 0
+  const duration = liveActive ? liveDuration : retained?.duration || 0
+  const hasAudioControls = Boolean(showMushaf ? mushaf?.src : track)
   const timeRemaining = timerUntil === null ? 0 : Math.max(0, timerUntil - now)
   const timerText = timeRemaining > 0 ? `${Math.ceil(timeRemaining / 60000)} د` : 'المؤقت'
   const isCompact = collapsed || (isMushafPage && !mushafExpanded)
@@ -417,6 +470,18 @@ export default function PersistentAudioPlayer() {
     else if (track) appAudio.toggle()
   }
   const stopAudio = () => {
+    if (liveActive) {
+      setLastVisible({
+        pathname,
+        source: liveMushaf ? 'mushaf' : 'app',
+        title: liveTitle,
+        subtitle: liveSubtitle,
+        section: liveSection,
+        destination: liveDestination,
+        position: livePosition,
+        duration: liveDuration,
+      })
+    }
     if (showMushaf) stopMushaf()
     else if (track) appAudio.stop()
   }
@@ -496,7 +561,7 @@ export default function PersistentAudioPlayer() {
     >
       <div className="flex min-h-[65px] items-center gap-2 px-3 pt-2.5 pb-2">
         <span aria-hidden="true" className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[15px] bg-[#f5ead4] text-[#9f7635]">
-          <Volume2 size={22} />
+          {playing || loading ? <Volume2 size={22} /> : <Square size={18} /> }
         </span>
 
         {active ? (
@@ -511,7 +576,7 @@ export default function PersistentAudioPlayer() {
           </div>
         )}
 
-        {active && <>
+        {active && hasAudioControls && <>
           <button type="button" onClick={toggleAudio}
             aria-label={playing || loading ? 'إيقاف الصوت مؤقتًا' : 'استكمال التشغيل'}
             title={playing || loading ? 'إيقاف مؤقت' : 'تشغيل'}
@@ -537,7 +602,7 @@ export default function PersistentAudioPlayer() {
         </button>
       </div>
 
-      {active && <div className="flex items-center gap-2 border-t border-[#f0e6d4] px-3 pt-2.5 text-[11px] font-medium text-[#71808a]" dir="ltr">
+      {active && hasAudioControls && <div className="flex items-center gap-2 border-t border-[#f0e6d4] px-3 pt-2.5 text-[11px] font-medium text-[#71808a]" dir="ltr">
         <span className="w-10 text-center tabular-nums">{formatSeconds(position)}</span>
         <input type="range" min={0} max={Math.max(1, duration)} step={1}
           value={Math.min(Math.max(0, position), Math.max(1, duration))}
@@ -549,7 +614,7 @@ export default function PersistentAudioPlayer() {
       <div className="flex flex-wrap items-center justify-between gap-2 border-t border-[#f0e6d4] px-3 py-2">
         <span className="rounded-full bg-[#f0f6f5] px-2.5 py-1 text-[11px] font-bold text-[#236073]">{active ? section : 'أدوات القراءة'}</span>
         <div className="flex min-w-0 items-center gap-1">
-          {active && !showMushaf && playback.queue.length > 1 && <>
+          {active && hasAudioControls && !showMushaf && playback.queue.length > 1 && <>
             <button type="button" onClick={() => appAudio.next(-1)} aria-label="التسجيل السابق" title="السابق"
               className="flex h-8 w-8 items-center justify-center rounded-full text-[#15586e] hover:bg-[#e9f1ee]">
               <SkipBack size={17} />
