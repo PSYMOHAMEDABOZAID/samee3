@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { usePathname, useSearchParams } from 'next/navigation'
-import { Loader2, Pause, Play, SkipBack, SkipForward, X } from 'lucide-react'
+import { usePathname } from 'next/navigation'
+import { ChevronDown, Headphones, Loader2, MoonStar, Pause, Play, SkipBack, SkipForward, X } from 'lucide-react'
 import { appAudio, useAppAudio } from '@/lib/app-audio'
 
 type MushafAudio = HTMLAudioElement & {
@@ -29,10 +29,34 @@ function mushafElement(): MushafAudio | null {
 export default function PersistentAudioPlayer() {
   const playback = useAppAudio()
   const pathname = usePathname() || '/'
-  const params = useSearchParams()
   const track = playback.queue[playback.index]
   const [mushaf, setMushaf] = useState<MushafView | null>(null)
   const [message, setMessage] = useState('')
+  const [hiddenSession, setHiddenSession] = useState('')
+  const [minimized, setMinimized] = useState(false)
+  const [idleExpanded, setIdleExpanded] = useState(false)
+  const [timerUntil, setTimerUntil] = useState<number | null>(null)
+  const [now, setNow] = useState(0)
+
+  useEffect(() => {
+    const readTimer = () => {
+      setNow(Date.now())
+      try {
+        const value: unknown = JSON.parse(localStorage.getItem('samee3_sleep_timer_v1') || 'null')
+        const until = value && typeof value === 'object' ? (value as { until?: unknown }).until : null
+        setTimerUntil(typeof until === 'number' && Number.isFinite(until) && until > Date.now() ? until : null)
+      } catch { setTimerUntil(null) }
+    }
+    readTimer()
+    const interval = window.setInterval(readTimer, 10000)
+    window.addEventListener('samee3:sleep-timer-changed', readTimer)
+    window.addEventListener('storage', readTimer)
+    return () => {
+      window.clearInterval(interval)
+      window.removeEventListener('samee3:sleep-timer-changed', readTimer)
+      window.removeEventListener('storage', readTimer)
+    }
+  }, [])
 
   useEffect(() => {
     let attached: MushafAudio | null = null
@@ -130,13 +154,30 @@ export default function PersistentAudioPlayer() {
     }
   }, [])
 
-  const sameAdhkar = pathname === '/adhkar/read' &&
-    playback.contextKey === `samee3_adhkar_progress_v2_${Number(params.get('categoryId') || 0) || params.get('type') || 'morning'}`
-  const onMushafPage = pathname === '/mushaf' || pathname.startsWith('/mushaf/')
-  const showMushaf = Boolean(
-    mushaf?.src && !onMushafPage &&
-    (mushaf.playing || !track || !playback.playing && !playback.loading)
-  )
+  // New playback started after closing the old panel: show the controls again.
+  useEffect(() => {
+    if (mushaf?.playing || playback.playing) setHiddenSession('')
+  }, [mushaf?.playing, playback.playing])
+
+  const onReadingPage = /^\/(mushaf|audio|adhkar)(?:\/|$)/.test(pathname)
+  const onOwnPage = pathname === '/mushaf' || pathname.startsWith('/mushaf/') ||
+    (playback.scope === 'library' && pathname === '/audio') ||
+    (playback.scope === 'adhkar' && pathname === '/adhkar/read') ||
+    (playback.scope === 'riwayat' && pathname === '/audio/alafasy-riwayat')
+  // Do not duplicate the Alafasy player's built-in controls on its own page.
+  const protectedRiwayatPage = playback.scope === 'riwayat' && pathname === '/audio/alafasy-riwayat'
+  const visibleTrack = protectedRiwayatPage ? undefined : track
+  const showMushaf = !protectedRiwayatPage && Boolean(mushaf?.src && (
+    mushaf.playing || !visibleTrack || (!playback.playing && !playback.loading)
+  ))
+  const session = showMushaf && mushaf ? `mushaf:${mushaf.src}`
+    : visibleTrack ? `track:${playback.scope}:${visibleTrack.url}:${playback.index}`
+    : `idle:${pathname}`
+  const idle = !showMushaf && !visibleTrack
+  const left = timerUntil === null ? 0 : Math.max(0, timerUntil - now)
+  const timerLabel = timerUntil !== null && left > 0
+    ? `${Math.ceil(left / 60000)} د` : 'مؤقت'
+  const openTimer = () => window.dispatchEvent(new Event('samee3:open-sleep-timer'))
 
   const stopMushaf = () => {
     const audio = mushafElement()
@@ -152,41 +193,81 @@ export default function PersistentAudioPlayer() {
     if (!audio?.getAttribute('src')) return
     setMessage('')
     if (!audio.paused) { stopMushaf(); return }
-    // A direct user gesture is needed for Safari/iOS audio activation.
+    // This user gesture is needed by Safari/iOS to resume playback.
     audio.__samee3Continue = true
     void audio.play().catch(() => {
       audio.__samee3Continue = false
       setMessage('تعذر استكمال التلاوة. افتح المصحف واضغط تشغيل.')
     })
   }
+  const closePlayer = () => {
+    setHiddenSession(session)
+    setMinimized(false)
+    setIdleExpanded(false)
+    if (showMushaf) stopMushaf()
+    else if (visibleTrack) appAudio.stop()
+  }
 
-  if (showMushaf && mushaf) return (
-    <aside dir="rtl" aria-label="مشغل تلاوة المصحف المستمر" className="fixed bottom-[calc(6.5rem+env(safe-area-inset-bottom))] left-3 right-3 z-[70] mx-auto flex max-w-xl items-center gap-2 rounded-2xl border border-[#d9c39d] bg-[#194f43] p-3 text-white shadow-xl">
-      <Link href="/mushaf" className="min-w-0 flex-1">
-        <p className="truncate text-sm font-bold">{mushaf.surah ? `القرآن الكريم · سورة ${mushaf.surah}` : 'تلاوة المصحف'}</p>
-        <p className="truncate text-xs opacity-80">{message || mushaf.reciter}</p>
-      </Link>
-      <button type="button" aria-label={mushaf.playing ? 'إيقاف التلاوة مؤقتًا' : 'استكمال التلاوة'} onClick={toggleMushaf} className="rounded-full p-3">{mushaf.playing ? <Pause size={20}/> : <Play size={20}/>}</button>
-      <button type="button" aria-label="إيقاف وإغلاق مشغل المصحف" onClick={stopMushaf} className="p-2"><X size={18}/></button>
-    </aside>
+  if ((!onReadingPage && idle) || hiddenSession === session) return null
+
+  // On a reading page without audio, use a small player launcher rather than
+  // an independent floating sleep-timer button over Qur'an text.
+  if (idle && !idleExpanded) return (
+    <button type="button" onClick={() => setIdleExpanded(true)}
+      aria-label="فتح أدوات مشغل سميع ومؤقت القراءة"
+      title="أدوات مشغل سميع"
+      className="fixed bottom-[calc(5.5rem+env(safe-area-inset-bottom))] right-3 z-[68] flex h-10 w-10 items-center justify-center rounded-full border border-[#d9c39d] bg-[#194f43] text-white shadow-lg">
+      <Headphones size={19} aria-hidden="true" />
+    </button>
   )
 
-  if (!track || (playback.scope === 'library' && pathname === '/audio') ||
-    (playback.scope === 'adhkar' && sameAdhkar) ||
-    (playback.scope === 'riwayat' && pathname === '/audio/alafasy-riwayat')) return null
+  if (!idle && (minimized || (onOwnPage && !idleExpanded))) return (
+    <button type="button" onClick={() => { setMinimized(false); setIdleExpanded(true) }}
+      aria-label="توسيع مشغل سميع"
+      title="توسيع مشغل سميع"
+      className="fixed bottom-[calc(5.5rem+env(safe-area-inset-bottom))] right-3 z-[68] flex h-11 min-w-11 items-center justify-center gap-2 rounded-full border border-[#d9c39d] bg-[#194f43] px-3 text-white shadow-lg">
+      <Headphones size={19} aria-hidden="true" />
+      {timerUntil !== null && left > 0 && <span className="text-xs font-bold" dir="ltr">{timerLabel}</span>}
+    </button>
+  )
 
   return (
-    <aside dir="rtl" aria-label="مشغل سميع المستمر" className="fixed bottom-[calc(6.5rem+env(safe-area-inset-bottom))] left-3 right-3 z-[70] mx-auto flex max-w-xl items-center gap-2 rounded-2xl border border-[#d9c39d] bg-[#194f43] p-3 text-white shadow-xl">
-      <Link href={playback.href || '/audio'} className="min-w-0 flex-1">
-        <p className="truncate text-sm font-bold">{track.title}</p>
-        <p className="truncate text-xs opacity-80">{playback.error || track.subtitle}</p>
-      </Link>
-      <button type="button" aria-label={playback.loading ? 'إيقاف تحميل التسجيل' : playback.playing ? 'إيقاف الصوت مؤقتًا' : 'استكمال الصوت'} onClick={() => appAudio.toggle()} className="rounded-full p-3">{playback.loading ? <Loader2 size={20} className="animate-spin"/> : playback.playing ? <Pause size={20}/> : <Play size={20}/>}</button>
-      {playback.queue.length > 1 && <>
-        <button type="button" aria-label="التسجيل السابق" onClick={() => appAudio.next(-1)} className="p-2"><SkipBack size={19}/></button>
-        <button type="button" aria-label="التسجيل التالي" onClick={() => appAudio.next(1)} className="p-2"><SkipForward size={19}/></button>
-      </>}
-      <button type="button" aria-label="إغلاق المشغل" onClick={() => appAudio.stop()} className="p-2"><X size={18}/></button>
+    <aside dir="rtl" aria-label="مشغل سميع ومؤقت القراءة"
+      className="fixed bottom-[calc(5.5rem+env(safe-area-inset-bottom))] left-3 right-3 z-[68] mx-auto max-w-xl rounded-2xl border border-[#d9c39d] bg-[#194f43]/95 px-2.5 py-2 text-white shadow-xl backdrop-blur-md">
+      <div className="flex min-h-10 items-center gap-1.5">
+        {showMushaf && mushaf ? (
+          <Link href="/mushaf" className="min-w-0 flex-1 px-1">
+            <p className="truncate text-sm font-bold">{mushaf.surah ? `تلاوة المصحف · سورة ${mushaf.surah}` : 'تلاوة المصحف'}</p>
+            <p className="truncate text-[11px] opacity-80">{message || mushaf.reciter}</p>
+          </Link>
+        ) : visibleTrack ? (
+          <Link href={playback.href || '/audio'} className="min-w-0 flex-1 px-1">
+            <p className="truncate text-sm font-bold">{visibleTrack.title}</p>
+            <p className="truncate text-[11px] opacity-80">{playback.error || visibleTrack.subtitle}</p>
+          </Link>
+        ) : <p className="min-w-0 flex-1 px-1 text-sm font-bold">أدوات القراءة والاستماع</p>}
+
+        {!idle && <button type="button"
+          aria-label={showMushaf ? (mushaf?.playing ? 'إيقاف التلاوة مؤقتًا' : 'استكمال التلاوة') : (playback.playing ? 'إيقاف مؤقت' : 'تشغيل')}
+          onClick={showMushaf ? toggleMushaf : () => appAudio.toggle()}
+          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/15">
+          {!showMushaf && playback.loading ? <Loader2 size={20} className="animate-spin" />
+            : (showMushaf ? mushaf?.playing : playback.playing) ? <Pause size={20} /> : <Play size={20} />}
+        </button>}
+        {!idle && !showMushaf && playback.queue.length > 1 && <>
+          <button type="button" aria-label="السابق" onClick={() => appAudio.next(-1)} className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg"><SkipBack size={18}/></button>
+          <button type="button" aria-label="التالي" onClick={() => appAudio.next(1)} className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg"><SkipForward size={18}/></button>
+        </>}
+        <button type="button" onClick={openTimer}
+          aria-label="ضبط مؤقت الإيقاف التلقائي"
+          title="مؤقت القراءة"
+          className="flex h-10 shrink-0 items-center gap-1 rounded-xl border border-white/25 px-2 text-xs font-bold">
+          <MoonStar size={17} aria-hidden="true" />
+          <span>{timerLabel}</span>
+        </button>
+        {!idle && <button type="button" onClick={() => setMinimized(true)} aria-label="تصغير المشغل" title="تصغير المشغل" className="flex h-9 w-8 shrink-0 items-center justify-center"><ChevronDown size={18}/></button>}
+        <button type="button" onClick={closePlayer} aria-label="إغلاق المشغل" title="إغلاق المشغل وإيقاف الصوت" className="flex h-9 w-8 shrink-0 items-center justify-center rounded-lg text-white/85"><X size={19}/></button>
+      </div>
     </aside>
   )
 }
