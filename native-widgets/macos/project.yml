@@ -1,0 +1,36 @@
+name: Samee3MacWidgets
+options:
+  bundleIdPrefix: com.samee3
+  deploymentTarget:
+    macOS: '13.0'
+settings:
+  base:
+    SWIFT_VERSION: '5.0'
+    MACOSX_DEPLOYMENT_TARGET: '13.0'
+    MARKETING_VERSION: '1.0.0'
+    CURRENT_PROJECT_VERSION: '1'
+targets:
+  Samee3MacApp:
+    type: application
+    platform: macOS
+    sources:
+      - path: Samee3MacApp
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.samee3.macwidgets
+        INFOPLIST_FILE: Samee3MacApp/Info.plist
+        CODE_SIGN_ENTITLEMENTS: Samee3MacApp/Samee3MacApp.entitlements
+    dependencies:
+      - target: Samee3Widgets
+        embed: true
+  Samee3Widgets:
+    type: app-extension
+    platform: macOS
+    sources:
+      - path: Samee3Widgets
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.samee3.macwidgets.widgets
+        INFOPLIST_FILE: Samee3Widgets/Info.plist
+        CODE_SIGN_ENTITLEMENTS: Samee3Widgets/Samee3Widgets.entitlements
+        APPLICATION_EXTENSION_API_ONLY: YES

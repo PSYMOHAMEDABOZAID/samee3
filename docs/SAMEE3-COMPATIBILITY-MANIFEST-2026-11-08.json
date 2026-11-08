@@ -1,0 +1,734 @@
+{
+  "origin_repo": "PSYMOHAMEDABOZAID/samee3",
+  "base_branch": "main",
+  "base_commit": "3764a178d20b78c466cb4343c394c39a20298032",
+  "base_persistent_player_git_blob_sha": "608edf0e2ab1108dfe29eba5111c4c44425fb297",
+  "generated_utc": "2026-11-08",
+  "file_count_excluding_manifest": 179,
+  "verified": {
+    "macos_node_tests_pass": 12,
+    "windows_node_tests_pass": 12,
+    "player_node_regression_tests_pass": 1,
+    "full_nextjs_build_run": false,
+    "android_gradle_build_run": false,
+    "ios_macos_swift_build_run": false
+  },
+  "files": {
+    "BUILD-APK-LOCAL-MAC.command": {
+      "bytes": 2501,
+      "sha256": "56985990e099fedcecc55362ed9bc02d678b1d78ec13fb443441a5c4fa3a4fed"
+    },
+    "BUILD-LOCAL/BUILD-ANDROID.command": {
+      "bytes": 1044,
+      "sha256": "bba8088699b6d80aecb7f7443a93250e0c51604f94413ae9c0a8827b28136198"
+    },
+    "BUILD-LOCAL/BUILD-IOS.command": {
+      "bytes": 613,
+      "sha256": "05eb11ccc4c0aed1b75faf80bdea7bdbd49b2d0e9fcdb7c6ecce4644d6c116c2"
+    },
+    "BUILD-LOCAL/BUILD-MAC-ELECTRON.command": {
+      "bytes": 2168,
+      "sha256": "995a452dc0febf045980cab9fe51437e2649e4eab9ede71fb35d094dbfd2cb80"
+    },
+    "BUILD-LOCAL/BUILD-MAC-WIDGETKIT.command": {
+      "bytes": 592,
+      "sha256": "40b93e02545a4777b05a8031abbb19478d144cd2cc5484641d94e464c4a2202a"
+    },
+    "BUILD-LOCAL/BUILD-WINDOWS.cmd": {
+      "bytes": 94,
+      "sha256": "6d37df44f756b985db7fcc9a928ae663b51b77a4d42b8512644ee78ac3ad9523"
+    },
+    "docs/SAMEE3-AUDIT-2026-11-08.md": {
+      "bytes": 5385,
+      "sha256": "1b1007c55c3c7bd6780fd004f8f5e92a386b0a677937e91a338478869c986676"
+    },
+    "docs/SAMEE3-COMPATIBILITY-REPORT-2026-11-08.md": {
+      "bytes": 6035,
+      "sha256": "a22f9b21a978ee552797d5a30c5040ca84654ed97639b1e855b5760b43e82a87"
+    },
+    "lib/persistent-player.ts": {
+      "bytes": 12289,
+      "sha256": "4b355a17490e7ebb3a4b13d0eef3686ca048afbe4bcfbc24cdfdfbc68ab69cb9"
+    },
+    "native-widgets/macos/README-AR.txt": {
+      "bytes": 967,
+      "sha256": "18d8e79e6759cdb952211caaf9e9aff381c5a7da4f270402b9c925aff4dc2483"
+    },
+    "native-widgets/macos/Samee3MacApp/Info.plist": {
+      "bytes": 479,
+      "sha256": "9f1a74b8d48da88b8be8456bcc289d94e856db358bed16637ca365b86b114a5d"
+    },
+    "native-widgets/macos/Samee3MacApp/Samee3MacApp.entitlements": {
+      "bytes": 289,
+      "sha256": "3d6fcbf91a140d99e3075ef9eccf343106d21973ae93a1be4fd97e17f992fd5b"
+    },
+    "native-widgets/macos/Samee3MacApp/Samee3MacApp.swift": {
+      "bytes": 3558,
+      "sha256": "36157e9dae1a9e4fbf634f1e269bf12ee9ae8f4c7fd12180a4569069ba7dfd66"
+    },
+    "native-widgets/macos/Samee3Widgets/Info.plist": {
+      "bytes": 303,
+      "sha256": "84e35119352327bf6d92d7d57ccf79319b5a837bb4fe329c1a50c4a49fb1b993"
+    },
+    "native-widgets/macos/Samee3Widgets/Samee3Widgets.entitlements": {
+      "bytes": 289,
+      "sha256": "3d6fcbf91a140d99e3075ef9eccf343106d21973ae93a1be4fd97e17f992fd5b"
+    },
+    "native-widgets/macos/Samee3Widgets/Samee3Widgets.swift": {
+      "bytes": 5978,
+      "sha256": "8e0142a67ce8c895c309fca1166977abadf21d580b7a9c928b374c575c637dd4"
+    },
+    "native-widgets/macos/project.yml": {
+      "bytes": 979,
+      "sha256": "955a61e03b38ebf71a45ace3dc12cf299f26ad7a6848bed22b6e4f781353d399"
+    },
+    "native/android-tv/app/build.gradle.kts": {
+      "bytes": 1344,
+      "sha256": "fd7036a2236325518b3ed262de1102a5006d05225d75363b63f658ad3b6409d5"
+    },
+    "native/android-tv/app/src/main/AndroidManifest.xml": {
+      "bytes": 1783,
+      "sha256": "f5fecb28a9c12830184c1093ae02d40151e4622830cf0451d1b595c6828b575d"
+    },
+    "native/android-tv/app/src/main/assets/tv-navigation.js": {
+      "bytes": 3754,
+      "sha256": "da4eef72e6a3bb68f72945693230a1fb6fff696b99dfc971e3bacfedcd5b604b"
+    },
+    "native/android-tv/app/src/main/java/app/samee3/tv/TvActivity.java": {
+      "bytes": 14868,
+      "sha256": "7f29255edee102a1e8d3c7c7e01524401c0a4868e3bb083bf2a24270c309cfec"
+    },
+    "native/android-tv/app/src/main/res/drawable-nodpi/ic_launcher.png": {
+      "bytes": 8914,
+      "sha256": "2a7a7861524419f5d45b5194867e6ef3bebd61f007ff028e47777b1d7aeca823"
+    },
+    "native/android-tv/app/src/main/res/drawable-nodpi/tv_banner.png": {
+      "bytes": 6395,
+      "sha256": "0376fee24c28e6e0fb24f2b70af21f8d5afcff4fbf937f740b6b9aaf551c7926"
+    },
+    "native/android-tv/app/src/main/res/values/strings.xml": {
+      "bytes": 758,
+      "sha256": "c724a78e1e32ac122c56c5ff10017b21ed5fd8f6aec614d7dee379bb8fe0550b"
+    },
+    "native/android-tv/app/src/main/res/values/styles.xml": {
+      "bytes": 585,
+      "sha256": "90923f50f5b84293c2de1fd1a289c5a1bac5b32fe07697ed95807d220edc228e"
+    },
+    "native/android-tv/build.gradle.kts": {
+      "bytes": 74,
+      "sha256": "966fb16c81800d8b941dcaea2339c97fc548cc589303521f1f5ecb92401e6ab0"
+    },
+    "native/android-tv/gradle.properties": {
+      "bytes": 102,
+      "sha256": "544bf242329334210feb6ed7ba8ed4b146b92d65a1321a070d34a92f8d45a1e0"
+    },
+    "native/android-tv/gradle/wrapper/gradle-wrapper.jar": {
+      "bytes": 43504,
+      "sha256": "498495120a03b9a6ab5d155f5de3c8f0d986a449153702fb80fc80e134484f17"
+    },
+    "native/android-tv/gradle/wrapper/gradle-wrapper.properties": {
+      "bytes": 338,
+      "sha256": "4c2158e858a54c55c5f8a2b508242b22b99f6fb6b6ffdee12131e9f1be116cff"
+    },
+    "native/android-tv/gradlew": {
+      "bytes": 8762,
+      "sha256": "a3648413b47ef77af21d5ebc36c687c7d103aaef3e17f33de7d4f080a6f300a3"
+    },
+    "native/android-tv/gradlew.bat": {
+      "bytes": 2966,
+      "sha256": "57931b17dd228e5c24dac90e815d0bf82477e831a4618dfab4136f5446b42a9f"
+    },
+    "native/android-tv/settings.gradle.kts": {
+      "bytes": 326,
+      "sha256": "16c66a2b0f98a2d9ff1d99b59cde7f86bc2b6896b1b410da7ecff2431f5162e7"
+    },
+    "native/macos/BUILD.md": {
+      "bytes": 3411,
+      "sha256": "1dc189a9c599fce6a3157d5ff5b3e7faa49d412141cddbca9779014e60745cd7"
+    },
+    "native/macos/README-AR.txt": {
+      "bytes": 7543,
+      "sha256": "fe6825cc9f366bccfe321c56ceddfeb99a0022921d3c41fc5ba2f15ea6ec3373"
+    },
+    "native/macos/core.cjs": {
+      "bytes": 8171,
+      "sha256": "c945ed6f4e06a89d3bdd8ff326944f00e20f9be2591e5df6e3846fcf45063435"
+    },
+    "native/macos/data/SOURCES.txt": {
+      "bytes": 839,
+      "sha256": "e23cf3267d21eea43f447aaa736b88755e33d4d79cea0ff0584686c8d70fd7a1"
+    },
+    "native/macos/data/adhan-catalog.json": {
+      "bytes": 16076,
+      "sha256": "eb4cc72a95f5d14a813b83363a83975b036dd5e9695fb61f0c0fe3fa2e6d963a"
+    },
+    "native/macos/data/adhan/abdulbasit.mp3": {
+      "bytes": 489872,
+      "sha256": "7647b908b03ab1944b1497d8cbbd726f26a288435cf35011f26b1593f7d0202d"
+    },
+    "native/macos/data/adhan/ahmad-amadi.mp3": {
+      "bytes": 381080,
+      "sha256": "e56ac9627572b62dbba87821610b55501066492c4c0899614db38a8141b7666f"
+    },
+    "native/macos/data/adhan/ahmad-nafees.mp3": {
+      "bytes": 3409337,
+      "sha256": "eca0ad96a759b3758c81ea09d4ca8a7a88031b1a3495d7aa53f038bfcfae7257"
+    },
+    "native/macos/data/adhan/ahmad-trabulsi.mp3": {
+      "bytes": 5702213,
+      "sha256": "ac107edb576a0b250b840cb39927607b2f5dff98ff37b10f187149c19edae9b7"
+    },
+    "native/macos/data/adhan/ali-mulla.mp3": {
+      "bytes": 492824,
+      "sha256": "21814bbe0e34e634894b484c1b9a810d9980331ee51fe19bf0274920191c6271"
+    },
+    "native/macos/data/adhan/assem-bukhari.mp3": {
+      "bytes": 563672,
+      "sha256": "d4085827cd4cd0d51b4b598af9ac4905191b0e90429d689265293b47420a79ad"
+    },
+    "native/macos/data/adhan/banna.mp3": {
+      "bytes": 335954,
+      "sha256": "3d68f1f2bbb979b0666b822524a31a259b90c7318bc2d7390bad68a2544860d9"
+    },
+    "native/macos/data/adhan/farouq-hadrawe.mp3": {
+      "bytes": 559496,
+      "sha256": "8fbfd34fea5de5a8e32b723f1d7bf750de50190c8e87acd37561708f03033d70"
+    },
+    "native/macos/data/adhan/husary.mp3": {
+      "bytes": 258926,
+      "sha256": "98bd35664e8cd84b884b197169d8b01948ea2b9e70e8f652ac2814865d4bc0e4"
+    },
+    "native/macos/data/adhan/khaleel-raml.mp3": {
+      "bytes": 383744,
+      "sha256": "715365c3b80805a6f060db3449d2656a8750410e8d00d7246b244be42af40d19"
+    },
+    "native/macos/data/adhan/makkah-fajr.mp3": {
+      "bytes": 450002,
+      "sha256": "3f556c76c74af088d89afdccc13293beb320d70c7c3cbd48f2e02cd9c886fa68"
+    },
+    "native/macos/data/adhan/minshawi.mp3": {
+      "bytes": 503264,
+      "sha256": "95b48f013fa9f611922cc9edabc576734fc7e0cf0fce0ccf86c53960b975233a"
+    },
+    "native/macos/data/adhan/mishary-afasy.mp3": {
+      "bytes": 1931082,
+      "sha256": "7889fb396f7d29debf1258c4d522d43fe680c786a9d9f06d4542d22cebe58fb8"
+    },
+    "native/macos/data/adhan/mustafa-ismail.mp3": {
+      "bytes": 739896,
+      "sha256": "d769f18083cb05c2a26183d0a8495d4ecd76f60da4fc7013aa71ff313da69992"
+    },
+    "native/macos/data/adhan/naji-qazzaz.mp3": {
+      "bytes": 452864,
+      "sha256": "705f78b53cc9336e9ad0ce145857cbb2804d2a5956d16e8c0d9ddcf4132a90fc"
+    },
+    "native/macos/data/adhan/nasser-qatami.mp3": {
+      "bytes": 2117341,
+      "sha256": "77c9e53d0ad753d61fd0122d211291892e826a64c139422dc274c968c860c3cc"
+    },
+    "native/macos/data/adhan/nayf-fedah.mp3": {
+      "bytes": 421256,
+      "sha256": "d25abc1f50b83e30a2e6fc8addfd0e682de5a84e0f25621f9fac326f52687a83"
+    },
+    "native/macos/data/adhan/nour-maghribi.mp3": {
+      "bytes": 370280,
+      "sha256": "26b78496858579f904c4350c18315b9c4bf95b252875c7a2c0f40f8b5a151957"
+    },
+    "native/macos/data/adhan/omar-qazabri.mp3": {
+      "bytes": 1897034,
+      "sha256": "22202889003280d028a38f36ca32b4e1bf87bf51c3fb72cc0ca026065a606dbd"
+    },
+    "native/macos/data/adhan/refaat.mp3": {
+      "bytes": 411318,
+      "sha256": "087aa2b27f1ddf13d699076bb463b8fad5a550996d7fe4132828be4b166de3e3"
+    },
+    "native/macos/data/adhan/yasser-dosari.mp3": {
+      "bytes": 1462921,
+      "sha256": "cec06ea6481432f497e322021463ad7495f29c9dcc33754945f546868898225d"
+    },
+    "native/macos/data/audio-catalog.json": {
+      "bytes": 116805,
+      "sha256": "2ec418183d2d13320fe986b95fe5bd4f9121962bb5c13b79345baa9cf658b920"
+    },
+    "native/macos/data/catalog.json": {
+      "bytes": 2350,
+      "sha256": "700023bcde68e6c5ef2c59e070768acc13562b639b92110fa8289b4c4b6e34a4"
+    },
+    "native/macos/data/content/bazzi.json": {
+      "bytes": 1634876,
+      "sha256": "c2e8cf1457cf35f95e4c6d4d20240064d9b34313cf89974ba64366424d299776"
+    },
+    "native/macos/data/content/douri.json": {
+      "bytes": 1674491,
+      "sha256": "5c975424f180d481072aab8abafa4225440200367e8577d48751d7bcd3f14d1e"
+    },
+    "native/macos/data/content/hafs.json": {
+      "bytes": 1623603,
+      "sha256": "90cb44ca25ae865148a2f6e89de60ff39dc8aa5cdf2540c19e0e7f931c40ec7f"
+    },
+    "native/macos/data/content/qalun.json": {
+      "bytes": 1672207,
+      "sha256": "5a958b6bb42d44e25a7e3f5ab5b1db910e0187e6003aaffdfa8f5f3b3430f281"
+    },
+    "native/macos/data/content/shubah.json": {
+      "bytes": 1627040,
+      "sha256": "7f7f7a66d0d54fc57bcf661c7effb93760f4d258762f962f9ec5dcb5dfb0bcfc"
+    },
+    "native/macos/data/content/sousi.json": {
+      "bytes": 1665375,
+      "sha256": "22330afd7d540238dc4ac5a518adf9d7441708ffd5aea3f6eaa40a5ee37eee58"
+    },
+    "native/macos/data/content/warsh.json": {
+      "bytes": 1676907,
+      "sha256": "885f730ee6aa3ecfbe749031f3cf02447ff30978dde0ac80594ff5d0891f60a9"
+    },
+    "native/macos/data/fonts/ArefRuqaa-Regular.ttf.NOTICE.txt": {
+      "bytes": 302,
+      "sha256": "a40bf3945c3b7efcd386e42a6b4cdcff9ea059a2a95847ecb60a482ddf6083f2"
+    },
+    "native/macos/data/fonts/CC-BY-4.0-QuranWS.txt": {
+      "bytes": 17023,
+      "sha256": "d557539df68e771cc1eedcc91d13f70fca930e508d11eedcafa4b15db49e3744"
+    },
+    "native/macos/data/fonts/OFL-Amiri.txt": {
+      "bytes": 4389,
+      "sha256": "72de68e5954f4fdd24702292ef5a32f003ca960ec9330dc86e5eefb5dffb9b22"
+    },
+    "native/macos/data/fonts/OFL-Tajawal.txt": {
+      "bytes": 4464,
+      "sha256": "9b584984f9db0ee30347391a76eff9c0a6b03dc450c3c6afe3757a2cb3a4db87"
+    },
+    "native/macos/data/fonts/UthmanicHafs-v-3.0.ttf.NOTICE.txt": {
+      "bytes": 1668,
+      "sha256": "96d33bb5b502edefdb8b9407d450abf7ee6b79accf626218f9456a4825b98af1"
+    },
+    "native/macos/data/fonts/bazzi-source.otf.NOTICE.txt": {
+      "bytes": 1668,
+      "sha256": "ce1ba6bab5043bc046410fadb0b849c9fdc97abae4da5406274ccf0cf7a3d717"
+    },
+    "native/macos/data/fonts/sousi-source.ttf.NOTICE.txt": {
+      "bytes": 1668,
+      "sha256": "9153a378ab8476eb953f3b37025fb931ca21ccc49b57c805b831da2f44580947"
+    },
+    "native/macos/data/reminders.json": {
+      "bytes": 8629,
+      "sha256": "f2d3673012a1010ce97024588616e20464a1ef15ce7470c7da97682ed0daa5a8"
+    },
+    "native/macos/main.cjs": {
+      "bytes": 22160,
+      "sha256": "9271791e80abc8e20cb13face074d9089abab624c121d67b346ee692283c4396"
+    },
+    "native/macos/package-lock.json": {
+      "bytes": 5748,
+      "sha256": "7635e381da7faf3287996de602339eecc1e1de181e3b3316cca3d0d4b2c1551c"
+    },
+    "native/macos/package.json": {
+      "bytes": 409,
+      "sha256": "74a7a1d1b26ba2cd62de67cc655c4981e8a5cdad694d5371124cff8b0f6194a7"
+    },
+    "native/macos/preload.cjs": {
+      "bytes": 1147,
+      "sha256": "5d1180b93911e852fa60b2e900d0fc1ead1b6be2b822ab8b0343adf8526caf8b"
+    },
+    "native/macos/test/core.test.cjs": {
+      "bytes": 5731,
+      "sha256": "1475da7bcde25be4fe6befb9365b21008a11781519da430ea233510fe1429931"
+    },
+    "native/macos/test/widgets.test.cjs": {
+      "bytes": 479,
+      "sha256": "de47595369bacfd2ff7b2996ddb03f5394f19ae1802a8dc3a05aefc315373623"
+    },
+    "native/macos/tools/package-mac.py": {
+      "bytes": 9009,
+      "sha256": "4033ecb333734ade4f6dd164b0e2d4497c6d7f558290db85d6a7546bd1cd93a8"
+    },
+    "native/macos/tools/verify-macho.py": {
+      "bytes": 5378,
+      "sha256": "bb84633297c84fa2273be7fb7cc984abaaa76fa7a7f3cfce93b3711257f819f4"
+    },
+    "native/macos/ui/app.icns": {
+      "bytes": 2665057,
+      "sha256": "0b115b153d985c76c049a25e53bf60b13c04aeb34c666cd5f7a2c17e2113e1a1"
+    },
+    "native/macos/ui/common.css": {
+      "bytes": 2563,
+      "sha256": "efe2db36cbc3824b2295d9117061be7098c9976e7a3061f1a505fb35f606b659"
+    },
+    "native/macos/ui/hadith.html": {
+      "bytes": 847,
+      "sha256": "27f21ab1d18e2d150a4614a69a5a24209505c66930721bf3502b1de42e1fc4fa"
+    },
+    "native/macos/ui/hadith.js": {
+      "bytes": 643,
+      "sha256": "a173b3c35317540a60c52b1742649ff4f3726497bead3b1fe895ed184cc041e4"
+    },
+    "native/macos/ui/logo.png": {
+      "bytes": 427443,
+      "sha256": "b00bd467e03199ec787478cd3afd55fd5dfae84c109fbff68b872572833ea5e6"
+    },
+    "native/macos/ui/player.html": {
+      "bytes": 364,
+      "sha256": "b3dc3f74f2e872be5801d5624297269c40498c85ca5836f1a73c805b313359df"
+    },
+    "native/macos/ui/player.js": {
+      "bytes": 549,
+      "sha256": "e4dc6166c1e79672bc2de261f5f80499797c235d7db154ad1477a092d5a1c4f6"
+    },
+    "native/macos/ui/reader.css": {
+      "bytes": 2841,
+      "sha256": "a24212cc4da7868b702cfd5117d250669b706ea43555d67712539221a4affcc5"
+    },
+    "native/macos/ui/reader.html": {
+      "bytes": 2258,
+      "sha256": "ec5fb2507dc252d26a07f2980e5cc70da1c87d219fa3ed1c690623c7dab20a3b"
+    },
+    "native/macos/ui/reader.js": {
+      "bytes": 7864,
+      "sha256": "c53263ab3ab64a03bcb4e7524db7f39ffa1642a5bd84696a25720e6d79a6068f"
+    },
+    "native/macos/ui/settings.html": {
+      "bytes": 6796,
+      "sha256": "7531e23ddd19aaf9b2385d9bc7a534af865b73a066de59357480ba8511a36494"
+    },
+    "native/macos/ui/settings.js": {
+      "bytes": 4099,
+      "sha256": "db1fb849eb18c4c0a2b513ffcb7d267c948021193a2c108413c1d3a538c1579c"
+    },
+    "native/macos/ui/shell.css": {
+      "bytes": 1167,
+      "sha256": "e62e764a04eff2462d3f6e594b996209ee3c3131da34d44239d0cf8e76bbdbd4"
+    },
+    "native/macos/ui/shell.html": {
+      "bytes": 1976,
+      "sha256": "5e97a2da108904a8e15b3735ad47250d0ef22ab77f1761e45de07e51c9fb27db"
+    },
+    "native/macos/ui/shell.js": {
+      "bytes": 1544,
+      "sha256": "07179700f43efa5c8733b211932e8d61a707e0ccad88364ffa86c66d46f48300"
+    },
+    "native/macos/verification/mac-arm64.json": {
+      "bytes": 1573,
+      "sha256": "225e3eb2c3b095cb0406b785e880632bf4ac20312b7bd362202bd817edc029b8"
+    },
+    "native/macos/verification/mac-x64.json": {
+      "bytes": 1563,
+      "sha256": "61e2f9baeef2d87475aeda7375fc31ff999b88a1c2f710ede6930b4038866fa6"
+    },
+    "native/macos/verification/toolchain-lock.json": {
+      "bytes": 759,
+      "sha256": "b9918a35b1f0a654b593dcee0ca99bfab672a34a1506e1cdbcd5e71fbb22d1b2"
+    },
+    "native/macos/verification/ui-verification.json": {
+      "bytes": 1071,
+      "sha256": "7b590a1b4784e93a124cf687a575e02f6db23db1761d33e2e8f37588a3f0e3ac"
+    },
+    "native/macos/verification/unit-tests.log": {
+      "bytes": 1357,
+      "sha256": "bf4472c3e56313f67cd3531291274c1da5160b4baacc089086f612cc38955ed3"
+    },
+    "native/macos/widgets-window.cjs": {
+      "bytes": 1623,
+      "sha256": "b2f58a028e95b00e87f6974bcae6eca974dbff828264cf54790d0d65a87da678"
+    },
+    "native/windows/.gitignore": {
+      "bytes": 26,
+      "sha256": "e8bc935ce727f1809c792f4c5d26c5fc75ba2b7df7fc9390c56c8892f6a6007f"
+    },
+    "native/windows/BUILD.md": {
+      "bytes": 3505,
+      "sha256": "bc8c6082441c25397e49b8d3f2fabf61b6dd9d18b6d3d945dffe0e210e1a4578"
+    },
+    "native/windows/Build-Windows.cmd": {
+      "bytes": 558,
+      "sha256": "2b67658d39f17ccfbc99a4bce566e39b70bb7fdd8503a3f83906f7668c005667"
+    },
+    "native/windows/README-AR.txt": {
+      "bytes": 8942,
+      "sha256": "f675159f417392e21e3ef5a5a0d29b9040a0e28f08203a8989dc2a52a2059d6e"
+    },
+    "native/windows/core.cjs": {
+      "bytes": 8171,
+      "sha256": "c945ed6f4e06a89d3bdd8ff326944f00e20f9be2591e5df6e3846fcf45063435"
+    },
+    "native/windows/data/SOURCES.txt": {
+      "bytes": 839,
+      "sha256": "e23cf3267d21eea43f447aaa736b88755e33d4d79cea0ff0584686c8d70fd7a1"
+    },
+    "native/windows/data/adhan-catalog.json": {
+      "bytes": 16076,
+      "sha256": "eb4cc72a95f5d14a813b83363a83975b036dd5e9695fb61f0c0fe3fa2e6d963a"
+    },
+    "native/windows/data/adhan/abdulbasit.mp3": {
+      "bytes": 489872,
+      "sha256": "7647b908b03ab1944b1497d8cbbd726f26a288435cf35011f26b1593f7d0202d"
+    },
+    "native/windows/data/adhan/ahmad-amadi.mp3": {
+      "bytes": 381080,
+      "sha256": "e56ac9627572b62dbba87821610b55501066492c4c0899614db38a8141b7666f"
+    },
+    "native/windows/data/adhan/ahmad-nafees.mp3": {
+      "bytes": 3409337,
+      "sha256": "eca0ad96a759b3758c81ea09d4ca8a7a88031b1a3495d7aa53f038bfcfae7257"
+    },
+    "native/windows/data/adhan/ahmad-trabulsi.mp3": {
+      "bytes": 5702213,
+      "sha256": "ac107edb576a0b250b840cb39927607b2f5dff98ff37b10f187149c19edae9b7"
+    },
+    "native/windows/data/adhan/ali-mulla.mp3": {
+      "bytes": 492824,
+      "sha256": "21814bbe0e34e634894b484c1b9a810d9980331ee51fe19bf0274920191c6271"
+    },
+    "native/windows/data/adhan/assem-bukhari.mp3": {
+      "bytes": 563672,
+      "sha256": "d4085827cd4cd0d51b4b598af9ac4905191b0e90429d689265293b47420a79ad"
+    },
+    "native/windows/data/adhan/banna.mp3": {
+      "bytes": 335954,
+      "sha256": "3d68f1f2bbb979b0666b822524a31a259b90c7318bc2d7390bad68a2544860d9"
+    },
+    "native/windows/data/adhan/farouq-hadrawe.mp3": {
+      "bytes": 559496,
+      "sha256": "8fbfd34fea5de5a8e32b723f1d7bf750de50190c8e87acd37561708f03033d70"
+    },
+    "native/windows/data/adhan/husary.mp3": {
+      "bytes": 258926,
+      "sha256": "98bd35664e8cd84b884b197169d8b01948ea2b9e70e8f652ac2814865d4bc0e4"
+    },
+    "native/windows/data/adhan/khaleel-raml.mp3": {
+      "bytes": 383744,
+      "sha256": "715365c3b80805a6f060db3449d2656a8750410e8d00d7246b244be42af40d19"
+    },
+    "native/windows/data/adhan/makkah-fajr.mp3": {
+      "bytes": 450002,
+      "sha256": "3f556c76c74af088d89afdccc13293beb320d70c7c3cbd48f2e02cd9c886fa68"
+    },
+    "native/windows/data/adhan/minshawi.mp3": {
+      "bytes": 503264,
+      "sha256": "95b48f013fa9f611922cc9edabc576734fc7e0cf0fce0ccf86c53960b975233a"
+    },
+    "native/windows/data/adhan/mishary-afasy.mp3": {
+      "bytes": 1931082,
+      "sha256": "7889fb396f7d29debf1258c4d522d43fe680c786a9d9f06d4542d22cebe58fb8"
+    },
+    "native/windows/data/adhan/mustafa-ismail.mp3": {
+      "bytes": 739896,
+      "sha256": "d769f18083cb05c2a26183d0a8495d4ecd76f60da4fc7013aa71ff313da69992"
+    },
+    "native/windows/data/adhan/naji-qazzaz.mp3": {
+      "bytes": 452864,
+      "sha256": "705f78b53cc9336e9ad0ce145857cbb2804d2a5956d16e8c0d9ddcf4132a90fc"
+    },
+    "native/windows/data/adhan/nasser-qatami.mp3": {
+      "bytes": 2117341,
+      "sha256": "77c9e53d0ad753d61fd0122d211291892e826a64c139422dc274c968c860c3cc"
+    },
+    "native/windows/data/adhan/nayf-fedah.mp3": {
+      "bytes": 421256,
+      "sha256": "d25abc1f50b83e30a2e6fc8addfd0e682de5a84e0f25621f9fac326f52687a83"
+    },
+    "native/windows/data/adhan/nour-maghribi.mp3": {
+      "bytes": 370280,
+      "sha256": "26b78496858579f904c4350c18315b9c4bf95b252875c7a2c0f40f8b5a151957"
+    },
+    "native/windows/data/adhan/omar-qazabri.mp3": {
+      "bytes": 1897034,
+      "sha256": "22202889003280d028a38f36ca32b4e1bf87bf51c3fb72cc0ca026065a606dbd"
+    },
+    "native/windows/data/adhan/refaat.mp3": {
+      "bytes": 411318,
+      "sha256": "087aa2b27f1ddf13d699076bb463b8fad5a550996d7fe4132828be4b166de3e3"
+    },
+    "native/windows/data/adhan/yasser-dosari.mp3": {
+      "bytes": 1462921,
+      "sha256": "cec06ea6481432f497e322021463ad7495f29c9dcc33754945f546868898225d"
+    },
+    "native/windows/data/audio-catalog.json": {
+      "bytes": 116805,
+      "sha256": "2ec418183d2d13320fe986b95fe5bd4f9121962bb5c13b79345baa9cf658b920"
+    },
+    "native/windows/data/catalog.json": {
+      "bytes": 2350,
+      "sha256": "700023bcde68e6c5ef2c59e070768acc13562b639b92110fa8289b4c4b6e34a4"
+    },
+    "native/windows/data/content/bazzi.json": {
+      "bytes": 1634876,
+      "sha256": "c2e8cf1457cf35f95e4c6d4d20240064d9b34313cf89974ba64366424d299776"
+    },
+    "native/windows/data/content/douri.json": {
+      "bytes": 1674491,
+      "sha256": "5c975424f180d481072aab8abafa4225440200367e8577d48751d7bcd3f14d1e"
+    },
+    "native/windows/data/content/hafs.json": {
+      "bytes": 1623603,
+      "sha256": "90cb44ca25ae865148a2f6e89de60ff39dc8aa5cdf2540c19e0e7f931c40ec7f"
+    },
+    "native/windows/data/content/qalun.json": {
+      "bytes": 1672207,
+      "sha256": "5a958b6bb42d44e25a7e3f5ab5b1db910e0187e6003aaffdfa8f5f3b3430f281"
+    },
+    "native/windows/data/content/shubah.json": {
+      "bytes": 1627040,
+      "sha256": "7f7f7a66d0d54fc57bcf661c7effb93760f4d258762f962f9ec5dcb5dfb0bcfc"
+    },
+    "native/windows/data/content/sousi.json": {
+      "bytes": 1665375,
+      "sha256": "22330afd7d540238dc4ac5a518adf9d7441708ffd5aea3f6eaa40a5ee37eee58"
+    },
+    "native/windows/data/content/warsh.json": {
+      "bytes": 1676907,
+      "sha256": "885f730ee6aa3ecfbe749031f3cf02447ff30978dde0ac80594ff5d0891f60a9"
+    },
+    "native/windows/data/fonts/ArefRuqaa-Regular.ttf.NOTICE.txt": {
+      "bytes": 302,
+      "sha256": "a40bf3945c3b7efcd386e42a6b4cdcff9ea059a2a95847ecb60a482ddf6083f2"
+    },
+    "native/windows/data/fonts/CC-BY-4.0-QuranWS.txt": {
+      "bytes": 17023,
+      "sha256": "d557539df68e771cc1eedcc91d13f70fca930e508d11eedcafa4b15db49e3744"
+    },
+    "native/windows/data/fonts/OFL-Amiri.txt": {
+      "bytes": 4389,
+      "sha256": "72de68e5954f4fdd24702292ef5a32f003ca960ec9330dc86e5eefb5dffb9b22"
+    },
+    "native/windows/data/fonts/OFL-Tajawal.txt": {
+      "bytes": 4464,
+      "sha256": "9b584984f9db0ee30347391a76eff9c0a6b03dc450c3c6afe3757a2cb3a4db87"
+    },
+    "native/windows/data/fonts/UthmanicHafs-v-3.0.ttf.NOTICE.txt": {
+      "bytes": 1668,
+      "sha256": "96d33bb5b502edefdb8b9407d450abf7ee6b79accf626218f9456a4825b98af1"
+    },
+    "native/windows/data/fonts/bazzi-source.otf.NOTICE.txt": {
+      "bytes": 1668,
+      "sha256": "ce1ba6bab5043bc046410fadb0b849c9fdc97abae4da5406274ccf0cf7a3d717"
+    },
+    "native/windows/data/fonts/sousi-source.ttf.NOTICE.txt": {
+      "bytes": 1668,
+      "sha256": "9153a378ab8476eb953f3b37025fb931ca21ccc49b57c805b831da2f44580947"
+    },
+    "native/windows/data/reminders.json": {
+      "bytes": 8629,
+      "sha256": "f2d3673012a1010ce97024588616e20464a1ef15ce7470c7da97682ed0daa5a8"
+    },
+    "native/windows/main.cjs": {
+      "bytes": 24165,
+      "sha256": "9baef45e89d87fe30b6cc5d57896bad7d958b08aa42cb6c586cfe43299c4233c"
+    },
+    "native/windows/package-lock.json": {
+      "bytes": 127082,
+      "sha256": "c5550d4c82db9511d40ca8a05e43d4349f9f512e052ec63bdc1a4a7404d1dbed"
+    },
+    "native/windows/package.json": {
+      "bytes": 1754,
+      "sha256": "356dfcfe94049c7f3ddd0557140edcabf6a77c9bfb62c5f89c26ad10ab0bc88a"
+    },
+    "native/windows/platform.cjs": {
+      "bytes": 453,
+      "sha256": "0fd279d23aa9edcb6e104a1f215b8ac2f03fff9fb2b2fd47f3e66a0e6799e1a3"
+    },
+    "native/windows/preload.cjs": {
+      "bytes": 1151,
+      "sha256": "bfe291edc3a98388002153c49c81c2062686a1e12cb88548143e8c9314206b04"
+    },
+    "native/windows/test/core.test.cjs": {
+      "bytes": 5731,
+      "sha256": "1475da7bcde25be4fe6befb9365b21008a11781519da430ea233510fe1429931"
+    },
+    "native/windows/test/widgets.test.cjs": {
+      "bytes": 479,
+      "sha256": "de47595369bacfd2ff7b2996ddb03f5394f19ae1802a8dc3a05aefc315373623"
+    },
+    "native/windows/tools/build-linux.cjs": {
+      "bytes": 1122,
+      "sha256": "0cefe7f77a0218ffba5d32d779b10dc9da2baf45edcf07544091753c2813ca89"
+    },
+    "native/windows/ui/app.ico": {
+      "bytes": 207787,
+      "sha256": "f704379af1040d7e4d14efbb00ebe7b3bbeac1a531f3c2e9ec3138298e07ffad"
+    },
+    "native/windows/ui/common.css": {
+      "bytes": 2563,
+      "sha256": "efe2db36cbc3824b2295d9117061be7098c9976e7a3061f1a505fb35f606b659"
+    },
+    "native/windows/ui/hadith.html": {
+      "bytes": 847,
+      "sha256": "27f21ab1d18e2d150a4614a69a5a24209505c66930721bf3502b1de42e1fc4fa"
+    },
+    "native/windows/ui/hadith.js": {
+      "bytes": 651,
+      "sha256": "31ec99a204216e23d66fce42c54565a745c899188fa4df847d3d4a6af2210e91"
+    },
+    "native/windows/ui/logo.png": {
+      "bytes": 427443,
+      "sha256": "b00bd467e03199ec787478cd3afd55fd5dfae84c109fbff68b872572833ea5e6"
+    },
+    "native/windows/ui/player.html": {
+      "bytes": 364,
+      "sha256": "b3dc3f74f2e872be5801d5624297269c40498c85ca5836f1a73c805b313359df"
+    },
+    "native/windows/ui/player.js": {
+      "bytes": 561,
+      "sha256": "79b4fb3bcab5089d65f7cdcea8600fddb3d31ec61827247ee26fc756d1a41c75"
+    },
+    "native/windows/ui/reader.css": {
+      "bytes": 2841,
+      "sha256": "a24212cc4da7868b702cfd5117d250669b706ea43555d67712539221a4affcc5"
+    },
+    "native/windows/ui/reader.html": {
+      "bytes": 2258,
+      "sha256": "ec5fb2507dc252d26a07f2980e5cc70da1c87d219fa3ed1c690623c7dab20a3b"
+    },
+    "native/windows/ui/reader.js": {
+      "bytes": 7876,
+      "sha256": "52733c93f0e691c5c7ed5be9982f67f7156a6237e916f64186c926574d4170ac"
+    },
+    "native/windows/ui/settings.html": {
+      "bytes": 6918,
+      "sha256": "3aae26dd7915ac46ae001c8a47b769e26bcecb064cb77750e73d348b5fc611c8"
+    },
+    "native/windows/ui/settings.js": {
+      "bytes": 4107,
+      "sha256": "d94e9b17914e3ab7825e06210f537b4e68716bd3d89b82cd77ea9628ecafddb3"
+    },
+    "native/windows/ui/shell.css": {
+      "bytes": 1157,
+      "sha256": "fbd2bc6327cc86224cae51a6cc4cd54a643537429bc79c2c9a9459f7c47e623b"
+    },
+    "native/windows/ui/shell.html": {
+      "bytes": 1978,
+      "sha256": "4a71e991d28092fb1d72acb927e14603e5eb9aa60b9657efec6942129fb7149f"
+    },
+    "native/windows/ui/shell.js": {
+      "bytes": 1550,
+      "sha256": "f955abce54df40bb13926301c47b3ff776e44885d84002bf37d2ed38a28a1eb7"
+    },
+    "native/windows/verification/runtime-lock.json": {
+      "bytes": 538,
+      "sha256": "24521489b23385678d481bc89d7052f6ddafbccf1d744ab43577b9776f56191e"
+    },
+    "native/windows/verification/ui-verification.json": {
+      "bytes": 941,
+      "sha256": "cd2826b383ce5af5b11ee72a04c942e4fd4ed7274a8449b1b4e8e47419106665"
+    },
+    "native/windows/verification/unit-tests.log": {
+      "bytes": 1363,
+      "sha256": "7b9540e03372dfdef4035f750f22eca0a7b0d7b1e29852eef5a7fde248747743"
+    },
+    "native/windows/verification/windows-x64.json": {
+      "bytes": 1022,
+      "sha256": "36fc6226a1bdbd05871728d710cc4911f56e903a5883e20c1d49c8c5c397a944"
+    },
+    "native/windows/widgets-window.cjs": {
+      "bytes": 1623,
+      "sha256": "b2f58a028e95b00e87f6974bcae6eca974dbff828264cf54790d0d65a87da678"
+    },
+    "scripts/persistent-player-compat.test.cjs": {
+      "bytes": 1986,
+      "sha256": "20fc8bda27a253105bde903aecf0997c0e24eb73e1548693421657f529812dca"
+    },
+    "اقرأني-قبل-الرفع.txt": {
+      "bytes": 1572,
+      "sha256": "26968f6bf8c15ed265c3d9316fd2e27d22767d8c6fd2e060902fb30a5ed0f069"
+    }
+  }
+}

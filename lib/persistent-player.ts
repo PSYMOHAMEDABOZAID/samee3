@@ -89,6 +89,7 @@ export function createPersistentPlayer(deps: Dependencies) {
       if (
         !switching &&
         !(
+          typeof document !== 'undefined' &&
           document.visibilityState === 'hidden' &&
           wanted &&
           !explicitlyPaused &&
