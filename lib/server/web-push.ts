@@ -4,6 +4,7 @@ import { serverDb, adminConfigured } from './firebase-admin'
 import { equalSecret } from './http'
 import { locationDate, shiftPrayerDate, type PrayerDay } from '@/lib/prayer-times'
 import { reminderEvents, type ReminderEvent, type WebReminderSettings } from '@/lib/web-reminders'
+import { diversifyReminderEvents } from './reminder-content'
 import { prayerSource } from './prayer-source'
 import { validatePushConfiguration } from './push-config'
 import { webPushPayload } from './web-push-payload'
@@ -45,7 +46,9 @@ export async function plannedEvents(settings: WebReminderSettings, after = Date.
       }
     }
   }
-  return reminderEvents(settings, after, days)
+  // Replace fixed short lists with actual published Quran, Hadith and Adhkar
+  // content. Keep the same number of notifications and the user's time slots.
+  return diversifyReminderEvents(reminderEvents(settings, after, days), settings)
 }
 export async function registerWebPush(subscription: PushSubscription, settings: WebReminderSettings, token?: string) {
   const id = digest(subscription.endpoint), reference = serverDb().doc(`${subscriptions}/${id}`)
