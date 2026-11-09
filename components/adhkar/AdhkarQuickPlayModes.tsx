@@ -1,3 +1,4 @@
+// المسار على GitHub: components/adhkar/AdhkarQuickPlayModes.tsx
 'use client'
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
@@ -51,7 +52,7 @@ function savedCounts(category: AdhkarCategory, key: string, isDaily: boolean): R
   return values
 }
 
-export default function AdhkarQuickPlayModes() {
+export default function AdhkarQuickPlayModes({ compact = false }: { compact?: boolean } = {}) {
   const params = useSearchParams()
   const playback = useAppAudio()
   const categoryIdValue = Number(params.get('categoryId') || 0)
@@ -185,13 +186,15 @@ export default function AdhkarQuickPlayModes() {
 
   return (
     <section dir="rtl" aria-label="اختيار طريقة استماع الأذكار"
-      className="mx-auto mb-3 w-full max-w-5xl overflow-hidden rounded-[24px] border border-[#e4d4b8] bg-[#fffdf9] p-3 text-[#1b4549] shadow-[0_8px_28px_rgba(21,63,60,0.09)] sm:p-4">
+      className={compact ? "w-full text-[#1b4549]" : "mx-auto mb-3 w-full max-w-5xl overflow-hidden rounded-[24px] border border-[#e4d4b8] bg-[#fffdf9] p-3 text-[#1b4549] shadow-[0_8px_28px_rgba(21,63,60,0.09)] sm:p-4"}>
+      {!compact && (
       <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
         <div className="flex items-center gap-2"><span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#f3ead8] text-[#95703a]"><Headphones size={19}/></span>
           <div><h2 className="text-sm font-black">ابدأ الاستماع لوردك</h2><p className="text-[11px] text-[#70827e]">اختر طريقة التشغيل المناسبة لك</p></div>
         </div>
         <span className="rounded-full bg-[#eef5f1] px-2.5 py-1 text-[10px] font-bold text-[#357064]">{category ? category.category : LABELS[type]}</span>
       </div>
+      )}
       <div className="grid grid-cols-2 gap-2 sm:gap-3">
         <button type="button" disabled={loading || !category || (!sectionUrl && !itemTracks.length)} onClick={() => start('full')}
           aria-label="تشغيل الورد كاملًا" className={`flex min-h-[78px] items-center gap-2 rounded-2xl border px-2.5 py-3 text-right transition active:scale-[.99] disabled:cursor-not-allowed disabled:opacity-45 sm:px-4 ${currentStyle === 'full' ? 'border-[#c4aa74] bg-[#e4efe7] ring-1 ring-[#8aab9b]' : 'border-[#d9e4db] bg-[#1b5a50] text-white'}`}>
