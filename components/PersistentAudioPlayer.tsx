@@ -35,6 +35,7 @@ type LastVisiblePlayer = {
  * Mushaf and other pages have separate remembered positions for their layouts.
  */
 const MINI_POSITION_KEY = 'samee3_miniplayer_position_v1'
+const MINI_SESSION_KEY = 'samee3_mini_player_last_visible_v2'
 type MiniContext = 'mushaf' | 'other'
 type MiniPoint = { left: number; top: number }
 type FractionalPosition = { x: number; y: number }
@@ -110,6 +111,38 @@ function restoreMiniPosition(context: MiniContext, element: HTMLElement): MiniPo
   }
 }
 
+
+/** Keep the small player's display across a full-document navigation.
+ * This restores only its title and origin, never resumes media automatically.
+ * A user closing the widget with X clears this stored session immediately.
+ */
+function readMiniSession(): LastVisiblePlayer | null {
+  if (typeof window === 'undefined') return null
+  try {
+    const item: unknown = JSON.parse(sessionStorage.getItem(MINI_SESSION_KEY) || 'null')
+    if (!item || typeof item !== 'object' || Array.isArray(item)) return null
+    const value = item as Partial<LastVisiblePlayer>
+    if (value.source !== 'mushaf' && value.source !== 'app') return null
+    if (typeof value.title !== 'string' || typeof value.subtitle !== 'string' ||
+        typeof value.section !== 'string' || typeof value.destination !== 'string' ||
+        !value.destination.startsWith('/') || value.destination.startsWith('//')) return null
+    return {
+      pathname: typeof value.pathname === 'string' ? value.pathname : '',
+      source: value.source,
+      title: value.title.slice(0, 250),
+      subtitle: value.subtitle.slice(0, 250),
+      section: value.section.slice(0, 80),
+      destination: value.destination,
+      position: Number.isFinite(value.position) ? Math.max(0, Number(value.position)) : 0,
+      duration: Number.isFinite(value.duration) ? Math.max(0, Number(value.duration)) : 0,
+    }
+  } catch { return null }
+}
+
+function clearMiniSession() {
+  try { sessionStorage.removeItem(MINI_SESSION_KEY) } catch { /* private browsing */ }
+}
+
 function mushafElement(): MushafAudio | null {
   if (typeof window === 'undefined') return null
   return (window as Window & { __samee3PersistentAudio?: MushafAudio }).__samee3PersistentAudio || null
@@ -150,8 +183,9 @@ export default function PersistentAudioPlayer() {
   const [message, setMessage] = useState('')
   const [dismissed, setDismissed] = useState(false)
   const [lastVisible, setLastVisible] = useState<LastVisiblePlayer | null>(null)
+  const [sessionRestored, setSessionRestored] = useState(false)
   const previousPathnameRef = useRef(pathname)
-  const [collapsed, setCollapsed] = useState(false)
+  const [collapsed, setCollapsed] = useState(true)
   const [mushafExpanded, setMushafExpanded] = useState(false)
   const [timerUntil, setTimerUntil] = useState<number | null>(null)
   const [now, setNow] = useState(0)
@@ -160,6 +194,26 @@ export default function PersistentAudioPlayer() {
   const ignoreClickUntilRef = useRef(0)
   const [miniPoint, setMiniPoint] = useState<MiniPoint | null>(null)
   const [draggingMini, setDraggingMini] = useState(false)
+
+  // A persistent Next.js layout preserves React state during client navigation.
+  // Some PWA routes still cause a full reload, so restore the last mini UI too.
+  useEffect(() => {
+    const saved = readMiniSession()
+    if (saved) {
+      setLastVisible(previous => previous ?? saved)
+      setCollapsed(true)
+      setMushafExpanded(false)
+    }
+    setSessionRestored(true)
+  }, [])
+
+  useEffect(() => {
+    if (!sessionRestored) return
+    try {
+      if (lastVisible) sessionStorage.setItem(MINI_SESSION_KEY, JSON.stringify(lastVisible))
+      else clearMiniSession()
+    } catch { /* session storage is optional */ }
+  }, [lastVisible, sessionRestored])
 
   useEffect(() => {
     const readTimer = () => {
@@ -485,6 +539,7 @@ export default function PersistentAudioPlayer() {
   }
   const closePlayer = () => {
     // X is the only action that dismisses the widget across all pages.
+    clearMiniSession()
     stopAudio()
     setLastVisible(null)
     setDismissed(true)
@@ -534,7 +589,7 @@ export default function PersistentAudioPlayer() {
           cursor: draggingMini ? 'grabbing' : 'grab',
           ...(miniPoint ? { left: `${miniPoint.left}px`, top: `${miniPoint.top}px`, right: 'auto', bottom: 'auto' } : {}),
         }}
-        className={`fixed right-3 z-[88] flex min-h-[48px] min-w-[48px] items-center justify-center gap-1.5 rounded-full border border-[#dfc99d] bg-[#fffdf8] px-3 text-[#15586e] shadow-[0_7px_24px_rgba(20,64,62,0.2)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#15586e] ${
+        className={`fixed right-3 z-[105] flex min-h-[48px] min-w-[48px] items-center justify-center gap-1.5 rounded-full border border-[#dfc99d] bg-[#fffdf8] px-3 text-[#15586e] shadow-[0_7px_24px_rgba(20,64,62,0.2)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#15586e] ${
           draggingMini ? 'scale-[1.06] shadow-2xl' : 'transition-transform active:scale-95'
         } ${
           isMushafPage
@@ -553,7 +608,7 @@ export default function PersistentAudioPlayer() {
     <aside
       dir="rtl"
       aria-label="مشغل سميع الموحد ومؤقت القراءة"
-      className={`fixed left-3 right-3 z-[88] mx-auto w-[calc(100%-24px)] max-w-[540px] overflow-hidden rounded-[24px] border border-[#e3cea7] bg-[#fffdf9]/[0.98] text-[#153f48] shadow-[0_12px_35px_rgba(12,49,63,0.19)] backdrop-blur-xl ${
+      className={`fixed left-3 right-3 z-[105] mx-auto w-[calc(100%-24px)] max-w-[540px] overflow-hidden rounded-[24px] border border-[#e3cea7] bg-[#fffdf9]/[0.98] text-[#153f48] shadow-[0_12px_35px_rgba(12,49,63,0.19)] backdrop-blur-xl ${
         isMushafPage
           ? 'bottom-[calc(3.6rem+env(safe-area-inset-bottom))]'
           : 'bottom-[calc(6.7rem+env(safe-area-inset-bottom))]'
