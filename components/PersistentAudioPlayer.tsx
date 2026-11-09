@@ -16,8 +16,8 @@ type MushafAudio = HTMLAudioElement & {
 }
 type MushafView = { src: string; playing: boolean; surah: number; reciter: string; position: number; duration: number }
 
-// Keep the last visible controls only on the page where audio was stopped.
-// This is a display snapshot, not a new audio element or a playback request.
+// Keep the last playback display across every route after the user starts audio.
+// It is only UI state: no new audio element is created and no source is changed.
 type LastVisiblePlayer = {
   pathname: string
   source: 'mushaf' | 'app'
@@ -289,16 +289,13 @@ export default function PersistentAudioPlayer() {
     if (isMushafPage) setMushafExpanded(false)
   }, [isMushafPage])
 
-  // Closing hides the widget for this route without restarting playback.
-  // Starting actual playback again (or entering another page) makes it accessible.
+  // After closing with X, stay hidden until a genuinely new playback starts.
   useEffect(() => {
     if (mushaf?.playing || playback.playing) setDismissed(false)
   }, [mushaf?.playing, playback.playing])
-  useEffect(() => { setDismissed(false) }, [pathname])
 
-  // A real playback starts the widget. Pausing/stopping retains its last
-  // appearance on the CURRENT route; navigating away removes that snapshot.
-  // Opening a page or having a saved timer never opens the player on its own.
+  // Playing once makes the mini-player available throughout the app, even after
+  // pause or stop. Merely visiting a route or setting a timer does not reveal it.
   const appSessionActive = Boolean(track && (playback.playing || playback.loading))
   const liveMushaf = Boolean(mushaf?.src && mushaf.playing && !appSessionActive)
   const liveActive = liveMushaf || appSessionActive
@@ -314,12 +311,13 @@ export default function PersistentAudioPlayer() {
   const livePosition = liveMushaf ? (mushaf?.position || 0) : playback.position
   const liveDuration = liveMushaf ? (mushaf?.duration || 0) : playback.duration
 
-  // On route change, discard a stopped player's display permanently. An
-  // ongoing player remains visible and gets a new snapshot for the new route.
+  // Moving between sections collapses the player to its small draggable button.
+  // Keep its snapshot and dismissed state unchanged across route changes.
   useEffect(() => {
     if (previousPathnameRef.current !== pathname) {
       previousPathnameRef.current = pathname
-      setLastVisible(null)
+      setCollapsed(true)
+      setMushafExpanded(false)
     }
   }, [pathname])
 
@@ -342,7 +340,7 @@ export default function PersistentAudioPlayer() {
     })
   }, [liveActive, liveMushaf, pathname, liveTitle, liveSubtitle, liveSection, liveDestination, livePosition, liveDuration])
 
-  const retained = !liveActive && lastVisible?.pathname === pathname ? lastVisible : null
+  const retained = !liveActive ? lastVisible : null
   const showMushaf = liveActive ? liveMushaf : retained?.source === 'mushaf'
   const playing = liveActive ? (liveMushaf || playback.playing) : false
   const loading = liveActive && !liveMushaf && playback.loading
@@ -486,10 +484,12 @@ export default function PersistentAudioPlayer() {
     else if (track) appAudio.stop()
   }
   const closePlayer = () => {
+    // X is the only action that dismisses the widget across all pages.
+    stopAudio()
+    setLastVisible(null)
     setDismissed(true)
     setCollapsed(false)
     setMushafExpanded(false)
-    stopAudio()
   }
   const expandPlayer = () => {
     setCollapsed(false)
