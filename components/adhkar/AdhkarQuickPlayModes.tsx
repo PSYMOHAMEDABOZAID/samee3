@@ -123,7 +123,7 @@ export default function AdhkarQuickPlayModes() {
         : findAdhkarCategoryRecording(reader.id, category.id)) ||
       category.array.some(item => getIndividualAdhkarAudio(reader.id, item, kind || undefined))
     )) : list
-    const preferred = activeReader || readerId || requestedReciter || saved
+    const preferred = readerId || requestedReciter || saved || activeReader
     return eligible.find(item => item.id === preferred) || eligible.find(item => item.id === requestedReciter) || eligible[0] || null
   }, [progressKey, readerId, requestedReciter, category, categoryId, type])
 
@@ -180,7 +180,7 @@ export default function AdhkarQuickPlayModes() {
     setLastRequestedStyle(style)
     appAudio.start({ scope: 'adhkar', contextKey: progressKey, readerId: reciter.id,
       href: `/adhkar/read?${categoryId ? `categoryId=${categoryId}` : `type=${type}`}&reciter=${encodeURIComponent(reciter.id)}`,
-      queue, index: 0, counts, repeat: 'off' })
+      queue, index: 0, counts, daily: !categoryId && (type === 'morning' || type === 'evening'), repeat: 'off' })
   }
 
   return (
